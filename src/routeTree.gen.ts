@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as QaVisuelsRouteImport } from './routes/qa-visuels'
+import { Route as QuestionsRouteImport } from './routes/questions'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -22,31 +23,40 @@ const QaVisuelsRoute = QaVisuelsRouteImport.update({
   path: '/qa-visuels',
   getParentRoute: () => rootRouteImport,
 } as any)
+const QuestionsRoute = QuestionsRouteImport.update({
+  id: '/questions',
+  path: '/questions',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/qa-visuels': typeof QaVisuelsRoute
+  '/questions': typeof QuestionsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/qa-visuels': typeof QaVisuelsRoute
+  '/questions': typeof QuestionsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/qa-visuels': typeof QaVisuelsRoute
+  '/questions': typeof QuestionsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/qa-visuels'
+  fullPaths: '/' | '/qa-visuels' | '/questions'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/qa-visuels'
-  id: '__root__' | '/' | '/qa-visuels'
+  to: '/' | '/qa-visuels' | '/questions'
+  id: '__root__' | '/' | '/qa-visuels' | '/questions'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   QaVisuelsRoute: typeof QaVisuelsRoute
+  QuestionsRoute: typeof QuestionsRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -65,12 +75,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof QaVisuelsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/questions': {
+      id: '/questions'
+      path: '/questions'
+      fullPath: '/questions'
+      preLoaderRoute: typeof QuestionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   QaVisuelsRoute: QaVisuelsRoute,
+  QuestionsRoute: QuestionsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
