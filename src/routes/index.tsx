@@ -1,172 +1,152 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
-import { useMemo } from "react";
-import { AlertTriangle, ArrowRight, Flame } from "lucide-react";
-import { AppShell } from "@/components/ingego/app-shell";
-import { LandingPage } from "@/components/ingego/landing-page";
-import { useAuth } from "@/hooks/use-auth";
-import { useProgression } from "@/hooks/use-progression";
-import { AXES, CORPUS, META, mouvantsARevoir } from "@/lib/ingego/corpus";
-import { etatCarte, jourDe, resteAFaire, validee } from "@/lib/ingego/algo";
+import { createFileRoute } from "@tanstack/react-router";
+import { useEffect, useState } from "react";
+import { ArrowRight, SkipForward } from "lucide-react";
+import { Exercice } from "@/components/ingego/exercice";
+import { MotIngego, PastilleIngego } from "@/components/ingego/marque";
+import { AXE_BY_ID, CORPUS } from "@/lib/ingego/corpus";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "IngéGo — révision concours ingénieur territorial" },
+      { title: "IngéGo bêta — relecture des 322 questions" },
       {
         name: "description",
         content:
-          "Révision par répétition espacée du concours externe d'ingénieur territorial, spécialité ingénierie, gestion technique et architecture. 322 questions, six axes.",
+          "Mode bêta test : parcours linéaire des questions du concours d'ingénieur territorial, une par une, numérotées, sans compte ni validation.",
       },
-      { property: "og:title", content: "IngéGo — révision concours ingénieur territorial" },
+      { property: "og:title", content: "IngéGo bêta — relecture des 322 questions" },
       {
         property: "og:description",
-        content:
-          "Sessions quotidiennes calibrées, six axes, progression synchronisée du téléphone au PC.",
+        content: "Parcours linéaire numéroté, question par question, pour relire tout le corpus.",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
     ],
   }),
-  component: Accueil,
+  component: BetaTest,
 });
 
-function Accueil() {
-  const { user, pret } = useAuth();
-  const { etat, reglages, journal, chargement } = useProgression(user?.id);
+const CLE = "ingego-beta-index";
 
-  const now = Date.now();
-  const aFaire = useMemo(() => resteAFaire(etat, reglages, now), [etat, reglages, now]);
+function BetaTest() {
+  const total = CORPUS.length;
+  const [i, setI] = useState(0);
+  const [saut, setSaut] = useState("");
 
-  const serie = useMemo(() => {
-    const jours = new Set(journal.map((j) => j.jour));
-    let n = 0;
-    for (let i = 0; ; i++) {
-      const d = jourDe(now - i * 86400000);
-      if (jours.has(d)) n++;
-      else if (i > 0) break;
-      else if (!jours.has(jourDe(now - 86400000))) break;
-    }
-    return n;
-  }, [journal, now]);
+  useEffect(() => {
+    const brut = Number(localStorage.getItem(CLE));
+    if (Number.isFinite(brut) && brut > 0 && brut < total) setI(brut);
+  }, [total]);
 
-  const aujourdhui = useMemo(
-    () => journal.filter((j) => j.jour === jourDe(now)).length,
-    [journal, now],
-  );
+  useEffect(() => {
+    localStorage.setItem(CLE, String(i));
+  }, [i]);
 
-  const mouvants = useMemo(() => mouvantsARevoir(now).length, [now]);
-  const acquises = useMemo(() => CORPUS.filter((q) => validee(etat[q.id])).length, [etat]);
-  const fragiles = useMemo(
-    () => CORPUS.filter((q) => etatCarte(etat[q.id]) === "fragile").length,
-    [etat],
-  );
+  const q = CORPUS[i];
 
-  if (!pret) return <Ecran />;
-  if (!user) return <LandingPage />;
+  function suivante() {
+    setI((n) => Math.min(n + 1, total));
+    window.scrollTo({ top: 0 });
+  }
 
+  function allerA(n: number) {
+    if (!Number.isFinite(n)) return;
+    setI(Math.min(Math.max(1, Math.round(n)), total) - 1);
+    window.scrollTo({ top: 0 });
+  }
 
   return (
-    <AppShell surTitre={`Écrit juin 2027 · ${META.version}`} titre="Aujourd'hui">
-      <div className="space-y-5">
-        <section className="surface p-5">
-          <p className="text-sm text-muted-foreground">
-            {chargement ? "Chargement de votre progression…" : "File du jour"}
-          </p>
-          <p className="mt-1 font-display text-5xl">{aFaire}</p>
-          <p className="text-sm text-muted-foreground">
-            {aFaire === 0
-              ? "Rien d'exigible : la prochaine échéance viendra à vous."
-              : `question${aFaire > 1 ? "s" : ""} à reprendre ou à découvrir`}
-          </p>
-          <Link
-            to="/session"
-            className="tap mt-4 flex items-center justify-center gap-2 rounded-xl bg-primary py-3.5 text-sm font-semibold text-primary-foreground"
+    <div className="min-h-screen bg-background pb-16">
+      <header className="border-b border-border bg-card/90 px-5 pt-4 pb-4 backdrop-blur">
+        <div className="mx-auto flex max-w-2xl items-center gap-2.5">
+          <PastilleIngego className="h-7 w-7 rounded-lg" />
+          <MotIngego className="text-lg" />
+          <span className="ml-auto rounded-full border border-border px-2.5 py-1 text-[0.65rem] tracking-[0.14em] text-muted-foreground uppercase">
+            Bêta test
+          </span>
+        </div>
+        <div className="mx-auto mt-3 flex max-w-2xl items-end justify-between gap-3">
+          <div className="min-w-0">
+            <p className="text-[0.7rem] font-medium tracking-[0.18em] text-brand uppercase">
+              Relecture linéaire
+            </p>
+            <h1 className="truncate text-3xl text-primary">
+              {q ? `Question ${i + 1}` : "Corpus terminé"}
+              <span className="text-lg text-muted-foreground"> / {total}</span>
+            </h1>
+          </div>
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              allerA(Number(saut));
+              setSaut("");
+            }}
+            className="flex shrink-0 items-center gap-1.5"
           >
-            Démarrer une session de {reglages.parSession}
-            <ArrowRight className="h-4 w-4" />
-          </Link>
-        </section>
+            <input
+              inputMode="numeric"
+              value={saut}
+              onChange={(e) => setSaut(e.target.value)}
+              placeholder="N°"
+              aria-label="Aller à la question numéro"
+              className="w-16 rounded-lg border border-input bg-background px-2 py-1.5 text-sm outline-none focus:border-ring"
+            />
+            <button
+              type="submit"
+              className="tap rounded-lg border border-border bg-elevated px-2.5 py-1.5 text-xs font-medium"
+            >
+              Aller
+            </button>
+          </form>
+        </div>
+        <div className="mx-auto mt-3 h-1 max-w-2xl overflow-hidden rounded-full bg-elevated">
+          <div
+            className="h-full rounded-full bg-primary transition-[width] duration-300"
+            style={{ width: `${(i / total) * 100}%` }}
+          />
+        </div>
+      </header>
 
-        <section className="grid grid-cols-3 gap-2">
-          <Tuile valeur={`${serie}`} label="jours de suite" icone={<Flame className="h-4 w-4" />} />
-          <Tuile valeur={`${aujourdhui}`} label="réponses aujourd'hui" />
-          <Tuile valeur={`${acquises}/${CORPUS.length}`} label="questions validées" />
-        </section>
-
-        {fragiles > 0 && (
-          <Link to="/session" search={{ cible: "fragiles" }} className="tap block">
-            <section className="surface flex items-center gap-3 p-4">
-              <AlertTriangle className="h-5 w-5 shrink-0 text-warning" />
-              <p className="min-w-0 text-sm">
-                <span className="font-semibold">{fragiles} carte(s) fragile(s)</span> — reprises
-                ratées non reconsolidées. Session ciblée.
-              </p>
-            </section>
-          </Link>
+      <main className="mx-auto max-w-2xl px-5 py-6">
+        {q ? (
+          <div className="space-y-4">
+            <p className="text-xs text-muted-foreground">
+              <span className="font-mono">{q.id}</span> · {AXE_BY_ID[q.axe]?.nom ?? q.axe} · format{" "}
+              {q.type} · niveau {q.niv}
+            </p>
+            <Exercice key={q.id} q={q} numero={i + 1} total={total} onNote={suivante} />
+            <div className="grid grid-cols-2 gap-2">
+              <button
+                onClick={() => allerA(i)}
+                disabled={i === 0}
+                className="tap rounded-xl border border-border py-3 text-sm font-medium disabled:opacity-40"
+              >
+                Question précédente
+              </button>
+              <button
+                onClick={suivante}
+                className="tap flex items-center justify-center gap-2 rounded-xl bg-primary py-3 text-sm font-semibold text-primary-foreground"
+              >
+                Passer à la suivante
+                <SkipForward className="h-4 w-4" />
+              </button>
+            </div>
+          </div>
+        ) : (
+          <div className="surface space-y-4 p-6 text-center">
+            <p className="text-sm text-muted-foreground">
+              Les {total} questions ont été parcourues.
+            </p>
+            <button
+              onClick={() => allerA(1)}
+              className="tap inline-flex items-center gap-2 rounded-xl bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground"
+            >
+              Repartir de la question 1
+              <ArrowRight className="h-4 w-4" />
+            </button>
+          </div>
         )}
-
-        <section className="surface p-5">
-          <h2 className="text-lg">Les six axes</h2>
-          <ul className="mt-3 space-y-3">
-            {AXES.map((a) => {
-              const qs = CORPUS.filter((q) => q.axe === a.id);
-              const ok = qs.filter((q) => validee(etat[q.id])).length;
-              return (
-                <li key={a.id}>
-                  <div className="grid grid-cols-[minmax(0,1fr)_auto] items-baseline gap-2">
-                    <p className="truncate text-sm">{a.nom}</p>
-                    <p className="shrink-0 text-xs text-muted-foreground">
-                      {ok}/{qs.length}
-                    </p>
-                  </div>
-                  <div className="mt-1.5 h-1.5 overflow-hidden rounded-full bg-elevated">
-                    <div
-                      className="h-full rounded-full transition-[width]"
-                      style={{
-                        width: `${Math.round((ok / qs.length) * 100)}%`,
-                        backgroundColor: a.couleur,
-                      }}
-                    />
-                  </div>
-                </li>
-              );
-            })}
-          </ul>
-        </section>
-
-        {mouvants > 0 && (
-          <p className="px-1 text-xs text-muted-foreground">
-            {mouvants} fait(s) mouvant(s) datent de plus de six mois : à revérifier avant l'écrit.
-            Détail dans Progression.
-          </p>
-        )}
-      </div>
-    </AppShell>
-  );
-}
-
-function Tuile({
-  valeur,
-  label,
-  icone,
-}: {
-  valeur: string;
-  label: string;
-  icone?: React.ReactNode;
-}) {
-  return (
-    <div className="surface p-3">
-      <p className="flex items-center gap-1 font-display text-2xl">
-        {icone}
-        {valeur}
-      </p>
-      <p className="mt-0.5 text-[0.68rem] leading-tight text-muted-foreground">{label}</p>
-    </div>
-  );
-}
-
-function Ecran() {
-  return (
-    <div className="flex min-h-screen items-center justify-center">
-      <p className="text-sm text-muted-foreground">Chargement…</p>
+      </main>
     </div>
   );
 }
