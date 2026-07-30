@@ -1,20 +1,24 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { ArrowRight, SkipForward } from "lucide-react";
+import { ArrowRight, ListOrdered, SkipForward } from "lucide-react";
 import { Exercice } from "@/components/ingego/exercice";
 import { MotIngego, PastilleIngego } from "@/components/ingego/marque";
 import { AXE_BY_ID, CORPUS } from "@/lib/ingego/corpus";
+import { useHistorique } from "@/lib/ingego/historique";
 
 export const Route = createFileRoute("/")({
+  validateSearch: (search: Record<string, unknown>) => ({
+    q: search.q ? Number(search.q) : undefined,
+  }),
   head: () => ({
     meta: [
-      { title: "IngéGo bêta — relecture des 322 questions" },
+      { title: "IngéGo bêta — relecture des questions" },
       {
         name: "description",
         content:
           "Mode bêta test : parcours linéaire des questions du concours d'ingénieur territorial, une par une, numérotées, sans compte ni validation.",
       },
-      { property: "og:title", content: "IngéGo bêta — relecture des 322 questions" },
+      { property: "og:title", content: "IngéGo bêta — relecture des questions" },
       {
         property: "og:description",
         content: "Parcours linéaire numéroté, question par question, pour relire tout le corpus.",
@@ -30,21 +34,29 @@ const CLE = "ingego-beta-index";
 
 function BetaTest() {
   const total = CORPUS.length;
+  const { q: cible } = Route.useSearch();
   const [i, setI] = useState(0);
   const [saut, setSaut] = useState("");
+  const { historique, noter } = useHistorique();
 
   useEffect(() => {
+    if (cible && Number.isFinite(cible)) {
+      setI(Math.min(Math.max(1, Math.round(cible)), total) - 1);
+      return;
+    }
     const brut = Number(localStorage.getItem(CLE));
     if (Number.isFinite(brut) && brut > 0 && brut < total) setI(brut);
-  }, [total]);
+  }, [total, cible]);
 
   useEffect(() => {
     localStorage.setItem(CLE, String(i));
   }, [i]);
 
   const q = CORPUS[i];
+  const statut = q ? historique[q.id] : undefined;
 
-  function suivante() {
+  function suivante(note?: number) {
+    if (q && typeof note === "number") noter(q.id, note >= 2 ? "ok" : "ko");
     setI((n) => Math.min(n + 1, total));
     window.scrollTo({ top: 0 });
   }
@@ -61,9 +73,13 @@ function BetaTest() {
         <div className="mx-auto flex max-w-2xl items-center gap-2.5">
           <PastilleIngego className="h-7 w-7 rounded-lg" />
           <MotIngego className="text-lg" />
-          <span className="ml-auto rounded-full border border-border px-2.5 py-1 text-[0.65rem] tracking-[0.14em] text-muted-foreground uppercase">
-            Bêta test
-          </span>
+          <Link
+            to="/questions"
+            className="tap ml-auto inline-flex items-center gap-1.5 rounded-full border border-border px-3 py-1.5 text-xs font-medium"
+          >
+            <ListOrdered className="h-3.5 w-3.5" />
+            Toutes les questions
+          </Link>
         </div>
         <div className="mx-auto mt-3 flex max-w-2xl items-end justify-between gap-3">
           <div className="min-w-0">
@@ -110,11 +126,29 @@ function BetaTest() {
       <main className="mx-auto max-w-2xl px-5 py-6">
         {q ? (
           <div className="space-y-4">
-            <p className="text-xs text-muted-foreground">
+            <p className="flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
               <span className="font-mono">{q.id}</span> · {AXE_BY_ID[q.axe]?.nom ?? q.axe} · format{" "}
               {q.type} · niveau {q.niv}
+              {statut ? (
+                <span
+                  className={
+                    statut === "ok"
+                      ? "rounded-full bg-success/15 px-2 py-0.5 text-success"
+                      : "rounded-full bg-destructive/15 px-2 py-0.5 text-destructive"
+                  }
+                >
+                  {statut === "ok" ? "déjà juste" : "déjà à revoir"}
+                </span>
+              ) : null}
             </p>
-            <Exercice key={q.id} q={q} numero={i + 1} total={total} onNote={suivante} />
+            <Exercice
+              key={q.id}
+              q={q}
+              numero={i + 1}
+              total={total}
+              onNote={suivante}
+              onCorrige={(juste) => noter(q.id, juste ? "ok" : "ko")}
+            />
             <div className="grid grid-cols-2 gap-2">
               <button
                 onClick={() => allerA(i)}
@@ -124,7 +158,7 @@ function BetaTest() {
                 Question précédente
               </button>
               <button
-                onClick={suivante}
+                onClick={() => suivante()}
                 className="tap flex items-center justify-center gap-2 rounded-xl bg-primary py-3 text-sm font-semibold text-primary-foreground"
               >
                 Passer à la suivante

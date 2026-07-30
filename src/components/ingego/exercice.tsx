@@ -149,11 +149,13 @@ export function Exercice({
   numero,
   total,
   onNote,
+  onCorrige,
 }: {
   q: Question;
   numero: number;
   total: number;
   onNote: (note: number) => void;
+  onCorrige?: (juste: boolean) => void;
 }) {
   const [rep, setRep] = useState<Reponse>(() => initiale(q));
   const [corrige, setCorrige] = useState(false);
@@ -669,7 +671,10 @@ export function Exercice({
       {/* ---------- VALIDATION ET CORRECTION ---------- */}
       {!corrige ? (
         <button
-          onClick={() => setCorrige(true)}
+          onClick={() => {
+            setCorrige(true);
+            onCorrige?.(juste(q, rep));
+          }}
           disabled={!complet(q, rep)}
           className="tap w-full rounded-xl bg-primary py-3.5 text-sm font-semibold text-primary-foreground disabled:opacity-40"
         >
