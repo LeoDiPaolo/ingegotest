@@ -671,7 +671,10 @@ export function Exercice({
       {/* ---------- VALIDATION ET CORRECTION ---------- */}
       {!corrige ? (
         <button
-          onClick={() => setCorrige(true)}
+          onClick={() => {
+            setCorrige(true);
+            onCorrige?.(juste(q, rep));
+          }}
           disabled={!complet(q, rep)}
           className="tap w-full rounded-xl bg-primary py-3.5 text-sm font-semibold text-primary-foreground disabled:opacity-40"
         >
