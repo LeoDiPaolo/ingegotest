@@ -149,11 +149,13 @@ export function Exercice({
   numero,
   total,
   onNote,
+  onCorrige,
 }: {
   q: Question;
   numero: number;
   total: number;
   onNote: (note: number) => void;
+  onCorrige?: (juste: boolean) => void;
 }) {
   const [rep, setRep] = useState<Reponse>(() => initiale(q));
   const [corrige, setCorrige] = useState(false);
