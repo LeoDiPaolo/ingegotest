@@ -83,8 +83,8 @@ function BetaTest() {
         </div>
         <div className="mx-auto mt-3 flex max-w-2xl items-end justify-between gap-3">
           <div className="min-w-0">
-            <p className="text-[0.7rem] font-medium tracking-[0.18em] text-brand uppercase">
-              Relecture linéaire
+            <p className="truncate text-[0.7rem] font-medium tracking-[0.12em] text-brand uppercase">
+              {q ? `${AXE_BY_ID[q.axe]?.court ?? q.axe} · ${q.sousTheme}` : "Relecture linéaire"}
             </p>
             <h1 className="truncate text-3xl text-primary">
               {q ? `Question ${i + 1}` : "Corpus terminé"}
