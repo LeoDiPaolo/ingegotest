@@ -1,0 +1,203 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * IngéGo — design system.
+ * Charte de marque : papier blanc cassé, bleu marine IngéGo, orange casque de
+ * chantier, vert sauge de validation. Titres Outfit, texte Work Sans.
+ * Toutes les couleurs sont des tokens sémantiques en oklch.
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --font-display: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Work Sans", ui-sans-serif, system-ui, sans-serif;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-elevated: var(--elevated);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-brand: var(--brand);
+  --color-brand-foreground: var(--brand-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-warning: var(--warning);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --color-plan-line: var(--plan-line);
+  --color-plan-fill: var(--plan-fill);
+  --shadow-card: var(--shadow-card);
+  --shadow-lift: var(--shadow-lift);
+}
+
+:root {
+  --radius: 0.875rem;
+
+  /* Papier */
+  --background: oklch(0.973 0.004 91);
+  --foreground: oklch(0.252 0.039 271);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.252 0.039 271);
+  --elevated: oklch(0.949 0.007 89);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.252 0.039 271);
+
+  /* Bleu marine IngéGo */
+  --primary: oklch(0.393 0.075 266);
+  --primary-foreground: oklch(0.99 0.003 90);
+
+  /* Orange casque de chantier */
+  --brand: oklch(0.678 0.158 54);
+  --brand-foreground: oklch(0.22 0.03 60);
+
+  --secondary: oklch(0.94 0.008 90);
+  --secondary-foreground: oklch(0.31 0.05 268);
+  --muted: oklch(0.949 0.007 89);
+  --muted-foreground: oklch(0.502 0.034 264);
+  --accent: oklch(0.94 0.02 60);
+  --accent-foreground: oklch(0.353 0.066 266);
+
+  --destructive: oklch(0.543 0.174 30);
+  --destructive-foreground: oklch(0.99 0.003 90);
+  --success: oklch(0.575 0.09 139);
+  --success-foreground: oklch(0.99 0.003 90);
+  --warning: oklch(0.678 0.13 72);
+
+  --border: oklch(0.91 0.007 89);
+  --input: oklch(0.885 0.008 89);
+  --ring: oklch(0.48 0.078 267);
+
+  /* Traits de plan / esquisse pour les visuels SVG */
+  --plan-line: oklch(0.48 0.05 266);
+  --plan-fill: oklch(0.955 0.008 240);
+
+  /* Palette terrain (coupes géotechniques, matériaux) */
+  --strate-1: oklch(0.78 0.09 128);
+  --strate-2: oklch(0.82 0.07 78);
+  --strate-3: oklch(0.72 0.08 58);
+  --strate-4: oklch(0.62 0.06 48);
+  --strate-5: oklch(0.55 0.03 264);
+
+
+  --shadow-card: 0 1px 2px oklch(0.25 0.04 270 / 0.05), 0 8px 24px -12px oklch(0.25 0.04 270 / 0.18);
+  --shadow-lift: 0 2px 6px oklch(0.25 0.04 270 / 0.08), 0 18px 40px -18px oklch(0.25 0.04 270 / 0.28);
+}
+
+.dark {
+  --background: oklch(0.21 0.025 266);
+  --foreground: oklch(0.95 0.008 90);
+  --card: oklch(0.255 0.028 266);
+  --card-foreground: oklch(0.95 0.008 90);
+  --elevated: oklch(0.3 0.03 266);
+  --popover: oklch(0.255 0.028 266);
+  --popover-foreground: oklch(0.95 0.008 90);
+
+  --primary: oklch(0.72 0.1 262);
+  --primary-foreground: oklch(0.19 0.03 266);
+  --brand: oklch(0.73 0.15 55);
+  --brand-foreground: oklch(0.19 0.03 60);
+
+  --secondary: oklch(0.31 0.03 266);
+  --secondary-foreground: oklch(0.95 0.008 90);
+  --muted: oklch(0.3 0.03 266);
+  --muted-foreground: oklch(0.74 0.02 264);
+  --accent: oklch(0.33 0.035 266);
+  --accent-foreground: oklch(0.96 0.008 90);
+
+  --destructive: oklch(0.63 0.17 27);
+  --destructive-foreground: oklch(0.98 0.005 90);
+  --success: oklch(0.7 0.11 145);
+  --success-foreground: oklch(0.19 0.03 145);
+  --warning: oklch(0.78 0.13 75);
+
+  --border: oklch(0.36 0.03 266);
+  --input: oklch(0.36 0.03 266);
+  --ring: oklch(0.72 0.1 262);
+
+  --plan-line: oklch(0.78 0.04 262);
+  --plan-fill: oklch(0.3 0.03 258);
+
+  --strate-1: oklch(0.52 0.08 128);
+  --strate-2: oklch(0.56 0.07 78);
+  --strate-3: oklch(0.5 0.07 58);
+  --strate-4: oklch(0.43 0.05 48);
+  --strate-5: oklch(0.42 0.03 264);
+
+
+  --shadow-card: 0 1px 2px oklch(0 0 0 / 0.3), 0 8px 24px -12px oklch(0 0 0 / 0.5);
+  --shadow-lift: 0 2px 6px oklch(0 0 0 / 0.35), 0 18px 40px -18px oklch(0 0 0 / 0.6);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    letter-spacing: -0.015em;
+  }
+}
+
+@utility surface {
+  background-color: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-card);
+}
+
+@utility surface-plain {
+  background-color: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+}
+
+@utility tap {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+/* Trame de papier millimétré pour les visuels de plan */
+@utility trame-plan {
+  background-color: var(--color-plan-fill);
+  background-image:
+    linear-gradient(to right, color-mix(in oklab, var(--color-plan-line) 14%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in oklab, var(--color-plan-line) 14%, transparent) 1px, transparent 1px);
+  background-size: 16px 16px;
+}
