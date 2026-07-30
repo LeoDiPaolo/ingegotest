@@ -10,19 +10,11 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as ProgressionRouteImport } from './routes/progression'
 import { Route as QaVisuelsRouteImport } from './routes/qa-visuels'
-import { Route as ReglagesRouteImport } from './routes/reglages'
-import { Route as SessionRouteImport } from './routes/session'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ProgressionRoute = ProgressionRouteImport.update({
-  id: '/progression',
-  path: '/progression',
   getParentRoute: () => rootRouteImport,
 } as any)
 const QaVisuelsRoute = QaVisuelsRouteImport.update({
@@ -30,54 +22,31 @@ const QaVisuelsRoute = QaVisuelsRouteImport.update({
   path: '/qa-visuels',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ReglagesRoute = ReglagesRouteImport.update({
-  id: '/reglages',
-  path: '/reglages',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SessionRoute = SessionRouteImport.update({
-  id: '/session',
-  path: '/session',
-  getParentRoute: () => rootRouteImport,
-} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/progression': typeof ProgressionRoute
   '/qa-visuels': typeof QaVisuelsRoute
-  '/reglages': typeof ReglagesRoute
-  '/session': typeof SessionRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/progression': typeof ProgressionRoute
   '/qa-visuels': typeof QaVisuelsRoute
-  '/reglages': typeof ReglagesRoute
-  '/session': typeof SessionRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/progression': typeof ProgressionRoute
   '/qa-visuels': typeof QaVisuelsRoute
-  '/reglages': typeof ReglagesRoute
-  '/session': typeof SessionRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/progression' | '/qa-visuels' | '/reglages' | '/session'
+  fullPaths: '/' | '/qa-visuels'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/progression' | '/qa-visuels' | '/reglages' | '/session'
-  id:
-    '__root__' | '/' | '/progression' | '/qa-visuels' | '/reglages' | '/session'
+  to: '/' | '/qa-visuels'
+  id: '__root__' | '/' | '/qa-visuels'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  ProgressionRoute: typeof ProgressionRoute
   QaVisuelsRoute: typeof QaVisuelsRoute
-  ReglagesRoute: typeof ReglagesRoute
-  SessionRoute: typeof SessionRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -89,13 +58,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/progression': {
-      id: '/progression'
-      path: '/progression'
-      fullPath: '/progression'
-      preLoaderRoute: typeof ProgressionRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/qa-visuels': {
       id: '/qa-visuels'
       path: '/qa-visuels'
@@ -103,40 +65,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof QaVisuelsRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/reglages': {
-      id: '/reglages'
-      path: '/reglages'
-      fullPath: '/reglages'
-      preLoaderRoute: typeof ReglagesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/session': {
-      id: '/session'
-      path: '/session'
-      fullPath: '/session'
-      preLoaderRoute: typeof SessionRouteImport
-      parentRoute: typeof rootRouteImport
-    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  ProgressionRoute: ProgressionRoute,
   QaVisuelsRoute: QaVisuelsRoute,
-  ReglagesRoute: ReglagesRoute,
-  SessionRoute: SessionRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
