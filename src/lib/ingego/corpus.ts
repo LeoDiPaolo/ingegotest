@@ -131,11 +131,25 @@ export const AXES: Axe[] = file.axes;
 export const FAMILLES = file.familles;
 export const TYPES = file.types;
 
-export const CORPUS: Question[] = file.questions.map((q) => ({
-  ...q,
-  niv: q.niveau,
-  fam: q.famille,
-}));
+const ORDRE_AXE: Record<string, number> = Object.fromEntries(AXES.map((a, i) => [a.id, i]));
+
+/* Ordre de parcours : thème par thème (axe puis sous-thème), et dans chaque thème
+   les questions du niveau 1 au niveau le plus élevé. */
+export const CORPUS: Question[] = file.questions
+  .map((q) => ({
+    ...q,
+    niv: q.niveau,
+    fam: q.famille,
+  }))
+  .sort(
+    (a, b) =>
+      (ORDRE_AXE[a.axe] ?? 99) - (ORDRE_AXE[b.axe] ?? 99) ||
+      (a.stIdx ?? 0) - (b.stIdx ?? 0) ||
+      a.sousTheme.localeCompare(b.sousTheme, "fr") ||
+      a.sujet.localeCompare(b.sujet, "fr") ||
+      a.niv - b.niv ||
+      a.id.localeCompare(b.id),
+  );
 
 export const AXE_BY_ID: Record<string, Axe> = Object.fromEntries(AXES.map((a) => [a.id, a]));
 export const Q_BY_ID: Record<string, Question> = Object.fromEntries(CORPUS.map((q) => [q.id, q]));
