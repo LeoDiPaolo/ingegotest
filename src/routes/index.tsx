@@ -21,7 +21,7 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: "IngéGo bêta — relecture des questions" },
       {
         property: "og:description",
-        content: "Parcours linéaire numéroté, question par question, pour relire tout le corpus.",
+        content: "Mode bêta test : parcours linéaire des questions du concours d'ingénieur territorial, une par une, numérotées, sans compte ni validation.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
