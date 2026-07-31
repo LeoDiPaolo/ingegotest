@@ -37,7 +37,8 @@ function BetaTest() {
   const { q: cible } = Route.useSearch();
   const [i, setI] = useState(0);
   const [saut, setSaut] = useState("");
-  const { historique, noter } = useHistorique();
+  const [repondu, setRepondu] = useState(false);
+  const { historique, commentaires, noter, commenter } = useHistorique();
 
   useEffect(() => {
     if (cible && Number.isFinite(cible)) {
@@ -50,6 +51,7 @@ function BetaTest() {
 
   useEffect(() => {
     localStorage.setItem(CLE, String(i));
+    setRepondu(false);
   }, [i]);
 
   const q = CORPUS[i];
@@ -60,6 +62,7 @@ function BetaTest() {
     setI((n) => Math.min(n + 1, total));
     window.scrollTo({ top: 0 });
   }
+
 
   function allerA(n: number) {
     if (!Number.isFinite(n)) return;
