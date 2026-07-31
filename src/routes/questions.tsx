@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
-import { ArrowLeft, Check, RotateCcw, X } from "lucide-react";
+import { ArrowLeft, Check, MessageSquare, RotateCcw, X } from "lucide-react";
 import { AXES, AXE_BY_ID, CORPUS } from "@/lib/ingego/corpus";
 import { useHistorique } from "@/lib/ingego/historique";
 
@@ -36,7 +36,7 @@ const FILTRES: [Filtre, string][] = [
 ];
 
 function ListeQuestions() {
-  const { historique, reinitialiser } = useHistorique();
+  const { historique, commentaires, reinitialiser } = useHistorique();
   const [filtre, setFiltre] = useState<Filtre>("tout");
   const [axe, setAxe] = useState<string>("tout");
   const [recherche, setRecherche] = useState("");
@@ -148,6 +148,13 @@ function ListeQuestions() {
                     {AXE_BY_ID[q.axe]?.court ?? q.axe} · {q.sousTheme} · niveau {q.niv}
                   </span>
                 </span>
+                <span className="hidden w-40 shrink-0 text-[0.68rem] text-muted-foreground sm:block">
+                  {commentaires[q.id] ? (
+                    <span className="line-clamp-3 whitespace-pre-wrap">{commentaires[q.id]}</span>
+                  ) : (
+                    <span className="opacity-40">—</span>
+                  )}
+                </span>
                 {statut ? (
                   <span
                     className={`mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full ${
@@ -163,8 +170,15 @@ function ListeQuestions() {
                   <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-elevated" />
                 )}
               </Link>
+              {commentaires[q.id] ? (
+                <p className="mt-1 rounded-lg bg-elevated px-3 py-2 text-[0.7rem] whitespace-pre-wrap text-muted-foreground sm:hidden">
+                  <MessageSquare className="mr-1 inline h-3 w-3" />
+                  {commentaires[q.id]}
+                </p>
+              ) : null}
             </li>
           ))}
+
         </ul>
         {liste.length === 0 ? (
           <p className="py-10 text-center text-sm text-muted-foreground">

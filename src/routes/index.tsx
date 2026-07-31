@@ -37,7 +37,8 @@ function BetaTest() {
   const { q: cible } = Route.useSearch();
   const [i, setI] = useState(0);
   const [saut, setSaut] = useState("");
-  const { historique, noter } = useHistorique();
+  const [repondu, setRepondu] = useState(false);
+  const { historique, commentaires, noter, commenter } = useHistorique();
 
   useEffect(() => {
     if (cible && Number.isFinite(cible)) {
@@ -50,6 +51,7 @@ function BetaTest() {
 
   useEffect(() => {
     localStorage.setItem(CLE, String(i));
+    setRepondu(false);
   }, [i]);
 
   const q = CORPUS[i];
@@ -60,6 +62,7 @@ function BetaTest() {
     setI((n) => Math.min(n + 1, total));
     window.scrollTo({ top: 0 });
   }
+
 
   function allerA(n: number) {
     if (!Number.isFinite(n)) return;
@@ -147,8 +150,19 @@ function BetaTest() {
               numero={i + 1}
               total={total}
               onNote={suivante}
-              onCorrige={(juste) => noter(q.id, juste ? "ok" : "ko")}
+              onCorrige={(juste) => {
+                noter(q.id, juste ? "ok" : "ko");
+                setRepondu(true);
+              }}
             />
+            {repondu || commentaires[q.id] ? (
+              <Observation
+                key={`obs-${q.id}`}
+                valeur={commentaires[q.id] ?? ""}
+                onChange={(t) => commenter(q.id, t)}
+              />
+            ) : null}
+
             <div className="grid grid-cols-2 gap-2">
               <button
                 onClick={() => allerA(i)}
@@ -184,3 +198,53 @@ function BetaTest() {
     </div>
   );
 }
+
+function Observation({
+  valeur,
+  onChange,
+}: {
+  valeur: string;
+  onChange: (texte: string) => void;
+}) {
+  const [texte, setTexte] = useState(valeur);
+  const [enregistre, setEnregistre] = useState(false);
+
+  return (
+    <div className="surface space-y-2 p-4">
+      <label htmlFor="observation" className="block text-sm font-semibold text-primary">
+        Observation sur cette question
+      </label>
+      <textarea
+        id="observation"
+        value={texte}
+        rows={3}
+        placeholder="Remarques sur la pertinence, la formulation, la correction…"
+        onChange={(e) => {
+          setTexte(e.target.value);
+          setEnregistre(false);
+        }}
+        onBlur={() => {
+          onChange(texte);
+          setEnregistre(true);
+        }}
+        className="w-full resize-y rounded-lg border border-input bg-background px-3 py-2 text-sm outline-none focus:border-ring"
+      />
+      <div className="flex items-center justify-between gap-2">
+        <span className="text-xs text-muted-foreground">
+          {enregistre ? "Commentaire enregistré." : "Enregistré localement à la sortie du champ."}
+        </span>
+        <button
+          type="button"
+          onClick={() => {
+            onChange(texte);
+            setEnregistre(true);
+          }}
+          className="tap rounded-lg border border-border bg-elevated px-3 py-1.5 text-xs font-medium"
+        >
+          Enregistrer
+        </button>
+      </div>
+    </div>
+  );
+}
+
