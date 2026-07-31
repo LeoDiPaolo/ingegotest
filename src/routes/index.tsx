@@ -150,8 +150,19 @@ function BetaTest() {
               numero={i + 1}
               total={total}
               onNote={suivante}
-              onCorrige={(juste) => noter(q.id, juste ? "ok" : "ko")}
+              onCorrige={(juste) => {
+                noter(q.id, juste ? "ok" : "ko");
+                setRepondu(true);
+              }}
             />
+            {repondu || commentaires[q.id] ? (
+              <Observation
+                key={`obs-${q.id}`}
+                valeur={commentaires[q.id] ?? ""}
+                onChange={(t) => commenter(q.id, t)}
+              />
+            ) : null}
+
             <div className="grid grid-cols-2 gap-2">
               <button
                 onClick={() => allerA(i)}
