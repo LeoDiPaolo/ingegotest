@@ -36,7 +36,7 @@ const FILTRES: [Filtre, string][] = [
 ];
 
 function ListeQuestions() {
-  const { historique, reinitialiser } = useHistorique();
+  const { historique, commentaires, reinitialiser } = useHistorique();
   const [filtre, setFiltre] = useState<Filtre>("tout");
   const [axe, setAxe] = useState<string>("tout");
   const [recherche, setRecherche] = useState("");
