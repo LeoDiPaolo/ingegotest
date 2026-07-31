@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
-import { ArrowLeft, Check, RotateCcw, X } from "lucide-react";
+import { ArrowLeft, Check, MessageSquare, RotateCcw, X } from "lucide-react";
 import { AXES, AXE_BY_ID, CORPUS } from "@/lib/ingego/corpus";
 import { useHistorique } from "@/lib/ingego/historique";
 
