@@ -198,3 +198,53 @@ function BetaTest() {
     </div>
   );
 }
+
+function Observation({
+  valeur,
+  onChange,
+}: {
+  valeur: string;
+  onChange: (texte: string) => void;
+}) {
+  const [texte, setTexte] = useState(valeur);
+  const [enregistre, setEnregistre] = useState(false);
+
+  return (
+    <div className="surface space-y-2 p-4">
+      <label htmlFor="observation" className="block text-sm font-semibold text-primary">
+        Observation sur cette question
+      </label>
+      <textarea
+        id="observation"
+        value={texte}
+        rows={3}
+        placeholder="Remarques sur la pertinence, la formulation, la correction…"
+        onChange={(e) => {
+          setTexte(e.target.value);
+          setEnregistre(false);
+        }}
+        onBlur={() => {
+          onChange(texte);
+          setEnregistre(true);
+        }}
+        className="w-full resize-y rounded-lg border border-input bg-background px-3 py-2 text-sm outline-none focus:border-ring"
+      />
+      <div className="flex items-center justify-between gap-2">
+        <span className="text-xs text-muted-foreground">
+          {enregistre ? "Commentaire enregistré." : "Enregistré localement à la sortie du champ."}
+        </span>
+        <button
+          type="button"
+          onClick={() => {
+            onChange(texte);
+            setEnregistre(true);
+          }}
+          className="tap rounded-lg border border-border bg-elevated px-3 py-1.5 text-xs font-medium"
+        >
+          Enregistrer
+        </button>
+      </div>
+    </div>
+  );
+}
+
