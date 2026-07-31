@@ -146,8 +146,8 @@ export const CORPUS: Question[] = file.questions
       (ORDRE_AXE[a.axe] ?? 99) - (ORDRE_AXE[b.axe] ?? 99) ||
       (a.stIdx ?? 0) - (b.stIdx ?? 0) ||
       a.sousTheme.localeCompare(b.sousTheme, "fr") ||
-      a.sujet.localeCompare(b.sujet, "fr") ||
       a.niv - b.niv ||
+      a.sujet.localeCompare(b.sujet, "fr") ||
       a.id.localeCompare(b.id),
   );
 
