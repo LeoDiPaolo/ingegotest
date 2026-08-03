@@ -166,7 +166,7 @@ export function Exercice({
   const autoNote = AUTO_NOTE.includes(q.type);
 
   const melangeMots = useMemo(
-    () => melange([...(q.mots ?? []), ...(q.leurres ?? [])], graineDe(q.id)),
+    () => melange([...new Set([...(q.mots ?? []), ...(q.leurres ?? [])])], graineDe(q.id)),
     [q],
   );
   const melangeDroite = useMemo(
