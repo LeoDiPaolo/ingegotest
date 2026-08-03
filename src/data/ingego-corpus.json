@@ -9611,9 +9611,9 @@
    "sujet": "g-1",
    "niveau": 1,
    "famille": "S",
-   "explication": "La Fonction Publique d'État, Territoriale, et Hospitalière.",
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "explication": "Les trois versants de la fonction publique française sont la fonction publique d'État (FPE), la fonction publique territoriale (FPT) et la fonction publique hospitalière (FPH), régis depuis mars 2022 par le Code général de la fonction publique.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null,
    "type": "assoc",
    "question": "Associe chaque versant de la fonction publique à un exemple d'employeur correspondant.",
    "paires": [
@@ -9656,7 +9656,7 @@
     ]
    },
    "bonneCible": 1,
-   "explication": "Les agents contractuels représentent environ 23 % des effectifs de la fonction publique tous versants confondus fin 2023 (26 % dans la seule fonction publique territoriale), une part en forte progression depuis le début des années.",
+   "explication": "Les agents contractuels représentent environ 23 % des effectifs de la fonction publique tous versants confondus, et près d'un quart dans la seule fonction publique territoriale (source DGAFP).",
    "derniereVerification": "2026-08",
    "aVerifier": null
   },
@@ -9693,9 +9693,9 @@
     ]
    },
    "bonneCible": 0,
-   "explication": "La filière technique est la plus représentée dans la fonction publique territoriale, avec environ 44,9 % des effectifs.",
+   "explication": "La filière technique est la plus représentée dans la fonction publique territoriale, avec environ 45 % des effectifs (voirie, espaces verts, bâtiments, restauration scolaire...).",
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Répartition par filière à recouper avec les derniers chiffres DGCL / CNFPT."
   },
   {
    "id": "g-031",
@@ -9705,12 +9705,12 @@
    "sujet": "g-1",
    "niveau": 2,
    "famille": "S",
-   "explication": "Les droits et obligations des fonctionnaires sont désormais codifiés au livre Ier du Code général de la fonction publique (CGFP), entré en vigueur le 1er mars 2022, qui a abrogé la loi du 13 juillet.",
+   "explication": "Le CGFP a codifié à droit constant, depuis le 1er mars 2022, les anciennes lois de 1983, 1984 et 1986 : on cite désormais le code, non plus la loi Le Pors.",
    "derniereVerification": "2026-08",
    "aVerifier": null,
    "type": "vf",
-   "question": "La loi du 13 juillet 1983 définit les droits et obligations des fonctionnaires, dans ses dispositions générales.",
-   "justification": "La loi du 13 juillet 1983, dite loi Le Pors, a été abrogée : ses dispositions relatives aux droits et obligations des fonctionnaires sont aujourd'hui codifiées au livre Ier du Code général de la fonction publique, entré en vigueur le 1er mars.",
+   "question": "Les droits et obligations des fonctionnaires figurent aujourd'hui dans la loi du 13 juillet 1983, dite loi Le Pors.",
+   "justification": "La loi Le Pors du 13 juillet 1983 a été abrogée : ses dispositions sur les droits et obligations des fonctionnaires sont désormais codifiées au livre Ier du Code général de la fonction publique (CGFP), entré en vigueur le 1er mars 2022.",
    "vrai": false
   },
   {
@@ -9719,17 +9719,15 @@
    "sousTheme": "Institutions et décentralisation",
    "stIdx": 1,
    "sujet": "g-1",
-   "niveau": 9,
+   "niveau": 3,
    "famille": "S",
-   "explication": "La déconcentration transfère le pouvoir au sein de l'État (Préfet), la décentralisation transfère le pouvoir à une collectivité autonome.",
-   "type": "libre",
-   "question": "Quelle est la différence entre déconcentration et décentralisation ?",
-   "options": [
-    "La déconcentration transfère le pouvoir au sein de l'État (Préfet), la décentralisation transfère le pouvoir à une collectivité autonome."
-   ],
-   "bonneReponse": 0,
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "explication": "Déconcentration = le pouvoir reste dans l'État, exercé plus près du terrain. Décentralisation = le pouvoir passe à une collectivité autonome, dirigée par des élus.",
+   "type": "vf",
+   "question": "La déconcentration transfère des compétences à des collectivités territoriales autonomes, tandis que la décentralisation les confie à des agents de l'État comme le préfet.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null,
+   "vrai": false,
+   "justification": "C'est l'inverse : la déconcentration délègue le pouvoir de décision à des agents de l'État sur le territoire (préfet, services déconcentrés), soumis au pouvoir hiérarchique ; la décentralisation transfère des compétences à des collectivités territoriales, personnes morales distinctes dotées de la libre administration."
   },
   {
    "id": "g-033",
@@ -9739,9 +9737,9 @@
    "sujet": "g-1",
    "niveau": 2,
    "famille": "S",
-   "explication": "La libre administration des collectivités territoriales.",
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "explication": "La libre administration des collectivités territoriales, principe à valeur constitutionnelle (article 72 de la Constitution), fonde la décentralisation en garantissant leur autonomie de gestion sous le contrôle du juge.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null,
    "type": "qcm",
    "question": "Quel est le principe fondamental sur lequel repose la décentralisation ?",
    "bonneReponse": 0,
@@ -9760,9 +9758,9 @@
    "sujet": "g-1",
    "niveau": 2,
    "famille": "M",
-   "explication": "Acte I (1982-1983), Acte II (2003-2004), Acte III (Lois MAPTAM 2014 et NOTRe 2015).",
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "explication": "Acte I : lois Defferre 1982-1983. Acte II : révision constitutionnelle du 28 mars 2003 et loi du 13 août 2004. Acte III : lois MAPTAM (2014) et NOTRe (2015).",
+   "derniereVerification": "2026-08",
+   "aVerifier": null,
    "type": "ordre",
    "question": "Remets dans l'ordre chronologique les grandes étapes de la décentralisation en France.",
    "items": [
@@ -9779,12 +9777,12 @@
    "sujet": "g-1",
    "niveau": 2,
    "famille": "S",
-   "explication": "Un contrôle de légalité (a posteriori) et non un contrôle d'opportunité.",
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "explication": "Depuis la loi du 2 mars 1982, le préfet n'exerce plus qu'un contrôle de légalité a posteriori sur les actes qui lui sont transmis : il ne peut pas en apprécier l'opportunité, ce qui garantit la libre administration.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null,
    "type": "vf",
    "question": "Le préfet exerce sur les actes des collectivités territoriales un contrôle d'opportunité lui permettant de juger de la pertinence des décisions locales.",
-   "justification": "Le préfet n'exerce qu'un contrôle de légalité a posteriori : il vérifie la conformité au droit des actes qui lui sont transmis, sans pouvoir apprécier leur opportunité, sous peine de porter atteinte à la libre administration.",
+   "justification": "Le préfet ne contrôle que la légalité de l'acte, a posteriori, sans pouvoir juger de son opportunité.",
    "vrai": false
   },
   {
@@ -9798,15 +9796,15 @@
    "type": "erreur",
    "question": "Une des trois affirmations sur le contrôle préfectoral est fausse. Laquelle ?",
    "segments": [
-    "Le préfet, s'il estime un acte local illégal, saisit le tribunal administratif dans un délai de deux mois.",
+    "S'il estime un acte local illégal, le préfet saisit le tribunal administratif dans un délai de deux mois.",
     "Le tribunal administratif peut annuler l'acte litigieux si l'illégalité est avérée.",
     "Le préfet doit d'abord obtenir l'accord du Conseil d'État avant de saisir le tribunal administratif."
    ],
    "phraseFautive": 2,
-   "correction": "Le préfet saisit directement le tribunal administratif, sans passer par le Conseil d'État.",
-   "explication": "Le Tribunal Administratif (dans un délai de 2 mois).",
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "correction": "Le préfet saisit directement le tribunal administratif par la voie du déféré préfectoral, sans accord préalable du Conseil d'État.",
+   "explication": "Depuis la loi du 2 mars 1982, le contrôle est un contrôle de légalité a posteriori : le préfet défère l'acte au tribunal administratif dans les deux mois suivant sa transmission.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "g-037",
@@ -9816,9 +9814,9 @@
    "sujet": "g-1",
    "niveau": 2,
    "famille": "M",
-   "explication": "6 ans.",
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "explication": "Depuis la loi du 17 mai 2013, les mandats municipal, départemental et régional durent tous 6 ans.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null,
    "type": "qcm",
    "question": "Quelle est la durée d'un mandat municipal, départemental ou régional en France ?",
    "bonneReponse": 0,
@@ -9837,9 +9835,9 @@
    "sujet": "g-1",
    "niveau": 3,
    "famille": "S",
-   "explication": "L'organe délibérant (ex: Conseil municipal) et l'exécutif (ex: Maire).",
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "explication": "L'organe délibérant (conseil municipal, départemental, régional) vote les décisions ; l'organe exécutif (maire, président du conseil départemental ou régional) les prépare et les exécute.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null,
    "type": "tri",
    "question": "Classe chaque organe dans la bonne catégorie : délibérant ou exécutif.",
    "colonnes": [
@@ -11802,18 +11800,20 @@
    "famille": "S",
    "type": "trous",
    "question": "Complétez la signification du sigle DGS dans une collectivité.",
-   "texte": "Le sigle DGS signifie {1}.",
+   "texte": "Le sigle DGS signifie {1} : il dirige l'ensemble des services sous l'autorité de {2}.",
    "mots": [
-    "Directeur Général des Services"
+    "directeur général des services",
+    "l'exécutif local"
    ],
    "leurres": [
-    "Directeur Général de la Sécurité",
-    "Délégué à la Gestion des Services",
-    "Directeur Général du Suivi budgétaire"
+    "directeur général de la sécurité",
+    "délégué à la gestion des services",
+    "l'assemblée délibérante",
+    "du préfet"
    ],
-   "explication": "DGS signifie Directeur Général des Services.",
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "explication": "Le DGS est le premier collaborateur de l'exécutif local : il coordonne les services et met en œuvre les décisions de l'assemblée délibérante.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "g-123",
@@ -11823,11 +11823,11 @@
    "sujet": "g-1",
    "niveau": 3,
    "famille": "S",
-   "explication": "Comité Social Territorial (fusion des anciens CT et CHSCT).",
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "explication": "Le comité social territorial (CST), issu de la fusion du comité technique et du CHSCT par la loi de transformation de la fonction publique du 6 août 2019, réunit des représentants du personnel élus et des représentants de la collectivité désignés par l'autorité territoriale.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null,
    "type": "tri",
-   "question": "Classez ces éléments selon qu'ils relèvent des représentants du personnel ou de la collectivité au sein du Comité Social Territorial (CST).",
+   "question": "Classez ces éléments selon qu'ils relèvent des représentants du personnel ou de la collectivité au sein du comité social territorial (CST).",
    "colonnes": [
     "Représentants du personnel",
     "Représentants de la collectivité"
@@ -11865,21 +11865,20 @@
    "famille": "S",
    "type": "trous",
    "question": "Complétez la définition du sigle DSP en commande publique.",
-   "texte": "DSP signifie Délégation de {1} {2}, contrat dont la rémunération est liée à {3}.",
+   "texte": "DSP signifie délégation de {1} {2} : un contrat dont la rémunération du délégataire est substantiellement liée à {3}.",
    "mots": [
-    "Service",
-    "Public",
+    "service",
+    "public",
     "l'exploitation du service"
    ],
    "leurres": [
-    "Dossier de Sélection des Prestataires",
-    "Direction du Suivi des Prestations",
-    "le montant de la subvention versée",
-    "Directive relative aux Services Publics"
+    "dossier de sélection des prestataires",
+    "direction du suivi des services",
+    "au montant de la subvention versée"
    ],
-   "explication": "Délégation de Service Public (contrat où la rémunération est liée à l'exploitation du service).",
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "explication": "La délégation de service public est une concession : la personne publique confie la gestion d'un service public à un délégataire dont la rémunération est substantiellement liée aux résultats de l'exploitation, ce qui lui fait supporter un risque.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "g-125",
@@ -11889,15 +11888,15 @@
    "sujet": "g-1",
    "niveau": 9,
    "famille": "S",
-   "explication": "Un marché public fixant les termes de commandes futures (bons de commande ou marchés subséquents) sur une période donnée.",
+   "explication": "L'accord-cadre est une technique d'achat du Code de la commande publique (art. L2125-1) : il sélectionne un ou plusieurs opérateurs et fixe les termes des marchés à exécuter, par bons de commande ou par marchés subséquents, sur une période donnée.",
    "type": "libre",
    "question": "Qu'est-ce qu'un accord-cadre ?",
    "options": [
-    "Un marché public fixant les termes de commandes futures (bons de commande ou marchés subséquents) sur une période donnée."
+    "Une technique d'achat qui fixe les termes des marchés à passer (bons de commande ou marchés subséquents) sur une période donnée, sans engagement immédiat des quantités."
    ],
    "bonneReponse": 0,
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "g-126",
@@ -12166,7 +12165,7 @@
    "question": "Complétez la phrase sur le contrôle des actes des collectivités territoriales.",
    "texte": "Les actes des collectivités territoriales (délibérations, arrêtés) sont contrôlés par le {1}, dans le cadre du {2}.",
    "mots": [
-    "préfet (ou sous-préfet)",
+    "préfet",
     "contrôle de légalité"
    ],
    "leurres": [
@@ -12175,9 +12174,9 @@
     "procureur de la République",
     "contrôle budgétaire"
    ],
-   "explication": "C'est le préfet (ou le sous-préfet), via le contrôle de légalité, qui contrôle les actes des collectivités territoriales.",
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "explication": "C'est le préfet (ou le sous-préfet), au titre du contrôle de légalité, qui vérifie a posteriori la légalité des actes locaux ; s'il les estime illégaux, il les défère au tribunal administratif.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "g-143",
@@ -12187,16 +12186,16 @@
    "sujet": "g-1",
    "niveau": 4,
    "famille": "M",
-   "explication": "2 mois à compter de sa transmission.",
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "explication": "Après transmission de l'acte, le préfet dispose de 2 mois pour saisir le tribunal administratif d'un déféré ; il peut auparavant adresser un recours gracieux à la collectivité, qui interrompt ce délai.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null,
    "type": "ordre",
    "question": "Remettez dans l'ordre chronologique les étapes du contrôle de légalité pouvant conduire à un déféré préfectoral.",
    "items": [
     "Transmission de l'acte au préfet",
-    "Examen de la légalité de l'acte par les services préfectoraux",
-    "Éventuel recours gracieux du préfet auprès de la collectivité",
-    "Déféré de l'acte au tribunal administratif dans un délai de 2 mois"
+    "Examen de la légalité par les services préfectoraux",
+    "Éventuel recours gracieux auprès de la collectivité",
+    "Déféré au tribunal administratif dans le délai de 2 mois"
    ]
   },
   {
@@ -12416,17 +12415,24 @@
    "sousTheme": "Institutions et décentralisation",
    "stIdx": 1,
    "sujet": "g-1",
-   "niveau": 9,
+   "niveau": 4,
    "famille": "S",
-   "explication": "Le Centre Communal d'Action Sociale anime la politique sociale de la commune (aide sociale facultative/légale).",
-   "type": "libre",
-   "question": "Quel est le rôle d'un CCAS ?",
-   "options": [
-    "Le Centre Communal d'Action Sociale anime la politique sociale de la commune (aide sociale facultative/légale)."
+   "explication": "Le centre communal d'action sociale est un établissement public administratif rattaché à la commune, présidé de droit par le maire ; il conduit l'analyse des besoins sociaux et distribue l'aide sociale légale et facultative.",
+   "type": "trous",
+   "question": "Complétez la phrase sur le rôle du CCAS.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null,
+   "texte": "Le CCAS, centre communal d'action {1}, est un établissement public {2} présidé par le maire ; il met en œuvre l'aide sociale {3} et facultative de la commune.",
+   "mots": [
+    "sociale",
+    "administratif",
+    "légale"
    ],
-   "bonneReponse": 0,
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "leurres": [
+    "culturelle",
+    "industriel et commercial",
+    "obligatoire"
+   ]
   },
   {
    "id": "g-156",
@@ -12436,9 +12442,9 @@
    "sujet": "g-1",
    "niveau": 4,
    "famille": "M",
-   "explication": "Le mécanisme de la déconcentration repose sur l'unité.",
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "explication": "La déconcentration repose sur l'unité de l'État : le ministre ou le préfet dispose d'un pouvoir hiérarchique sur les agents subordonnés, à la différence de la décentralisation, qui met en relation des personnes morales distinctes.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null,
    "type": "assoc",
    "question": "Associez chaque notion administrative à sa définition.",
    "paires": [
@@ -12447,16 +12453,16 @@
      "Délégation de pouvoirs à des agents de l'État au sein d'une administration unique"
     ],
     [
-     "Tutelle hiérarchisée",
-     "Mode de contrôle interne à l'État caractéristique de la déconcentration"
+     "Pouvoir hiérarchique",
+     "Mode de contrôle interne à l'État, propre à la déconcentration"
     ],
     [
      "Préfet",
-     "Représentant de l'État dans le département exerçant l'autorité déconcentrée"
+     "Représentant de l'État dans le département, autorité déconcentrée"
     ],
     [
      "Unité de l'État",
-     "Principe sur lequel repose le mécanisme de la déconcentration"
+     "Principe sur lequel repose la déconcentration"
     ]
    ]
   },
@@ -12468,27 +12474,27 @@
    "sujet": "g-1",
    "niveau": 4,
    "famille": "M",
-   "explication": "Le mécanisme de la décentralisation repose sur la diversité.",
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "explication": "La décentralisation repose sur des collectivités dotées de la personnalité morale et de compétences propres, dans le cadre du principe constitutionnel de libre administration, qui permet de tenir compte de la diversité des territoires.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null,
    "type": "assoc",
    "question": "Associez chaque collectivité ou principe à la notion de décentralisation correspondante.",
    "paires": [
     [
      "Commune",
-     "Collectivité territoriale décentralisée dotée de la personnalité morale"
+     "Collectivité territoriale dotée de la personnalité morale"
     ],
     [
      "Région",
-     "Collectivité territoriale décentralisée gérant des compétences propres"
+     "Collectivité territoriale gérant des compétences propres"
     ],
     [
      "Libre administration",
-     "Principe constitutionnel fondant l'autonomie des collectivités décentralisées"
+     "Principe constitutionnel fondant l'autonomie locale"
     ],
     [
      "Diversité locale",
-     "Principe sur lequel repose le mécanisme de la décentralisation"
+     "Réalité territoriale que la décentralisation prend en compte"
     ]
    ]
   },
@@ -12500,20 +12506,20 @@
    "sujet": "g-1",
    "niveau": 4,
    "famille": "M",
-   "explication": "Le pouvoir s'exerce par le biais d'une tutelle hiérarchisée.",
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "explication": "En déconcentration, le pouvoir de décision reste dans l'État mais est délégué à des agents nommés (préfets, directeurs départementaux) soumis au pouvoir hiérarchique du pouvoir central : l'État demeure la seule personne morale.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null,
    "type": "trous",
    "question": "Complétez la phrase sur l'exercice du pouvoir en déconcentration.",
    "mots": [
-    "tutelle",
-    "hiérarchisée",
+    "autorité",
+    "hiérarchique",
     "État"
    ],
-   "texte": "En déconcentration, le pouvoir s'exerce par le biais d'une {1} {2}, l'{3} restant unique.",
+   "texte": "En déconcentration, le pouvoir s'exerce par le biais d'une {1} {2}, l'{3} restant la seule personne morale.",
    "leurres": [
     "autonomie",
-    "élection",
+    "élective",
     "délégation"
    ]
   },
@@ -12525,9 +12531,9 @@
    "sujet": "g-1",
    "niveau": 4,
    "famille": "M",
-   "explication": "Le pouvoir s'exerce via le principe de libre administration.",
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "explication": "Le pouvoir s'exerce via le principe constitutionnel de libre administration des collectivités territoriales (article 72 de la Constitution).",
+   "derniereVerification": "2026-08",
+   "aVerifier": null,
    "type": "trous",
    "question": "Complétez la phrase sur l'exercice du pouvoir en décentralisation.",
    "mots": [
@@ -12550,15 +12556,15 @@
    "sujet": "g-1",
    "niveau": 4,
    "famille": "M",
-   "explication": "Ce sont des compétences déléguées par l'État.",
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "explication": "Ces trois actes ont transféré progressivement des compétences de l'État vers les collectivités : lois Defferre (1982-1983), Acte II (révision constitutionnelle de 2003 et loi du 13 août 2004), Acte III (MAPTAM du 27 janvier 2014 et NOTRe du 7 août 2015).",
+   "derniereVerification": "2026-08",
+   "aVerifier": null,
    "type": "ordre",
    "question": "Remettez dans l'ordre chronologique les grandes étapes de la décentralisation en France, dont procèdent les compétences déléguées par l'État.",
    "items": [
-    "Acte I de la décentralisation (lois Defferre, 1982-1983)",
-    "Acte II de la décentralisation (loi constitutionnelle et loi Libertés et responsabilités locales, 2003-2004)",
-    "Acte III de la décentralisation (lois MAPTAM et NOTRe, 2014-2015)"
+    "Acte I (lois Defferre, 1982-1983)",
+    "Acte II (loi constitutionnelle et loi Libertés et responsabilités locales, 2003-2004)",
+    "Acte III (lois MAPTAM et NOTRe, 2014-2015)"
    ]
   },
   {
@@ -12572,10 +12578,10 @@
    "type": "vf",
    "question": "Les compétences exercées par les collectivités territoriales dans le cadre de la décentralisation proviennent de transferts opérés par l'État.",
    "vrai": true,
-   "justification": "La décentralisation consiste précisément à transférer des compétences de l'État vers les collectivités territoriales, accompagnées des ressources correspondantes.",
-   "explication": "Ce sont des compétences qui ont été transférées de l'État vers les collectivités territoriales.",
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "justification": "La décentralisation transfère des compétences de l'État vers les collectivités, accompagnées des ressources correspondantes (principe de compensation posé par l'article 72-2 de la Constitution).",
+   "explication": "Ces compétences ont été transférées lors des Actes I (1982-1983), II (2003-2004) et III (2014-2015) de la décentralisation.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "g-162",
@@ -12598,9 +12604,9 @@
     "commune",
     "région"
    ],
-   "explication": "La structure est la circonscription administrative.",
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "explication": "La déconcentration s'appuie sur des circonscriptions administratives (région, département, arrondissement), simples cadres d'action de l'État sans personnalité juridique propre, contrairement aux collectivités territoriales.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "g-163",
@@ -12615,13 +12621,13 @@
    "segments": [
     "La structure territoriale de la décentralisation est la collectivité territoriale.",
     "La décentralisation transfère des compétences de l'État vers des personnes morales distinctes de lui.",
-    "La décentralisation supprime le contrôle de légalité exercé par le préfet."
+    "La décentralisation a supprimé le contrôle de légalité exercé par le préfet."
    ],
    "phraseFautive": 2,
-   "correction": "La décentralisation n'a pas supprimé le contrôle de légalité : le préfet continue de contrôler a posteriori la légalité des actes des collectivités.",
-   "explication": "La structure de la décentralisation est la collectivité territoriale, mais le contrôle de légalité préfectoral subsiste.",
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "correction": "Le contrôle de légalité subsiste : depuis 1982, le préfet contrôle a posteriori la légalité des actes locaux, sans pouvoir en apprécier l'opportunité.",
+   "explication": "La décentralisation a changé la nature du contrôle (a posteriori, de pure légalité), elle ne l'a pas supprimé.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "g-164",
@@ -12633,20 +12639,19 @@
    "famille": "M",
    "type": "trous",
    "question": "Complétez la phrase sur le fonctionnement de la déconcentration.",
-   "texte": "Dans le système déconcentré, l'autorité est détenue par du personnel {1} par l'État, à la différence de la décentralisation où le pouvoir est confié à des autorités {2}.",
+   "texte": "Dans le système déconcentré, l'autorité est détenue par du personnel {1} par l'État, à la différence de la décentralisation où le pouvoir revient à des autorités {2}.",
    "mots": [
     "nommé",
     "élues"
    ],
    "leurres": [
-    "désignées",
-    "recrutées",
-    "choisies",
+    "recruté",
+    "tirées au sort",
     "révoquées"
    ],
-   "explication": "L'autorité est détenue par du personnel nommé par l'État.",
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "explication": "La déconcentration s'appuie sur des agents nommés et hiérarchiquement subordonnés (préfets, services déconcentrés) ; la décentralisation confie le pouvoir à des élus locaux autonomes.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "g-165",
@@ -12659,10 +12664,10 @@
    "type": "vf",
    "question": "Dans le système décentralisé français, l'autorité est détenue par les élus locaux.",
    "vrai": true,
-   "justification": "La décentralisation, en confiant des compétences propres et un pouvoir de décision aux collectivités territoriales, place l'autorité entre les mains des élus locaux, à la différence de la déconcentration où l'autorité reste entre les mains de représentants de l'État.",
-   "explication": "L'autorité est détenue par les élus locaux.",
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "justification": "La décentralisation confie des compétences propres et un pouvoir de décision aux collectivités territoriales : l'autorité y appartient aux élus locaux, alors qu'en déconcentration elle reste entre les mains d'agents nommés par l'État.",
+   "explication": "L'autorité est détenue par les élus locaux, dans le cadre de la libre administration des collectivités territoriales.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "g-166",
@@ -12677,7 +12682,7 @@
    "paires": [
     [
      "Déconcentration",
-     "Fonction publique de l'État"
+     "Services de l'État sur le territoire"
     ],
     [
      "Décentralisation",
@@ -12692,9 +12697,9 @@
      "Services communs entre collectivités"
     ]
    ],
-   "explication": "C'est la fonction publique de l'État.",
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "explication": "La déconcentration concerne les services de l'État répartis sur le territoire (préfectures, directions départementales), tandis que décentralisation, intercommunalité et mutualisation relèvent des collectivités et de leurs groupements.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "g-167",
@@ -12709,7 +12714,7 @@
    "paires": [
     [
      "Fonction publique territoriale",
-     "Collectivités territoriales"
+     "Collectivités territoriales et EPCI"
     ],
     [
      "Fonction publique d'État",
@@ -12718,15 +12723,11 @@
     [
      "Fonction publique hospitalière",
      "Établissements publics de santé"
-    ],
-    [
-     "Décentralisation",
-     "Fonction publique territoriale"
     ]
    ],
-   "explication": "La décentralisation est directement associée à la fonction publique territoriale, créée pour gérer les compétences transférées aux collectivités.",
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "explication": "La fonction publique territoriale, créée par la loi du 26 janvier 1984 et codifiée depuis 2022 au Code général de la fonction publique, a été instituée pour gérer les agents et compétences transférés par les lois de décentralisation.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "g-168",
@@ -14353,15 +14354,11 @@
     [
      "EPCI",
      "Conseil communautaire"
-    ],
-    [
-     "État (échelon déconcentré)",
-     "Préfet"
     ]
    ],
-   "explication": "Le Conseil départemental est l'organe délibérant au niveau départemental.",
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "explication": "Chaque niveau de collectivité dispose d'un organe délibérant élu ; le préfet, lui, n'est pas un organe délibérant mais le représentant de l'État.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "g-241",
@@ -14373,19 +14370,20 @@
    "famille": "M",
    "type": "trous",
    "question": "Complétez la phrase sur l'organe délibérant régional.",
-   "texte": "L'organe délibérant au niveau régional s'appelle le {1}.",
+   "texte": "L'organe délibérant au niveau régional s'appelle le {1}, élu au suffrage universel direct pour {2} ans.",
    "mots": [
-    "Conseil Régional"
+    "conseil régional",
+    "6"
    ],
    "leurres": [
-    "Conseil Départemental",
-    "Conseil Municipal",
-    "Bureau régional",
-    "Assemblée territoriale"
+    "conseil départemental",
+    "conseil communautaire",
+    "5",
+    "4"
    ],
-   "explication": "L'organe délibérant au niveau régional est le Conseil Régional.",
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "explication": "Le conseil régional est l'assemblée délibérante de la région ; ses membres sont élus pour 6 ans au scrutin de liste à deux tours.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "g-242",
@@ -14403,10 +14401,10 @@
     "Le préfet pouvait alors se prononcer sur le fond de la décision, exerçant un véritable contrôle d'opportunité."
    ],
    "phraseFautive": 1,
-   "correction": "En réalité, avant la loi du 2 mars 1982, le contrôle préfectoral portait aussi sur l'opportunité des décisions, et non sur leur seule légalité.",
-   "explication": "C'était un contrôle sur le fond, a priori et un contrôle d'opportunité.",
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "correction": "Avant la loi du 2 mars 1982, la tutelle préfectorale portait aussi sur l'opportunité des décisions et s'exerçait a priori, et non sur la seule légalité.",
+   "explication": "La loi du 2 mars 1982 a substitué à cette tutelle un contrôle de légalité a posteriori exercé par déféré devant le tribunal administratif.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "g-243",
@@ -14421,24 +14419,24 @@
    "points": [
     [
      "Avant 1982",
-     "Le préfet exerce une tutelle a priori et peut annuler lui-même les actes des collectivités locales"
+     "Tutelle a priori : le préfet peut annuler lui-même les actes locaux"
     ],
     [
      "1982",
-     "Les lois de décentralisation (loi Defferre) suppriment la tutelle préfectorale a priori et instaurent le contrôle de légalité a posteriori"
+     "Loi Defferre : suppression de la tutelle, contrôle de légalité a posteriori"
     ],
     [
      "2003-2004",
-     "L'acte II de la décentralisation renforce l'autonomie des collectivités territoriales"
+     "Acte II : renforcement de l'autonomie des collectivités"
     ],
     [
      "2015",
-     "La loi NOTRe redéfinit les compétences entre collectivités et poursuit la modernisation de l'action publique territoriale"
+     "Loi NOTRe : nouvelle répartition des compétences locales"
     ]
    ],
-   "explication": "Avant 1982, le préfet pouvait annuler lui-même l'acte d'une collectivité locale au titre de la tutelle. Les lois de décentralisation de 1982 ont remplacé ce pouvoir d'annulation direct par un contrôle de légalité a posteriori exercé devant le juge administratif.",
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "explication": "Avant 1982, le préfet pouvait annuler lui-même un acte local au titre de la tutelle. Les lois de décentralisation de 1982 ont substitué à ce pouvoir un contrôle de légalité a posteriori exercé devant le juge administratif.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "g-244",
@@ -14453,7 +14451,7 @@
    "points": [
     [
      "1982",
-     "Suppression de la tutelle a priori du préfet et instauration du contrôle de légalité a posteriori"
+     "Suppression de la tutelle a priori et contrôle de légalité a posteriori"
     ],
     [
      "1992",
@@ -14461,16 +14459,16 @@
     ],
     [
      "2004",
-     "Acte II de la décentralisation : nouveaux transferts de compétences"
+     "Acte II : nouveaux transferts de compétences"
     ],
     [
      "2015",
-     "Loi NOTRe : redéfinition des compétences régionales et départementales"
+     "Loi NOTRe : compétences régionales et départementales redéfinies"
     ]
    ],
-   "explication": "Le contrôle de légalité, exercé par le préfet, s'effectue a posteriori depuis la loi de 1982 (il a remplacé la tutelle préalable).",
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "explication": "Le contrôle de légalité s'exerce a posteriori depuis la loi du 2 mars 1982 ; la loi ATR de 1992, l'Acte II de 2003-2004 puis la loi NOTRe de 2015 ont poursuivi la décentralisation et l'intercommunalité.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "g-245",
@@ -14480,13 +14478,13 @@
    "sujet": "g-1",
    "niveau": 7,
    "famille": "M",
-   "explication": "Non, il ne peut plus annuler l'acte lui-même, il doit saisir le Tribunal Administratif.",
+   "explication": "Depuis 1982, le préfet ne peut plus annuler ni suspendre lui-même un acte local : il ne dispose que du déféré préfectoral, le tribunal administratif étant seul compétent pour annuler.",
    "type": "vf",
-   "question": "Le préfet peut-il annuler un acte local aujourd'hui ?",
+   "question": "Aujourd'hui, le préfet peut annuler lui-même un acte pris par une collectivité territoriale.",
    "vrai": false,
-   "justification": "il ne peut plus annuler l'acte lui-même, il doit saisir le Tribunal Administratif.",
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "justification": "Il ne peut que saisir le tribunal administratif d'un déféré préfectoral, éventuellement assorti d'une demande de suspension ; seul le juge annule.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "g-246",
@@ -14499,10 +14497,10 @@
    "type": "vf",
    "question": "Le préfet dispose d'un délai de 2 mois pour formuler une demande ou saisir le tribunal administratif au sujet d'un acte qui lui a été transmis.",
    "vrai": true,
-   "justification": "Dans le cadre du contrôle de légalité, le préfet dispose de 2 mois à compter de la transmission de l'acte pour réagir, faute de quoi celui-ci devient définitivement exécutoire de ce point de vue.",
-   "explication": "Le préfet a 2 mois pour formuler une demande ou saisir le tribunal administratif.",
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "justification": "Au titre du contrôle de légalité (art. L2131-6 du CGCT), le préfet dispose de 2 mois à compter de la transmission de l'acte pour en demander le retrait ou saisir le tribunal administratif d'un déféré préfectoral.",
+   "explication": "Le délai de déféré est de 2 mois à compter de la transmission ; un recours gracieux adressé à la collectivité interrompt ce délai.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "g-247",
@@ -14510,17 +14508,15 @@
    "sousTheme": "Institutions et décentralisation",
    "stIdx": 1,
    "sujet": "g-1",
-   "niveau": 9,
+   "niveau": 5,
    "famille": "M",
-   "explication": "La reconnaissance pleine de la Personnalité Morale des collectivités (existence, capacité, responsabilité).",
-   "type": "libre",
-   "question": "Quelle reconnaissance juridique découle du passage au contrôle de légalité ?",
-   "options": [
-    "La reconnaissance pleine de la Personnalité Morale des collectivités (existence, capacité, responsabilité)."
-   ],
-   "bonneReponse": 0,
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "explication": "Attention : 1982 n'a pas créé la personnalité morale des collectivités, reconnue bien avant (1871 pour le département, 1884 pour la commune) ; la réforme a supprimé la tutelle préalable.",
+   "type": "vf",
+   "question": "Le passage au contrôle de légalité a posteriori en 1982 a mis fin à la tutelle que l'État exerçait sur les actes des collectivités.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null,
+   "vrai": true,
+   "justification": "La loi du 2 mars 1982 a supprimé la tutelle a priori (approbation ou annulation préalable) au profit d'un contrôle exercé après coup devant le juge : la portée du principe de libre administration s'en est trouvée renforcée."
   },
   {
    "id": "g-248",
@@ -14539,24 +14535,24 @@
     ],
     [
      "2003",
-     "Révision constitutionnelle : Acte II de la décentralisation"
+     "Révision constitutionnelle : Acte II"
     ],
     [
      "2010",
-     "Réforme des collectivités territoriales (création des métropoles)"
+     "Réforme des collectivités : création des métropoles"
     ],
     [
      "2015",
-     "Loi NOTRe : nouvelle organisation territoriale de la République"
+     "Loi NOTRe : nouvelle organisation territoriale"
     ],
     [
      "2022",
-     "Loi 3DS : différenciation, décentralisation, déconcentration et simplification"
+     "Loi 3DS : différenciation, décentralisation, déconcentration, simplification"
     ]
    ],
-   "explication": "La loi du 2 mars 1982 fonde l'Acte I de la décentralisation.",
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "explication": "La loi du 2 mars 1982 ouvre l'Acte I ; la révision de 2003 inscrit l'organisation décentralisée à l'article 1er de la Constitution ; 2010 crée les métropoles ; la loi NOTRe (2015) réorganise les compétences ; la loi 3DS du 21 février 2022 poursuit la différenciation territoriale.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "g-249",
@@ -14579,16 +14575,16 @@
     ],
     [
      "2004",
-     "Loi relative aux libertés et responsabilités locales"
+     "Loi Libertés et responsabilités locales"
     ],
     [
      "2015",
      "Loi NOTRe, réforme territoriale"
     ]
    ],
-   "explication": "La révision constitutionnelle du 28 mars 2003 marque le début de l'Acte II de la décentralisation.",
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "explication": "La révision constitutionnelle du 28 mars 2003 ouvre l'Acte II de la décentralisation, poursuivi par la loi du 13 août 2004 relative aux libertés et responsabilités locales.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "g-250",
@@ -14619,9 +14615,9 @@
     ]
    },
    "bonneCible": 1,
-   "explication": "Le mandat est de 6 ans.",
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "explication": "Le mandat municipal est de 6 ans, comme celui de conseiller départemental, de conseiller régional ou de sénateur, à la différence du mandat de député ou de président de la République, qui est de 5 ans.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "g-251",
@@ -14629,17 +14625,15 @@
    "sousTheme": "Institutions et décentralisation",
    "stIdx": 1,
    "sujet": "g-1",
-   "niveau": 8,
+   "niveau": 3,
    "famille": "M",
-   "explication": "Le mandat est de 6 ans.",
-   "type": "libre",
-   "question": "Quelle est la durée du mandat lors des élections régionales ou départementales ?",
-   "options": [
-    "Le mandat est de 6 ans."
-   ],
-   "bonneReponse": 0,
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "explication": "Durée identique pour les deux mandats : 6 ans, avec renouvellement général et non partiel.",
+   "type": "vf",
+   "question": "Les conseillers régionaux et les conseillers départementaux sont élus pour un mandat de 6 ans.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null,
+   "vrai": true,
+   "justification": "Depuis les lois électorales de 2013, conseillers départementaux et régionaux sont élus au suffrage universel direct pour 6 ans, avec renouvellement intégral de l'assemblée."
   },
   {
    "id": "g-252",
@@ -14647,17 +14641,15 @@
    "sousTheme": "Institutions et décentralisation",
    "stIdx": 1,
    "sujet": "g-1",
-   "niveau": 8,
+   "niveau": 2,
    "famille": "M",
-   "explication": "Le mandat est de 6 ans, avec un renouvellement par moitié tous les 3 ans.",
-   "type": "libre",
-   "question": "Quelle est la durée du mandat d'un Sénateur ?",
-   "options": [
-    "Le mandat est de 6 ans, avec un renouvellement par moitié tous les 3 ans."
-   ],
-   "bonneReponse": 0,
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "explication": "Les sénateurs sont élus pour 6 ans au suffrage universel indirect, avec un renouvellement par moitié tous les 3 ans.",
+   "type": "vf",
+   "question": "Le mandat d'un sénateur dure 6 ans, le Sénat étant renouvelé par moitié tous les 3 ans.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null,
+   "vrai": true,
+   "justification": "Depuis la réforme de 2003, le mandat sénatorial est de 6 ans et le Sénat se renouvelle par moitié tous les 3 ans (auparavant 9 ans, par tiers)."
   },
   {
    "id": "g-253",
@@ -14665,17 +14657,32 @@
    "sousTheme": "Institutions et décentralisation",
    "stIdx": 1,
    "sujet": "g-1",
-   "niveau": 8,
+   "niveau": 3,
    "famille": "M",
-   "explication": "Le mandat est de 5 ans.",
-   "type": "libre",
-   "question": "Quelle est la durée du mandat pour les élections présidentielles ou législatives ?",
-   "options": [
-    "Le mandat est de 5 ans."
-   ],
-   "bonneReponse": 0,
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "explication": "Le mandat présidentiel a été ramené à 5 ans par la réforme du quinquennat (2000) et coïncide avec celui des députés ; sénateurs et élus locaux sont élus pour 6 ans.",
+   "type": "echelle",
+   "question": "Cliquez sur la durée correspondant au mandat présidentiel ou de député.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null,
+   "echelle_g": {
+    "titre": "Durée de quelques mandats nationaux",
+    "unite": "ans",
+    "tranches": [
+     {
+      "borne": "Président / Député",
+      "l": "5 ans"
+     },
+     {
+      "borne": "Sénateur",
+      "l": "6 ans"
+     },
+     {
+      "borne": "Conseiller départemental",
+      "l": "6 ans"
+     }
+    ]
+   },
+   "bonneCible": 0
   },
   {
    "id": "g-254",
@@ -16561,15 +16568,15 @@
    "sujet": "g-1",
    "niveau": 8,
    "famille": "M",
-   "explication": "Elle a supprimé leur clause générale de compétence.",
+   "explication": "La loi NOTRe du 7 août 2015 a supprimé la clause de compétence générale des départements et des régions, rétablie un temps par la loi MAPTAM de 2014 : ils n'exercent plus que des compétences d'attribution. Seules les communes la conservent.",
    "type": "libre",
    "question": "Quelle clause la loi NOTRe a-t-elle supprimée pour les départements et les régions ?",
    "options": [
-    "Elle a supprimé leur clause générale de compétence."
+    "La clause de compétence générale : départements et régions n'exercent plus que des compétences d'attribution."
    ],
    "bonneReponse": 0,
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "g-348",
@@ -16579,15 +16586,15 @@
    "sujet": "g-1",
    "niveau": 8,
    "famille": "M",
-   "explication": "La commune est la seule à conserver cette clause.",
+   "explication": "Depuis la loi NOTRe du 7 août 2015, seule la commune conserve la clause de compétence générale ; départements et régions n'exercent plus que des compétences d'attribution.",
    "type": "libre",
    "question": "Quelle collectivité territoriale est la seule à conserver la clause de compétence générale aujourd'hui ?",
    "options": [
-    "La commune est la seule à conserver cette clause."
+    "La commune est la seule à conserver la clause de compétence générale."
    ],
    "bonneReponse": 0,
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "g-349",
@@ -16597,15 +16604,15 @@
    "sujet": "g-1",
    "niveau": 9,
    "famille": "M",
-   "explication": "Il s'agit de la culture, du sport, du tourisme, de la promotion des langues régionales et de l'éducation populaire.",
+   "explication": "L'article L1111-4 du CGCT, issu de la loi NOTRe, maintient cinq compétences partagées entre communes, départements et régions : culture, sport, tourisme, promotion des langues régionales et éducation populaire.",
    "type": "libre",
-   "question": "Quelles sont les cinq \"compétences partagées\" instaurées par la loi NOTRe ?",
+   "question": "Quelles sont les cinq compétences partagées maintenues entre communes, départements et régions par la loi NOTRe ?",
    "options": [
-    "Il s'agit de la culture, du sport, du tourisme, de la promotion des langues régionales et de l'éducation populaire."
+    "La culture, le sport, le tourisme, la promotion des langues régionales et l'éducation populaire."
    ],
    "bonneReponse": 0,
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "g-350",
@@ -16615,15 +16622,15 @@
    "sujet": "g-1",
    "niveau": 9,
    "famille": "M",
-   "explication": "Elle confie à une collectivité spécifique la mission d'organiser les modalités d'une compétence impliquant plusieurs acteurs publics.",
+   "explication": "Instituée par la loi MAPTAM du 27 janvier 2014 (art. L1111-9 du CGCT), la désignation d'un chef de file permet à une collectivité d'organiser les modalités de l'action commune pour une compétence partagée, sans créer de tutelle sur les autres collectivités.",
    "type": "libre",
-   "question": "Quel est le rôle de la notion de \"chef de file\" créée par la loi MAPAM ?",
+   "question": "Quel est le rôle de la notion de « chef de file » créée par la loi MAPTAM ?",
    "options": [
-    "Elle confie à une collectivité spécifique la mission d'organiser les modalités d'une compétence impliquant plusieurs acteurs publics."
+    "Elle confie à une collectivité le soin d'organiser les modalités de l'action commune pour une compétence partagée, sans tutelle sur les autres collectivités."
    ],
    "bonneReponse": 0,
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "g-351",
@@ -16633,15 +16640,15 @@
    "sujet": "g-1",
    "niveau": 10,
    "famille": "M",
-   "explication": "Elle l'est pour l'aménagement et le développement durable, le développement économique, l'innovation, et l'intermodalité des transports.",
+   "explication": "Depuis les lois MAPTAM et NOTRe, la Région est chef de file pour l'aménagement et le développement durable du territoire, la protection de la biodiversité, le climat, la qualité de l'air et l'énergie, le développement économique, le soutien à l'innovation et à l'internationalisation des entreprises, l'intermodalité et la complémentarité des transports, ainsi que le soutien à l'enseignement supérieur et à la recherche.",
    "type": "libre",
    "question": "Pour quels grands thèmes la Région est-elle désignée comme \"chef de file\" ?",
    "options": [
-    "Elle l'est pour l'aménagement et le développement durable, le développement économique, l'innovation, et l'intermodalité des transports."
+    "Aménagement et développement durable du territoire, biodiversité, climat / air / énergie, développement économique et innovation, intermodalité des transports, enseignement supérieur et recherche."
    ],
    "bonneReponse": 0,
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "g-352",
@@ -16651,15 +16658,15 @@
    "sujet": "g-1",
    "niveau": 10,
    "famille": "M",
-   "explication": "Il l'est pour l'action sociale, le développement social, l'autonomie des personnes et la solidarité des territoires.",
+   "explication": "En application de l'article L1111-9 du CGCT issu de la loi MAPTAM, le département est chef de file pour l'action sociale, le développement social, la contribution à la résorption de la précarité énergétique, l'autonomie des personnes et la solidarité des territoires.",
    "type": "libre",
    "question": "Pour quels domaines le Département est-il désigné comme \"chef de file\" ?",
    "options": [
-    "Il l'est pour l'action sociale, le développement social, l'autonomie des personnes et la solidarité des territoires."
+    "L'action sociale, le développement social, l'autonomie des personnes et la solidarité des territoires."
    ],
    "bonneReponse": 0,
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "g-353",
@@ -16669,15 +16676,15 @@
    "sujet": "g-1",
    "niveau": 10,
    "famille": "M",
-   "explication": "Il doit y présenter un rapport sur les orientations budgétaires, les engagements pluriannuels, ainsi que la structure et la gestion de la dette.",
+   "explication": "Selon l'article L2312-1 du CGCT, le rapport d'orientation budgétaire présente les orientations budgétaires, les engagements pluriannuels envisagés, l'évolution des taux de fiscalité, ainsi que la structure et la gestion de la dette (obligation renforcée par la loi NOTRe, communes de plus de 3 500 habitants).",
    "type": "libre",
    "question": "Que doit présenter le maire dans son rapport du Débat d'Orientation Budgétaire (DOB) ?",
    "options": [
-    "Il doit y présenter un rapport sur les orientations budgétaires, les engagements pluriannuels, ainsi que la structure et la gestion de la dette."
+    "Les orientations budgétaires, les engagements pluriannuels envisagés, l'évolution de la fiscalité ainsi que la structure et la gestion de la dette."
    ],
    "bonneReponse": 0,
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "g-354",
