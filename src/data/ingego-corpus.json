@@ -8749,14 +8749,17 @@
    "niveau": 1,
    "famille": "S",
    "explication": "Cadre d'emplois scientifique et technique de catégorie A de la filière technique (art. L.411-2 du code général de la fonction publique).\n\nTextes de référence : décret n° 2016-201 et décret n° 2016-206 du 26 février 2016 (statut particulier et concours des ingénieurs territoriaux). Vérifié en août 2026.",
-   "type": "libre",
-   "question": "À quel cadre d'emplois appartient l'ingénieur territorial ?",
-   "options": [
-    "Cadre d'emplois scientifique et technique de catégorie A de la filière technique (art. L.411-2 du code général de la fonction publique)."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": "2026-08",
-   "aVerifier": null
+   "aVerifier": null,
+   "type": "qcm",
+   "question": "À quel cadre d'emplois appartient l'ingénieur territorial ?",
+   "bonneReponse": 0,
+   "options": [
+    "Cadre d'emplois scientifique et technique de catégorie A de la filière technique",
+    "Cadre d'emplois technique de catégorie B de la filière technique",
+    "Cadre d'emplois administratif de catégorie A de la filière administrative",
+    "Cadre d'emplois scientifique de catégorie A+ de la filière culturelle"
+   ]
   },
   {
    "id": "g-002",
@@ -8767,14 +8770,15 @@
    "niveau": 1,
    "famille": "S",
    "explication": "Ingénieur, ingénieur principal et ingénieur hors classe. Trois grades depuis le décret n° 2016-201, qui a créé le grade d'ingénieur hors classe (culminant à l'IB 1015, avec un échelon spécial hors-échelle A).\n\nTextes de référence : décret n° 2016-201 et décret n° 2016-206 du 26 février 2016 (statut particulier et concours des ingénieurs territoriaux). Vérifié en août 2026.",
-   "type": "libre",
-   "question": "Quels sont les trois grades du cadre d'emplois des ingénieurs territoriaux ?",
-   "options": [
-    "Ingénieur, ingénieur principal et ingénieur hors classe."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": "2026-08",
-   "aVerifier": null
+   "aVerifier": null,
+   "type": "ordre",
+   "question": "Classe les trois grades du cadre d'emplois des ingénieurs territoriaux du moins élevé au plus élevé.",
+   "items": [
+    "Ingénieur",
+    "Ingénieur principal",
+    "Ingénieur hors classe"
+   ]
   },
   {
    "id": "g-003",
@@ -8785,14 +8789,17 @@
    "niveau": 1,
    "famille": "M",
    "explication": "La répartition est fixée par l'arrêté d'ouverture ; le concours externe reste majoritaire (usuellement autour de 75 % des postes). À confirmer collectivité par collectivité : la répartition figure dans l'arrêté d'ouverture du centre de gestion organisateur.",
-   "type": "libre",
-   "question": "Quel est le quota minimum de postes alloués au concours externe d'ingénieur territorial ?",
-   "options": [
-    "La répartition est fixée par l'arrêté d'ouverture ; le concours externe reste majoritaire (usuellement autour de 75 % des postes)."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Donnée non retrouvée dans les textes officiels : à confirmer avant l'écrit."
+   "aVerifier": "Donnée non retrouvée dans les textes officiels : à confirmer avant l'écrit.",
+   "type": "qcm",
+   "question": "Quelle est, en général, la part des postes réservée au concours externe d'ingénieur territorial ?",
+   "bonneReponse": 0,
+   "options": [
+    "Environ 75 % des postes, selon l'arrêté d'ouverture",
+    "Exactement 50 % des postes, à parité avec l'interne",
+    "Un minimum légal de 30 % des postes",
+    "La totalité des postes, l'interne n'étant qu'une voie subsidiaire"
+   ]
   },
   {
    "id": "g-004",
@@ -8803,14 +8810,21 @@
    "niveau": 2,
    "famille": "M",
    "explication": "Un diplôme d'ingénieur, un diplôme d'architecte ou un autre diplôme scientifique ou technique sanctionnant cinq années d'études après le baccalauréat, correspondant à la spécialité choisie. Diplôme reconnu équivalent dans les conditions du décret du 13 février 2007 ; à défaut, saisine de la commission d'équivalence de diplômes (RED/REP) du CNFPT.\n\nTextes de référence : décret n° 2016-201 et décret n° 2016-206 du 26 février 2016 (statut particulier et concours des ingénieurs territoriaux). Vérifié en août 2026.",
-   "type": "libre",
-   "question": "Quel diplôme est requis pour se présenter au concours externe d'ingénieur territorial ?",
-   "options": [
-    "Un diplôme d'ingénieur, un diplôme d'architecte ou un autre diplôme scientifique ou technique sanctionnant cinq années d'études après le baccalauréat, correspondant à la spécialité choisie."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": "2026-08",
-   "aVerifier": null
+   "aVerifier": null,
+   "type": "trous",
+   "question": "Complète les conditions de diplôme pour le concours externe d'ingénieur territorial.",
+   "mots": [
+    "d'ingénieur",
+    "d'architecte",
+    "cinq"
+   ],
+   "texte": "Le concours externe exige un diplôme {1}, un diplôme {2}, ou tout autre diplôme scientifique ou technique sanctionnant {3} années d'études après le baccalauréat.",
+   "leurres": [
+    "de master",
+    "trois",
+    "de technicien supérieur"
+   ]
   },
   {
    "id": "g-005",
@@ -8821,14 +8835,17 @@
    "niveau": 2,
    "famille": "M",
    "explication": "Les mères et pères d'au moins trois enfants effectivement élevés, ainsi que les sportifs de haut niveau inscrits sur la liste publiée l'année du concours par le ministère chargé des sports.\n\nTextes de référence : décret n° 2016-201 et décret n° 2016-206 du 26 février 2016 (statut particulier et concours des ingénieurs territoriaux). Vérifié en août 2026.",
-   "type": "libre",
-   "question": "Qui est dispensé de la condition de diplôme pour le concours externe ?",
-   "options": [
-    "Les mères et pères d'au moins trois enfants effectivement élevés, ainsi que les sportifs de haut niveau inscrits sur la liste publiée l'année du concours par le ministère chargé des sports."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": "2026-08",
-   "aVerifier": null
+   "aVerifier": null,
+   "type": "qcm",
+   "question": "Qui peut bénéficier d'une dispense de la condition de diplôme pour le concours externe d'ingénieur territorial ?",
+   "bonneReponse": 0,
+   "options": [
+    "Les mères et pères d'au moins trois enfants effectivement élevés, ainsi que les sportifs de haut niveau",
+    "Les agents ayant dix ans d'ancienneté dans la fonction publique",
+    "Les titulaires du baccalauréat scientifique avec mention",
+    "Les anciens élus locaux ayant exercé un mandat exécutif"
+   ]
   },
   {
    "id": "g-006",
@@ -8839,14 +8856,20 @@
    "niveau": 2,
    "famille": "M",
    "explication": "Quatre ans au moins de services publics au 1er janvier de l'année du concours. Ouvert aux fonctionnaires et agents publics (État, collectivités, établissements publics), aux militaires et aux agents d'une organisation internationale intergouvernementale.\n\nTextes de référence : décret n° 2016-201 et décret n° 2016-206 du 26 février 2016 (statut particulier et concours des ingénieurs territoriaux). Vérifié en août 2026.",
-   "type": "libre",
-   "question": "Quelle condition d'ancienneté est requise pour le concours interne d'ingénieur ?",
-   "options": [
-    "Quatre ans au moins de services publics au 1er janvier de l'année du concours."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": "2026-08",
-   "aVerifier": null
+   "aVerifier": null,
+   "type": "trous",
+   "question": "Complète la condition d'ancienneté du concours interne d'ingénieur territorial.",
+   "mots": [
+    "quatre",
+    "1er janvier"
+   ],
+   "texte": "Le concours interne exige {1} ans au moins de services publics au {2} de l'année du concours.",
+   "leurres": [
+    "deux",
+    "31 décembre",
+    "cinq"
+   ]
   },
   {
    "id": "g-007",
@@ -8857,14 +8880,12 @@
    "niveau": 2,
    "famille": "M",
    "explication": "Deux ans, renouvelable deux fois un an sur demande écrite, soit quatre ans au total. Depuis la loi du 6 août 2019, l'inscription court quatre ans au maximum ; le lauréat doit demander chaque renouvellement avant l'échéance.\n\nTextes de référence : décret n° 2016-201 et décret n° 2016-206 du 26 février 2016 (statut particulier et concours des ingénieurs territoriaux). Vérifié en août 2026.",
-   "type": "libre",
-   "question": "Quelle est la durée de validité d'une liste d'aptitude après la réussite au concours ?",
-   "options": [
-    "Deux ans, renouvelable deux fois un an sur demande écrite, soit quatre ans au total."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": "2026-08",
-   "aVerifier": null
+   "aVerifier": null,
+   "type": "vf",
+   "question": "Après réussite au concours d'ingénieur territorial, l'inscription sur la liste d'aptitude est valable deux ans, renouvelable deux fois un an sur demande écrite du lauréat, soit quatre ans au maximum.",
+   "justification": "La liste d'aptitude est valable un an initialement... en réalité deux ans, prorogeable deux fois un an à la demande du lauréat, ce qui porte la durée maximale à quatre ans, conformément à la loi du 6 août 2019.",
+   "vrai": true
   },
   {
    "id": "g-008",
@@ -8891,14 +8912,12 @@
    "niveau": 3,
    "famille": "S",
    "explication": "Un an de stage avant titularisation.\n\nTextes de référence : décret n° 2016-201 et décret n° 2016-206 du 26 février 2016 (statut particulier et concours des ingénieurs territoriaux). Vérifié en août 2026.",
-   "type": "libre",
-   "question": "Quelle est la durée du stage après recrutement en tant qu'ingénieur ?",
-   "options": [
-    "Un an de stage avant titularisation."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": "2026-08",
-   "aVerifier": null
+   "aVerifier": null,
+   "type": "vf",
+   "question": "Après réussite au concours, un ingénieur territorial effectue un stage d'un an avant sa titularisation.",
+   "justification": "Le statut particulier prévoit une année de stage probatoire, à l'issue de laquelle l'autorité territoriale prononce, ou non, la titularisation de l'agent dans le cadre d'emplois.",
+   "vrai": true
   },
   {
    "id": "g-010",
@@ -8909,14 +8928,17 @@
    "niveau": 3,
    "famille": "M",
    "explication": "Dix jours de formation d'intégration, dispensés par le CNFPT durant l'année de stage.\n\nTextes de référence : décret n° 2016-201 et décret n° 2016-206 du 26 février 2016 (statut particulier et concours des ingénieurs territoriaux). Vérifié en août 2026.",
-   "type": "libre",
-   "question": "Quelle est la durée de la formation d'intégration obligatoire pour les ingénieurs stagiaires ?",
-   "options": [
-    "Dix jours de formation d'intégration, dispensés par le CNFPT durant l'année de stage."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": "2026-08",
-   "aVerifier": null
+   "aVerifier": null,
+   "type": "qcm",
+   "question": "Quelle est la durée de la formation d'intégration obligatoire pour les ingénieurs stagiaires, dispensée par le CNFPT ?",
+   "bonneReponse": 0,
+   "options": [
+    "Dix jours",
+    "Cinq jours",
+    "Trois semaines",
+    "Un mois"
+   ]
   },
   {
    "id": "g-011",
@@ -8927,14 +8949,17 @@
    "niveau": 3,
    "famille": "M",
    "explication": "Dix échelons (de l'indice brut 444 à l'indice brut 821). Grille du décret n° 2016-203 : le grade d'ingénieur compte dix échelons ; l'avancement au choix vers ingénieur principal est possible dès le 4e échelon.\n\nTextes de référence : décret n° 2016-201 et décret n° 2016-206 du 26 février 2016 (statut particulier et concours des ingénieurs territoriaux). Vérifié en août 2026.",
-   "type": "libre",
-   "question": "Combien d'échelons compte le grade d'ingénieur territorial ?",
-   "options": [
-    "Dix échelons (de l'indice brut 444 à l'indice brut 821)."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": "2026-08",
-   "aVerifier": null
+   "aVerifier": null,
+   "type": "qcm",
+   "question": "Combien d'échelons compte le grade d'ingénieur territorial (1er grade) ?",
+   "bonneReponse": 0,
+   "options": [
+    "Dix échelons",
+    "Sept échelons",
+    "Douze échelons",
+    "Neuf échelons"
+   ]
   },
   {
    "id": "g-012",
@@ -8945,14 +8970,21 @@
    "niveau": 3,
    "famille": "M",
    "explication": "Neuf échelons (de l'indice brut 619 à l'indice brut 1015). Le grade d'ingénieur hors classe compte, lui, huit échelons dont un échelon spécial hors-échelle A.\n\nTextes de référence : décret n° 2016-201 et décret n° 2016-206 du 26 février 2016 (statut particulier et concours des ingénieurs territoriaux). Vérifié en août 2026.",
-   "type": "libre",
-   "question": "Combien d'échelons compte le grade d'ingénieur principal ?",
-   "options": [
-    "Neuf échelons (de l'indice brut 619 à l'indice brut 1015)."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": "2026-08",
-   "aVerifier": null
+   "aVerifier": null,
+   "type": "trous",
+   "question": "Complète les données sur la grille indiciaire du grade d'ingénieur principal.",
+   "mots": [
+    "neuf",
+    "619",
+    "1015"
+   ],
+   "texte": "Le grade d'ingénieur principal compte {1} échelons, de l'indice brut {2} à l'indice brut {3}.",
+   "leurres": [
+    "huit",
+    "444",
+    "821"
+   ]
   },
   {
    "id": "g-013",
@@ -8997,14 +9029,17 @@
    "niveau": 4,
    "famille": "S",
    "explication": "La rédaction d'une note assortie de propositions à partir d'un dossier, dans la spécialité choisie à l'inscription (durée 5 heures, coefficient 5).\n\nTextes de référence : décret n° 2016-201 et décret n° 2016-206 du 26 février 2016 (statut particulier et concours des ingénieurs territoriaux). Vérifié en août 2026.",
-   "type": "libre",
-   "question": "Quelle est l'épreuve écrite du concours externe ?",
-   "options": [
-    "La rédaction d'une note assortie de propositions à partir d'un dossier, dans la spécialité choisie à l'inscription (durée 5 heures, coefficient 5)."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": "2026-08",
-   "aVerifier": null
+   "aVerifier": null,
+   "type": "qcm",
+   "question": "Quelle est l'unique épreuve écrite d'admissibilité du concours externe d'ingénieur territorial ?",
+   "bonneReponse": 0,
+   "options": [
+    "La rédaction d'une note assortie de propositions à partir d'un dossier, dans la spécialité choisie",
+    "Une dissertation générale sur les politiques publiques locales",
+    "Un questionnaire à réponses courtes sur le droit administratif",
+    "Une épreuve de mathématiques et physique appliquées"
+   ]
   },
   {
    "id": "g-016",
@@ -9015,14 +9050,12 @@
    "niveau": 4,
    "famille": "M",
    "explication": "Cinq heures, coefficient 5.\n\nTextes de référence : décret n° 2016-201 et décret n° 2016-206 du 26 février 2016 (statut particulier et concours des ingénieurs territoriaux). Vérifié en août 2026.",
-   "type": "libre",
-   "question": "Quelle est la durée et le coefficient de la note au concours externe ?",
-   "options": [
-    "Cinq heures, coefficient 5."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": "2026-08",
-   "aVerifier": null
+   "aVerifier": null,
+   "type": "vf",
+   "question": "La note du concours externe d'ingénieur territorial dure cinq heures et est affectée d'un coefficient 5.",
+   "justification": "L'épreuve écrite d'admissibilité du concours externe, consistant en une note avec propositions, a une durée de cinq heures et un coefficient 5, identique à celle du concours interne pour l'épreuve équivalente.",
+   "vrai": true
   },
   {
    "id": "g-017",
@@ -9033,14 +9066,21 @@
    "niveau": 4,
    "famille": "M",
    "explication": "Mathématiques et physique appliquées (4 h, coefficient 3), note à partir d'un dossier (4 h, coefficient 3) et projet ou étude portant sur l'option (8 h, coefficient 7).\n\nTextes de référence : décret n° 2016-201 et décret n° 2016-206 du 26 février 2016 (statut particulier et concours des ingénieurs territoriaux). Vérifié en août 2026.",
-   "type": "libre",
-   "question": "Quelles sont les 3 épreuves écrites du concours interne ?",
-   "options": [
-    "Mathématiques et physique appliquées (4 h, coefficient 3), note à partir d'un dossier (4 h, coefficient 3) et projet ou étude portant sur l'option (8 h, coefficient 7)."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": "2026-08",
-   "aVerifier": null
+   "aVerifier": null,
+   "type": "trous",
+   "question": "Complète les trois épreuves écrites du concours interne d'ingénieur territorial.",
+   "mots": [
+    "mathématiques et physique appliquées",
+    "projet ou une étude",
+    "7"
+   ],
+   "texte": "Le concours interne comporte une épreuve de {1} (4h, coefficient 3), une note à partir d'un dossier (4h, coefficient 3) et un {2} portant sur l'option choisie (8h, coefficient {3}).",
+   "leurres": [
+    "droit administratif général",
+    "5",
+    "3"
+   ]
   },
   {
    "id": "g-018",
@@ -9227,14 +9267,24 @@
    "niveau": 1,
    "famille": "S",
    "explication": "La Fonction Publique d'État, Territoriale, et Hospitalière.",
-   "type": "libre",
-   "question": "Quels sont les trois versants de la Fonction Publique en France ?",
-   "options": [
-    "La Fonction Publique d'État, Territoriale, et Hospitalière."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "assoc",
+   "question": "Associe chaque versant de la fonction publique à un exemple d'employeur correspondant.",
+   "paires": [
+    [
+     "Fonction publique d'État",
+     "Ministère de l'Intérieur"
+    ],
+    [
+     "Fonction publique territoriale",
+     "Commune ou EPCI"
+    ],
+    [
+     "Fonction publique hospitalière",
+     "Centre hospitalier"
+    ]
+   ]
   },
   {
    "id": "g-029",
@@ -9245,14 +9295,17 @@
    "niveau": 1,
    "famille": "M",
    "explication": "Environ 20%.",
-   "type": "libre",
-   "question": "Quel pourcentage représentent les agents contractuels dans la fonction publique ?",
-   "options": [
-    "Environ 20%."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "qcm",
+   "question": "Quel pourcentage représentent, environ, les agents contractuels dans la fonction publique ?",
+   "bonneReponse": 0,
+   "options": [
+    "Environ 20 %",
+    "Environ 5 %",
+    "Environ 35 %",
+    "Environ 50 %"
+   ]
   },
   {
    "id": "g-030",
@@ -9263,14 +9316,17 @@
    "niveau": 1,
    "famille": "M",
    "explication": "La filière technique (environ 44,9% des effectifs).",
-   "type": "libre",
-   "question": "Quelle est la filière la plus représentée dans la FPT ?",
-   "options": [
-    "La filière technique (environ 44,9% des effectifs)."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "qcm",
+   "question": "Quelle est la filière la plus représentée dans la fonction publique territoriale ?",
+   "bonneReponse": 0,
+   "options": [
+    "La filière technique",
+    "La filière administrative",
+    "La filière médico-sociale",
+    "La filière culturelle"
+   ]
   },
   {
    "id": "g-031",
@@ -9281,14 +9337,12 @@
    "niveau": 2,
    "famille": "S",
    "explication": "Les droits et obligations des fonctionnaires (dispositions générales).",
-   "type": "libre",
-   "question": "Que définit la loi du 13 juillet 1983 ?",
-   "options": [
-    "Les droits et obligations des fonctionnaires (dispositions générales)."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "vf",
+   "question": "La loi du 13 juillet 1983 définit les droits et obligations des fonctionnaires, dans ses dispositions générales.",
+   "justification": "Cette loi, dite loi Le Pors, constitue le titre I du statut général de la fonction publique et fixe les droits et obligations communs à tous les fonctionnaires des trois versants.",
+   "vrai": true
   },
   {
    "id": "g-032",
@@ -9317,14 +9371,17 @@
    "niveau": 2,
    "famille": "S",
    "explication": "La libre administration des collectivités territoriales.",
-   "type": "libre",
-   "question": "Quel est le principe fondamental de la décentralisation ?",
-   "options": [
-    "La libre administration des collectivités territoriales."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "qcm",
+   "question": "Quel est le principe fondamental sur lequel repose la décentralisation ?",
+   "bonneReponse": 0,
+   "options": [
+    "La libre administration des collectivités territoriales",
+    "La subordination hiérarchique des collectivités à l'État",
+    "La tutelle administrative du préfet sur les collectivités",
+    "L'unicité budgétaire nationale"
+   ]
   },
   {
    "id": "g-034",
@@ -9335,14 +9392,15 @@
    "niveau": 2,
    "famille": "M",
    "explication": "Acte I (1982-1983), Acte II (2003-2004), Acte III (Lois MAPTAM 2014 et NOTRe 2015).",
-   "type": "libre",
-   "question": "Quels sont les Actes majeurs de la décentralisation en France ?",
-   "options": [
-    "Acte I (1982-1983), Acte II (2003-2004), Acte III (Lois MAPTAM 2014 et NOTRe 2015)."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "ordre",
+   "question": "Remets dans l'ordre chronologique les grandes étapes de la décentralisation en France.",
+   "items": [
+    "Acte I (lois Defferre, 1982-1983)",
+    "Acte II (révision constitutionnelle, 2003-2004)",
+    "Acte III (lois MAPTAM 2014 et NOTRe 2015)"
+   ]
   },
   {
    "id": "g-035",
@@ -9353,14 +9411,12 @@
    "niveau": 2,
    "famille": "S",
    "explication": "Un contrôle de légalité (a posteriori) et non un contrôle d'opportunité.",
-   "type": "libre",
-   "question": "Quel est le rôle du Préfet sur les actes des collectivités territoriales ?",
-   "options": [
-    "Un contrôle de légalité (a posteriori) et non un contrôle d'opportunité."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "vf",
+   "question": "Le préfet exerce sur les actes des collectivités territoriales un contrôle d'opportunité lui permettant de juger de la pertinence des décisions locales.",
+   "justification": "Le préfet n'exerce qu'un contrôle de légalité a posteriori : il vérifie la conformité au droit des actes qui lui sont transmis, sans pouvoir apprécier leur opportunité, sous peine de porter atteinte à la libre administration.",
+   "vrai": false
   },
   {
    "id": "g-036",
@@ -9371,14 +9427,17 @@
    "niveau": 2,
    "famille": "M",
    "explication": "Le Tribunal Administratif (dans un délai de 2 mois).",
-   "type": "libre",
-   "question": "Qui le Préfet doit-il saisir s'il juge un acte local illégal ?",
-   "options": [
-    "Le Tribunal Administratif (dans un délai de 2 mois)."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "qcm",
+   "question": "Quelle juridiction le préfet doit-il saisir, dans un délai de deux mois, s'il estime un acte local illégal ?",
+   "bonneReponse": 0,
+   "options": [
+    "Le tribunal administratif",
+    "La chambre régionale des comptes",
+    "Le Conseil d'État directement",
+    "Le tribunal judiciaire"
+   ]
   },
   {
    "id": "g-037",
@@ -9389,14 +9448,17 @@
    "niveau": 2,
    "famille": "M",
    "explication": "6 ans.",
-   "type": "libre",
-   "question": "Quelle est la durée d'un mandat municipal, départemental et régional ?",
-   "options": [
-    "6 ans."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "qcm",
+   "question": "Quelle est la durée d'un mandat municipal, départemental ou régional en France ?",
+   "bonneReponse": 0,
+   "options": [
+    "6 ans",
+    "4 ans",
+    "5 ans",
+    "7 ans"
+   ]
   },
   {
    "id": "g-038",
@@ -9407,14 +9469,40 @@
    "niveau": 3,
    "famille": "S",
    "explication": "L'organe délibérant (ex: Conseil municipal) et l'exécutif (ex: Maire).",
-   "type": "libre",
-   "question": "Quels sont les deux types d'organes d'une collectivité ?",
-   "options": [
-    "L'organe délibérant (ex: Conseil municipal) et l'exécutif (ex: Maire)."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "tri",
+   "question": "Classe chaque organe dans la bonne catégorie : délibérant ou exécutif.",
+   "colonnes": [
+    "Organe délibérant",
+    "Organe exécutif"
+   ],
+   "elements": [
+    [
+     "Conseil municipal",
+     0
+    ],
+    [
+     "Maire",
+     1
+    ],
+    [
+     "Conseil départemental",
+     0
+    ],
+    [
+     "Président du conseil départemental",
+     1
+    ],
+    [
+     "Conseil régional",
+     0
+    ],
+    [
+     "Président du conseil régional",
+     1
+    ]
+   ]
   },
   {
    "id": "g-039",
@@ -9530,14 +9618,17 @@
    "niveau": 2,
    "famille": "S",
    "explication": "La Commune (ou l'intercommunalité compétente).",
-   "type": "libre",
-   "question": "Qui est compétent pour délivrer les permis de construire et élaborer le PLU ?",
-   "options": [
-    "La Commune (ou l'intercommunalité compétente)."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "qcm",
+   "question": "Qui est compétent pour délivrer les permis de construire et élaborer le PLU ?",
+   "bonneReponse": 0,
+   "options": [
+    "La commune, ou l'intercommunalité compétente",
+    "Le département",
+    "La région",
+    "Le préfet de département"
+   ]
   },
   {
    "id": "g-045",
@@ -9569,14 +9660,22 @@
    "niveau": 1,
    "famille": "S",
    "explication": "Obéissance, discrétion, réserve, probité (ou service/formation).",
-   "type": "libre",
-   "question": "Citez 4 obligations principales du fonctionnaire.",
-   "options": [
-    "Obéissance, discrétion, réserve, probité (ou service/formation)."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "trous",
+   "question": "Complétez les obligations principales du fonctionnaire.",
+   "mots": [
+    "obéissance",
+    "discrétion",
+    "réserve",
+    "probité"
+   ],
+   "texte": "Le fonctionnaire est soumis notamment aux obligations d'{1}, de {2}, de {3} et de {4}.",
+   "leurres": [
+    "neutralité",
+    "loyauté",
+    "exemplarité"
+   ]
   },
   {
    "id": "g-047",
@@ -9587,14 +9686,22 @@
    "niveau": 1,
    "famille": "S",
    "explication": "Rémunération, congés, formation, grève (ou droit syndical/protection).",
-   "type": "libre",
-   "question": "Citez 4 droits principaux du fonctionnaire.",
-   "options": [
-    "Rémunération, congés, formation, grève (ou droit syndical/protection)."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "trous",
+   "question": "Complétez les droits principaux du fonctionnaire.",
+   "mots": [
+    "rémunération",
+    "congés",
+    "formation",
+    "grève"
+   ],
+   "texte": "Le fonctionnaire bénéficie notamment du droit à la {1}, à des {2}, à la {3} et à l'exercice du droit de {4}.",
+   "leurres": [
+    "mutation",
+    "avancement",
+    "promotion"
+   ]
   },
   {
    "id": "g-048",
@@ -9641,14 +9748,17 @@
    "niveau": 1,
    "famille": "S",
    "explication": "L'IFSE (versement mensuel lié au poste) et le CIA (versement annuel lié à la manière de servir).",
-   "type": "libre",
-   "question": "Quelles sont les deux composantes du RIFSEEP ?",
-   "options": [
-    "L'IFSE (versement mensuel lié au poste) et le CIA (versement annuel lié à la manière de servir)."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "qcm",
+   "question": "Quelles sont les deux composantes du RIFSEEP ?",
+   "bonneReponse": 0,
+   "options": [
+    "L'IFSE, versée mensuellement selon le poste, et le CIA, versé annuellement selon la manière de servir.",
+    "La prime de fonction et la prime de résultat, versées trimestriellement.",
+    "L'indemnité de résidence et le supplément familial de traitement.",
+    "La NBI et l'indemnité de sujétions spéciales."
+   ]
   },
   {
    "id": "g-051",
@@ -9659,14 +9769,17 @@
    "niveau": 2,
    "famille": "S",
    "explication": "La Nouvelle Bonification Indiciaire (liée à une technicité ou responsabilité particulière).",
-   "type": "libre",
-   "question": "Qu'est-ce que la NBI ?",
-   "options": [
-    "La Nouvelle Bonification Indiciaire (liée à une technicité ou responsabilité particulière)."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "qcm",
+   "question": "Qu'est-ce que la NBI ?",
+   "bonneReponse": 0,
+   "options": [
+    "La Nouvelle Bonification Indiciaire, liée à l'exercice d'une technicité ou d'une responsabilité particulière.",
+    "La Notation Biennale Individuelle des agents territoriaux.",
+    "L'indemnité versée lors d'une mobilité vers une autre collectivité.",
+    "Une majoration de traitement liée à l'ancienneté dans l'échelon."
+   ]
   },
   {
    "id": "g-052",
@@ -9677,14 +9790,17 @@
    "niveau": 1,
    "famille": "S",
    "explication": "Satisfaire un besoin de la population / l'intérêt général.",
-   "type": "libre",
-   "question": "Quel est le but principal d'un service public ?",
-   "options": [
-    "Satisfaire un besoin de la population / l'intérêt général."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "qcm",
+   "question": "Quel est le but principal d'un service public ?",
+   "bonneReponse": 0,
+   "options": [
+    "Satisfaire un besoin de la population et l'intérêt général.",
+    "Générer des recettes fiscales pour la collectivité.",
+    "Assurer la représentation politique des administrés.",
+    "Contrôler la légalité des actes des collectivités."
+   ]
   },
   {
    "id": "g-053",
@@ -9695,14 +9811,21 @@
    "niveau": 1,
    "famille": "S",
    "explication": "Égalité, Continuité, Mutabilité.",
-   "type": "libre",
-   "question": "Quelles sont les \"Lois de Rolland\" (principes du service public) ?",
-   "options": [
-    "Égalité, Continuité, Mutabilité."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "trous",
+   "question": "Complétez les \"Lois de Rolland\" (principes du service public).",
+   "mots": [
+    "égalité",
+    "continuité",
+    "mutabilité"
+   ],
+   "texte": "Les lois de Rolland regroupent les principes d'{1}, de {2} et de {3} du service public.",
+   "leurres": [
+    "neutralité",
+    "gratuité",
+    "transparence"
+   ]
   },
   {
    "id": "g-054",
@@ -9713,14 +9836,12 @@
    "niveau": 1,
    "famille": "S",
    "explication": "Qu'un besoin essentiel doit être satisfait en permanence sans rupture.",
-   "type": "libre",
-   "question": "Que signifie le principe de continuité du service public ?",
-   "options": [
-    "Qu'un besoin essentiel doit être satisfait en permanence sans rupture."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "vf",
+   "question": "Le principe de continuité du service public signifie qu'un besoin essentiel doit être satisfait en permanence, sans rupture.",
+   "justification": "Le principe de continuité impose que le service public fonctionne sans interruption, sauf exceptions encadrées comme le droit de grève.",
+   "vrai": true
   },
   {
    "id": "g-055",
@@ -9731,14 +9852,12 @@
    "niveau": 2,
    "famille": "S",
    "explication": "L'adaptation constante du service public aux évolutions des besoins, techniques et lois.",
-   "type": "libre",
-   "question": "Que signifie le principe de mutabilité du service public ?",
-   "options": [
-    "L'adaptation constante du service public aux évolutions des besoins, techniques et lois."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "vf",
+   "question": "Le principe de mutabilité impose l'adaptation constante du service public aux évolutions des besoins, des techniques et des lois.",
+   "justification": "Aussi appelé principe d'adaptabilité, il permet de faire évoluer l'organisation du service public en fonction des besoins de l'intérêt général.",
+   "vrai": true
   },
   {
    "id": "g-056",
@@ -9749,14 +9868,12 @@
    "niveau": 2,
    "famille": "S",
    "explication": "L'accès équitable de tous aux droits fondamentaux, refus des discriminations.",
-   "type": "libre",
-   "question": "Que signifie le principe d'égalité du service public ?",
-   "options": [
-    "L'accès équitable de tous aux droits fondamentaux, refus des discriminations."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "vf",
+   "question": "Le principe d'égalité du service public garantit un accès équitable de tous aux droits fondamentaux et interdit toute discrimination.",
+   "justification": "Ce principe implique un traitement identique des usagers placés dans une même situation, sans distinction injustifiée.",
+   "vrai": true
   },
   {
    "id": "g-057",
@@ -9767,14 +9884,21 @@
    "niveau": 2,
    "famille": "S",
    "explication": "L'accessibilité, la transparence, la laïcité.",
-   "type": "libre",
-   "question": "Quels sont les 3 éléments constitutifs de la neutralité du service public ?",
-   "options": [
-    "L'accessibilité, la transparence, la laïcité."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "trous",
+   "question": "Complétez les éléments constitutifs de la neutralité du service public.",
+   "mots": [
+    "accessibilité",
+    "transparence",
+    "laïcité"
+   ],
+   "texte": "La neutralité du service public repose sur l'{1}, la {2} et la {3}.",
+   "leurres": [
+    "gratuité",
+    "égalité",
+    "continuité"
+   ]
   },
   {
    "id": "g-058",
@@ -9785,14 +9909,17 @@
    "niveau": 1,
    "famille": "S",
    "explication": "Assurer le bon ordre, la sécurité et la salubrité publique.",
-   "type": "libre",
-   "question": "Quels sont les pouvoirs de police administrative propres au Maire ?",
-   "options": [
-    "Assurer le bon ordre, la sécurité et la salubrité publique."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "qcm",
+   "question": "Quels pouvoirs le maire exerce-t-il au titre de la police administrative générale ?",
+   "bonneReponse": 0,
+   "options": [
+    "Assurer le bon ordre, la sécurité et la salubrité publique sur le territoire communal.",
+    "Fixer le taux des impôts locaux directs.",
+    "Nommer les fonctionnaires de la préfecture.",
+    "Approuver le budget de l'établissement public de coopération intercommunale."
+   ]
   },
   {
    "id": "g-059",
@@ -9803,14 +9930,28 @@
    "niveau": 2,
    "famille": "S",
    "explication": "Officier d'état civil, OPJ, organisation des élections, publication des lois.",
-   "type": "libre",
-   "question": "Quelles fonctions le Maire exerce-t-il au nom de l'État ?",
-   "options": [
-    "Officier d'état civil, OPJ, organisation des élections, publication des lois."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "assoc",
+   "question": "Associez chaque fonction exercée par le maire au nom de l'État à sa description.",
+   "paires": [
+    [
+     "Officier d'état civil",
+     "Célèbre les mariages et dresse les actes d'état civil"
+    ],
+    [
+     "Officier de police judiciaire (OPJ)",
+     "Constate les infractions et assiste le procureur de la République"
+    ],
+    [
+     "Organisation des élections",
+     "Assure le déroulement du scrutin dans la commune"
+    ],
+    [
+     "Publication des lois",
+     "Assure l'affichage et la diffusion des textes officiels"
+    ]
+   ]
   },
   {
    "id": "g-060",
@@ -9839,14 +9980,17 @@
    "niveau": 1,
    "famille": "M",
    "explication": "La loi MOP du 12 juillet 1985.",
-   "type": "libre",
-   "question": "Quelle loi posait historiquement le statut de la maîtrise d'ouvrage publique ?",
-   "options": [
-    "La loi MOP du 12 juillet 1985."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "qcm",
+   "question": "Quelle loi posait historiquement le statut de la maîtrise d'ouvrage publique ?",
+   "bonneReponse": 0,
+   "options": [
+    "La loi MOP du 12 juillet 1985.",
+    "La loi Sapin du 29 janvier 1993.",
+    "La loi MURCEF du 11 décembre 2001.",
+    "La loi NOTRe du 7 août 2015."
+   ]
   },
   {
    "id": "g-062",
@@ -9857,14 +10001,17 @@
    "niveau": 1,
    "famille": "S",
    "explication": "Dans le Code de la Commande Publique.",
-   "type": "libre",
-   "question": "Où sont aujourd'hui codifiées les règles de la maîtrise d'ouvrage publique ?",
-   "options": [
-    "Dans le Code de la Commande Publique."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "qcm",
+   "question": "Où sont aujourd'hui codifiées les règles de la maîtrise d'ouvrage publique ?",
+   "bonneReponse": 0,
+   "options": [
+    "Dans le Code de la commande publique.",
+    "Dans le Code général des collectivités territoriales.",
+    "Dans le Code de l'urbanisme.",
+    "Dans le Code de la construction et de l'habitation."
+   ]
   },
   {
    "id": "g-063",
@@ -9875,14 +10022,17 @@
    "niveau": 2,
    "famille": "S",
    "explication": "Le responsable principal de l'ouvrage (définit le besoin, finance, réceptionne).",
-   "type": "libre",
-   "question": "Qui est le maître d'ouvrage (MOA) ?",
-   "options": [
-    "Le responsable principal de l'ouvrage (définit le besoin, finance, réceptionne)."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "qcm",
+   "question": "Qui est le maître d'ouvrage (MOA) ?",
+   "bonneReponse": 0,
+   "options": [
+    "Le responsable principal de l'ouvrage, qui définit le besoin, finance l'opération et la réceptionne.",
+    "Le professionnel qui conçoit l'ouvrage et dirige l'exécution des travaux.",
+    "L'entreprise titulaire du marché qui réalise les travaux.",
+    "Le contrôleur technique chargé de vérifier la conformité de l'ouvrage."
+   ]
   },
   {
    "id": "g-064",
@@ -9893,14 +10043,21 @@
    "niveau": 2,
    "famille": "S",
    "explication": "Le critère organique, le critère matériel et le critère contractuel.",
-   "type": "libre",
-   "question": "Quelles sont les 3 conditions cumulatives pour l'application des règles de la maîtrise d'ouvrage publique ?",
-   "options": [
-    "Le critère organique, le critère matériel et le critère contractuel."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "trous",
+   "question": "Complétez les conditions cumulatives d'application des règles de la MOP.",
+   "mots": [
+    "organique",
+    "matériel",
+    "contractuel"
+   ],
+   "texte": "L'application des règles de la maîtrise d'ouvrage publique suppose la réunion du critère {1}, du critère {2} et du critère {3}.",
+   "leurres": [
+    "financier",
+    "territorial",
+    "procédural"
+   ]
   },
   {
    "id": "g-065",
@@ -9911,14 +10068,17 @@
    "niveau": 2,
    "famille": "S",
    "explication": "L'acheteur doit être l'État, une CT, un EPCI ou un bailleur social ciblé.",
-   "type": "libre",
-   "question": "Qu'est-ce que le critère organique de la MOP ?",
-   "options": [
-    "L'acheteur doit être l'État, une CT, un EPCI ou un bailleur social ciblé."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "qcm",
+   "question": "Qu'est-ce que le critère organique de la maîtrise d'ouvrage publique ?",
+   "bonneReponse": 0,
+   "options": [
+    "L'acheteur doit être l'État, une collectivité territoriale, un EPCI ou un bailleur social ciblé.",
+    "L'opération doit porter sur un ouvrage de bâtiment ou de génie civil.",
+    "Le contrat doit être conclu sous forme de marché public de travaux.",
+    "Le montant de l'opération doit dépasser un seuil fixé par décret."
+   ]
   },
   {
    "id": "g-066",
@@ -9929,14 +10089,17 @@
    "niveau": 3,
    "famille": "S",
    "explication": "L'opération doit être un \"ouvrage\" de bâtiment ou de génie civil.",
-   "type": "libre",
-   "question": "Qu'est-ce que le critère matériel de la MOP ?",
-   "options": [
-    "L'opération doit être un \"ouvrage\" de bâtiment ou de génie civil."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "qcm",
+   "question": "Qu'est-ce que le critère matériel de la maîtrise d'ouvrage publique ?",
+   "bonneReponse": 0,
+   "options": [
+    "L'opération doit être un « ouvrage » de bâtiment ou de génie civil.",
+    "L'acheteur doit appartenir à la sphère publique.",
+    "Le contrat doit être un marché public de travaux ou global.",
+    "L'ouvrage doit être financé intégralement par des fonds publics."
+   ]
   },
   {
    "id": "g-067",
@@ -9947,14 +10110,12 @@
    "niveau": 3,
    "famille": "S",
    "explication": "L'opération doit être réalisée via un marché public de travaux (ou global).",
-   "type": "libre",
-   "question": "Qu'est-ce que le critère contractuel de la MOP ?",
-   "options": [
-    "L'opération doit être réalisée via un marché public de travaux (ou global)."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "vf",
+   "question": "Le critère contractuel de la maîtrise d'ouvrage publique impose que l'opération soit réalisée par le biais d'un marché public de travaux ou d'un marché global.",
+   "justification": "Ce critère complète les critères organique et matériel : le contrat conclu doit relever d'un marché de travaux ou global pour que le régime de la MOP s'applique.",
+   "vrai": true
   },
   {
    "id": "g-068",
@@ -9981,14 +10142,17 @@
    "niveau": 4,
    "famille": "S",
    "explication": "Concevoir l'ouvrage et diriger l'exécution des travaux pour le compte du MOA.",
-   "type": "libre",
-   "question": "Quel est le rôle d'un Maître d'œuvre (MOE) ?",
-   "options": [
-    "Concevoir l'ouvrage et diriger l'exécution des travaux pour le compte du MOA."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "qcm",
+   "question": "Quel est le rôle du maître d'œuvre (MOE) ?",
+   "bonneReponse": 0,
+   "options": [
+    "Concevoir l'ouvrage et diriger l'exécution des travaux pour le compte du maître d'ouvrage.",
+    "Financer l'opération et réceptionner l'ouvrage achevé.",
+    "Exécuter matériellement les travaux prévus au marché.",
+    "Contrôler la légalité des actes pris par le maître d'ouvrage."
+   ]
   },
   {
    "id": "g-070",
@@ -9999,14 +10163,17 @@
    "niveau": 1,
    "famille": "S",
    "explication": "Établissement Recevant du Public.",
-   "type": "libre",
-   "question": "Que signifie le sigle ERP ?",
-   "options": [
-    "Établissement Recevant du Public."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "qcm",
+   "question": "Que signifie le sigle ERP ?",
+   "bonneReponse": 0,
+   "options": [
+    "Établissement recevant du public.",
+    "Espace réservé au public.",
+    "Établissement de restauration publique.",
+    "Équipement de représentation publique."
+   ]
   },
   {
    "id": "g-071",
@@ -10017,14 +10184,17 @@
    "niveau": 1,
    "famille": "S",
    "explication": "Immeuble de Grande Hauteur.",
-   "type": "libre",
-   "question": "Que signifie le sigle IGH ?",
-   "options": [
-    "Immeuble de Grande Hauteur."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "qcm",
+   "question": "Que signifie le sigle IGH ?",
+   "bonneReponse": 0,
+   "options": [
+    "Immeuble de grande hauteur.",
+    "Installation générale d'habitation.",
+    "Immeuble à gestion hospitalière.",
+    "Infrastructure de grande hauteur."
+   ]
   },
   {
    "id": "g-072",
@@ -10035,14 +10205,17 @@
    "niveau": 1,
    "famille": "S",
    "explication": "Bâtiment ou enceinte où des personnes sont admises librement ou moyennant rétribution.",
-   "type": "libre",
-   "question": "Quelle est la définition juridique d'un ERP ?",
-   "options": [
-    "Bâtiment ou enceinte où des personnes sont admises librement ou moyennant rétribution."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "qcm",
+   "question": "Quelle est la définition juridique d'un ERP ?",
+   "bonneReponse": 0,
+   "options": [
+    "Un bâtiment ou une enceinte où des personnes sont admises librement ou moyennant rétribution.",
+    "Un immeuble d'habitation collective de plus de trois étages.",
+    "Un local exclusivement réservé au personnel d'une entreprise.",
+    "Un ouvrage classé au titre des monuments historiques."
+   ]
   },
   {
    "id": "g-073",
@@ -10053,14 +10226,17 @@
    "niveau": 2,
    "famille": "M",
    "explication": "Plus de 50 mètres (plancher bas du dernier niveau).",
-   "type": "libre",
-   "question": "À partir de quelle hauteur un bâtiment d'habitation devient-il un IGH ?",
-   "options": [
-    "Plus de 50 mètres (plancher bas du dernier niveau)."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "qcm",
+   "question": "À partir de quelle hauteur un bâtiment d'habitation devient-il un IGH ?",
+   "bonneReponse": 0,
+   "options": [
+    "Plus de 50 mètres, mesurés au plancher bas du dernier niveau.",
+    "Plus de 28 mètres, mesurés au plancher bas du dernier niveau.",
+    "Plus de 100 mètres, mesurés au faîtage du bâtiment.",
+    "Plus de 18 mètres, mesurés au sol du dernier niveau accessible."
+   ]
   },
   {
    "id": "g-074",
@@ -10071,14 +10247,17 @@
    "niveau": 2,
    "famille": "M",
    "explication": "Plus de 28 mètres (plancher bas du dernier niveau).",
-   "type": "libre",
-   "question": "À partir de quelle hauteur un bâtiment tertiaire/bureau devient-il un IGH ?",
-   "options": [
-    "Plus de 28 mètres (plancher bas du dernier niveau)."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "qcm",
+   "question": "À partir de quelle hauteur un bâtiment tertiaire ou de bureaux devient-il un IGH ?",
+   "bonneReponse": 0,
+   "options": [
+    "Plus de 28 mètres, mesurés au plancher bas du dernier niveau.",
+    "Plus de 50 mètres, mesurés au plancher bas du dernier niveau.",
+    "Plus de 45 mètres, mesurés au faîtage du bâtiment.",
+    "Plus de 100 mètres, mesurés au sol."
+   ]
   },
   {
    "id": "g-075",
@@ -10089,14 +10268,17 @@
    "niveau": 2,
    "famille": "S",
    "explication": "Cinq catégories.",
-   "type": "libre",
-   "question": "Combien de catégories d'ERP existe-t-il ?",
-   "options": [
-    "Cinq catégories."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "qcm",
+   "question": "Combien de catégories d'établissements recevant du public (ERP) existe-t-il ?",
+   "bonneReponse": 0,
+   "options": [
+    "Cinq catégories.",
+    "Trois catégories.",
+    "Sept catégories.",
+    "Quatre catégories."
+   ]
   },
   {
    "id": "g-076",
@@ -10107,14 +10289,17 @@
    "niveau": 3,
    "famille": "M",
    "explication": "À un établissement pouvant accueillir plus de 1500 personnes.",
-   "type": "libre",
-   "question": "À quoi correspond un ERP de 1ère catégorie ?",
-   "options": [
-    "À un établissement pouvant accueillir plus de 1500 personnes."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "qcm",
+   "question": "À quoi correspond un ERP de 1ère catégorie ?",
+   "bonneReponse": 0,
+   "options": [
+    "À un établissement pouvant accueillir plus de 1500 personnes.",
+    "À un établissement pouvant accueillir de 701 à 1500 personnes.",
+    "À un établissement pouvant accueillir de 301 à 700 personnes.",
+    "À un établissement dont l'effectif n'atteint pas le seuil d'assujettissement."
+   ]
   },
   {
    "id": "g-077",
@@ -10125,14 +10310,17 @@
    "niveau": 3,
    "famille": "M",
    "explication": "À un établissement pouvant accueillir de 701 à 1500 personnes.",
-   "type": "libre",
-   "question": "À quoi correspond un ERP de 2ème catégorie ?",
-   "options": [
-    "À un établissement pouvant accueillir de 701 à 1500 personnes."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "qcm",
+   "question": "À quoi correspond un ERP de 2ème catégorie ?",
+   "bonneReponse": 0,
+   "options": [
+    "À un établissement pouvant accueillir de 701 à 1500 personnes.",
+    "À un établissement pouvant accueillir plus de 1500 personnes.",
+    "À un établissement pouvant accueillir de 301 à 700 personnes.",
+    "À un établissement pouvant accueillir de 1 à 300 personnes."
+   ]
   },
   {
    "id": "g-078",
@@ -10143,14 +10331,17 @@
    "niveau": 3,
    "famille": "M",
    "explication": "À un établissement pouvant accueillir de 301 à 700 personnes.",
-   "type": "libre",
-   "question": "À quoi correspond un ERP de 3ème catégorie ?",
-   "options": [
-    "À un établissement pouvant accueillir de 301 à 700 personnes."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "qcm",
+   "question": "À quoi correspond un ERP de 3ème catégorie ?",
+   "bonneReponse": 0,
+   "options": [
+    "À un établissement pouvant accueillir de 301 à 700 personnes.",
+    "À un établissement pouvant accueillir de 701 à 1500 personnes.",
+    "À un établissement pouvant accueillir plus de 1500 personnes.",
+    "À un établissement dont l'effectif n'atteint pas le seuil d'assujettissement."
+   ]
   },
   {
    "id": "g-079",
@@ -10161,14 +10352,12 @@
    "niveau": 3,
    "famille": "S",
    "explication": "Son effectif théorique n'atteint pas le seuil d'assujettissement fixé par le règlement.",
-   "type": "libre",
-   "question": "Quelle est la particularité d'un ERP de 5ème catégorie ?",
-   "options": [
-    "Son effectif théorique n'atteint pas le seuil d'assujettissement fixé par le règlement."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "vf",
+   "question": "Un ERP de 5ème catégorie se caractérise par un effectif théorique qui n'atteint pas le seuil d'assujettissement fixé par le règlement.",
+   "justification": "En effet, la 5ème catégorie regroupe les petits établissements dont la fréquentation reste en dessous des seuils réglementaires, contrairement aux quatre premières catégories définies par un effectif minimal.",
+   "vrai": true
   },
   {
    "id": "g-080",
@@ -10479,14 +10668,22 @@
    "niveau": 1,
    "famille": "S",
    "explication": "Écologiques, sociaux, de santé (QAI) et budgétaires.",
-   "type": "libre",
-   "question": "Quels sont les principaux enjeux liés au patrimoine bâti des collectivités ?",
-   "options": [
-    "Écologiques, sociaux, de santé (QAI) et budgétaires."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "trous",
+   "question": "Complétez avec les principaux enjeux liés au patrimoine bâti des collectivités.",
+   "mots": [
+    "écologiques",
+    "sociaux",
+    "santé",
+    "budgétaires"
+   ],
+   "texte": "Les enjeux liés au patrimoine bâti sont {1}, {2}, de {3} (via la qualité de l'air intérieur) et {4}.",
+   "leurres": [
+    "juridiques",
+    "démographiques",
+    "touristiques"
+   ]
   },
   {
    "id": "g-097",
@@ -10497,14 +10694,17 @@
    "niveau": 1,
    "famille": "S",
    "explication": "Schéma Directeur Immobilier et Énergétique.",
-   "type": "libre",
-   "question": "Que signifie SDIE ?",
-   "options": [
-    "Schéma Directeur Immobilier et Énergétique."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "qcm",
+   "question": "Que signifie le sigle SDIE ?",
+   "bonneReponse": 0,
+   "options": [
+    "Schéma Directeur Immobilier et Énergétique.",
+    "Schéma Départemental d'Investissement Écologique.",
+    "Service de Diagnostic Immobilier et Environnemental.",
+    "Schéma Directeur Intercommunal de l'Énergie."
+   ]
   },
   {
    "id": "g-098",
@@ -10533,14 +10733,40 @@
    "niveau": 2,
    "famille": "S",
    "explication": "Réglementaire, vétusté, énergétique, occupationnel, fonctionnel, et stratégique/budgétaire.",
-   "type": "libre",
-   "question": "Quels sont les critères de diagnostic d'un SDIE ?",
-   "options": [
-    "Réglementaire, vétusté, énergétique, occupationnel, fonctionnel, et stratégique/budgétaire."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "tri",
+   "question": "Classez les critères de diagnostic d'un SDIE selon leur nature.",
+   "colonnes": [
+    "Aspects techniques",
+    "Aspects stratégiques"
+   ],
+   "elements": [
+    [
+     "Réglementaire",
+     0
+    ],
+    [
+     "Vétusté",
+     0
+    ],
+    [
+     "Énergétique",
+     0
+    ],
+    [
+     "Occupationnel",
+     1
+    ],
+    [
+     "Fonctionnel",
+     1
+    ],
+    [
+     "Stratégique et budgétaire",
+     1
+    ]
+   ]
   },
   {
    "id": "g-100",
@@ -10551,14 +10777,17 @@
    "niveau": 2,
    "famille": "S",
    "explication": "Un programme national aidant les collectivités à financer l'efficacité énergétique de leurs bâtiments.",
-   "type": "libre",
-   "question": "Qu'est-ce que le programme ACTEE ?",
-   "options": [
-    "Un programme national aidant les collectivités à financer l'efficacité énergétique de leurs bâtiments."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "qcm",
+   "question": "Qu'est-ce que le programme ACTEE ?",
+   "bonneReponse": 0,
+   "options": [
+    "Un programme national aidant les collectivités à financer l'efficacité énergétique de leurs bâtiments.",
+    "Un dispositif fiscal de défiscalisation des travaux de rénovation urbaine.",
+    "Un label attribué aux bâtiments publics les plus économes en énergie.",
+    "Un fonds européen dédié exclusivement aux énergies renouvelables."
+   ]
   },
   {
    "id": "g-101",
@@ -10569,14 +10798,17 @@
    "niveau": 3,
    "famille": "S",
    "explication": "Réaliser le diagnostic énergétique, suivre les consos et conseiller sur les travaux à mener.",
-   "type": "libre",
-   "question": "Quel est le rôle d'un Économe de flux (ou CEP) ?",
-   "options": [
-    "Réaliser le diagnostic énergétique, suivre les consos et conseiller sur les travaux à mener."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "qcm",
+   "question": "Quel est le rôle d'un économe de flux (ou conseiller en énergie partagé, CEP) ?",
+   "bonneReponse": 0,
+   "options": [
+    "Réaliser le diagnostic énergétique, suivre les consommations et conseiller sur les travaux à mener.",
+    "Négocier les contrats d'achat d'énergie pour le compte de la collectivité.",
+    "Assurer la maintenance technique quotidienne des installations de chauffage.",
+    "Contrôler la conformité réglementaire des ERP en matière de sécurité incendie."
+   ]
   },
   {
    "id": "g-102",
@@ -10587,14 +10819,12 @@
    "niveau": 3,
    "famille": "S",
    "explication": "Un contrat liant un investissement de rénovation à une garantie de résultats énergétiques sur la durée.",
-   "type": "libre",
-   "question": "Qu'est-ce qu'un Contrat de Performance Énergétique (CPE) ?",
-   "options": [
-    "Un contrat liant un investissement de rénovation à une garantie de résultats énergétiques sur la durée."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "vf",
+   "question": "Un Contrat de Performance Énergétique (CPE) est un contrat qui lie un investissement de rénovation à une garantie de résultats énergétiques sur la durée.",
+   "justification": "C'est précisément l'objet du CPE : le prestataire s'engage sur un niveau de performance énergétique mesurable et garanti, sous peine de pénalités, ce qui distingue ce contrat d'un simple marché de travaux.",
+   "vrai": true
   },
   {
    "id": "g-103",
@@ -10605,14 +10835,17 @@
    "niveau": 4,
    "famille": "S",
    "explication": "Un dispositif de financement où les économies d'énergie générées remboursent l'investissement initial.",
-   "type": "libre",
-   "question": "Qu'est-ce que l'Intracting ?",
-   "options": [
-    "Un dispositif de financement où les économies d'énergie générées remboursent l'investissement initial."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "qcm",
+   "question": "Qu'est-ce que l'intracting ?",
+   "bonneReponse": 0,
+   "options": [
+    "Un dispositif de financement où les économies d'énergie générées remboursent l'investissement initial.",
+    "Un contrat de délégation de service public appliqué aux réseaux de chaleur.",
+    "Une subvention européenne dédiée à la rénovation des bâtiments publics.",
+    "Un mécanisme de mutualisation des achats d'énergie entre collectivités."
+   ]
   },
   {
    "id": "g-104",
@@ -10623,14 +10856,12 @@
    "niveau": 4,
    "famille": "S",
    "explication": "La réduction des consommations par des leviers comportementaux et d'usage, avant même les travaux techniques.",
-   "type": "libre",
-   "question": "Qu'est-ce que la sobriété énergétique en immobilier ?",
-   "options": [
-    "La réduction des consommations par des leviers comportementaux et d'usage, avant même les travaux techniques."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "vf",
+   "question": "La sobriété énergétique en immobilier consiste uniquement à réaliser des travaux techniques d'isolation.",
+   "justification": "La sobriété énergétique désigne d'abord la réduction des consommations par des leviers comportementaux et d'usage, avant même d'engager des travaux techniques. Elle se distingue donc de l'efficacité énergétique, qui elle repose sur des améliorations techniques.",
+   "vrai": false
   },
   {
    "id": "g-105",
@@ -10641,14 +10872,17 @@
    "niveau": 4,
    "famille": "S",
    "explication": "Building Automation and Control System (système de pilotage intelligent pour bâtiments).",
-   "type": "libre",
-   "question": "Qu'est-ce qu'un système BACS ?",
-   "options": [
-    "Building Automation and Control System (système de pilotage intelligent pour bâtiments)."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "qcm",
+   "question": "Qu'est-ce qu'un système BACS ?",
+   "bonneReponse": 0,
+   "options": [
+    "Building Automation and Control System, un système de pilotage intelligent pour bâtiments.",
+    "Bureau d'Analyse et de Contrôle Sanitaire des bâtiments publics.",
+    "Bâtiment à Consommation Strictement contrôlée, label énergétique national.",
+    "Base d'Audit et de Certification des Surfaces immobilières."
+   ]
   },
   {
    "id": "g-106",
@@ -10945,14 +11179,17 @@
    "niveau": 3,
    "famille": "S",
    "explication": "Directeur Général des Services.",
-   "type": "libre",
-   "question": "Que signifie DGS dans une collectivité ?",
-   "options": [
-    "Directeur Général des Services."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "qcm",
+   "question": "Que signifie le sigle DGS dans une collectivité ?",
+   "bonneReponse": 0,
+   "options": [
+    "Directeur Général des Services.",
+    "Directeur Général de la Sécurité.",
+    "Délégué à la Gestion des Services.",
+    "Directeur Général du Suivi budgétaire."
+   ]
   },
   {
    "id": "g-123",
@@ -10963,14 +11200,36 @@
    "niveau": 3,
    "famille": "S",
    "explication": "Comité Social Territorial (fusion des anciens CT et CHSCT).",
-   "type": "libre",
-   "question": "Que signifie CST en ressources humaines ?",
-   "options": [
-    "Comité Social Territorial (fusion des anciens CT et CHSCT)."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "tri",
+   "question": "Classez ces éléments selon qu'ils relèvent des représentants du personnel ou de la collectivité au sein du Comité Social Territorial (CST).",
+   "colonnes": [
+    "Représentants du personnel",
+    "Représentants de la collectivité"
+   ],
+   "elements": [
+    [
+     "Organisations syndicales",
+     0
+    ],
+    [
+     "Délégués élus du personnel",
+     0
+    ],
+    [
+     "Autorité territoriale (maire, président)",
+     1
+    ],
+    [
+     "Élus désignés par l'organe délibérant",
+     1
+    ],
+    [
+     "Membres de l'administration territoriale",
+     1
+    ]
+   ]
   },
   {
    "id": "g-124",
@@ -10981,14 +11240,17 @@
    "niveau": 3,
    "famille": "S",
    "explication": "Délégation de Service Public (contrat où la rémunération est liée à l'exploitation du service).",
-   "type": "libre",
-   "question": "Que signifie DSP dans la commande publique ?",
-   "options": [
-    "Délégation de Service Public (contrat où la rémunération est liée à l'exploitation du service)."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "qcm",
+   "question": "Que signifie DSP dans la commande publique ?",
+   "bonneReponse": 0,
+   "options": [
+    "Délégation de Service Public, contrat dont la rémunération est liée à l'exploitation du service.",
+    "Dossier de Sélection des Prestataires, procédure préalable à tout marché public.",
+    "Directive relative aux Services Publics, texte européen encadrant les concessions.",
+    "Dispositif de Suivi des Prestations, outil de contrôle de l'exécution des marchés."
+   ]
   },
   {
    "id": "g-125",
@@ -11267,14 +11529,12 @@
    "niveau": 2,
    "famille": "S",
    "explication": "L'interdiction de divulguer des informations ou faits connus dans le cadre de ses fonctions.",
-   "type": "libre",
-   "question": "À quoi correspond l'obligation de discrétion professionnelle ?",
-   "options": [
-    "L'interdiction de divulguer des informations ou faits connus dans le cadre de ses fonctions."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "vf",
+   "question": "L'obligation de discrétion professionnelle interdit à un agent de divulguer des informations ou faits dont il a connaissance dans le cadre de ses fonctions.",
+   "justification": "Il s'agit bien de la définition de la discrétion professionnelle, qui s'impose à tout agent public à l'égard des faits, informations et documents dont il a connaissance dans l'exercice de ses fonctions.",
+   "vrai": true
   },
   {
    "id": "g-141",
@@ -11301,14 +11561,17 @@
    "niveau": 3,
    "famille": "S",
    "explication": "Le Préfet (ou sous-préfet) via le contrôle de légalité.",
-   "type": "libre",
-   "question": "Qui contrôle les actes des collectivités territoriales (délibérations, arrêtés) ?",
-   "options": [
-    "Le Préfet (ou sous-préfet) via le contrôle de légalité."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "qcm",
+   "question": "Qui contrôle les actes des collectivités territoriales (délibérations, arrêtés) ?",
+   "bonneReponse": 0,
+   "options": [
+    "Le préfet (ou sous-préfet), via le contrôle de légalité.",
+    "Le président du tribunal administratif, de sa propre initiative.",
+    "La chambre régionale des comptes, dans le cadre du contrôle budgétaire.",
+    "Le procureur de la République, via un contrôle systématique."
+   ]
   },
   {
    "id": "g-143",
@@ -11319,14 +11582,16 @@
    "niveau": 4,
    "famille": "M",
    "explication": "2 mois à compter de sa transmission.",
-   "type": "libre",
-   "question": "Quel est le délai pour que le préfet défère un acte au tribunal administratif ?",
-   "options": [
-    "2 mois à compter de sa transmission."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "ordre",
+   "question": "Remettez dans l'ordre chronologique les étapes du contrôle de légalité pouvant conduire à un déféré préfectoral.",
+   "items": [
+    "Transmission de l'acte au préfet",
+    "Examen de la légalité de l'acte par les services préfectoraux",
+    "Éventuel recours gracieux du préfet auprès de la collectivité",
+    "Déféré de l'acte au tribunal administratif dans un délai de 2 mois"
+   ]
   },
   {
    "id": "g-144",
@@ -11545,14 +11810,28 @@
    "niveau": 4,
    "famille": "M",
    "explication": "Le mécanisme de la déconcentration repose sur l'unité 1.",
-   "type": "libre",
-   "question": "Quel est le mécanisme de base de la déconcentration ?",
-   "options": [
-    "Le mécanisme de la déconcentration repose sur l'unité 1."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "assoc",
+   "question": "Associez chaque notion administrative à sa définition.",
+   "paires": [
+    [
+     "Déconcentration",
+     "Délégation de pouvoirs à des agents de l'État au sein d'une administration unique"
+    ],
+    [
+     "Tutelle hiérarchisée",
+     "Mode de contrôle interne à l'État caractéristique de la déconcentration"
+    ],
+    [
+     "Préfet",
+     "Représentant de l'État dans le département exerçant l'autorité déconcentrée"
+    ],
+    [
+     "Unité de l'État",
+     "Principe sur lequel repose le mécanisme de la déconcentration"
+    ]
+   ]
   },
   {
    "id": "g-157",
@@ -11563,14 +11842,28 @@
    "niveau": 4,
    "famille": "M",
    "explication": "Le mécanisme de la décentralisation repose sur la diversité 1.",
-   "type": "libre",
-   "question": "Quel est le mécanisme de base de la décentralisation ?",
-   "options": [
-    "Le mécanisme de la décentralisation repose sur la diversité 1."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "assoc",
+   "question": "Associez chaque collectivité ou principe à la notion de décentralisation correspondante.",
+   "paires": [
+    [
+     "Commune",
+     "Collectivité territoriale décentralisée dotée de la personnalité morale"
+    ],
+    [
+     "Région",
+     "Collectivité territoriale décentralisée gérant des compétences propres"
+    ],
+    [
+     "Libre administration",
+     "Principe constitutionnel fondant l'autonomie des collectivités décentralisées"
+    ],
+    [
+     "Diversité locale",
+     "Principe sur lequel repose le mécanisme de la décentralisation"
+    ]
+   ]
   },
   {
    "id": "g-158",
@@ -11581,14 +11874,21 @@
    "niveau": 4,
    "famille": "M",
    "explication": "Le pouvoir s'exerce par le biais d'une tutelle hiérarchisée 1.",
-   "type": "libre",
-   "question": "Comment s'exerce le pouvoir en déconcentration ?",
-   "options": [
-    "Le pouvoir s'exerce par le biais d'une tutelle hiérarchisée 1."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "trous",
+   "question": "Complétez la phrase sur l'exercice du pouvoir en déconcentration.",
+   "mots": [
+    "tutelle",
+    "hiérarchisée",
+    "État"
+   ],
+   "texte": "En déconcentration, le pouvoir s'exerce par le biais d'une {1} {2}, l'{3} restant unique.",
+   "leurres": [
+    "autonomie",
+    "élection",
+    "délégation"
+   ]
   },
   {
    "id": "g-159",
@@ -11599,14 +11899,21 @@
    "niveau": 4,
    "famille": "M",
    "explication": "Le pouvoir s'exerce via le principe de libre administration 1.",
-   "type": "libre",
-   "question": "Comment s'exerce le pouvoir en décentralisation ?",
-   "options": [
-    "Le pouvoir s'exerce via le principe de libre administration 1."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "trous",
+   "question": "Complétez la phrase sur l'exercice du pouvoir en décentralisation.",
+   "mots": [
+    "libre",
+    "administration",
+    "collectivités"
+   ],
+   "texte": "En décentralisation, le pouvoir s'exerce via le principe de {1} {2}, reconnu aux {3} territoriales.",
+   "leurres": [
+    "tutelle",
+    "délégation",
+    "hiérarchie"
+   ]
   },
   {
    "id": "g-160",
@@ -11617,14 +11924,15 @@
    "niveau": 4,
    "famille": "M",
    "explication": "Ce sont des compétences déléguées par l'État 1.",
-   "type": "libre",
-   "question": "D'où proviennent les compétences en déconcentration ?",
-   "options": [
-    "Ce sont des compétences déléguées par l'État 1."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "ordre",
+   "question": "Remettez dans l'ordre chronologique les grandes étapes de la décentralisation en France, dont procèdent les compétences déléguées par l'État.",
+   "items": [
+    "Acte I de la décentralisation (lois Defferre, 1982-1983)",
+    "Acte II de la décentralisation (loi constitutionnelle et loi Libertés et responsabilités locales, 2003-2004)",
+    "Acte III de la décentralisation (lois MAPTAM et NOTRe, 2014-2015)"
+   ]
   },
   {
    "id": "g-161",
@@ -11761,14 +12069,17 @@
    "niveau": 3,
    "famille": "M",
    "explication": "Le besoin de la population et l'intérêt général 2.",
-   "type": "libre",
-   "question": "Quels sont les deux moteurs de l'établissement d'un service public ?",
-   "options": [
-    "Le besoin de la population et l'intérêt général 2."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "qcm",
+   "question": "Quels sont les deux moteurs de la création d'un service public ?",
+   "bonneReponse": 0,
+   "options": [
+    "Le besoin de la population et l'intérêt général",
+    "La rentabilité financière et la concurrence",
+    "La demande des entreprises privées et le profit",
+    "La pression syndicale et l'opinion publique"
+   ]
   },
   {
    "id": "g-169",
@@ -11779,14 +12090,17 @@
    "niveau": 3,
    "famille": "M",
    "explication": "L'État, les Collectivités Territoriales et l'Intercommunalité 2.",
-   "type": "libre",
-   "question": "Quels acteurs peuvent créer un service public ?",
-   "options": [
-    "L'État, les Collectivités Territoriales et l'Intercommunalité 2."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "qcm",
+   "question": "Quels acteurs peuvent créer un service public ?",
+   "bonneReponse": 0,
+   "options": [
+    "L'État, les collectivités territoriales et l'intercommunalité",
+    "Uniquement l'État et les régions",
+    "Les collectivités territoriales et les associations agréées",
+    "L'État, les établissements publics nationaux et les chambres consulaires"
+   ]
   },
   {
    "id": "g-170",
@@ -11797,14 +12111,17 @@
    "niveau": 3,
    "famille": "M",
    "explication": "La gestion directe (avec contrôle) et la gestion déléguée (avec autonomie) 2.",
-   "type": "libre",
-   "question": "Quelles sont les deux grandes méthodes de gestion d'un service public ?",
-   "options": [
-    "La gestion directe (avec contrôle) et la gestion déléguée (avec autonomie) 2."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "qcm",
+   "question": "Quelles sont les deux grandes méthodes de gestion d'un service public ?",
+   "bonneReponse": 0,
+   "options": [
+    "La gestion directe et la gestion déléguée",
+    "La gestion centralisée et la gestion déconcentrée",
+    "La régie intéressée et la concession uniquement",
+    "La gestion publique et la privatisation totale"
+   ]
   },
   {
    "id": "g-171",
@@ -11815,14 +12132,17 @@
    "niveau": 3,
    "famille": "M",
    "explication": "À la liberté d'entreprendre, illustrée par l'arrêt du 16 novembre 1956 2.",
-   "type": "libre",
-   "question": "À quel principe le service public peut-il se confronter ?",
-   "options": [
-    "À la liberté d'entreprendre, illustrée par l'arrêt du 16 novembre 1956 2."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "qcm",
+   "question": "À quel principe le service public peut-il se confronter ?",
+   "bonneReponse": 0,
+   "options": [
+    "La liberté d'entreprendre",
+    "Le principe de laïcité",
+    "Le principe de libre administration des collectivités",
+    "La liberté de circulation des personnes"
+   ]
   },
   {
    "id": "g-172",
@@ -11833,14 +12153,21 @@
    "niveau": 3,
    "famille": "M",
    "explication": "L'égalité, la continuité et la mutabilité (auxquels s'ajoute la neutralité) 2, 3.",
-   "type": "libre",
-   "question": "Quels sont les trois grands principes fondateurs du service public ?",
-   "options": [
-    "L'égalité, la continuité et la mutabilité (auxquels s'ajoute la neutralité) 2, 3."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "trous",
+   "question": "Complète les trois grands principes fondateurs du service public.",
+   "mots": [
+    "égalité",
+    "continuité",
+    "mutabilité"
+   ],
+   "texte": "Le service public repose sur les principes d'{1}, de {2} et de {3}.",
+   "leurres": [
+    "subsidiarité",
+    "gratuité",
+    "proportionnalité"
+   ]
   },
   {
    "id": "g-173",
@@ -11903,14 +12230,12 @@
    "niveau": 4,
    "famille": "M",
    "explication": "C'est l'arrêt Bonjean du Conseil d'État du 13 juin 1961 3.",
-   "type": "libre",
-   "question": "Quel arrêt illustre le principe de continuité ?",
-   "options": [
-    "C'est l'arrêt Bonjean du Conseil d'État du 13 juin 1961 3."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "vf",
+   "question": "L'arrêt Bonjean rendu par le Conseil d'État le 13 juin 1961 illustre le principe de continuité du service public.",
+   "justification": "Cet arrêt du Conseil d'État consacre l'obligation de continuité qui s'impose aux services publics. Il interdit toute interruption injustifiée du service, sauf hypothèses limitativement prévues comme le droit de grève encadré.",
+   "vrai": true
   },
   {
    "id": "g-177",
@@ -11921,14 +12246,12 @@
    "niveau": 4,
    "famille": "M",
    "explication": "L'application du service doit s'adapter à la demande et aux potentialités techniques et administratives 3.",
-   "type": "libre",
-   "question": "Que recouvre le principe de mutabilité ?",
-   "options": [
-    "L'application du service doit s'adapter à la demande et aux potentialités techniques et administratives 3."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "vf",
+   "question": "Le principe de mutabilité impose que le service public s'adapte à l'évolution de la demande et aux possibilités techniques et administratives.",
+   "justification": "Aussi appelé principe d'adaptabilité, il oblige l'administration à faire évoluer l'organisation du service public en fonction des besoins des usagers et des progrès techniques disponibles.",
+   "vrai": true
   },
   {
    "id": "g-178",
@@ -11957,14 +12280,21 @@
    "niveau": 4,
    "famille": "M",
    "explication": "L'accessibilité, la transparence (Art 15 de la DDHC) et la laïcité 4.",
-   "type": "libre",
-   "question": "Quels sont les trois éléments du principe de neutralité ?",
-   "options": [
-    "L'accessibilité, la transparence (Art 15 de la DDHC) et la laïcité 4."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "trous",
+   "question": "Complète les trois éléments du principe de neutralité du service public.",
+   "mots": [
+    "accessibilité",
+    "transparence",
+    "laïcité"
+   ],
+   "texte": "Le principe de neutralité recouvre l'{1}, la {2}, fondée sur l'article 15 de la DDHC, et la {3}.",
+   "leurres": [
+    "confidentialité",
+    "gratuité",
+    "impartialité"
+   ]
   },
   {
    "id": "g-180",
@@ -12029,14 +12359,12 @@
    "niveau": 3,
    "famille": "M",
    "explication": "Parce qu'il est à la fois le chef de l'administration communale et le représentant de l'État 6.",
-   "type": "libre",
-   "question": "Pourquoi dit-on que le maire a une \"double casquette\" ?",
-   "options": [
-    "Parce qu'il est à la fois le chef de l'administration communale et le représentant de l'État 6."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "vf",
+   "question": "On dit que le maire a une « double casquette » car il est à la fois le chef de l'administration communale et le représentant de l'État dans la commune.",
+   "justification": "En tant qu'organe exécutif de la commune, le maire dirige l'administration communale ; en tant qu'agent de l'État, il exerce des missions déconcentrées comme officier d'état civil et officier de police judiciaire.",
+   "vrai": true
   },
   {
    "id": "g-184",
@@ -12047,14 +12375,21 @@
    "niveau": 3,
    "famille": "M",
    "explication": "Ses compétences propres, ses compétences déléguées et ses pouvoirs de police administrative 6.",
-   "type": "libre",
-   "question": "Quelles compétences le maire exerce-t-il au nom de la commune ?",
-   "options": [
-    "Ses compétences propres, ses compétences déléguées et ses pouvoirs de police administrative 6."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "trous",
+   "question": "Complète les catégories de compétences exercées par le maire au nom de la commune.",
+   "mots": [
+    "propres",
+    "déléguées",
+    "police"
+   ],
+   "texte": "Le maire exerce ses compétences {1}, ses compétences {2}, ainsi que ses pouvoirs de {3} administrative.",
+   "leurres": [
+    "exclusives",
+    "partagées",
+    "judiciaire"
+   ]
   },
   {
    "id": "g-185",
@@ -12065,14 +12400,48 @@
    "niveau": 4,
    "famille": "M",
    "explication": "Le bon ordre, la sécurité, la salubrité, la tranquillité et la dignité humaine 6.",
-   "type": "libre",
-   "question": "Quels sont les 5 piliers de la police administrative du maire ?",
-   "options": [
-    "Le bon ordre, la sécurité, la salubrité, la tranquillité et la dignité humaine 6."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "tri",
+   "question": "Classe chaque notion selon qu'elle constitue ou non l'un des piliers de la police administrative générale du maire.",
+   "colonnes": [
+    "Pilier de la police administrative du maire",
+    "N'est pas un pilier retenu"
+   ],
+   "elements": [
+    [
+     "Le bon ordre",
+     0
+    ],
+    [
+     "La sécurité",
+     0
+    ],
+    [
+     "La salubrité",
+     0
+    ],
+    [
+     "La tranquillité",
+     0
+    ],
+    [
+     "La dignité humaine",
+     0
+    ],
+    [
+     "L'hygiène alimentaire",
+     1
+    ],
+    [
+     "La moralité publique",
+     1
+    ],
+    [
+     "La solidarité",
+     1
+    ]
+   ]
   },
   {
    "id": "g-187",
@@ -12083,14 +12452,17 @@
    "niveau": 2,
    "famille": "M",
    "explication": "5,4 millions de personnes, soit 1 actif sur 5 en France 7.",
-   "type": "libre",
-   "question": "Combien de personnes la fonction publique emploie-t-elle au total ?",
-   "options": [
-    "5,4 millions de personnes, soit 1 actif sur 5 en France 7."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "qcm",
+   "question": "Combien de personnes la fonction publique emploie-t-elle au total en France ?",
+   "bonneReponse": 0,
+   "options": [
+    "5,4 millions de personnes, soit 1 actif sur 5",
+    "3,2 millions de personnes, soit 1 actif sur 10",
+    "7,1 millions de personnes, soit 1 actif sur 4",
+    "4,8 millions de personnes, soit 1 actif sur 6"
+   ]
   },
   {
    "id": "g-188",
@@ -12101,14 +12473,17 @@
    "niveau": 2,
    "famille": "M",
    "explication": "2,5 millions d'agents 7.",
-   "type": "libre",
-   "question": "Combien d'agents travaillent dans la Fonction Publique d'État ?",
-   "options": [
-    "2,5 millions d'agents 7."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "qcm",
+   "question": "Combien d'agents travaillent dans la Fonction Publique d'État ?",
+   "bonneReponse": 0,
+   "options": [
+    "2,5 millions d'agents",
+    "1,9 million d'agents",
+    "1,2 million d'agents",
+    "3,1 millions d'agents"
+   ]
   },
   {
    "id": "g-189",
@@ -12119,14 +12494,17 @@
    "niveau": 2,
    "famille": "M",
    "explication": "1,9 million d'agents 7.",
-   "type": "libre",
-   "question": "Combien d'agents travaillent dans la Fonction Publique Territoriale ?",
-   "options": [
-    "1,9 million d'agents 7."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "qcm",
+   "question": "Combien d'agents travaillent dans la Fonction Publique Territoriale ?",
+   "bonneReponse": 0,
+   "options": [
+    "1,9 million d'agents",
+    "2,5 millions d'agents",
+    "1,2 million d'agents",
+    "2,1 millions d'agents"
+   ]
   },
   {
    "id": "g-190",
@@ -12137,14 +12515,17 @@
    "niveau": 2,
    "famille": "M",
    "explication": "1,2 million d'agents 7.",
-   "type": "libre",
-   "question": "Combien d'agents travaillent dans la Fonction Publique Hospitalière ?",
-   "options": [
-    "1,2 million d'agents 7."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "qcm",
+   "question": "Combien d'agents travaillent dans la Fonction Publique Hospitalière ?",
+   "bonneReponse": 0,
+   "options": [
+    "1,2 million d'agents",
+    "1,9 million d'agents",
+    "2,5 millions d'agents",
+    "0,8 million d'agents"
+   ]
   },
   {
    "id": "g-191",
@@ -12155,14 +12536,12 @@
    "niveau": 3,
    "famille": "M",
    "explication": "Les contractuels représentent 20 % des effectifs 7.",
-   "type": "libre",
-   "question": "Quel est le pourcentage d'agents contractuels ?",
-   "options": [
-    "Les contractuels représentent 20 % des effectifs 7."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "vf",
+   "question": "Les agents contractuels représentent environ 20 % des effectifs de la fonction publique.",
+   "justification": "Aux côtés des fonctionnaires titulaires, les agents contractuels constituent une part significative des effectifs, estimée à environ un cinquième du total des agents publics.",
+   "vrai": true
   },
   {
    "id": "g-192",
@@ -12173,14 +12552,12 @@
    "niveau": 3,
    "famille": "M",
    "explication": "Il faut être de nationalité française ou ressortissant de l'Union européenne 7.",
-   "type": "libre",
-   "question": "Quelle est la condition de nationalité pour devenir fonctionnaire ?",
-   "options": [
-    "Il faut être de nationalité française ou ressortissant de l'Union européenne 7."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "vf",
+   "question": "Pour devenir fonctionnaire, il faut obligatoirement être de nationalité française ou ressortissant d'un État membre de l'Union européenne.",
+   "justification": "La condition de nationalité admet la nationalité française mais aussi celle d'un État de l'Union européenne ou de l'Espace économique européen, sous réserve de certains emplois régaliens réservés aux Français.",
+   "vrai": true
   },
   {
    "id": "g-193",
@@ -12191,14 +12568,17 @@
    "niveau": 3,
    "famille": "M",
    "explication": "Il faut jouir de ses droits civiques 7.",
-   "type": "libre",
-   "question": "Quelle est la condition liée aux droits civiques ?",
-   "options": [
-    "Il faut jouir de ses droits civiques 7."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "qcm",
+   "question": "Quelle condition civique est exigée pour accéder à la fonction publique ?",
+   "bonneReponse": 0,
+   "options": [
+    "Jouir de ses droits civiques",
+    "Être inscrit sur les listes électorales de sa commune de résidence",
+    "Avoir exercé un mandat électif",
+    "Être membre d'une association reconnue d'utilité publique"
+   ]
   },
   {
    "id": "g-194",
@@ -12209,14 +12589,17 @@
    "niveau": 3,
    "famille": "M",
    "explication": "Il faut avoir un casier judiciaire n°2 sans mentions incompatibles avec les fonctions exercées 8.",
-   "type": "libre",
-   "question": "Quelle est la condition pénale pour accéder à la fonction publique ?",
-   "options": [
-    "Il faut avoir un casier judiciaire n°2 sans mentions incompatibles avec les fonctions exercées 8."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "qcm",
+   "question": "Quelle condition pénale est exigée pour accéder à la fonction publique ?",
+   "bonneReponse": 0,
+   "options": [
+    "Un casier judiciaire n°2 sans mention incompatible avec les fonctions exercées",
+    "Un casier judiciaire n°3 vierge",
+    "Une absence totale de condamnation, même ancienne",
+    "Un extrait de casier judiciaire n°1 transmis à l'employeur"
+   ]
   },
   {
    "id": "g-195",
@@ -12227,14 +12610,12 @@
    "niveau": 3,
    "famille": "M",
    "explication": "Il faut être en position régulière au regard du service national 8.",
-   "type": "libre",
-   "question": "Que prévoit la réglementation concernant le service militaire ?",
-   "options": [
-    "Il faut être en position régulière au regard du service national 8."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "vf",
+   "question": "Pour accéder à la fonction publique, il faut être en position régulière au regard des obligations du service national.",
+   "justification": "Cette condition, héritée de l'ancien service militaire obligatoire, subsiste sous la forme du recensement et de la participation à la journée défense et citoyenneté.",
+   "vrai": true
   },
   {
    "id": "g-196",
@@ -12245,14 +12626,17 @@
    "niveau": 3,
    "famille": "M",
    "explication": "Il faut être physiquement apte à l'exercice des fonctions 8.",
-   "type": "libre",
-   "question": "Quelle est l'exigence physique de recrutement ?",
-   "options": [
-    "Il faut être physiquement apte à l'exercice des fonctions 8."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "qcm",
+   "question": "Quelle condition d'aptitude est exigée pour accéder à la fonction publique ?",
+   "bonneReponse": 0,
+   "options": [
+    "Être physiquement apte à l'exercice des fonctions",
+    "Réussir un test sportif national obligatoire",
+    "Avoir moins de 35 ans à la date du recrutement",
+    "Justifier d'une expérience professionnelle préalable"
+   ]
   },
   {
    "id": "g-197",
@@ -12263,14 +12647,12 @@
    "niveau": 4,
    "famille": "M",
    "explication": "Elle est composée de 8 filières 8.",
-   "type": "libre",
-   "question": "Combien de filières composent la Fonction Publique Territoriale ?",
-   "options": [
-    "Elle est composée de 8 filières 8."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "vf",
+   "question": "La Fonction Publique Territoriale est organisée en huit filières professionnelles.",
+   "justification": "La FPT est structurée en huit filières (administrative, technique, culturelle, sportive, sociale, médico-sociale, animation et sécurité/police municipale) regroupant les différents cadres d'emplois.",
+   "vrai": true
   },
   {
    "id": "g-198",
@@ -12299,14 +12681,17 @@
    "niveau": 4,
    "famille": "M",
    "explication": "C'est la filière Technique qui représente 44,9 % des agents 9.",
-   "type": "libre",
-   "question": "Quelle est la filière la plus représentée dans la Territoriale ?",
-   "options": [
-    "C'est la filière Technique qui représente 44,9 % des agents 9."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "qcm",
+   "question": "Quelle est la filière la plus représentée dans la Fonction Publique Territoriale ?",
+   "bonneReponse": 0,
+   "options": [
+    "La filière Technique, avec 44,9 % des agents",
+    "La filière Administrative, avec 44,9 % des agents",
+    "La filière Sociale, avec 30 % des agents",
+    "La filière Culturelle, avec 20 % des agents"
+   ]
   },
   {
    "id": "g-200",
@@ -12317,14 +12702,17 @@
    "niveau": 4,
    "famille": "M",
    "explication": "Elle représente 24,1 % des agents 9.",
-   "type": "libre",
-   "question": "Quel pourcentage représente la filière Administrative ?",
-   "options": [
-    "Elle représente 24,1 % des agents 9."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "qcm",
+   "question": "Quel pourcentage des agents territoriaux relève de la filière Administrative ?",
+   "bonneReponse": 0,
+   "options": [
+    "24,1 %",
+    "44,9 %",
+    "15,3 %",
+    "8,7 %"
+   ]
   },
   {
    "id": "g-201",
@@ -12335,14 +12723,24 @@
    "niveau": 4,
    "famille": "M",
    "explication": "Les catégories A, B et C 8, 9.",
-   "type": "libre",
-   "question": "Quelles sont les trois catégories hiérarchiques de la fonction publique ?",
-   "options": [
-    "Les catégories A, B et C 8, 9."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "assoc",
+   "question": "Associe chaque catégorie hiérarchique de la fonction publique à son niveau de fonctions.",
+   "paires": [
+    [
+     "Catégorie A",
+     "Fonctions de conception et de direction"
+    ],
+    [
+     "Catégorie B",
+     "Fonctions d'application et d'encadrement intermédiaire"
+    ],
+    [
+     "Catégorie C",
+     "Fonctions d'exécution"
+    ]
+   ]
   },
   {
    "id": "g-202",
@@ -12353,14 +12751,17 @@
    "niveau": 4,
    "famille": "M",
    "explication": "Les fonctions de Conception et de Direction 8.",
-   "type": "libre",
-   "question": "Quelles fonctions correspondent à la catégorie A ?",
-   "options": [
-    "Les fonctions de Conception et de Direction 8."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "qcm",
+   "question": "Quelles fonctions relèvent des agents de catégorie A dans la fonction publique territoriale ?",
+   "bonneReponse": 0,
+   "options": [
+    "Les fonctions de conception et de direction",
+    "Les fonctions d'application et d'exécution",
+    "Les fonctions d'encadrement intermédiaire",
+    "Les fonctions purement techniques d'exécution"
+   ]
   },
   {
    "id": "g-203",
@@ -12371,14 +12772,17 @@
    "niveau": 4,
    "famille": "M",
    "explication": "Les fonctions d'encadrement intermédiaire et/ou d'application 8.",
-   "type": "libre",
-   "question": "Quelles fonctions correspondent à la catégorie B ?",
-   "options": [
-    "Les fonctions d'encadrement intermédiaire et/ou d'application 8."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "qcm",
+   "question": "Quelles fonctions relèvent des agents de catégorie B dans la fonction publique territoriale ?",
+   "bonneReponse": 0,
+   "options": [
+    "Les fonctions d'encadrement intermédiaire et/ou d'application",
+    "Les fonctions de conception et de direction",
+    "Les fonctions d'exécution simple",
+    "Les fonctions de contrôle de légalité"
+   ]
   },
   {
    "id": "g-204",
@@ -12569,14 +12973,17 @@
    "niveau": 2,
    "famille": "M",
    "explication": "La Région 13.",
-   "type": "libre",
-   "question": "Qui a la charge des lycées (bâtiments et personnel TOS) ?",
-   "options": [
-    "La Région 13."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "qcm",
+   "question": "Qui a la charge des bâtiments et du personnel technique (TOS) des lycées ?",
+   "bonneReponse": 0,
+   "options": [
+    "La Région",
+    "Le Département",
+    "La Commune",
+    "L'État"
+   ]
   },
   {
    "id": "g-217",
@@ -12587,14 +12994,12 @@
    "niveau": 2,
    "famille": "M",
    "explication": "Le Département 13.",
-   "type": "libre",
-   "question": "Qui a la charge des collèges (bâtiments et personnel TOS) ?",
-   "options": [
-    "Le Département 13."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "vf",
+   "question": "Le Département a la charge des bâtiments et du personnel TOS des collèges.",
+   "justification": "La loi de décentralisation confie aux départements la construction, l'entretien et le fonctionnement des collèges, ainsi que la gestion du personnel technique, ouvrier et de service (TOS) qui y est affecté.",
+   "vrai": true
   },
   {
    "id": "g-218",
@@ -12605,14 +13010,17 @@
    "niveau": 2,
    "famille": "M",
    "explication": "La Commune 13.",
-   "type": "libre",
-   "question": "Qui a la charge de la construction et de l'entretien des écoles maternelles et primaires ?",
-   "options": [
-    "La Commune 13."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "qcm",
+   "question": "Qui a la charge de la construction et de l'entretien des écoles maternelles et primaires ?",
+   "bonneReponse": 0,
+   "options": [
+    "La Commune",
+    "Le Département",
+    "La Région",
+    "L'État"
+   ]
   },
   {
    "id": "g-219",
@@ -12623,14 +13031,12 @@
    "niveau": 2,
    "famille": "M",
    "explication": "La Région, qui définit la politique régionale et sa mise en œuvre 13.",
-   "type": "libre",
-   "question": "Qui s'occupe de la formation professionnelle régionale ?",
-   "options": [
-    "La Région, qui définit la politique régionale et sa mise en œuvre 13."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "vf",
+   "question": "La Région définit et met en œuvre la politique de formation professionnelle régionale.",
+   "justification": "Depuis les lois de décentralisation, la Région est chef de file de la formation professionnelle : elle définit la politique régionale en la matière et en assure la mise en œuvre auprès des acteurs concernés.",
+   "vrai": true
   },
   {
    "id": "g-220",
@@ -12641,14 +13047,17 @@
    "niveau": 3,
    "famille": "M",
    "explication": "Le Département 14.",
-   "type": "libre",
-   "question": "Quelle collectivité gère l'action sociale légale telle que l'Aide Sociale à l'Enfance (ASE) ou la PMI ?",
-   "options": [
-    "Le Département 14."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "qcm",
+   "question": "Quelle collectivité gère l'action sociale légale telle que l'Aide Sociale à l'Enfance (ASE) ou la PMI ?",
+   "bonneReponse": 0,
+   "options": [
+    "Le Département",
+    "La Région",
+    "La Commune",
+    "L'État"
+   ]
   },
   {
    "id": "g-221",
@@ -12659,14 +13068,12 @@
    "niveau": 3,
    "famille": "M",
    "explication": "Le Département 14.",
-   "type": "libre",
-   "question": "Qui verse le RSA, l'APA ou l'AAH ?",
-   "options": [
-    "Le Département 14."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "vf",
+   "question": "C'est le Département qui verse le RSA, l'APA ou l'AAH.",
+   "justification": "Le Département est chef de file de l'action sociale et verse les principales prestations sociales telles que le RSA et l'APA ; l'AAH, bien que versée par la CAF, relève d'un financement national relayé par les organismes sociaux.",
+   "vrai": true
   },
   {
    "id": "g-222",
@@ -12677,14 +13084,12 @@
    "niveau": 3,
    "famille": "M",
    "explication": "La Commune 14.",
-   "type": "libre",
-   "question": "Quelle collectivité a la compétence pour l'action sociale facultative via le CCAS ?",
-   "options": [
-    "La Commune 14."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "vf",
+   "question": "C'est la Commune qui a la compétence pour l'action sociale facultative via le Centre Communal d'Action Sociale (CCAS).",
+   "justification": "Le CCAS est un établissement public communal chargé de mettre en œuvre l'action sociale facultative de proximité décidée par la commune, en complément de l'action sociale légale des départements.",
+   "vrai": true
   },
   {
    "id": "g-223",
@@ -12695,14 +13100,17 @@
    "niveau": 3,
    "famille": "M",
    "explication": "La Commune 14.",
-   "type": "libre",
-   "question": "Qui élabore le Plan Local d'Urbanisme (PLU) et délivre les permis de construire ?",
-   "options": [
-    "La Commune 14."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "qcm",
+   "question": "Qui élabore le Plan Local d'Urbanisme (PLU) et délivre les permis de construire ?",
+   "bonneReponse": 0,
+   "options": [
+    "La Commune",
+    "Le Département",
+    "La Région",
+    "L'État"
+   ]
   },
   {
    "id": "g-224",
@@ -12713,14 +13121,20 @@
    "niveau": 3,
    "famille": "M",
    "explication": "La Commune 15.",
-   "type": "libre",
-   "question": "Qui gère le Programme Local de l'Habitat (PLH) ?",
-   "options": [
-    "La Commune 15."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "trous",
+   "question": "Complétez la phrase sur la compétence en matière d'habitat.",
+   "mots": [
+    "Commune",
+    "PLH"
+   ],
+   "texte": "La {1} élabore le Programme Local de l'Habitat ({2}) sur son territoire.",
+   "leurres": [
+    "Région",
+    "SCOT",
+    "PLU"
+   ]
   },
   {
    "id": "g-225",
@@ -12731,14 +13145,12 @@
    "niveau": 3,
    "famille": "M",
    "explication": "L'État 14.",
-   "type": "libre",
-   "question": "Qui s'occupe des OIN et des DTA (Opérations d'Intérêt National) ?",
-   "options": [
-    "L'État 14."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "vf",
+   "question": "Les Opérations d'Intérêt National (OIN) et les Directives Territoriales d'Aménagement (DTA) relèvent de l'État.",
+   "justification": "Les OIN et les DTA sont des outils d'aménagement du territoire à enjeu national, définis et pilotés par l'État, qui déroge alors aux compétences habituelles des communes en matière d'urbanisme.",
+   "vrai": true
   },
   {
    "id": "g-226",
@@ -12749,14 +13161,12 @@
    "niveau": 3,
    "famille": "M",
    "explication": "La gestion des espaces naturels 16.",
-   "type": "libre",
-   "question": "Quelle est la compétence partagée par toutes les collectivités et l'État en environnement ?",
-   "options": [
-    "La gestion des espaces naturels 16."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "vf",
+   "question": "La gestion des espaces naturels est une compétence partagée entre toutes les collectivités et l'État.",
+   "justification": "En matière d'environnement, la loi organise un régime de compétences partagées, notamment pour la gestion des espaces naturels, entre communes, départements, régions et l'État.",
+   "vrai": true
   },
   {
    "id": "g-227",
@@ -12767,14 +13177,17 @@
    "niveau": 3,
    "famille": "M",
    "explication": "Le Département 16.",
-   "type": "libre",
-   "question": "Qui élabore le plan départemental des déchets ?",
-   "options": [
-    "Le Département 16."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "qcm",
+   "question": "Qui élabore le plan départemental de gestion des déchets ?",
+   "bonneReponse": 0,
+   "options": [
+    "Le Département",
+    "La Région",
+    "La Commune",
+    "L'État"
+   ]
   },
   {
    "id": "g-228",
@@ -12785,14 +13198,17 @@
    "niveau": 4,
    "famille": "M",
    "explication": "La Commune 16.",
-   "type": "libre",
-   "question": "Qui a la charge de la collecte et du traitement des déchets ?",
-   "options": [
-    "La Commune 16."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "qcm",
+   "question": "Qui a la charge de la collecte et du traitement des déchets ménagers ?",
+   "bonneReponse": 0,
+   "options": [
+    "La Commune",
+    "Le Département",
+    "La Région",
+    "L'État"
+   ]
   },
   {
    "id": "g-229",
@@ -12803,14 +13219,12 @@
    "niveau": 4,
    "famille": "M",
    "explication": "La Commune 16.",
-   "type": "libre",
-   "question": "Qui est chargé de la distribution de l'eau et de l'assainissement ?",
-   "options": [
-    "La Commune 16."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "vf",
+   "question": "La distribution de l'eau potable et l'assainissement relèvent de la compétence communale.",
+   "justification": "L'eau et l'assainissement sont historiquement des compétences communales, souvent exercées via des syndicats intercommunaux ou transférées à un EPCI à fiscalité propre.",
+   "vrai": true
   },
   {
    "id": "g-230",
@@ -12821,14 +13235,17 @@
    "niveau": 4,
    "famille": "M",
    "explication": "La Région 17.",
-   "type": "libre",
-   "question": "Qui est en charge des transports ferroviaires régionaux ?",
-   "options": [
-    "La Région 17."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "qcm",
+   "question": "Qui est en charge de l'organisation des transports ferroviaires régionaux (TER) ?",
+   "bonneReponse": 0,
+   "options": [
+    "La Région",
+    "Le Département",
+    "La Commune",
+    "L'État"
+   ]
   },
   {
    "id": "g-231",
@@ -12839,14 +13256,12 @@
    "niveau": 4,
    "famille": "M",
    "explication": "Le Département 17.",
-   "type": "libre",
-   "question": "Qui a la charge historique des transports routiers et scolaires hors milieu urbain (selon le tableau) ?",
-   "options": [
-    "Le Département 17."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "vf",
+   "question": "Historiquement, le Département avait la charge des transports routiers et scolaires en dehors du milieu urbain.",
+   "justification": "Avant les réformes récentes qui ont transféré une partie de cette compétence aux régions, le département organisait traditionnellement les transports interurbains et scolaires hors des agglomérations.",
+   "vrai": true
   },
   {
    "id": "g-232",
@@ -12857,14 +13272,17 @@
    "niveau": 4,
    "famille": "M",
    "explication": "La Commune 17.",
-   "type": "libre",
-   "question": "Qui organise les transports urbains et scolaires en ville ?",
-   "options": [
-    "La Commune 17."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "qcm",
+   "question": "Qui organise les transports urbains et scolaires à l'intérieur d'une ville ?",
+   "bonneReponse": 0,
+   "options": [
+    "La Commune",
+    "Le Département",
+    "La Région",
+    "L'État"
+   ]
   },
   {
    "id": "g-233",
@@ -12875,14 +13293,17 @@
    "niveau": 4,
    "famille": "M",
    "explication": "Le Département 17.",
-   "type": "libre",
-   "question": "Qui entretient les voies départementales ?",
-   "options": [
-    "Le Département 17."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "qcm",
+   "question": "Qui entretient les voies départementales ?",
+   "bonneReponse": 0,
+   "options": [
+    "Le Département",
+    "La Région",
+    "La Commune",
+    "L'État"
+   ]
   },
   {
    "id": "g-234",
@@ -12893,14 +13314,17 @@
    "niveau": 4,
    "famille": "M",
    "explication": "La Commune 17.",
-   "type": "libre",
-   "question": "Qui entretient la voirie communale ?",
-   "options": [
-    "La Commune 17."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "qcm",
+   "question": "Qui entretient la voirie communale ?",
+   "bonneReponse": 0,
+   "options": [
+    "La Commune",
+    "Le Département",
+    "La Région",
+    "L'État"
+   ]
   },
   {
    "id": "g-235",
@@ -13747,14 +14171,19 @@
    "niveau": 1,
    "famille": "M",
    "explication": "On distingue les dépenses d'investissement et les dépenses de fonctionnement 7.",
-   "type": "libre",
-   "question": "Quelles sont les deux grandes catégories de dépenses pour une collectivité locale ?",
-   "options": [
-    "On distingue les dépenses d'investissement et les dépenses de fonctionnement 7."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "trous",
+   "question": "Complétez la phrase sur les catégories de dépenses locales.",
+   "mots": [
+    "investissement",
+    "fonctionnement"
+   ],
+   "texte": "Une collectivité locale distingue les dépenses d'{1} et les dépenses de {2}.",
+   "leurres": [
+    "équipement",
+    "personnel"
+   ]
   },
   {
    "id": "g-284",
@@ -13783,14 +14212,12 @@
    "niveau": 2,
    "famille": "M",
    "explication": "Il s'agit de tout ce qui permet aux services de fonctionner au quotidien 7.",
-   "type": "libre",
-   "question": "Comment définir une dépense de fonctionnement ?",
-   "options": [
-    "Il s'agit de tout ce qui permet aux services de fonctionner au quotidien 7."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "vf",
+   "question": "Une dépense de fonctionnement correspond à tout ce qui permet aux services de fonctionner au quotidien.",
+   "justification": "Les dépenses de fonctionnement regroupent les charges récurrentes nécessaires au fonctionnement courant des services (personnel, fournitures, entretien), par opposition aux dépenses d'investissement qui créent ou renouvellent un patrimoine durable.",
+   "vrai": true
   },
   {
    "id": "g-286",
@@ -13801,14 +14228,17 @@
    "niveau": 3,
    "famille": "M",
    "explication": "C'est le principe de la séparation des ordonnateurs et des comptables 8.",
-   "type": "libre",
-   "question": "Quel est le principe fondamental régissant l'exécution du budget ?",
-   "options": [
-    "C'est le principe de la séparation des ordonnateurs et des comptables 8."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "qcm",
+   "question": "Quel principe fondamental régit l'exécution du budget d'une collectivité ?",
+   "bonneReponse": 0,
+   "options": [
+    "La séparation des ordonnateurs et des comptables",
+    "Le principe de spécialité budgétaire",
+    "Le principe d'annualité budgétaire",
+    "Le principe d'unité de caisse"
+   ]
   },
   {
    "id": "g-287",
@@ -14123,14 +14553,24 @@
    "niveau": 4,
    "famille": "M",
    "explication": "Ce sont le critère matériel, le critère organique et le critère de moyens 15.",
-   "type": "libre",
-   "question": "Quels sont les trois critères fixés par la jurisprudence pour reconnaître un service public ?",
-   "options": [
-    "Ce sont le critère matériel, le critère organique et le critère de moyens 15."
-   ],
-   "bonneReponse": 0,
    "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "type": "assoc",
+   "question": "Associez chaque critère jurisprudentiel du service public à sa définition.",
+   "paires": [
+    [
+     "Critère organique",
+     "Lien avec une personne publique ou un contrôle de celle-ci"
+    ],
+    [
+     "Critère matériel",
+     "Exercice d'une activité d'intérêt général"
+    ],
+    [
+     "Critère de moyens",
+     "Utilisation de prérogatives de puissance publique"
+    ]
+   ]
   },
   {
    "id": "g-305",
