@@ -9424,12 +9424,15 @@
    "niveau": 1,
    "famille": "S",
    "explication": "La Région.",
-   "type": "libre",
+   "type": "qcm",
    "question": "Quelle collectivité a la charge des lycées (bâtiments, TOS) ?",
    "options": [
-    "La Région."
+    "L'État",
+    "Le Département",
+    "La Commune",
+    "La Région"
    ],
-   "bonneReponse": 0,
+   "bonneReponse": 3,
    "derniereVerification": null,
    "aVerifier": "Réponse issue du guide, non revérifiée."
   },
@@ -9442,12 +9445,15 @@
    "niveau": 1,
    "famille": "S",
    "explication": "Le Département.",
-   "type": "libre",
+   "type": "qcm",
    "question": "Quelle collectivité a la charge des collèges (bâtiments, TOS) ?",
    "options": [
-    "Le Département."
+    "L'État",
+    "La Commune",
+    "Le Département",
+    "La Région"
    ],
-   "bonneReponse": 0,
+   "bonneReponse": 2,
    "derniereVerification": null,
    "aVerifier": "Réponse issue du guide, non revérifiée."
   },
@@ -9460,12 +9466,15 @@
    "niveau": 1,
    "famille": "S",
    "explication": "La Commune.",
-   "type": "libre",
+   "type": "qcm",
    "question": "Quelle collectivité a la charge des écoles (bâtiments) ?",
    "options": [
-    "La Commune."
+    "Le Département",
+    "La Région",
+    "La Commune",
+    "L'EPCI (intercommunalité)"
    ],
-   "bonneReponse": 0,
+   "bonneReponse": 2,
    "derniereVerification": null,
    "aVerifier": "Réponse issue du guide, non revérifiée."
   },
@@ -9478,12 +9487,15 @@
    "niveau": 1,
    "famille": "S",
    "explication": "Le Département.",
-   "type": "libre",
+   "type": "qcm",
    "question": "Quelle collectivité gère l'action sociale (PMI, ASE, RSA, APA) ?",
    "options": [
-    "Le Département."
+    "L'EPCI (intercommunalité)",
+    "Le Département",
+    "L'État",
+    "La Région"
    ],
-   "bonneReponse": 0,
+   "bonneReponse": 1,
    "derniereVerification": null,
    "aVerifier": "Réponse issue du guide, non revérifiée."
   },
@@ -9496,12 +9508,15 @@
    "niveau": 1,
    "famille": "S",
    "explication": "La Région.",
-   "type": "libre",
+   "type": "qcm",
    "question": "Quelle collectivité gère le développement économique et les aides directes ?",
    "options": [
-    "La Région."
+    "Le Département",
+    "La Commune",
+    "L'EPCI (intercommunalité)",
+    "La Région"
    ],
-   "bonneReponse": 0,
+   "bonneReponse": 3,
    "derniereVerification": null,
    "aVerifier": "Réponse issue du guide, non revérifiée."
   },
@@ -9532,12 +9547,15 @@
    "niveau": 1,
    "famille": "S",
    "explication": "Le Département.",
-   "type": "libre",
+   "type": "qcm",
    "question": "Quelle collectivité a en charge les services d'incendie et de secours (SDIS) ?",
    "options": [
-    "Le Département."
+    "La Région",
+    "L'État",
+    "La Commune",
+    "Le Département"
    ],
-   "bonneReponse": 0,
+   "bonneReponse": 3,
    "derniereVerification": null,
    "aVerifier": "Réponse issue du guide, non revérifiée."
   },
@@ -10160,10 +10178,13 @@
    "niveau": 1,
    "famille": "S",
    "explication": "Type M.",
-   "type": "libre",
+   "type": "qcm",
    "question": "À quelle lettre correspond un magasin ou centre commercial ?",
    "options": [
-    "Type M."
+    "Type M",
+    "Type V",
+    "Type Y",
+    "Type X"
    ],
    "bonneReponse": 0,
    "derniereVerification": null,
@@ -10178,10 +10199,13 @@
    "niveau": 1,
    "famille": "S",
    "explication": "Type U.",
-   "type": "libre",
+   "type": "qcm",
    "question": "À quelle lettre correspond un établissement de soins (hôpital) ?",
    "options": [
-    "Type U."
+    "Type U",
+    "Type N",
+    "Type R",
+    "Type J"
    ],
    "bonneReponse": 0,
    "derniereVerification": null,
@@ -10196,12 +10220,15 @@
    "niveau": 1,
    "famille": "S",
    "explication": "Type R.",
-   "type": "libre",
+   "type": "qcm",
    "question": "À quelle lettre correspond un établissement d'enseignement scolaire ?",
    "options": [
-    "Type R."
+    "Type Y",
+    "Type P",
+    "Type J",
+    "Type R"
    ],
-   "bonneReponse": 0,
+   "bonneReponse": 3,
    "derniereVerification": null,
    "aVerifier": "Réponse issue du guide, non revérifiée."
   },
@@ -10214,12 +10241,15 @@
    "niveau": 1,
    "famille": "S",
    "explication": "Type N.",
-   "type": "libre",
+   "type": "qcm",
    "question": "À quelle lettre correspond un restaurant ou bar ?",
    "options": [
-    "Type N."
+    "Type P",
+    "Type L",
+    "Type W",
+    "Type N"
    ],
-   "bonneReponse": 0,
+   "bonneReponse": 3,
    "derniereVerification": null,
    "aVerifier": "Réponse issue du guide, non revérifiée."
   },
@@ -10232,12 +10262,15 @@
    "niveau": 1,
    "famille": "S",
    "explication": "Type O.",
-   "type": "libre",
+   "type": "qcm",
    "question": "À quelle lettre correspond un hôtel ?",
    "options": [
-    "Type O."
+    "Type U",
+    "Type L",
+    "Type X",
+    "Type O"
    ],
-   "bonneReponse": 0,
+   "bonneReponse": 3,
    "derniereVerification": null,
    "aVerifier": "Réponse issue du guide, non revérifiée."
   },
@@ -10250,12 +10283,15 @@
    "niveau": 1,
    "famille": "S",
    "explication": "Type J.",
-   "type": "libre",
+   "type": "qcm",
    "question": "À quelle lettre correspondent les structures pour personnes âgées ou handicapées ?",
    "options": [
-    "Type J."
+    "Type R",
+    "Type X",
+    "Type J",
+    "Type W"
    ],
-   "bonneReponse": 0,
+   "bonneReponse": 2,
    "derniereVerification": null,
    "aVerifier": "Réponse issue du guide, non revérifiée."
   },
