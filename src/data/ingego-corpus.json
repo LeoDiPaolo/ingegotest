@@ -9790,12 +9790,20 @@
     "unite": "%",
     "segments": [
      {
-      "l": "Titulaires",
-      "v": 77
+      "l": "Fonctionnaires titulaires",
+      "v": 68
      },
      {
-      "l": "Contractuels",
+      "l": "Agents contractuels",
       "v": 23
+     },
+     {
+      "l": "Militaires",
+      "v": 5
+     },
+     {
+      "l": "Autres catégories et contrats aidés",
+      "v": 4
      }
     ]
    },
