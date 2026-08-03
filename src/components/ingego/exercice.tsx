@@ -741,7 +741,7 @@ export function Exercice({
           )}
 
           {q.correction && (
-            <div className="rounded-xl border border-destructive/40 bg-destructive/10 p-3">
+            <div className="rounded-xl border border-border bg-elevated p-3">
               <p className="text-[0.68rem] tracking-[0.15em] text-muted-foreground uppercase">
                 Correction
               </p>
