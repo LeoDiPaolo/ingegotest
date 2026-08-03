@@ -8,7 +8,7 @@
   },
   "genere": "2026-07-30",
   "version": "2026-07",
-  "totalQuestions": 722,
+  "totalQuestions": 711,
   "schema": "Chaque question porte : id, axe (A1-A6), sousTheme, sujet (clé de progression par niveaux), niveau (1-3), famille (S stable / M mouvant / E enjeu), type, les champs propres au type, explication, et le cas échéant derniereVerification (AAAA-MM) et aVerifier."
  },
  "axes": [
@@ -9191,27 +9191,6 @@
    ]
   },
   {
-   "id": "g-005",
-   "axe": "A7",
-   "sousTheme": "Concours et statut de l'ingénieur",
-   "stIdx": 0,
-   "sujet": "g-0",
-   "niveau": 2,
-   "famille": "M",
-   "explication": "Les mères et pères d'au moins trois enfants effectivement élevés, ainsi que les sportifs de haut niveau inscrits sur la liste publiée l'année du concours par le ministère chargé des sports.\n\nTextes de référence : décret n° 2016-201 et décret n° 2016-206 du 26 février 2016 (statut particulier et concours des ingénieurs territoriaux). Vérifié en août 2026.",
-   "derniereVerification": "2026-08",
-   "aVerifier": null,
-   "type": "qcm",
-   "question": "Qui peut bénéficier d'une dispense de la condition de diplôme pour le concours externe d'ingénieur territorial ?",
-   "bonneReponse": 0,
-   "options": [
-    "Les mères et pères d'au moins trois enfants effectivement élevés, ainsi que les sportifs de haut niveau",
-    "Les agents ayant dix ans d'ancienneté dans la fonction publique",
-    "Les titulaires du baccalauréat scientifique avec mention",
-    "Les anciens élus locaux ayant exercé un mandat exécutif"
-   ]
-  },
-  {
    "id": "g-006",
    "axe": "A7",
    "sousTheme": "Concours et statut de l'ingénieur",
@@ -9312,7 +9291,7 @@
    "sujet": "g-0",
    "niveau": 3,
    "famille": "M",
-   "explication": "Dix échelons (de l'indice brut 444 à l'indice brut 821). Grille du décret n° 2016-203 : le grade d'ingénieur compte dix échelons ; l'avancement au choix vers ingénieur principal est possible dès le 4e échelon.\n\nTextes de référence : décret n° 2016-201 et décret n° 2016-206 du 26 février 2016 (statut particulier et concours des ingénieurs territoriaux). Vérifié en août 2026.",
+   "explication": "Le grade d'ingénieur territorial compte dix échelons, de l'indice brut 444 à l'indice brut 821, pour une durée de carrière de 27 ans. Texte de référence : décret n° 2016-201 du 26 février 2016 (statut particulier des ingénieurs territoriaux).",
    "derniereVerification": "2026-08",
    "aVerifier": null,
    "type": "qcm",
@@ -9333,7 +9312,7 @@
    "sujet": "g-0",
    "niveau": 3,
    "famille": "M",
-   "explication": "Neuf échelons (de l'indice brut 619 à l'indice brut 1015). Le grade d'ingénieur hors classe compte, lui, huit échelons dont un échelon spécial hors-échelle A.\n\nTextes de référence : décret n° 2016-201 et décret n° 2016-206 du 26 février 2016 (statut particulier et concours des ingénieurs territoriaux). Vérifié en août 2026.",
+   "explication": "Le grade d'ingénieur principal compte neuf échelons, de l'indice brut 619 à l'indice brut 1015 (hors anciens échelons provisoires, aujourd'hui éteints). Le grade d'ingénieur hors classe compte, lui, huit échelons dont un échelon spécial hors-échelle A. Texte de référence : décret n° 2016-201 du 26 février.",
    "derniereVerification": "2026-08",
    "aVerifier": null,
    "type": "trous",
@@ -9365,22 +9344,6 @@
     "Cinq : ingénierie, gestion technique et architecture ; infrastructures et réseaux ; prévention et gestion des risques ; urbanisme, aménagement et paysages ; informatique et systèmes d'information."
    ],
    "bonneReponse": 0,
-   "derniereVerification": "2026-08",
-   "aVerifier": null
-  },
-  {
-   "id": "g-014",
-   "axe": "A7",
-   "sousTheme": "Concours et statut de l'ingénieur",
-   "stIdx": 0,
-   "sujet": "g-0",
-   "niveau": 4,
-   "famille": "S",
-   "explication": "Non, le choix de la spécialité est définitif.\n\nTextes de référence : décret n° 2016-201 et décret n° 2016-206 du 26 février 2016 (statut particulier et concours des ingénieurs territoriaux). Vérifié en août 2026.",
-   "type": "vf",
-   "question": "Un candidat peut-il changer de spécialité après la clôture des inscriptions ?",
-   "vrai": false,
-   "justification": "le choix de la spécialité est définitif.",
    "derniereVerification": "2026-08",
    "aVerifier": null
   },
@@ -9623,22 +9586,6 @@
    "aVerifier": "Donnée non retrouvée dans les textes officiels : à confirmer avant l'écrit."
   },
   {
-   "id": "g-026",
-   "axe": "A7",
-   "sousTheme": "Concours et statut de l'ingénieur",
-   "stIdx": 0,
-   "sujet": "g-0",
-   "niveau": 6,
-   "famille": "S",
-   "explication": "Non, l'utilisation de tout document est interdite.\n\nTextes de référence : décret n° 2016-201 et décret n° 2016-206 du 26 février 2016 (statut particulier et concours des ingénieurs territoriaux). Vérifié en août 2026.",
-   "type": "vf",
-   "question": "Est-il permis d'utiliser son CV ou des notes lors de l'entretien oral ?",
-   "vrai": false,
-   "justification": "l'utilisation de tout document est interdite.",
-   "derniereVerification": "2026-08",
-   "aVerifier": null
-  },
-  {
    "id": "g-027",
    "axe": "A7",
    "sousTheme": "Concours et statut de l'ingénieur",
@@ -9700,18 +9647,18 @@
     "segments": [
      {
       "l": "Titulaires",
-      "v": 80
+      "v": 77
      },
      {
       "l": "Contractuels",
-      "v": 20
+      "v": 23
      }
     ]
    },
    "bonneCible": 1,
-   "explication": "Les agents contractuels représentent environ 20 % des effectifs de la fonction publique.",
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "explication": "Les agents contractuels représentent environ 23 % des effectifs de la fonction publique tous versants confondus fin 2023 (26 % dans la seule fonction publique territoriale), une part en forte progression depuis le début des années.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "g-030",
@@ -9758,13 +9705,13 @@
    "sujet": "g-1",
    "niveau": 2,
    "famille": "S",
-   "explication": "Les droits et obligations des fonctionnaires (dispositions générales).",
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "explication": "Les droits et obligations des fonctionnaires sont désormais codifiés au livre Ier du Code général de la fonction publique (CGFP), entré en vigueur le 1er mars 2022, qui a abrogé la loi du 13 juillet.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null,
    "type": "vf",
    "question": "La loi du 13 juillet 1983 définit les droits et obligations des fonctionnaires, dans ses dispositions générales.",
-   "justification": "Cette loi, dite loi Le Pors, constitue le titre I du statut général de la fonction publique et fixe les droits et obligations communs à tous les fonctionnaires des trois versants.",
-   "vrai": true
+   "justification": "La loi du 13 juillet 1983, dite loi Le Pors, a été abrogée : ses dispositions relatives aux droits et obligations des fonctionnaires sont aujourd'hui codifiées au livre Ier du Code général de la fonction publique, entré en vigueur le 1er mars.",
+   "vrai": false
   },
   {
    "id": "g-032",
@@ -10125,7 +10072,7 @@
    "sujet": "g-2",
    "niveau": 2,
    "famille": "S",
-   "explication": "Le Département.",
+   "explication": "Le Département a la charge des services d'incendie et de secours, à travers le SDIS, établissement public autonome présidé par un élu et financé majoritairement par le département et les communes ou EPCI.",
    "type": "qcm",
    "question": "Quelle collectivité a en charge les services d'incendie et de secours (SDIS) ?",
    "options": [
@@ -10135,8 +10082,8 @@
     "Le Département"
    ],
    "bonneReponse": 3,
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "g-046",
@@ -10379,20 +10326,20 @@
    "sujet": "g-3",
    "niveau": 2,
    "famille": "S",
-   "explication": "L'accessibilité, la transparence, la laïcité.",
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "explication": "La neutralité du service public repose sur l'égalité de traitement des usagers, l'impartialité et la laïcité.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null,
    "type": "trous",
    "question": "Complétez les éléments constitutifs de la neutralité du service public.",
    "mots": [
-    "accessibilité",
-    "transparence",
+    "égalité",
+    "impartialité",
     "laïcité"
    ],
-   "texte": "La neutralité du service public repose sur l'{1}, la {2} et la {3}.",
+   "texte": "La neutralité du service public repose sur l'{1}, l'{2} et la {3}.",
    "leurres": [
+    "accessibilité",
     "gratuité",
-    "égalité",
     "continuité"
    ]
   },
@@ -10471,9 +10418,9 @@
     "subventions",
     "dons"
    ],
-   "explication": "Un contrat écrit passé à titre onéreux pour répondre à un besoin en matière de travaux, fournitures ou services.",
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "explication": "Un marché public est un contrat conclu à titre onéreux par un acheteur avec un ou plusieurs opérateurs économiques, pour répondre à ses besoins en matière de travaux, de fournitures ou de services (Code de la commande publique).",
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "g-061",
@@ -10503,9 +10450,9 @@
      "Loi NOTRe réorganisant les compétences territoriales"
     ]
    ],
-   "explication": "La loi MOP du 12 juillet 1985 posait historiquement le statut de la maîtrise d'ouvrage publique, avant les lois Sapin (1993), MURCEF (2001) et NOTRe (2015).",
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "explication": "La loi MOP du 12 juillet 1985 posait historiquement le statut de la maîtrise d'ouvrage publique, avant les lois Sapin (1993), MURCEF (2001) et NOTRe (2015). Elle a depuis été abrogée et codifiée, à compter du 1er avril 2019, dans le Code de la commande publique (2e partie, livre IV).",
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "g-062",
@@ -11215,10 +11162,10 @@
    "type": "vf",
    "question": "Si le maire autorise l'ouverture d'un ERP malgré un avis défavorable de la commission de sécurité, il n'engage aucune responsabilité tant que le bâtiment ne s'effondre pas.",
    "vrai": false,
-   "justification": "Le maire engage sa responsabilité civile et pénale en cas de sinistre s'il autorise l'ouverture d'un établissement recevant du public malgré un avis défavorable.",
-   "explication": "Le maire engage sa responsabilité civile et pénale en cas de sinistre.",
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "justification": "En autorisant l'ouverture d'un établissement recevant du public malgré un avis défavorable de la commission de sécurité, le maire engage sa responsabilité pénale à titre personnel, tandis que la commune engage sa responsabilité administrative en cas de sinistre.",
+   "explication": "Le maire engage sa responsabilité pénale à titre personnel, et la commune sa responsabilité administrative, en cas de sinistre survenu dans un établissement dont l'ouverture a été autorisée malgré un avis défavorable de la commission de sécurité.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "g-091",
@@ -11960,31 +11907,15 @@
    "sujet": "g-0",
    "niveau": 10,
    "famille": "S",
-   "explication": "Elle est fixée par le statut particulier en fonction des quotas, nécessitant une forte expérience en catégorie B.",
+   "explication": "Un recrutement au titre de la promotion interne pour deux recrutements opérés par concours, mutation ou détachement, selon l'article 12 du décret n° 2016-201 du 26 février.",
    "type": "libre",
    "question": "Pour les ingénieurs territoriaux, quelle est la proportion de places pour la promotion interne (examen) ?",
    "options": [
-    "Elle est fixée par le statut particulier en fonction des quotas, nécessitant une forte expérience en catégorie B."
+    "Le ratio de promotion interne est fixé par l'article 12 du décret n° 2016-201 : un recrutement au titre de la promotion interne pour deux recrutements opérés par concours, mutation ou détachement."
    ],
    "bonneReponse": 0,
-   "derniereVerification": null,
-   "aVerifier": "Donnée non retrouvée dans les textes officiels : à confirmer avant l'écrit."
-  },
-  {
-   "id": "g-127",
-   "axe": "A7",
-   "sousTheme": "Concours et statut de l'ingénieur",
-   "stIdx": 0,
-   "sujet": "g-0",
-   "niveau": 6,
-   "famille": "M",
-   "type": "vf",
-   "question": "L'exposé de l'examen professionnel interne (alinéas 1 et 2) dure au maximum 10 minutes.",
-   "vrai": true,
-   "justification": "La durée de l'exposé est fixée à 10 minutes maximum. Il est suivi d'un entretien avec le jury permettant d'apprécier les compétences du candidat.",
-   "explication": "10 minutes maximum.",
-   "derniereVerification": null,
-   "aVerifier": "Donnée non retrouvée dans les textes officiels : à confirmer avant l'écrit."
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "g-128",
@@ -12059,7 +11990,7 @@
    "texte": "Une demande d'équivalence de diplôme consiste à saisir la {1} du {2} lorsque le diplôme du candidat n'est pas listé, ou au titre de la {3}.",
    "mots": [
     "commission d'équivalence",
-    "CNFPT",
+    "CDG",
     "reconnaissance de l'expérience professionnelle"
    ],
    "leurres": [
@@ -12067,7 +11998,7 @@
     "validation des acquis universitaires",
     "commission de déontologie"
    ],
-   "explication": "La RED permet de saisir la commission d'équivalence du CNFPT pour un diplôme non listé ou au titre de l'expérience professionnelle (REP), sur la base des décrets n° 2016-201 et 2016-206 du 26 février 2016.",
+   "explication": "La demande d'équivalence de diplôme (RED) consiste à saisir la commission d'équivalence du centre de gestion (CDG), autorité organisatrice du concours, pour un diplôme non listé ou au titre de la reconnaissance de l'expérience professionnelle (REP).",
    "derniereVerification": "2026-08",
    "aVerifier": null
   },
@@ -12111,11 +12042,11 @@
    "sujet": "g-0",
    "niveau": 8,
    "famille": "S",
-   "explication": "Aucun temps de préparation pour l'entretien obligatoire ; l'épreuve facultative de langue vivante du concours externe prévoit 30 minutes de préparation pour 15 minutes de passage.\n\nTextes de référence : décret n° 2016-201 et décret n° 2016-206 du 26 février 2016 (statut particulier et concours des ingénieurs territoriaux). Vérifié en août 2026.",
+   "explication": "Aucun temps de préparation n'est prévu pour l'entretien obligatoire, qui débute directement ; seule l'épreuve facultative de langue vivante du concours externe prévoit 30 minutes de préparation pour 15 minutes de passage.",
    "type": "libre",
    "question": "Quels sont les temps de préparation pour les épreuves du concours ?",
    "options": [
-    "Aucun temps de préparation pour l'entretien obligatoire ; l'épreuve facultative de langue vivante du concours externe prévoit 30 minutes de préparation pour 15 minutes de passage."
+    "Aucun temps de préparation n'est prévu pour l'entretien avec le jury, qui débute directement ; seule l'épreuve facultative de langue vivante du concours externe prévoit un temps de préparation, de 30 minutes pour 15 minutes de passage."
    ],
    "bonneReponse": 0,
    "derniereVerification": "2026-08",
@@ -12134,42 +12065,6 @@
    "question": "Comment est pénalisé un candidat qui signe sa note avec son vrai nom ?",
    "options": [
     "L'anonymat est rompu, la copie est annulée (note de 0)."
-   ],
-   "bonneReponse": 0,
-   "derniereVerification": null,
-   "aVerifier": "Donnée non retrouvée dans les textes officiels : à confirmer avant l'écrit."
-  },
-  {
-   "id": "g-135",
-   "axe": "A7",
-   "sousTheme": "Concours et statut de l'ingénieur",
-   "stIdx": 0,
-   "sujet": "g-0",
-   "niveau": 8,
-   "famille": "M",
-   "explication": "Environ 37 ans.",
-   "type": "libre",
-   "question": "Quelle était la moyenne d'âge des candidats admissibles en externe en 2023 ?",
-   "options": [
-    "Environ 37 ans."
-   ],
-   "bonneReponse": 0,
-   "derniereVerification": null,
-   "aVerifier": "Donnée non retrouvée dans les textes officiels : à confirmer avant l'écrit."
-  },
-  {
-   "id": "g-136",
-   "axe": "A7",
-   "sousTheme": "Concours et statut de l'ingénieur",
-   "stIdx": 0,
-   "sujet": "g-0",
-   "niveau": 8,
-   "famille": "S",
-   "explication": "Collecter des données à des fins d'études statistiques anonymes sur l'égalité des chances et la diversité.",
-   "type": "libre",
-   "question": "Que permet le dispositif \"Base concours\" de la SDessi ?",
-   "options": [
-    "Collecter des données à des fins d'études statistiques anonymes sur l'égalité des chances et la diversité."
    ],
    "bonneReponse": 0,
    "derniereVerification": null,
@@ -12328,15 +12223,15 @@
    "sujet": "g-8",
    "niveau": 9,
    "famille": "S",
-   "explication": "Une Directive Territoriale d'Aménagement.",
+   "explication": "Une Directive Territoriale d'Aménagement (DTA). Depuis la loi Grenelle II de 2010, les DTA existantes subsistent sous forme de DTADD (Directives Territoriales d'Aménagement et de Développement Durables), mais aucune nouvelle DTA ne peut être créée et elles ne sont plus opposables aux documents d'urbanisme.",
    "type": "libre",
    "question": "Qu'est-ce qu'une DTA ?",
    "options": [
-    "Une Directive Territoriale d'Aménagement."
+    "Une Directive Territoriale d'Aménagement, devenue Directive Territoriale d'Aménagement et de Développement Durables (DTADD) depuis la loi Grenelle II de 2010, et qui n'est plus opposable aux documents d'urbanisme."
    ],
    "bonneReponse": 0,
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "g-146",
@@ -12380,13 +12275,13 @@
    "sujet": "g-7",
    "niveau": 4,
    "famille": "S",
-   "explication": "Non, sauf en cas de requalification judiciaire s'il cache un marché public de travaux (détournement).",
    "type": "vf",
    "question": "Un contrat de Bail Emphytéotique Administratif (BEA) est-il régi par la loi MOP ?",
    "vrai": false,
-   "justification": "sauf en cas de requalification judiciaire s'il cache un marché public de travaux (détournement).",
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "justification": "Non, sauf en cas de requalification judiciaire s'il dissimule en réalité un marché public de travaux (détournement). La loi MOP est aujourd'hui codifiée au Code de la commande publique depuis 2019.",
+   "explication": "Non, le BEA n'est pas régi par la loi MOP, sauf requalification judiciaire s'il dissimule un marché public de travaux. La loi MOP est codifiée depuis 2019 au Code de la commande publique.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "g-149",
@@ -12541,7 +12436,7 @@
    "sujet": "g-1",
    "niveau": 4,
    "famille": "M",
-   "explication": "Le mécanisme de la déconcentration repose sur l'unité 1.",
+   "explication": "Le mécanisme de la déconcentration repose sur l'unité.",
    "derniereVerification": null,
    "aVerifier": "Réponse issue du guide, non revérifiée.",
    "type": "assoc",
@@ -12573,7 +12468,7 @@
    "sujet": "g-1",
    "niveau": 4,
    "famille": "M",
-   "explication": "Le mécanisme de la décentralisation repose sur la diversité 1.",
+   "explication": "Le mécanisme de la décentralisation repose sur la diversité.",
    "derniereVerification": null,
    "aVerifier": "Réponse issue du guide, non revérifiée.",
    "type": "assoc",
@@ -12605,7 +12500,7 @@
    "sujet": "g-1",
    "niveau": 4,
    "famille": "M",
-   "explication": "Le pouvoir s'exerce par le biais d'une tutelle hiérarchisée 1.",
+   "explication": "Le pouvoir s'exerce par le biais d'une tutelle hiérarchisée.",
    "derniereVerification": null,
    "aVerifier": "Réponse issue du guide, non revérifiée.",
    "type": "trous",
@@ -12630,7 +12525,7 @@
    "sujet": "g-1",
    "niveau": 4,
    "famille": "M",
-   "explication": "Le pouvoir s'exerce via le principe de libre administration 1.",
+   "explication": "Le pouvoir s'exerce via le principe de libre administration.",
    "derniereVerification": null,
    "aVerifier": "Réponse issue du guide, non revérifiée.",
    "type": "trous",
@@ -12655,7 +12550,7 @@
    "sujet": "g-1",
    "niveau": 4,
    "famille": "M",
-   "explication": "Ce sont des compétences déléguées par l'État 1.",
+   "explication": "Ce sont des compétences déléguées par l'État.",
    "derniereVerification": null,
    "aVerifier": "Réponse issue du guide, non revérifiée.",
    "type": "ordre",
@@ -12749,7 +12644,7 @@
     "choisies",
     "révoquées"
    ],
-   "explication": "L'autorité est détenue par du personnel nommé par l'État 1.",
+   "explication": "L'autorité est détenue par du personnel nommé par l'État.",
    "derniereVerification": null,
    "aVerifier": "Réponse issue du guide, non revérifiée."
   },
@@ -12797,7 +12692,7 @@
      "Services communs entre collectivités"
     ]
    ],
-   "explication": "C'est la fonction publique de l'État 1.",
+   "explication": "C'est la fonction publique de l'État.",
    "derniereVerification": null,
    "aVerifier": "Réponse issue du guide, non revérifiée."
   },
@@ -12910,7 +12805,7 @@
    "sujet": "g-3",
    "niveau": 3,
    "famille": "M",
-   "explication": "La gestion directe (avec contrôle) et la gestion déléguée (avec autonomie) 2.",
+   "explication": "La gestion directe (avec contrôle) et la gestion déléguée (avec autonomie).",
    "derniereVerification": null,
    "aVerifier": "Réponse issue du guide, non revérifiée.",
    "type": "qcm",
@@ -12933,11 +12828,11 @@
    "famille": "M",
    "type": "vf",
    "question": "Le principe de mutabilité du service public peut se confronter à la liberté d'entreprendre, comme l'illustre un arrêt du Conseil d'État du 16 novembre 1956.",
-   "vrai": true,
-   "justification": "Le service public, dans son fonctionnement ou sa création, peut entrer en tension avec la liberté d'entreprendre des acteurs privés, question tranchée notamment par la jurisprudence du Conseil d'État.",
-   "explication": "À la liberté d'entreprendre, illustrée par l'arrêt du 16 novembre 1956 2.",
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "vrai": false,
+   "justification": "L'attribution est erronée : l'arrêt du 16 novembre 1956 (CE Ass., Union syndicale des industries aéronautiques) fixe les critères de distinction entre SPA et SPIC, et non la confrontation entre mutabilité du service public et liberté d'entreprendre. Cette dernière question a été posée par CE, 30 mai 1930, Chambre syndicale du commerce en détail de Nevers.",
+   "explication": "L'arrêt du 16 novembre 1956 porte en réalité sur la distinction SPA/SPIC. C'est l'arrêt CE, 30 mai 1930, Chambre syndicale du commerce en détail de Nevers, qui pose l'articulation entre liberté du commerce et de l'industrie et interventionnisme public.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "g-172",
@@ -12947,7 +12842,7 @@
    "sujet": "g-3",
    "niveau": 3,
    "famille": "M",
-   "explication": "L'égalité, la continuité et la mutabilité (auxquels s'ajoute la neutralité) 2, 3.",
+   "explication": "L'égalité, la continuité et la mutabilité (auxquels s'ajoute la neutralité).",
    "derniereVerification": null,
    "aVerifier": "Réponse issue du guide, non revérifiée.",
    "type": "trous",
@@ -13032,13 +12927,13 @@
    "sujet": "g-3",
    "niveau": 4,
    "famille": "M",
-   "explication": "C'est l'arrêt Bonjean du Conseil d'État du 13 juin 1961 3.",
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée.",
    "type": "vf",
    "question": "L'arrêt Bonjean rendu par le Conseil d'État le 13 juin 1961 illustre le principe de continuité du service public.",
-   "justification": "Cet arrêt du Conseil d'État consacre l'obligation de continuité qui s'impose aux services publics. Il interdit toute interruption injustifiée du service, sauf hypothèses limitativement prévues comme le droit de grève encadré.",
-   "vrai": true
+   "vrai": false,
+   "justification": "L'arrêt Bonjean, qui consacre l'obligation de continuité du service public, a en réalité été rendu par le Conseil d'État le 13 juin 1980, et non en 1961 (la confusion vient probablement de l'arrêt Vannier du 27 janvier 1961, relatif à la mutabilité).",
+   "explication": "C'est l'arrêt Bonjean, Conseil d'État, 13 juin 1980, qui illustre le principe de continuité du service public.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "g-177",
@@ -13048,7 +12943,7 @@
    "sujet": "g-3",
    "niveau": 4,
    "famille": "M",
-   "explication": "L'application du service doit s'adapter à la demande et aux potentialités techniques et administratives 3.",
+   "explication": "L'application du service doit s'adapter à la demande et aux potentialités techniques et administratives.",
    "derniereVerification": null,
    "aVerifier": "Réponse issue du guide, non revérifiée.",
    "type": "vf",
@@ -13068,7 +12963,7 @@
    "question": "D'après l'arrêt du Conseil d'État du 27 janvier 1961, il n'existe aucun obstacle juridique à la mutabilité du service public.",
    "vrai": true,
    "justification": "Le Conseil d'État a confirmé qu'aucun obstacle juridique ne s'oppose aux changements affectant l'organisation ou le fonctionnement du service public, conformément au principe de mutabilité (ou adaptabilité).",
-   "explication": "L'arrêt du Conseil d'État du 27 janvier 1961 précise qu'il n'y a pas d'obstacles juridiques aux changements 3.",
+   "explication": "L'arrêt du Conseil d'État du 27 janvier 1961 précise qu'il n'y a pas d'obstacles juridiques aux changements.",
    "derniereVerification": null,
    "aVerifier": "Réponse issue du guide, non revérifiée."
   },
@@ -13080,22 +12975,22 @@
    "sujet": "g-3",
    "niveau": 4,
    "famille": "M",
-   "explication": "L'accessibilité, la transparence (Art 15 de la DDHC) et la laïcité 4.",
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée.",
    "type": "trous",
    "question": "Complète les trois éléments du principe de neutralité du service public.",
+   "texte": "Le principe de neutralité impose à l'administration l'{1} des usagers, l'{2} et la {3}.",
    "mots": [
-    "accessibilité",
-    "transparence",
+    "égalité de traitement",
+    "impartialité",
     "laïcité"
    ],
-   "texte": "Le principe de neutralité recouvre l'{1}, la {2}, fondée sur l'article 15 de la DDHC, et la {3}.",
    "leurres": [
-    "confidentialité",
-    "gratuité",
-    "impartialité"
-   ]
+    "accessibilité",
+    "transparence",
+    "gratuité"
+   ],
+   "explication": "La neutralité du service public impose à l'administration l'égalité de traitement des usagers, l'impartialité et la laïcité.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "g-180",
@@ -13107,20 +13002,20 @@
    "famille": "M",
    "type": "trous",
    "question": "Complétez la définition d'un marché public.",
-   "texte": "Un marché public est un contrat {1} passé à titre {2} entre un pouvoir adjudicateur et un opérateur économique afin de répondre à un besoin.",
+   "texte": "Un marché public est un contrat conclu à titre {1} par un acheteur (pouvoir adjudicateur ou entité adjudicatrice) avec un ou plusieurs opérateurs {2} afin de répondre à un besoin.",
    "mots": [
-    "écrit",
-    "onéreux"
+    "onéreux",
+    "économiques"
    ],
    "leurres": [
-    "verbal",
     "gratuit",
-    "tacite",
-    "amiable"
+    "publics",
+    "amiable",
+    "privés"
    ],
-   "explication": "Les marchés publics sont des contrats écrits passés à titre onéreux entre des pouvoirs adjudicateurs et des opérateurs économiques pour répondre à un besoin en travaux, fournitures ou services.",
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "explication": "Un marché public est un contrat conclu à titre onéreux par un acheteur (pouvoir adjudicateur ou entité adjudicatrice) avec un ou plusieurs opérateurs économiques, pour répondre à ses besoins. Le caractère écrit n'est plus un élément de la définition légale.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "g-181",
@@ -13132,12 +13027,12 @@
    "famille": "M",
    "type": "trous",
    "question": "Complétez la phrase relative aux acheteurs publics.",
-   "texte": "Un marché public peut être passé par des personnes morales de droit {1} et {2}, comme l'État, les collectivités, les {3} ou les {4}.",
+   "texte": "Un marché public peut être passé par des {1}, c'est-à-dire les {2} (État, collectivités, {3}, organismes de droit privé poursuivant une mission d'intérêt général) et les entités {4}.",
    "mots": [
-    "public",
-    "privé",
+    "acheteurs",
+    "pouvoirs adjudicateurs",
     "EPCI",
-    "EPIC"
+    "adjudicatrices"
    ],
    "leurres": [
     "SEM",
@@ -13145,9 +13040,9 @@
     "associations loi 1901",
     "fondations"
    ],
-   "explication": "Les personnes morales de Droit Public et Privé, comme l'État, les collectivités, les EPCI ou les EPIC 4.",
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "explication": "Un marché public est passé par des acheteurs, c'est-à-dire les pouvoirs adjudicateurs (État, collectivités, EPCI, ou organismes de droit privé poursuivant une mission d'intérêt général) et les entités adjudicatrices. Seules certaines personnes privées, remplissant des conditions précises, entrent dans cette catégorie.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "g-182",
@@ -13183,7 +13078,7 @@
    "sujet": "g-5",
    "niveau": 3,
    "famille": "M",
-   "explication": "Parce qu'il est à la fois le chef de l'administration communale et le représentant de l'État 6.",
+   "explication": "Parce qu'il est à la fois le chef de l'administration communale et le représentant de l'État.",
    "derniereVerification": null,
    "aVerifier": "Réponse issue du guide, non revérifiée.",
    "type": "vf",
@@ -13199,7 +13094,7 @@
    "sujet": "g-5",
    "niveau": 3,
    "famille": "M",
-   "explication": "Ses compétences propres, ses compétences déléguées et ses pouvoirs de police administrative 6.",
+   "explication": "Ses compétences propres, ses compétences déléguées et ses pouvoirs de police administrative.",
    "derniereVerification": null,
    "aVerifier": "Réponse issue du guide, non revérifiée.",
    "type": "trous",
@@ -13224,9 +13119,6 @@
    "sujet": "g-5",
    "niveau": 4,
    "famille": "M",
-   "explication": "Le bon ordre, la sécurité, la salubrité, la tranquillité et la dignité humaine 6.",
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée.",
    "type": "tri",
    "question": "Classe chaque notion selon qu'elle constitue ou non l'un des piliers de la police administrative générale du maire.",
    "colonnes": [
@@ -13239,6 +13131,10 @@
      0
     ],
     [
+     "La sûreté",
+     0
+    ],
+    [
      "La sécurité",
      0
     ],
@@ -13247,12 +13143,12 @@
      0
     ],
     [
-     "La tranquillité",
+     "La dignité humaine",
      0
     ],
     [
-     "La dignité humaine",
-     0
+     "La tranquillité",
+     1
     ],
     [
      "L'hygiène alimentaire",
@@ -13266,7 +13162,10 @@
      "La solidarité",
      1
     ]
-   ]
+   ],
+   "explication": "L'article L2212-2 du CGCT vise le bon ordre, la sûreté, la sécurité et la salubrité publiques (la tranquillité n'étant qu'une déclinaison du bon ordre, non un pilier autonome) ; la jurisprudence (CE Ass., 27 octobre 1995, Commune de Morsang-sur-Orge) y a ajouté le respect de la dignité de la personne humaine.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "g-187",
@@ -13283,8 +13182,8 @@
     "unite": "millions de personnes",
     "barres": [
      {
-      "l": "5,4 millions",
-      "v": 5.4
+      "l": "5,80 millions",
+      "v": 5.8
      },
      {
       "l": "3,2 millions",
@@ -13301,9 +13200,9 @@
     ]
    },
    "bonneBarre": 0,
-   "explication": "5,4 millions de personnes, soit 1 actif sur 5 en France, travaillent dans la fonction publique.",
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "explication": "5,80 millions d'agents au 31 décembre 2023, soit environ 1 emploi sur 5 en France (19,9 % de l'emploi total), travaillent dans la fonction publique.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "g-188",
@@ -13313,18 +13212,18 @@
    "sujet": "g-4",
    "niveau": 2,
    "famille": "M",
-   "explication": "2,5 millions d'agents 7.",
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée.",
    "type": "qcm",
    "question": "Combien d'agents travaillent dans la Fonction Publique d'État ?",
    "bonneReponse": 0,
    "options": [
-    "2,5 millions d'agents",
-    "1,9 million d'agents",
-    "1,2 million d'agents",
+    "2,57 millions d'agents",
+    "1,99 million d'agents",
+    "1,24 million d'agents",
     "3,1 millions d'agents"
-   ]
+   ],
+   "explication": "La Fonction Publique d'État compte 2,57 millions d'agents, soit 44 % de l'emploi public.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "g-189",
@@ -13334,18 +13233,18 @@
    "sujet": "g-4",
    "niveau": 2,
    "famille": "M",
-   "explication": "1,9 million d'agents 7.",
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée.",
    "type": "qcm",
    "question": "Combien d'agents travaillent dans la Fonction Publique Territoriale ?",
    "bonneReponse": 0,
    "options": [
-    "1,9 million d'agents",
-    "2,5 millions d'agents",
-    "1,2 million d'agents",
+    "1,99 million d'agents",
+    "2,57 millions d'agents",
+    "1,24 million d'agents",
     "2,1 millions d'agents"
-   ]
+   ],
+   "explication": "La Fonction Publique Territoriale compte 1,99 million d'agents, soit 34 % de l'emploi public.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "g-190",
@@ -13355,18 +13254,18 @@
    "sujet": "g-4",
    "niveau": 2,
    "famille": "M",
-   "explication": "1,2 million d'agents 7.",
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée.",
    "type": "qcm",
    "question": "Combien d'agents travaillent dans la Fonction Publique Hospitalière ?",
    "bonneReponse": 0,
    "options": [
-    "1,2 million d'agents",
-    "1,9 million d'agents",
-    "2,5 millions d'agents",
+    "1,24 million d'agents",
+    "1,99 million d'agents",
+    "2,57 millions d'agents",
     "0,8 million d'agents"
-   ]
+   ],
+   "explication": "La Fonction Publique Hospitalière compte 1,24 million d'agents, soit 21 % de l'emploi public.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "g-191",
@@ -13376,13 +13275,13 @@
    "sujet": "g-4",
    "niveau": 3,
    "famille": "M",
-   "explication": "Les contractuels représentent 20 % des effectifs 7.",
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée.",
    "type": "vf",
    "question": "Les agents contractuels représentent environ 20 % des effectifs de la fonction publique.",
-   "justification": "Aux côtés des fonctionnaires titulaires, les agents contractuels constituent une part significative des effectifs, estimée à environ un cinquième du total des agents publics.",
-   "vrai": true
+   "vrai": false,
+   "justification": "Le chiffre est aujourd'hui dépassé : les agents contractuels représentent environ 23 % des effectifs tous versants confondus, et jusqu'à 26 % dans la seule fonction publique territoriale, avec une progression de +4,9 % sur la seule année 2023.",
+   "explication": "Les agents contractuels représentent environ 23 % des effectifs de la fonction publique (26 % dans la seule FPT), et non 20 %.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "g-192",
@@ -13392,7 +13291,7 @@
    "sujet": "g-4",
    "niveau": 3,
    "famille": "M",
-   "explication": "Il faut être de nationalité française ou ressortissant de l'Union européenne 7.",
+   "explication": "Il faut être de nationalité française ou ressortissant de l'Union européenne.",
    "derniereVerification": null,
    "aVerifier": "Réponse issue du guide, non revérifiée.",
    "type": "vf",
@@ -13452,7 +13351,7 @@
    "sujet": "g-4",
    "niveau": 3,
    "famille": "M",
-   "explication": "Il faut avoir un casier judiciaire n°2 sans mentions incompatibles avec les fonctions exercées 8.",
+   "explication": "Il faut avoir un casier judiciaire n°2 sans mentions incompatibles avec les fonctions exercées.",
    "derniereVerification": null,
    "aVerifier": "Réponse issue du guide, non revérifiée.",
    "type": "qcm",
@@ -13473,13 +13372,13 @@
    "sujet": "g-4",
    "niveau": 3,
    "famille": "M",
-   "explication": "Il faut être en position régulière au regard du service national 8.",
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée.",
    "type": "vf",
    "question": "Pour accéder à la fonction publique, il faut être en position régulière au regard des obligations du service national.",
-   "justification": "Cette condition, héritée de l'ancien service militaire obligatoire, subsiste sous la forme du recensement et de la participation à la journée défense et citoyenneté.",
-   "vrai": true
+   "vrai": true,
+   "justification": "Cette condition subsiste formellement, mais depuis la suspension de la conscription en 1997, elle se limite en pratique à la participation à la Journée défense et citoyenneté (JDC) pour les générations concernées.",
+   "explication": "Il faut être en position régulière au regard du service national ; en pratique, cette condition se limite désormais à la participation à la Journée défense et citoyenneté.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "g-196",
@@ -13489,7 +13388,7 @@
    "sujet": "g-4",
    "niveau": 3,
    "famille": "M",
-   "explication": "Il faut être physiquement apte à l'exercice des fonctions 8.",
+   "explication": "Il faut être physiquement apte à l'exercice des fonctions.",
    "derniereVerification": null,
    "aVerifier": "Réponse issue du guide, non revérifiée.",
    "type": "qcm",
@@ -13510,12 +13409,12 @@
    "sujet": "g-4",
    "niveau": 4,
    "famille": "M",
-   "explication": "Elle est composée de 8 filières 8.",
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "explication": "La présentation la plus courante retient 8 filières (administrative, technique, culturelle, sportive, sanitaire et sociale, animation, police municipale, sapeurs-pompiers), mais le décompte varie de 7 à 10 selon les sources.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null,
    "type": "vf",
    "question": "La Fonction Publique Territoriale est organisée en huit filières professionnelles.",
-   "justification": "La FPT est structurée en huit filières (administrative, technique, culturelle, sportive, sociale, médico-sociale, animation et sécurité/police municipale) regroupant les différents cadres d'emplois.",
+   "justification": "Le découpage en huit filières (administrative, technique, culturelle, sportive, sanitaire et sociale, animation, police municipale, sapeurs-pompiers) est la présentation la plus courante, même si le décompte peut varier de 7 à 10 selon les sources.",
    "vrai": true
   },
   {
@@ -13526,11 +13425,11 @@
    "sujet": "g-4",
    "niveau": 8,
    "famille": "M",
-   "explication": "Administrative, Technique, Culturelle, Sportive, Sanitaire et Sociale, Animation, Police Municipale, Sapeurs-Pompiers 8.",
+   "explication": "Administrative, Technique, Culturelle, Sportive, Sanitaire et Sociale, Animation, Police Municipale, Sapeurs-Pompiers.",
    "type": "libre",
    "question": "Pouvez-vous citer les 8 filières de la FPT ?",
    "options": [
-    "Administrative, Technique, Culturelle, Sportive, Sanitaire et Sociale, Animation, Police Municipale, Sapeurs-Pompiers 8."
+    "Administrative, Technique, Culturelle, Sportive, Sanitaire et Sociale, Animation, Police Municipale, Sapeurs-Pompiers."
    ],
    "bonneReponse": 0,
    "derniereVerification": null,
@@ -13618,7 +13517,7 @@
    "sujet": "g-4",
    "niveau": 4,
    "famille": "M",
-   "explication": "Les catégories A, B et C 8, 9.",
+   "explication": "Les catégories A, B et C.",
    "derniereVerification": null,
    "aVerifier": "Réponse issue du guide, non revérifiée.",
    "type": "assoc",
@@ -13646,7 +13545,7 @@
    "sujet": "g-4",
    "niveau": 4,
    "famille": "M",
-   "explication": "Les fonctions de Conception et de Direction 8.",
+   "explication": "Les fonctions de Conception et de Direction.",
    "derniereVerification": null,
    "aVerifier": "Réponse issue du guide, non revérifiée.",
    "type": "qcm",
@@ -13667,7 +13566,7 @@
    "sujet": "g-4",
    "niveau": 4,
    "famille": "M",
-   "explication": "Les fonctions d'encadrement intermédiaire et/ou d'application 8.",
+   "explication": "Les fonctions d'encadrement intermédiaire et/ou d'application.",
    "derniereVerification": null,
    "aVerifier": "Réponse issue du guide, non revérifiée.",
    "type": "qcm",
@@ -13812,7 +13711,7 @@
      1
     ]
    ],
-   "explication": "L'obligation de réserve, d'obéissance, de discrétion, de service, de responsabilité et de formation 10.",
+   "explication": "L'obligation de réserve, d'obéissance, de discrétion, de service, de responsabilité et de formation.",
    "derniereVerification": null,
    "aVerifier": "Réponse issue du guide, non revérifiée."
   },
@@ -13838,24 +13737,6 @@
    "aVerifier": "Réponse issue du guide, non revérifiée."
   },
   {
-   "id": "g-208",
-   "axe": "A7",
-   "sousTheme": "Fonction publique : accès, droits, carrière",
-   "stIdx": 4,
-   "sujet": "g-4",
-   "niveau": 9,
-   "famille": "M",
-   "explication": "Les agents doivent être prudents sur les réseaux sociaux, comme le confirme l'arrêt du Conseil d'État du 20 mars 2017 11.",
-   "type": "libre",
-   "question": "Comment s'applique le devoir de réserve sur internet ?",
-   "options": [
-    "Les agents doivent être prudents sur les réseaux sociaux, comme le confirme l'arrêt du Conseil d'État du 20 mars 2017 11."
-   ],
-   "bonneReponse": 0,
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
-  },
-  {
    "id": "g-210",
    "axe": "A7",
    "sousTheme": "Fonction publique : accès, droits, carrière",
@@ -13867,7 +13748,7 @@
    "question": "Pour bénéficier de la protection fonctionnelle, l'acte dont l'agent a été victime ne doit pas être détachable de l'exercice de ses fonctions.",
    "vrai": true,
    "justification": "La protection fonctionnelle suppose un lien avec le service : un fait purement personnel, sans rapport avec les missions de l'agent, n'ouvre pas droit à cette protection.",
-   "explication": "Il faut que l'acte subi ne soit pas détachable de la mission de l'agent 11.",
+   "explication": "Il faut que l'acte subi ne soit pas détachable de la mission de l'agent.",
    "derniereVerification": null,
    "aVerifier": "Réponse issue du guide, non revérifiée."
   },
@@ -13900,11 +13781,11 @@
    "sujet": "g-4",
    "niveau": 9,
    "famille": "M",
-   "explication": "C'est le Régime Indemnitaire tenant compte des fonctions, des sujétions, de l'expertise et de l'engagement professionnel, qui se substitue aux autres primes 10.",
+   "explication": "C'est le Régime Indemnitaire tenant compte des fonctions, des sujétions, de l'expertise et de l'engagement professionnel, qui se substitue aux autres primes.",
    "type": "libre",
    "question": "Qu'est-ce que le RIFSEEP ?",
    "options": [
-    "C'est le Régime Indemnitaire tenant compte des fonctions, des sujétions, de l'expertise et de l'engagement professionnel, qui se substitue aux autres primes 10."
+    "C'est le Régime Indemnitaire tenant compte des fonctions, des sujétions, de l'expertise et de l'engagement professionnel, qui se substitue aux autres primes."
    ],
    "bonneReponse": 0,
    "derniereVerification": null,
@@ -13954,11 +13835,11 @@
    "sujet": "g-4",
    "niveau": 9,
    "famille": "M",
-   "explication": "Le CIA (Complément Indemnitaire Annuel), qui récompense l'engagement professionnel et la manière de servir 12.",
+   "explication": "Le CIA (Complément Indemnitaire Annuel), qui récompense l'engagement professionnel et la manière de servir.",
    "type": "libre",
    "question": "Quelle est la part annuelle du RIFSEEP ?",
    "options": [
-    "Le CIA (Complément Indemnitaire Annuel), qui récompense l'engagement professionnel et la manière de servir 12."
+    "Le CIA (Complément Indemnitaire Annuel), qui récompense l'engagement professionnel et la manière de servir."
    ],
    "bonneReponse": 0,
    "derniereVerification": null,
@@ -13976,7 +13857,7 @@
    "question": "La Région a la charge des bâtiments et du personnel technique (TOS) des lycées.",
    "vrai": true,
    "justification": "Depuis les lois de décentralisation, la Région assure la construction, l'entretien des lycées et la gestion de leurs personnels techniques, tandis que le Département a la même compétence pour les collèges.",
-   "explication": "La Région 13.",
+   "explication": "La Région.",
    "derniereVerification": null,
    "aVerifier": "Réponse issue du guide, non revérifiée."
   },
@@ -13988,7 +13869,7 @@
    "sujet": "g-2",
    "niveau": 2,
    "famille": "M",
-   "explication": "Le Département 13.",
+   "explication": "Le Département.",
    "derniereVerification": null,
    "aVerifier": "Réponse issue du guide, non revérifiée.",
    "type": "vf",
@@ -14020,7 +13901,7 @@
    "sujet": "g-2",
    "niveau": 2,
    "famille": "M",
-   "explication": "La Région, qui définit la politique régionale et sa mise en œuvre 13.",
+   "explication": "La Région, qui définit la politique régionale et sa mise en œuvre.",
    "derniereVerification": null,
    "aVerifier": "Réponse issue du guide, non revérifiée.",
    "type": "vf",
@@ -14056,7 +13937,7 @@
      "Département"
     ]
    ],
-   "explication": "Le Département 14.",
+   "explication": "Le Département.",
    "derniereVerification": null,
    "aVerifier": "Réponse issue du guide, non revérifiée."
   },
@@ -14068,13 +13949,13 @@
    "sujet": "g-2",
    "niveau": 3,
    "famille": "M",
-   "explication": "Le Département 14.",
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "explication": "Le Département verse le RSA et l'APA, mais pas l'AAH : celle-ci est une prestation d'État versée par les CAF.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null,
    "type": "vf",
    "question": "C'est le Département qui verse le RSA, l'APA ou l'AAH.",
-   "justification": "Le Département est chef de file de l'action sociale et verse les principales prestations sociales telles que le RSA et l'APA ; l'AAH, bien que versée par la CAF, relève d'un financement national relayé par les organismes sociaux.",
-   "vrai": true
+   "justification": "Le Département verse bien le RSA et l'APA, mais l'AAH est une prestation nationale financée par l'État et versée par les CAF/MSA, même si son attribution est décidée par la CDAPH au sein de la MDPH.",
+   "vrai": false
   },
   {
    "id": "g-222",
@@ -14084,7 +13965,7 @@
    "sujet": "g-2",
    "niveau": 3,
    "famille": "M",
-   "explication": "La Commune 14.",
+   "explication": "La Commune.",
    "derniereVerification": null,
    "aVerifier": "Réponse issue du guide, non revérifiée.",
    "type": "vf",
@@ -14126,20 +14007,20 @@
    "sujet": "g-2",
    "niveau": 3,
    "famille": "M",
-   "explication": "La Commune 15.",
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "explication": "C'est l'EPCI compétent en matière d'habitat qui élabore le Programme Local de l'Habitat (PLH), et non la commune.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null,
    "type": "trous",
    "question": "Complétez la phrase sur la compétence en matière d'habitat.",
    "mots": [
-    "Commune",
+    "EPCI",
     "PLH"
    ],
-   "texte": "La {1} élabore le Programme Local de l'Habitat ({2}) sur son territoire.",
+   "texte": "L'{1} élabore le Programme Local de l'Habitat ({2}) sur son territoire.",
    "leurres": [
+    "Commune",
     "Région",
-    "SCOT",
-    "PLU"
+    "SCOT"
    ]
   },
   {
@@ -14150,7 +14031,7 @@
    "sujet": "g-2",
    "niveau": 3,
    "famille": "M",
-   "explication": "L'État 14.",
+   "explication": "L'État.",
    "derniereVerification": null,
    "aVerifier": "Réponse issue du guide, non revérifiée.",
    "type": "vf",
@@ -14166,7 +14047,7 @@
    "sujet": "g-2",
    "niveau": 3,
    "famille": "M",
-   "explication": "La gestion des espaces naturels 16.",
+   "explication": "La gestion des espaces naturels.",
    "derniereVerification": null,
    "aVerifier": "Réponse issue du guide, non revérifiée.",
    "type": "vf",
@@ -14182,12 +14063,12 @@
    "sujet": "g-2",
    "niveau": 3,
    "famille": "M",
-   "explication": "Le Département 16.",
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "explication": "Depuis la loi NOTRe de 2015, les plans départementaux de gestion des déchets ont été supprimés au profit d'un plan régional unique (PRPGD), intégré au SRADDET, élaboré par la Région.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null,
    "type": "qcm",
    "question": "Qui élabore le plan départemental de gestion des déchets ?",
-   "bonneReponse": 0,
+   "bonneReponse": 1,
    "options": [
     "Le Département",
     "La Région",
@@ -14203,14 +14084,14 @@
    "sujet": "g-2",
    "niveau": 4,
    "famille": "M",
-   "explication": "La Commune 16.",
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "explication": "Depuis la loi NOTRe, la compétence collecte et traitement des déchets ménagers, historiquement communale, est transférée de plein droit aux EPCI à fiscalité propre (communautés de communes, d'agglomération, urbaines, métropoles).",
+   "derniereVerification": "2026-08",
+   "aVerifier": null,
    "type": "qcm",
    "question": "Qui a la charge de la collecte et du traitement des déchets ménagers ?",
    "bonneReponse": 0,
    "options": [
-    "La Commune",
+    "L'EPCI à fiscalité propre",
     "Le Département",
     "La Région",
     "L'État"
@@ -14224,12 +14105,12 @@
    "sujet": "g-2",
    "niveau": 4,
    "famille": "M",
-   "explication": "La Commune 16.",
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "explication": "L'eau et l'assainissement restent une compétence communale, sauf transfert à un EPCI ou à un syndicat ; le transfert obligatoire aux communautés de communes prévu au 1er janvier 2026 a été supprimé par la loi du 11 avril 2025.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null,
    "type": "vf",
    "question": "La distribution de l'eau potable et l'assainissement relèvent de la compétence communale.",
-   "justification": "L'eau et l'assainissement sont historiquement des compétences communales, souvent exercées via des syndicats intercommunaux ou transférées à un EPCI à fiscalité propre.",
+   "justification": "L'eau et l'assainissement restent une compétence communale, sauf transfert à un EPCI ou à un syndicat intercommunal ; le transfert obligatoire aux communautés de communes prévu pour le 1er janvier 2026 a été supprimé par la loi du 11 avril 2025.",
    "vrai": true
   },
   {
@@ -14256,12 +14137,12 @@
    "sujet": "g-2",
    "niveau": 4,
    "famille": "M",
-   "explication": "Le Département 17.",
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "explication": "Historiquement, le Département avait effectivement la charge des transports interurbains et scolaires hors milieu urbain ; depuis la loi NOTRe, ces compétences ont été transférées à la Région (transports interurbains au 1er janvier 2017, transports scolaires au 1er septembre 2017).",
+   "derniereVerification": "2026-08",
+   "aVerifier": null,
    "type": "vf",
    "question": "Historiquement, le Département avait la charge des transports routiers et scolaires en dehors du milieu urbain.",
-   "justification": "Avant les réformes récentes qui ont transféré une partie de cette compétence aux régions, le département organisait traditionnellement les transports interurbains et scolaires hors des agglomérations.",
+   "justification": "Avant la loi NOTRe, qui a transféré ces compétences à la Région (transports interurbains au 1er janvier 2017, transports scolaires au 1er septembre 2017), le département organisait traditionnellement les transports interurbains et scolaires hors des agglomérations.",
    "vrai": true
   },
   {
@@ -14272,14 +14153,14 @@
    "sujet": "g-2",
    "niveau": 4,
    "famille": "M",
-   "explication": "La Commune 17.",
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée.",
+   "explication": "L'organisation revient à l'autorité organisatrice de la mobilité (AOM), le plus souvent la commune ou l'EPCI compétent ; depuis la loi d'orientation des mobilités du 24 décembre 2019, on ne parle plus de « transports urbains » mais de compétence mobilité.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null,
    "type": "qcm",
    "question": "Qui organise les transports urbains et scolaires à l'intérieur d'une ville ?",
    "bonneReponse": 0,
    "options": [
-    "La Commune",
+    "La Commune (ou l'EPCI, en tant qu'autorité organisatrice de la mobilité)",
     "Le Département",
     "La Région",
     "L'État"
@@ -14297,7 +14178,7 @@
    "question": "Le Département a la charge de l'entretien des voies départementales.",
    "vrai": true,
    "justification": "En tant que gestionnaire de la voirie départementale, le Département assure la construction et l'entretien de ces routes, distinctes des voies communales et nationales.",
-   "explication": "Le Département 17.",
+   "explication": "Le Département.",
    "derniereVerification": null,
    "aVerifier": "Réponse issue du guide, non revérifiée."
   },
@@ -14309,7 +14190,7 @@
    "sujet": "g-2",
    "niveau": 4,
    "famille": "M",
-   "explication": "La Commune 17.",
+   "explication": "La Commune.",
    "derniereVerification": null,
    "aVerifier": "Réponse issue du guide, non revérifiée.",
    "type": "qcm",
@@ -14334,21 +14215,21 @@
    "question": "Associez chaque collectivité à son rôle en matière d'aides économiques.",
    "paires": [
     [
-     "Département",
-     "Verse des aides économiques indirectes"
+     "Commune / EPCI",
+     "Verse des aides économiques indirectes (immobilier d'entreprise)"
     ],
     [
-     "Commune",
-     "Verse des aides économiques indirectes"
+     "Département",
+     "N'a plus de compétence économique générale depuis la loi NOTRe"
     ],
     [
      "Région",
      "Chef de file des aides économiques directes"
     ]
    ],
-   "explication": "Ce sont le Département et la Commune qui versent les aides économiques indirectes aux entreprises.",
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "explication": "Depuis la loi NOTRe, ce sont les communes et les EPCI qui versent des aides économiques indirectes, essentiellement en matière d'immobilier d'entreprise, dans le cadre fixé par le SRDEII de la Région ; le Département n'a plus de compétence économique générale.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "g-236",
@@ -14362,7 +14243,7 @@
    "question": "En complément des aides indirectes des communes ou EPCI, seule la Région peut octroyer des aides économiques directes aux entreprises.",
    "vrai": true,
    "justification": "La Région est la collectivité chef de file en matière économique et dispose seule de la compétence pour attribuer des aides directes aux entreprises ; les autres collectivités peuvent y participer par convention.",
-   "explication": "La Région 15.",
+   "explication": "La Région.",
    "derniereVerification": null,
    "aVerifier": "Réponse issue du guide, non revérifiée."
   },
@@ -14426,7 +14307,7 @@
      "Commune"
     ]
    ],
-   "explication": "Le Département et la Commune 15.",
+   "explication": "Le Département et la Commune.",
    "derniereVerification": null,
    "aVerifier": "Réponse issue du guide, non revérifiée."
   },
@@ -14523,7 +14404,7 @@
    ],
    "phraseFautive": 1,
    "correction": "En réalité, avant la loi du 2 mars 1982, le contrôle préfectoral portait aussi sur l'opportunité des décisions, et non sur leur seule légalité.",
-   "explication": "C'était un contrôle sur le fond, a priori et un contrôle d'opportunité 18.",
+   "explication": "C'était un contrôle sur le fond, a priori et un contrôle d'opportunité.",
    "derniereVerification": null,
    "aVerifier": "Réponse issue du guide, non revérifiée."
   },
@@ -14587,7 +14468,7 @@
      "Loi NOTRe : redéfinition des compétences régionales et départementales"
     ]
    ],
-   "explication": "Le contrôle de légalité, exercé par le préfet, s'effectue a posteriori depuis la loi de 1982 (il a remplacé la tutelle préalable) 18, 19.",
+   "explication": "Le contrôle de légalité, exercé par le préfet, s'effectue a posteriori depuis la loi de 1982 (il a remplacé la tutelle préalable).",
    "derniereVerification": null,
    "aVerifier": "Réponse issue du guide, non revérifiée."
   },
@@ -14599,11 +14480,11 @@
    "sujet": "g-1",
    "niveau": 7,
    "famille": "M",
-   "explication": "Non, il ne peut plus annuler l'acte lui-même, il doit saisir le Tribunal Administratif 18, 19.",
+   "explication": "Non, il ne peut plus annuler l'acte lui-même, il doit saisir le Tribunal Administratif.",
    "type": "vf",
    "question": "Le préfet peut-il annuler un acte local aujourd'hui ?",
    "vrai": false,
-   "justification": "il ne peut plus annuler l'acte lui-même, il doit saisir le Tribunal Administratif 18, 19.",
+   "justification": "il ne peut plus annuler l'acte lui-même, il doit saisir le Tribunal Administratif.",
    "derniereVerification": null,
    "aVerifier": "Réponse issue du guide, non revérifiée."
   },
@@ -14631,11 +14512,11 @@
    "sujet": "g-1",
    "niveau": 9,
    "famille": "M",
-   "explication": "La reconnaissance pleine de la Personnalité Morale des collectivités (existence, capacité, responsabilité) 19.",
+   "explication": "La reconnaissance pleine de la Personnalité Morale des collectivités (existence, capacité, responsabilité).",
    "type": "libre",
    "question": "Quelle reconnaissance juridique découle du passage au contrôle de légalité ?",
    "options": [
-    "La reconnaissance pleine de la Personnalité Morale des collectivités (existence, capacité, responsabilité) 19."
+    "La reconnaissance pleine de la Personnalité Morale des collectivités (existence, capacité, responsabilité)."
    ],
    "bonneReponse": 0,
    "derniereVerification": null,
@@ -14738,7 +14619,7 @@
     ]
    },
    "bonneCible": 1,
-   "explication": "Le mandat est de 6 ans 21.",
+   "explication": "Le mandat est de 6 ans.",
    "derniereVerification": null,
    "aVerifier": "Réponse issue du guide, non revérifiée."
   },
@@ -14750,11 +14631,11 @@
    "sujet": "g-1",
    "niveau": 8,
    "famille": "M",
-   "explication": "Le mandat est de 6 ans 21.",
+   "explication": "Le mandat est de 6 ans.",
    "type": "libre",
    "question": "Quelle est la durée du mandat lors des élections régionales ou départementales ?",
    "options": [
-    "Le mandat est de 6 ans 21."
+    "Le mandat est de 6 ans."
    ],
    "bonneReponse": 0,
    "derniereVerification": null,
@@ -14768,11 +14649,11 @@
    "sujet": "g-1",
    "niveau": 8,
    "famille": "M",
-   "explication": "Le mandat est de 6 ans, avec un renouvellement par moitié tous les 3 ans 21.",
+   "explication": "Le mandat est de 6 ans, avec un renouvellement par moitié tous les 3 ans.",
    "type": "libre",
    "question": "Quelle est la durée du mandat d'un Sénateur ?",
    "options": [
-    "Le mandat est de 6 ans, avec un renouvellement par moitié tous les 3 ans 21."
+    "Le mandat est de 6 ans, avec un renouvellement par moitié tous les 3 ans."
    ],
    "bonneReponse": 0,
    "derniereVerification": null,
@@ -14786,11 +14667,11 @@
    "sujet": "g-1",
    "niveau": 8,
    "famille": "M",
-   "explication": "Le mandat est de 5 ans 21.",
+   "explication": "Le mandat est de 5 ans.",
    "type": "libre",
    "question": "Quelle est la durée du mandat pour les élections présidentielles ou législatives ?",
    "options": [
-    "Le mandat est de 5 ans 21."
+    "Le mandat est de 5 ans."
    ],
    "bonneReponse": 0,
    "derniereVerification": null,
@@ -14806,18 +14687,18 @@
    "famille": "M",
    "type": "trous",
    "question": "Complétez la donnée chiffrée concernant les salaires dans la fonction publique de l'État.",
-   "texte": "En 2014, le salaire net moyen dans la fonction publique de l'État s'élevait à {1} euros.",
+   "texte": "En 2023, le salaire net moyen dans la fonction publique de l'État s'élevait à {1} euros par mois en équivalent temps plein.",
    "mots": [
-    "2 469"
+    "2 886"
    ],
    "leurres": [
-    "1 950",
+    "2 469",
     "3 100",
-    "2 900"
+    "2 254"
    ],
-   "explication": "Le salaire net moyen y était de 2 469 euros.",
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "explication": "En 2023, le salaire net moyen dans la fonction publique de l'État s'élevait à 2 886 euros par mois en équivalent temps plein.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "g-255",
@@ -14852,72 +14733,9 @@
     ]
    },
    "bonneBarre": 0,
-   "explication": "Il s'élevait à 1.851 euros 1.",
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
-  },
-  {
-   "id": "g-256",
-   "axe": "A7",
-   "sousTheme": "Fonction publique : accès, droits, carrière",
-   "stIdx": 4,
-   "sujet": "g-4",
-   "niveau": 6,
-   "famille": "M",
-   "type": "vf",
-   "question": "En 2014, le salaire net moyen dans le secteur privé s'élevait à environ 2 202 euros.",
-   "vrai": true,
-   "justification": "Cette donnée chiffrée, issue du support de révision, sert de point de comparaison avec les rémunérations pratiquées dans la fonction publique.",
-   "explication": "Le salaire net moyen dans le privé était de 2 202 euros en 2014.",
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
-  },
-  {
-   "id": "g-257",
-   "axe": "A7",
-   "sousTheme": "Fonction publique : accès, droits, carrière",
-   "stIdx": 4,
-   "sujet": "g-4",
-   "niveau": 6,
-   "famille": "M",
-   "type": "graphe",
-   "question": "Cliquez sur la barre correspondant à la part moyenne des primes dans le salaire brut des fonctionnaires.",
-   "graphe": {
-    "titre": "Composition du salaire brut moyen",
-    "unite": "%",
-    "barres": [
-     {
-      "l": "Traitement indiciaire",
-      "v": 77.2
-     },
-     {
-      "l": "Primes et indemnités",
-      "v": 22.8
-     }
-    ]
-   },
-   "bonneBarre": 1,
-   "explication": "Les primes représentent en moyenne 22,8 % du salaire brut.",
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
-  },
-  {
-   "id": "g-258",
-   "axe": "A7",
-   "sousTheme": "Fonction publique : accès, droits, carrière",
-   "stIdx": 4,
-   "sujet": "g-4",
-   "niveau": 9,
-   "famille": "M",
-   "explication": "Les femmes gagnent 17% de moins que les hommes, en grande partie à cause d'un écart sur les attributions indemnitaires 1.",
-   "type": "libre",
-   "question": "Quel est l'écart de salaire entre hommes et femmes au sein de l'État ?",
-   "options": [
-    "Les femmes gagnent 17% de moins que les hommes, en grande partie à cause d'un écart sur les attributions indemnitaires 1."
-   ],
-   "bonneReponse": 0,
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "explication": "En 2014, le salaire net moyen dans la FPT s'élevait à 1 851 euros par mois. En 2023, ce montant est passé à 2 254 euros par mois en équivalent temps plein.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "g-259",
@@ -14943,14 +14761,14 @@
      },
      {
       "l": "Ensemble des agents",
-      "v": 15
+      "v": 19
      }
     ]
    },
    "bonneBarre": 0,
-   "explication": "24 % des femmes sont à temps partiel, contre 5 % des hommes dans la fonction publique.",
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "explication": "Environ 24 % des femmes sont à temps partiel, contre 5 % des hommes. En 2024, 19 % de l'ensemble des agents publics étaient à temps partiel, dont 21 % dans la FPT, le temps partiel restant massivement féminin.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "g-260",
@@ -14963,10 +14781,10 @@
    "type": "vf",
    "question": "L'âge médian des agents de la Fonction Publique Territoriale est d'environ 44 ans.",
    "vrai": true,
-   "justification": "Les données statistiques de la Fonction Publique Territoriale situent l'âge médian des agents autour de 44 ans, une population globalement plus âgée que dans le secteur privé.",
-   "explication": "L'âge médian dans la FPT est de 44 ans 1.",
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "justification": "L'âge médian des agents de la FPT est estimé autour de 44 ans, à ne pas confondre avec l'âge moyen, qui s'établissait à 46 ans en 2023 - la FPT étant le versant le plus âgé de la fonction publique.",
+   "explication": "L'âge médian dans la FPT est d'environ 44 ans, à distinguer de l'âge moyen (46 ans en 2023) : la FPT est le versant le plus âgé de la fonction publique.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "g-261",
@@ -14984,22 +14802,22 @@
     "barres": [
      {
       "l": "Catégorie A",
-      "v": 9
+      "v": 13
      },
      {
       "l": "Catégorie B",
-      "v": 14
+      "v": 15
      },
      {
       "l": "Catégorie C",
-      "v": 77
+      "v": 72
      }
     ]
    },
    "bonneBarre": 2,
-   "explication": "La FPT compte 9 % de cadres A, 14 % de cadres B et 77 % de cadres C.",
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "explication": "La FPT compte environ 13 % de cadres A, 15 % de cadres B et 72 % de cadres C en 2023, la catégorie C restant très largement majoritaire.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "g-262",
@@ -15017,22 +14835,22 @@
     "segments": [
      {
       "l": "FPE",
-      "v": 2400
+      "v": 2570
      },
      {
       "l": "FPT",
-      "v": 1900
+      "v": 1990
      },
      {
       "l": "FPH",
-      "v": 1150
+      "v": 1240
      }
     ]
    },
    "bonneCible": 0,
-   "explication": "Elle compte environ 2.400.000 agents 1.",
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "explication": "La fonction publique d'État (FPE) compte environ 2,57 millions d'agents.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "g-263",
@@ -15050,22 +14868,22 @@
     "barres": [
      {
       "l": "FPT",
-      "v": 1.8
+      "v": 1.99
      },
      {
       "l": "FPE",
-      "v": 2.5
+      "v": 2.57
      },
      {
       "l": "FPH",
-      "v": 1.2
+      "v": 1.24
      }
     ]
    },
    "bonneBarre": 0,
-   "explication": "La fonction publique territoriale regroupe environ 1,8 million d'agents.",
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "explication": "La fonction publique territoriale regroupe environ 1,99 million d'agents.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "g-265",
@@ -15125,11 +14943,11 @@
    "sujet": "g-4",
    "niveau": 9,
    "famille": "M",
-   "explication": "Il s'agit des collectivités territoriales (communes, départements, régions) et des établissements publics locaux (CCAS, EPCI, SDIS, caisse des écoles) 2, 3.",
+   "explication": "Il s'agit des collectivités territoriales (communes, départements, régions) et des établissements publics locaux (CCAS, EPCI, SDIS, caisse des écoles).",
    "type": "libre",
    "question": "Quels types de structures locales emploient des fonctionnaires territoriaux ?",
    "options": [
-    "Il s'agit des collectivités territoriales (communes, départements, régions) et des établissements publics locaux (CCAS, EPCI, SDIS, caisse des écoles) 2, 3."
+    "Il s'agit des collectivités territoriales (communes, départements, régions) et des établissements publics locaux (CCAS, EPCI, SDIS, caisse des écoles)."
    ],
    "bonneReponse": 0,
    "derniereVerification": null,
@@ -15143,15 +14961,15 @@
    "sujet": "g-4",
    "niveau": 8,
    "famille": "M",
-   "explication": "La FPT compte environ 48.000 employeurs potentiels 3.",
    "type": "libre",
    "question": "Combien d'employeurs potentiels compte environ la FPT ?",
    "options": [
-    "La FPT compte environ 48.000 employeurs potentiels 3."
+    "Entre 45 000 et 60 000 employeurs territoriaux selon le périmètre retenu."
    ],
    "bonneReponse": 0,
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "explication": "Le nombre d'employeurs territoriaux varie fortement selon le périmètre retenu (avec ou sans agent permanent) : il se situe entre 45 000 et 60 000 environ.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "g-270",
@@ -15161,11 +14979,11 @@
    "sujet": "g-4",
    "niveau": 9,
    "famille": "M",
-   "explication": "La FPE n'a qu'un employeur unique qui est l'État, tandis que la FPT compte autant d'employeurs qu'il y a de collectivités et d'établissements 3.",
+   "explication": "La FPE n'a qu'un employeur unique qui est l'État, tandis que la FPT compte autant d'employeurs qu'il y a de collectivités et d'établissements.",
    "type": "libre",
    "question": "Quelle est la principale différence institutionnelle concernant l'employeur entre la FPE et la FPT ?",
    "options": [
-    "La FPE n'a qu'un employeur unique qui est l'État, tandis que la FPT compte autant d'employeurs qu'il y a de collectivités et d'établissements 3."
+    "La FPE n'a qu'un employeur unique qui est l'État, tandis que la FPT compte autant d'employeurs qu'il y a de collectivités et d'établissements."
    ],
    "bonneReponse": 0,
    "derniereVerification": null,
@@ -15179,11 +14997,11 @@
    "sujet": "g-4",
    "niveau": 10,
    "famille": "M",
-   "explication": "C'est un recrutement qui s'effectue sans concours, possible pour certains cadres d'emplois de la catégorie C 4.",
+   "explication": "C'est un recrutement qui s'effectue sans concours, possible pour certains cadres d'emplois de la catégorie C.",
    "type": "libre",
    "question": "Qu'est-ce qu'un recrutement direct dans la FPT ?",
    "options": [
-    "C'est un recrutement qui s'effectue sans concours, possible pour certains cadres d'emplois de la catégorie C 4."
+    "C'est un recrutement qui s'effectue sans concours, possible pour certains cadres d'emplois de la catégorie C."
    ],
    "bonneReponse": 0,
    "derniereVerification": null,
@@ -15197,11 +15015,11 @@
    "sujet": "g-4",
    "niveau": 10,
    "famille": "M",
-   "explication": "Non, le candidat est inscrit sur une liste d'aptitude et doit rechercher lui-même un poste par candidature et entretien 4.",
+   "explication": "Non, le candidat est inscrit sur une liste d'aptitude et doit rechercher lui-même un poste par candidature et entretien.",
    "type": "vf",
    "question": "La réussite à un concours vaut-elle recrutement direct dans la FPT ?",
    "vrai": false,
-   "justification": "le candidat est inscrit sur une liste d'aptitude et doit rechercher lui-même un poste par candidature et entretien 4.",
+   "justification": "le candidat est inscrit sur une liste d'aptitude et doit rechercher lui-même un poste par candidature et entretien.",
    "derniereVerification": null,
    "aVerifier": "Réponse issue du guide, non revérifiée."
   },
@@ -15213,11 +15031,11 @@
    "sujet": "g-4",
    "niveau": 10,
    "famille": "M",
-   "explication": "Un fonctionnaire territorial est nommé par l'autorité territoriale, c'est-à-dire le maire, le président du conseil départemental ou régional 4.",
+   "explication": "Un fonctionnaire territorial est nommé par l'autorité territoriale, c'est-à-dire le maire, le président du conseil départemental ou régional.",
    "type": "libre",
    "question": "Qui nomme un fonctionnaire territorial ?",
    "options": [
-    "Un fonctionnaire territorial est nommé par l'autorité territoriale, c'est-à-dire le maire, le président du conseil départemental ou régional 4."
+    "Un fonctionnaire territorial est nommé par l'autorité territoriale, c'est-à-dire le maire, le président du conseil départemental ou régional."
    ],
    "bonneReponse": 0,
    "derniereVerification": null,
@@ -15231,11 +15049,11 @@
    "sujet": "g-4",
    "niveau": 8,
    "famille": "M",
-   "explication": "Non, le fonctionnaire est titulaire de son grade, mais pas de son emploi 4.",
+   "explication": "Non, le fonctionnaire est titulaire de son grade, mais pas de son emploi.",
    "type": "vf",
    "question": "Le fonctionnaire territorial est-il propriétaire de son emploi ?",
    "vrai": false,
-   "justification": "le fonctionnaire est titulaire de son grade, mais pas de son emploi 4.",
+   "justification": "le fonctionnaire est titulaire de son grade, mais pas de son emploi.",
    "derniereVerification": null,
    "aVerifier": "Réponse issue du guide, non revérifiée."
   },
@@ -15251,7 +15069,7 @@
    "question": "L'autorité territoriale (le maire) veille à la bonne marche des services municipaux et les organise en conséquence.",
    "vrai": true,
    "justification": "En tant que chef de l'administration communale, le maire dispose du pouvoir d'organisation des services et veille à leur bon fonctionnement, sous réserve des compétences de l'assemblée délibérante.",
-   "explication": "Le maire veille à la bonne marche des services municipaux et les organise en conséquence 5.",
+   "explication": "Le maire veille à la bonne marche des services municipaux et les organise en conséquence.",
    "derniereVerification": null,
    "aVerifier": "Réponse issue du guide, non revérifiée."
   },
@@ -15263,11 +15081,11 @@
    "sujet": "g-5",
    "niveau": 8,
    "famille": "M",
-   "explication": "Non, si la mesure constitue un bouleversement important de l'organisation communale, elle doit être décidée par le conseil municipal 5.",
+   "explication": "Non, si la mesure constitue un bouleversement important de l'organisation communale, elle doit être décidée par le conseil municipal.",
    "type": "vf",
    "question": "Le maire peut-il privatiser ou supprimer seul un service communal entier ?",
    "vrai": false,
-   "justification": "si la mesure constitue un bouleversement important de l'organisation communale, elle doit être décidée par le conseil municipal 5.",
+   "justification": "si la mesure constitue un bouleversement important de l'organisation communale, elle doit être décidée par le conseil municipal.",
    "derniereVerification": null,
    "aVerifier": "Réponse issue du guide, non revérifiée."
   },
@@ -15311,11 +15129,11 @@
    "sujet": "g-5",
    "niveau": 9,
    "famille": "M",
-   "explication": "C'est l'autorité territoriale qui dresse le projet de tableau d'avancement dans le respect des conditions statutaires 5.",
+   "explication": "C'est l'autorité territoriale qui dresse le projet de tableau d'avancement dans le respect des conditions statutaires.",
    "type": "libre",
    "question": "Qui fixe le tableau d'avancement annuel ?",
    "options": [
-    "C'est l'autorité territoriale qui dresse le projet de tableau d'avancement dans le respect des conditions statutaires 5."
+    "C'est l'autorité territoriale qui dresse le projet de tableau d'avancement dans le respect des conditions statutaires."
    ],
    "bonneReponse": 0,
    "derniereVerification": null,
@@ -15333,7 +15151,7 @@
    "question": "Le maire, ou le président de l'EPCI, détient le pouvoir disciplinaire sur les agents territoriaux placés sous son autorité.",
    "vrai": true,
    "justification": "L'autorité territoriale (maire ou président) est seule compétente pour engager et conduire les procédures disciplinaires à l'égard de ses agents.",
-   "explication": "Le maire ou le président dispose du pouvoir disciplinaire 6.",
+   "explication": "Le maire ou le président dispose du pouvoir disciplinaire.",
    "derniereVerification": null,
    "aVerifier": "Réponse issue du guide, non revérifiée."
   },
@@ -15361,13 +15179,13 @@
    "sujet": "g-5",
    "niveau": 9,
    "famille": "M",
-   "explication": "Oui, le maire ou le président préside le Comité Technique (CT) ou la Commission Administrative Paritaire (CAP) 6.",
    "type": "vf",
    "question": "L'autorité territoriale préside-t-elle les organes de dialogue social ?",
    "vrai": true,
-   "justification": "le maire ou le président préside le Comité Technique (CT) ou la Commission Administrative Paritaire (CAP) 6.",
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "justification": "Oui : l'autorité territoriale préside le comité social territorial (CST), instance issue de la fusion du comité technique et du CHSCT depuis janvier 2023, ainsi que sa formation spécialisée. Les CAP subsistent mais leurs compétences ont été fortement réduites depuis la loi du 6 août 2019.",
+   "explication": "Depuis 2023, le comité technique et le CHSCT ont fusionné en comité social territorial (CST), présidé par l'autorité territoriale. Les CAP, également présidées par l'autorité territoriale, ne sont plus compétentes en matière de mutation, mobilité, avancement ou promotion interne, désormais régies par les lignes directrices de gestion.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "g-282",
@@ -15377,11 +15195,11 @@
    "sujet": "g-5",
    "niveau": 10,
    "famille": "M",
-   "explication": "C'est le maire ou le président qui décide de l'envoi en formation, à l'exception des formations initiales obligatoires 6.",
+   "explication": "C'est le maire ou le président qui décide de l'envoi en formation, à l'exception des formations initiales obligatoires.",
    "type": "libre",
    "question": "Qui prononce l'envoi en formation des agents territoriaux ?",
    "options": [
-    "C'est le maire ou le président qui décide de l'envoi en formation, à l'exception des formations initiales obligatoires 6."
+    "C'est le maire ou le président qui décide de l'envoi en formation, à l'exception des formations initiales obligatoires."
    ],
    "bonneReponse": 0,
    "derniereVerification": null,
@@ -15395,7 +15213,7 @@
    "sujet": "g-6",
    "niveau": 1,
    "famille": "M",
-   "explication": "On distingue les dépenses d'investissement et les dépenses de fonctionnement 7.",
+   "explication": "On distingue les dépenses d'investissement et les dépenses de fonctionnement.",
    "derniereVerification": null,
    "aVerifier": "Réponse issue du guide, non revérifiée.",
    "type": "trous",
@@ -15418,11 +15236,11 @@
    "sujet": "g-6",
    "niveau": 10,
    "famille": "M",
-   "explication": "Il s'agit de tout ce qui est durable et qui touche à la valeur du patrimoine de la collectivité, comme la construction d'écoles ou l'achat de terrains 7, 8.",
+   "explication": "Il s'agit de tout ce qui est durable et qui touche à la valeur du patrimoine de la collectivité, comme la construction d'écoles ou l'achat de terrains.",
    "type": "libre",
    "question": "Comment définir une dépense d'investissement ?",
    "options": [
-    "Il s'agit de tout ce qui est durable et qui touche à la valeur du patrimoine de la collectivité, comme la construction d'écoles ou l'achat de terrains 7, 8."
+    "Il s'agit de tout ce qui est durable et qui touche à la valeur du patrimoine de la collectivité, comme la construction d'écoles ou l'achat de terrains."
    ],
    "bonneReponse": 0,
    "derniereVerification": null,
@@ -15436,7 +15254,7 @@
    "sujet": "g-6",
    "niveau": 2,
    "famille": "M",
-   "explication": "Il s'agit de tout ce qui permet aux services de fonctionner au quotidien 7.",
+   "explication": "Il s'agit de tout ce qui permet aux services de fonctionner au quotidien.",
    "derniereVerification": null,
    "aVerifier": "Réponse issue du guide, non revérifiée.",
    "type": "vf",
@@ -15452,7 +15270,7 @@
    "sujet": "g-6",
    "niveau": 3,
    "famille": "M",
-   "explication": "C'est le principe de la séparation des ordonnateurs et des comptables 8.",
+   "explication": "C'est le principe de la séparation des ordonnateurs et des comptables.",
    "derniereVerification": null,
    "aVerifier": "Réponse issue du guide, non revérifiée.",
    "type": "qcm",
@@ -15473,11 +15291,11 @@
    "sujet": "g-6",
    "niveau": 4,
    "famille": "M",
-   "explication": "Non, la règle impose que celui qui ordonne ne paye pas 8.",
+   "explication": "Non, la règle impose que celui qui ordonne ne paye pas.",
    "type": "vf",
    "question": "Un ordonnateur (le maire) peut-il procéder au paiement d'une facture ?",
    "vrai": false,
-   "justification": "la règle impose que celui qui ordonne ne paye pas 8.",
+   "justification": "la règle impose que celui qui ordonne ne paye pas.",
    "derniereVerification": null,
    "aVerifier": "Réponse issue du guide, non revérifiée."
   },
@@ -15551,7 +15369,7 @@
      "Permet à un régisseur d'encaisser certaines recettes sans comptable"
     ]
    ],
-   "explication": "Les exceptions à ce principe sont les régies d'avances et les régies de recettes 8.",
+   "explication": "Les exceptions à ce principe sont les régies d'avances et les régies de recettes.",
    "derniereVerification": null,
    "aVerifier": "Réponse issue du guide, non revérifiée."
   },
@@ -15563,11 +15381,11 @@
    "sujet": "g-6",
    "niveau": 8,
    "famille": "M",
-   "explication": "C'est une situation de gestion de fait 8.",
+   "explication": "C'est une situation de gestion de fait.",
    "type": "libre",
    "question": "Comment nomme-t-on l'infraction consistant à manier des deniers publics sans en avoir le titre ?",
    "options": [
-    "C'est une situation de gestion de fait 8."
+    "C'est une situation de gestion de fait."
    ],
    "bonneReponse": 0,
    "derniereVerification": null,
@@ -15581,15 +15399,15 @@
    "sujet": "g-6",
    "niveau": 9,
    "famille": "M",
-   "explication": "C'est la Chambre régionale des Comptes qui peut prononcer une mise en débet 8.",
    "type": "libre",
    "question": "Qui juge et met en jeu la responsabilité pécuniaire d'un comptable public ?",
    "options": [
-    "C'est la Chambre régionale des Comptes qui peut prononcer une mise en débet 8."
+    "Depuis le 1er janvier 2023, la responsabilité personnelle et pécuniaire du comptable est supprimée : un régime juridictionnel unifié de responsabilité financière des gestionnaires publics (ordonnateurs et comptables) s'applique devant la chambre du contentieux de la Cour des comptes, avec appel devant la Cour d'appel financière, la sanction étant une amende et non un débet."
    ],
    "bonneReponse": 0,
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "explication": "Depuis le 1er janvier 2023, le débet et le jugement des comptes ont disparu. Un régime unifié de responsabilité financière des gestionnaires publics (ordonnateurs et comptables) relève de la chambre du contentieux de la Cour des comptes, avec appel devant la Cour d'appel financière ; la sanction est une amende.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "g-293",
@@ -15599,11 +15417,11 @@
    "sujet": "g-7",
    "niveau": 8,
    "famille": "M",
-   "explication": "C'est un contrat conclu à titre onéreux pour répondre aux besoins de l'administration, avec une personne publique ou privée 9, 10.",
+   "explication": "C'est un contrat conclu à titre onéreux pour répondre aux besoins de l'administration, avec une personne publique ou privée.",
    "type": "libre",
    "question": "Comment définir un marché public ?",
    "options": [
-    "C'est un contrat conclu à titre onéreux pour répondre aux besoins de l'administration, avec une personne publique ou privée 9, 10."
+    "C'est un contrat conclu à titre onéreux pour répondre aux besoins de l'administration, avec une personne publique ou privée."
    ],
    "bonneReponse": 0,
    "derniereVerification": null,
@@ -15617,15 +15435,15 @@
    "sujet": "g-7",
    "niveau": 8,
    "famille": "M",
-   "explication": "Les contrats de travail, l'acquisition d'œuvres d'art, et les acquisitions immobilières ou de terrains sont exclus 10.",
    "type": "libre",
    "question": "Citez trois domaines expressément exclus du champ d'application du code des marchés publics.",
    "options": [
-    "Les contrats de travail, l'acquisition d'œuvres d'art, et les acquisitions immobilières ou de terrains sont exclus 10."
+    "Les contrats de travail, l'acquisition ou la location d'immeubles existants, et le régime particulier des œuvres d'art sont exclus (articles L2512-1 et suivants du Code de la commande publique)."
    ],
    "bonneReponse": 0,
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "explication": "Les contrats de travail, les acquisitions ou locations d'immeubles existants, et le régime particulier des œuvres d'art sont exclus, conformément aux articles L2512-1 et suivants du Code de la commande publique, qui a remplacé le Code des marchés publics depuis le 1er avril 2019.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "g-295",
@@ -15635,11 +15453,11 @@
    "sujet": "g-7",
    "niveau": 9,
    "famille": "M",
-   "explication": "C'est un contrat entre deux personnes morales distinctes, mais où l'une est regardée comme le prolongement administratif de l'autre 10, 11.",
+   "explication": "C'est un contrat entre deux personnes morales distinctes, mais où l'une est regardée comme le prolongement administratif de l'autre.",
    "type": "libre",
    "question": "Qu'est-ce qu'une prestation intégrée de \"quasi-régie\" ?",
    "options": [
-    "C'est un contrat entre deux personnes morales distinctes, mais où l'une est regardée comme le prolongement administratif de l'autre 10, 11."
+    "C'est un contrat entre deux personnes morales distinctes, mais où l'une est regardée comme le prolongement administratif de l'autre."
    ],
    "bonneReponse": 0,
    "derniereVerification": null,
@@ -15669,15 +15487,15 @@
    "sujet": "g-7",
    "niveau": 9,
    "famille": "M",
-   "explication": "C'est le principe du Code des Marchés Publics qui impose de fractionner le marché en différents lots, le marché unique restant l'exception 12.",
    "type": "libre",
    "question": "Qu'est-ce que la règle de l'allotissement ?",
    "options": [
-    "C'est le principe du Code des Marchés Publics qui impose de fractionner le marché en différents lots, le marché unique restant l'exception 12."
+    "C'est le principe, posé à l'article L2113-10 du Code de la commande publique, imposant de passer les marchés en lots séparés, le marché global restant l'exception justifiée."
    ],
    "bonneReponse": 0,
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "explication": "L'allotissement est le principe posé à l'article L2113-10 du Code de la commande publique : les marchés sont passés en lots séparés, le marché global restant l'exception justifiée.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "g-298",
@@ -15687,15 +15505,15 @@
    "sujet": "g-7",
    "niveau": 9,
    "famille": "M",
-   "explication": "C'est un marché sans quantité définie a priori, exécuté au fur et à mesure de la passation des bons de commande par l'administration 12.",
    "type": "libre",
    "question": "Qu'est-ce qu'un marché à bons de commande ?",
    "options": [
-    "C'est un marché sans quantité définie a priori, exécuté au fur et à mesure de la passation des bons de commande par l'administration 12."
+    "C'est aujourd'hui un accord-cadre à bons de commande : les quantités ne sont pas définies a priori et l'exécution se fait au fur et à mesure de l'émission des bons."
    ],
    "bonneReponse": 0,
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "explication": "La catégorie « marché à bons de commande » a disparu en 2016 au profit de l'accord-cadre à bons de commande : les quantités ne sont pas définies a priori et l'exécution se fait au fur et à mesure de l'émission des bons de commande.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "g-299",
@@ -15705,11 +15523,11 @@
    "sujet": "g-7",
    "niveau": 10,
    "famille": "M",
-   "explication": "Elle élimine les offres inappropriées, classe les offres, choisit l'offre économiquement la plus avantageuse, et peut déclarer un appel infructueux 13.",
+   "explication": "Elle élimine les offres inappropriées, classe les offres, choisit l'offre économiquement la plus avantageuse, et peut déclarer un appel infructueux.",
    "type": "libre",
    "question": "Quel est le rôle principal de la Commission d'Appel d'Offres (CAO) ?",
    "options": [
-    "Elle élimine les offres inappropriées, classe les offres, choisit l'offre économiquement la plus avantageuse, et peut déclarer un appel infructueux 13."
+    "Elle élimine les offres inappropriées, classe les offres, choisit l'offre économiquement la plus avantageuse, et peut déclarer un appel infructueux."
    ],
    "bonneReponse": 0,
    "derniereVerification": null,
@@ -15725,9 +15543,9 @@
    "famille": "M",
    "type": "trous",
    "question": "Complétez la composition de la Commission d'Appel d'Offres (CAO) dans une commune de plus de 3.500 habitants.",
-   "texte": "La CAO comprend le {1} et {2} membres du conseil municipal.",
+   "texte": "La CAO comprend l'{1} habilitée à signer le marché et {2} membres du conseil municipal élus à la représentation proportionnelle au plus fort reste.",
    "mots": [
-    "maire",
+    "autorité",
     "cinq"
    ],
    "leurres": [
@@ -15736,9 +15554,9 @@
     "trois",
     "secrétaire général"
    ],
-   "explication": "Elle comprend le maire et 5 membres du conseil municipal 13.",
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "explication": "La CAO est présidée par l'autorité habilitée à signer le marché (en pratique le maire ou son représentant) et comprend cinq membres du conseil municipal élus à la représentation proportionnelle au plus fort reste ; trois membres seulement dans les communes de moins de 3 500 habitants.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "g-301",
@@ -15748,15 +15566,15 @@
    "sujet": "g-7",
    "niveau": 10,
    "famille": "M",
-   "explication": "L'adjudicateur a la possibilité d'indiquer des variantes, mais leur recours doit être fortement encadré pour permettre l'analyse des offres 13.",
    "type": "libre",
    "question": "Un marché peut-il interdire des variantes par rapport à la solution de base ?",
    "options": [
-    "L'adjudicateur a la possibilité d'indiquer des variantes, mais leur recours doit être fortement encadré pour permettre l'analyse des offres 13."
+    "L'acheteur décide d'autoriser ou d'interdire les variantes. En procédure formalisée, elles sont interdites sauf mention contraire pour les pouvoirs adjudicateurs, et autorisées sauf mention contraire pour les entités adjudicatrices ; en procédure adaptée, elles sont autorisées sauf mention contraire."
    ],
    "bonneReponse": 0,
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "explication": "L'acheteur décide d'autoriser ou d'interdire les variantes. En procédure formalisée, elles sont interdites sauf mention contraire pour les pouvoirs adjudicateurs, et autorisées sauf mention contraire pour les entités adjudicatrices ; en procédure adaptée, elles sont autorisées sauf mention contraire.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "g-302",
@@ -15810,19 +15628,19 @@
       "l": "Marché sans publicité ni mise en concurrence formalisées"
      },
      {
-      "borne": "de 40 000 à 5 225 000 €",
+      "borne": "de 40 000 à 5 404 000 €",
       "l": "Procédure adaptée ou formalisée selon montant"
      },
      {
-      "borne": "5 225 000 € et plus",
+      "borne": "5 404 000 € et plus",
       "l": "Publication obligatoire au BOAMP et au JOUE"
      }
     ]
    },
    "bonneCible": 2,
-   "explication": "À partir de 5 225 000 euros HT, les marchés de travaux doivent être publiés au BOAMP et au JOUE.",
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "explication": "Depuis la révision biennale des seuils, le seuil de publicité obligatoire au BOAMP et au JOUE pour les marchés de travaux est fixé à 5 404 000 € HT pour la période 2026-2027.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "g-304",
@@ -15832,7 +15650,7 @@
    "sujet": "g-3",
    "niveau": 4,
    "famille": "M",
-   "explication": "Ce sont le critère matériel, le critère organique et le critère de moyens 15.",
+   "explication": "Ce sont le critère matériel, le critère organique et le critère de moyens.",
    "derniereVerification": null,
    "aVerifier": "Réponse issue du guide, non revérifiée.",
    "type": "assoc",
@@ -15876,11 +15694,11 @@
    "sujet": "g-3",
    "niveau": 8,
    "famille": "M",
-   "explication": "C'est le fait que la personne gérant l'activité dispose de prérogatives de puissance publique, telles que l'expropriation ou la réquisition 15.",
+   "explication": "C'est le fait que la personne gérant l'activité dispose de prérogatives de puissance publique, telles que l'expropriation ou la réquisition.",
    "type": "libre",
    "question": "Qu'est-ce que le critère de moyens du service public ?",
    "options": [
-    "C'est le fait que la personne gérant l'activité dispose de prérogatives de puissance publique, telles que l'expropriation ou la réquisition 15."
+    "C'est le fait que la personne gérant l'activité dispose de prérogatives de puissance publique, telles que l'expropriation ou la réquisition."
    ],
    "bonneReponse": 0,
    "derniereVerification": null,
@@ -15894,11 +15712,11 @@
    "sujet": "g-3",
    "niveau": 5,
    "famille": "M",
-   "explication": "Non, ces missions relèvent des services publics facultatifs décidés par la collectivité 16.",
+   "explication": "Non, ces missions relèvent des services publics facultatifs décidés par la collectivité.",
    "type": "vf",
    "question": "Les collectivités ont-elles l'obligation de créer des services publics sportifs ou culturels ?",
    "vrai": false,
-   "justification": "ces missions relèvent des services publics facultatifs décidés par la collectivité 16.",
+   "justification": "ces missions relèvent des services publics facultatifs décidés par la collectivité.",
    "derniereVerification": null,
    "aVerifier": "Réponse issue du guide, non revérifiée."
   },
@@ -15924,7 +15742,7 @@
     "efficacité",
     "légalité"
    ],
-   "explication": "Il s'agit des principes de mutabilité, de continuité et d'égalité 17.",
+   "explication": "Il s'agit des principes de mutabilité, de continuité et d'égalité.",
    "derniereVerification": null,
    "aVerifier": "Réponse issue du guide, non revérifiée."
   },
@@ -15936,11 +15754,11 @@
    "sujet": "g-3",
    "niveau": 8,
    "famille": "M",
-   "explication": "Il implique que les administrés d'une même catégorie doivent être traités de manière identique et sans discrimination 17.",
+   "explication": "Il implique que les administrés d'une même catégorie doivent être traités de manière identique et sans discrimination.",
    "type": "libre",
    "question": "Comment se définit le principe d'égalité dans le service public ?",
    "options": [
-    "Il implique que les administrés d'une même catégorie doivent être traités de manière identique et sans discrimination 17."
+    "Il implique que les administrés d'une même catégorie doivent être traités de manière identique et sans discrimination."
    ],
    "bonneReponse": 0,
    "derniereVerification": null,
@@ -15954,11 +15772,11 @@
    "sujet": "g-3",
    "niveau": 8,
    "famille": "M",
-   "explication": "Oui, il est licite pour la défense d'intérêts professionnels, mais interdit pour motifs politiques ou pour certains personnels spécifiques, en vertu du principe de continuité 18.",
+   "explication": "Oui, il est licite pour la défense d'intérêts professionnels, mais interdit pour motifs politiques ou pour certains personnels spécifiques, en vertu du principe de continuité.",
    "type": "vf",
    "question": "Le droit de grève existe-t-il dans le service public ?",
    "vrai": true,
-   "justification": "il est licite pour la défense d'intérêts professionnels, mais interdit pour motifs politiques ou pour certains personnels spécifiques, en vertu du principe de continuité 18.",
+   "justification": "il est licite pour la défense d'intérêts professionnels, mais interdit pour motifs politiques ou pour certains personnels spécifiques, en vertu du principe de continuité.",
    "derniereVerification": null,
    "aVerifier": "Réponse issue du guide, non revérifiée."
   },
@@ -15970,11 +15788,11 @@
    "sujet": "g-3",
    "niveau": 8,
    "famille": "M",
-   "explication": "Il permet à tout citoyen ou usager de s'informer et de s'assurer du bon fonctionnement de l'action publique, par exemple via l'accès aux décisions 19.",
+   "explication": "Il permet à tout citoyen ou usager de s'informer et de s'assurer du bon fonctionnement de l'action publique, par exemple via l'accès aux décisions.",
    "type": "libre",
    "question": "Qu'est-ce que le principe de transparence des services publics ?",
    "options": [
-    "Il permet à tout citoyen ou usager de s'informer et de s'assurer du bon fonctionnement de l'action publique, par exemple via l'accès aux décisions 19."
+    "Il permet à tout citoyen ou usager de s'informer et de s'assurer du bon fonctionnement de l'action publique, par exemple via l'accès aux décisions."
    ],
    "bonneReponse": 0,
    "derniereVerification": null,
@@ -15988,11 +15806,11 @@
    "sujet": "g-3",
    "niveau": 8,
    "famille": "M",
-   "explication": "Non, la collectivité est libre de choisir son mode de gestion, sauf lorsque la loi précise une modalité obligatoire 20.",
+   "explication": "Non, la collectivité est libre de choisir son mode de gestion, sauf lorsque la loi précise une modalité obligatoire.",
    "type": "vf",
    "question": "Une collectivité est-elle obligée d'externaliser un service public ?",
    "vrai": false,
-   "justification": "la collectivité est libre de choisir son mode de gestion, sauf lorsque la loi précise une modalité obligatoire 20.",
+   "justification": "la collectivité est libre de choisir son mode de gestion, sauf lorsque la loi précise une modalité obligatoire.",
    "derniereVerification": null,
    "aVerifier": "Réponse issue du guide, non revérifiée."
   },
@@ -16004,11 +15822,11 @@
    "sujet": "g-3",
    "niveau": 9,
    "famille": "M",
-   "explication": "En régie simple, le financement relève du budget général de la collectivité, tandis qu'une régie autonome a un budget individualisé 21.",
+   "explication": "En régie simple, le financement relève du budget général de la collectivité, tandis qu'une régie autonome a un budget individualisé.",
    "type": "libre",
    "question": "Quelle différence y a-t-il entre la régie simple et la régie autonome ?",
    "options": [
-    "En régie simple, le financement relève du budget général de la collectivité, tandis qu'une régie autonome a un budget individualisé 21."
+    "En régie simple, le financement relève du budget général de la collectivité, tandis qu'une régie autonome a un budget individualisé."
    ],
    "bonneReponse": 0,
    "derniereVerification": null,
@@ -16022,39 +15840,11 @@
    "sujet": "g-3",
    "niveau": 5,
    "famille": "M",
-   "explication": "Non, elle n'a pas la personnalité morale 21.",
+   "explication": "Non, elle n'a pas la personnalité morale.",
    "type": "vf",
    "question": "Une régie dotée de l'autonomie financière a-t-elle la personnalité morale ?",
    "vrai": false,
-   "justification": "elle n'a pas la personnalité morale 21.",
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
-  },
-  {
-   "id": "g-315",
-   "axe": "A7",
-   "sousTheme": "Service public et usagers",
-   "stIdx": 3,
-   "sujet": "g-3",
-   "niveau": 5,
-   "famille": "M",
-   "type": "assoc",
-   "question": "Associez chaque fonction d'une régie de recettes gérant un service public administratif (SPA) à l'autorité qui la nomme.",
-   "paires": [
-    [
-     "Agent comptable (comptable direct du Trésor)",
-     "Préfet"
-    ],
-    [
-     "Régisseur",
-     "Maire ou président"
-    ],
-    [
-     "Ordonnateur",
-     "Maire ou président"
-    ]
-   ],
-   "explication": "C'est le préfet qui nomme le comptable direct du Trésor pour une régie gérant un service public administratif.",
+   "justification": "elle n'a pas la personnalité morale.",
    "derniereVerification": null,
    "aVerifier": "Réponse issue du guide, non revérifiée."
   },
@@ -16066,11 +15856,11 @@
    "sujet": "g-3",
    "niveau": 9,
    "famille": "M",
-   "explication": "C'est un contrat confiant la gestion d'un service à un délégataire dont la rémunération est substantiellement liée aux résultats de l'exploitation 22.",
+   "explication": "C'est un contrat confiant la gestion d'un service à un délégataire dont la rémunération est substantiellement liée aux résultats de l'exploitation.",
    "type": "libre",
    "question": "Qu'est-ce qu'une Délégation de Service Public (DSP) ?",
    "options": [
-    "C'est un contrat confiant la gestion d'un service à un délégataire dont la rémunération est substantiellement liée aux résultats de l'exploitation 22."
+    "C'est un contrat confiant la gestion d'un service à un délégataire dont la rémunération est substantiellement liée aux résultats de l'exploitation."
    ],
    "bonneReponse": 0,
    "derniereVerification": null,
@@ -16084,11 +15874,11 @@
    "sujet": "g-3",
    "niveau": 9,
    "famille": "M",
-   "explication": "Dans la concession, le concessionnaire paie les frais des équipements, alors que dans l'affermage, les ouvrages nécessaires sont construits et remis par la collectivité 23.",
+   "explication": "Dans la concession, le concessionnaire paie les frais des équipements, alors que dans l'affermage, les ouvrages nécessaires sont construits et remis par la collectivité.",
    "type": "libre",
    "question": "Quelle est la différence majeure entre l'affermage et la concession ?",
    "options": [
-    "Dans la concession, le concessionnaire paie les frais des équipements, alors que dans l'affermage, les ouvrages nécessaires sont construits et remis par la collectivité 23."
+    "Dans la concession, le concessionnaire paie les frais des équipements, alors que dans l'affermage, les ouvrages nécessaires sont construits et remis par la collectivité."
    ],
    "bonneReponse": 0,
    "derniereVerification": null,
@@ -16102,15 +15892,15 @@
    "sujet": "g-3",
    "niveau": 9,
    "famille": "M",
-   "explication": "C'est un contrat administratif où une personne publique confie à un tiers le financement, la construction et l'exploitation d'équipements moyennant une rémunération publique lissée dans le temps 24.",
    "type": "libre",
    "question": "Qu'est-ce qu'un contrat de partenariat (PPP) ?",
    "options": [
-    "C'est un contrat administratif où une personne publique confie à un tiers le financement, la construction et l'exploitation d'équipements moyennant une rémunération publique lissée dans le temps 24."
+    "C'est aujourd'hui le marché de partenariat, qui a remplacé le contrat de partenariat en 2016 : l'acheteur confie une mission globale (financement, conception, construction, exploitation) rémunérée par des loyers étalés dans le temps."
    ],
    "bonneReponse": 0,
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "explication": "On parle désormais du marché de partenariat, qui a remplacé le contrat de partenariat depuis l'ordonnance de 2015 reprise au Code de la commande publique : l'acheteur confie à un tiers une mission globale (financement, conception, construction, exploitation) rémunérée par des loyers étalés dans le temps, sous des conditions de recours strictes.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "g-319",
@@ -16124,7 +15914,7 @@
    "question": "Une Société d'Économie Mixte (SEM) doit compter au moins sept actionnaires, dont au moins une personne privée.",
    "vrai": true,
    "justification": "La SEM associe capitaux publics et privés ; la loi impose un minimum de sept actionnaires et la présence d'au moins un actionnaire privé aux côtés des collectivités.",
-   "explication": "Une SEM nécessite au moins sept actionnaires, dont au moins une personne privée 23.",
+   "explication": "Une SEM nécessite au moins sept actionnaires, dont au moins une personne privée.",
    "derniereVerification": null,
    "aVerifier": "Réponse issue du guide, non revérifiée."
   },
@@ -16169,11 +15959,11 @@
    "sujet": "g-3",
    "niveau": 10,
    "famille": "M",
-   "explication": "C'est une société anonyme dont le capital est détenu à 100 % par des collectivités territoriales ou leurs groupements, avec au moins deux actionnaires 25, 26.",
+   "explication": "C'est une société anonyme dont le capital est détenu à 100 % par des collectivités territoriales ou leurs groupements, avec au moins deux actionnaires.",
    "type": "libre",
    "question": "Qu'est-ce qu'une Société Publique Locale (SPL) ?",
    "options": [
-    "C'est une société anonyme dont le capital est détenu à 100 % par des collectivités territoriales ou leurs groupements, avec au moins deux actionnaires 25, 26."
+    "C'est une société anonyme dont le capital est détenu à 100 % par des collectivités territoriales ou leurs groupements, avec au moins deux actionnaires."
    ],
    "bonneReponse": 0,
    "derniereVerification": null,
@@ -16203,11 +15993,11 @@
    "sujet": "g-3",
    "niveau": 10,
    "famille": "M",
-   "explication": "Le risque est la requalification en gestion de fait des deniers publics due au manque de contrôle institutionnel régulier 26.",
+   "explication": "Le risque est la requalification en gestion de fait des deniers publics due au manque de contrôle institutionnel régulier.",
    "type": "libre",
    "question": "Quel est le risque de gérer un service via une association loi 1901 très dépendante financièrement de la commune ?",
    "options": [
-    "Le risque est la requalification en gestion de fait des deniers publics due au manque de contrôle institutionnel régulier 26."
+    "Le risque est la requalification en gestion de fait des deniers publics due au manque de contrôle institutionnel régulier."
    ],
    "bonneReponse": 0,
    "derniereVerification": null,
@@ -16221,11 +16011,11 @@
    "sujet": "g-3",
    "niveau": 10,
    "famille": "M",
-   "explication": "C'est un groupement créé pour mettre en commun des moyens de partenaires publics et privés, avec une représentation majoritaire des intérêts publics 27.",
+   "explication": "C'est un groupement créé pour mettre en commun des moyens de partenaires publics et privés, avec une représentation majoritaire des intérêts publics.",
    "type": "libre",
    "question": "Qu'est-ce qu'un Groupement d'Intérêt Public (GIP) ?",
    "options": [
-    "C'est un groupement créé pour mettre en commun des moyens de partenaires publics et privés, avec une représentation majoritaire des intérêts publics 27."
+    "C'est un groupement créé pour mettre en commun des moyens de partenaires publics et privés, avec une représentation majoritaire des intérêts publics."
    ],
    "bonneReponse": 0,
    "derniereVerification": null,
@@ -16246,8 +16036,8 @@
     "unite": "communes",
     "segments": [
      {
-      "l": "Environ 36 700",
-      "v": 36700
+      "l": "Environ 34 875",
+      "v": 34875
      },
      {
       "l": "Environ 15 000",
@@ -16260,9 +16050,9 @@
     ]
    },
    "bonneCible": 0,
-   "explication": "Il y a environ 36 700 communes en France.",
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "explication": "Il y a environ 34 875 communes en France au 1er janvier 2026, ce nombre décroissant régulièrement du fait des fusions en communes nouvelles.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "g-326",
@@ -16293,7 +16083,7 @@
     ]
    },
    "bonneBarre": 1,
-   "explication": "La France compte 101 départements 28.",
+   "explication": "La France compte 101 départements.",
    "derniereVerification": null,
    "aVerifier": "Réponse issue du guide, non revérifiée."
   },
@@ -16309,16 +16099,16 @@
    "question": "Complétez le nombre de régions françaises.",
    "texte": "Depuis le 1er janvier 2016, la France métropolitaine et d'outre-mer compte {1} régions.",
    "mots": [
-    "13"
-   ],
-   "leurres": [
-    "22",
-    "27",
     "18"
    ],
-   "explication": "La France compte 13 régions.",
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "leurres": [
+    "13",
+    "22",
+    "27"
+   ],
+   "explication": "La France métropolitaine compte 13 régions depuis le 1er janvier 2016, mais en intégrant les régions et collectivités uniques d'outre-mer, le total s'élève à 18 régions.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "g-328",
@@ -16336,18 +16126,18 @@
     "barres": [
      {
       "l": "Femmes maires",
-      "v": 14
+      "v": 20.8
      },
      {
       "l": "Hommes maires",
-      "v": 86
+      "v": 79.2
      }
     ]
    },
    "bonneBarre": 0,
-   "explication": "Le taux de féminisation des maires est de 14 % 29.",
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "explication": "Le taux de féminisation des maires est d'environ 21 % (20,8 %) au début de 2024 ; ce chiffre, très volatile, devra être revérifié après le renouvellement municipal de mars 2026.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "g-329",
@@ -16394,15 +16184,15 @@
    "sujet": "g-2",
    "niveau": 9,
    "famille": "M",
-   "explication": "Il donne des avis consultatifs au président du conseil régional et doit obligatoirement être consulté sur le projet de budget 31.",
    "type": "libre",
    "question": "Quel est le but du Conseil Économique et Social Régional (CESR) ?",
    "options": [
-    "Il donne des avis consultatifs au président du conseil régional et doit obligatoirement être consulté sur le projet de budget 31."
+    "Le CESER — Conseil économique, social et environnemental régional — est une assemblée consultative placée auprès du conseil régional, obligatoirement consultée sur le budget et les grands schémas."
    ],
    "bonneReponse": 0,
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "explication": "Depuis la loi Grenelle II du 12 juillet 2010, le CESR est devenu le CESER (Conseil économique, social et environnemental régional) : c'est une assemblée consultative placée auprès du conseil régional, obligatoirement consultée sur le projet de budget et les grands schémas régionaux.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "g-332",
@@ -16457,7 +16247,7 @@
     "5",
     "15"
    ],
-   "explication": "Le nombre de conseillers est passé de 9 à 7 pour les communes de moins de 100 habitants 32.",
+   "explication": "Le nombre de conseillers est passé de 9 à 7 pour les communes de moins de 100 habitants.",
    "derniereVerification": null,
    "aVerifier": "Réponse issue du guide, non revérifiée."
   },
@@ -16469,11 +16259,11 @@
    "sujet": "g-2",
    "niveau": 10,
    "famille": "M",
-   "explication": "C'est le principe \"d'un bulletin, deux listes\" où les candidats à l'intercommunalité figurent sur la même liste électorale que ceux aux municipales 32.",
+   "explication": "C'est le principe \"d'un bulletin, deux listes\" où les candidats à l'intercommunalité figurent sur la même liste électorale que ceux aux municipales.",
    "type": "libre",
    "question": "Qu'est-ce que le système de \"fléchage\" mis en place pour les intercommunalités ?",
    "options": [
-    "C'est le principe \"d'un bulletin, deux listes\" où les candidats à l'intercommunalité figurent sur la même liste électorale que ceux aux municipales 32."
+    "C'est le principe \"d'un bulletin, deux listes\" où les candidats à l'intercommunalité figurent sur la même liste électorale que ceux aux municipales."
    ],
    "bonneReponse": 0,
    "derniereVerification": null,
@@ -16507,7 +16297,7 @@
    "question": "Dans les communes de moins de 1.000 habitants, les conseillers communautaires sont désignés en suivant l'ordre du tableau du conseil municipal.",
    "vrai": true,
    "justification": "Sous ce seuil, il n'y a pas de fléchage sur une liste distincte : les sièges communautaires reviennent au maire puis aux adjoints et conseillers, dans l'ordre du tableau.",
-   "explication": "Ils sont désignés en suivant l'ordre du tableau du conseil municipal 32.",
+   "explication": "Ils sont désignés en suivant l'ordre du tableau du conseil municipal.",
    "derniereVerification": null,
    "aVerifier": "Réponse issue du guide, non revérifiée."
   },
@@ -16625,7 +16415,7 @@
    ],
    "phraseFautive": 2,
    "correction": "En réalité, c'est la région qui gère les lycées, tandis que le département a la charge des collèges (bâtiments et personnel TOS).",
-   "explication": "C'est le département qui exerce cette compétence 36.",
+   "explication": "C'est le département qui exerce cette compétence.",
    "derniereVerification": null,
    "aVerifier": "Réponse issue du guide, non revérifiée."
   },
@@ -16673,7 +16463,7 @@
    "question": "C'est l'État, et non les collectivités territoriales, qui définit le contenu des enseignements et délivre les diplômes scolaires.",
    "vrai": true,
    "justification": "Les collectivités gèrent surtout les bâtiments et la vie matérielle des établissements (construction, entretien, personnel technique), tandis que l'État conserve la compétence pédagogique : programmes, diplômes et personnel enseignant.",
-   "explication": "C'est l'État qui en a la responsabilité 37, 38.",
+   "explication": "C'est l'État qui en a la responsabilité.",
    "derniereVerification": null,
    "aVerifier": "Réponse issue du guide, non revérifiée."
   },
@@ -16717,11 +16507,11 @@
    "sujet": "g-2",
    "niveau": 8,
    "famille": "M",
-   "explication": "La région organise ces transports scolaires, à l'exception des élèves handicapés 39, 40.",
+   "explication": "La région organise ces transports scolaires, à l'exception des élèves handicapés.",
    "type": "libre",
    "question": "Qui organise les transports scolaires situés hors des périmètres de transports urbains ?",
    "options": [
-    "La région organise ces transports scolaires, à l'exception des élèves handicapés 39, 40."
+    "La région organise ces transports scolaires, à l'exception des élèves handicapés."
    ],
    "bonneReponse": 0,
    "derniereVerification": null,
@@ -16735,11 +16525,11 @@
    "sujet": "g-2",
    "niveau": 8,
    "famille": "M",
-   "explication": "C'est la région qui établit ce schéma 36, 41.",
+   "explication": "C'est la région qui établit ce schéma.",
    "type": "libre",
    "question": "À qui revient l'élaboration du schéma prévisionnel des formations professionnelles (lycées) ?",
    "options": [
-    "C'est la région qui établit ce schéma 36, 41."
+    "C'est la région qui établit ce schéma."
    ],
    "bonneReponse": 0,
    "derniereVerification": null,
@@ -16753,11 +16543,11 @@
    "sujet": "g-2",
    "niveau": 8,
    "famille": "M",
-   "explication": "C'est le département 42.",
+   "explication": "C'est le département.",
    "type": "libre",
    "question": "Quelle collectivité pilote le plan départemental des itinéraires de promenade et de randonnée ?",
    "options": [
-    "C'est le département 42."
+    "C'est le département."
    ],
    "bonneReponse": 0,
    "derniereVerification": null,
@@ -16771,11 +16561,11 @@
    "sujet": "g-1",
    "niveau": 8,
    "famille": "M",
-   "explication": "Elle a supprimé leur clause générale de compétence 43, 44.",
+   "explication": "Elle a supprimé leur clause générale de compétence.",
    "type": "libre",
    "question": "Quelle clause la loi NOTRe a-t-elle supprimée pour les départements et les régions ?",
    "options": [
-    "Elle a supprimé leur clause générale de compétence 43, 44."
+    "Elle a supprimé leur clause générale de compétence."
    ],
    "bonneReponse": 0,
    "derniereVerification": null,
@@ -16789,11 +16579,11 @@
    "sujet": "g-1",
    "niveau": 8,
    "famille": "M",
-   "explication": "La commune est la seule à conserver cette clause 43, 44.",
+   "explication": "La commune est la seule à conserver cette clause.",
    "type": "libre",
    "question": "Quelle collectivité territoriale est la seule à conserver la clause de compétence générale aujourd'hui ?",
    "options": [
-    "La commune est la seule à conserver cette clause 43, 44."
+    "La commune est la seule à conserver cette clause."
    ],
    "bonneReponse": 0,
    "derniereVerification": null,
@@ -16807,11 +16597,11 @@
    "sujet": "g-1",
    "niveau": 9,
    "famille": "M",
-   "explication": "Il s'agit de la culture, du sport, du tourisme, de la promotion des langues régionales et de l'éducation populaire 43.",
+   "explication": "Il s'agit de la culture, du sport, du tourisme, de la promotion des langues régionales et de l'éducation populaire.",
    "type": "libre",
    "question": "Quelles sont les cinq \"compétences partagées\" instaurées par la loi NOTRe ?",
    "options": [
-    "Il s'agit de la culture, du sport, du tourisme, de la promotion des langues régionales et de l'éducation populaire 43."
+    "Il s'agit de la culture, du sport, du tourisme, de la promotion des langues régionales et de l'éducation populaire."
    ],
    "bonneReponse": 0,
    "derniereVerification": null,
@@ -16825,11 +16615,11 @@
    "sujet": "g-1",
    "niveau": 9,
    "famille": "M",
-   "explication": "Elle confie à une collectivité spécifique la mission d'organiser les modalités d'une compétence impliquant plusieurs acteurs publics 45.",
+   "explication": "Elle confie à une collectivité spécifique la mission d'organiser les modalités d'une compétence impliquant plusieurs acteurs publics.",
    "type": "libre",
    "question": "Quel est le rôle de la notion de \"chef de file\" créée par la loi MAPAM ?",
    "options": [
-    "Elle confie à une collectivité spécifique la mission d'organiser les modalités d'une compétence impliquant plusieurs acteurs publics 45."
+    "Elle confie à une collectivité spécifique la mission d'organiser les modalités d'une compétence impliquant plusieurs acteurs publics."
    ],
    "bonneReponse": 0,
    "derniereVerification": null,
@@ -16843,11 +16633,11 @@
    "sujet": "g-1",
    "niveau": 10,
    "famille": "M",
-   "explication": "Elle l'est pour l'aménagement et le développement durable, le développement économique, l'innovation, et l'intermodalité des transports 46.",
+   "explication": "Elle l'est pour l'aménagement et le développement durable, le développement économique, l'innovation, et l'intermodalité des transports.",
    "type": "libre",
    "question": "Pour quels grands thèmes la Région est-elle désignée comme \"chef de file\" ?",
    "options": [
-    "Elle l'est pour l'aménagement et le développement durable, le développement économique, l'innovation, et l'intermodalité des transports 46."
+    "Elle l'est pour l'aménagement et le développement durable, le développement économique, l'innovation, et l'intermodalité des transports."
    ],
    "bonneReponse": 0,
    "derniereVerification": null,
@@ -16861,11 +16651,11 @@
    "sujet": "g-1",
    "niveau": 10,
    "famille": "M",
-   "explication": "Il l'est pour l'action sociale, le développement social, l'autonomie des personnes et la solidarité des territoires 46.",
+   "explication": "Il l'est pour l'action sociale, le développement social, l'autonomie des personnes et la solidarité des territoires.",
    "type": "libre",
    "question": "Pour quels domaines le Département est-il désigné comme \"chef de file\" ?",
    "options": [
-    "Il l'est pour l'action sociale, le développement social, l'autonomie des personnes et la solidarité des territoires 46."
+    "Il l'est pour l'action sociale, le développement social, l'autonomie des personnes et la solidarité des territoires."
    ],
    "bonneReponse": 0,
    "derniereVerification": null,
@@ -16879,11 +16669,11 @@
    "sujet": "g-1",
    "niveau": 10,
    "famille": "M",
-   "explication": "Il doit y présenter un rapport sur les orientations budgétaires, les engagements pluriannuels, ainsi que la structure et la gestion de la dette 47.",
+   "explication": "Il doit y présenter un rapport sur les orientations budgétaires, les engagements pluriannuels, ainsi que la structure et la gestion de la dette.",
    "type": "libre",
    "question": "Que doit présenter le maire dans son rapport du Débat d'Orientation Budgétaire (DOB) ?",
    "options": [
-    "Il doit y présenter un rapport sur les orientations budgétaires, les engagements pluriannuels, ainsi que la structure et la gestion de la dette 47."
+    "Il doit y présenter un rapport sur les orientations budgétaires, les engagements pluriannuels, ainsi que la structure et la gestion de la dette."
    ],
    "bonneReponse": 0,
    "derniereVerification": null,
@@ -16897,11 +16687,11 @@
    "sujet": "g-2",
    "niveau": 8,
    "famille": "M",
-   "explication": "L'EPCI est régi par le principe de spécialité et le principe d'exclusivité 48.",
+   "explication": "L'EPCI est régi par le principe de spécialité et le principe d'exclusivité.",
    "type": "libre",
    "question": "Quels sont les deux principes juridiques régissant l'intervention d'un Établissement Public de Coopération Intercommunale ?",
    "options": [
-    "L'EPCI est régi par le principe de spécialité et le principe d'exclusivité 48."
+    "L'EPCI est régi par le principe de spécialité et le principe d'exclusivité."
    ],
    "bonneReponse": 0,
    "derniereVerification": null,
@@ -16915,11 +16705,11 @@
    "sujet": "g-2",
    "niveau": 10,
    "famille": "M",
-   "explication": "L'EPCI ne peut intervenir que dans le champ strict des compétences qui lui ont été transférées ou déléguées 48.",
+   "explication": "L'EPCI ne peut intervenir que dans le champ strict des compétences qui lui ont été transférées ou déléguées.",
    "type": "libre",
    "question": "Que signifie le principe de spécialité fonctionnelle pour un EPCI ?",
    "options": [
-    "L'EPCI ne peut intervenir que dans le champ strict des compétences qui lui ont été transférées ou déléguées 48."
+    "L'EPCI ne peut intervenir que dans le champ strict des compétences qui lui ont été transférées ou déléguées."
    ],
    "bonneReponse": 0,
    "derniereVerification": null,
@@ -16933,11 +16723,11 @@
    "sujet": "g-2",
    "niveau": 10,
    "famille": "M",
-   "explication": "Ce transfert dessaisit les communes de toute intervention dans le domaine concerné au profit exclusif de l'EPCI 45, 48.",
+   "explication": "Ce transfert dessaisit les communes de toute intervention dans le domaine concerné au profit exclusif de l'EPCI.",
    "type": "libre",
    "question": "Qu'implique le principe d'exclusivité une fois qu'une commune a transféré une compétence à un EPCI ?",
    "options": [
-    "Ce transfert dessaisit les communes de toute intervention dans le domaine concerné au profit exclusif de l'EPCI 45, 48."
+    "Ce transfert dessaisit les communes de toute intervention dans le domaine concerné au profit exclusif de l'EPCI."
    ],
    "bonneReponse": 0,
    "derniereVerification": null,
@@ -16951,11 +16741,11 @@
    "sujet": "g-2",
    "niveau": 10,
    "famille": "M",
-   "explication": "On distingue les syndicats de communes, les communautés de communes, les communautés d'agglomération, les communautés urbaines et les métropoles 48.",
+   "explication": "On distingue les syndicats de communes, les communautés de communes, les communautés d'agglomération, les communautés urbaines et les métropoles.",
    "type": "libre",
    "question": "Quelles sont les principales catégories d'EPCI existantes ?",
    "options": [
-    "On distingue les syndicats de communes, les communautés de communes, les communautés d'agglomération, les communautés urbaines et les métropoles 48."
+    "On distingue les syndicats de communes, les communautés de communes, les communautés d'agglomération, les communautés urbaines et les métropoles."
    ],
    "bonneReponse": 0,
    "derniereVerification": null,
@@ -16969,15 +16759,15 @@
    "sujet": "g-2",
    "niveau": 8,
    "famille": "M",
-   "explication": "Elle doit assumer 7 compétences obligatoires 49.",
    "type": "libre",
    "question": "Combien de compétences obligatoires doit assumer une communauté de communes à terme selon la loi NOTRe ?",
    "options": [
-    "Elle doit assumer 7 compétences obligatoires 49."
+    "Le décompte a évolué : il faut se référer directement à l'article L5214-16 du CGCT. Les compétences eau et assainissement, un temps annoncées comme obligatoires au 1er janvier 2026, ne le sont plus depuis la loi du 11 avril 2025."
    ],
    "bonneReponse": 0,
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "explication": "Le nombre de compétences obligatoires des communautés de communes a évolué à plusieurs reprises (GEMAPI en 2018, eau/assainissement, loi 3DS, loi du 11 avril 2025) ; il convient de se référer directement à l'article L5214-16 du CGCT plutôt qu'à un chiffre figé.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "g-359",
@@ -16987,15 +16777,15 @@
    "sujet": "g-2",
    "niveau": 8,
    "famille": "M",
-   "explication": "Elle doit assumer 9 compétences obligatoires 50.",
    "type": "libre",
    "question": "Combien de compétences obligatoires incombent à une communauté d'agglomération ?",
    "options": [
-    "Elle doit assumer 9 compétences obligatoires 50."
+    "Elle doit assumer dix groupes de compétences obligatoires, auxquels s'ajoutent cinq groupes de compétences pouvant être transférés."
    ],
    "bonneReponse": 0,
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "explication": "Selon l'article L5216-5 du CGCT (guide de l'intercommunalité de la DGCL, édition 2025), une communauté d'agglomération doit assumer dix groupes de compétences obligatoires, auxquels s'ajoutent cinq groupes de compétences optionnelles pouvant être transférés.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "g-360",
@@ -17005,11 +16795,11 @@
    "sujet": "g-2",
    "niveau": 8,
    "famille": "M",
-   "explication": "Il s'agit de la gestion des milieux aquatiques et de la prévention des inondations 49, 50.",
+   "explication": "Il s'agit de la gestion des milieux aquatiques et de la prévention des inondations.",
    "type": "libre",
    "question": "Quelle nouvelle grande compétence intercommunale (GEMAPI) est devenue obligatoire au 1er janvier 2018 ?",
    "options": [
-    "Il s'agit de la gestion des milieux aquatiques et de la prévention des inondations 49, 50."
+    "Il s'agit de la gestion des milieux aquatiques et de la prévention des inondations."
    ],
    "bonneReponse": 0,
    "derniereVerification": null,
@@ -17023,15 +16813,15 @@
    "sujet": "g-2",
    "niveau": 9,
    "famille": "M",
-   "explication": "Le transfert est rendu obligatoire au 1er janvier 2020 49, 50.",
    "type": "libre",
    "question": "À quelle date la loi NOTRe a-t-elle fixé le transfert obligatoire des compétences Eau et Assainissement aux EPCI ?",
    "options": [
-    "Le transfert est rendu obligatoire au 1er janvier 2020 49, 50."
+    "Le transfert obligatoire au 1er janvier 2020, reporté au 1er janvier 2026 par la loi du 3 août 2018, a été supprimé par la loi n°2025-327 du 11 avril 2025 : les communes n'ayant pas transféré ces compétences les conservent."
    ],
    "bonneReponse": 0,
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "explication": "La loi NOTRe avait fixé le transfert obligatoire au 1er janvier 2020, échéance reportée au 1er janvier 2026 par la loi du 3 août 2018, mais l'obligation a finalement été supprimée par la loi n°2025-327 du 11 avril 2025 : les communes qui n'avaient pas transféré ces compétences les conservent, et les transferts déjà réalisés ne sont pas remis en cause.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "g-362",
@@ -17041,11 +16831,11 @@
    "sujet": "g-2",
    "niveau": 9,
    "famille": "M",
-   "explication": "La métropole doit regrouper plusieurs communes d'un seul tenant et sans enclave 51.",
+   "explication": "La métropole doit regrouper plusieurs communes d'un seul tenant et sans enclave.",
    "type": "libre",
    "question": "Géographiquement, comment la loi définit-elle le territoire d'une Métropole ?",
    "options": [
-    "La métropole doit regrouper plusieurs communes d'un seul tenant et sans enclave 51."
+    "La métropole doit regrouper plusieurs communes d'un seul tenant et sans enclave."
    ],
    "bonneReponse": 0,
    "derniereVerification": null,
@@ -17059,11 +16849,11 @@
    "sujet": "g-2",
    "niveau": 9,
    "famille": "M",
-   "explication": "L'ordonnateur est le Président de l'EPCI 52.",
+   "explication": "L'ordonnateur est le Président de l'EPCI.",
    "type": "libre",
    "question": "Qui est l'ordonnateur des recettes et des dépenses au sein d'une intercommunalité ?",
    "options": [
-    "L'ordonnateur est le Président de l'EPCI 52."
+    "L'ordonnateur est le Président de l'EPCI."
    ],
    "bonneReponse": 0,
    "derniereVerification": null,
@@ -17077,15 +16867,15 @@
    "sujet": "g-2",
    "niveau": 9,
    "famille": "M",
-   "explication": "C'est la Contribution Économique Territoriale (CET), composée de la CFE et de la CVAE 45.",
    "type": "libre",
    "question": "Quelle est la source de recettes fiscales remplaçant l'ancienne taxe professionnelle pour les EPCI ?",
    "options": [
-    "C'est la Contribution Économique Territoriale (CET), composée de la CFE et de la CVAE 45."
+    "C'est la contribution économique territoriale (CET), composée de la CFE et de la CVAE — la CVAE faisant l'objet d'une suppression progressive engagée par la loi de finances pour 2023, dont le calendrier a été reporté à plusieurs reprises."
    ],
    "bonneReponse": 0,
-   "derniereVerification": null,
-   "aVerifier": "Réponse issue du guide, non revérifiée."
+   "explication": "C'est la contribution économique territoriale (CET), composée de la cotisation foncière des entreprises (CFE) et de la cotisation sur la valeur ajoutée des entreprises (CVAE), cette dernière faisant l'objet d'une suppression progressive engagée par la loi de finances pour 2023 dont le calendrier a été reporté à plusieurs reprises.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "g-365",
@@ -17095,11 +16885,11 @@
    "sujet": "g-2",
    "niveau": 9,
    "famille": "M",
-   "explication": "C'est l'Imposition Forfaitaire sur les Entreprises de Réseaux 45.",
+   "explication": "C'est l'Imposition Forfaitaire sur les Entreprises de Réseaux.",
    "type": "libre",
    "question": "Qu'est-ce que l'IFER, impôt perçu par les EPCI ?",
    "options": [
-    "C'est l'Imposition Forfaitaire sur les Entreprises de Réseaux 45."
+    "C'est l'Imposition Forfaitaire sur les Entreprises de Réseaux."
    ],
    "bonneReponse": 0,
    "derniereVerification": null,
@@ -17113,11 +16903,11 @@
    "sujet": "g-2",
    "niveau": 9,
    "famille": "M",
-   "explication": "C'est la Métropole de Lyon 30, 53.",
+   "explication": "C'est la Métropole de Lyon.",
    "type": "libre",
    "question": "Quelle collectivité regroupe, depuis le 1er janvier 2015, les compétences du Grand Lyon et celles de son département ?",
    "options": [
-    "C'est la Métropole de Lyon 30, 53."
+    "C'est la Métropole de Lyon."
    ],
    "bonneReponse": 0,
    "derniereVerification": null,
@@ -17131,11 +16921,11 @@
    "sujet": "g-2",
    "niveau": 9,
    "famille": "M",
-   "explication": "Il s'agissait du Schéma Départemental de Coopération Intercommunale (SDCI) 54.",
+   "explication": "Il s'agissait du Schéma Départemental de Coopération Intercommunale (SDCI).",
    "type": "libre",
    "question": "Quel document visant à réduire le nombre de syndicats et rationaliser les EPCI le préfet devait-il arrêter en 2016 ?",
    "options": [
-    "Il s'agissait du Schéma Départemental de Coopération Intercommunale (SDCI) 54."
+    "Il s'agissait du Schéma Départemental de Coopération Intercommunale (SDCI)."
    ],
    "bonneReponse": 0,
    "derniereVerification": null,
