@@ -409,21 +409,30 @@ export function Exercice({
               className={optionClass(
                 corrige
                   ? i === q.phraseFautive
-                    ? "ko"
-                    : "neutre"
+                    ? "ok"
+                    : rep === i
+                      ? "ko"
+                      : "neutre"
                   : rep === i
                     ? "choisi"
                     : "neutre",
               )}
             >
+              {corrige && i === q.phraseFautive ? (
+                <span className="mb-1 block text-[0.68rem] font-semibold tracking-[0.12em] text-success uppercase">
+                  Phrase fautive
+                </span>
+              ) : null}
               {s}
             </button>
           ))}
           <p className="text-xs text-muted-foreground">
-            Touchez la phrase fautive. En correction, elle apparaît encadrée en rouge.
+            Les phrases se lisent à la suite. Touchez celle qui est fautive : en correction, elle
+            apparaît en vert, et votre choix erroné éventuel en rouge.
           </p>
         </div>
       )}
+
 
       {q.type === "vf" && (
         <div className="grid grid-cols-2 gap-2">
