@@ -511,6 +511,23 @@ export function Exercice({
         </ol>
       )}
 
+      {q.type === "ordre" && corrige && !estJuste && (
+        <div className="rounded-xl border border-success/40 bg-success/10 p-3">
+          <p className="text-[0.68rem] tracking-[0.15em] text-muted-foreground uppercase">
+            Ordre attendu
+          </p>
+          <ol className="mt-2 space-y-1.5">
+            {(q.items ?? []).map((s, i) => (
+              <li key={s} className="text-sm leading-snug">
+                <span className="mr-2 text-muted-foreground">{i + 1}.</span>
+                {s}
+              </li>
+            ))}
+          </ol>
+        </div>
+      )}
+
+
       {q.type === "frise" && (
         <div className="space-y-2">
           {(q.points ?? []).map((p, i) => {
