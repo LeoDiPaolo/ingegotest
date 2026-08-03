@@ -166,7 +166,7 @@ export function Exercice({
   const autoNote = AUTO_NOTE.includes(q.type);
 
   const melangeMots = useMemo(
-    () => melange([...(q.mots ?? []), ...(q.leurres ?? [])], graineDe(q.id)),
+    () => melange([...new Set([...(q.mots ?? []), ...(q.leurres ?? [])])], graineDe(q.id)),
     [q],
   );
   const melangeDroite = useMemo(
@@ -409,21 +409,30 @@ export function Exercice({
               className={optionClass(
                 corrige
                   ? i === q.phraseFautive
-                    ? "ko"
-                    : "neutre"
+                    ? "ok"
+                    : rep === i
+                      ? "ko"
+                      : "neutre"
                   : rep === i
                     ? "choisi"
                     : "neutre",
               )}
             >
+              {corrige && i === q.phraseFautive ? (
+                <span className="mb-1 block text-[0.68rem] font-semibold tracking-[0.12em] text-success uppercase">
+                  Phrase fautive
+                </span>
+              ) : null}
               {s}
             </button>
           ))}
           <p className="text-xs text-muted-foreground">
-            Touchez la phrase fautive. En correction, elle apparaît encadrée en rouge.
+            Les phrases se lisent à la suite. Touchez celle qui est fautive : en correction, elle
+            apparaît en vert, et votre choix erroné éventuel en rouge.
           </p>
         </div>
       )}
+
 
       {q.type === "vf" && (
         <div className="grid grid-cols-2 gap-2">
@@ -501,6 +510,23 @@ export function Exercice({
           ))}
         </ol>
       )}
+
+      {q.type === "ordre" && corrige && !estJuste && (
+        <div className="rounded-xl border border-success/40 bg-success/10 p-3">
+          <p className="text-[0.68rem] tracking-[0.15em] text-muted-foreground uppercase">
+            Ordre attendu
+          </p>
+          <ol className="mt-2 space-y-1.5">
+            {(q.items ?? []).map((s, i) => (
+              <li key={s} className="text-sm leading-snug">
+                <span className="mr-2 text-muted-foreground">{i + 1}.</span>
+                {s}
+              </li>
+            ))}
+          </ol>
+        </div>
+      )}
+
 
       {q.type === "frise" && (
         <div className="space-y-2">
@@ -715,7 +741,7 @@ export function Exercice({
           )}
 
           {q.correction && (
-            <div className="rounded-xl border border-destructive/40 bg-destructive/10 p-3">
+            <div className="rounded-xl border border-border bg-elevated p-3">
               <p className="text-[0.68rem] tracking-[0.15em] text-muted-foreground uppercase">
                 Correction
               </p>
