@@ -658,30 +658,30 @@
    "niveau": 7,
    "famille": "S",
    "type": "assoc",
-   "question": "Associez chaque notion à sa définition dans une mission de maîtrise d'œuvre.",
+   "question": "Associez chaque notion à sa définition exacte concernant les documents d'exécution dans une mission de maîtrise d'œuvre.",
    "paires": [
     [
      "VISA",
-     "Le maître d'œuvre vérifie les plans d'exécution produits par l'entreprise"
+     "Élément de mission par lequel le maître d'œuvre vérifie la conformité au projet des documents d'exécution établis par l'entrepreneur"
     ],
     [
-     "EXE",
-     "Le maître d'œuvre produit lui-même les documents d'exécution"
+     "EXE (élément complémentaire)",
+     "Élément de mission distinct, confié en plus à la maîtrise d'œuvre, par lequel celle-ci établit elle-même les documents d'exécution à la place de l'entreprise"
     ],
     [
      "Auteur des plans en VISA",
-     "L'entreprise titulaire du marché de travaux"
+     "L'entreprise titulaire du marché de travaux, qui produit ses plans d'exécution et de synthèse"
     ],
     [
-     "Auteur des plans en EXE",
-     "Le maître d'œuvre"
+     "Auteur des plans en cas d'EXE confié à la MOE",
+     "Le maître d'œuvre (ou le BET qu'il mandate), rémunéré spécifiquement pour cette mission complémentaire"
     ],
     [
-     "Conséquence du choix VISA/EXE",
-     "Impact direct sur la répartition des responsabilités et le taux d'honoraires"
+     "Conséquence du choix VISA / EXE",
+     "Un déplacement de la charge de production des plans, avec impact direct sur la répartition des responsabilités et sur le montant des honoraires de maîtrise d'œuvre"
     ]
    ],
-   "explication": "En VISA, l'entreprise établit les documents d'exécution que le maître d'œuvre vise pour conformité au projet ; en EXE, c'est le maître d'œuvre qui les produit lui-même. Ce choix a un impact direct sur la répartition des responsabilités et sur le taux d'honoraires.",
+   "explication": "Le VISA fait partie des éléments de mission qui peuvent être confiés dans une mission de base : le maître d'œuvre ne dessine rien, il contrôle la conformité au projet des plans d'exécution produits par l'entreprise, qui reste responsable des choix d'exécution. L'EXE, en revanche, n'est pas un dû automatique de la mission de maîtrise d'œuvre : c'est un élément de mission complémentaire, distinct et rémunéré à part, par lequel le maître d'ouvrage confie explicitement au maître d'œuvre (ou à son BET) l'établissement même des documents d'exécution, à la place de l'entreprise. Retenir que « la maîtrise d'œuvre produit les plans EXE » comme une règle générale est une erreur : par défaut, dans le schéma classique loi MOP, c'est l'entreprise qui exécute et fournit ses plans, visés par la maîtrise d'œuvre. Le choix VISA ou EXE doit être arbitré dès le programme et se répercute sur le CCTP, l'allotissement et le montant des honoraires de maîtrise d'œuvre.",
    "derniereVerification": "2026-08",
    "aVerifier": null
   },
@@ -819,12 +819,12 @@
    "question": "Les trois principes fondamentaux de la commande publique.",
    "options": [
     "Égalité, transparence, efficacité",
-    "Liberté d'accès, égalité de traitement, transparence des procédures",
+    "Liberté d'accès à la commande publique, égalité de traitement des candidats, transparence des procédures",
     "Concurrence, publicité, sincérité",
     "Liberté, allotissement, transparence"
    ],
    "bonneReponse": 1,
-   "explication": "Ces trois principes ont valeur constitutionnelle et s'appliquent à tous les marchés, y compris ceux dispensés de publicité. Depuis la loi Climat et résilience, un article L.3-1 du code de la commande publique y adjoint la contribution aux objectifs de développement durable, qui n'a pas exactement la même portée juridique mais fonde le verdissement.",
+   "explication": "Ces trois principes, énoncés à l'article L.3 du code de la commande publique, ont valeur constitutionnelle (Conseil constitutionnel, décision du 26 juin 2003) et s'appliquent à tous les contrats de la commande publique, y compris ceux dispensés de publicité et de mise en concurrence formalisées. La liberté d'accès interdit toute barrière artificielle à la candidature (exigences disproportionnées, spécifications orientées vers un opérateur). L'égalité de traitement impose de fournir la même information à tous les candidats et d'appliquer les mêmes critères sans différenciation injustifiée. La transparence des procédures garantit la traçabilité des choix et permet le contrôle du juge administratif et de la chambre régionale des comptes. Leur méconnaissance est le premier motif d'annulation d'une procédure en référé précontractuel. Depuis la loi Climat et résilience, l'article L.3-1 du code ajoute la prise en compte des objectifs de développement durable, qui vient compléter — sans s'y substituer — ce triptyque historique.",
    "derniereVerification": "2026-08",
    "aVerifier": null
   },
@@ -969,15 +969,7 @@
    ],
    "elements": [
     [
-     "Durée maximale de l'accord-cadre : 4 ans",
-     0
-    ],
-    [
-     "Durée maximale de l'accord-cadre : 8 ans",
-     1
-    ],
-    [
-     "Dépassement possible en cas exceptionnel dûment justifié",
+     "Concerne notamment les achats courants des collectivités territoriales",
      0
     ],
     [
@@ -985,15 +977,23 @@
      1
     ],
     [
+     "Durée maximale de l'accord-cadre : 8 ans",
+     1
+    ],
+    [
      "Justification par l'objet du marché ou l'amortissement d'investissements en cas de dépassement",
      0
     ],
     [
-     "Concerne notamment les achats courants des collectivités territoriales",
+     "Durée maximale de l'accord-cadre : 4 ans",
+     0
+    ],
+    [
+     "Dépassement possible en cas exceptionnel dûment justifié",
      0
     ]
    ],
-   "explication": "La durée maximale d'un accord-cadre est de 4 ans pour un pouvoir adjudicateur et de 8 ans pour une entité adjudicatrice. Le dépassement reste possible dans des cas exceptionnels justifiés, notamment par l'objet ou l'amortissement d'investissements.",
+   "explication": "Une collectivité territoriale est, dans l'immense majorité de ses achats, un pouvoir adjudicateur au sens du code de la commande publique : elle est alors soumise à une durée maximale d'accord-cadre de 4 ans, sauf dans des cas exceptionnels dûment justifiés, notamment par l'objet du marché ou par la nécessité d'amortir des investissements lourds (par exemple un accord-cadre de maintenance d'équipements coûteux). Le régime d'entité adjudicatrice, plus souple avec une durée maximale de 8 ans, concerne les opérateurs de réseaux : eau potable, assainissement, énergie, transport urbain, ports, aéroports. Une même collectivité peut d'ailleurs relever des deux régimes selon l'activité concernée : pouvoir adjudicateur pour ses achats de fonctionnement courant, entité adjudicatrice pour la gestion de son réseau d'eau potable si elle l'exploite en régie. Confondre les deux régimes expose à un accord-cadre entaché d'illégalité pour durée excessive, sanctionnable en référé contractuel.",
    "derniereVerification": "2026-08",
    "aVerifier": null
   },
@@ -1027,15 +1027,15 @@
    "niveau": 2,
    "famille": "S",
    "type": "qcm",
-   "question": "Un acheteur peut-il retenir le prix comme critère unique d'attribution ?",
+   "question": "Un acheteur public peut-il retenir le prix comme unique critère d'attribution d'un marché de travaux ?",
    "options": [
-    "Jamais",
-    "Oui, sans condition",
-    "Oui, seulement si la prestation est standardisée — et à compter du 21 août 2026, le critère unique doit être le coût global",
-    "Oui, seulement en procédure adaptée"
+    "Jamais, quelle que soit la nature de la prestation",
+    "Oui, sans aucune condition",
+    "Oui, mais seulement pour des prestations standardisées, et à compter du 22 août 2026 le critère unique éventuel devra être le coût global",
+    "Oui, seulement si la procédure est un accord-cadre"
    ],
    "bonneReponse": 2,
-   "explication": "Le critère unique du prix est aujourd'hui réservé aux achats de prestations standardisées. La réforme issue de la loi Climat et résilience durcit encore : à partir du 21 août 2026, si l'acheteur retient un critère unique, ce doit être le coût, apprécié sur le cycle de vie. Pour des travaux de bâtiment, le critère unique était de toute façon difficilement défendable.",
+   "explication": "Le code de la commande publique (art. L. 2152-7) interdit en principe le critère unique du prix, sauf pour les achats de fournitures ou services standardisés dont la qualité est insensible aux variations de méthode. La loi Climat et résilience du 22 août 2021 est allée plus loin : à compter du 22 août 2026 (cinq ans après sa promulgation), si l'acheteur choisit de retenir un critère unique, celui-ci doit obligatoirement être le coût, apprécié selon une approche globale pouvant intégrer le coût du cycle de vie (énergie, maintenance, fin de vie). Pour des travaux de bâtiment, la pluralité des critères (prix, valeur technique, délai, performance environnementale) reste de toute façon quasi systématique, car la prestation n'est jamais réellement standardisée. Ignorer cette règle expose la procédure à un référé précontractuel pour manquement aux obligations de publicité et de mise en concurrence, le choix des critères faisant partie du contrôle du juge.",
    "derniereVerification": "2026-08",
    "aVerifier": null
   },
@@ -1048,15 +1048,15 @@
    "niveau": 4,
    "famille": "S",
    "type": "qcm",
-   "question": "Une offre est reçue avec un DPGF incomplet en procédure adaptée. L'acheteur :",
+   "question": "Une offre est reçue avec un DPGF incomplet en procédure adaptée. Si l'acheteur ne fait rien de particulier, que se passe-t-il ?",
    "options": [
-    "doit systématiquement la rejeter",
-    "peut, s'il l'a prévu, demander la régularisation d'une offre irrégulière",
-    "doit relancer toute la consultation",
-    "peut corriger lui-même le document"
+    "L'offre doit être automatiquement rejetée comme irrégulière, sans possibilité de régularisation",
+    "L'acheteur peut choisir d'inviter le candidat à régulariser son offre irrégulière dans un délai approprié, mais s'il n'exerce pas cette faculté l'offre reste irrégulière et doit être écartée",
+    "L'acheteur doit obligatoirement relancer toute la consultation",
+    "L'acheteur peut corriger lui-même le document à la place du candidat"
    ],
    "bonneReponse": 1,
-   "explication": "La régularisation des offres irrégulières est possible en procédure adaptée et en procédure formalisée avec négociation ; elle est facultative mais doit être offerte à tous les candidats placés dans la même situation. Elle ne peut pas modifier les caractéristiques substantielles de l'offre. Une offre inacceptable ou inappropriée, elle, n'est pas régularisable.",
+   "explication": "Une offre dont le DPGF est incomplet ou incohérent avec l'acte d'engagement est une offre irrégulière au sens de l'article L. 2152-2 du CCP. Sa régularisation est une simple faculté de l'acheteur, ouverte aussi bien en procédure adaptée qu'en procédure formalisée avec négociation : elle n'a pas besoin d'être annoncée à l'avance dans les documents de consultation, mais l'acheteur doit alors offrir la même possibilité à tous les candidats placés dans une situation identique, sous un délai approprié et identique, pour respecter l'égalité de traitement. Si l'acheteur ne met pas en œuvre cette faculté, ou si l'irrégularité provient d'une offre inacceptable (prix hors budget) ou inappropriée (hors sujet), l'offre reste irrégulière et doit purement et simplement être écartée : elle ne peut pas être classée ni retenue en l'état. La régularisation ne peut jamais porter sur les caractéristiques substantielles de l'offre ni revenir à négocier le prix dans un appel d'offres.",
    "derniereVerification": "2026-08",
    "aVerifier": null
   },
@@ -1069,17 +1069,17 @@
    "niveau": 3,
    "famille": "S",
    "type": "qcm",
-   "question": "L'entreprise conteste un ordre de service prescrivant des travaux supplémentaires. Que doit-elle faire selon le CCAG-Travaux 2021 ?",
+   "question": "Le titulaire d'un marché de travaux reçoit un ordre de service prescrivant des travaux supplémentaires qu'il estime injustifiés. Selon le CCAG-Travaux 2021, quelle est l'attitude à adopter ?",
    "options": [
-    "Suspendre l'exécution jusqu'à accord",
-    "Exécuter l'ordre de service et formuler ses réserves dans le délai prévu",
-    "Saisir directement le juge",
-    "Refuser sans formalité"
+    "Suspendre immédiatement l'exécution des travaux jusqu'à un accord amiable sur ce point",
+    "Exécuter sans délai l'ordre de service et notifier par écrit ses réserves motivées dans le délai fixé par le marché, à défaut 15 jours",
+    "Saisir directement le tribunal administratif sans exécuter l'ordre de service",
+    "Refuser l'ordre de service sans aucune formalité tant qu'aucun accord sur le prix n'est trouvé"
    ],
    "bonneReponse": 1,
-   "explication": "Le principe est l'exécution sous réserve : l'entreprise applique l'OS et notifie ses observations par écrit dans un délai court, à peine de forclusion. C'est le point sur lequel les entreprises perdent le plus souvent leurs réclamations — et symétriquement, le point où un maître d'ouvrage négligent accumule des OS non chiffrés.",
-   "aVerifier": "Le délai exact de formulation des réserves (15 jours dans ma mémoire) est à confirmer dans l'article 3.8 du CCAG-Travaux 2021.",
-   "derniereVerification": "2026-08"
+   "explication": "Le principe posé par l'article 3.8 du CCAG-Travaux 2021 est celui de l'exécution sous réserve : le titulaire doit exécuter l'ordre de service même s'il le conteste, et faire connaître ses observations par écrit, motivées, dans le délai fixé par les documents particuliers du marché ou, à défaut, dans un délai de quinze jours à compter de sa notification, sous peine de forclusion (perte du droit de réclamer ultérieurement). Refuser purement et simplement d'exécuter l'ordre de service expose l'entreprise à une mise en demeure, puis le cas échéant à une résiliation à ses torts exclusifs. C'est le point sur lequel les entreprises perdent le plus souvent leurs réclamations financières, faute d'avoir formalisé leurs réserves dans les délais ; à l'inverse, un maître d'ouvrage qui multiplie les ordres de service non chiffrés et non régularisés par avenant s'expose à devoir indemniser des surcoûts qu'il n'a pas anticipés budgétairement.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "a2-13",
@@ -1111,15 +1111,15 @@
    "niveau": 2,
    "famille": "S",
    "type": "qcm",
-   "question": "Des travaux supplémentaires imprévus représentent 12 % du montant initial d'un marché de travaux formalisé. Modification possible sans nouvelle procédure ?",
+   "question": "Des travaux supplémentaires imprévus représentent 12 % du montant initial d'un marché de travaux passé en procédure formalisée. Une modification par avenant, sans nouvelle procédure de publicité et de mise en concurrence, est-elle possible ?",
    "options": [
-    "Non, il faut relancer",
-    "Oui, plusieurs fondements sont mobilisables, notamment les circonstances imprévues ou les travaux supplémentaires devenus nécessaires",
-    "Oui, mais uniquement par avenant de moins de 5 %",
-    "Seulement avec accord du préfet"
+    "Non, tout dépassement de 10 % impose obligatoirement de relancer une consultation",
+    "Oui : plusieurs fondements légaux sont mobilisables, notamment les prestations supplémentaires devenues nécessaires ou les circonstances imprévisibles, chacun plafonné à 50 % du montant initial",
+    "Oui, mais seulement si l'avenant reste sous le seuil de 5 % du montant initial",
+    "Non, une modification de plus de 10 % nécessite systématiquement l'accord du préfet"
    ],
    "bonneReponse": 1,
-   "explication": "Le code prévoit six hypothèses de modification en cours d'exécution. Les plus utilisées en travaux : prestations supplémentaires devenues nécessaires et circonstances imprévues, chacune plafonnée à 50 % du montant initial ; et les modifications de faible montant, limitées à 15 % en travaux et sous le seuil européen. Dans tous les cas, la modification ne doit pas changer la nature globale du marché.",
+   "explication": "Le code de la commande publique (articles L. 2194-1 et R. 2194-1 et suivants) prévoit six hypothèses limitatives de modification d'un marché en cours d'exécution sans nouvelle mise en concurrence. Elles ne s'appliquent pas toutes de la même façon selon le montant du dépassement : les modifications de faible montant sont plafonnées à 10 % du montant initial pour les marchés de fournitures et de services et à 15 % pour les marchés de travaux, à condition de rester sous les seuils européens de procédure formalisée, et ne nécessitent aucune justification particulière autre que le respect de ce plafond. Au-delà, il faut mobiliser un autre fondement : les prestations supplémentaires devenues nécessaires (travaux non prévus initialement mais indispensables à la réalisation de l'ouvrage, dont le changement de titulaire est impossible pour des raisons économiques ou techniques) et les circonstances imprévisibles (événement extérieur aux parties, imprévisible lors de la conclusion du contrat) sont chacune plafonnées à 50 % du montant initial par modification, sans plafond cumulé global fixé par la loi mais sous réserve de ne jamais changer la nature globale du marché. À 12 %, l'avenant est donc parfaitement licite au titre de l'un de ces deux fondements ; en revanche, s'il s'agissait d'un marché passé par la CAO, cet avenant supérieur à 5 % du montant initial devrait, en application de l'article L. 1414-4 du CGCT, être soumis pour avis à la commission d'appel d'offres avant signature.",
    "derniereVerification": "2026-08",
    "aVerifier": null
   },
@@ -1132,15 +1132,15 @@
    "niveau": 1,
    "famille": "S",
    "type": "qcm",
-   "question": "L'avance est obligatoire lorsque le marché dépasse :",
+   "question": "Le versement d'une avance au titulaire d'un marché public devient obligatoire lorsque le marché dépasse :",
    "options": [
     "20 000 € HT et 3 mois de durée",
     "50 000 € HT et 2 mois de durée",
     "100 000 € HT quelle que soit la durée",
-    "le seuil européen"
+    "le seuil des procédures formalisées"
    ],
    "bonneReponse": 1,
-   "explication": "Avance obligatoire d'au moins 5 % pour les marchés de plus de 50 000 € HT et de plus de deux mois. Depuis 2021, elle est portée à 20 % pour les PME titulaires de marchés de l'État et à 10 % minimum pour les PME titulaires de marchés des collectivités dont les dépenses de fonctionnement dépassent 60 M€. C'est un levier de trésorerie important pour les petites entreprises du BTP.",
+   "explication": "L'avance est obligatoire, à hauteur d'au moins 5 % du montant du marché, dès que celui-ci dépasse 50 000 € HT et que son délai d'exécution est supérieur à deux mois (article R. 2191-3 du CCP). Le taux minimal a été renforcé pour soutenir la trésorerie des PME : 20 % pour les PME titulaires de marchés de l'État, et au moins 10 % pour les PME titulaires de marchés passés par les collectivités territoriales, leurs groupements et leurs établissements publics dont les dépenses réelles de fonctionnement figurant au dernier compte administratif dépassent 60 millions d'euros. En dessous du seuil de 50 000 € HT ou pour une durée de deux mois ou moins, l'avance reste facultative, à la discrétion de l'acheteur. C'est un levier de trésorerie déterminant pour les petites entreprises du BTP, qui doivent financer l'achat de matériaux et la mobilisation de leur personnel avant tout premier paiement ; son omission ou son retard de versement peut fragiliser sérieusement une PME sur un chantier de plusieurs mois.",
    "derniereVerification": "2026-08",
    "aVerifier": null
   },
@@ -1153,15 +1153,15 @@
    "niveau": 3,
    "famille": "S",
    "type": "qcm",
-   "question": "Délai global de paiement applicable à une commune, et conséquence du dépassement.",
+   "question": "Quel est le délai global de paiement applicable à un marché de travaux passé par une commune, à partir de quelle date commence-t-il à courir, et que se passe-t-il en cas de dépassement ?",
    "options": [
-    "45 jours, intérêts moratoires seuls",
-    "30 jours, intérêts moratoires plus une indemnité forfaitaire de frais de recouvrement",
-    "60 jours, aucune sanction",
-    "30 jours, pénalité de 1 %"
+    "45 jours à compter de l'ordre de service de réception ; seuls des intérêts moratoires sont dus",
+    "30 jours à compter de la réception de la demande de paiement (dépôt de la facture, notamment via Chorus Pro) ; des intérêts moratoires et une indemnité forfaitaire de 40 € pour frais de recouvrement sont dus de plein droit",
+    "60 jours à compter du visa du maître d'œuvre ; aucune sanction n'est prévue",
+    "30 jours à compter du mandatement comptable ; une pénalité de 1 % du montant de la facture est due"
    ],
    "bonneReponse": 1,
-   "explication": "30 jours pour les collectivités et leurs établissements (50 jours pour les établissements publics de santé). Le dépassement ouvre droit de plein droit aux intérêts moratoires et à une indemnité forfaitaire de 40 € par facture. Le point de départ est la réception de la demande de paiement, ou celle du service fait s'il est postérieur.",
+   "explication": "Le délai global de paiement est de 30 jours pour les collectivités territoriales, leurs établissements publics et leurs groupements (50 jours pour les établissements publics de santé), en application du décret n° 2013-269 du 29 mars 2013. Le point de départ est la date de réception de la demande de paiement par le pouvoir adjudicateur ou par le maître d'œuvre s'il en est le destinataire désigné au marché : concrètement, il s'agit de la date de dépôt de la facture électronique sur Chorus Pro, obligatoire pour tous les titulaires y compris sous-traitants payés directement, cette date faisant foi et étant horodatée. Si le marché prévoit une opération de vérification distincte (visa du maître d'œuvre sur le décompte, admission des prestations), ce délai de vérification s'impute sur le délai global de 30 jours et ne s'y ajoute pas, sauf clause contraire limitée et encadrée par le CCP. Le dépassement ouvre droit de plein droit, sans mise en demeure ni formalité préalable, aux intérêts moratoires calculés au taux de la Banque centrale européenne majoré de 8 points, ainsi qu'à une indemnité forfaitaire de 40 € pour frais de recouvrement par facture, cumulable avec les intérêts. Le non-respect répété du délai global de paiement expose en outre la collectivité à un signalement de la chambre régionale des comptes et fragilise la trésorerie des entreprises, en particulier des PME du bâtiment.",
    "derniereVerification": "2026-08",
    "aVerifier": null
   },
@@ -1249,15 +1249,15 @@
    "niveau": 1,
    "famille": "S",
    "type": "qcm",
-   "question": "Le titulaire n'a pas transmis son projet de décompte final dans le délai. Le maître d'ouvrage :",
+   "question": "Le titulaire n'a pas transmis son projet de décompte final dans le délai contractuel. Que peut faire le maître d'ouvrage (ou le maître d'œuvre en son nom) ?",
    "options": [
-    "ne peut rien faire et doit attendre",
-    "peut, après mise en demeure restée sans effet, établir d'office le décompte final",
-    "doit résilier le marché",
-    "doit saisir le comptable public"
+    "Attendre indéfiniment la transmission du titulaire, sans autre démarche possible",
+    "Mettre en demeure le titulaire puis, si cela reste sans effet dans un délai de dix jours, établir d'office le projet de décompte final",
+    "Résilier immédiatement le marché pour faute du titulaire",
+    "Saisir directement le comptable public pour qu'il procède au paiement"
    ],
    "bonneReponse": 1,
-   "explication": "Le CCAG prévoit qu'à défaut de projet de décompte final dans le délai, et après mise en demeure, le maître d'œuvre établit d'office le décompte. Le décompte général notifié et accepté sans réserve devient définitif : il éteint les créances et réclamations réciproques. C'est l'acte le plus protecteur — et le plus souvent négligé — de la fin de marché.",
+   "explication": "L'article 13.3.2 du CCAG-Travaux 2021 organise précisément cette hypothèse : si le titulaire ne transmet pas son projet de décompte final dans le délai prévu (en général 30 jours à compter de la notification de la décision de réception ou de la date d'achèvement des travaux), le maître d'œuvre le met en demeure de le faire. Si cette mise en demeure reste infructueuse dans un délai de dix jours, le maître d'œuvre établit lui-même le projet de décompte final aux frais du titulaire défaillant, sur la base des documents en sa possession. Cette procédure évite qu'un titulaire négligent ou en litige avec le maître d'ouvrage ne bloque indéfiniment la clôture financière du marché. Le décompte général, une fois notifié et signé sans réserve (ou tacitement accepté à défaut de contestation dans le délai de 30 jours), devient le décompte général et définitif (DGD) : il a un effet exonératoire réciproque, éteignant toute réclamation ultérieure sauf celles expressément réservées. Omettre cette étape expose le maître d'ouvrage à voir le marché rester financièrement ouvert sine die, avec un risque contentieux et de prescription mal maîtrisé.",
    "derniereVerification": "2026-08",
    "aVerifier": null
   },
@@ -1328,12 +1328,12 @@
    "niveau": 8,
    "famille": "E",
    "type": "libre",
-   "question": "L'obligation de critère environnemental garantit-elle un achat public réellement plus vertueux ?",
-   "explication": "Argument favorable : l'obligation généralise une pratique jusqu'ici volontaire et fait de l'achat un levier de transition. Limites : absence de seuil de pondération, difficulté à formuler un critère mesurable et lié à l'objet du marché, risque de greenwashing et de contentieux sur la vérification des engagements. Une jurisprudence encadrant les pondérations symboliques est probable mais n'existe pas encore — le sujet est ouvert, et c'est un excellent terrain d'oral si vous savez tenir les deux bouts.",
+   "question": "L'obligation, depuis la loi Climat et résilience, d'intégrer un critère environnemental dans l'attribution des marchés publics garantit-elle un achat public réellement plus vertueux sur le plan écologique ?",
+   "explication": "Non, pas mécaniquement, et c'est tout l'intérêt du débat. Arguments favorables : l'obligation (article L. 2152-7 du code de la commande publique, applicable depuis le 22 août 2026 pour l'ensemble des marchés, après une entrée en vigueur progressive depuis 2021 pour certains secteurs) généralise une pratique jusqu'ici volontaire, oblige les acheteurs à objectiver la performance environnementale des offres et fait de la commande publique — environ 10 % du PIB — un levier de transition. Limites structurelles : la loi n'impose aucun seuil de pondération minimal pour ce critère, qui peut donc être fixé à un niveau symbolique (2 ou 3 %) sans influer réellement sur le choix de l'offre économiquement la plus avantageuse ; la difficulté à formuler un critère mesurable, vérifiable et réellement lié à l'objet du marché reste réelle, notamment pour des prestations immatérielles ; le risque de greenwashing des offres et de contentieux sur le contrôle a posteriori des engagements environnementaux pris par les titulaires est documenté. Une jurisprudence administrative venant encadrer les pondérations symboliques ou sanctionner des critères environnementaux insincères est probable à moyen terme mais n'est pas encore stabilisée à l'été 2026 : le sujet reste ouvert et se prête bien à une discussion argumentée à l'oral, à condition de tenir les deux bouts du raisonnement (obligation réelle / effectivité incertaine).",
    "derniereVerification": "2026-08",
    "aVerifier": null,
    "options": [
-    "Argument favorable : l'obligation généralise une pratique jusqu'ici volontaire et fait de l'achat un levier de transition. Limites : absence de seuil de pondération, difficulté à formuler un critère mesurable et lié à l'objet du marché, risque de greenwashing et de contentieux sur la vérification des engagements. Une jurisprudence encadrant les pondérations symboliques est probable mais n'existe pas encore — le sujet est ouvert, et c'est un excellent terrain d'oral si vous savez tenir les deux bouts."
+    "Non automatiquement : l'obligation légale d'un critère environnemental (art. L. 2152-7 CCP, généralisée au 22 août 2026) structure la pratique mais, faute de seuil de pondération minimal imposé, son poids peut rester symbolique ; son efficacité dépend de la capacité de l'acheteur à formuler un critère mesurable, lié à l'objet du marché, et à contrôler réellement son exécution, sous peine de greenwashing contractuel."
    ],
    "bonneReponse": 0
   },
@@ -1423,12 +1423,12 @@
    "type": "erreur",
    "question": "Une seule de ces trois affirmations sur le statut du NF DTU est fausse. Laquelle ?",
    "phraseFautive": 2,
-   "explication": "Le NF DTU est une norme volontaire. Il devient obligatoire pour les parties quand le CCTP y renvoie — d'où l'importance de rédiger ce renvoi avec la version datée. En dehors du contrat, il conserve une portée forte : le juge et les experts le considèrent comme l'expression des règles de l'art.",
+   "explication": "Le NF DTU est, par nature, une norme d'application volontaire élaborée par la Commission générale de normalisation du bâtiment et homologuée par l'AFNOR ; il ne s'agit ni d'un règlement ni d'une loi, contrairement par exemple à un arrêté de sécurité incendie. Il devient obligatoire pour les parties au contrat de travaux dès lors que le CCTP y renvoie explicitement, ce qui justifie d'en préciser la version datée pour éviter toute ambiguïté sur la référence applicable en cas d'évolution du texte en cours de marché. En revanche, l'affirmation selon laquelle il n'aurait « aucune valeur » en l'absence de mention contractuelle est fausse : même non visé au contrat, le NF DTU conserve une portée en dehors du champ contractuel, car le juge civil et les experts judiciaires le considèrent classiquement comme l'expression écrite des règles de l'art. Un ouvrage non conforme à un NF DTU pertinent, même non mentionné au marché, pourra donc être jugé fautif au titre de la responsabilité contractuelle de droit commun ou des garanties légales (parfait achèvement, biennale, décennale), sur le fondement de l'article 1792 du code civil.",
    "derniereVerification": "2026-08",
    "aVerifier": null,
    "segments": [
     "Le NF DTU est une norme d'application volontaire, et non un texte réglementaire.",
-    "Il devient obligatoire pour les parties dès lors que le CCTP y renvoie contractuellement.",
+    "Il devient obligatoire pour les parties dès lors que le CCTP y renvoie contractuellement, avec une version datée.",
     "Il n'a aucune valeur en cas de litige si le marché ne le mentionne pas explicitement."
    ]
   },
@@ -1441,11 +1441,11 @@
    "niveau": 7,
    "famille": "S",
    "type": "vf",
-   "question": "Un CCTP ancien qui renvoie aux normes NF P 22 pour la charpente métallique reste valable tel quel lors d'une mise à jour du document.",
+   "question": "Un CCTP ancien qui renvoie aux normes NF P 22 (règles CM66) pour le calcul de la charpente métallique reste valable tel quel lors d'une mise à jour du document.",
    "vrai": false,
-   "justification": "Ces normes de calcul françaises ont été retirées et remplacées par les Eurocodes (EN 1990 à 1999) et leurs annexes nationales, seuls cohérents avec les marquages CE actuels. Maintenir l'ancienne référence crée une contradiction entre pièces du marché.",
-   "explication": "Les normes de calcul françaises ont été remplacées par les Eurocodes et leurs annexes nationales, seules cohérentes avec les marquages CE des produits et les hypothèses de charges actuelles. Maintenir des références retirées crée une contradiction interne entre pièces du marché — et une porte ouverte aux réclamations.",
-   "derniereVerification": null,
+   "justification": "Ces anciennes normes de calcul françaises (règles CM66, NF P 22-xxx) ont été retirées du catalogue AFNOR et remplacées, depuis 2010, par les Eurocodes (NF EN 1990 à 1999) et leurs annexes nationales, seuls référentiels aujourd'hui cohérents avec le marquage CE des produits de construction et les hypothèses de charges actuelles. Maintenir l'ancienne référence dans un CCTP mis à jour crée une contradiction interne entre les pièces du marché.",
+   "explication": "Ce cas ne se limite pas à la charpente métallique : la même vigilance s'impose pour tous les corps d'état dont les normes de calcul françaises historiques ont été remplacées par les Eurocodes, notamment le béton armé (BAEL/BPEL remplacés par l'Eurocode 2), le bois (CB71 remplacé par l'Eurocode 5) et le parasismique (PS92 remplacé par l'Eurocode 8 et le zonage sismique de 2010). Le retrait officiel de ces anciennes normes signifie qu'elles ne sont plus mises à jour ni soutenues par l'AFNOR et qu'elles ne correspondent plus aux exigences actuelles de marquage CE des matériaux, ni aux hypothèses de charges climatiques et sismiques révisées depuis. Un CCTP reconduit sans relecture d'une opération à l'autre, pratique malheureusement courante pour gagner du temps sur la rédaction des pièces techniques, est le terrain privilégé de ce type d'erreur. Les conséquences en cas de sinistre sont sérieuses : un expert judiciaire ou un contrôleur technique constatant une référence à une norme retirée pourra en tirer argument pour caractériser une faute de conception ou de rédaction des pièces marché, avec un risque de mise en cause de la responsabilité du maître d'œuvre rédacteur.",
+   "derniereVerification": "2026-08",
    "aVerifier": null
   },
   {
@@ -1536,23 +1536,23 @@
    "paires": [
     [
      "A",
-     "Perméabilité à l'air"
+     "Perméabilité à l'air (classes A1 à A4)"
     ],
     [
      "E",
-     "Étanchéité à l'eau"
+     "Étanchéité à l'eau (classes E1 à E9A/E1500)"
     ],
     [
      "V",
-     "Résistance au vent"
+     "Résistance au vent (classes V1 à V5, avec flèche associée A/B/C)"
     ],
     [
      "Choix du classement",
-     "Fonction de l'exposition du bâtiment (hauteur, zone de vent, rugosité du site)"
+     "Fonction de l'exposition du bâtiment : hauteur, zone de vent réglementaire, rugosité du site et effets locaux (relief, mistral)"
     ]
    ],
-   "explication": "A = air, E = eau, V = vent. Le classement se choisit en fonction de l'exposition (hauteur du bâtiment, zone de vent, rugosité du site). Sous-dimensionner l'AEV sur un bâtiment exposé au mistral est une cause fréquente d'infiltrations en façade.",
-   "derniereVerification": null,
+   "explication": "Le classement AEV (norme NF EN 12207 pour l'air, NF EN 12208 pour l'eau, NF EN 12210 pour le vent) qualifie la performance d'une menuiserie extérieure sur trois plans distincts : A pour l'étanchéité à l'air, E pour l'étanchéité à l'eau, V pour la résistance mécanique au vent. Le classement à retenir dans un CCTP ne doit jamais être fixé de façon forfaitaire : il dépend directement de l'exposition réelle du bâtiment, croisant la zone de vent réglementaire (carte de l'Eurocode 1 partie 1-4), la hauteur de l'ouvrage, la rugosité du site (urbain dense, campagne ouverte, bord de mer) et les effets locaux amplificateurs comme un couloir de vent ou une exposition frontale au mistral dans la vallée du Rhône ou au sud du Massif central. Bonnes pratiques : faire réaliser ou vérifier le calcul d'exposition par le bureau d'études structure ou le fabricant, exiger un procès-verbal de classement AEV en cours de validité sur le produit proposé, et majorer prudemment la classe V dans les zones connues pour des rafales fréquentes. Sous-dimensionner l'AEV, en particulier la composante V, sur un bâtiment exposé au mistral ou à la tramontane est une cause récurrente et documentée d'infiltrations d'eau en façade, de désordres sur les joints et, dans les cas les plus graves, de mise en jeu de la garantie décennale.",
+   "derniereVerification": "2026-08",
    "aVerifier": null
   },
   {
@@ -1583,9 +1583,9 @@
    "niveau": 6,
    "famille": "S",
    "type": "echelle",
-   "question": "Cliquez sur la tranche correspondant à un indicateur DH de 800 °C.h.",
+   "question": "Un projet affiche un indicateur DH de 800 °C.h. Cliquez sur la tranche qui décrit sa situation au regard de la RE2020.",
    "bonneCible": 1,
-   "explication": "Le seuil haut est de 1 250 °C.h : au-delà, le projet est non conforme. Entre 350 et 1 250 °C.h, il reste conforme mais une consommation forfaitaire de refroidissement est ajoutée au Cep. Le message du régulateur est clair : traiter le confort d'été par la conception, pas par la climatisation.",
+   "explication": "Le seuil haut de l'indicateur DH est de 1 250 °C.h : au-delà, le projet est non conforme, sans possibilité de compensation. En dessous de 350 °C.h, aucune pénalité n'est appliquée. Entre ces deux bornes, le projet reste conforme mais une consommation forfaitaire de refroidissement est ajoutée au calcul du Cep, ce qui dégrade le résultat de cet autre indicateur réglementaire. Avec un DH de 800 °C.h, le projet se situe donc dans cette zone intermédiaire pénalisante : il passe la RE2020 mais au prix d'une pénalité chiffrée, ce qui doit alerter la maîtrise d'ouvrage sur l'insuffisance des protections solaires ou de l'inertie du bâtiment. Le message du régulateur est clair : traiter le confort d'été par la conception bioclimatique, pas par une climatisation ajoutée après coup.",
    "derniereVerification": "2026-08",
    "aVerifier": null,
    "echelle_g": {
@@ -1593,16 +1593,16 @@
     "unite": "°C.h",
     "tranches": [
      {
-      "borne": "200 °C.h (conforme, sans pénalité)",
-      "l": "200 °C.h (conforme, sans pénalité)"
+      "borne": "moins de 350 °C.h (conforme, sans pénalité)",
+      "l": "moins de 350 °C.h (conforme, sans pénalité)"
      },
      {
-      "borne": "800 °C.h (conforme, avec pénalité forfaitaire)",
-      "l": "800 °C.h (conforme, avec pénalité forfaitaire)"
+      "borne": "de 350 à 1 250 °C.h (conforme, avec pénalité forfaitaire sur le Cep)",
+      "l": "de 350 à 1 250 °C.h (conforme, avec pénalité forfaitaire sur le Cep)"
      },
      {
-      "borne": "1350 °C.h (non conforme)",
-      "l": "1350 °C.h (non conforme)"
+      "borne": "plus de 1 250 °C.h (non conforme)",
+      "l": "plus de 1 250 °C.h (non conforme)"
      }
     ]
    }
@@ -1616,26 +1616,26 @@
    "niveau": 5,
    "famille": "M",
    "type": "frise",
-   "question": "Placez les jalons de resserrement des seuils Ic construction de la RE2020 sur la frise chronologique.",
+   "question": "Placez sur la frise chronologique les jalons de la trajectoire de resserrement des seuils Ic construction de la RE2020.",
    "points": [
     [
      "2022",
-     "Entrée en vigueur de la RE2020"
+     "Seuils initiaux d'entrée en vigueur de la RE2020 pour le logement neuf"
     ],
     [
      "2025",
-     "Premier jalon de resserrement des seuils Ic construction"
+     "Seuils abaissés d'environ 15 % par rapport à 2022, pour accélérer la baisse du carbone incorporé"
     ],
     [
      "2028",
-     "Deuxième jalon, resserrement plus marqué"
+     "Seuils encore abaissés, avec anticipation d'un recours accru aux matériaux biosourcés ou géosourcés"
     ],
     [
      "2031",
-     "Troisième jalon de la trajectoire dégressive"
+     "Seuils les plus bas de la trajectoire prévue, marquant la dernière marche du dispositif réglementaire actuel"
     ]
    ],
-   "explication": "Les seuils Ic construction se resserrent par jalons successifs (2025, 2028, 2031), pour forcer progressivement le recours à des matériaux moins émissifs et à des systèmes constructifs plus sobres. Le jalon 2025 est passé ; celui de 2028 sera le prochain point de rupture pour les projets de bâtiments publics lancés à partir de 2026.",
+   "explication": "Les seuils Ic construction ne sont pas fixés une fois pour toutes : ils se resserrent par jalons successifs (2025, 2028, 2031) pour forcer progressivement le recours à des matériaux moins émissifs (bois, béton bas carbone, réemploi) et à des procédés constructifs plus sobres en carbone incorporé. Le jalon 2025 est déjà passé et a réduit les seuils d'environ 15 % par rapport à 2022 ; celui de 2028 sera le prochain point de rupture pour les projets de bâtiments publics lancés à partir de 2026, ce qui doit orienter dès aujourd'hui les choix de programmation (structure bois ou mixte, ACV comparative dès les études de faisabilité). Un maître d'ouvrage public qui ignore cette trajectoire risque de devoir revoir sa conception en cours d'études si le dépôt de permis glisse d'un jalon à l'autre.",
    "derniereVerification": "2026-08"
   },
   {
@@ -1685,11 +1685,11 @@
    "niveau": 7,
    "famille": "S",
    "type": "vf",
-   "question": "Dans un ERP neuf à étages, l'ascenseur devient obligatoire dès que l'effectif admis aux étages atteint 50 personnes.",
+   "question": "Dans un ERP neuf à étages, l'ascenseur devient obligatoire dès que l'effectif du public admis aux étages autres que celui de l'accès atteint 50 personnes.",
    "vrai": true,
-   "justification": "L'ascenseur est obligatoire si l'effectif admis aux étages autres que le niveau d'accès atteint ou dépasse 50 personnes. En deçà, il peut aussi être requis si certaines prestations ne peuvent être offertes au niveau accessible, ce qui le rend presque toujours nécessaire dans un équipement public.",
-   "explication": "L'ascenseur est obligatoire si l'effectif admis aux étages autres que le niveau d'accès atteint ou dépasse 50 personnes. En dessous, il l'est quand même si certaines prestations ne peuvent pas être offertes au niveau accessible — une clause qui, en pratique, rend l'ascenseur presque toujours nécessaire dans un équipement public.",
-   "derniereVerification": null,
+   "justification": "L'ascenseur est obligatoire dans un ERP neuf dès que l'effectif admis aux étages, mezzanines ou niveaux autres que celui accessible de plain-pied atteint ou dépasse 50 personnes. En deçà de ce seuil, il reste néanmoins requis si certaines prestations offertes par l'établissement ne peuvent être délivrées au niveau accessible, ce qui, dans un équipement recevant du public de service, le rend presque systématiquement nécessaire en pratique.",
+   "explication": "Ce seuil de 50 personnes, fixé par l'arrêté du 20 avril 2017 pour les ERP neufs, s'apprécie étage par étage (ou niveau non accessible de plain-pied par niveau), et non sur l'effectif total de l'établissement : un bâtiment de 300 personnes réparties sur trois niveaux de 100 chacun doit être équipé d'un ascenseur, même si aucun niveau ne représente la majorité de l'effectif. La clause de sauvegarde en dessous de 50 personnes est déterminante en équipement public : dès qu'une prestation (accueil, salle de classe spécifique, service administratif) n'est disponible qu'à l'étage, l'ascenseur redevient obligatoire quel que soit l'effectif, ce qui explique qu'en pratique la quasi-totalité des écoles, mairies ou établissements de santé à étages en soient équipés. Omettre cette règle en phase de programmation conduit à un refus de permis de construire ou, pire, à un avis défavorable de la commission de sécurité et d'accessibilité en fin de chantier, avec des reprises très coûteuses a posteriori.",
+   "derniereVerification": "2026-08",
    "aVerifier": null
   },
   {
@@ -1720,15 +1720,16 @@
    "niveau": 3,
    "famille": "S",
    "type": "qcm",
-   "question": "Que signifie le classement REI 60 d'une paroi ?",
+   "derniereVerification": "2026-08",
+   "question": "Que signifie le classement REI 60 attribué à une paroi séparative d'un local à risques dans un ERP ?",
    "options": [
     "Résistance mécanique pendant 60 minutes uniquement",
     "Résistance mécanique, étanchéité aux flammes et isolation thermique pendant 60 minutes",
     "Réaction au feu de niveau 60",
-    "Résistance électrique 60 minutes"
+    "Résistance électrique de la paroi pendant 60 minutes"
    ],
    "bonneReponse": 1,
-   "explication": "R = capacité portante, E = étanchéité aux gaz et flammes, I = isolation thermique. REI remplace l'ancien « coupe-feu », RE l'ancien « pare-flammes », R l'ancienne « stabilité au feu ». À ne pas confondre avec la réaction au feu, exprimée en euroclasses A1 à F avec les indices s (fumées) et d (gouttelettes)."
+   "explication": "REI 60 signifie que la paroi maintient simultanément, pendant 60 minutes d'exposition normalisée au feu, sa capacité portante (R), son étanchéité aux flammes et aux gaz chauds (E) et son isolation thermique côté non exposé (I). Ce classement, issu de la norme EN 13501-2, a remplacé l'ancienne appellation française « coupe-feu » ; de la même façon, RE a remplacé « pare-flammes » (étanchéité et capacité portante, sans exigence d'isolation) et R seul a remplacé « stabilité au feu ». Il ne faut pas confondre cette performance de résistance au feu, qui concerne la tenue de l'ouvrage dans le temps, avec la réaction au feu (euroclasses A1 à F, indices s et d), qui qualifie la contribution d'un matériau à l'inflammation et à la propagation. Dans un ERP, les parois de locaux à risques importants doivent typiquement présenter un degré coupe-feu (REI) d'au moins une heure, avec un bloc-porte associé lui-même classé, faute de quoi le compartimentage recherché est inopérant en cas de sinistre et la responsabilité du maître d'ouvrage peut être engagée."
   },
   {
    "id": "a3-16",
@@ -1779,31 +1780,31 @@
    "niveau": 5,
    "famille": "S",
    "type": "assoc",
-   "question": "Associez chaque objectif ou situation au bon élément relatif au désenfumage en ERP.",
+   "derniereVerification": "2026-08",
+   "question": "Associez chaque situation au principe applicable en matière de désenfumage dans un ERP.",
    "paires": [
     [
-     "Objectif principal",
-     "Maintenir praticables les cheminements d'évacuation"
+     "Finalité pour les occupants",
+     "Maintenir praticables les cheminements d'évacuation en évacuant fumées et gaz chauds"
     ],
     [
-     "Second objectif",
-     "Faciliter l'intervention des secours"
+     "Finalité pour les secours",
+     "Limiter la propagation de l'incendie et faciliter l'intervention des sapeurs-pompiers"
     ],
     [
-     "Local en rez-de-chaussée",
-     "Désenfumage dès 300 m²"
+     "Local accessible au public en rez-de-chaussée ou en étage",
+     "Désenfumage obligatoire au-delà de 300 m²"
     ],
     [
-     "Local en sous-sol ou aveugle",
-     "Désenfumage dès 100 m²"
+     "Local accessible au public en sous-sol ou local aveugle",
+     "Désenfumage obligatoire au-delà de 100 m²"
     ],
     [
      "Escalier encloisonné",
-     "Concerné par le désenfumage"
+     "Désenfumé de façon systématique, quelle que soit sa surface"
     ]
    ],
-   "explication": "Le désenfumage extrait fumées et gaz chauds pour maintenir une strate d'air respirable et une visibilité au niveau des circulations. Il concerne notamment les locaux de plus de 300 m² en rez-de-chaussée ou en étage, ceux de plus de 100 m² en sous-sol ou aveugles, et les escaliers encloisonnés.",
-   "aVerifier": "Les seuils de surface déclenchant le désenfumage sont à recaler sur l'article DF 6 du règlement de sécurité ; ils varient selon le type d'ERP."
+   "explication": "Le désenfumage poursuit deux finalités distinctes : maintenir une strate d'air suffisamment claire et respirable au niveau des cheminements pour permettre l'évacuation du public, et limiter la propagation du sinistre tout en facilitant la progression des secours. Les seuils de surface qui déclenchent l'obligation de désenfumer un local recevant du public sont fixés par l'article DF6 du règlement de sécurité contre l'incendie dans les ERP (arrêté du 25 juin 1980 modifié, notamment par l'arrêté du 22 mars 2019) : 300 m² pour un local situé en rez-de-chaussée ou en étage, mais seulement 100 m² s'il est en sous-sol ou dépourvu d'ouverture sur l'extérieur (local aveugle), car l'évacuation naturelle des fumées y est plus difficile. Les escaliers encloisonnés mettant en communication plusieurs niveaux doivent, eux, être désenfumés de façon systématique, par ouvrant en partie haute ou conduit, car ils constituent l'axe vertical d'évacuation le plus sensible à l'enfumage. Ces seuils peuvent être précisés ou aggravés par les dispositions particulières propres à chaque type d'ERP (par exemple type L, salles à forte charge calorifique)."
   },
   {
    "id": "a3-19",
@@ -1814,7 +1815,8 @@
    "niveau": 10,
    "famille": "M",
    "type": "tri",
-   "question": "Triez les éléments selon qu'ils font partie des obligations réelles de la collectivité pour la qualité de l'air intérieur des écoles, ou non.",
+   "derniereVerification": "2026-08",
+   "question": "Triez les éléments selon qu'ils font partie des obligations réelles de la collectivité pour la surveillance de la qualité de l'air intérieur des écoles, ou non.",
    "colonnes": [
     "Obligation réelle",
     "Pas une obligation"
@@ -1829,29 +1831,27 @@
      0
     ],
     [
-     "Campagne de mesures de polluants aux étapes clés du bâtiment",
+     "Campagne de mesures de polluants réglementés aux étapes clés du bâtiment",
      0
     ],
     [
-     "Plan d'actions en cas de dépassement",
+     "Plan d'actions en cas de dépassement d'une valeur repère",
      0
     ],
     [
-     "Mesure de CO2 en continu dans chaque salle",
+     "Mesure de CO2 en continu obligatoire dans chaque salle de classe",
      1
     ],
     [
-     "Diagnostic unique tous les dix ans, sans suivi",
+     "Fermeture automatique de la classe dès le premier dépassement constaté",
      1
     ],
     [
-     "Absence totale d'obligation hors amiante",
+     "Diagnostic unique réalisé une fois pour toutes, sans suivi dans le temps",
      1
     ]
    ],
-   "explication": "Le dispositif rénové en 2023 combine évaluation annuelle des moyens d'aération, autodiagnostic périodique de la qualité de l'air, campagne de mesures de polluants réglementés aux étapes clés (travaux importants, changement d'usage) et plan d'actions. Il concerne les établissements accueillant des enfants, donc l'essentiel du parc scolaire communal.",
-   "derniereVerification": "2026-07",
-   "aVerifier": null
+   "explication": "Le dispositif de surveillance de la qualité de l'air intérieur dans les établissements accueillant des enfants, issu du code de l'environnement (articles R221-30 et suivants) et rénové en 2023, combine quatre obligations récurrentes à la charge du propriétaire ou de l'exploitant : une évaluation annuelle des moyens d'aération, un autodiagnostic périodique de la qualité de l'air, une campagne de mesures des polluants réglementés (formaldéhyde, benzène, CO2 comme indicateur de confinement) réalisée par un organisme accrédité aux étapes clés de la vie du bâtiment (construction neuve, réhabilitation lourde, changement d'usage), et un plan d'actions à mettre en œuvre en cas de dépassement d'une valeur repère. Ce n'est en revanche ni une obligation de mesure en continu du CO2 dans chaque salle, ni une fermeture automatique de la classe au premier dépassement — la réponse graduée est justement l'esprit du plan d'actions, qui privilégie d'abord l'amélioration de l'aération et de la ventilation avant d'envisager des mesures plus contraignantes. Un diagnostic ponctuel sans suivi dans la durée ne satisfait pas non plus à l'exigence réglementaire, qui repose sur une logique de surveillance périodique et non d'un contrôle isolé. Cette obligation concerne les écoles, crèches et structures d'accueil de la petite enfance, donc l'essentiel du patrimoine scolaire communal, et son non-respect expose la collectivité en cas de contentieux lié à un incident sanitaire."
   },
   {
    "id": "a3-20",
@@ -1862,6 +1862,7 @@
    "niveau": 1,
    "famille": "S",
    "type": "qcm",
+   "derniereVerification": "2026-08",
    "question": "Dans une salle de classe, quel indicateur acoustique conditionne le plus l'intelligibilité de la parole ?",
    "options": [
     "L'isolement DnT,A vis-à-vis de l'extérieur",
@@ -1870,7 +1871,7 @@
     "L'indice d'affaiblissement des cloisons"
    ],
    "bonneReponse": 1,
-   "explication": "L'isolement protège du bruit venu d'ailleurs ; la réverbération conditionne ce qui se passe dans la pièce. Une classe trop réverbérante fatigue les enseignants et pénalise les élèves malentendants ou allophones. C'est aussi le poste le moins cher à traiter en rénovation — plafond absorbant — et le plus souvent sacrifié en arbitrage."
+   "explication": "L'isolement acoustique protège la salle du bruit venu de l'extérieur ou des locaux voisins, mais il ne change rien à ce qui se passe une fois le bruit produit à l'intérieur de la pièce elle-même. C'est la durée de réverbération — le temps que met le son à s'éteindre après l'arrêt de la source, exprimé en secondes — qui détermine si la parole du professeur reste intelligible ou se noie dans un écho permanent. La réglementation (arrêté du 25 avril 2003 et norme NF S31-080) fixe des valeurs cibles de l'ordre de 0,4 à 0,8 seconde selon le volume de la salle, contre plusieurs secondes dans une salle nue aux parois dures. Une classe trop réverbérante fatigue l'enseignant, qui doit forcer sa voix, et pénalise en premier lieu les élèves malentendants, allophones ou avec des troubles de l'attention. C'est aussi, en rénovation, le traitement le moins coûteux et le plus efficace : la pose d'un plafond ou de panneaux absorbants en sous-face, souvent sacrifiée en arbitrage budgétaire alors qu'elle a un effet direct et mesurable sur les apprentissages."
   },
   {
    "id": "a3-21",
@@ -1881,10 +1882,11 @@
    "niveau": 8,
    "famille": "S",
    "type": "vf",
+   "derniereVerification": "2026-08",
    "question": "Le retrait-gonflement des argiles provoque principalement des fissurations liées à des mouvements différentiels de fondations.",
    "vrai": true,
-   "justification": "Les variations d'humidité du sol argileux font gonfler puis se rétracter le terrain d'assise, générant des tassements différentiels et des fissures caractéristiques en escalier ou aux angles d'ouvertures. C'est le premier poste d'indemnisation du régime catastrophes naturelles.",
-   "explication": "Les variations d'humidité du sol argileux font gonfler puis se rétracter le terrain d'assise, générant des tassements différentiels et des fissures caractéristiques en escalier ou aux angles d'ouvertures. C'est le premier poste d'indemnisation du régime catastrophes naturelles, et un enjeu croissant sur le parc scolaire du sud de la France."
+   "justification": "Les variations d'humidité d'un sol argileux le font gonfler puis se rétracter, ce qui génère des tassements différentiels sous les fondations et des fissures caractéristiques en escalier ou aux angles des ouvertures. C'est le premier poste d'indemnisation du régime catastrophes naturelles.",
+   "explication": "Les variations saisonnières d'humidité d'un sol argileux le font gonfler en période humide puis se rétracter en période sèche ; comme ce mouvement n'est jamais uniforme sous l'ensemble d'un bâtiment, il en résulte des tassements différentiels qui se traduisent par des fissures caractéristiques, en escalier ou concentrées aux angles des ouvertures. Le retrait-gonflement des argiles (RGA) est devenu le premier poste d'indemnisation du régime catastrophes naturelles, largement devant les inondations, et le phénomène s'aggrave avec le changement climatique (alternance d'épisodes de sécheresse et de fortes précipitations). Pour l'avenir, plusieurs leviers sont mobilisables par la collectivité maître d'ouvrage : consulter la carte d'exposition au RGA (aléa faible, moyen, fort) publiée par le BRGM avant tout projet ; réaliser une étude géotechnique préalable (étude de site G1 puis étude géotechnique de conception G2), rendue obligatoire depuis la loi ELAN pour les constructions neuves en zone d'exposition moyenne ou forte lors d'une vente de terrain à bâtir ; adapter les fondations (ancrage plus profond, semelles filantes armées, radier rigide, ou fondations sur pieux dans les cas les plus sensibles) ; prévoir des joints de rupture entre corps de bâtiment de hauteurs ou charges différentes ; et maîtriser la plantation d'arbres à proximité des façades, dont les racines assèchent le sol en été. Sur le patrimoine existant, la surveillance de fissurométrie et le maintien d'une humidité de sol stable autour des fondations (drainage, éloignement des écoulements pluviaux) limitent l'aggravation des désordres."
   },
   {
    "id": "a3-22",
@@ -1895,12 +1897,11 @@
    "niveau": 5,
    "famille": "E",
    "type": "vf",
+   "derniereVerification": "2026-08",
    "question": "Le renforcement de l'étanchéité à l'air des bâtiments performants n'a créé aucune nouvelle pathologie du bâtiment.",
    "vrai": false,
-   "justification": "Faux : documenté par les observatoires de la sinistralité, le couple étanchéité à l'air renforcée / ventilation défaillante ou mal dimensionnée génère condensation, moisissures et dégradation de la qualité de l'air intérieur. La solution n'est pas de renoncer à l'étanchéité mais de traiter la VMC comme un lot critique.",
-   "explication": "Argument favorable à l'étanchéité renforcée : gains énergétiques réels, suppression des courants d'air, meilleur confort. Limite documentée par les observatoires de la sinistralité : quand la ventilation n'est pas dimensionnée, installée et maintenue correctement, l'humidité produite ne s'évacue plus. La conclusion n'est pas de renoncer à l'étanchéité mais de traiter la VMC comme un lot critique — ce qu'aucune organisation de maintenance de collectivité ne fait spontanément.",
-   "derniereVerification": null,
-   "aVerifier": null
+   "justification": "Faux : le couple étanchéité à l'air renforcée / ventilation défaillante ou mal dimensionnée génère condensation, moisissures et dégradation de la qualité de l'air intérieur, comme le documentent les observatoires de la sinistralité (Agence Qualité Construction notamment).",
+   "explication": "L'étanchéité à l'air renforcée, recherchée par la RE2020 et les rénovations performantes, apporte des gains énergétiques réels en supprimant les infiltrations parasites et améliore le confort en éliminant les courants d'air. Mais un bâtiment rendu très étanche ne s'auto-ventile plus par ses défauts : si la VMC n'est pas correctement dimensionnée, posée puis entretenue, l'humidité produite par les occupants (respiration, sanitaires, cuisine) ne s'évacue plus et se condense sur les points froids, provoquant moisissures et dégradation mesurable de la qualité de l'air intérieur — c'est l'un des sinistres les plus documentés par l'Agence Qualité Construction ces dernières années. La conclusion opérationnelle n'est pas de renoncer à l'étanchéité à l'air, mais de traiter la ventilation comme un lot à part entière : test d'étanchéité à l'air en fin de chantier, mesure du débit réel de la VMC, contrat de maintenance et de nettoyage des bouches et caissons, et sensibilisation des usagers (ne pas obturer les entrées d'air). C'est un point de vigilance que très peu d'organisations de maintenance de collectivité intègrent spontanément dans leur programme d'entretien préventif."
   },
   {
    "id": "a3-23",
@@ -1949,42 +1950,44 @@
    "niveau": 7,
    "famille": "E",
    "type": "tri",
-   "question": "Triez ces affirmations sur le schéma directeur immobilier et énergétique (SDIE) selon qu'elles en sont un argument favorable ou une limite.",
+   "question": "Triez ces affirmations sur le schéma directeur immobilier et énergétique (SDIE) selon qu'elles en constituent un argument favorable ou une limite reconnue.",
    "colonnes": [
     "Argument favorable",
     "Limite"
    ],
    "elements": [
     [
-     "Permet d'éviter des arbitrages d'investissement au coup par coup",
-     0
+     "Mobilise des données rarement disponibles ou fiables au départ",
+     1
     ],
     [
      "Donne une connaissance consolidée du parc (surfaces, états, coûts, usages)",
      0
     ],
     [
-     "Anticipe les obligations réglementaires plutôt que de les subir",
+     "Est parfois financé mais jamais réellement exploité une fois livré",
+     1
+    ],
+    [
+     "Anticipe les obligations réglementaires plutôt que de les subir dans l'urgence",
      0
     ],
     [
-     "Coûte cher à réaliser",
+     "Coûte cher à réaliser au regard du budget d'une collectivité moyenne",
      1
     ],
     [
-     "Mobilise des données rarement disponibles",
-     1
+     "Permet d'éviter des arbitrages d'investissement décidés au coup par coup",
+     0
     ],
     [
-     "Devient obsolète sans gestion patrimoniale permanente",
-     1
-    ],
-    [
-     "Est parfois financé mais jamais réellement exploité",
+     "Devient obsolète en quelques années sans gestion patrimoniale permanente",
      1
     ]
    ],
-   "explication": "Pas d'obligation légale générale pour les collectivités, contrairement à l'État. Argument en faveur du SDIE : sans connaissance consolidée du parc, les arbitrages sont faits au coup par coup et les obligations réglementaires sont subies. Limite honnête : un SDIE coûte cher, mobilise des données rarement disponibles, et devient obsolète s'il n'est pas alimenté par une gestion patrimoniale permanente. Beaucoup dorment dans des tiroirs."
+   "explication": "Le SDIE n'est pas une obligation légale générale pour les collectivités territoriales, à la différence de l'État qui doit établir un schéma pluriannuel de stratégie immobilière (SPSI). Ses arguments favorables tiennent à ce qu'il apporte : une connaissance consolidée du parc, condition nécessaire pour éviter les arbitrages faits au coup par coup au gré des urgences ou des demandes d'élus, et une anticipation des obligations réglementaires (DEET, BACS, accessibilité) plutôt qu'une gestion en réaction sous la contrainte du calendrier légal. Les limites sont tout aussi réelles et doivent être assumées lors du montage du projet : un SDIE coûte cher en ingénierie et en diagnostics, il mobilise des données souvent absentes ou disparates dans les collectivités (surfaces non fiabilisées, historiques de consommation incomplets), et surtout il devient rapidement obsolète et inutile s'il n'est pas adossé à une gouvernance patrimoniale permanente qui l'actualise. De nombreux SDIE, une fois financés et livrés, restent des documents figés non exploités faute de portage politique et technique dans la durée : le vrai enjeu n'est donc pas de produire le document, mais d'organiser sa mise à jour et son usage réel dans les décisions d'investissement.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "a4-02",
@@ -1995,8 +1998,8 @@
    "niveau": 5,
    "famille": "S",
    "type": "trous",
-   "question": "Complétez la phrase sur l'indicateur de comparaison énergétique des bâtiments publics.",
-   "texte": "Pour comparer la performance énergétique de bâtiments de tailles différentes, on utilise la consommation {1}, exprimée en kWh/m²/an et corrigée du {2}, en précisant bien la {3} retenue.",
+   "question": "Complétez la phrase sur l'indicateur permettant de comparer la performance énergétique de bâtiments publics différents.",
+   "texte": "Pour comparer la performance énergétique de bâtiments de tailles différentes, on utilise la consommation {1}, exprimée en kWh/m²/an, corrigée du {2} grâce aux degrés-jours unifiés (DJU), en précisant bien la {3} retenue pour le calcul.",
    "mots": [
     "surfacique",
     "climat",
@@ -2008,8 +2011,8 @@
     "volume chauffé",
     "nombre d'agents"
    ],
-   "explication": "Le ratio surfacique corrigé des rigueurs climatiques (DJU) permet la comparaison entre bâtiments et entre années. Il faut préciser à chaque fois la surface de référence retenue (SHON, surface utile, surface de plancher) : c'est la première source d'incohérence dans les bases de données patrimoniales des collectivités.",
-   "derniereVerification": null,
+   "explication": "Le degré-jour unifié (DJU) mesure la rigueur climatique d'une année en cumulant les écarts entre la température extérieure et un seuil de référence (souvent 18°C) : plus un hiver est froid, plus les DJU sont élevés, et plus la consommation de chauffage augmente mécaniquement sans que la performance intrinsèque du bâtiment n'ait changé. Corriger la consommation par les DJU permet donc de comparer deux hivers différents, ou deux sites situés dans des zones climatiques distinctes, sur une base équitable. Rapporter ensuite cette consommation corrigée à la surface (kWh/m²/an) permet de comparer des bâtiments de tailles différentes. Le piège opérationnel classique des bases patrimoniales de collectivités est l'absence d'harmonisation de la surface de référence : SHON, surface utile ou surface de plancher donnent des ratios non comparables d'un bâtiment à l'autre si la méthode n'est pas documentée et stable dans le temps.",
+   "derniereVerification": "2026-08",
    "aVerifier": null
   },
   {
@@ -2301,11 +2304,11 @@
    "niveau": 6,
    "famille": "S",
    "type": "vf",
-   "question": "Pour prioriser les investissements sur un parc de bâtiments, il suffit de croiser la surface et l'ancienneté de chaque bâtiment.",
+   "question": "Pour établir une programmation pluriannuelle défendable, il suffit de croiser la surface de chaque bâtiment avec son ancienneté afin de fixer l'ordre des priorités d'investissement.",
    "vrai": false,
-   "justification": "Faux : la méthode consiste à croiser l'état technique et la criticité d'usage, en y superposant les obligations réglementaires (accessibilité, DEET, BACS, sécurité incendie) et la performance énergétique. Cela distingue un bâtiment dégradé mais peu utilisé d'un bâtiment dégradé et stratégique.",
-   "explication": "Une matrice état/criticité permet de distinguer ce qui est dégradé mais peu utilisé (candidat à la cession ou à la démolition) de ce qui est dégradé et stratégique (priorité absolue). Y superposer les échéances réglementaires — accessibilité, DEET, BACS, sécurité incendie — et les gains énergétiques donne une programmation défendable devant une assemblée délibérante.",
-   "derniereVerification": null,
+   "justification": "Faux : la surface et l'ancienneté sont des données brutes, insuffisantes pour prioriser. La méthode robuste croise l'état technique réel du bâtiment (issu d'un diagnostic) et la criticité de son usage, en y superposant les échéances réglementaires datées (accessibilité, DEET, BACS, sécurité incendie) et le potentiel de gain énergétique ou d'exploitation.",
+   "explication": "Un bâtiment ancien n'est pas nécessairement dégradé, et un grand bâtiment n'est pas nécessairement stratégique : la surface et l'ancienneté ne renseignent ni sur l'état réel des ouvrages ni sur l'importance du service rendu à la population. Une matrice croisant l'état technique (issu d'un diagnostic structuré, souvent noté de 1 à 5) et la criticité d'usage (école, crèche versus local technique peu fréquenté) permet de distinguer ce qui est dégradé mais accessoire, candidat à la cession ou à la démolition, de ce qui est dégradé et stratégique, priorité absolue du plan pluriannuel d'investissement. Il faut y superposer les échéances réglementaires contraignantes et datées, comme le Dispositif Éco Énergie Tertiaire (DEET), l'obligation de systèmes d'automatisation du bâtiment (BACS), les mises en accessibilité ou la sécurité incendie en ERP, faute de quoi la collectivité s'expose à des mises en demeure, des sanctions administratives ou des fermetures d'établissement. C'est ce croisement multicritère, documenté et pondéré, qui rend la programmation opposable et défendable devant une assemblée délibérante, à la différence d'un classement par surface ou par âge qui reste arbitraire.",
+   "derniereVerification": "2026-08",
    "aVerifier": null
   },
   {
@@ -2319,13 +2322,15 @@
    "type": "qcm",
    "question": "La cession de bâtiments publics sous-utilisés est-elle une bonne réponse à la dette technique d'un parc ?",
    "options": [
-    "Oui, systématiquement",
-    "C'est un levier réel, mais partiel et contesté : recettes non récurrentes, perte de réserve foncière, contraintes de service public",
-    "Non, un bien public ne se vend pas",
-    "Oui, mais seulement pour les bâtiments classés"
+    "C'est un levier réel, mais partiel et contesté : recette non récurrente, perte de réserve foncière, contraintes de service public",
+    "Oui, c'est le levier le plus efficace car il supprime immédiatement toute charge d'entretien et de mise aux normes future",
+    "Non, un bâtiment public ne peut être cédé qu'après désaffectation ET déclassement formalisés, ce qui le rend en pratique inopérant",
+    "Oui, mais seulement pour les bâtiments classés ou inscrits au titre des monuments historiques, faute d'un marché suffisant ailleurs"
    ],
-   "bonneReponse": 1,
-   "explication": "Arguments favorables : réduction du coût d'exploitation et des obligations réglementaires, recette d'investissement immédiate, remise sur le marché de biens vacants. Limites : la recette est ponctuelle alors que le besoin de GER est permanent ; la collectivité perd une marge de manœuvre foncière difficile à reconstituer ; certains usages associatifs ou sociaux disparaissent sans solution de remplacement. La question à poser est celle du produit de cession réinvesti — ou non — dans le parc conservé."
+   "bonneReponse": 0,
+   "explication": "La cession est un levier réel : elle réduit le coût d'exploitation et les obligations réglementaires pesant sur le bâtiment cédé, procure une recette d'investissement immédiate, et remet sur le marché un bien vacant ou dégradé. Mais elle reste partielle et contestée : la recette est ponctuelle alors que le besoin de gros entretien-renouvellement (GER) est permanent et structurel ; la collectivité perd une réserve foncière souvent irremplaçable en zone tendue ; et certains usages associatifs, sociaux ou de proximité disparaissent sans solution de relogement, ce qui crée une tension politique. La désaffectation puis le déclassement du domaine public sont des préalables juridiques obligatoires (CG3P) mais ils ne rendent pas la cession impossible, seulement encadrée. La vraie question de gestion patrimoniale est celle du réemploi du produit de cession : réinvesti dans le GER du parc conservé, il boucle la stratégie ; affecté au fonctionnement, il aggrave la dette technique restante.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "a4-19",
@@ -3823,16 +3828,16 @@
    "niveau": 2,
    "famille": "M",
    "type": "qcm",
-   "question": "Poids annuel de la commande publique en France, d'après le recensement 2024 publié en 2026.",
+   "question": "Selon le recensement économique de l'achat public portant sur l'année 2024, publié par la direction des affaires juridiques de Bercy en 2026, quel est l'ordre de grandeur de la commande publique française ?",
    "options": [
-    "Environ 120 milliards d'euros",
-    "Environ 233 milliards d'euros et plus de 223 000 marchés",
-    "Environ 400 milliards d'euros",
-    "Environ 80 milliards d'euros"
+    "Environ 150 milliards d'euros et près de 150 000 marchés recensés",
+    "Environ 233 milliards d'euros et plus de 223 000 marchés recensés",
+    "Environ 310 milliards d'euros et près de 280 000 marchés recensés",
+    "Environ 95 milliards d'euros et près de 90 000 marchés recensés"
    ],
    "bonneReponse": 1,
-   "explication": "Le recensement publié par Bercy en mars 2026 donne 233 milliards d'euros et plus de 223 000 marchés pour 2024, dont environ 60 % attribués à des PME. C'est le chiffre d'accroche classique d'une copie ou d'un exposé sur la commande publique comme levier de politique économique et écologique.",
-   "derniereVerification": "2026-07"
+   "explication": "Le recensement économique de l'achat public, publié chaque année par la direction des affaires juridiques (DAJ) de Bercy à partir des données REAP (recensement économique de l'achat public), évalue la commande publique 2024 à environ 233 milliards d'euros pour plus de 223 000 marchés recensés, avec environ 60 % des marchés attribués à des PME en nombre. Ce chiffre inclut marchés publics et concessions de l'État, des collectivités et de leurs établissements publics. C'est un ordre de grandeur à connaître pour situer le poids économique et le rôle de levier de politique publique (économique, sociale, environnementale) que représente la commande publique, très supérieur à la seule dépense budgétaire de l'État en investissement.",
+   "derniereVerification": "2026-08"
   },
   {
    "id": "a2-61",
@@ -3843,12 +3848,12 @@
    "niveau": 10,
    "famille": "M",
    "type": "libre",
-   "question": "Après le 21 août 2026, un acheteur peut-il encore attribuer un marché sur un critère unique ?",
-   "explication": "Le critère unique du prix disparaît. Reste possible un critère unique de coût, à condition qu'il repose sur le coût du cycle de vie — consommation d'énergie, maintenance, fin de vie, externalités environnementales monétisables. L'échéance du 21 août 2026 a été fixée par le décret du 2 mai 2022 pris en application de l'article 35 de la loi Climat et résilience, et n'a pas été reportée. À défaut, il faut au moins un critère environnemental parmi une pluralité de critères, plus une clause environnementale d'exécution.",
+   "question": "Depuis le 22 août 2026, un acheteur public peut-il encore attribuer un marché sur la base d'un critère unique ?",
+   "explication": "Le critère unique du prix disparaît définitivement à cette date pour la quasi-totalité des marchés. Reste néanmoins possible un critère unique, mais uniquement de coût global sur le cycle de vie du produit, service ou ouvrage (consommation d'énergie et de ressources en phase d'usage, coûts de maintenance, coûts de fin de vie tels que la collecte et le recyclage, voire, lorsqu'ils sont monétisables, certains coûts externes environnementaux comme les émissions de gaz à effet de serre). Cette échéance du 22 août 2026 (cinq ans après la promulgation de la loi Climat et résilience du 22 août 2021) a été fixée par l'article 35 de cette loi, précisé par le décret n° 2022-767 du 2 mai 2022 codifié à l'article L. 2152-7 du code de la commande publique ; elle n'a pas été reportée à ce jour. À défaut de retenir un critère de coût en cycle de vie, l'acheteur doit se rabattre sur une pluralité de critères d'attribution incluant obligatoirement au moins un critère prenant en compte les caractéristiques environnementales de l'offre, en complément d'une clause d'exécution environnementale devenue elle aussi systématique. Un acheteur qui attribuerait un marché sur le seul critère du prix après cette date commettrait une illégalité substantielle, sanctionnable par le juge du référé précontractuel ou contractuel.",
    "derniereVerification": "2026-08",
    "aVerifier": null,
    "options": [
-    "Oui, mais uniquement le coût global du cycle de vie, intégrant les caractéristiques environnementales de l'offre"
+    "Oui, mais seulement sous la forme d'un critère unique de coût global du cycle de vie intégrant les caractéristiques environnementales de l'offre ; le critère unique du prix est proscrit depuis le 22 août 2026 (art. L. 2152-7 CCP)."
    ],
    "bonneReponse": 0
   },
@@ -4098,17 +4103,19 @@
    "niveau": 5,
    "famille": "S",
    "type": "ordre",
-   "question": "Remettez dans l'ordre le déroulé de la fin d'un marché de travaux.",
+   "question": "Remettez dans l'ordre le déroulé de la fin d'un marché de travaux, en précisant les principaux documents associés à chaque étape (demande écrite du titulaire, PV signé contradictoirement, notification écrite, etc.).",
    "items": [
-    "Demande de réception adressée par le titulaire",
-    "Opérations préalables à la réception et procès-verbal",
-    "Décision de réception notifiée par le maître d'ouvrage",
-    "Projet de décompte final établi par le titulaire",
-    "Notification du décompte général par le maître d'ouvrage",
-    "Acceptation du décompte général, qui devient définitif",
-    "Levée des réserves puis expiration de la garantie de parfait achèvement"
+    "Demande de réception adressée par écrit par le titulaire au maître d'ouvrage",
+    "Opérations préalables à la réception (OPR) et établissement du procès-verbal contradictoire",
+    "Décision de réception notifiée par écrit par le maître d'ouvrage au titulaire, avec ou sans réserves",
+    "Levée des réserves puis point de départ de la garantie de parfait achèvement, courant un an à compter de la réception",
+    "Projet de décompte final établi par le titulaire et transmis au maître d'œuvre",
+    "Notification du décompte général, incluant le solde et le récapitulatif des acomptes, par le maître d'ouvrage",
+    "Acceptation (ou absence de contestation dans le délai) du décompte général, qui devient le décompte général et définitif (DGD)"
    ],
-   "explication": "La réception est l'acte pivot : elle précède le décompte, pas l'inverse. Le décompte général définitif éteint les créances réciproques ; la garantie de parfait achèvement court en parallèle, sur un an à compter de la réception, et son terme peut donc être postérieur au DGD."
+   "explication": "La réception est l'acte pivot de la fin de chantier : elle est prononcée à l'issue des opérations préalables à la réception, formalisées par un procès-verbal contradictoire (articles 12 et 41 du CCAG-Travaux 2021), et déclenche à la fois la garantie de parfait achèvement (un an) et le calcul du délai de transmission du projet de décompte final par le titulaire. Le décompte final, dressé sur la base des prix du marché et des attachements, est ensuite intégré par le maître d'œuvre dans le décompte général, qui récapitule l'ensemble des sommes dues (acomptes, révisions, pénalités, avances à rembourser). La notification du décompte général ouvre un délai de 30 jours au titulaire pour le signer sans réserve, le contester ou l'accepter tacitement ; à l'expiration de ce délai sans réaction, il devient définitif. Le DGD éteint alors toutes les créances et réclamations réciproques, sauf réserves expressément maintenues. Point souvent source d'erreur : la garantie de parfait achèvement (un an à compter de la réception) peut donc arriver à échéance après la signature du DGD, ce qui n'empêche pas de faire jouer cette garantie tant qu'elle court.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "o-03",
@@ -4264,17 +4271,19 @@
    "niveau": 2,
    "famille": "S",
    "type": "ordre",
-   "question": "Remettez dans l'ordre la montée en charge d'une opération d'investissement côté collectivité.",
+   "question": "Remettez dans l'ordre chronologique les grandes étapes d'une opération d'investissement, du besoin identifié jusqu'à l'exploitation du bâtiment.",
    "items": [
-    "Diagnostic du patrimoine et identification du besoin",
-    "Étude de faisabilité et rédaction du programme",
-    "Inscription au plan pluriannuel d'investissement et vote de l'autorisation de programme",
-    "Recrutement de la maîtrise d'œuvre",
     "Consultation des entreprises de travaux",
+    "Diagnostic du patrimoine et identification du besoin",
+    "Mise en exploitation et suivi des consommations",
+    "Inscription au plan pluriannuel d'investissement et vote de l'autorisation de programme",
     "Travaux et réception",
-    "Mise en exploitation et suivi des consommations"
+    "Recrutement de la maîtrise d'œuvre",
+    "Étude de faisabilité et rédaction du programme"
    ],
-   "explication": "Le programme est la pièce qui engage le maître d'ouvrage : il fixe les objectifs, les contraintes et l'enveloppe. Le lancer après le recrutement de la maîtrise d'œuvre inverse la charge et prive la collectivité de sa capacité d'arbitrage."
+   "explication": "La chronologie correcte est : diagnostic et identification du besoin, étude de faisabilité et rédaction du programme, inscription au plan pluriannuel d'investissement (PPI) et vote de l'autorisation de programme, recrutement de la maîtrise d'œuvre, consultation des entreprises de travaux, travaux et réception, puis mise en exploitation et suivi des consommations. Le programme est le document pivot : rédigé par ou pour le maître d'ouvrage, il fixe les objectifs fonctionnels, les contraintes techniques et réglementaires et l'enveloppe financière avant tout recrutement de concepteur. Lancer le recrutement du maître d'œuvre avant d'avoir stabilisé le programme et l'enveloppe budgétaire inverse la logique de commande publique : la collectivité perd sa capacité d'arbitrage et s'expose à des avenants coûteux, car le maître d'œuvre construira son projet sur des bases incertaines. De même, sauter l'inscription au PPI expose l'opération à une absence de financement voté, donc à un blocage juridique de l'engagement des dépenses.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "as-01",
@@ -4285,30 +4294,35 @@
    "niveau": 1,
    "famille": "S",
    "type": "assoc",
-   "question": "Associez chaque NF DTU au lot qu'il couvre.",
+   "question": "Associez chaque NF DTU au lot de travaux qu'il couvre.",
    "paires": [
     [
-     "NF DTU 43.1",
-     "Étanchéité de toiture-terrasse sur maçonnerie"
+     "NF DTU 20.1",
+     "Maçonnerie de petits éléments — parois et murs"
     ],
     [
      "NF DTU 40.11",
      "Couverture en ardoises naturelles"
     ],
     [
-     "NF DTU 20.1",
-     "Maçonnerie de petits éléments"
+     "NF DTU 43.1",
+     "Étanchéité de toitures-terrasses avec supports en maçonnerie"
     ],
     [
      "NF DTU 25.41",
-     "Ouvrages en plaques de plâtre"
+     "Ouvrages en plaques de plâtre (cloisons, doublages, plafonds)"
     ],
     [
      "NF DTU 68.3",
-     "Installations de ventilation mécanique"
+     "Installations de ventilation mécanique contrôlée (VMC)"
+    ],
+    [
+     "NF DTU 36.5",
+     "Mise en œuvre des fenêtres et portes extérieures"
     ]
    ],
-   "explication": "La logique de numérotation aide : la série 40 concerne les couvertures, la série 43 les étanchéités, la série 20 le gros œuvre maçonné. Savoir situer un lot dans la bonne famille suffit souvent à retrouver la référence."
+   "explication": "La numérotation des NF DTU suit une logique de grandes familles techniques qu'il est utile de mémoriser par blocs : la série 10-20 couvre le gros œuvre et la maçonnerie (DTU 20.1 pour les murs en petits éléments, DTU 13 pour les fondations et dallages) ; la série 31 le bois et l'ossature bois ; la série 36 les menuiseries extérieures ; la série 40 les couvertures (40.11 ardoises, 40.35 bardeaux bitumés, 40.21 tuiles) ; la série 43 les étanchéités de toitures-terrasses ; la série 25 les cloisons et doublages en plaques de plâtre ; la série 59-60 les peintures et revêtements ; la série 68 les équipements de ventilation. Savoir situer un lot dans la bonne famille numérique suffit souvent, à l'oral ou à l'écrit, à retrouver ou approcher la bonne référence sans l'avoir apprise par cœur. Chaque NF DTU se compose en réalité de plusieurs parties (cahier des clauses techniques, cahier des clauses spéciales, parfois règles de calcul) qu'il faut viser ensemble et dans leur version en vigueur au CCTP, faute de quoi la cohérence contractuelle du marché peut être fragilisée en cas de sinistre.",
+   "derniereVerification": "2026-08"
   },
   {
    "id": "as-02",
@@ -4354,6 +4368,7 @@
    "niveau": 1,
    "famille": "S",
    "type": "assoc",
+   "derniereVerification": "2026-08",
    "question": "Associez chaque type d'ERP à son activité.",
    "paires": [
     [
@@ -4381,7 +4396,7 @@
      "Bibliothèque, centre de documentation"
     ]
    ],
-   "explication": "Le type détermine les prescriptions applicables, la catégorie détermine le niveau d'exigence. Un même bâtiment communal peut cumuler plusieurs types, ce qui déclenche l'application des règles les plus contraignantes ou un examen en type dominant selon les cas."
+   "explication": "Le type d'ERP (lettre) qualifie la nature de l'activité et détermine le corps de règles particulières applicable (articles spécifiques du règlement de sécurité, en plus des dispositions générales communes). La catégorie (chiffre romain de 1re à 5e), elle, dépend uniquement de l'effectif total accueilli, public et personnel compris, et calibre le niveau d'exigence : la 1re catégorie regroupe plus de 1500 personnes, la 2e de 701 à 1500, la 3e de 301 à 700, la 4e 300 et moins hors seuils propres au type, et la 5e catégorie correspond aux établissements de petite taille dont l'effectif reste sous des seuils fixés par type (par exemple 200 personnes pour un type R avec locaux au rez-de-chaussée). Un même bâtiment communal peut cumuler plusieurs types — par exemple une médiathèque (type S) avec une salle polyvalente (type L) — ce qui impose l'application cumulée des règles de chaque type, ou un classement en type dominant pour les établissements de faible effectif. Le maire, souvent président de la commission de sécurité pour les ERP de sa commune de 5e catégorie sans locaux à sommeil, doit connaître cette distinction type/catégorie pour organiser correctement les contrôles et l'autorisation de travaux."
   },
   {
    "id": "as-04",
@@ -4445,7 +4460,9 @@
      "Inconfort d'été cumulé, en degrés-heures"
     ]
    ],
-   "explication": "Le Bbio se calcule sans hypothèse de système : il évalue la qualité intrinsèque de la conception, orientation et enveloppe. C'est le seul indicateur que l'architecte maîtrise seul, avant tout choix d'équipement."
+   "explication": "Chaque indicateur RE2020 cible un levier différent et intervient à un moment différent du projet. Le Bbio se calcule sans hypothèse de système : il évalue la seule qualité de la conception (orientation, compacité, isolation, apports solaires), c'est le seul indicateur que l'architecte maîtrise dès l'esquisse, avant tout choix d'équipement — un mauvais Bbio ne se rattrape jamais totalement en aval. Le Cep,nr traduit ensuite les choix de systèmes énergétiques (chauffage, ECS, ventilation) en énergie primaire non renouvelable, pour favoriser les solutions décarbonées comme le bois-énergie ou les réseaux de chaleur vertueux. L'Ic construction et l'Ic énergie forment ensemble l'ACV du bâtiment sur 50 ans : le premier pèse le carbone incorporé des matériaux et du chantier (souvent la moitié de l'empreinte totale d'un bâtiment neuf performant), le second le carbone de l'exploitation énergétique. Enfin, le DH mesure en degrés-heures cumulés l'inconfort thermique estival, pour empêcher qu'un bâtiment très isolé et étanche à l'air ne devienne une passoire à chaleur l'été faute de protections solaires ou de sur-ventilation nocturne. Ignorer un seul de ces cinq indicateurs expose à un refus de permis de construire, puisque tous sont opposables cumulativement.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "as-06",
@@ -4490,31 +4507,32 @@
    "niveau": 1,
    "famille": "M",
    "type": "assoc",
-   "question": "Associez chaque obligation à son échéance.",
+   "question": "Associez chaque obligation applicable au patrimoine tertiaire public à son échéance.",
    "paires": [
     [
-     "Réduction de 40 % des consommations tertiaires",
+     "Réduction de 40 % des consommations d'énergie finale du parc tertiaire (référence DEET)",
      "2030"
     ],
     [
-     "Automatisation des bâtiments tertiaires de plus de 290 kW",
+     "Automatisation obligatoire des bâtiments tertiaires de plus de 290 kW (BACS)",
      "1er janvier 2025"
     ],
     [
-     "Automatisation des bâtiments tertiaires de 70 à 290 kW",
-     "1er janvier 2030"
+     "Automatisation obligatoire des bâtiments tertiaires de 70 à 290 kW (BACS)",
+     "1er janvier 2027"
     ],
     [
-     "Critère environnemental obligatoire dans tout marché",
+     "Prise en compte obligatoire d'un critère environnemental dans tout marché public",
      "21 août 2026"
     ],
     [
-     "Zéro artificialisation nette",
+     "Objectif national de zéro artificialisation nette des sols",
      "2050"
     ]
    ],
-   "explication": "L'échéance de 2030 pour la tranche 70-290 kW est le piège du moment : elle était fixée à 2027 et a été repoussée fin 2025. La retenir à 2027 dans une copie ou à l'oral signale que la veille s'est arrêtée avant 2026.",
-   "derniereVerification": "2026-07"
+   "explication": "Attention à ne pas confondre deux calendriers distincts. Le Dispositif Éco Énergie Tertiaire (décret tertiaire) impose une trajectoire de réduction des consommations d'énergie finale de 40 % en 2030, 50 % en 2040 et 60 % en 2050 par rapport à une année de référence choisie postérieure à 2010. L'obligation d'automatisation du pilotage énergétique (systèmes GTB/BACS, article R. 175-1 et suivants du code de la construction et de l'habitation) suit un calendrier propre selon la puissance nominale du système de chauffage, climatisation ou ventilation installé dans le bâtiment : 1er janvier 2025 pour les puissances supérieures à 290 kW, et 1er janvier 2027 pour les puissances comprises entre 70 et 290 kW — donc bien un abaissement du seuil de puissance concerné, pas un report de date à 2030. Par ailleurs, l'obligation de critère environnemental dans la commande publique entre en vigueur le 21 août 2026 (loi Climat et résilience de 2021, avec entrée en vigueur différée), et l'objectif de zéro artificialisation nette (ZAN) vise 2050 avec un jalon intermédiaire de division par deux du rythme de consommation d'espaces sur la décennie 2021-2031. Le non-respect du DEET expose à une procédure de mise en demeure puis, en l'absence de correction, à une sanction publiée nominativement (« name and shame ») sur la plateforme OPERAT.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "as-08",
@@ -4525,11 +4543,12 @@
    "niveau": 2,
    "famille": "S",
    "type": "assoc",
+   "derniereVerification": "2026-08",
    "question": "Associez chaque symbole de comportement au feu à sa signification.",
    "paires": [
     [
      "R",
-     "Capacité portante maintenue"
+     "Capacité portante maintenue sous charge pendant la durée normalisée"
     ],
     [
      "E",
@@ -4537,18 +4556,18 @@
     ],
     [
      "I",
-     "Isolation thermique"
+     "Isolation thermique limitant l'échauffement de la face non exposée"
     ],
     [
      "A1",
-     "Euroclasse de réaction au feu la plus favorable"
+     "Matériau incombustible, meilleure euroclasse de réaction au feu"
     ],
     [
      "s1",
-     "Émission de fumées la plus faible"
+     "Émission de fumées optiquement la plus faible"
     ]
    ],
-   "explication": "Distinguer résistance et réaction : la résistance (R, E, I) décrit combien de temps un élément de construction tient, la réaction (euroclasses A1 à F, indices s et d) décrit comment un matériau contribue au développement du feu. Un CCTP qui les confond est immédiatement repéré par le contrôleur technique."
+   "explication": "Deux notions sont à bien séparer, régies par des normes distinctes (EN 13501-2 pour la résistance, EN 13501-1 pour la réaction). La résistance au feu (symboles R, E, I, exprimés en minutes, par exemple REI 60) décrit combien de temps un élément de construction conserve ses fonctions face au feu : R pour la capacité portante, E pour l'étanchéité aux flammes et gaz chauds, I pour l'isolation thermique de la face non exposée. La réaction au feu, elle, décrit la contribution d'un matériau au développement de l'incendie, via les euroclasses A1 (incombustible, la plus favorable) à F (la moins favorable), complétées par l'indice s (smoke, opacité des fumées, de s1 à s3) et l'indice d (droplets, gouttelettes enflammées, de d0 à d2). Un plafond ou un revêtement mural classé A1-s1,d0 est incombustible, fume très peu et ne produit pas de gouttelettes enflammées : c'est l'exigence la plus fréquente dans les circulations et dégagements d'ERP. Confondre les deux logiques dans un CCTP (par exemple exiger un « REI » pour un revêtement de sol, qui relève de la réaction et non de la résistance) est une erreur immédiatement relevée par le contrôleur technique ou le bureau d'études sécurité incendie."
   },
   {
    "id": "as-09",
@@ -4637,7 +4656,9 @@
     "publicité",
     "sincérité"
    ],
-   "explication": "Formulation à connaître mot pour mot : elle est reprise à l'article L.3 du code de la commande publique et a valeur constitutionnelle. Une variante approximative en copie affaiblit immédiatement la démonstration."
+   "explication": "Cette formulation, tirée mot pour mot de l'article L.3 du code de la commande publique, doit être restituée avec précision : substituer « libre concurrence » à « liberté d'accès » ou « publicité » à « transparence » est une approximation qui affaiblit une copie ou un oral, car ce sont des notions voisines mais juridiquement distinctes (la publicité est un outil au service de la transparence, pas un principe autonome). Ces trois principes ont été élevés au rang d'exigence constitutionnelle par le Conseil constitutionnel dans sa décision du 26 juin 2003, sur le fondement de l'article 14 de la Déclaration des droits de l'homme et du citoyen de 1789 (égal accès aux emplois et charges publiques, bonne utilisation des deniers publics). Ils s'imposent même en dessous des seuils de procédure formalisée, y compris pour les marchés dispensés de publicité (moins de 40 000 € HT) : le juge administratif sanctionne, par exemple, l'absence de mise en concurrence minimale ou le favoritisme, indépendamment du montant du contrat.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "t-02",
@@ -4856,7 +4877,7 @@
     "250",
     "1 000"
    ],
-   "explication": "Le mécanisme est une pénalité, pas une interdiction : un projet dont le DH dépasse 350 reste conforme mais doit compenser ailleurs. Au-delà de 1 250, il n'est plus conforme du tout.",
+   "explication": "Le DH (degrés-heures) cumule, sur toute la période chaude, l'écart entre la température intérieure ressentie et un seuil de confort adaptatif : plus il fait chaud longtemps, plus l'indicateur grimpe. Le mécanisme retenu par la RE2020 est une pénalité progressive et non une interdiction brutale : en dessous de 350, le bâtiment est considéré confortable sans compensation ; entre 350 et 1 250, il reste réglementairement conforme mais une consommation de refroidissement forfaitaire est ajoutée au calcul du Cep, ce qui pénalise indirectement le projet sur cet autre indicateur ; au-delà de 1 250, le projet n'est tout simplement plus conforme, quels que soient ses autres résultats. L'objectif politique est d'imposer une réflexion bioclimatique en amont — protections solaires, inertie, ventilation nocturne, sur-vitrage limité — plutôt que de laisser la climatisation compenser une conception défaillante, dans un contexte de multiplication des vagues de chaleur.",
    "derniereVerification": "2026-08",
    "aVerifier": null
   },
@@ -4967,8 +4988,8 @@
    "type": "vf",
    "question": "Un NF DTU est un texte réglementaire d'application obligatoire.",
    "vrai": false,
-   "justification": "C'est une norme d'application volontaire. Elle ne devient obligatoire pour les parties que lorsque les pièces du marché y renvoient. En dehors du contrat, elle conserve une portée forte : le juge et les experts y voient l'expression des règles de l'art.",
-   "explication": "D'où l'importance de rédiger le renvoi avec une version datée. Un CCTP qui vise « le DTU en vigueur » ouvre un débat sur la version applicable au moment de l'exécution.",
+   "justification": "C'est une norme d'application volontaire, homologuée par l'AFNOR et élaborée par la Commission générale de normalisation du bâtiment. Elle ne devient obligatoire pour les parties que lorsque les pièces du marché (généralement le CCTP) y renvoient contractuellement. En dehors de tout contrat, elle conserve toutefois une portée forte : le juge civil et les experts judiciaires y voient l'expression écrite des règles de l'art, opposable au titre des garanties légales même en l'absence de mention expresse.",
+   "explication": "La distinction entre norme volontaire et texte réglementaire est fondamentale pour un ingénieur territorial rédacteur de CCTP. Contrairement à un arrêté ou un décret (par exemple la réglementation incendie des ERP, ou la RE2020), le NF DTU n'a pas de force obligatoire par lui-même : c'est un document technique consensuel, issu de la profession, qui décrit les bonnes pratiques de mise en œuvre pour un corps d'état donné. Il faut donc, dans chaque CCTP, viser explicitement le NF DTU applicable et préciser sa version datée (par exemple « NF DTU 43.1 P1-1, mai 2022 »), car un simple renvoi au « DTU en vigueur » ouvre un débat d'interprétation sur la version réellement applicable au moment de l'exécution des travaux, notamment en cas de mise à jour du texte entre la conception et le chantier. Un maître d'œuvre qui omet ce renvoi ne met pas pour autant son maître d'ouvrage totalement à l'abri : à défaut de stipulation contractuelle, le non-respect des règles de l'art décrites par le NF DTU pertinent pourra être invoqué par un expert judiciaire pour caractériser un désordre relevant de la garantie décennale ou de la responsabilité contractuelle de droit commun.",
    "derniereVerification": "2026-08",
    "aVerifier": null
   },
@@ -5427,6 +5448,7 @@
    "niveau": 7,
    "famille": "S",
    "type": "tri",
+   "derniereVerification": "2026-08",
    "question": "Ces obligations relèvent-elles de la sécurité incendie, de l'accessibilité, ou des deux ?",
    "colonnes": [
     "Sécurité incendie",
@@ -5463,9 +5485,7 @@
      2
     ]
    ],
-   "explication": "L'autorisation de travaux est le point de convergence : un seul dossier, un seul acte du maire, mais deux instructions techniques distinctes menées par deux sous-commissions. C'est pourquoi une pièce manquante sur le volet accessibilité bloque l'ensemble de la décision.",
-   "derniereVerification": "2026-08",
-   "aVerifier": null
+   "explication": "La sécurité incendie et l'accessibilité forment deux polices distinctes, chacune avec ses propres pièces (notice de sécurité d'un côté, notice d'accessibilité de l'autre), ses propres commissions et son propre corpus réglementaire, mais elles convergent dans l'autorisation de travaux au titre du code de la construction et de l'habitation : un dossier unique est déposé, examiné en parallèle par la sous-commission sécurité et la sous-commission accessibilité, avant qu'un seul acte du maire (ou du préfet selon les cas) n'autorise ou refuse les travaux et l'ouverture au public. C'est pourquoi une pièce manquante ou une réserve non levée sur le seul volet accessibilité peut bloquer la totalité du dossier, même si le volet incendie est complet. Le registre de sécurité (tenu par l'exploitant, retraçant contrôles et exercices) et les visites périodiques relèvent uniquement de la police incendie, tandis que le registre public d'accessibilité et les possibilités de dérogation (notamment pour impossibilité technique ou préservation du patrimoine) relèvent uniquement de l'accessibilité. Bien identifier quelle police est concernée évite de saisir la mauvaise commission ou d'invoquer à tort une dérogation incendie inexistante pour un motif d'accessibilité."
   },
   {
    "id": "e-01",
@@ -5478,7 +5498,7 @@
    "type": "erreur",
    "question": "Extrait de CCTP, lot charpente métallique. Repérez la phrase fautive. Les phrases se lisent à la suite, comme un seul texte.",
    "phraseFautive": 0,
-   "explication": "C'est exactement le type de scorie qu'on trouve dans les CCTP reconduits d'une opération à l'autre. La vérification des références normatives est le premier réflexe à avoir en reprenant une pièce écrite ancienne.",
+   "explication": "La norme NF P 22-701 (règles CM66) et ses compléments constituaient l'ancien corpus français de calcul des structures métalliques ; ils sont retirés depuis le remplacement généralisé par les Eurocodes, entré en application avec le retrait des normes nationales concurrentes en 2010. Viser aujourd'hui la NF P 22-701 dans un CCTP est une scorie fréquente des pièces écrites reconduites d'une opération à l'autre sans relecture, qui crée une contradiction avec les autres références du même document (marquage CE des produits, classe d'exécution EXC selon NF EN 1090-2) et fragilise juridiquement le marché en cas de sinistre, l'expert judiciaire retenant les règles de l'art en vigueur au moment de la construction. Le bon réflexe, en reprenant une pièce écrite ancienne, est de vérifier systématiquement l'état des normes visées avant republication, en particulier sur les lots structurels où l'enjeu de sécurité est direct.",
    "derniereVerification": "2026-08",
    "aVerifier": null,
    "segments": [
@@ -5516,15 +5536,15 @@
    "niveau": 6,
    "famille": "S",
    "type": "erreur",
-   "question": "Projet d'ordre de service. Repérez la phrase fautive. Les phrases se lisent à la suite, comme un seul texte.",
+   "question": "Voici un projet d'ordre de service prescrivant des travaux supplémentaires, rédigé en trois phrases qui se lisent à la suite comme un texte unique. Repérez la phrase qui contient une erreur juridique.",
    "phraseFautive": 2,
-   "explication": "Cette clause maladroite se retourne contre la collectivité : elle prive le maître d'ouvrage du bénéfice de l'exécution sous réserve et fournit au titulaire un motif de prolongation de délai.",
+   "explication": "En imposant au titulaire de suspendre l'exécution des travaux supplémentaires tant que le prix n'est pas définitivement arrêté, cette clause inverse le principe posé par le CCAG-Travaux 2021 : l'entreprise doit au contraire exécuter l'ordre de service sans délai, quitte à formuler ses réserves motivées sur le prix dans le délai prévu au marché. En rédigeant une telle clause, la collectivité se prive elle-même du bénéfice de l'exécution sous réserve, retarde le chantier de son propre fait, et fournit au titulaire un motif parfaitement fondé de demande de prolongation de délai contractuel, voire d'indemnisation pour immobilisation de moyens. Un ordre de service correctement rédigé doit toujours distinguer la prescription des travaux, immédiatement exécutoire, du règlement financier, qui peut être discuté a posteriori sans jamais suspendre le chantier.",
    "derniereVerification": "2026-08",
    "aVerifier": null,
    "segments": [
-    "Vous êtes invité à réaliser les travaux supplémentaires décrits dans l'annexe jointe.",
-    "Ces travaux seront réglés sur la base de prix nouveaux, à arrêter contradictoirement.",
-    "Vous suspendrez l'exécution de ces travaux jusqu'à accord définitif sur ces prix."
+    "Vous êtes invité à exécuter sans délai les travaux supplémentaires décrits dans l'annexe jointe au présent ordre de service.",
+    "Le prix de ces travaux sera arrêté contradictoirement entre les parties sur la base de prix nouveaux, en cas de désaccord sur les prix du bordereau initial.",
+    "Vous devrez suspendre l'exécution de ces travaux supplémentaires jusqu'à ce qu'un accord définitif intervienne sur leur prix."
    ]
   },
   {
@@ -5680,30 +5700,30 @@
    "niveau": 2,
    "famille": "S",
    "type": "frise",
-   "question": "Replacez chaque réglementation thermique ou environnementale en face de sa date.",
+   "question": "Replacez chaque évolution réglementaire thermique ou environnementale en face de sa date.",
    "points": [
     [
      "1974",
-     "Première réglementation thermique française, après le premier choc pétrolier"
+     "Première réglementation thermique française, promulguée après le premier choc pétrolier"
     ],
     [
      "2000",
-     "RT 2000 : généralisation du calcul de consommation conventionnelle"
+     "Généralisation d'un calcul de consommation conventionnelle unique pour tout bâtiment neuf"
     ],
     [
      "2005",
-     "RT 2005 : renforcement des exigences et introduction du Tic"
+     "Renforcement des exigences précédentes et apparition d'un indicateur de confort d'été obligatoire"
     ],
     [
      "2012",
-     "RT 2012 : logique de performance globale, Bbio et Cep"
+     "Bascule vers une logique de performance globale de l'enveloppe et des besoins climatiques"
     ],
     [
      "2022",
-     "RE2020 : entrée en vigueur pour les logements, avec volet carbone et confort d'été"
+     "Entrée en vigueur, pour les logements neufs, d'un volet carbone et d'un indicateur de confort d'été renforcé"
     ]
    ],
-   "explication": "La rupture n'est pas quantitative mais conceptuelle : jusqu'à la RT 2012 on réglemente l'énergie d'exploitation, à partir de la RE2020 on réglemente aussi le carbone incorporé et le comportement en canicule. C'est ce basculement qu'un jury attend, pas la liste des dates.",
+   "explication": "La rupture n'est pas quantitative mais conceptuelle. De 1974 à 2012, chaque génération de réglementation thermique (RT 1974, RT 2000, RT 2005, RT 2012) durcit un seul paramètre : la consommation d'énergie d'exploitation, avec des seuils de plus en plus bas. La RE2020, entrée en vigueur en 2022 pour le logement neuf, change de nature : elle ajoute au sujet énergétique un volet carbone sur tout le cycle de vie (Ic construction, Ic énergie) et un indicateur de confort d'été opposable (DH), pour anticiper le changement climatique plutôt que la seule facture énergétique. C'est ce basculement qu'un jury de concours attend, bien plus que la mémorisation des millésimes.",
    "aVerifier": "Le tertiaire (bureaux, enseignement) bascule en RE2020 au 1er juillet 2022, six mois après le logement.",
    "derniereVerification": "2026-08"
   },
@@ -5756,26 +5776,26 @@
    "points": [
     [
      "2006",
-     "Code des marchés publics dans sa version la plus connue"
+     "Code des marchés publics dans sa version la plus connue, issue du décret du 1er août 2006"
     ],
     [
      "2016",
-     "Ordonnance et décret marchés publics transposant les directives de 2014"
+     "Ordonnance du 23 juillet 2015 et décret du 25 mars 2016 relatifs aux marchés publics, transposant les directives européennes de 2014"
     ],
     [
      "2019",
-     "Entrée en vigueur du code de la commande publique"
+     "Entrée en vigueur du code de la commande publique (1er avril 2019), codification à droit constant"
     ],
     [
      "2021",
-     "Nouveaux CCAG, dont le CCAG-Travaux"
+     "Entrée en vigueur des nouveaux CCAG (dont le CCAG-Travaux), applicables au 1er avril 2021"
     ],
     [
      "2026",
-     "Obligation d'un critère environnemental dans tout marché"
+     "Échéance du 21 août 2026 : généralisation d'un critère ou d'une considération environnementale dans les marchés publics"
     ]
    ],
-   "explication": "Repère utile : le code de la commande publique de 2019 est une codification à droit constant de l'ordonnance de 2015 et du décret de 2016 ; il n'a pas créé de règles nouvelles. Les vraies ruptures récentes sont les CCAG de 2021 et l'échéance du 21 août 2026.",
+   "explication": "2006 : le code des marchés publics, souvent cité par les anciens praticiens, encadrait alors seuls les pouvoirs adjudicateurs soumis au code, laissant les entités adjudicatrices sous un régime séparé (ordonnance de 2005). 2016 : la transposition des directives européennes de 2014 (ordonnance du 23 juillet 2015, décret du 25 mars 2016) unifie pour la première fois marchés publics et concessions dans un corpus commun aux pouvoirs et entités adjudicateurs, introduit les nouveaux modes de computation des seuils et le sourçage. 2019 : le code de la commande publique regroupe, à droit constant, cette ordonnance et ce décret ainsi que les textes relatifs aux concessions : il ne crée pas de règles nouvelles, contrairement à une idée reçue. 2021 : les nouveaux CCAG (Travaux, Fournitures courantes et services, PI, TIC, MOE, Maîtrise d'œuvre) modernisent la gestion des risques (imprévision, difficultés d'approvisionnement) et intègrent des clauses environnementales. 2026 : l'échéance du 21 août 2026 impose la généralisation d'une dimension environnementale dans la définition du besoin et dans les critères d'attribution des marchés publics, issue de la loi Climat et résilience de 2021 — un jalon à connaître précisément pour situer le calendrier de verdissement de la commande publique.",
    "derniereVerification": "2026-08",
    "aVerifier": null
   },
@@ -5869,8 +5889,8 @@
    "niveau": 1,
    "famille": "S",
    "type": "trous",
-   "question": "Complétez les seuils de catégorie de coordination SPS.",
-   "texte": "Une opération relève de la deuxième catégorie dès que le volume de travail dépasse {1} hommes-jours. Elle relève de la première catégorie au-delà de {2} hommes-jours et de plus de {3} entreprises en bâtiment.",
+   "question": "Complétez les seuils de catégorie de coordination SPS (code du travail, art. R.4532-1 et s.).",
+   "texte": "Une opération relève de la 2e catégorie dès que le volume prévisionnel de travaux dépasse {1} hommes-jours (sans atteindre le seuil de la 1re catégorie). Elle relève de la 1re catégorie au-delà de {2} hommes-jours. Indépendamment du volume, une déclaration préalable de chantier est en outre obligatoire dès lors que plus de {3} entreprises (y compris sous-traitantes) interviennent en bâtiment, pour une durée supérieure à 30 jours ouvrés avec plus de 20 travailleurs simultanément.",
    "mots": [
     "500",
     "10 000",
@@ -5882,8 +5902,8 @@
     "5",
     "20"
    ],
-   "explication": "Ce qui change vraiment entre les catégories, ce n'est pas la présence d'un coordonnateur — elle dépend de la co-activité — mais les documents et instances associés : PGC obligatoire dès la catégorie 2, collège interentreprises en catégorie 1.",
-   "aVerifier": "Recroiser les seuils exacts et la condition de nombre d'entreprises sur les articles R.4532-1 et suivants du code du travail.",
+   "explication": "La catégorie de l'opération conditionne surtout les documents et instances à produire, pas le principe même de la coordination SPS (qui s'impose dès qu'au moins deux entreprises, y compris sous-traitantes, sont susceptibles d'intervenir simultanément ou successivement sur un même chantier). Catégorie 3 : chantiers courants, un simple registre-journal suffit. Catégorie 2 (plus de 500 hommes-jours) : un plan général de coordination (PGC) écrit est obligatoire. Catégorie 1 (plus de 10 000 hommes-jours) : s'y ajoute un collège interentreprises de sécurité, de santé et des conditions de travail (CISSCT). Le seuil de 10 entreprises en bâtiment (5 en génie civil) déclenche, lui, l'obligation de déclaration préalable de chantier auprès de l'inspection du travail, distincte du classement en catégorie. Confondre ces deux logiques est une erreur fréquente à l'oral : le nombre d'entreprises n'est pas le critère de catégorie, mais celui de la déclaration préalable.",
+   "aVerifier": null,
    "derniereVerification": "2026-08"
   },
   {
@@ -5895,7 +5915,7 @@
    "niveau": 7,
    "famille": "S",
    "type": "assoc",
-   "question": "Associez chaque point singulier au lot qui le traite.",
+   "question": "Associez chaque point singulier au lot qui le traite en premier lieu.",
    "paires": [
     [
      "Relevé en pied d'acrotère",
@@ -5918,7 +5938,7 @@
      "Plomberie"
     ]
    ],
-   "explication": "Les sinistres se concentrent aux interfaces entre lots, jamais au milieu d'un ouvrage courant. Identifier qui traite quoi est le préalable à la rédaction des limites de prestation — le paragraphe du CCTP qui évite les trois quarts des litiges de chantier.",
+   "explication": "Le rupteur de pont thermique est un boîtier isolant noyé dans la liaison entre le plancher et la façade (balcon, dalle courante), au moment même du coulage du béton : il est donc posé et coffré par le lot gros œuvre, en amont de toute intervention d'un lot second œuvre, et non rajouté après coup. C'est ce qui le distingue d'un isolant rapporté en ITE, qui relève lui du lot façades. Plus largement, les sinistres de chantier se concentrent aux interfaces entre lots plutôt qu'au milieu d'un ouvrage courant : relevé d'étanchéité en pied d'acrotère (lot étanchéité, car c'est la continuité de l'écran d'eau qui prime), seuil de porte (menuiseries extérieures, responsables de l'étanchéité à l'eau de leur ouvrage), calfeutrement coupe-feu de gaine (lot cloisons-doublages, garant du degré de résistance au feu de la paroi traversée), siphon de sol et pente de forme (plomberie, qui pilote l'évacuation). Le CCTP doit fixer sans ambiguïté ces limites de prestation : c'est le paragraphe qui évite l'essentiel des litiges de réception entre entreprises.",
    "derniereVerification": "2026-08",
    "aVerifier": null
   },
@@ -5977,10 +5997,10 @@
    "niveau": 4,
    "famille": "S",
    "type": "vf",
-   "question": "Un ERP neuf dont l'effectif admis à l'étage est de 60 personnes peut se dispenser d'ascenseur si un escalier conforme est prévu.",
+   "question": "Dans un ERP existant, le maître d'ouvrage peut obtenir une dérogation aux règles d'accessibilité sans avoir à proposer de mesure de compensation, dès lors que les travaux seraient trop coûteux.",
    "vrai": false,
-   "justification": "L'ascenseur est obligatoire dès que l'effectif admis aux étages autres que le niveau d'accès atteint ou dépasse 50 personnes. Un escalier conforme ne s'y substitue pas, puisqu'il ne rend pas l'étage accessible aux personnes en fauteuil.",
-   "explication": "En dessous de 50, l'ascenseur reste obligatoire si certaines prestations ne peuvent pas être offertes au niveau accessible — clause qui, dans un équipement public, le rend presque toujours nécessaire.",
+   "justification": "Une dérogation pour coût disproportionné des travaux au regard des ressources de l'établissement peut être accordée, mais elle est systématiquement assortie de mesures de compensation permettant d'assurer une qualité d'usage équivalente, sauf dans le seul cas de l'impossibilité technique avérée. Il n'existe pas de dérogation « gratuite » sans contrepartie.",
+   "explication": "Les dérogations aux règles d'accessibilité des ERP existants sont encadrées et limitées à trois motifs prévus par le code de la construction et de l'habitation : l'impossibilité technique résultant de l'environnement du bâtiment ou de la structure existante, la disproportion manifeste entre le coût des travaux et leurs effets, notamment au regard de la viabilité de l'exploitation, et la préservation du patrimoine architectural pour les bâtiments protégés. Pour les deux premiers motifs, la dérogation doit obligatoirement s'accompagner de mesures de compensation (par exemple un dispositif d'appel, une aide humaine, un aménagement alternatif) garantissant une qualité d'usage équivalente pour les personnes handicapées, sauf en cas d'impossibilité technique avérée où aucune compensation n'est possible. La demande est instruite par la commission consultative départementale de sécurité et d'accessibilité (CCDSA) et la décision appartient au préfet. Accorder une dérogation sans justification ni examen de mesures de compensation expose la collectivité à un recours contentieux et fragilise juridiquement l'autorisation de travaux délivrée.",
    "derniereVerification": "2026-08",
    "aVerifier": null
   },
@@ -5993,6 +6013,7 @@
    "niveau": 3,
    "famille": "S",
    "type": "tri",
+   "derniereVerification": "2026-08",
    "question": "Classez ces désordres par famille de causes.",
    "colonnes": [
     "Enveloppe",
@@ -6001,19 +6022,7 @@
    ],
    "elements": [
     [
-     "Infiltration au droit d'un relevé d'étanchéité",
-     0
-    ],
-    [
-     "Décollement d'un système d'isolation par l'extérieur",
-     0
-    ],
-    [
      "Moisissures en angle de mur froid dans une classe",
-     1
-    ],
-    [
-     "Condensation persistante sur les dormants de menuiserie",
      1
     ],
     [
@@ -6021,13 +6030,23 @@
      2
     ],
     [
+     "Infiltration au droit d'un relevé d'étanchéité",
+     0
+    ],
+    [
      "Tassement différentiel d'un dallage sur terre-plein",
      2
+    ],
+    [
+     "Décollement d'un système d'isolation par l'extérieur",
+     0
+    ],
+    [
+     "Condensation persistante sur les dormants de menuiserie",
+     1
     ]
    ],
-   "explication": "Le tri compte parce que le réflexe de diagnostic diffère : l'enveloppe se traite par le point singulier, l'humidité par le débit d'air et le pont thermique, la structure par la reconnaissance de sol. Traiter une moisissure en repeignant est la faute la plus fréquente sur un parc scolaire.",
-   "derniereVerification": "2026-08",
-   "aVerifier": null
+   "explication": "Le tri par famille de causes conditionne le réflexe de diagnostic : un désordre d'enveloppe se traite en reprenant le point singulier défaillant (relevé d'étanchéité, fixation ou pare-pluie d'un système d'isolation par l'extérieur), un désordre lié à l'humidité intérieure se traite en agissant sur le renouvellement d'air et les ponts thermiques (angle de mur froid, dormant mal isolé), tandis qu'un désordre structurel impose une reconnaissance de sol et une analyse de fondation avant toute reprise. La faute la plus fréquente sur un parc scolaire est de traiter une moisissure comme un problème esthétique — en repeignant à la peinture anti-moisissure — sans corriger le débit de ventilation ni le pont thermique qui en est la cause réelle : le désordre réapparaît alors en quelques mois. De la même façon, rejointoyer des fissures en escalier sans étude géotechnique préalable est inefficace si le mouvement de sol se poursuit."
   },
   {
    "id": "n-08",
@@ -6332,15 +6351,15 @@
    "niveau": 1,
    "famille": "S",
    "type": "assoc",
-   "question": "Associez chaque indicateur de gestion patrimoniale à ce qu'il permet de décider.",
+   "question": "Associez chaque indicateur de gestion patrimoniale à la décision qu'il aide réellement à prendre.",
    "paires": [
     [
      "Consommation surfacique corrigée du climat",
-     "Comparer la performance de bâtiments de tailles différentes"
+     "Comparer la performance énergétique de bâtiments de tailles et de climats différents"
     ],
     [
      "Indice d'état technique",
-     "Hiérarchiser les besoins de gros entretien"
+     "Hiérarchiser les besoins de gros entretien-renouvellement"
     ],
     [
      "Criticité d'usage",
@@ -6348,14 +6367,16 @@
     ],
     [
      "Coût global annualisé",
-     "Arbitrer entre réhabiliter et reconstruire"
+     "Arbitrer entre réhabiliter lourdement et reconstruire"
     ],
     [
      "Taux d'occupation",
-     "Identifier les candidats à la mutualisation ou à la cession"
+     "Repérer les bâtiments candidats à la mutualisation ou à la cession"
     ]
    ],
-   "explication": "Aucun de ces indicateurs ne décide seul. C'est leur croisement qui produit une programmation défendable devant une assemblée délibérante : un bâtiment très consommateur mais peu utilisé n'appelle pas une rénovation énergétique, il appelle une question sur son usage."
+   "explication": "Aucun de ces indicateurs ne décide seul : c'est leur croisement qui produit une programmation défendable devant une assemblée délibérante. Un bâtiment très consommateur mais peu occupé n'appelle pas prioritairement une rénovation énergétique, il appelle d'abord une question sur son usage (fusion de site, cession, changement d'affectation). À l'inverse, un bâtiment à faible indice d'état technique mais à criticité d'usage élevée (école, mairie, caserne) doit remonter en tête du plan pluriannuel d'investissement même si son coût global paraît favorable à court terme. La bonne pratique consiste à construire une base patrimoniale unique où ces indicateurs sont renseignés par bâtiment, actualisés chaque année, et croisés en matrice (état x criticité, consommation x occupation) plutôt que consultés isolément : c'est cette vision consolidée qui fonde le schéma directeur immobilier et énergétique (SDIE) et qui protège l'ingénieur d'arbitrages purement politiques ou d'opportunité.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "o-20",
@@ -6458,26 +6479,28 @@
    "niveau": 5,
    "famille": "S",
    "type": "assoc",
-   "question": "Associez chaque voie de recours en matière de commande publique à sa caractéristique.",
+   "question": "Associez chaque voie de recours en matière de commande publique à sa caractéristique principale.",
    "paires": [
     [
      "Référé précontractuel",
-     "Avant la signature, manquements à la publicité et à la mise en concurrence"
+     "Exercé avant la signature du contrat, pour manquement aux obligations de publicité et de mise en concurrence"
     ],
     [
      "Référé contractuel",
-     "Après la signature, cas restreints, forclusion rapide"
+     "Exercé après la signature, dans des cas restreints (ex. absence de publicité), avec un délai de forclusion très court"
     ],
     [
-     "Recours en contestation de validité du contrat",
-     "Ouvert à tout tiers lésé, deux mois à compter des mesures de publicité"
+     "Recours en contestation de validité du contrat (recours Tarn-et-Garonne)",
+     "Ouvert à tout tiers susceptible d'être lésé de façon suffisamment directe et certaine, dans un délai de deux mois à compter de l'accomplissement des mesures de publicité appropriées"
     ],
     [
      "Déféré préfectoral",
-     "Exercé par le représentant de l'État au titre du contrôle de légalité"
+     "Exercé par le représentant de l'État dans le cadre du contrôle de légalité des actes des collectivités territoriales"
     ]
    ],
-   "explication": "La signature est la ligne de partage : elle ferme le référé précontractuel et ouvre le référé contractuel. D'où l'importance opérationnelle du délai de suspension entre l'information des évincés et la signature — le violer rouvre précisément la voie contentieuse qu'il devait fermer."
+   "explication": "La signature du contrat est la ligne de partage fondamentale du contentieux de la commande publique : elle ferme la voie du référé précontractuel (article L. 551-1 du code de justice administrative) et ouvre celle du référé contractuel (article L. 551-13), aux cas d'ouverture volontairement restreints (défaut total de publicité, méconnaissance du délai de suspension, absence de respect d'une suspension ordonnée par le juge) et enfermé dans un délai de 31 jours à un an selon les cas. D'où l'importance opérationnelle du délai de standstill entre l'information des candidats évincés et la signature effective : le violer rouvre précisément la voie contentieuse qu'il était censé fermer. Depuis l'arrêt Département de Tarn-et-Garonne (CE, 4 avril 2014), tout tiers lésé peut également contester la validité du contrat lui-même, en excipant de vices d'une gravité suffisante, avec un délai de deux mois à compter des mesures de publicité, ce qui ouvre une troisième voie autonome, plus tardive et plus large que le référé précontractuel. Le déféré préfectoral, enfin, relève d'une logique différente : il ne protège pas un concurrent évincé mais le contrôle de légalité exercé par le préfet, avec un délai de deux mois à compter de la transmission de l'acte en préfecture, et peut être assorti d'un référé suspension.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "as-22",
@@ -6492,30 +6515,31 @@
    "paires": [
     [
      "Eurocode 0",
-     "Bases du calcul des structures, coefficients partiels"
+     "Bases de calcul des structures et coefficients partiels de sécurité"
     ],
     [
      "Eurocode 1",
-     "Actions : charges d'exploitation, neige, vent"
+     "Actions sur les structures : charges d'exploitation, neige, vent"
     ],
     [
      "Eurocode 2",
-     "Structures en béton"
+     "Calcul des structures en béton, armé ou précontraint"
     ],
     [
      "Eurocode 3",
-     "Structures en acier"
+     "Calcul des structures en acier"
     ],
     [
      "Eurocode 5",
-     "Structures en bois"
+     "Calcul des structures en bois"
     ],
     [
      "Eurocode 8",
-     "Résistance au séisme"
+     "Dimensionnement des structures pour leur résistance au séisme"
     ]
    ],
-   "explication": "Chaque Eurocode se lit avec son annexe nationale, qui fixe les paramètres laissés au choix de chaque État. Dans un CCTP, viser la norme NF EN sans son annexe nationale française est une imprécision qu'un contrôleur technique relèvera."
+   "explication": "Les dix Eurocodes (0 à 9) forment depuis 2010 le corpus européen unique de calcul des structures, ayant remplacé les anciennes normes nationales de calcul (règles CM66, BAEL, CB71, PS92, etc.). Chaque Eurocode européen (NF EN 199x) doit impérativement se lire avec son annexe nationale française (NF EN 199x/NA), qui fixe les paramètres laissés au choix de chaque État membre : valeurs de charges climatiques locales, coefficients partiels, zonage sismique national (issu du décret n° 2010-1254 du 22 octobre 2010 pour la France). Dans un CCTP ou une notice de calcul, viser la seule norme NF EN sans son annexe nationale constitue une imprécision technique qu'un contrôleur technique ou un bureau d'études structure relèvera systématiquement, car le calcul ne peut être mené à bien sans ces paramètres nationaux. Pour un ouvrage public, le choix de la catégorie d'importance (et donc du niveau d'exigence parasismique, notamment pour l'Eurocode 8 en zone de sismicité 3 à 5) relève directement de la responsabilité du maître d'ouvrage et doit être tracé dans le programme.",
+   "derniereVerification": "2026-08"
   },
   {
    "id": "as-23",
@@ -6615,21 +6639,23 @@
    "niveau": 8,
    "famille": "S",
    "type": "trous",
-   "question": "Complétez le régime de la retenue de garantie.",
-   "texte": "La retenue de garantie est plafonnée à {1} % du montant du marché. Elle peut être remplacée par une {2}. Elle est remboursée au plus tard {3} jours après l'expiration du délai de garantie de parfait achèvement.",
+   "question": "Complétez le régime de la retenue de garantie dans un marché de travaux.",
+   "texte": "La retenue de garantie est plafonnée à {1} % du montant du marché. À la demande du titulaire, l'acheteur ne peut s'opposer à son remplacement par une {2}, alors qu'il peut refuser une simple {3}. Elle est remboursée au plus tard {4} jours après l'expiration du délai de garantie de parfait achèvement, sauf réserves non levées.",
    "mots": [
     "5",
     "garantie à première demande",
+    "caution personnelle et solidaire",
     "30"
    ],
    "leurres": [
     "10",
-    "3",
-    "caution personnelle et solidaire",
+    "avance forfaitaire",
+    "lettre d'intention",
     "60"
    ],
-   "explication": "La caution personnelle et solidaire n'est acceptable que si l'acheteur ne s'y oppose pas, alors que la garantie à première demande s'impose à lui : la nuance fait la différence en trésorerie pour l'entreprise. Côté collectivité, le réflexe utile est ailleurs : ne pas oublier de libérer la retenue à l'échéance, ce que les logiciels financiers ne rappellent pas toujours.",
-   "derniereVerification": "2026-07"
+   "explication": "La retenue de garantie, destinée à couvrir les réserves formulées à la réception et pendant le délai de garantie de parfait achèvement d'un an, ne peut excéder 5 % du montant initial augmenté, le cas échéant, des avenants (article L. 2191-8 et R. 2191-32 du CCP). Le titulaire dispose d'un droit à substitution : l'acheteur ne peut jamais s'opposer au remplacement de la retenue par une garantie à première demande (mécanisme autonome, payable sur simple appel de l'acheteur, sans contestation possible de la banque), alors qu'il conserve la faculté de refuser une caution personnelle et solidaire, moins protectrice puisque la caution peut opposer les exceptions dont dispose le débiteur principal. Cette nuance a un impact direct sur la trésorerie et le coût de garantie pour l'entreprise, qui doit anticiper le type de sûreté que l'acheteur acceptera. Côté collectivité, le principal risque opérationnel est ailleurs : oublier de restituer la retenue de garantie dans le délai de 30 jours suivant l'expiration du délai de garantie de parfait achèvement expose la personne publique au paiement d'intérêts moratoires, ce que les logiciels financiers ne signalent pas toujours automatiquement.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "t-22",
@@ -6704,10 +6730,12 @@
    "niveau": 7,
    "famille": "S",
    "type": "vf",
-   "question": "En appel d'offres, une négociation reste possible avec l'attributaire pressenti pour finaliser le prix.",
+   "question": "Dans un appel d'offres (procédure formalisée sans négociation), l'acheteur peut discuter avec l'entreprise arrivée en tête pour obtenir une baisse de prix avant de l'attribuer définitivement.",
    "vrai": false,
-   "justification": "L'appel d'offres exclut toute négociation : l'acheteur attribue sur la base des offres remises, éventuellement précisées ou complétées, mais jamais modifiées dans leurs éléments substantiels. La négociation suppose une procédure avec négociation ou un dialogue compétitif, dont le recours est conditionné.",
-   "explication": "La frontière entre demande de précision licite et négociation prohibée est ténue et contentieuse : demander de confirmer un prix manifestement erroné est admis, obtenir un rabais ne l'est jamais. En pratique, c'est l'écrit qui protège : toute demande de précision doit être tracée et adressée dans les mêmes termes aux candidats concernés."
+   "justification": "L'appel d'offres exclut par nature toute négociation : l'acheteur attribue le marché sur la seule base des offres remises, sans pouvoir en modifier les éléments substantiels, notamment le prix. Il peut uniquement demander des précisions, compléments ou confirmations qui ne changent pas la teneur de l'offre. Négocier suppose de recourir à une autre procédure, la procédure avec négociation ou le dialogue compétitif, dont l'usage est réservé à des cas définis par le CCP (complexité du besoin, spécifications non précisables à l'avance, échec d'une procédure antérieure, etc.).",
+   "explication": "La frontière entre une demande de précision licite et une négociation prohibée est ténue et régulièrement source de contentieux devant le juge du référé précontractuel. Est admis, par exemple, de demander à un candidat de confirmer un prix manifestement erroné en cas de doute sur une erreur matérielle, ou de préciser la répartition d'un sous-détail de prix incohérent avec le montant global ; est en revanche prohibé tout échange qui aboutirait, même indirectement, à obtenir un rabais ou à modifier la portée technique de l'offre. En pratique, le formalisme protège l'acheteur : toute demande de précision doit être écrite, tracée dans le rapport d'analyse des offres, et adressée dans les mêmes termes à l'ensemble des candidats placés dans une situation identique, sous peine d'annulation de la procédure pour rupture d'égalité de traitement.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "vf-22",
@@ -6830,27 +6858,7 @@
    ],
    "elements": [
     [
-     "Acte d'engagement et ses annexes",
-     0
-    ],
-    [
-     "CCAP et CCTP",
-     0
-    ],
-    [
-     "CCAG-Travaux visé au CCAP",
-     0
-    ],
-    [
      "Règlement de la consultation",
-     1
-    ],
-    [
-     "Avis d'appel à la concurrence",
-     1
-    ],
-    [
-     "Détail quantitatif estimatif d'un marché à prix forfaitaire",
      1
     ],
     [
@@ -6858,11 +6866,32 @@
      2
     ],
     [
+     "Acte d'engagement et ses annexes",
+     0
+    ],
+    [
+     "Avis d'appel à la concurrence",
+     1
+    ],
+    [
      "Planning d'exécution remis à l'offre",
      2
+    ],
+    [
+     "CCAG-Travaux visé au CCAP",
+     0
+    ],
+    [
+     "Détail quantitatif estimatif d'un marché à prix forfaitaire",
+     1
+    ],
+    [
+     "CCAP et CCTP",
+     0
     ]
    ],
-   "explication": "Le mémoire technique est le piège récurrent : contractuel seulement si le CCAP le liste dans les pièces du marché. Le rendre contractuel donne des leviers en exécution mais fige des engagements parfois rédigés pour séduire ; le laisser hors contrat prive la collectivité de recours sur les promesses de l'offre. C'est un choix de rédaction, pas un automatisme."
+   "explication": "L'acte d'engagement, le CCAP, le CCTP et le CCAG-Travaux (dès lors qu'il est visé par le CCAP) sont contractuels : ils lient les parties et fondent leurs droits et obligations réciproques. Le règlement de la consultation et l'avis d'appel à la concurrence ne survivent pas à la notification : ce sont des documents de procédure, qui ont épuisé leurs effets une fois le marché attribué. Le détail quantitatif estimatif (DQE), dans un marché à prix forfaitaire, est un document informatif servant au jugement des offres, non contractuel en principe, sauf clause contraire expresse du CCAP. Le mémoire technique et le planning remis à l'offre sont le piège classique : ils ne deviennent contractuels que si le CCAP les liste explicitement parmi les pièces constitutives du marché, en principe avec un ordre de priorité en cas de contradiction. Bonne pratique recommandée : rendre le mémoire technique contractuel dès lors qu'il comporte des engagements précis et vérifiables (performances, moyens dédiés, délais partiels), afin de pouvoir opposer au titulaire tout écart en exécution ; en revanche, exclure les éléments commerciaux ou trop généraux qui n'apportent rien de mesurable et compliqueraient inutilement la gestion des avenants.",
+   "derniereVerification": "2026-08"
   },
   {
    "id": "tri-22",
@@ -7009,14 +7038,14 @@
    "type": "erreur",
    "question": "Note sur les assurances d'une opération de construction. Repérez la phrase fautive. Les phrases se lisent à la suite, comme un seul texte.",
    "segments": [
-    "La police dommages-ouvrage sera souscrite avant l'ouverture du chantier.",
-    "Elle indemnisera les désordres de nature décennale après détermination des responsabilités de chaque constructeur.",
-    "L'assureur exercera ensuite ses recours contre les constructeurs et leurs assureurs."
+    "La police dommages-ouvrage sera souscrite par le maître d'ouvrage avant l'ouverture du chantier, pour un coût généralement compris entre 2 % et 4 % du montant des travaux.",
+    "Elle a vocation à préfinancer rapidement la réparation des désordres de nature décennale, sans attendre que les responsabilités de chaque constructeur soient déterminées.",
+    "Le versement de l'indemnité par l'assureur dommages-ouvrage est subordonné à l'issue définitive d'une procédure judiciaire établissant la responsabilité de chaque constructeur."
    ],
-   "phraseFautive": 1,
-   "correction": "Tout l'intérêt de la dommages-ouvrage est le préfinancement : elle indemnise sans attendre la recherche des responsabilités, dans des délais encadrés, précisément pour que l'ouvrage public soit réparé vite. La recherche des responsabilités intervient après, entre assureurs.",
-   "explication": "Formulée comme dans la note, la garantie perd sa raison d'être. C'est aussi l'argument à opposer à l'arbitrage budgétaire consistant à ne pas souscrire : sans DO, la collectivité préfinance elle-même et porte le risque d'insolvabilité des constructeurs pendant le contentieux.",
-   "derniereVerification": "2026-07"
+   "phraseFautive": 2,
+   "correction": "C'est l'inverse : l'assureur dommages-ouvrage doit se prononcer sur la prise en charge dans un délai de 60 jours après déclaration du sinistre (et proposer une offre d'indemnisation dans les 90 jours), précisément pour éviter d'attendre l'issue d'un contentieux entre constructeurs. Le recours de l'assureur contre les responsables et leurs assureurs décennaux intervient ensuite, après indemnisation du maître d'ouvrage.",
+   "explication": "L'intérêt majeur de la dommages-ouvrage (loi Spinetta, 1978, articles L.242-1 et s. du code des assurances) est précisément de dissocier l'indemnisation, rapide et automatique, de la recherche des responsabilités, souvent longue et contentieuse. Si l'on attendait un jugement définitif sur les responsabilités pour indemniser, l'ouvrage public — une école, une crèche — resterait des années en état de désordre, ce qui est contraire à l'objectif même de la garantie. En pratique, l'assureur DO indemnise puis exerce lui-même ses recours subrogatoires contre les constructeurs et leurs assureurs de responsabilité décennale. Ne pas souscrire de DO, ou mal comprendre son mécanisme, expose la collectivité à devoir avancer seule le coût de réparation et à porter le risque d'insolvabilité d'une entreprise pendant tout le contentieux.",
+   "derniereVerification": "2026-08"
   },
   {
    "id": "e-23",
@@ -7051,27 +7080,27 @@
    "points": [
     [
      "1978",
-     "Loi Spinetta : responsabilité décennale de plein droit et assurance obligatoire"
+     "Loi Spinetta : responsabilité décennale de plein droit et assurance construction obligatoire (dommages-ouvrage et décennale)"
     ],
     [
      "1985",
-     "Loi MOP : maîtrise d'ouvrage publique et missions de maîtrise d'œuvre"
+     "Loi MOP : distinction maîtrise d'ouvrage publique / maîtrise d'œuvre et définition des missions de base"
     ],
     [
      "2018",
-     "Loi ELAN : réforme du logement et simplifications de la construction"
+     "Loi ELAN : réforme du logement, simplification de la construction et recul du contrôle a priori en urbanisme"
     ],
     [
      "2020",
-     "Ordonnance réécrivant le livre Ier du code de la construction, en logique de résultats"
+     "Ordonnance du 30 octobre 2020 réécrivant le livre Ier du code de la construction et de l'habitation en logique d'objectifs"
     ],
     [
      "2021",
-     "Loi Climat et résilience : achat public, rénovation, artificialisation"
+     "Loi Climat et résilience : verdissement de la commande publique, rénovation énergétique, lutte contre l'artificialisation"
     ]
    ],
-   "explication": "Spinetta et MOP forment le socle du métier de maître d'ouvrage public : l'une organise la réparation, l'autre la commande. La réécriture de 2020 introduit la logique d'objectifs et de solutions d'effet équivalent — un changement de philosophie normative qui fait un excellent sujet de conclusion à l'oral.",
-   "derniereVerification": "2026-07"
+   "explication": "1978 (loi Spinetta) crée le système assurantiel encore en vigueur : responsabilité décennale de plein droit des constructeurs et double obligation d'assurance (décennale des constructeurs, dommages-ouvrage du maître d'ouvrage). 1985 (loi MOP) organise la commande publique de la construction : elle impose la séparation entre maîtrise d'ouvrage et maîtrise d'œuvre et définit les éléments de mission (esquisse, APS, APD, PRO, ACT, EXE, VISA, DET, AOR...). 2018 (loi ELAN) modernise le logement, assouplit certaines règles de construction et renforce la numérisation des autorisations d'urbanisme. 2020 marque un basculement méthodologique : l'ordonnance du 30 octobre 2020 réécrit le livre Ier du CCH en objectifs de résultat (performance à atteindre) plutôt qu'en moyens imposés, ouvrant la voie aux solutions d'effet équivalent. 2021 (loi Climat et résilience) infuse l'écologie dans tous les pans du droit de la construction et de la commande publique : SPASER abaissé à 50 M€, critère environnemental obligatoire à terme, lutte contre l'artificialisation des sols (ZAN). Ces cinq textes forment la colonne vertébrale chronologique à maîtriser pour situer toute question technique dans son contexte juridique.",
+   "derniereVerification": "2026-08"
   },
   {
    "id": "fr-21",
@@ -7205,12 +7234,12 @@
    "niveau": 8,
    "famille": "S",
    "type": "libre",
-   "question": "À l'oral : dans quels cas un marché public peut-il être modifié en cours d'exécution ?",
-   "explication": "La grille d'analyse attendue tient en deux questions : la modification était-elle prévue, et change-t-elle l'équilibre de la mise en concurrence initiale ? Les plafonds chiffrés ne dispensent jamais du second test — une petite modification peut être substantielle si elle aurait attiré d'autres candidats.",
+   "question": "À l'oral : dans quels cas précis un marché public peut-il être modifié en cours d'exécution sans nouvelle procédure de mise en concurrence, et quelles limites chiffrées s'appliquent à chaque cas ?",
+   "explication": "La grille d'analyse attendue par le jury tient en deux questions successives : la modification était-elle prévue par le marché initial, et, si elle ne l'était pas, change-t-elle l'équilibre économique ou l'objet de la mise en concurrence initiale ? Les plafonds chiffrés (10, 15 ou 50 %) ne dispensent jamais du second test qualitatif : une modification en apparence modeste peut être jugée substantielle si elle aurait été de nature à attirer d'autres candidats ou à modifier le classement des offres, auquel cas elle est prohibée quel que soit son montant. À l'inverse, une clause de réexamen (tranche optionnelle, clause de variation de prix, clause de révision) prévue dès le marché initial n'est pas plafonnée en valeur, mais doit avoir été rédigée de façon claire, précise et non équivoque pour être opposable. Un bon candidat doit aussi savoir illustrer chaque cas par un exemple de chantier de bâtiment (découverte de pollution des sols relevant des circonstances imprévisibles, ajout d'un lot ravalement devenu nécessaire, substitution de titulaire après une fusion d'entreprises).",
    "derniereVerification": "2026-08",
    "aVerifier": null,
    "options": [
-    "Clauses de réexamen ou d'options prévues au contrat ; prestations supplémentaires devenues nécessaires, dans la limite de 50 % du montant initial par modification ; circonstances imprévisibles, même plafond ; substitution de titulaire dans des cas encadrés ; modifications non substantielles ; et modifications de faible montant, sous 10 % en fournitures et services ou 15 % en travaux."
+    "Six cas sont prévus par les articles L. 2194-1 et R. 2194-1 et suivants du CCP : 1) les modifications prévues par des clauses de réexamen, de révision ou des clauses d'options claires, précises et non équivoques, sans plafond légal de montant ; 2) les prestations supplémentaires devenues nécessaires dont le changement de titulaire est impossible pour des raisons économiques ou techniques, plafonnées à 50 % du montant initial par modification ; 3) les modifications rendues nécessaires par des circonstances imprévisibles, même plafond de 50 % ; 4) la substitution de titulaire dans des cas encadrés (restructuration, clause de réexamen, reprise des obligations par un nouvel opérateur) ; 5) les modifications non substantielles, qui ne changent pas l'économie générale du contrat ; 6) les modifications de faible montant, limitées à 10 % du montant initial en fournitures et services et à 15 % en travaux, sous réserve de rester en deçà des seuils européens de procédure formalisée."
    ],
    "bonneReponse": 0
   },
@@ -7241,12 +7270,12 @@
    "niveau": 8,
    "famille": "S",
    "type": "libre",
-   "question": "Quel est le rôle de la commission d'appel d'offres dans une collectivité, et quand intervient-elle encore en cours d'exécution ?",
-   "explication": "Le seuil de 5 % sur les avenants est le point que les services techniques oublient le plus souvent en cours de chantier : il impose d'anticiper le calendrier des CAO dans le planning de l'opération, sous peine de bloquer un ordre de service urgent pour une question de gouvernance interne.",
+   "question": "Quel est le rôle de la commission d'appel d'offres (CAO) dans une collectivité territoriale, à partir de quel seuil de marché intervient-elle, et à quelle condition est-elle encore saisie en cours d'exécution ?",
+   "explication": "La composition, obligatoire pour les collectivités territoriales, associe l'autorité habilitée à signer les marchés (président ou son représentant, qui préside) et des membres titulaires élus au sein de l'assemblée délibérante à la représentation proportionnelle au plus fort reste, avec autant de suppléants. La CAO n'intervient que pour les marchés passés selon une procédure formalisée, c'est-à-dire dont le montant est égal ou supérieur aux seuils européens de procédure formalisée (de l'ordre de 5 538 000 € HT en travaux et environ 221 000 € HT en fournitures et services pour les collectivités, seuils révisés tous les deux ans par la Commission européenne) : en dessous, en procédure adaptée, la CAO n'est pas obligatoire, même si l'exécutif peut choisir de la réunir à titre facultatif pour sécuriser sa décision. Le seuil de 5 % oublié en cours de chantier est celui de l'article L. 1414-4 du CGCT : tout avenant à un marché initialement passé par la CAO, qui entraîne une augmentation du montant global supérieure à 5 %, doit être soumis pour avis à la commission avant signature. C'est un point souvent négligé par les services techniques, qui doivent anticiper le calendrier des séances de CAO dans le planning de l'opération : à défaut, un ordre de service urgent ou un avenant de régularisation peut se retrouver bloqué pour une simple question de gouvernance interne, avec un risque d'illégalité de l'acte pris sans cet avis obligatoire.",
    "derniereVerification": "2026-08",
    "aVerifier": null,
    "options": [
-    "Composée de l'autorité habilitée à signer et de membres de l'assemblée élus en son sein à la représentation proportionnelle, la CAO attribue les marchés passés selon une procédure formalisée. Elle est en outre saisie pour avis de tout avenant entraînant une augmentation supérieure à 5 % du montant d'un marché qui lui avait été soumis."
+    "Composée de l'autorité habilitée à signer les marchés (qui la préside) et de membres élus de l'assemblée délibérante à la représentation proportionnelle, la CAO attribue les marchés passés selon une procédure formalisée (au-delà des seuils européens, environ 5 538 000 € HT en travaux). Elle est en outre obligatoirement saisie pour avis, en cours d'exécution, de tout avenant entraînant une augmentation supérieure à 5 % du montant d'un marché initialement passé par la CAO."
    ],
    "bonneReponse": 0
   },
@@ -7319,7 +7348,7 @@
    "famille": "S",
    "type": "trous",
    "question": "Complétez le régime de l'avance obligatoire.",
-   "texte": "Une avance est accordée au titulaire lorsque le montant du marché est supérieur à {1} euros HT et que le délai d'exécution excède {2} mois. Son taux minimal est de {3} % du montant initial.",
+   "texte": "Une avance est accordée au titulaire lorsque le montant du marché (ou du bon de commande) est supérieur à {1} euros HT et que le délai d'exécution excède {2} mois. Son taux minimal est de {3} % du montant initial TTC du marché ou de la part exécutée par le titulaire.",
    "mots": [
     "50 000",
     "deux",
@@ -7332,8 +7361,8 @@
     "10",
     "20"
    ],
-   "explication": "L'avance n'est pas une faveur de trésorerie mais un droit du titulaire, auquel il peut renoncer. Des taux majorés existent au bénéfice des PME selon la nature de l'acheteur — un point mouvant à revérifier avant l'écrit, les lois de finances y touchant régulièrement.",
-   "derniereVerification": "2026-07"
+   "explication": "L'avance est un droit du titulaire (article R. 2191-3 du code de la commande publique) dès lors que deux conditions cumulatives sont réunies : un montant du marché ou du bon de commande supérieur à 50 000 euros HT et un délai d'exécution supérieur à deux mois. Le titulaire peut y renoncer expressément. Le taux minimal est de 5 % du montant initial TTC du marché, ou de la partie du marché exécutée par le titulaire s'il s'agit d'un accord-cadre ou d'un marché à bons de commande sans montant minimum. Ce taux est porté à 10 % minimum pour les PME lorsque l'acheteur est l'État ou un établissement public de l'État autre qu'à caractère industriel et commercial (article R. 2191-8) ; les collectivités territoriales et leurs établissements publics peuvent, elles, fixer librement un taux supérieur au minimum de 5 %, y compris pour favoriser les PME, mais n'y sont pas contraintes par le même texte. L'avance doit être remboursée par précompte sur les sommes dues au titulaire, selon un rythme et des modalités fixés au marché ; à défaut de clause, le remboursement débute lorsque le montant des prestations exécutées atteint 65 % du montant du marché et doit être terminé quand ce taux atteint 80 %. Le non-versement de l'avance due engage la responsabilité du pouvoir adjudicateur et ouvre droit à intérêts moratoires.",
+   "derniereVerification": "2026-08"
   },
   {
    "id": "a3-80",
@@ -7345,11 +7374,11 @@
    "famille": "S",
    "type": "libre",
    "question": "Expliquez le principe de l'analyse de cycle de vie dynamique retenue par la RE2020, et son effet sur le choix des matériaux.",
-   "explication": "C'est un choix méthodologique français discuté — la norme européenne retient une ACV statique — et il faut savoir le présenter comme tel : un instrument d'orientation industrielle autant qu'une méthode scientifique. Un jury appréciera que vous connaissiez la critique sans caricaturer le dispositif.",
+   "explication": "C'est un choix méthodologique français discuté — la norme européenne EN 15978 retient une ACV statique, qui traite un kilogramme de CO2 émis en 2024 comme équivalent à un kilogramme émis en 2074 — et il faut savoir le présenter comme tel devant un jury : un instrument d'orientation industrielle autant qu'une méthode scientifique neutre. Il faut connaître la critique technique sans caricaturer le dispositif ni le disqualifier.",
    "derniereVerification": "2026-08",
    "aVerifier": null,
    "options": [
-    "L'ACV dynamique pondère les émissions selon leur date : un kilogramme de CO2 émis aujourd'hui pèse plus qu'un kilogramme émis dans cinquante ans, ce qui valorise le stockage temporaire de carbone. Elle avantage donc les matériaux biosourcés, qui stockent du carbone dès la construction et ne le restituent qu'en fin de vie, et pénalise les émissions immédiates des matériaux très carbonés."
+    "L'ACV dynamique pondère chaque émission selon sa date d'occurrence sur la durée de vie conventionnelle du bâtiment (50 ans) : un kilogramme de CO2 émis aujourd'hui pèse plus lourd dans le calcul qu'un kilogramme émis dans cinquante ans, car le carbone émis immédiatement reste plus longtemps dans l'atmosphère à forcer le réchauffement, alors qu'un carbone émis tardivement, ou stocké puis relâché en fin de vie, a un effet radiatif cumulé moindre sur la période étudiée. Ce choix méthodologique avantage mécaniquement les matériaux biosourcés (bois, paille, chanvre) qui stockent du carbone atmosphérique dès la pousse de la ressource et ne le restituent qu'à la fin de vie de l'ouvrage, des décennies plus tard : leur impact apparaît donc dilué dans le temps. À l'inverse, il pénalise les matériaux à forte empreinte carbone émise immédiatement lors de la fabrication, comme le béton ou l'acier vierge, dont la totalité des émissions de production est comptabilisée dès l'année zéro du chantier. La critique technique porte sur trois points : le dispositif favorise une filière industrielle française du bois-construction autant qu'il traduit une réalité physique du forçage radiatif ; la méthode reste isolée par rapport à la norme européenne EN 15978 qui utilise une ACV statique, ce qui complique les comparaisons internationales de bâtiments ; enfin, elle suppose un stockage carbone réellement pérenne pendant 50 ans, ce qui interroge sur le devenir réel des matériaux biosourcés en fin de vie (réemploi, incinération, enfouissement). Un candidat au concours doit donc présenter l'ACV dynamique comme un choix assumé de politique publique environnementale et industrielle, cohérent avec l'objectif de décarbonation du secteur du bâtiment, tout en étant capable d'en discuter les limites méthodologiques sans le rejeter en bloc."
    ],
    "bonneReponse": 0
   },
@@ -7491,13 +7520,13 @@
    "famille": "S",
    "type": "libre",
    "question": "Comment hiérarchiser les opérations d'un plan pluriannuel d'investissement sur un parc bâti, de façon défendable devant les élus ?",
-   "explication": "La méthode compte plus que le résultat : une pondération discutée et assumée protège l'ingénieur des arbitrages d'opportunité, parce qu'elle rend visible le coût de chaque dérogation à la priorisation. C'est aussi la réponse attendue à la question de jury « comment dites-vous non à un élu ».",
-   "derniereVerification": "2026-08",
-   "aVerifier": null,
    "options": [
-    "En croisant des critères explicites et notés : état technique des ouvrages, criticité d'usage du bâtiment, obligations réglementaires datées, gains d'exploitation attendus, et opportunités de financement ou de couplage de travaux. La hiérarchie qui en résulte se présente en scénarios budgétaires — plancher, cible, ambitieux — plutôt qu'en liste unique, pour laisser l'arbitrage aux élus sur une base objectivée."
+    "En croisant des critères explicites et notés : état technique des ouvrages, criticité d'usage du bâtiment, obligations réglementaires datées (DEET, BACS, accessibilité, sécurité incendie), gains d'exploitation attendus, et opportunités de financement ou de couplage de travaux. La hiérarchie qui en résulte se présente en scénarios budgétaires — plancher, cible, ambitieux — plutôt qu'en liste unique, pour laisser l'arbitrage final aux élus sur une base objectivée et traçable."
    ],
-   "bonneReponse": 0
+   "bonneReponse": 0,
+   "explication": "La méthode compte plus que le résultat chiffré : une pondération de critères discutée en amont avec la direction générale et présentée aux élus protège l'ingénieur des arbitrages d'opportunité, car elle rend visible et chiffré le coût politique et technique de chaque dérogation à la priorisation retenue. Concrètement, on construit une grille multicritère (état technique, criticité d'usage, échéance réglementaire, gain attendu, opportunité de mutualisation de travaux ou de subvention) avec une pondération assumée, on la fait valider en interne, puis on décline le classement obtenu en plusieurs scénarios budgétaires — un scénario plancher qui couvre les urgences réglementaires et de sécurité, un scénario cible qui stabilise la dette technique, un scénario ambitieux qui inclut la transition énergétique et les projets de développement. Cette présentation en scénarios, et non en liste figée, est cruciale : elle laisse aux élus la responsabilité politique de l'arbitrage budgétaire final tout en leur fournissant une base objectivée, traçable et opposable en cas de contentieux ou de contrôle de la chambre régionale des comptes. C'est aussi la réponse attendue à la question classique de jury « comment dites-vous non à un élu » : l'ingénieur ne dit jamais non seul, il objective le coût d'un choix qui s'écarte de la méthode partagée.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "a5-80",
@@ -7826,15 +7855,15 @@
    "explication": "La Gironde (33) est le plus vaste département de France métropolitaine (environ 10 000 km²). Sa préfecture, Bordeaux, est aussi le siège de Bordeaux Métropole."
   },
   {
-   "famille": "S",
-   "type": "graphe",
-   "derniereVerification": "2026-07",
    "id": "gr-01",
    "axe": "A4",
    "sousTheme": "Dispositif Éco Énergie Tertiaire",
    "stIdx": 1,
    "sujet": "deet-champ",
    "niveau": 5,
+   "famille": "S",
+   "type": "graphe",
+   "question": "Ce graphique affiche les trois jalons de réduction relative des consommations d'énergie finale imposés par le Dispositif Éco Énergie Tertiaire. Cliquez sur la barre correspondant au jalon intermédiaire de 2040.",
    "bonneBarre": 1,
    "graphe": {
     "titre": "Éco Énergie Tertiaire — réduction des consommations d'énergie finale (valeur relative)",
@@ -7854,8 +7883,9 @@
      }
     ]
    },
-   "question": "Sur ce graphique des objectifs en valeur relative du dispositif Éco Énergie Tertiaire, cliquez sur l'échéance correspondant à une réduction de 50 % des consommations.",
-   "explication": "Les objectifs en valeur relative sont −40 % en 2030, −50 % en 2040 et −60 % en 2050 par rapport à une année de référence pleine, postérieure à 2010, choisie par l'assujetti. Voie alternative : atteindre un niveau de consommation en valeur absolue (Cabs) fixé par arrêté selon la catégorie d'activité."
+   "explication": "Les objectifs en valeur relative du décret tertiaire sont une réduction de 40 % en 2030, 50 % en 2040 et 60 % en 2050 par rapport à une année de référence pleine, postérieure à 2010, librement choisie par l'assujetti puis figée dans OPERAT. Une voie alternative existe : atteindre un niveau de consommation en valeur absolue (Cabs), exprimé en kWh d'énergie finale par m² et par an, fixé par arrêté sectoriel selon la catégorie d'activité (bureaux, enseignement, commerce, etc.) et la zone climatique ; l'assujetti choisit la voie relative ou la voie absolue, la plus favorable selon la situation du bâtiment. Le respect de la trajectoire se déclare chaque année avant le 30 septembre sur OPERAT ; en cas de manquement constaté après mise en demeure, le préfet peut publier le nom de l'organisme défaillant, sanction réputée particulièrement dissuasive pour une collectivité territoriale soucieuse de son image auprès de ses administrés.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "famille": "S",
@@ -7968,7 +7998,7 @@
   },
   {
    "famille": "S",
-   "derniereVerification": "2026-07",
+   "derniereVerification": "2026-08",
    "id": "cm-01",
    "axe": "A2",
    "sousTheme": "Formes et montages contractuels",
@@ -7983,7 +8013,7 @@
     "segments": [
      {
       "l": "Lot 1 — Gros œuvre",
-      "v": 900
+      "v": 800
      },
      {
       "l": "Lot 2 — Charpente, couverture",
@@ -7999,12 +8029,12 @@
      },
      {
       "l": "Lot 5 — Peinture",
-      "v": 40
+      "v": 140
      }
     ]
    },
-   "question": "Cliquez sur le lot de travaux qui, à lui seul, peut être passé selon une procédure adaptée par la dérogation dite « des petits lots ».",
-   "explication": "La dérogation des petits lots autorise la procédure adaptée pour les lots inférieurs à 100 000 € HT en travaux (80 000 € HT en fournitures et services), à condition que le montant cumulé des lots ainsi traités n'excède pas 20 % de la valeur totale estimée de l'opération. Le lot 4 (80 k€) et le lot 5 (40 k€) sont sous le seuil, mais ensemble ils représentent 6 % du total : seul le lot 4 est visé ici, et le cumul reste à surveiller lot par lot."
+   "question": "Cliquez sur le seul lot de travaux qui, à lui seul et sans qu'il soit besoin de recourir à un autre lot, peut être passé selon une procédure adaptée par la dérogation dite « des petits lots ».",
+   "explication": "La dérogation des petits lots (article R.2123-1 2° du code de la commande publique) autorise le recours à la procédure adaptée pour un lot inférieur à 100 000 € HT en travaux, à deux conditions cumulatives : ce seuil doit être strictement respecté lot par lot, et le montant cumulé de tous les lots ainsi traités en MAPA ne doit pas dépasser 20 % de la valeur totale estimée de l'ensemble du marché. Ici, le lot 4 (80 000 € HT) est strictement inférieur à 100 000 € HT et ne représente que 4 % du montant total de l'opération (2 M€) : il remplit donc les deux conditions et peut seul être passé en MAPA. Le lot 5, à 140 000 € HT, dépasse le seuil de 100 000 € HT et ne peut pas bénéficier de la dérogation, quel que soit le pourcentage cumulé. Erreur fréquente à éviter : croire qu'il suffit de respecter le plafond de 20 % du montant total sans vérifier, lot par lot, le seuil unitaire de 100 000 € HT (80 000 € HT pour les fournitures et services) — les deux conditions doivent être vérifiées simultanément."
   },
   {
    "famille": "S",
@@ -8052,7 +8082,7 @@
   },
   {
    "famille": "S",
-   "derniereVerification": "2026-07",
+   "derniereVerification": "2026-08",
    "id": "pl-01",
    "axe": "A3",
    "sousTheme": "Accessibilité",
@@ -8144,8 +8174,8 @@
      }
     ]
    },
-   "question": "Sur ce plan de sanitaire adapté, cliquez sur l'espace de manœuvre avec possibilité de demi-tour.",
-   "explication": "L'espace de manœuvre avec possibilité de demi-tour correspond à un disque de 1,50 m de diamètre libre de tout obstacle. Il ne se confond pas avec l'espace d'usage (0,80 × 1,30 m) situé latéralement à la cuvette, ni avec l'espace de manœuvre de porte. Le lave-mains doit présenter un plan supérieur à 0,85 m au maximum."
+   "question": "Sur ce plan de sanitaire adapté, cliquez sur la zone qui doit rester libre de tout obstacle pour permettre à une personne en fauteuil roulant d'effectuer un tour complet sur elle-même.",
+   "explication": "Cette zone est l'espace de manœuvre avec possibilité de demi-tour : un disque de 1,50 m de diamètre, libre de tout obstacle (porte ouverte comprise), qui doit pouvoir être inscrit dans le local, sans empiéter obligatoirement sur l'emprise de la cuvette. Il ne faut pas le confondre avec l'espace d'usage de 0,80 × 1,30 m, positionné latéralement à la cuvette pour permettre le transfert depuis le fauteuil, ni avec l'espace de manœuvre de porte (1,50 m devant une porte poussée, 1,70 m si tirée en cul-de-sac). Le lave-mains, lui, doit avoir un plan supérieur situé à 0,85 m maximum du sol et un vide en partie inférieure permettant le passage des genoux d'un usager en fauteuil. Ces cotes sont fixées par l'arrêté du 20 avril 2017 relatif à l'accessibilité aux personnes handicapées des ERP et IOP existants, et par l'arrêté du 8 décembre 2014 pour le neuf ; leur non-respect est l'une des non-conformités les plus fréquemment relevées lors des visites de la sous-commission accessibilité, car elle interdit purement et simplement l'usage autonome du sanitaire."
   },
   {
    "famille": "S",
@@ -8216,7 +8246,7 @@
   },
   {
    "famille": "S",
-   "derniereVerification": "2026-07",
+   "derniereVerification": "2026-08",
    "niveau": 9,
    "id": "co-01",
    "axe": "A3",
@@ -8253,12 +8283,12 @@
      }
     ]
    },
-   "question": "Sur la trajectoire RE2020 de l'indicateur Ic construction pour une maison individuelle, cliquez sur le seuil applicable aux permis déposés à partir de 2025.",
-   "explication": "La RE2020 fixe une trajectoire de durcissement par paliers de l'indicateur Ic construction (impact carbone des composants et du chantier). Pour la maison individuelle, le seuil maximal passe de 640 kg CO2 eq/m² en 2022 à 530 en 2025, 475 en 2028 puis 415 en 2031. Ces paliers poussent à réduire la part béton/acier et à recourir aux matériaux biosourcés et au réemploi."
+   "question": "Un permis de construire d'une maison individuelle est déposé en 2027. Cliquez sur le seuil Ic construction qui lui est applicable.",
+   "explication": "La RE2020 fixe une trajectoire de durcissement par paliers datés de l'indicateur Ic construction, chaque seuil restant applicable aux permis déposés depuis son entrée en vigueur jusqu'au jalon suivant. Pour la maison individuelle, le seuil passe de 640 kg CO2 eq/m² en 2022 à 530 en 2025, 475 en 2028 puis 415 en 2031. Un permis déposé en 2027 se situe après le jalon de 2025 mais avant celui de 2028 : c'est donc le seuil de 530 kg CO2 eq/m², fixé en 2025, qui s'applique. Cette mécanique de dates d'effet est essentielle en pratique, car un projet peut voir son seuil réglementaire se durcir simplement parce que le dépôt du permis a glissé d'un jalon à l'autre, sans qu'aucun paramètre technique du projet n'ait changé — d'où l'intérêt de sécuriser le calendrier administratif en amont."
   },
   {
    "famille": "S",
-   "derniereVerification": "2026-07",
+   "derniereVerification": "2026-08",
    "niveau": 8,
    "id": "co-02",
    "axe": "A3",
@@ -8266,7 +8296,7 @@
    "stIdx": 2,
    "sujet": "re2020-ind",
    "type": "courbe",
-   "bonnePoint": 3,
+   "bonnePoint": 2,
    "courbe": {
     "titre": "RE2020 — seuil maximal Ic construction, bureaux",
     "unite": "kg CO2 eq/m²",
@@ -8295,8 +8325,8 @@
      }
     ]
    },
-   "question": "Sur la trajectoire RE2020 des bureaux, cliquez sur le seuil Ic construction le plus exigeant, celui de la dernière marche de la trajectoire.",
-   "explication": "Les seuils Ic construction sont propres à chaque usage : les bureaux partent de 980 kg CO2 eq/m² en 2022, puis 810 en 2025, 710 en 2028 et 600 en 2031. La dernière marche, 600, est la plus exigeante : elle suppose dès aujourd'hui d'anticiper structures bois ou mixtes, béton bas carbone et réemploi dans la programmation des opérations."
+   "question": "Un permis de construire de bureaux est déposé en 2029. Cliquez sur le seuil Ic construction qui lui est applicable.",
+   "explication": "Les seuils Ic construction évoluent par jalons datés (2022, 2025, 2028, 2031) et s'appliquent aux permis déposés à compter de chaque jalon, jusqu'à l'entrée en vigueur du suivant. Un permis déposé en 2029 se situe après le jalon de 2028 mais avant celui de 2031 : c'est donc le seuil fixé en 2028, soit 710 kg CO2 eq/m² pour les bureaux, qui s'applique, et non celui de 2031 qui n'entrera en vigueur qu'à cette date. Cette logique de jalons datés est un piège fréquent en concours, où l'on confond la date de dépôt du permis avec la date du jalon le plus proche ou le plus bas. Pour les bureaux, la trajectoire est plus sévère que pour le logement en valeur relative car le poids de la structure et des façades vitrées y est proportionnellement plus important, ce qui pousse dès la programmation vers des structures bois ou mixtes et du béton bas carbone."
   },
   {
    "famille": "S",
@@ -8363,7 +8393,7 @@
   },
   {
    "famille": "S",
-   "derniereVerification": "2026-07",
+   "derniereVerification": "2026-08",
    "niveau": 8,
    "id": "og-02",
    "axe": "A1",
@@ -8421,8 +8451,8 @@
      }
     ]
    },
-   "question": "Cliquez sur l'intervenant chargé d'ordonnancer, de piloter et de coordonner dans le temps les interventions des différentes entreprises sur le chantier.",
-   "explication": "L'OPC (ordonnancement, pilotage, coordination) organise le déroulement temporel du chantier : calendrier détaillé, articulation des lots, animation des réunions de chantier. C'est un élément de mission complémentaire à la mission de base de maîtrise d'œuvre. Il ne doit pas être confondu avec la direction de l'exécution des travaux (DET), qui suit l'exécution des marchés de travaux, ni avec le coordonnateur SPS, dont l'objet est la sécurité."
+   "question": "Cliquez sur l'intervenant qui établit le calendrier détaillé d'exécution, anime les réunions de chantier et harmonise l'intervention des différents corps d'état, sans être ni titulaire d'un lot de travaux ni chargé de la sécurité du chantier.",
+   "explication": "L'OPC (ordonnancement, pilotage, coordination) est un élément de mission complémentaire à la mission de base de maîtrise d'œuvre : il construit et actualise le planning général et détaillé d'exécution, articule les interventions des lots entre eux et anime les réunions de chantier pour éviter les conflits d'interface entre corps d'état. Il ne faut pas le confondre avec le coordonnateur SPS, qui a pour seul objet la prévention des risques liés à la co-activité (et non le respect des délais), ni avec la direction de l'exécution des travaux (DET), assurée par le maître d'œuvre de conception, qui contrôle la conformité technique et financière des travaux. Sur un chantier complexe (plusieurs dizaines de lots), l'absence d'un OPC compétent est une cause fréquente de dérive de délais et de litiges d'interface entre entreprises."
   },
   {
    "famille": "S",
@@ -8451,7 +8481,7 @@
      },
      {
       "l": "Argiles plastiques",
-      "ep": 3.0,
+      "ep": 3,
       "motif": "argile",
       "note": "forte plasticité"
      },
@@ -8500,7 +8530,7 @@
      },
      {
       "l": "Argiles plastiques",
-      "ep": 3.0,
+      "ep": 3,
       "motif": "argile",
       "note": "forte plasticité"
      },
@@ -8816,8 +8846,8 @@
    "type": "echelle",
    "derniereVerification": "2026-08",
    "bonneCible": 2,
-   "question": "Cliquez sur la tranche de hauteur à partir de laquelle un immeuble à usage d'habitation est classé immeuble de grande hauteur.",
-   "explication": "Le classement IGH dépend de la hauteur du plancher bas du dernier niveau au-dessus du sol accessible aux engins de secours : le seuil est de 50 m pour les immeubles à usage d'habitation et de 28 m pour tous les autres immeubles (article R122-2 du code de la construction et de l'habitation). Au-delà, on applique le règlement de sécurité IGH, avec compartimentage, désenfumage, service de sécurité incendie permanent et avis de la commission de sécurité compétente.",
+   "question": "Une salle des fêtes communale, seule activité du bâtiment, a son plancher bas du dernier niveau situé à 32 m au-dessus du sol accessible aux engins de secours. Cliquez sur la tranche de hauteur qui détermine son classement éventuel en immeuble de grande hauteur (IGH).",
+   "explication": "Le classement IGH dépend de la hauteur du plancher bas du dernier niveau par rapport au sol accessible aux engins de secours, et le seuil varie selon l'usage : 28 m pour tous les immeubles autres que l'habitation (bureaux, ERP, hôtels...), 50 m pour l'habitation (article R122-2 du code de la construction et de l'habitation). Une salle des fêtes à 32 m dépasse donc le seuil de 28 m applicable aux usages non résidentiels : elle serait classée IGH si sa hauteur est bien mesurée ainsi, avec toutes les conséquences que cela emporte — règlement de sécurité IGH spécifique (et non celui des ERP), compartimentage renforcé, désenfumage mécanique, service de sécurité incendie permanent et poste de sécurité, avis obligatoire de la commission de sécurité compétente pour les IGH. À l'inverse, un immeuble d'habitation de 32 m reste hors IGH puisque le seuil applicable est 50 m. Cette différence de seuil selon l'usage est un piège classique de concours.",
    "echelle_g": {
     "titre": "Classement en immeuble de grande hauteur (IGH)",
     "unite": "hauteur du plancher bas du dernier niveau par rapport au sol accessible aux engins de secours (m)",
@@ -8828,7 +8858,7 @@
      },
      {
       "borne": "28 à 50 m",
-      "l": "Immeuble à usage autre que l'habitation (bureaux, hôtels…) : classé IGH ; l'habitation reste hors IGH"
+      "l": "Immeuble à usage autre que l'habitation (bureaux, ERP, hôtels…) : classé IGH ; l'habitation reste hors IGH"
      },
      {
       "borne": "> 50 m",
@@ -9139,7 +9169,7 @@
     "legende": "Exigences des ERP neufs (arrêté du 20 avril 2017)."
    },
    "bonneCible": 2,
-   "explication": "Le plan incliné doit rester au maximum à 5 %. Des tolérances existent seulement sur de courtes longueurs : 8 % sur 2 m au plus et 10 % sur 0,50 m au plus (arrêté du 20 avril 2017). Une pente de 8 % maintenue sur 6 m est donc non conforme, quelle que soit la tolérance retenue. Les autres cotes sont réglementaires : place adaptée de 3,30 m, ressaut limité à 2 cm, palier de repos de 1,20 × 1,40 m, passage utile de 0,83 m pour une porte de 0,90 m, aire de rotation de Ø 1,50 m.",
+   "explication": "Confirmation : le passage utile de 0,83 m est bien la cote réglementaire correcte pour une porte de largeur nominale 0,90 m dans un ERP neuf, conformément à l'arrêté du 20 avril 2017 relatif à l'accessibilité aux personnes handicapées des établissements recevant du public lors de leur construction. Le passage utile se mesure vantail ouvert à 90°, entre le nu du vantail et la feuillure de l'huisserie ; il est systématiquement inférieur à la largeur nominale de la porte du fait de l'épaisseur du dormant et du vantail. Le point réellement fautif du schéma est le plan incliné : la pente maximale autorisée est de 5 %, avec des tolérances limitées à de courtes longueurs seulement (8 % sur 2 m au plus, 10 % sur 0,50 m au plus). Une pente de 8 % maintenue sur 6 m dépasse largement ces tolérances et rend le cheminement non conforme, quelle que soit la qualité des autres aménagements (place adaptée de 3,30 m, ressaut limité à 2 cm, palier de repos de 1,20 × 1,40 m, aire de rotation de Ø 1,50 m, tous conformes).",
    "correction": "Retenir « 8 % » comme pente admissible sur une longue distance : elle n'est tolérée que sur 2 m maximum (10 % sur 0,50 m maximum).",
    "derniereVerification": "2026-08",
    "aVerifier": null
