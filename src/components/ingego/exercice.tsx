@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { ArrowDown, ArrowUp, Check, X } from "lucide-react";
+import { ArrowDown, ArrowUp, BarChart3, Check, Clock3, X } from "lucide-react";
 import { AXE_BY_ID, FAMILLES, TYPES, type Question } from "@/lib/ingego/corpus";
 import { graineDe, melange } from "@/lib/ingego/algo";
 import { CarteFrance } from "@/components/ingego/carte-france";
@@ -155,7 +155,11 @@ function decouperExplication(texte: string) {
     .replace(/\s+/g, " ")
     .trim()
     .split(/(?<=[.!?])\s+(?=[A-ZÀ-ÖØ-Þ0-9«“])/u)
-    .filter(Boolean);
+    .flatMap((phrase) =>
+      phrase.length > 220 ? phrase.split(/;\s+|\s+—\s+/u).filter(Boolean) : [phrase],
+    )
+    .filter(Boolean)
+    .map((phrase) => (/[^.!?]$/u.test(phrase) ? `${phrase}.` : phrase));
 
   if (phrases.length === 0) return { essentiel: texte, details: [] as string[] };
 
@@ -173,27 +177,119 @@ function decouperExplication(texte: string) {
   };
 }
 
-function ExplicationStructuree({ texte }: { texte: string }) {
+function reperesPourcentages(texte: string) {
+  const reperes = Array.from(texte.matchAll(/(\d{1,3})\s*%\s+en\s+(\d{4})/gu)).map((match) => ({
+    valeur: Number(match[1]),
+    label: match[2],
+  }));
+  return reperes.length >= 2 && reperes.every((repere) => repere.valeur <= 100) ? reperes : [];
+}
+
+function TableauAssociation({ paires }: { paires: [string, string][] }) {
+  return (
+    <div className="overflow-hidden rounded-lg border border-border">
+      <table className="w-full table-fixed border-collapse text-left text-xs sm:text-sm">
+        <thead className="bg-muted text-muted-foreground">
+          <tr>
+            <th scope="col" className="w-2/5 px-3 py-2 font-medium">Repère</th>
+            <th scope="col" className="px-3 py-2 font-medium">À retenir</th>
+          </tr>
+        </thead>
+        <tbody className="divide-y divide-border">
+          {paires.map(([repere, contenu]) => (
+            <tr key={`${repere}-${contenu}`} className="align-top">
+              <th scope="row" className="px-3 py-2.5 font-medium text-foreground">{repere}</th>
+              <td className="px-3 py-2.5 leading-relaxed text-muted-foreground">{contenu}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
+function Chronologie({ points }: { points: [string, string][] }) {
+  return (
+    <ol className="space-y-3 border-l border-primary/40 pl-4 text-sm">
+      {points.map(([date, evenement]) => (
+        <li key={`${date}-${evenement}`} className="relative">
+          <span className="absolute -left-[1.22rem] top-1.5 h-2 w-2 rounded-full bg-primary" />
+          <p className="font-medium text-primary">{date}</p>
+          <p className="mt-0.5 leading-relaxed text-muted-foreground">{evenement}</p>
+        </li>
+      ))}
+    </ol>
+  );
+}
+
+function ReperesChiffres({ reperes }: { reperes: { valeur: number; label: string }[] }) {
+  return (
+    <div className="space-y-2.5" aria-label="Repères chiffrés">
+      {reperes.map((repere) => (
+        <div key={`${repere.label}-${repere.valeur}`} className="grid grid-cols-[3rem_1fr_3rem] items-center gap-2 text-xs">
+          <span className="font-medium text-muted-foreground">{repere.label}</span>
+          <span className="h-2 overflow-hidden rounded-full bg-muted">
+            <span className="block h-full rounded-full bg-primary" style={{ width: `${repere.valeur}%` }} />
+          </span>
+          <span className="text-right font-semibold tabular-nums text-foreground">{repere.valeur} %</span>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function ExplicationStructuree({ q }: { q: Question }) {
+  const texte = q.explication;
   const { essentiel, details } = useMemo(() => decouperExplication(texte), [texte]);
+  const pourcentages = useMemo(() => reperesPourcentages(texte), [texte]);
+  const tableau = q.type === "assoc" && (q.paires?.length ?? 0) >= 2 ? q.paires : undefined;
+  const chronologie = q.type === "frise" && (q.points?.length ?? 0) >= 2 ? q.points : undefined;
+  const avecComplements = details.length > 0 || tableau || chronologie || pourcentages.length > 0;
 
   return (
     <div className="mt-2 space-y-3">
       <p className="border-l-2 border-primary pl-3 text-sm leading-relaxed">{essentiel}</p>
-      {details.length > 0 ? (
+      {avecComplements ? (
         <Accordion type="single" collapsible>
           <AccordionItem value="details" className="rounded-lg border border-border px-3">
             <AccordionTrigger className="py-3 text-primary hover:no-underline">
               En savoir plus
             </AccordionTrigger>
             <AccordionContent>
-              <ul className="space-y-2.5 text-sm leading-relaxed text-foreground">
-                {details.map((detail, index) => (
-                  <li key={`${index}-${detail.slice(0, 24)}`} className="flex gap-2.5">
-                    <span aria-hidden="true" className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand" />
-                    <span>{detail}</span>
-                  </li>
-                ))}
-              </ul>
+              <div className="space-y-4">
+                {details.length > 0 ? (
+                  <ul className="space-y-2.5 text-sm leading-relaxed text-foreground">
+                    {details.map((detail, index) => (
+                      <li key={`${index}-${detail.slice(0, 24)}`} className="flex gap-2.5">
+                        <span aria-hidden="true" className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand" />
+                        <span>{detail}</span>
+                      </li>
+                    ))}
+                  </ul>
+                ) : null}
+                {tableau ? (
+                  <section aria-label="Tableau de synthèse" className="space-y-2">
+                    <p className="text-xs font-medium text-muted-foreground uppercase">Tableau de synthèse</p>
+                    <TableauAssociation paires={tableau} />
+                  </section>
+                ) : null}
+                {chronologie ? (
+                  <section aria-label="Chronologie" className="space-y-2">
+                    <p className="flex items-center gap-1.5 text-xs font-medium text-muted-foreground uppercase">
+                      <Clock3 className="h-3.5 w-3.5" /> Chronologie
+                    </p>
+                    <Chronologie points={chronologie} />
+                  </section>
+                ) : null}
+                {pourcentages.length > 0 ? (
+                  <section aria-label="Repères chiffrés" className="space-y-2">
+                    <p className="flex items-center gap-1.5 text-xs font-medium text-muted-foreground uppercase">
+                      <BarChart3 className="h-3.5 w-3.5" /> Repères chiffrés
+                    </p>
+                    <ReperesChiffres reperes={pourcentages} />
+                  </section>
+                ) : null}
+              </div>
             </AccordionContent>
           </AccordionItem>
         </Accordion>
@@ -811,11 +907,7 @@ export function Exercice({
             <p className="text-[0.68rem] tracking-[0.15em] text-muted-foreground uppercase">
               Ce qu'il faut retenir
             </p>
-            {numero <= 200 ? (
-              <ExplicationStructuree texte={q.explication} />
-            ) : (
-              <p className="mt-1 text-sm leading-relaxed">{q.explication}</p>
-            )}
+            <ExplicationStructuree q={q} />
             <p className="mt-3 text-xs" style={{ color: famille.c }}>
               {famille.nom}
               {q.derniereVerification ? ` · vérifié ${q.derniereVerification}` : ""}
