@@ -491,7 +491,8 @@
    "explication": "Un DTA négatif n'exonère de rien : le repérage avant travaux (RAT), destructif et plus étendu, reste obligatoire à la charge du donneur d'ordre. Cadre : décret du 9 mai 2017 modifié et arrêté du 16 juillet 2019, applicable depuis le 19 juillet 2019 ; la norme NF X 46-020 (2017) vaut présomption de conformité de la méthodologie.",
    "derniereVerification": "2026-08",
    "aVerifier": null,
-   "question": "Le DTA d'une école ne mentionne aucun matériau amianté : cela dispense de tout repérage complémentaire avant une rénovation lourde."
+   "question": "Le DTA d'une école ne mentionne aucun matériau amianté : cela dispense de tout repérage complémentaire avant une rénovation lourde.",
+   "justification": "Un DTA négatif n'exonère de rien : le repérage avant travaux (RAT), destructif et plus étendu, reste obligatoire à la charge du donneur d'ordre."
   },
   {
    "id": "a1-17",
@@ -593,7 +594,8 @@
    "explication": "Le déclencheur est la co-activité : dès que deux entreprises, sous-traitants compris, interviennent sur le même chantier, une coordination SPS est requise. Le montant et la durée ne servent qu'à déterminer la catégorie et les documents associés.",
    "derniereVerification": "2026-08",
    "aVerifier": null,
-   "question": "La coordination SPS devient obligatoire dès que deux entreprises, y compris des sous-traitants, interviennent sur un même chantier de bâtiment."
+   "question": "La coordination SPS devient obligatoire dès que deux entreprises, y compris des sous-traitants, interviennent sur un même chantier de bâtiment.",
+   "justification": "Le déclencheur est la co-activité : dès que deux entreprises, sous-traitants compris, interviennent sur le même chantier, une coordination SPS est requise."
   },
   {
    "id": "a1-22",
@@ -626,7 +628,8 @@
    "explication": "Le dossier d'intervention ultérieure sur l'ouvrage est constitué par le coordonnateur SPS et remis au maître d'ouvrage à la réception. Il prépare la sécurité de la maintenance : accès en toiture, ancrages, nettoyage des façades, remplacement des équipements. C'est le document qui fait le lien entre le chantier et l'exploitation — et le plus souvent bâclé.",
    "derniereVerification": "2026-08",
    "aVerifier": null,
-   "question": "Le DIUO (dossier d'intervention ultérieure sur l'ouvrage) est destiné en priorité à l'entreprise, pour qu'elle organise son chantier."
+   "question": "Le DIUO (dossier d'intervention ultérieure sur l'ouvrage) est destiné en priorité à l'entreprise, pour qu'elle organise son chantier.",
+   "justification": "Le dossier d'intervention ultérieure sur l'ouvrage est constitué par le coordonnateur SPS et remis au maître d'ouvrage à la réception."
   },
   {
    "id": "a1-24",
@@ -1178,7 +1181,8 @@
    "explication": "Le paiement direct est réservé au sous-traitant de premier rang, pour la part du marché qu'il exécute, dès lors qu'il est accepté et ses conditions de paiement agréées, et au-delà de 600 € TTC. Les sous-traitants de rang inférieur relèvent de la caution ou de la délégation de paiement fournie par le sous-traitant de rang supérieur.",
    "derniereVerification": "2026-08",
    "aVerifier": null,
-   "question": "Un sous-traitant de second rang peut bénéficier du paiement direct par le maître d'ouvrage, au même titre que le sous-traitant de premier rang."
+   "question": "Un sous-traitant de second rang peut bénéficier du paiement direct par le maître d'ouvrage, au même titre que le sous-traitant de premier rang.",
+   "justification": "Le paiement direct est réservé au sous-traitant de premier rang, pour la part du marché qu'il exécute, dès lors qu'il est accepté et ses conditions de paiement agréées, et au-delà de 600 € TTC."
   },
   {
    "id": "a2-18",
@@ -3507,7 +3511,8 @@
    "explication": "Cette affirmation est fausse : l'emprunt est une ressource exclusivement affectée à la section d'investissement d'un budget local.\n- Il ne peut financer ni les dépenses courantes ni le remboursement du capital de la dette.\n- C'est une composante de la règle de l'équilibre réel prévue à l'article L. 1612-4 du code général des collectivités territoriales, qui impose que le remboursement en capital soit couvert par des ressources propres.",
    "derniereVerification": "2026-08",
    "aVerifier": null,
-   "question": "L'emprunt peut financer indifféremment la section de fonctionnement ou la section d'investissement d'un budget local."
+   "question": "L'emprunt peut financer indifféremment la section de fonctionnement ou la section d'investissement d'un budget local.",
+   "justification": "Cette affirmation est fausse : l'emprunt est une ressource exclusivement affectée à la section d'investissement d'un budget local.\n- Il ne peut financer ni les dépenses courantes ni le remboursement du capital de la dette.\n- C'est une composante de la règle de l'équilibre réel prévue à l'article L. 1612-4 du code général des collectivités territoriales, qui impose que le remboursement en capital soit couvert par des ressources propres."
   },
   {
    "id": "a6-35",
