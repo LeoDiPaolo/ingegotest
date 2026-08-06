@@ -150,32 +150,46 @@ const optionClass = (etat: "neutre" | "choisi" | "ok" | "ko") =>
 const selectClass =
   "w-full rounded-lg border border-input bg-background px-3 py-2 text-sm text-foreground outline-none focus:border-ring";
 
-function decouperExplication(texte: string) {
-  const phrases = texte
-    .replace(/\s+/g, " ")
-    .trim()
-    .split(/(?<=[.!?])\s+(?=[A-ZÀ-ÖØ-Þ0-9«“])/u)
-    .flatMap((phrase) =>
-      phrase.length > 220 ? phrase.split(/;\s+|\s+—\s+/u).filter(Boolean) : [phrase],
-    )
-    .filter(Boolean)
-    .map((phrase) => (/[^.!?]$/u.test(phrase) ? `${phrase}.` : phrase));
+const MASQUE = "\u0001";
 
+/* Les explications juridiques sont pleines de « article L. 551-1 », « art. 3 », « n° 2019-1 » :
+   on masque ces points d'abréviation avant de découper en phrases, sinon la liste
+   « En savoir plus » commence par des fragments comme « 551-1 du code… ». */
+function masquerAbreviations(texte: string) {
+  return texte.replace(
+    /(?<=(?:^|[\s(])(?:[A-Za-zÀ-ÿ]|art|arts|al|cf|etc|env|no|n°|p|pp|ex|réf|éd|fig|vol|chap))\.(?=\s)/gu,
+    MASQUE,
+  );
+}
+
+const demasquer = (t: string) => t.split(MASQUE).join(".");
+
+function phrasesDe(texte: string) {
+  return masquerAbreviations(texte.replace(/\s+/g, " ").trim())
+    .split(/(?<=[.!?])\s+(?=[A-ZÀ-ÖØ-Þ«“])/u)
+    .map((p) => demasquer(p).trim())
+    .filter(Boolean)
+    .map((p) => (/[^.!?»)]$/u.test(p) ? `${p}.` : p));
+}
+
+/* Le bloc « ce qu'il faut retenir » est un résumé du contenu détaillé :
+   les premières phrases complètes, jamais un fragment coupé au milieu. */
+function decouperExplication(texte: string) {
+  const phrases = phrasesDe(texte);
   if (phrases.length === 0) return { essentiel: texte, details: [] as string[] };
 
-  const premiere = phrases[0];
-  if (premiere.length <= 280) {
-    return { essentiel: premiere, details: phrases.slice(1) };
+  const resume: string[] = [];
+  for (const phrase of phrases) {
+    const longueur = resume.join(" ").length;
+    if (resume.length > 0 && (longueur >= 160 || longueur + phrase.length > 320)) break;
+    resume.push(phrase);
   }
 
-  const morceaux = premiere.split(/;\s+|\s+—\s+|:\s+(?=[A-ZÀ-ÖØ-Þ])/u).filter(Boolean);
-  if (morceaux.length < 2) return { essentiel: premiere, details: phrases.slice(1) };
-
-  return {
-    essentiel: morceaux[0].replace(/[,:;]$/, "."),
-    details: [...morceaux.slice(1), ...phrases.slice(1)],
-  };
+  /* Tout le texte reste disponible en détail : le résumé n'enlève rien. */
+  const details = phrases.length > resume.length ? phrases : [];
+  return { essentiel: resume.join(" "), details };
 }
+
 
 function reperesPourcentages(texte: string) {
   const reperes = Array.from(texte.matchAll(/(\d{1,3})\s*%\s+en\s+(\d{4})/gu)).map((match) => ({
