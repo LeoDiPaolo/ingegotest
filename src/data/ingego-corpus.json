@@ -491,7 +491,8 @@
    "explication": "Un DTA négatif n'exonère de rien : le repérage avant travaux (RAT), destructif et plus étendu, reste obligatoire à la charge du donneur d'ordre. Cadre : décret du 9 mai 2017 modifié et arrêté du 16 juillet 2019, applicable depuis le 19 juillet 2019 ; la norme NF X 46-020 (2017) vaut présomption de conformité de la méthodologie.",
    "derniereVerification": "2026-08",
    "aVerifier": null,
-   "question": "Le DTA d'une école ne mentionne aucun matériau amianté : cela dispense de tout repérage complémentaire avant une rénovation lourde."
+   "question": "Le DTA d'une école ne mentionne aucun matériau amianté : cela dispense de tout repérage complémentaire avant une rénovation lourde.",
+   "justification": "Un DTA négatif n'exonère de rien : le repérage avant travaux (RAT), destructif et plus étendu, reste obligatoire à la charge du donneur d'ordre."
   },
   {
    "id": "a1-17",
@@ -593,7 +594,8 @@
    "explication": "Le déclencheur est la co-activité : dès que deux entreprises, sous-traitants compris, interviennent sur le même chantier, une coordination SPS est requise. Le montant et la durée ne servent qu'à déterminer la catégorie et les documents associés.",
    "derniereVerification": "2026-08",
    "aVerifier": null,
-   "question": "La coordination SPS devient obligatoire dès que deux entreprises, y compris des sous-traitants, interviennent sur un même chantier de bâtiment."
+   "question": "La coordination SPS devient obligatoire dès que deux entreprises, y compris des sous-traitants, interviennent sur un même chantier de bâtiment.",
+   "justification": "Le déclencheur est la co-activité : dès que deux entreprises, sous-traitants compris, interviennent sur le même chantier, une coordination SPS est requise."
   },
   {
    "id": "a1-22",
@@ -626,7 +628,8 @@
    "explication": "Le dossier d'intervention ultérieure sur l'ouvrage est constitué par le coordonnateur SPS et remis au maître d'ouvrage à la réception. Il prépare la sécurité de la maintenance : accès en toiture, ancrages, nettoyage des façades, remplacement des équipements. C'est le document qui fait le lien entre le chantier et l'exploitation — et le plus souvent bâclé.",
    "derniereVerification": "2026-08",
    "aVerifier": null,
-   "question": "Le DIUO (dossier d'intervention ultérieure sur l'ouvrage) est destiné en priorité à l'entreprise, pour qu'elle organise son chantier."
+   "question": "Le DIUO (dossier d'intervention ultérieure sur l'ouvrage) est destiné en priorité à l'entreprise, pour qu'elle organise son chantier.",
+   "justification": "Le dossier d'intervention ultérieure sur l'ouvrage est constitué par le coordonnateur SPS et remis au maître d'ouvrage à la réception."
   },
   {
    "id": "a1-24",
@@ -1178,7 +1181,8 @@
    "explication": "Le paiement direct est réservé au sous-traitant de premier rang, pour la part du marché qu'il exécute, dès lors qu'il est accepté et ses conditions de paiement agréées, et au-delà de 600 € TTC. Les sous-traitants de rang inférieur relèvent de la caution ou de la délégation de paiement fournie par le sous-traitant de rang supérieur.",
    "derniereVerification": "2026-08",
    "aVerifier": null,
-   "question": "Un sous-traitant de second rang peut bénéficier du paiement direct par le maître d'ouvrage, au même titre que le sous-traitant de premier rang."
+   "question": "Un sous-traitant de second rang peut bénéficier du paiement direct par le maître d'ouvrage, au même titre que le sous-traitant de premier rang.",
+   "justification": "Le paiement direct est réservé au sous-traitant de premier rang, pour la part du marché qu'il exécute, dès lors qu'il est accepté et ses conditions de paiement agréées, et au-delà de 600 € TTC."
   },
   {
    "id": "a2-18",
@@ -2174,7 +2178,7 @@
    "niveau": 6,
    "famille": "E",
    "type": "erreur",
-   "question": "Une des trois phrases contient une erreur : laquelle ?",
+   "question": "Coût global d'un bâtiment public. Repérez la phrase fautive parmi ces trois affirmations, qui se lisent à la suite comme un seul texte.",
    "phraseFautive": 0,
    "explication": "Le ratio dépend de trois hypothèses rarement explicitées : la durée d'analyse, le taux d'actualisation, et le périmètre retenu. Les ratios en 1/5/200 popularisés dans les années 1990 ont été largement critiqués sur le plan méthodologique. L'exploitation pèse plus qu'on ne le croit, mais aucun ratio n'est établi de façon fiable — un jury technique peut vous y attendre.",
    "derniereVerification": "2026-08",
@@ -2344,7 +2348,7 @@
    "question": "La principale condition de réussite du déploiement d'une GMAO tient à la qualité de l'arborescence patrimoniale et à l'appropriation par les équipes de terrain, plus qu'au logiciel choisi.",
    "vrai": true,
    "justification": "L'outil vaut ce que valent les données qu'on y met. Une arborescence d'équipements mal structurée ou des agents qui ne saisissent pas les interventions produisent une GMAO vide et un indicateur de plus. La conduite du changement, pas la fonctionnalité, est le facteur discriminant.",
-   "explication": "L'outil vaut ce que valent les données qu'on y met. Une arborescence d'équipements mal structurée ou des agents qui ne saisissent pas les interventions produisent une GMAO vide et un indicateur de plus. La conduite du changement, pas la fonctionnalité, est le facteur discriminant."
+   "explication": "L'outil vaut ce que valent les données qu'on y met : la conduite du changement, pas la fonctionnalité logicielle, est le facteur discriminant. En pratique, exigez dans le cahier des charges une reprise de l'arborescence patrimoniale existante et un plan de formation des agents de terrain à la saisie des interventions, sans quoi la GMAO reste une coquille vide au bout d'un an."
   },
   {
    "id": "a4-20",
@@ -2744,10 +2748,11 @@
    "famille": "E",
    "type": "vf",
    "vrai": false,
-   "explication": "Faux : la valeur d'un jumeau numérique dépend entièrement de la mise à jour des données et des cas d'usage définis en amont — localisation des réseaux enfouis, préparation d'interventions, aide à la programmation. Sans processus de mise à jour à chaque intervention, la maquette devient obsolète en quelques mois ; un plan 2D tenu à jour et une GMAO bien renseignée peuvent alors valoir mieux qu'une maquette figée.",
+   "explication": "Sans processus de mise à jour à chaque intervention, la maquette devient obsolète en quelques mois. Un plan 2D tenu à jour et une GMAO bien renseignée peuvent alors valoir mieux qu'une maquette figée mais non actualisée.",
    "derniereVerification": "2026-08",
    "aVerifier": null,
-   "question": "Un jumeau numérique de bâtiment public apporte une valeur en exploitation quelle que soit la manière dont il est mis à jour."
+   "question": "Un jumeau numérique de bâtiment public apporte une valeur en exploitation quelle que soit la manière dont il est mis à jour.",
+   "justification": "Faux : la valeur d'un jumeau numérique dépend entièrement de la mise à jour des données et des cas d'usage définis en amont — localisation des réseaux enfouis, préparation d'interventions, aide à la programmation."
   },
   {
    "id": "a5-18",
@@ -2909,10 +2914,11 @@
    "famille": "M",
    "type": "vf",
    "vrai": true,
-   "explication": "La loi du 11 avril 2025 a supprimé le caractère obligatoire du transfert des compétences eau et assainissement aux communautés de communes, initialement prévu par la loi NOTRe au 1er janvier 2026. Les transferts déjà réalisés ne sont pas remis en cause, et un transfert volontaire reste possible. C'est un point d'actualité mal connu : la plupart des ouvrages de préparation antérieurs à 2025 donnent la réponse inverse.",
+   "explication": "C'est un point d'actualité mal connu : la plupart des ouvrages de préparation antérieurs à 2025 donnent la réponse inverse. Les communes conservent la compétence qu'elles exerçaient à la date de la loi si elles ne l'avaient pas déjà transférée.",
    "derniereVerification": "2026-08",
    "aVerifier": null,
-   "question": "Depuis une loi d'avril 2025, le transfert des compétences eau et assainissement aux communautés de communes n'est plus obligatoire au 1er janvier 2026."
+   "question": "Depuis une loi d'avril 2025, le transfert des compétences eau et assainissement aux communautés de communes n'est plus obligatoire au 1er janvier 2026.",
+   "justification": "Vrai : la loi du 11 avril 2025 a supprimé le caractère obligatoire du transfert des compétences eau et assainissement aux communautés de communes, initialement prévu par la loi NOTRe au 1er janvier 2026. Les transferts déjà réalisés ne sont pas remis en cause, et un transfert volontaire reste possible."
   },
   {
    "id": "a6-07",
@@ -2930,7 +2936,7 @@
      "EPCI à fiscalité propre"
     ],
     [
-     "Depuis",
+     "Compétence obligatoire depuis",
      "2018"
     ],
     [
@@ -3337,7 +3343,7 @@
    "famille": "S",
    "type": "libre",
    "question": "Dans quelles collectivités une formation spécialisée en matière de santé, sécurité et conditions de travail est-elle obligatoire au sein du CST ?",
-   "explication": "La F3SCT est obligatoire à partir de 200 agents ; en dessous, le CST exerce lui-même ces attributions. Elle peut aussi être créée en deçà de ce seuil en cas de risques professionnels particuliers, par exemple dans un service technique ou une collecte de déchets.",
+   "explication": "La formation spécialisée en matière de santé, sécurité et conditions de travail (F3SCT) est obligatoire au sein du CST à partir de 200 agents ; en dessous de ce seuil, le CST exerce lui-même ses attributions.\n- Elle peut aussi être créée en deçà de ce seuil en cas de risques professionnels particuliers, par exemple dans un service technique ou une collecte de déchets.",
    "derniereVerification": "2026-08",
    "aVerifier": "Le seuil de 200 agents est à confirmer sur le décret relatif aux comités sociaux territoriaux en vigueur.",
    "options": [
@@ -3377,7 +3383,8 @@
    "explication": "1 607 heures est la durée légale annuelle de référence (art. L.611-2 du CGFP). La loi de transformation de la fonction publique de 2019 a supprimé les régimes dérogatoires antérieurs à 2001 que certaines collectivités avaient maintenus, avec une entrée en vigueur échelonnée après le renouvellement des assemblées. Des sujétions particulières (travail de nuit, pénibilité) permettent encore de réduire cette durée, mais sur délibération motivée.",
    "derniereVerification": "2026-08",
    "aVerifier": null,
-   "question": "La durée annuelle de travail de référence dans la fonction publique territoriale est de 1 607 heures."
+   "question": "La durée annuelle de travail de référence dans la fonction publique territoriale est de 1 607 heures.",
+   "justification": "Cette durée résulte de l'article L. 611-2 du code général de la fonction publique, qui fixe la référence annuelle à 1 607 heures, équivalent à 35 heures hebdomadaires sur l'année. La loi de transformation de la fonction publique du 6 août 2019 a supprimé les régimes dérogatoires antérieurs à la loi du 3 janvier 2001 que certaines collectivités avaient conservés au-delà de cette date."
   },
   {
    "id": "a6-29",
@@ -3425,7 +3432,7 @@
    "sousTheme": "Comparaison FPT / FPE / FPH",
    "stIdx": 6,
    "sujet": "comp-effectifs",
-   "niveau": 8,
+   "niveau": 7,
    "famille": "S",
    "type": "graphe",
    "question": "Cliquez sur la barre représentant la part approximative des agents de catégorie C dans la fonction publique territoriale.",
@@ -3448,7 +3455,7 @@
     ]
    },
    "bonneBarre": 0,
-   "explication": "La FPT est dominée par la catégorie C — de l'ordre des trois quarts des effectifs — alors que la FPE est majoritairement de catégorie A, du fait du poids de l'enseignement. Conséquences : salaire moyen plus faible dans la FPT, forte proportion de métiers d'exécution et de terrain, enjeux de reclassement et d'usure professionnelle beaucoup plus prégnants.",
+   "explication": "La fonction publique territoriale est dominée par la catégorie C, qui représente de l'ordre des trois quarts de ses effectifs, alors que la fonction publique d'État est majoritairement de catégorie A du fait du poids de l'enseignement.\n- Cette structure explique un salaire moyen plus faible dans la FPT et une forte proportion de métiers d'exécution et de terrain.\n- Elle accentue aussi les enjeux de reclassement et d'usure professionnelle, plus prégnants que dans les autres versants.",
    "derniereVerification": null,
    "aVerifier": null
   },
@@ -3463,7 +3470,7 @@
    "type": "erreur",
    "question": "Une de ces trois affirmations sur l'affectation des lauréats de concours est fausse. Laquelle ?",
    "phraseFautive": 2,
-   "explication": "Aucune autorité, y compris le préfet, ne peut imposer un agent à une collectivité territoriale : c'est une conséquence du principe de libre administration. Le lauréat inscrit sur liste d'aptitude doit lui-même trouver un employeur. Cette différence explique le mécanisme de liste d'aptitude, la mobilité choisie, mais aussi les inégalités de débouchés selon les territoires et les spécialités.",
+   "explication": "Aucune autorité, y compris le préfet, ne peut imposer un agent à une collectivité territoriale : c'est une conséquence du principe de libre administration.\n- Le lauréat inscrit sur liste d'aptitude doit lui-même trouver un employeur parmi les collectivités qui recrutent.\n- Ce mécanisme explique le phénomène des reçus-collés et les inégalités de débouchés selon les territoires et les spécialités.",
    "derniereVerification": "2026-08",
    "aVerifier": null,
    "segments": [
@@ -3489,7 +3496,7 @@
     "Oui, depuis la loi de 2019"
    ],
    "bonneReponse": 1,
-   "explication": "Les outils existent : détachement, intégration directe, mise à disposition, position normale d'activité. Les freins sont ailleurs : régimes indemnitaires très différents à grade égal, absence d'équivalence automatique des expériences, réticences des employeurs, et pour la FPT, l'absence de gestionnaire national qui organiserait des parcours. Le sujet revient régulièrement dans les rapports publics sans être tranché."
+   "explication": "Les outils juridiques de mobilité entre versants existent, mais leur usage réel reste limité par des freins pratiques importants.\n- Le détachement, l'intégration directe, la mise à disposition et la position normale d'activité permettent de changer de versant sans concours.\n- Les régimes indemnitaires très différents à grade égal freinent les candidatures, tout comme l'absence d'équivalence automatique des expériences.\n- Ce constat revient régulièrement dans les rapports publics sans qu'aucune réforme ne l'ait encore tranché."
   },
   {
    "id": "a6-34",
@@ -3501,10 +3508,11 @@
    "famille": "S",
    "type": "vf",
    "vrai": false,
-   "explication": "Faux : l'emprunt est une ressource exclusivement affectée à la section d'investissement. Il ne peut financer ni les dépenses courantes ni le remboursement du capital de la dette : c'est une composante de la règle de l'équilibre réel (art. L.1612-4 du CGCT), qui impose que le remboursement en capital soit couvert par des ressources propres.",
+   "explication": "Cette affirmation est fausse : l'emprunt est une ressource exclusivement affectée à la section d'investissement d'un budget local.\n- Il ne peut financer ni les dépenses courantes ni le remboursement du capital de la dette.\n- C'est une composante de la règle de l'équilibre réel prévue à l'article L. 1612-4 du code général des collectivités territoriales, qui impose que le remboursement en capital soit couvert par des ressources propres.",
    "derniereVerification": "2026-08",
    "aVerifier": null,
-   "question": "L'emprunt peut financer indifféremment la section de fonctionnement ou la section d'investissement d'un budget local."
+   "question": "L'emprunt peut financer indifféremment la section de fonctionnement ou la section d'investissement d'un budget local.",
+   "justification": "Cette affirmation est fausse : l'emprunt est une ressource exclusivement affectée à la section d'investissement d'un budget local.\n- Il ne peut financer ni les dépenses courantes ni le remboursement du capital de la dette.\n- C'est une composante de la règle de l'équilibre réel prévue à l'article L. 1612-4 du code général des collectivités territoriales, qui impose que le remboursement en capital soit couvert par des ressources propres."
   },
   {
    "id": "a6-35",
@@ -3523,7 +3531,7 @@
     "L'obligation d'un fonds de roulement positif"
    ],
    "bonneReponse": 1,
-   "explication": "Trois conditions cumulatives. Le non-respect ouvre la procédure de contrôle budgétaire : saisine de la chambre régionale des comptes par le préfet, propositions de la CRC, puis règlement d'office du budget par le préfet si la collectivité ne s'exécute pas."
+   "explication": "La règle de l'équilibre réel impose trois conditions cumulatives au budget local.\n- Les deux sections doivent être votées en équilibre, avec des recettes et des dépenses évaluées de façon sincère.\n- Le remboursement du capital de la dette doit être couvert par des ressources propres.\n- Le non-respect de cette règle ouvre la procédure de contrôle budgétaire : saisine de la chambre régionale des comptes par le préfet, propositions de la CRC, puis règlement d'office du budget si la collectivité ne s'exécute pas."
   },
   {
    "id": "a6-36",
@@ -3542,7 +3550,7 @@
     "Le résultat de l'exercice précédent"
    ],
    "bonneReponse": 1,
-   "explication": "L'épargne brute — ou capacité d'autofinancement — mesure la capacité à rembourser la dette et à autofinancer l'investissement. L'épargne nette en retranche le remboursement du capital. Le ratio de capacité de désendettement (encours de dette rapporté à l'épargne brute) sert de repère : au-delà d'une dizaine d'années pour le bloc communal, l'alerte est justifiée."
+   "explication": "L'épargne brute, ou capacité d'autofinancement, mesure la capacité d'une collectivité à rembourser sa dette et à autofinancer l'investissement.\n- L'épargne nette retranche de l'épargne brute le remboursement du capital de la dette.\n- Le ratio de capacité de désendettement rapporte l'encours de dette à l'épargne brute : au-delà d'une dizaine d'années pour le bloc communal, l'alerte est justifiée."
   },
   {
    "id": "a6-37",
@@ -3561,7 +3569,7 @@
     "La taxe d'aménagement"
    ],
    "bonneReponse": 1,
-   "explication": "La suppression de la taxe d'habitation sur les résidences principales, achevée en 2023, a fait de la taxe foncière sur les propriétés bâties le principal levier fiscal communal — et l'un des rares sur lequel le conseil municipal vote encore un taux. La compensation par des fractions d'impôts nationaux réduit d'autant l'autonomie fiscale locale.",
+   "explication": "La suppression de la taxe d'habitation sur les résidences principales, achevée en 2023, a fait de la taxe foncière sur les propriétés bâties le principal levier fiscal communal.\n- C'est aujourd'hui l'un des rares impôts locaux sur lequel le conseil municipal vote encore un taux.\n- La compensation de la taxe d'habitation par des fractions d'impôts nationaux réduit d'autant l'autonomie fiscale locale.",
    "derniereVerification": "2026-07"
   },
   {
@@ -3581,7 +3589,7 @@
     "À subventionner les projets énergétiques"
    ],
    "bonneReponse": 1,
-   "explication": "Le FCTVA est une compensation forfaitaire, versée à un taux unique appliqué aux dépenses éligibles, avec un décalage de versement variable selon le régime de la collectivité. Ce n'est pas un remboursement de TVA au sens fiscal : le périmètre des dépenses éligibles est fixé par l'État et évolue en loi de finances — un point à vérifier chaque année pour le montage financier d'une opération.",
+   "explication": "Le FCTVA est une compensation forfaitaire de la TVA supportée sur les dépenses d'investissement éligibles, versée à un taux unique.\n- Ce n'est pas un remboursement de TVA au sens fiscal, et le délai de versement varie selon le régime de la collectivité.\n- Le périmètre des dépenses éligibles est fixé par l'État et évolue en loi de finances : un point à vérifier chaque année pour le montage financier d'une opération.",
    "derniereVerification": "2026-07"
   },
   {
@@ -3601,7 +3609,7 @@
     "M52"
    ],
    "bonneReponse": 1,
-   "explication": "La M57, initialement conçue pour les métropoles, s'est généralisée à toutes les collectivités. Elle apporte notamment une souplesse de gestion des crédits (fongibilité des chapitres sur délibération) et prépare la certification des comptes locaux. Les nomenclatures M14, M52 et M71 ont été absorbées.",
+   "explication": "La nomenclature comptable M57, initialement conçue pour les métropoles, s'est généralisée à l'ensemble des collectivités territoriales.\n- Elle apporte une souplesse de gestion des crédits, avec la fongibilité des chapitres sur délibération.\n- Elle prépare la certification des comptes locaux et a absorbé les nomenclatures M14, M52 et M71.",
    "derniereVerification": "2026-07"
   },
   {
@@ -3621,7 +3629,7 @@
     "Le plan pluriannuel d'investissement"
    ],
    "bonneReponse": 1,
-   "explication": "Les AP/CP permettent de voter le coût total d'une opération et de n'inscrire chaque année que les crédits de paiement correspondants, sans reporter des crédits inutilisés. Le PPI, lui, est un document de programmation politique sans portée budgétaire propre : ne pas confondre le document de pilotage et l'outil juridique."
+   "explication": "Les autorisations de programme et crédits de paiement (AP/CP) permettent de voter le coût total d'une opération d'investissement pluriannuelle et de n'inscrire chaque année que les crédits de paiement correspondants.\n- Ce dispositif évite le report de crédits inutilisés d'un exercice à l'autre.\n- Le plan pluriannuel d'investissement (PPI) reste un document de programmation politique sans portée budgétaire propre : il ne faut pas le confondre avec l'outil juridique que sont les AP/CP."
   },
   {
    "id": "a6-41",
@@ -3640,7 +3648,7 @@
     "Supprimer les concours"
    ],
    "bonneReponse": 1,
-   "explication": "Éléments de constat : concurrence du privé sur les métiers techniques et numériques, écarts de rémunération à qualification égale, pyramide des âges défavorable, image du service public. Leviers : régime indemnitaire (mais plafonné par le principe de parité et contraint budgétairement), recours accru aux contractuels (mais risque de turnover et de perte de mémoire technique), mutualisation et agences techniques départementales (efficaces pour les petites communes, mais éloignent la compétence du terrain), apprentissage et formation interne (effet différé). Aucun levier ne suffit seul : c'est ce que le jury attend d'entendre."
+   "explication": "Plusieurs leviers existent face aux difficultés de recrutement sur les métiers techniques, mais aucun ne suffit seul à résoudre le problème.\n- Le constat combine concurrence du secteur privé, écarts de rémunération à qualification égale, pyramide des âges défavorable et image du service public.\n- Le régime indemnitaire reste plafonné par le principe de parité et par les contraintes budgétaires.\n- Le recours aux contractuels expose au risque de turnover et de perte de mémoire technique, tandis que la mutualisation via des agences techniques départementales éloigne la compétence du terrain."
   },
   {
    "id": "a6-42",
@@ -3659,7 +3667,7 @@
     "La question ne se pose pas juridiquement"
    ],
    "bonneReponse": 2,
-   "explication": "En faveur : accès à des compétences rares que le statut ne permet pas d'attirer, réactivité de recrutement, ouverture à des parcours privés, réponse aux besoins temporaires. Contre : précarité des agents, coût du turnover, perte de la mémoire technique des opérations, contournement possible du concours, et question d'égal accès aux emplois publics. Les données montrent une progression continue de la part des contractuels dans les trois versants. Position défendable : le sujet n'est pas le statut du recruté mais la capacité de la collectivité à construire des parcours."
+   "explication": "Le recours croissant aux agents contractuels se prête à deux lectures également défendables à l'oral.\n- En faveur : accès à des compétences rares, réactivité de recrutement, ouverture à des parcours privés, réponse aux besoins temporaires.\n- Contre : précarité des agents, coût du turnover, perte de mémoire technique des opérations, contournement possible du concours et question de l'égal accès aux emplois publics.\n- Position défendable : le sujet n'est pas le statut du recruté mais la capacité de la collectivité à construire des parcours."
   },
   {
    "id": "a6-43",
@@ -3701,7 +3709,7 @@
      1
     ]
    ],
-   "explication": "Arguments pour la simplification : enchevêtrement des compétences, coûts de coordination, illisibilité pour l'usager, multiplication des cofinancements. Arguments contre : les compétences supprimées seraient reprises ailleurs, les fusions passées n'ont pas produit les économies annoncées, la proximité départementale est structurante. Le débat réel porte moins sur le nombre d'échelons que sur la clarification des chefs de file et l'ingénierie disponible pour les petites communes."
+   "explication": "Le débat sur le « mille-feuille territorial » oppose des arguments de simplification à des arguments de proximité.\n- Pour la suppression d'un échelon : enchevêtrement des compétences, coûts de coordination, illisibilité pour l'usager, multiplication des cofinancements croisés.\n- Contre la suppression : les compétences seraient reprises ailleurs, les fusions passées comme celle des régions en 2016 n'ont pas produit les économies annoncées, et la proximité départementale reste structurante pour l'action sociale et la voirie rurale.\n- Le débat réel porte moins sur le nombre d'échelons que sur la clarification des chefs de file et l'ingénierie disponible pour les petites communes."
   },
   {
    "id": "a6-44",
@@ -3720,7 +3728,7 @@
     "Réduite, ce qui est inconstitutionnel"
    ],
    "bonneReponse": 1,
-   "explication": "Il faut distinguer autonomie financière — protégée par la Constitution et mesurée par un ratio de ressources propres — et autonomie fiscale, c'est-à-dire le pouvoir de voter des taux. La suppression de la taxe d'habitation et la réduction de la CVAE ont fait reculer la seconde sans faire tomber la première, puisque les fractions de TVA affectées sont comptées comme ressources propres. Argument inverse à connaître : cette architecture sécurise des recettes dynamiques et moins inégalitaires que la fiscalité locale sur les bases foncières."
+   "explication": "Il faut distinguer l'autonomie financière, protégée par la Constitution, de l'autonomie fiscale, c'est-à-dire le pouvoir de voter des taux d'imposition.\n- La suppression de la taxe d'habitation et la réduction de la CVAE ont fait reculer l'autonomie fiscale sans faire tomber le ratio constitutionnel d'autonomie financière, les fractions de TVA affectées étant comptées comme ressources propres.\n- Argument inverse à connaître : cette architecture sécurise des recettes plus dynamiques et moins inégalitaires que la fiscalité locale assise sur les bases foncières."
   },
   {
    "id": "a6-45",
@@ -3739,7 +3747,7 @@
     "Par le préfet uniquement"
    ],
    "bonneReponse": 1,
-   "explication": "La fin de l'assistance technique de l'État aux petites communes a créé un vide comblé de façon inégale : mutualisation intercommunale, agences techniques départementales, CAUE pour le conseil architectural, ANCT pour le montage de projets, prestataires privés. Les critiques portent sur l'inégalité territoriale du dispositif et sur la dépendance à l'AMO privée pour des décisions structurantes. C'est un sujet où votre expérience de terrain vaut mieux qu'une réponse théorique."
+   "explication": "Depuis la fin de l'assistance technique de l'État aux petites communes, l'accès à l'ingénierie technique repose sur plusieurs relais inégalement répartis.\n- Mutualisation intercommunale, agences techniques départementales, CAUE pour le conseil architectural, ANCT pour le montage de projets et prestataires privés en AMO.\n- Les critiques portent sur l'inégalité territoriale du dispositif et sur la dépendance à l'AMO privée pour des décisions structurantes."
   },
   {
    "id": "a6-46",
@@ -3752,13 +3760,13 @@
    "type": "erreur",
    "question": "Parmi ces affirmations sur l'inflation normative pesant sur les collectivités, une seule est fausse. Laquelle ?",
    "phraseFautive": 1,
-   "explication": "Le CNEN évalue l'impact financier des textes nouveaux sur les collectivités. Le report d'échéance de l'obligation d'automatisation des bâtiments tertiaires, fin 2025, a été explicitement justifié par l'allègement de la charge normative pesant sur les exécutifs locaux — c'est un exemple concret et récent à citer. Contre-argument à ne pas éluder : chaque assouplissement retarde un objectif de politique publique, et la sécurité juridique souffre autant des reports successifs que du stock lui-même.",
+   "explication": "Le Conseil national d'évaluation des normes (CNEN) évalue l'impact financier des textes nouveaux sur les collectivités, mais le stock de normes n'a pas globalement diminué depuis 2015.\n- Le report à 2030 de l'échéance du décret BACS relatif à l'automatisation des bâtiments tertiaires, annoncé fin 2025, a été justifié par l'allègement de la charge normative pesant sur les exécutifs locaux.\n- Contre-argument à ne pas éluder : chaque assouplissement retarde un objectif de politique publique, et la sécurité juridique souffre autant des reports successifs que du stock lui-même.",
    "derniereVerification": "2026-08",
    "aVerifier": null,
    "segments": [
     "Le Conseil national d'évaluation des normes (CNEN) évalue l'impact financier des textes nouveaux sur les collectivités.",
     "Le stock de normes applicables aux collectivités a globalement diminué depuis 2015.",
-    "Le report de l'obligation d'automatisation des bâtiments tertiaires (décret BACS), fin 2025, a été justifié par l'allègement de la charge normative.",
+    "Le report à 2030 de l'échéance du décret BACS relatif à l'automatisation des bâtiments tertiaires, annoncé fin 2025, a été justifié par l'allègement de la charge normative.",
     "Chaque assouplissement de norme retarde par ailleurs un objectif de politique publique."
    ]
   },
@@ -3799,7 +3807,8 @@
     "Codification aux articles L. 552-1 à L. 552-5 du CGFP"
    ],
    "explication": "Expérimenté du 1er janvier 2020 au 31 décembre 2025 pour les fonctionnaires, le dispositif a été pérennisé par l'article 173 de la loi de finances pour 2026 (loi du 19 février 2026), codifié aux articles L. 552-1 à L. 552-5 du CGFP. Détail d'actualité apprécié d'un jury : entre le 1er janvier et le 20 février 2026, il était juridiquement suspendu faute de base légale. Pour une collectivité, c'est un outil de gestion des fins de parcours, avec un coût immédiat et une obligation de remboursement renforcée si l'agent revient dans la FPT dans les six ans.",
-   "derniereVerification": "2026-07"
+   "derniereVerification": "2026-07",
+   "aVerifier": "Vérifier auprès de Légifrance la numérotation exacte de l'article de la loi de finances pour 2026 pérennisant la rupture conventionnelle et sa date de publication, ces éléments pouvant évoluer d'ici l'épreuve."
   },
   {
    "id": "a1-60",
@@ -3975,11 +3984,11 @@
    "famille": "M",
    "type": "libre",
    "question": "Quel a été le vecteur juridique de la pérennisation de la rupture conventionnelle des fonctionnaires, et quelle curiosité juridique l'a précédée ?",
-   "explication": "L'expérimentation issue de la loi de transformation de la fonction publique s'est achevée le 31 décembre 2025 sans relais immédiat : pendant sept semaines, plus aucune rupture conventionnelle de fonctionnaire ne pouvait être conclue. La loi de finances pour 2026 a pérennisé et codifié le dispositif, en durcissant l'obligation de remboursement de l'indemnité en cas de retour dans la FPT dans les six ans. Bon exemple, à l'oral, de la fragilité des dispositifs expérimentaux non anticipés.",
+   "explication": "L'expérimentation de la rupture conventionnelle issue de la loi de transformation de la fonction publique a expiré le 31 décembre 2025 sans dispositif de relais immédiat, créant un vide juridique de plusieurs semaines. La loi de finances pour 2026 a ensuite pérennisé et codifié le dispositif dans le code général de la fonction publique, en durcissant l'obligation de remboursement de l'indemnité en cas de retour dans la fonction publique territoriale.\n- Pendant environ sept semaines, du 1er janvier au 20 février 2026, plus aucune rupture conventionnelle de fonctionnaire ne pouvait être conclue.\n- Le remboursement de l'indemnité de rupture conventionnelle est désormais exigé en cas de retour dans la fonction publique territoriale dans un délai de six ans.\n- Cet épisode illustre, pour l'oral, la fragilité des dispositifs expérimentaux non anticipés par le législateur.",
    "derniereVerification": "2026-08",
-   "aVerifier": null,
+   "aVerifier": "Le numéro et la date exacte de publication de l'article de la loi de finances pour 2026 codifiant la rupture conventionnelle sont à confirmer sur Légifrance avant l'écrit.",
    "options": [
-    "L'article 173 de la loi de finances pour 2026 (19 février 2026), codifié aux articles L. 552-1 à L. 552-5 du CGFP — après un vide juridique du 1er janvier au 20 février 2026, l'expérimentation ayant expiré fin 2025"
+    "La loi de finances pour 2026, qui a codifié le dispositif dans le code général de la fonction publique — après un vide juridique du 1er janvier au 20 février 2026, l'expérimentation issue de la loi de transformation de la fonction publique ayant expiré fin 2025."
    ],
    "bonneReponse": 0
   },
@@ -4177,7 +4186,7 @@
     "Nouvelle délibération de l'assemblée pour rétablir l'équilibre",
     "À défaut, règlement d'office du budget par le préfet"
    ],
-   "explication": "Cette procédure est l'une des rares où le préfet se substitue à l'assemblée délibérante. Elle illustre la limite du principe de libre administration : il ne couvre pas la méconnaissance d'une règle d'ordre public financier."
+   "explication": "Cette procédure de contrôle budgétaire est l'une des rares où le préfet se substitue à l'assemblée délibérante d'une collectivité.\n- Elle illustre la limite du principe de libre administration, qui ne couvre pas la méconnaissance d'une règle d'ordre public financier."
   },
   {
    "id": "o-06",
@@ -4519,7 +4528,7 @@
     ],
     [
      "Automatisation obligatoire des bâtiments tertiaires de 70 à 290 kW (BACS)",
-      "1er janvier 2030"
+     "1er janvier 2030"
     ],
     [
      "Prise en compte obligatoire d'un critère environnemental dans tout marché public",
@@ -4530,7 +4539,7 @@
      "2050"
     ]
    ],
-  "explication": "Deux calendriers sont à distinguer. Le Dispositif Éco Énergie Tertiaire impose une réduction des consommations d'énergie finale de 40 % en 2030, 50 % en 2040 et 60 % en 2050 par rapport à une année de référence postérieure à 2010. Pour les systèmes GTB/BACS, l'échéance reste fixée au 1er janvier 2025 au-dessus de 290 kW ; elle est reportée au 1er janvier 2030 entre 70 et 290 kW. L'obligation de critère environnemental dans la commande publique entre en vigueur le 21 août 2026. L'objectif national de zéro artificialisation nette vise 2050, avec un jalon de réduction de moitié du rythme de consommation d'espaces sur la décennie 2021-2031. Le non-respect du DEET peut conduire à une mise en demeure puis à la publication nominative de la sanction sur OPERAT.",
+   "explication": "Deux calendriers sont à distinguer. Le Dispositif Éco Énergie Tertiaire impose une réduction des consommations d'énergie finale de 40 % en 2030, 50 % en 2040 et 60 % en 2050 par rapport à une année de référence postérieure à 2010. Pour les systèmes GTB/BACS, l'échéance reste fixée au 1er janvier 2025 au-dessus de 290 kW ; elle est reportée au 1er janvier 2030 entre 70 et 290 kW. L'obligation de critère environnemental dans la commande publique entre en vigueur le 21 août 2026. L'objectif national de zéro artificialisation nette vise 2050, avec un jalon de réduction de moitié du rythme de consommation d'espaces sur la décennie 2021-2031. Le non-respect du DEET peut conduire à une mise en demeure puis à la publication nominative de la sanction sur OPERAT.",
    "derniereVerification": "2026-08",
    "aVerifier": null
   },
@@ -4752,7 +4761,7 @@
     "intérêt",
     "annuité"
    ],
-   "explication": "Le troisième membre est celui qu'on oublie et c'est le plus opérant : il interdit de financer le remboursement du capital par un nouvel emprunt, donc de faire rouler la dette indéfiniment. C'est la garantie de fond contre l'insolvabilité progressive d'une collectivité."
+   "explication": "La règle de l'équilibre réel du budget local repose sur trois conditions cumulatives, dont la troisième est souvent oubliée bien qu'elle soit la plus opérante.\n- Elle interdit de financer le remboursement du capital de la dette par un nouvel emprunt, donc de faire rouler la dette indéfiniment.\n- C'est la garantie de fond contre l'insolvabilité progressive d'une collectivité."
   },
   {
    "id": "t-06",
@@ -5047,13 +5056,13 @@
    "sousTheme": "Finances locales",
    "stIdx": 7,
    "sujet": "fin-sections",
-   "niveau": 8,
+   "niveau": 6,
    "famille": "S",
    "type": "vf",
    "question": "L'emprunt peut financer le remboursement du capital de la dette d'une collectivité.",
    "vrai": false,
    "justification": "L'emprunt est une ressource exclusive de la section d'investissement et ne peut financer ni les dépenses de fonctionnement ni le remboursement du capital, qui doit être couvert par des ressources propres. C'est l'une des trois conditions de l'équilibre réel.",
-   "explication": "Cette règle est ce qui empêche structurellement une collectivité de faire rouler sa dette comme un État. Elle explique aussi pourquoi l'épargne brute est l'indicateur de solvabilité le plus surveillé.",
+   "explication": "Cette affirmation est fausse : l'emprunt est une ressource exclusive de la section d'investissement et ne peut financer le remboursement du capital de la dette.\n- Le remboursement du capital doit être couvert par des ressources propres, conformément à la règle de l'équilibre réel.\n- Cette règle empêche structurellement une collectivité de faire rouler sa dette comme un État et explique pourquoi l'épargne brute est l'indicateur de solvabilité le plus surveillé.",
    "derniereVerification": "2026-08",
    "aVerifier": null
   },
@@ -5071,7 +5080,7 @@
    "justification": "L'échéance a été reportée au 1er janvier 2030 par un décret du 26 décembre 2025, pour aligner le calendrier français sur la directive européenne révisée. Le report n'est cependant pas total : tout renouvellement d'un équipement technique déclenche l'obligation de raccordement.",
    "explication": "En programmation, la question utile n'est donc pas l'échéance mais la liste des équipements que la collectivité prévoit de renouveler avant 2030.",
    "derniereVerification": "2026-08",
-  "aVerifier": null
+   "aVerifier": null
   },
   {
    "id": "tri-01",
@@ -5079,7 +5088,7 @@
    "sousTheme": "Comparaison FPT / FPE / FPH",
    "stIdx": 6,
    "sujet": "comp-effectifs",
-   "niveau": 10,
+   "niveau": 7,
    "famille": "E",
    "type": "tri",
    "question": "Classez ces affirmations sur la fonction publique territoriale.",
@@ -5126,7 +5135,7 @@
      2
     ]
    ],
-   "explication": "L'exercice n'a pas d'autre but que de vous obliger à tenir les deux colonnes. Un jury qui vous entend défendre la FPT sans jamais nommer une limite vous notera moins bien qu'un candidat qui expose le phénomène des reçus-collés, la structure de qualification et l'absence de gestion nationale, puis explique pourquoi il choisit malgré tout ce versant. La troisième colonne sert à ne pas attribuer à la FPT des tendances communes aux trois.",
+   "explication": "Cet exercice oblige à présenter la fonction publique territoriale de façon équilibrée, en assumant à la fois ses atouts et ses limites.\n- Un candidat qui ne cite aucune limite, comme le phénomène des reçus-collés ou l'absence de gestion nationale des parcours, sera moins bien noté qu'un candidat qui les expose avant d'expliquer son choix de versant.\n- La troisième colonne regroupe les caractéristiques communes aux trois versants, à ne pas attribuer à tort à la seule FPT.",
    "derniereVerification": "2026-08",
    "aVerifier": null
   },
@@ -5435,7 +5444,7 @@
      1
     ]
    ],
-   "explication": "La dette se coupe en deux : intérêts en fonctionnement, capital en investissement. C'est le classement le plus contre-intuitif et celui qui revient le plus souvent. Pour les travaux, le critère est l'augmentation de la valeur ou de la durée de vie du bien : une réparation d'entretien reste en fonctionnement.",
+   "explication": "Le classement des dépenses par section budgétaire suit une logique simple mais souvent contre-intuitive, notamment pour la dette.\n- Les intérêts de la dette relèvent de la section de fonctionnement, tandis que le remboursement du capital relève de la section d'investissement.\n- Pour les travaux, le critère retenu est l'augmentation de la valeur ou de la durée de vie du bien : une réparation d'entretien reste en fonctionnement.",
    "derniereVerification": "2026-08",
    "aVerifier": null
   },
@@ -5638,14 +5647,15 @@
    "type": "erreur",
    "question": "Note de service sur une réorganisation. Repérez la phrase fautive. Les phrases se lisent à la suite, comme un seul texte.",
    "phraseFautive": 1,
-   "explication": "Cette erreur n'est pas seulement juridique, elle est managériale : formulée ainsi dans une note diffusée, elle crée un contentieux et détruit la confiance du service concerné.",
+   "explication": "La phrase fautive confond suppression d'emploi et perte du grade, alors que le statut sépare strictement les deux : supprimer un emploi ne fait jamais perdre le grade d'un fonctionnaire. Diffusée telle quelle dans une note de service, cette erreur crée un risque contentieux réel et abîme la confiance du service concerné.",
    "derniereVerification": "2026-08",
    "aVerifier": null,
    "segments": [
     "L'emploi d'ingénieur affecté au service bâtiment est supprimé dans le cadre de la réorganisation.",
     "L'agent concerné perd de ce fait son grade et sera licencié pour suppression d'emploi.",
     "Une recherche de reclassement sera engagée dans les services de la collectivité."
-   ]
+   ],
+   "correction": "L'agent conserve son grade : la suppression d'emploi ouvre une procédure de reclassement, puis, à défaut, un maintien en surnombre pendant un an, avant une éventuelle prise en charge par le centre de gestion (ou le CNFPT pour les cadres A+), avec une rémunération dégressive. Le licenciement pour suppression d'emploi n'existe pas pour un fonctionnaire titulaire tant que cette procédure n'est pas allée à son terme."
   },
   {
    "id": "fr-01",
@@ -6278,7 +6288,7 @@
    "sousTheme": "Débats et critiques",
    "stIdx": 8,
    "sujet": "debat-attract",
-   "niveau": 8,
+   "niveau": 7,
    "famille": "E",
    "type": "tri",
    "question": "Classez ces affirmations sur l'attractivité de la fonction publique territoriale.",
@@ -6321,7 +6331,7 @@
      2
     ]
    ],
-   "explication": "La troisième colonne n'est pas là pour disqualifier des opinions mais pour distinguer ce qui est documenté de ce qui est asséné. Un candidat qui présente les leviers sans dire qu'aucun ne suffit seul sera jugé naïf ; un candidat qui reprend les affirmations de la troisième colonne sera jugé peu rigoureux."
+   "explication": "Ce tri distingue ce qui est documenté sur l'attractivité de la FPT de ce qui relève d'une opinion assénée sans preuve.\n- Les constats étayés portent sur la concurrence du privé, la pyramide des âges défavorable et les écarts de rémunération à qualification égale.\n- Les leviers mobilisables incluent le régime indemnitaire dans la limite du principe de parité, l'apprentissage, la formation interne et la mutualisation via une agence technique départementale.\n- Un candidat qui présente les leviers sans préciser qu'aucun ne suffit seul sera jugé naïf, et un candidat qui reprend les affirmations non étayées sera jugé peu rigoureux."
   },
   {
    "id": "n-17",
@@ -6329,7 +6339,7 @@
    "sousTheme": "Débats et critiques",
    "stIdx": 8,
    "sujet": "debat-attract",
-   "niveau": 9,
+   "niveau": 6,
    "famille": "S",
    "type": "erreur",
    "question": "Note de service sur le recrutement d'un chargé d'opérations. Repérez la phrase fautive. Les phrases se lisent à la suite, comme un seul texte.",
@@ -6340,7 +6350,7 @@
    ],
    "phraseFautive": 1,
    "correction": "La déclaration de création ou de vacance d'emploi auprès du centre de gestion reste obligatoire, y compris lorsque le poste est pourvu par un contractuel. C'est une formalité substantielle : son omission fragilise le recrutement.",
-   "explication": "Le contrat de projet, d'une durée d'un à six ans, est bien adapté à une opération de construction. Mais la souplesse porte sur la nature du contrat, pas sur les formalités préalables de publicité de l'emploi."
+   "explication": "Le contrat de projet, d'une durée de un à six ans, est bien adapté à une opération de construction, mais la souplesse qu'il offre porte sur la nature du contrat et non sur les formalités préalables.\n- La déclaration de création ou de vacance d'emploi auprès du centre de gestion reste obligatoire même pour un recrutement contractuel.\n- Son omission fragilise juridiquement le recrutement, y compris lorsqu'il repose sur un contrat de projet."
   },
   {
    "id": "n-18",
@@ -6422,7 +6432,7 @@
    "sousTheme": "Finances locales",
    "stIdx": 7,
    "sujet": "fin-sections",
-   "niveau": 9,
+   "niveau": 6,
    "famille": "S",
    "type": "ordre",
    "question": "Remettez dans l'ordre le cycle budgétaire annuel d'une commune de plus de 3 500 habitants.",
@@ -6434,7 +6444,7 @@
     "Journée complémentaire et rattachements de fin d'exercice",
     "Vote du compte administratif, au plus tard le 30 juin de l'année suivante"
    ],
-   "explication": "Pour un service technique, deux jalons commandent tout : les arbitrages d'investissement se gagnent avant le DOB, pas au vote ; et une opération non engagée avant l'automne glisse mécaniquement d'un exercice, avec les restes à réaliser comme seule bouée. Le 15 avril devient le 30 avril l'année de renouvellement des conseils."
+   "explication": "Le cycle budgétaire annuel d'une commune de plus de 3 500 habitants suit un calendrier précis, dont deux jalons sont particulièrement stratégiques pour un service technique.\n- Les arbitrages d'investissement se gagnent avant le débat d'orientation budgétaire, pas au moment du vote.\n- Une opération non engagée avant l'automne glisse mécaniquement sur l'exercice suivant, avec les restes à réaliser comme seule solution de report.\n- La date limite du 15 avril pour le vote du budget primitif est repoussée au 30 avril l'année de renouvellement des conseils municipaux."
   },
   {
    "id": "as-20",
@@ -6692,7 +6702,7 @@
    "famille": "S",
    "type": "trous",
    "question": "Complétez l'obligation d'achat de biens issus du réemploi instaurée par la loi AGEC.",
-   "texte": "Les acheteurs publics acquièrent des biens issus du {1} ou de la réutilisation, ou intégrant des matières {2}, dans des proportions de {3} % à 40 % selon les catégories de produits fixées par décret.",
+   "texte": "Les acheteurs publics acquièrent chaque année des biens issus du {1} ou de la réutilisation, ou intégrant des matières {2}, à hauteur d'au moins {3} % de leurs achats dans les catégories de produits fixées par décret.",
    "mots": [
     "réemploi",
     "recyclées",
@@ -6704,8 +6714,9 @@
     "10",
     "30"
    ],
-   "explication": "L'obligation porte sur des familles de fournitures — mobilier, papeterie, matériel informatique notamment — et non sur les marchés de travaux. La déclaration annuelle de la part atteinte est le volet le moins respecté du dispositif ; le rappeler dans une copie sur l'achat responsable montre que vous connaissez la pratique, pas seulement le texte.",
-   "derniereVerification": "2026-07"
+   "explication": "L'obligation porte sur des familles de fournitures — mobilier, papeterie, matériel informatique notamment — et non sur les marchés de travaux, avec un seuil minimal de 20 % qui sert de plancher générique. Les taux exacts varient fortement selon la catégorie de produit fixée par décret, certaines catégories allant bien au-delà de ce plancher. La déclaration annuelle de la part atteinte est le volet le moins respecté du dispositif ; le rappeler dans une copie sur l'achat responsable montre que vous connaissez la pratique, pas seulement le texte.",
+   "derniereVerification": "2026-07",
+   "aVerifier": "Taux exacts par catégorie de produits fixés par le décret n° 2021-254 : vérifier le pourcentage applicable à la catégorie visée par la question, au-delà du plancher de 20 %."
   },
   {
    "id": "vf-20",
@@ -7108,7 +7119,7 @@
    "sousTheme": "Finances locales",
    "stIdx": 7,
    "sujet": "fin-sections",
-   "niveau": 9,
+   "niveau": 7,
    "famille": "M",
    "type": "frise",
    "question": "Replacez chaque étape de l'évolution des finances locales en face de sa date.",
@@ -7134,7 +7145,7 @@
      "Généralisation de la nomenclature comptable M57 à toutes les collectivités"
     ]
    ],
-   "explication": "Le fil conducteur attendu : chaque réforme fiscale a remplacé un impôt local à taux voté par des compensations nationales, réduisant l'autonomie fiscale tout en préservant, en principe, les ressources. C'est ce mouvement — plus que les dates elles-mêmes — qui nourrit la question récurrente sur la libre administration.",
+   "explication": "Cette frise retrace les grandes étapes de l'évolution des finances locales depuis la décentralisation.\n- Chaque réforme fiscale a remplacé un impôt local à taux voté par des compensations nationales, réduisant l'autonomie fiscale tout en préservant, en principe, le niveau des ressources.\n- C'est ce mouvement, plus que les dates elles-mêmes, qui nourrit la question récurrente sur la libre administration.",
    "derniereVerification": "2026-07"
   },
   {
@@ -7607,7 +7618,7 @@
    "famille": "S",
    "type": "libre",
    "question": "Définissez épargne brute, épargne nette et capacité de désendettement, et leur usage dans l'analyse financière d'une collectivité.",
-   "explication": "Pour un ingénieur, ces trois ratios sont le langage dans lequel se discute un plan pluriannuel d'investissement : une épargne nette faible signifie que chaque opération nouvelle se finance par l'emprunt, donc dégrade la capacité de désendettement. Savoir situer sa collectivité sur ces ratios avant de proposer un programme est un marqueur de crédibilité.",
+   "explication": "Ces trois ratios constituent le langage dans lequel se discute un plan pluriannuel d'investissement local.\n- Une épargne nette faible signifie que chaque opération nouvelle se finance par l'emprunt, ce qui dégrade la capacité de désendettement.\n- Savoir situer sa collectivité sur ces ratios avant de proposer un programme d'investissement est un marqueur de crédibilité à l'oral.",
    "derniereVerification": "2026-08",
    "aVerifier": null,
    "options": [
@@ -7692,7 +7703,7 @@
    "sousTheme": "Débats et critiques",
    "stIdx": 8,
    "sujet": "debat-attract",
-   "niveau": 10,
+   "niveau": 7,
    "famille": "E",
    "type": "tri",
    "question": "Classez ces énoncés du débat sur l'élargissement du recours aux contractuels.",
@@ -7731,7 +7742,7 @@
      2
     ]
    ],
-   "explication": "Le sujet est un classique de l'oral parce qu'il teste la capacité à tenir une position équilibrée sur son propre futur statut. La réponse forte consiste à défendre la complémentarité — le contrat comme outil ciblé, le statut comme colonne vertébrale — en citant les chiffres de progression des contractuels sans en tirer une conclusion unilatérale.",
+   "explication": "Ce tri est un classique de l'oral car il teste la capacité à défendre une position équilibrée sur l'élargissement du recours aux contractuels, qui touche au propre statut du candidat.\n- La réponse forte consiste à défendre la complémentarité entre le contrat, outil ciblé pour des besoins précis, et le statut, colonne vertébrale de la fonction publique.\n- Il convient de citer les chiffres de progression des contractuels sans en tirer de conclusion unilatérale.",
    "derniereVerification": "2026-07"
   },
   {
@@ -8601,7 +8612,7 @@
    },
    "bonneCible": 0,
    "question": "Le décret BACS impose un système d'automatisation et de contrôle. Cliquez sur l'équipement dont la puissance nominale déclenche cette obligation dans un bâtiment tertiaire.",
-  "explication": "Le décret BACS vise les bâtiments tertiaires équipés de systèmes de chauffage ou de climatisation, éventuellement combinés à la ventilation, dont la puissance nominale utile dépasse le seuil réglementaire. Le seuil de 290 kW est applicable depuis 2021 ; l'équipement des bâtiments existants entre 70 et 290 kW est reporté au 1er janvier 2030. C'est la puissance de production de chaud ou de froid qui déclenche l'obligation, et non l'éclairage ou la sécurité."
+   "explication": "Le décret BACS vise les bâtiments tertiaires équipés de systèmes de chauffage ou de climatisation, éventuellement combinés à la ventilation, dont la puissance nominale utile dépasse le seuil réglementaire. Le seuil de 290 kW est applicable depuis 2021 ; l'équipement des bâtiments existants entre 70 et 290 kW est reporté au 1er janvier 2030. C'est la puissance de production de chaud ou de froid qui déclenche l'obligation, et non l'éclairage ou la sécurité."
   },
   {
    "famille": "S",
@@ -9073,7 +9084,7 @@
    "niveau": 10,
    "famille": "S",
    "type": "paroi",
-   "question": "Même paroi : désignez la couche qui assure l'étanchéité à l'air et maîtrise la migration de vapeur.",
+   "question": "Mur à ossature bois isolé en paille : désignez la couche qui assure l'étanchéité à l'air et maîtrise la migration de vapeur.",
    "paroi": {
     "titre": "Coupe horizontale — mur ossature bois, remplissage paille",
     "exterieur": "Extérieur",
@@ -9305,9 +9316,9 @@
    "sousTheme": "Concours et statut de l'ingénieur",
    "stIdx": 0,
    "sujet": "g-0",
-   "niveau": 1,
+   "niveau": 5,
    "famille": "S",
-   "explication": "Ingénieur, ingénieur principal et ingénieur hors classe. Trois grades depuis le décret n° 2016-201, qui a créé le grade d'ingénieur hors classe (culminant à l'IB 1015, avec un échelon spécial hors-échelle A).\n\nTextes de référence : décret n° 2016-201 et décret n° 2016-206 du 26 février 2016 (statut particulier et concours des ingénieurs territoriaux). Vérifié en août 2026.",
+   "explication": "Le cadre d'emplois des ingénieurs territoriaux comprend trois grades, du moins élevé au plus élevé : ingénieur, ingénieur principal et ingénieur hors classe.\n- Le grade d'ingénieur hors classe a été créé par le décret n° 2016-201 et culmine à l'indice brut 1015, avec un échelon spécial hors-échelle A.\n- Textes de référence : décret n° 2016-201 et décret n° 2016-206 du 26 février 2016, relatifs au statut particulier et au concours des ingénieurs territoriaux, vérifiés en août 2026.",
    "derniereVerification": "2026-08",
    "aVerifier": null,
    "type": "ordre",
@@ -9345,9 +9356,9 @@
    "sousTheme": "Concours et statut de l'ingénieur",
    "stIdx": 0,
    "sujet": "g-0",
-   "niveau": 2,
+   "niveau": 5,
    "famille": "M",
-   "explication": "Un diplôme d'ingénieur, un diplôme d'architecte ou un autre diplôme scientifique ou technique sanctionnant cinq années d'études après le baccalauréat, correspondant à la spécialité choisie. Diplôme reconnu équivalent dans les conditions du décret du 13 février 2007 ; à défaut, saisine de la commission d'équivalence de diplômes (RED/REP) du CNFPT.\n\nTextes de référence : décret n° 2016-201 et décret n° 2016-206 du 26 février 2016 (statut particulier et concours des ingénieurs territoriaux). Vérifié en août 2026.",
+   "explication": "Le concours externe d'ingénieur territorial exige un diplôme sanctionnant cinq années d'études après le baccalauréat, dans la spécialité choisie à l'inscription.\n- Sont admis un diplôme d'ingénieur, un diplôme d'architecte, ou tout autre diplôme scientifique ou technique de niveau équivalent.\n- Un diplôme reconnu équivalent dans les conditions du décret du 13 février 2007 peut être admis ; à défaut, la commission d'équivalence de diplômes (RED/REP) du CNFPT peut être saisie.",
    "derniereVerification": "2026-08",
    "aVerifier": null,
    "type": "trous",
@@ -9370,9 +9381,9 @@
    "sousTheme": "Concours et statut de l'ingénieur",
    "stIdx": 0,
    "sujet": "g-0",
-   "niveau": 2,
+   "niveau": 5,
    "famille": "M",
-   "explication": "Quatre ans au moins de services publics au 1er janvier de l'année du concours. Ouvert aux fonctionnaires et agents publics (État, collectivités, établissements publics), aux militaires et aux agents d'une organisation internationale intergouvernementale.\n\nTextes de référence : décret n° 2016-201 et décret n° 2016-206 du 26 février 2016 (statut particulier et concours des ingénieurs territoriaux). Vérifié en août 2026.",
+   "explication": "Le concours interne d'ingénieur territorial exige quatre ans au moins de services publics au 1er janvier de l'année du concours.\n- Il est ouvert aux fonctionnaires et agents publics de l'État, des collectivités territoriales et de leurs établissements publics.\n- Il est également ouvert aux militaires et aux agents d'une organisation internationale intergouvernementale.",
    "derniereVerification": "2026-08",
    "aVerifier": null,
    "type": "trous",
@@ -9394,14 +9405,14 @@
    "sousTheme": "Concours et statut de l'ingénieur",
    "stIdx": 0,
    "sujet": "g-0",
-   "niveau": 2,
+   "niveau": 6,
    "famille": "M",
-   "explication": "Deux ans, renouvelable deux fois un an sur demande écrite, soit quatre ans au total. Depuis la loi du 6 août 2019, l'inscription court quatre ans au maximum ; le lauréat doit demander chaque renouvellement avant l'échéance.\n\nTextes de référence : décret n° 2016-201 et décret n° 2016-206 du 26 février 2016 (statut particulier et concours des ingénieurs territoriaux). Vérifié en août 2026.",
+   "explication": "Cette affirmation est vraie : l'inscription sur liste d'aptitude est valable deux ans, renouvelable deux fois un an sur demande écrite du lauréat, soit quatre ans au maximum.\n- Ce régime résulte de la loi du 6 août 2019, dite de transformation de la fonction publique.\n- Le lauréat doit demander chaque renouvellement avant l'échéance, sous peine de perdre le bénéfice de son inscription.",
    "derniereVerification": "2026-08",
    "aVerifier": null,
    "type": "vf",
    "question": "Après réussite au concours d'ingénieur territorial, l'inscription sur la liste d'aptitude est valable deux ans, renouvelable deux fois un an sur demande écrite du lauréat, soit quatre ans au maximum.",
-   "justification": "La liste d'aptitude est valable un an initialement... en réalité deux ans, prorogeable deux fois un an à la demande du lauréat, ce qui porte la durée maximale à quatre ans, conformément à la loi du 6 août 2019.",
+   "justification": "L'inscription initiale sur liste d'aptitude est de deux ans, prorogeable deux fois un an à la demande du lauréat, soit quatre ans au maximum, conformément à la loi du 6 août 2019.",
    "vrai": true
   },
   {
@@ -9410,13 +9421,13 @@
    "sousTheme": "Concours et statut de l'ingénieur",
    "stIdx": 0,
    "sujet": "g-0",
-   "niveau": 3,
+   "niveau": 6,
    "famille": "S",
-   "explication": "Non, le lauréat doit postuler et chercher un poste auprès des collectivités.\n\nTextes de référence : décret n° 2016-201 et décret n° 2016-206 du 26 février 2016 (statut particulier et concours des ingénieurs territoriaux). Vérifié en août 2026.",
+   "explication": "Non, l'inscription sur liste d'aptitude ne vaut pas recrutement : le lauréat doit lui-même trouver un poste.\n- Il doit postuler auprès des collectivités territoriales qui recrutent sur le cadre d'emplois des ingénieurs territoriaux.\n- Aucune autorité ne peut lui imposer ou lui garantir une affectation.",
    "type": "vf",
    "question": "L'inscription sur liste d'aptitude vaut-elle recrutement ?",
    "vrai": false,
-   "justification": "le lauréat doit postuler et chercher un poste auprès des collectivités.",
+   "justification": "Le lauréat doit postuler et chercher un poste auprès des collectivités territoriales.",
    "derniereVerification": "2026-08",
    "aVerifier": null
   },
@@ -9426,9 +9437,9 @@
    "sousTheme": "Concours et statut de l'ingénieur",
    "stIdx": 0,
    "sujet": "g-0",
-   "niveau": 3,
+   "niveau": 7,
    "famille": "S",
-   "explication": "Un an de stage avant titularisation.\n\nTextes de référence : décret n° 2016-201 et décret n° 2016-206 du 26 février 2016 (statut particulier et concours des ingénieurs territoriaux). Vérifié en août 2026.",
+   "explication": "Vrai : le statut particulier des ingénieurs territoriaux prévoit une année de stage probatoire avant titularisation.\n- À l'issue de cette année, l'autorité territoriale prononce, ou non, la titularisation de l'agent dans le cadre d'emplois.",
    "derniereVerification": "2026-08",
    "aVerifier": null,
    "type": "vf",
@@ -9442,7 +9453,7 @@
    "sousTheme": "Concours et statut de l'ingénieur",
    "stIdx": 0,
    "sujet": "g-0",
-   "niveau": 3,
+   "niveau": 6,
    "famille": "M",
    "type": "ordre",
    "question": "Remettez dans l'ordre les étapes menant à la titularisation d'un ingénieur territorial recruté par concours.",
@@ -9453,7 +9464,7 @@
     "Formation d'intégration de dix jours dispensée par le CNFPT",
     "Titularisation à l'issue de l'année de stage"
    ],
-   "explication": "Dix jours de formation d'intégration, dispensés par le CNFPT durant l'année de stage.\n\nTextes de référence : décret n° 2016-201 et décret n° 2016-206 du 26 février 2016 (statut particulier et concours des ingénieurs territoriaux). Vérifié en août 2026.",
+   "explication": "La titularisation d'un ingénieur territorial recruté par concours suit un parcours en cinq étapes, du concours à la fin du stage.\n- Les épreuves d'admissibilité et d'admission précèdent l'inscription sur liste d'aptitude et la nomination en qualité de stagiaire.\n- Durant l'année de stage, l'agent suit une formation d'intégration de dix jours dispensée par le CNFPT avant sa titularisation.",
    "derniereVerification": "2026-08",
    "aVerifier": null
   },
@@ -9484,9 +9495,9 @@
    "sousTheme": "Concours et statut de l'ingénieur",
    "stIdx": 0,
    "sujet": "g-0",
-   "niveau": 3,
+   "niveau": 7,
    "famille": "M",
-   "explication": "Le grade d'ingénieur principal compte neuf échelons, de l'indice brut 619 à l'indice brut 1015 (hors anciens échelons provisoires, aujourd'hui éteints). Le grade d'ingénieur hors classe compte, lui, huit échelons dont un échelon spécial hors-échelle A. Texte de référence : décret n° 2016-201 du 26 février.",
+   "explication": "Le grade d'ingénieur principal compte neuf échelons, de l'indice brut 619 à l'indice brut 1015.\n- Le grade d'ingénieur hors classe compte, lui, huit échelons, dont un échelon spécial hors-échelle A.\n- Les anciens échelons provisoires du grade d'ingénieur principal sont aujourd'hui éteints.",
    "derniereVerification": "2026-08",
    "aVerifier": null,
    "type": "trous",
@@ -9548,9 +9559,9 @@
    "sousTheme": "Concours et statut de l'ingénieur",
    "stIdx": 0,
    "sujet": "g-0",
-   "niveau": 4,
+   "niveau": 7,
    "famille": "M",
-   "explication": "Cinq heures, coefficient 5.\n\nTextes de référence : décret n° 2016-201 et décret n° 2016-206 du 26 février 2016 (statut particulier et concours des ingénieurs territoriaux). Vérifié en août 2026.",
+   "explication": "Vrai : l'épreuve écrite d'admissibilité du concours externe d'ingénieur territorial, la note avec propositions, dure cinq heures et est affectée d'un coefficient 5.\n- Cette durée et ce coefficient sont identiques à ceux de l'épreuve équivalente du concours interne.",
    "derniereVerification": "2026-08",
    "aVerifier": null,
    "type": "vf",
@@ -9573,10 +9584,10 @@
    "question": "Complète les trois épreuves écrites du concours interne d'ingénieur territorial.",
    "mots": [
     "mathématiques et physique appliquées",
-    "projet ou une étude",
+    "un projet ou une étude",
     "7"
    ],
-   "texte": "Le concours interne comporte une épreuve de {1} (4h, coefficient 3), une note à partir d'un dossier (4h, coefficient 3) et un {2} portant sur l'option choisie (8h, coefficient {3}).",
+   "texte": "Le concours interne comporte une épreuve de {1} (4 h, coefficient 3), une note à partir d'un dossier (4 h, coefficient 3) et {2} portant sur l'option choisie (8 h, coefficient {3}).",
    "leurres": [
     "droit administratif général",
     "5",
@@ -9625,8 +9636,8 @@
    "niveau": 5,
    "famille": "M",
    "type": "trous",
-   "question": "Complétez la règle de réussite au concours d'ingénieur territorial.",
-   "texte": "Pour être déclaré admis au concours, le candidat doit obtenir une moyenne d'au moins {1} sur 20 après application des coefficients aux notes des épreuves.",
+   "question": "Complétez la règle de réussite au concours d'ingénieur territorial (interne ou externe).",
+   "texte": "Pour être déclaré admis au concours d'ingénieur territorial, le candidat doit obtenir une moyenne d'au moins {1} sur 20 après application des coefficients aux notes des épreuves.",
    "mots": [
     "10"
    ],
@@ -9636,7 +9647,7 @@
     "5",
     "15"
    ],
-   "explication": "La moyenne minimale requise pour l'admission est de 10 sur 20 après application des coefficients.",
+   "explication": "La moyenne minimale requise pour l'admission est de 10 sur 20 après application des coefficients aux épreuves d'admissibilité et d'admission.\n\nTextes de référence : décret n° 2016-201 et décret n° 2016-206 du 26 février 2016 (statut particulier et concours des ingénieurs territoriaux). Vérifié en août 2026.",
    "derniereVerification": "2026-08",
    "aVerifier": null
   },
@@ -9683,12 +9694,12 @@
    "niveau": 5,
    "famille": "S",
    "type": "vf",
-   "question": "Signer sa copie lors d'une épreuve écrite d'admissibilité expose le candidat à l'annulation de cette copie.",
+   "question": "Lors d'une épreuve écrite d'admissibilité du concours d'ingénieur territorial, signer sa copie expose le candidat à l'annulation de cette copie.",
    "vrai": true,
    "justification": "Les épreuves écrites sont corrigées de manière anonyme. Toute mention permettant d'identifier le candidat (signature, nom, signe distinctif) constitue une rupture d'anonymat sanctionnée par l'annulation de la copie.",
-   "explication": "Le risque encouru est l'annulation de la copie pour rupture d'anonymat.",
-   "derniereVerification": null,
-   "aVerifier": "Donnée non retrouvée dans les textes officiels : à confirmer avant l'écrit."
+   "explication": "Le risque encouru est l'annulation de la copie pour rupture d'anonymat, principe général applicable à toutes les épreuves écrites des concours de la fonction publique territoriale.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "g-023",
@@ -9699,7 +9710,7 @@
    "niveau": 5,
    "famille": "S",
    "type": "trous",
-   "question": "Complétez : structure attendue de la note administrative au concours.",
+   "question": "Complétez : structure attendue de la note administrative à l'épreuve du concours d'ingénieur territorial.",
    "texte": "La note comprend en général {1}, suivie {2}.",
    "mots": [
     "une partie informative",
@@ -9711,9 +9722,9 @@
     "une bibliographie commentée",
     "une conclusion polémique"
    ],
-   "explication": "La note attendue au concours articule une partie informative et une partie de propositions opérationnelles.",
-   "derniereVerification": null,
-   "aVerifier": "Donnée non retrouvée dans les textes officiels : à confirmer avant l'écrit."
+   "explication": "La note attendue au concours articule une partie informative, qui restitue et organise les éléments du dossier, puis une partie de propositions opérationnelles répondant à la commande.",
+   "derniereVerification": "2026-08",
+   "aVerifier": null
   },
   {
    "id": "g-024",
@@ -9725,7 +9736,7 @@
    "famille": "S",
    "explication": "Oui, la forme administrative est attendue (Collectivité, date, destinataire, objet).\n\nTextes de référence : décret n° 2016-201 et décret n° 2016-206 du 26 février 2016 (statut particulier et concours des ingénieurs territoriaux). Vérifié en août 2026.",
    "type": "vf",
-   "question": "Faut-il mettre un titre lors de l'épreuve de note ?",
+   "question": "Lors de l'épreuve de note du concours d'ingénieur territorial, faut-il faire figurer un titre en tête de la copie ?",
    "vrai": true,
    "justification": "la forme administrative est attendue (Collectivité, date, destinataire, objet).",
    "derniereVerification": "2026-08",
@@ -9740,7 +9751,7 @@
    "niveau": 6,
    "famille": "S",
    "type": "assoc",
-   "question": "Associez chaque collège du jury de concours à sa description.",
+   "question": "Associez chaque collège du jury du concours d'ingénieur territorial à sa description.",
    "paires": [
     [
      "Élus locaux",
@@ -9858,7 +9869,7 @@
     "segments": [
      {
       "l": "Filière technique",
-      "v": 44.9
+      "v": 45
      },
      {
       "l": "Filière administrative",
@@ -9869,8 +9880,8 @@
       "v": 20
      },
      {
-      "l": "Filière culturelle",
-      "v": 4
+      "l": "Filière culturelle, sportive et autres",
+      "v": 9
      }
     ]
    },
@@ -10273,7 +10284,7 @@
    "sujet": "g-4",
    "niveau": 1,
    "famille": "S",
-   "explication": "Le fonctionnaire est notamment soumis aux obligations d'obéissance hiérarchique, de discrétion professionnelle, de réserve et de probité, prévues aux articles L121-1 et suivants du Code général de la fonction publique (CGFP).",
+   "explication": "Le fonctionnaire est notamment soumis aux obligations d'obéissance hiérarchique, de discrétion professionnelle, de réserve et de probité. Ces obligations sont prévues aux articles L. 121-1 et suivants du code général de la fonction publique (CGFP).",
    "derniereVerification": "2026-08",
    "aVerifier": null,
    "type": "trous",
@@ -10361,7 +10372,7 @@
    "sujet": "g-4",
    "niveau": 1,
    "famille": "S",
-   "explication": "Le RIFSEEP, institué par le décret n°2014-513 du 20 mai 2014, comprend l'IFSE (indemnité de fonctions, de sujétions et d'expertise, versée mensuellement) et le CIA (complément indemnitaire annuel, lié à la manière de servir).",
+   "explication": "Le RIFSEEP, institué par le décret n° 2014-513 du 20 mai 2014, comprend deux composantes. - L'IFSE (indemnité de fonctions, de sujétions et d'expertise), versée mensuellement selon le poste occupé. - Le CIA (complément indemnitaire annuel), versé selon la manière de servir de l'agent.",
    "derniereVerification": "2026-08",
    "aVerifier": null,
    "type": "qcm",
@@ -10396,7 +10407,7 @@
     "mobilité géographique",
     "prime de rendement"
    ],
-   "explication": "La NBI (Nouvelle Bonification Indiciaire) est attribuée aux agents exerçant des fonctions comportant une technicité ou une responsabilité particulière, conformément à la loi n°91-73 du 18 janvier 1991.",
+   "explication": "La NBI (nouvelle bonification indiciaire) est un supplément de rémunération lié à l'exercice de certaines fonctions. Elle est attribuée aux agents exerçant des fonctions comportant une technicité ou une responsabilité particulière, conformément à la loi n° 91-73 du 18 janvier 1991.",
    "derniereVerification": "2026-08",
    "aVerifier": null
   },
@@ -10772,7 +10783,7 @@
    "type": "vf",
    "question": "Un contrat de concession est-il soumis aux règles de la maîtrise d'ouvrage publique ?",
    "vrai": false,
-   "justification": "seuls les marchés publics y sont soumis.",
+   "justification": "Seuls les marchés publics de travaux ou globaux relèvent du régime de la maîtrise d'ouvrage publique, à l'exclusion des contrats de concession.",
    "derniereVerification": "2026-08",
    "aVerifier": null
   },
@@ -11325,7 +11336,7 @@
    "type": "vf",
    "question": "L'avis de la commission de sécurité lie-t-il le Maire pour autoriser l'ouverture ?",
    "vrai": false,
-   "justification": "sauf en cas d'avis préalable au Permis de Construire ou pour les dérogations.",
+   "justification": "L'avis de la commission de sécurité ne s'impose au maire que lorsqu'il est requis préalablement à la délivrance du permis de construire ou pour l'octroi d'une dérogation aux règles de sécurité.",
    "derniereVerification": "2026-08",
    "aVerifier": null
   },
@@ -11357,8 +11368,8 @@
    "question": "Remettez dans l'ordre les étapes que le maire doit suivre face à un ERP dangereux.",
    "items": [
     "Constater le danger lors d'une visite de la commission de sécurité",
-    "Mettre en demeure l'exploitant de réaliser les prescriptions",
     "Vérifier l'absence de péril imminent",
+    "Mettre en demeure l'exploitant de réaliser les prescriptions",
     "Prononcer la fermeture si les prescriptions ne sont pas exécutées"
    ],
    "explication": "Sauf péril imminent justifiant une fermeture immédiate, le maire doit mettre en demeure l'exploitant de réaliser les prescriptions avant d'envisager la fermeture administrative de l'établissement (article L.123-3 du CCH).",
@@ -11656,9 +11667,9 @@
     "Basique",
     "Manuel"
    ],
-   "explication": "BACS (Building Automation and Control System) désigne un système de gestion technique du bâtiment ; son installation est obligatoire depuis le décret BACS (2020-1077) pour les bâtiments tertiaires équipés de systèmes de chauffage/climatisation de forte puissance.",
+   "explication": "Le sigle BACS (Building Automation and Control System) désigne un système de gestion technique automatisée qui pilote le chauffage, la ventilation, la climatisation et l'éclairage d'un bâtiment tertiaire. Son installation est rendue obligatoire par le décret dit « BACS » codifié au code de la construction et de l'habitation, avec une échéance étendue à 2030 pour certains bâtiments selon la puissance de leurs équipements de chauffage ou de climatisation.",
    "derniereVerification": "2026-08",
-   "aVerifier": null
+   "aVerifier": "Numéro exact du décret BACS et seuils de puissance (kW) déclenchant chaque échéance à confirmer."
   },
   {
    "id": "g-106",
@@ -11784,7 +11795,7 @@
    "niveau": 7,
    "famille": "S",
    "type": "trous",
-   "question": "Complétez le sigle : PLU signifie Plan {1} {2}.",
+   "question": "Complétez le sigle PLU.",
    "texte": "PLU signifie Plan {1} {2}.",
    "mots": [
     "Local",
@@ -12086,15 +12097,15 @@
    "sujet": "g-0",
    "niveau": 10,
    "famille": "S",
-   "explication": "Un recrutement au titre de la promotion interne pour deux recrutements opérés par concours, mutation ou détachement, selon l'article 12 du décret n° 2016-201 du 26 février.",
+   "explication": "Un poste pourvu au titre de la promotion interne pour trois postes pourvus par concours, mutation ou détachement, soit environ un quart des recrutements.\n\nTexte de référence : décret n° 2016-201 du 26 février 2016 (statut particulier des ingénieurs territoriaux). Ratio à recouper avec le texte en vigueur.",
    "type": "libre",
    "question": "Pour les ingénieurs territoriaux, quelle est la proportion de places pour la promotion interne (examen) ?",
    "options": [
-    "Le ratio de promotion interne est fixé par l'article 12 du décret n° 2016-201 : un recrutement au titre de la promotion interne pour deux recrutements opérés par concours, mutation ou détachement."
+    "Le ratio de promotion interne des ingénieurs territoriaux est fixé par décret : un poste pourvu au titre de la promotion interne pour trois postes pourvus par concours, mutation ou détachement (soit environ 25 % des recrutements)."
    ],
    "bonneReponse": 0,
-   "derniereVerification": "2026-08",
-   "aVerifier": null
+   "derniereVerification": null,
+   "aVerifier": "Ratio précis et article exact du décret n° 2016-201 à confirmer avant l'écrit."
   },
   {
    "id": "g-128",
@@ -12121,7 +12132,7 @@
    "niveau": 7,
    "famille": "S",
    "type": "tri",
-   "question": "Classez ces notes obtenues aux épreuves du concours selon qu'elles sont éliminatoires ou non.",
+   "question": "Classez ces notes obtenues aux épreuves du concours d'ingénieur territorial selon qu'elles sont éliminatoires ou non.",
    "colonnes": [
     "Éliminatoire",
     "Non éliminatoire"
@@ -12191,7 +12202,7 @@
    "famille": "S",
    "explication": "Non, le candidat doit reformuler l'information pour rendre sa note autonome.",
    "type": "vf",
-   "question": "Peut-on faire référence aux annexes dans la copie en écrivant \"voir doc 1\" ?",
+   "question": "Lors de l'épreuve de note du concours d'ingénieur territorial, peut-on renvoyer aux annexes du dossier en écrivant « voir doc 1 » ?",
    "vrai": false,
    "justification": "le candidat doit reformuler l'information pour rendre sa note autonome.",
    "derniereVerification": null,
@@ -12206,7 +12217,7 @@
    "niveau": 7,
    "famille": "S",
    "type": "vf",
-   "question": "La conclusion est obligatoire dans la note de synthèse du concours et doit apporter une idée nouvelle.",
+   "question": "La conclusion est obligatoire dans la note de synthèse du concours d'ingénieur territorial et doit apporter une idée nouvelle.",
    "vrai": false,
    "justification": "La conclusion est facultative. Si elle est rédigée, elle peut récapituler les éléments de la note, mais ne doit pas introduire d'idée nouvelle.",
    "explication": "Elle est facultative, mais peut être utile pour récapituler sans apporter d'idée nouvelle.",
@@ -12223,7 +12234,7 @@
    "famille": "S",
    "explication": "Aucun temps de préparation n'est prévu pour l'entretien obligatoire, qui débute directement ; seule l'épreuve facultative de langue vivante du concours externe prévoit 30 minutes de préparation pour 15 minutes de passage.",
    "type": "libre",
-   "question": "Quels sont les temps de préparation pour les épreuves du concours ?",
+   "question": "Quels sont les temps de préparation prévus pour les épreuves du concours d'ingénieur territorial ?",
    "options": [
     "Aucun temps de préparation n'est prévu pour l'entretien avec le jury, qui débute directement ; seule l'épreuve facultative de langue vivante du concours externe prévoit un temps de préparation, de 30 minutes pour 15 minutes de passage."
    ],
@@ -12241,7 +12252,7 @@
    "famille": "M",
    "explication": "L'anonymat est rompu, la copie est annulée (note de 0).",
    "type": "libre",
-   "question": "Comment est pénalisé un candidat qui signe sa note avec son vrai nom ?",
+   "question": "Au concours d'ingénieur territorial, comment est pénalisé un candidat qui signe sa copie de note avec son vrai nom ?",
    "options": [
     "L'anonymat est rompu, la copie est annulée (note de 0)."
    ],
@@ -12259,7 +12270,7 @@
    "famille": "S",
    "explication": "Un médecin agréé (qui ne doit pas être le médecin traitant).",
    "type": "libre",
-   "question": "Quels professionnels délivrent le certificat médical pour l'aménagement d'épreuve (handicap) ?",
+   "question": "Pour le concours d'ingénieur territorial, quels professionnels délivrent le certificat médical nécessaire à un aménagement d'épreuve pour handicap ?",
    "options": [
     "Un médecin agréé (qui ne doit pas être le médecin traitant)."
    ],
@@ -12277,7 +12288,7 @@
    "famille": "M",
    "explication": "Le report de postes non pourvus d'un concours vers l'autre est possible dans les limites fixées par la réglementation et l'arrêté d'ouverture. Point à confirmer dans l'arrêté d'ouverture : la limite couramment citée est de 25 % des postes offerts.",
    "type": "libre",
-   "question": "Si les places du concours externe ne sont pas pourvues, peuvent-elles être basculées en interne ?",
+   "question": "Si les postes du concours externe d'ingénieur territorial ne sont pas tous pourvus, peuvent-ils être basculés vers le concours interne ?",
    "options": [
     "Le report de postes non pourvus d'un concours vers l'autre est possible dans les limites fixées par la réglementation et l'arrêté d'ouverture."
    ],
@@ -12386,13 +12397,13 @@
    "sujet": "g-8",
    "niveau": 9,
    "famille": "M",
-   "explication": "L'organisation d'une manifestation exceptionnelle dans un ERP nécessite une autorisation du maire, après avis de la commission de sécurité compétente, généralement sollicitée au moins un mois avant l'événement (règlement de sécurité ERP, art. GN 6).",
+   "explication": "L'organisation d'une manifestation exceptionnelle dans un établissement non conçu pour cet usage nécessite une autorisation spécifique du maire, délivrée après avis de la commission de sécurité compétente. Cette autorisation est généralement sollicitée au moins un mois avant l'événement, afin de permettre l'instruction du dossier au regard du règlement de sécurité contre l'incendie applicable aux établissements recevant du public.",
    "type": "vf",
    "question": "Est-il possible d'organiser une manifestation exceptionnelle dans un ERP non prévu pour cela ?",
    "vrai": true,
    "justification": "avec une autorisation spécifique du Maire, demandée au moins 1 mois avant.",
    "derniereVerification": "2026-08",
-   "aVerifier": null
+   "aVerifier": "Référence exacte de l'article du règlement de sécurité ERP (arrêté du 25 juin 1980) à confirmer."
   },
   {
    "id": "g-145",
@@ -12500,7 +12511,7 @@
     "Manuellement",
     "Distance"
    ],
-   "explication": "Gestion de la Maintenance Assistée par Ordinateur.",
+   "explication": "Le sigle GMAO désigne la Gestion de la Maintenance Assistée par Ordinateur. Il s'agit d'un outil informatique qui permet de planifier, suivre et tracer les interventions de maintenance préventive et curative sur le patrimoine bâti et les équipements d'une collectivité.",
    "derniereVerification": "2026-08",
    "aVerifier": null
   },
@@ -12523,7 +12534,7 @@
     "Groupement Technique de Contrôle",
     "Grille Technique de Conformité"
    ],
-   "explication": "GTC : Gestion Technique Centralisée (pilotage des équipements d'un bâtiment).",
+   "explication": "Le sigle GTC désigne la Gestion Technique Centralisée. Ce système informatique permet de piloter et de superviser à distance, depuis un poste unique, les équipements techniques d'un bâtiment tels que le chauffage, la ventilation ou l'éclairage.",
    "derniereVerification": "2026-08",
    "aVerifier": null
   },
@@ -12549,7 +12560,7 @@
     "Gestion",
     "Indicateur"
    ],
-   "explication": "Un Système d'Information Géographique.",
+   "explication": "Le sigle SIG désigne un Système d'Information Géographique. Cet outil permet de saisir, stocker, analyser et représenter sous forme de cartes des données localisées, ce qui en fait un instrument essentiel pour l'urbanisme et la gestion du patrimoine des collectivités.",
    "derniereVerification": "2026-08",
    "aVerifier": null
   },
@@ -13520,7 +13531,7 @@
      1
     ]
    ],
-   "explication": "Il faut jouir de ses droits civiques pour accéder à la fonction publique.",
+   "explication": "L'accès à la fonction publique suppose de remplir des conditions générales fixées par le CGFP, indépendamment du niveau de diplôme ou de la mobilité de l'agent. - Jouir de ses droits civiques, avoir un casier judiciaire compatible avec les fonctions et être physiquement apte à les exercer sont des conditions exigées. - Être diplômé d'une grande école, être déjà titulaire dans une autre fonction publique ou détenir le permis de conduire ne sont pas des conditions générales d'accès.",
    "derniereVerification": "2026-08",
    "aVerifier": null
   },
@@ -13592,7 +13603,7 @@
    "famille": "M",
    "explication": "La présentation la plus courante retient 8 filières (administrative, technique, culturelle, sportive, sanitaire et sociale, animation, police municipale, sapeurs-pompiers), mais le décompte varie de 7 à 10 selon les sources.",
    "derniereVerification": "2026-08",
-   "aVerifier": null,
+   "aVerifier": "Le nombre exact de filières (7 à 10 selon les sources) peut varier ; vérifier la présentation retenue par le CNFPT au moment du concours.",
    "type": "vf",
    "question": "La Fonction Publique Territoriale est organisée en huit filières professionnelles.",
    "justification": "Le découpage en huit filières (administrative, technique, culturelle, sportive, sanitaire et sociale, animation, police municipale, sapeurs-pompiers) est la présentation la plus courante, même si le décompte peut varier de 7 à 10 selon les sources.",
@@ -13608,11 +13619,11 @@
    "famille": "M",
    "type": "libre",
    "question": "Pouvez-vous citer les 8 filières de la FPT ?",
-   "explication": "La FPT est traditionnellement présentée en huit filières (administrative, technique, culturelle, sportive, sanitaire et sociale, animation, police municipale, sapeurs-pompiers), le décompte pouvant varier selon les sources.",
+   "explication": "La FPT est traditionnellement présentée en huit filières : administrative, technique, culturelle, sportive, sociale, animation, police municipale et sapeurs-pompiers. La filière médico-sociale a été fusionnée avec la filière sociale par la réforme de 2016, et le décompte exact peut varier selon les sources.",
    "derniereVerification": "2026-08",
    "aVerifier": null,
    "options": [
-    "Administrative, Technique, Culturelle, Sportive, Sanitaire et Sociale, Animation, Police Municipale, Sapeurs-Pompiers."
+    "Administrative, Technique, Culturelle, Sportive, Sociale, Animation, Police Municipale, Sapeurs-Pompiers."
    ],
    "bonneReponse": 0
   },
@@ -14002,7 +14013,7 @@
      "Supplément lié à la situation familiale de l'agent"
     ]
    ],
-   "explication": "L'IFSE et le CIA composent le RIFSEEP (décret n°2014-513), la NBI (décret n°2006-779) rémunère des fonctions à responsabilité ou technicité particulières, et le SFT est lié à la situation familiale de l'agent.",
+   "explication": "La rémunération d'un agent territorial combine plusieurs éléments obligatoires ou facultatifs. - Le traitement indiciaire est basé sur le grade et l'échelon de l'agent. - L'IFSE et le CIA composent le RIFSEEP (décret n° 2014-513 du 20 mai 2014). - La NBI (décret n° 2006-779 du 3 juillet 2006) rémunère l'exercice de fonctions à responsabilité ou technicité particulières. - Le supplément familial de traitement (SFT) est lié à la situation familiale de l'agent.",
    "derniereVerification": "2026-08",
    "aVerifier": null
   },
@@ -14229,8 +14240,8 @@
    "type": "vf",
    "question": "La gestion des espaces naturels est une compétence partagée entre toutes les collectivités et l'État.",
    "vrai": true,
-   "justification": "En matière d'environnement, l'article L.1111-4 du CGCT organise un régime de compétences partagées, notamment pour la gestion des espaces naturels, entre communes, départements, régions et l'État.",
-   "explication": "L'article L.1111-4 du CGCT range l'environnement, dont la gestion des espaces naturels, parmi les compétences partagées entre toutes les collectivités et l'État.",
+   "justification": "En matière d'environnement, l'article L. 1111-4 du CGCT organise un régime de compétences partagées, notamment pour la gestion des espaces naturels, entre communes, départements, régions et l'État.",
+   "explication": "L'article L. 1111-4 du CGCT range l'environnement, dont la gestion des espaces naturels, parmi les compétences partagées entre toutes les collectivités et l'État.",
    "derniereVerification": "2026-08",
    "aVerifier": null
   },
@@ -14242,11 +14253,11 @@
    "sujet": "g-2",
    "niveau": 3,
    "famille": "M",
-   "explication": "Depuis la loi NOTRe de 2015, les plans départementaux de gestion des déchets ont été supprimés au profit d'un plan régional unique (PRPGD), intégré au SRADDET, élaboré par la Région.",
+   "explication": "Depuis la loi NOTRe de 2015, les plans départementaux de gestion des déchets ont été supprimés et remplacés par un plan régional unique. Ce plan régional de prévention et de gestion des déchets (PRPGD) est élaboré par la Région et intégré au schéma régional d'aménagement, de développement durable et d'égalité des territoires (SRADDET).",
    "derniereVerification": "2026-08",
    "aVerifier": null,
    "type": "qcm",
-   "question": "Qui élabore le plan départemental de gestion des déchets ?",
+   "question": "Depuis la suppression des plans départementaux de gestion des déchets par la loi NOTRe de 2015, quelle collectivité élabore désormais le plan unique en la matière ?",
    "bonneReponse": 1,
    "options": [
     "Le Département",
@@ -14332,14 +14343,14 @@
    "sujet": "g-2",
    "niveau": 4,
    "famille": "M",
-   "explication": "L'organisation revient à l'autorité organisatrice de la mobilité (AOM), le plus souvent la commune ou l'EPCI compétent ; depuis la loi d'orientation des mobilités du 24 décembre 2019, on ne parle plus de « transports urbains » mais de compétence mobilité.",
+   "explication": "L'organisation revient à l'autorité organisatrice de la mobilité (AOM), le plus souvent la commune ou l'EPCI compétent. Depuis la loi d'orientation des mobilités du 24 décembre 2019, on ne parle plus de « transports urbains » mais de compétence mobilité.",
    "derniereVerification": "2026-08",
    "aVerifier": null,
    "type": "qcm",
    "question": "Qui organise les transports urbains et scolaires à l'intérieur d'une ville ?",
    "bonneReponse": 0,
    "options": [
-    "La Commune (ou l'EPCI, en tant qu'autorité organisatrice de la mobilité)",
+    "La Commune (ou l'EPCI)",
     "Le Département",
     "La Région",
     "L'État"
@@ -15112,11 +15123,11 @@
    "famille": "M",
    "type": "libre",
    "question": "En quelle année la Fonction Publique Territoriale a-t-elle été créée ?",
-   "explication": "La FPT a été créée par la loi n° 84-53 du 26 janvier 1984.",
+   "explication": "La FPT a été créée par la loi n° 84-53 du 26 janvier 1984 portant dispositions statutaires relatives à la fonction publique territoriale, prise en application du statut général issu de la loi n° 83-634 du 13 juillet 1983 (dite loi Le Pors).",
    "derniereVerification": "2026-08",
    "aVerifier": null,
    "options": [
-    "La Fonction Publique Territoriale a été créée par la loi n° 84-53 du 26 janvier 1984, dite loi Le Pors, qui porte dispositions statutaires relatives à la fonction publique territoriale."
+    "La Fonction Publique Territoriale a été créée par la loi n° 84-53 du 26 janvier 1984 portant dispositions statutaires relatives à la fonction publique territoriale, prise en application du statut général des fonctionnaires issu de la loi n° 83-634 du 13 juillet 1983, dite loi Le Pors."
    ],
    "bonneReponse": 0
   },
@@ -15270,7 +15281,7 @@
    "type": "vf",
    "question": "Le maire peut-il privatiser ou supprimer seul un service communal entier ?",
    "vrai": false,
-   "justification": "si la mesure constitue un bouleversement important de l'organisation communale, elle doit être décidée par le conseil municipal.",
+   "justification": "Non, le maire ne peut décider seul une telle mesure : si elle constitue un bouleversement important de l'organisation communale, comme la suppression ou la privatisation d'un service entier, elle relève de la compétence du conseil municipal.",
    "derniereVerification": "2026-08",
    "aVerifier": null
   },
@@ -15314,7 +15325,7 @@
    "sujet": "g-5",
    "niveau": 9,
    "famille": "M",
-   "explication": "Depuis la loi du 6 août 2019, l'avancement de grade n'est plus soumis à l'avis des CAP mais aux lignes directrices de gestion fixées par l'autorité territoriale.",
+   "explication": "Depuis la loi n° 2019-828 du 6 août 2019 de transformation de la fonction publique, l'avancement de grade n'est plus soumis à l'avis des commissions administratives paritaires (CAP) mais aux lignes directrices de gestion fixées par l'autorité territoriale.",
    "type": "libre",
    "question": "Qui fixe le tableau d'avancement annuel ?",
    "derniereVerification": "2026-08",
@@ -15367,8 +15378,8 @@
    "type": "vf",
    "question": "L'autorité territoriale préside-t-elle les organes de dialogue social ?",
    "vrai": true,
-   "justification": "Oui : l'autorité territoriale préside le comité social territorial (CST), instance issue de la fusion du comité technique et du CHSCT depuis janvier 2023, ainsi que sa formation spécialisée. Les CAP subsistent mais leurs compétences ont été fortement réduites depuis la loi du 6 août 2019.",
-   "explication": "Depuis 2023, le comité technique et le CHSCT ont fusionné en comité social territorial (CST), présidé par l'autorité territoriale. Les CAP, également présidées par l'autorité territoriale, ne sont plus compétentes en matière de mutation, mobilité, avancement ou promotion interne, désormais régies par les lignes directrices de gestion.",
+   "justification": "Oui : l'autorité territoriale préside le comité social territorial (CST), instance issue de la fusion du comité technique et du CHSCT depuis janvier 2023, ainsi que sa formation spécialisée. Les CAP subsistent mais leurs compétences ont été fortement réduites par la loi n° 2019-828 du 6 août 2019.",
+   "explication": "Depuis 2023, le comité technique et le CHSCT ont fusionné en comité social territorial (CST), présidé par l'autorité territoriale. Les CAP, également présidées par l'autorité territoriale, ne sont plus compétentes en matière de mutation, de mobilité, d'avancement ou de promotion interne, ces sujets étant désormais régis par les lignes directrices de gestion depuis la loi n° 2019-828 du 6 août 2019.",
    "derniereVerification": "2026-08",
    "aVerifier": null
   },
@@ -15455,7 +15466,7 @@
    "sujet": "g-6",
    "niveau": 3,
    "famille": "M",
-   "explication": "Le principe de séparation des ordonnateurs et des comptables publics, posé par le décret du 29 décembre 1962 (repris au code général de la fonction publique et au CGCT), interdit à l'ordonnateur d'exécuter lui-même les opérations de paiement ou d'encaissement.",
+   "explication": "Le principe de séparation des ordonnateurs et des comptables publics interdit à l'ordonnateur d'exécuter lui-même les opérations de paiement ou d'encaissement. Il est aujourd'hui posé par le décret n° 2012-1246 du 7 novembre 2012 relatif à la gestion budgétaire et comptable publique (art. 9) et rappelé à l'article L. 1617-1 du CGCT pour les collectivités territoriales.",
    "derniereVerification": "2026-08",
    "aVerifier": null,
    "type": "qcm",
@@ -15480,7 +15491,7 @@
    "type": "vf",
    "question": "Un ordonnateur (le maire) peut-il procéder au paiement d'une facture ?",
    "vrai": false,
-   "justification": "la règle impose que celui qui ordonne ne paye pas.",
+   "justification": "Non, en vertu du principe de séparation des ordonnateurs et des comptables publics : l'ordonnateur engage, liquide et mandate la dépense, mais seul le comptable public peut en assurer le paiement effectif (décret n° 2012-1246 du 7 novembre 2012, art. 9).",
    "derniereVerification": "2026-08",
    "aVerifier": null
   },
@@ -15586,10 +15597,10 @@
    "type": "libre",
    "question": "Qui juge et met en jeu la responsabilité pécuniaire d'un comptable public ?",
    "options": [
-    "Depuis le 1er janvier 2023, la responsabilité personnelle et pécuniaire du comptable est supprimée : un régime juridictionnel unifié de responsabilité financière des gestionnaires publics (ordonnateurs et comptables) s'applique devant la chambre du contentieux de la Cour des comptes, avec appel devant la Cour d'appel financière, la sanction étant une amende et non un débet."
+    "Depuis le 1er janvier 2023, la responsabilité personnelle et pécuniaire du comptable est supprimée : l'ordonnance n° 2022-408 du 23 mars 2022 a instauré un régime juridictionnel unifié de responsabilité financière des gestionnaires publics (ordonnateurs et comptables), jugé par la chambre du contentieux de la Cour des comptes, avec appel devant la Cour d'appel financière, la sanction étant une amende et non un débet."
    ],
    "bonneReponse": 0,
-   "explication": "Depuis le 1er janvier 2023, le débet et le jugement des comptes ont disparu. Un régime unifié de responsabilité financière des gestionnaires publics (ordonnateurs et comptables) relève de la chambre du contentieux de la Cour des comptes, avec appel devant la Cour d'appel financière ; la sanction est une amende.",
+   "explication": "Depuis le 1er janvier 2023, le débet et le jugement des comptes du comptable public ont disparu au profit d'un régime unifié de responsabilité financière des gestionnaires publics. Instauré par l'ordonnance n° 2022-408 du 23 mars 2022, ce régime s'applique aux ordonnateurs comme aux comptables devant la chambre du contentieux de la Cour des comptes, avec appel devant la Cour d'appel financière, et se traduit par une amende et non plus par un débet.",
    "derniereVerification": "2026-08",
    "aVerifier": null
   },
@@ -15804,9 +15815,9 @@
    "type": "echelle",
    "question": "Cliquez sur la tranche à partir de laquelle un marché de travaux doit être publié au BOAMP et au JOUE.",
    "bonneCible": 1,
-   "explication": "Depuis la révision biennale des seuils européens applicable au 1er janvier 2024, le seuil de procédure formalisée (donc de publication au BOAMP et au JOUE) pour les marchés de travaux est fixé à 5 382 000 € HT.",
+   "explication": "Le seuil européen de procédure formalisée pour les marchés de travaux, qui déclenche la publication au BOAMP et au JOUE, est révisé tous les deux ans par la Commission européenne. Il était fixé à 5 382 000 € HT pour 2024-2025 ; la révision entrée en vigueur au 1er janvier 2026 l'a relevé à un montant proche de 5 538 000 € HT.",
    "derniereVerification": "2026-08",
-   "aVerifier": "Seuil européen des marchés de travaux applicable en 2026-2027, sous réserve de la prochaine révision biennale (échéance 1er janvier 2026).",
+   "aVerifier": "Montant exact du seuil européen de publicité des marchés de travaux applicable pour la période 2026-2027 (révision entrée en vigueur au 1er janvier 2026), à confirmer via le règlement délégué de la Commission européenne.",
    "echelle_g": {
     "titre": "Seuils de publicité des marchés publics de travaux",
     "unite": "€ HT",
@@ -15974,7 +15985,7 @@
    "famille": "M",
    "type": "libre",
    "question": "Qu'est-ce que le principe de transparence des services publics ?",
-   "explication": "Le principe de transparence, notamment garanti par le code des relations entre le public et l'administration (droit d'accès aux documents administratifs, motivation des décisions), permet aux usagers de s'informer sur le fonctionnement des services publics.",
+   "explication": "Le principe de transparence permet à tout usager de s'informer sur le fonctionnement de l'administration et d'accéder à ses documents. Il repose notamment sur le droit d'accès aux documents administratifs et sur l'obligation de motivation de certaines décisions, prévus par le code des relations entre le public et l'administration (CRPA).",
    "derniereVerification": "2026-08",
    "aVerifier": null,
    "options": [
@@ -16008,7 +16019,7 @@
    "famille": "M",
    "type": "libre",
    "question": "Quelle différence y a-t-il entre la régie simple et la régie autonome ?",
-   "explication": "La régie simple relève du budget général de la collectivité sans individualisation comptable, tandis que la régie dotée de l'autonomie financière dispose d'un budget annexe propre (CGCT, art. L. 2221-1 et suivants), sans pour autant avoir la personnalité morale.",
+   "explication": "La régie simple et la régie dotée de l'autonomie financière se distinguent par leur degré d'individualisation budgétaire, aucune des deux n'ayant la personnalité morale. - La régie simple (ou directe) est intégrée au budget général de la collectivité, sans budget propre ni personnalité morale. - La régie dotée de la seule autonomie financière dispose d'un budget annexe individualisé (CGCT, art. L. 2221-1 et suivants), mais reste sans personnalité morale. - Seule la régie personnalisée, catégorie distincte, dispose en plus de la personnalité morale.",
    "derniereVerification": "2026-08",
    "aVerifier": null,
    "options": [
@@ -16042,7 +16053,7 @@
    "famille": "M",
    "type": "libre",
    "question": "Qu'est-ce qu'une Délégation de Service Public (DSP) ?",
-   "explication": "Définie à l'article L. 1121-3 du code de la commande publique, la DSP est une concession confiant la gestion d'un service à un délégataire dont la rémunération est substantiellement liée aux résultats de l'exploitation, ce qui implique un transfert de risque d'exploitation.",
+   "explication": "La délégation de service public (DSP) est un contrat de concession de service confié à un délégataire rémunéré essentiellement par les résultats de l'exploitation. - Elle est définie à l'article L. 1121-3 du code de la commande publique. - Elle implique un transfert du risque d'exploitation au délégataire, ce qui la distingue d'un marché public.",
    "derniereVerification": "2026-08",
    "aVerifier": null,
    "options": [
@@ -16060,7 +16071,7 @@
    "famille": "M",
    "type": "libre",
    "question": "Quelle est la différence majeure entre l'affermage et la concession ?",
-   "explication": "En concession, le concessionnaire finance et construit les ouvrages qu'il exploite ensuite ; en affermage, la collectivité met à disposition des équipements déjà réalisés que le fermier exploite en versant une redevance (dite surtaxe).",
+   "explication": "L'affermage et la concession se distinguent principalement par la prise en charge du financement des ouvrages. - En concession, le concessionnaire finance et réalise lui-même les ouvrages et équipements nécessaires au service. - En affermage, les ouvrages sont déjà construits et remis par la collectivité, le fermier se contentant de les exploiter contre le versement d'une redevance appelée surtaxe.",
    "derniereVerification": "2026-08",
    "aVerifier": null,
    "options": [
@@ -16078,7 +16089,7 @@
    "famille": "M",
    "type": "libre",
    "question": "Qu'est-ce qu'un contrat de partenariat (PPP) ?",
-   "explication": "On parle désormais du marché de partenariat, qui a remplacé le contrat de partenariat depuis l'ordonnance de 2015 reprise au code de la commande publique : l'acheteur confie à un tiers une mission globale (financement, conception, construction, exploitation) rémunérée par des loyers étalés dans le temps, sous des conditions de recours strictes.",
+   "explication": "Le contrat de partenariat a été remplacé par le marché de partenariat depuis l'ordonnance de 2015, reprise au code de la commande publique. - L'acheteur confie à un tiers une mission globale (financement, conception, construction, exploitation) rémunérée par des loyers étalés dans le temps. - Son recours est encadré par des conditions strictes, notamment une évaluation préalable et des seuils financiers.",
    "derniereVerification": "2026-08",
    "aVerifier": null,
    "options": [
@@ -16149,7 +16160,7 @@
    "famille": "M",
    "type": "libre",
    "question": "Qu'est-ce qu'une Société Publique Locale (SPL) ?",
-   "explication": "Créée par la loi du 28 mai 2010, la SPL (CGCT, art. L. 1531-1) est une société anonyme détenue à 100 % par au moins deux collectivités ou groupements, exerçant exclusivement pour leur compte dans le cadre d'un contrôle analogue (relation de quasi-régie/in house), dispensant les contrats qui la lient à ses actionnaires de mise en concurrence.",
+   "explication": "La société publique locale (SPL) est une société anonyme entièrement publique créée pour exercer des missions exclusivement au profit de ses actionnaires publics. - Créée par la loi du 28 mai 2010, elle est régie par l'article L. 1531-1 du CGCT. - Son capital est détenu à 100 % par au moins deux collectivités ou groupements. - Elle agit dans le cadre d'un contrôle analogue (relation de quasi-régie ou « in house »), ce qui dispense de mise en concurrence les contrats la liant à ses actionnaires.",
    "derniereVerification": "2026-08",
    "aVerifier": null,
    "options": [
@@ -16183,7 +16194,7 @@
    "famille": "M",
    "type": "libre",
    "question": "Quel est le risque de gérer un service via une association loi 1901 très dépendante financièrement de la commune ?",
-   "explication": "Une association trop dépendante financièrement et fonctionnellement de la commune peut être requalifiée d'association transparente par le juge, exposant les élus à une gestion de fait des deniers publics sanctionnée par la chambre régionale des comptes.",
+   "explication": "Une association trop dépendante de la commune expose les élus à un risque juridique et financier important. - Elle peut être requalifiée d'association transparente par le juge lorsqu'elle manque d'autonomie réelle de décision. - Cette requalification peut entraîner une gestion de fait des deniers publics, sanctionnée par la chambre régionale des comptes.",
    "derniereVerification": "2026-08",
    "aVerifier": null,
    "options": [
@@ -16201,7 +16212,7 @@
    "famille": "M",
    "type": "libre",
    "question": "Qu'est-ce qu'un Groupement d'Intérêt Public (GIP) ?",
-   "explication": "Régi depuis la loi n° 2011-525 du 17 mai 2011, le GIP est une personne morale de droit public créée par convention entre personnes publiques, ou entre personnes publiques et privées, pour exercer en commun des activités d'intérêt général à but non lucratif.",
+   "explication": "Le groupement d'intérêt public (GIP) est une structure de coopération dotée de la personnalité morale de droit public. - Il est créé par convention entre personnes publiques, ou entre personnes publiques et privées. - Il exerce en commun des activités d'intérêt général à but non lucratif, dans le cadre fixé par la loi n° 2011-525 du 17 mai 2011.",
    "derniereVerification": "2026-08",
    "aVerifier": null,
    "options": [
@@ -16381,7 +16392,7 @@
    "famille": "M",
    "type": "libre",
    "question": "Quel est le but du Conseil Économique et Social Régional (CESR) ?",
-   "explication": "Depuis la loi Grenelle II du 12 juillet 2010, le CESR est devenu le CESER (conseil économique, social et environnemental régional) : assemblée consultative placée auprès du conseil régional, obligatoirement consultée sur le projet de budget et les grands schémas régionaux (CGCT, art. L. 4241-1 et s.).",
+   "explication": "Depuis la loi Grenelle II du 12 juillet 2010, le CESR est devenu le CESER (conseil économique, social et environnemental régional), assemblée consultative placée auprès du conseil régional.\n- Le CESER est obligatoirement consulté sur le projet de budget régional et sur les grands schémas régionaux (SRADDET, SRDEII, etc.).\n- Ses membres, non élus au suffrage universel, sont désignés parmi les organisations professionnelles, syndicales, associatives et environnementales.\n- Son fondement légal figure au CGCT, art. L. 4241-1 et suivants.",
    "derniereVerification": "2026-08",
    "aVerifier": null,
    "options": [
@@ -16460,7 +16471,7 @@
    "famille": "M",
    "type": "libre",
    "question": "Qu'est-ce que le système de \"fléchage\" mis en place pour les intercommunalités ?",
-   "explication": "Institué par la loi du 17 mai 2013, le fléchage permet aux électeurs des communes de 1 000 habitants et plus d'élire simultanément, sur un même bulletin, les conseillers municipaux et, parmi eux, les conseillers communautaires, désignés selon leur ordre sur la liste.",
+   "explication": "Institué par la loi du 17 mai 2013, le fléchage permet aux électeurs des communes de 1 000 habitants et plus d'élire simultanément, sur un même bulletin, les conseillers municipaux et, parmi eux, les conseillers communautaires.\n- Les candidats au conseil communautaire figurent sur la liste des candidats au conseil municipal, en position fléchée.\n- Dans les communes de moins de 1 000 habitants, les conseillers communautaires restent désignés dans l'ordre du tableau du conseil municipal.",
    "derniereVerification": "2026-08",
    "aVerifier": null,
    "options": [
@@ -16613,7 +16624,7 @@
     "La région gère les collèges et leur personnel technique."
    ],
    "phraseFautive": 2,
-   "explication": "C'est le département qui exerce cette compétence.",
+   "explication": "C'est le Département, et non la Région, qui construit et entretient les collèges ainsi que leur personnel technique (agents TOS). La Région exerce la compétence équivalente pour les lycées.",
    "derniereVerification": "2026-08",
    "aVerifier": null
   },
@@ -16661,7 +16672,7 @@
    "question": "C'est l'État, et non les collectivités territoriales, qui définit le contenu des enseignements et délivre les diplômes scolaires.",
    "vrai": true,
    "justification": "Les collectivités gèrent surtout les bâtiments et la vie matérielle des établissements (construction, entretien, personnel technique), tandis que l'État conserve la compétence pédagogique : programmes, diplômes et personnel enseignant.",
-   "explication": "C'est l'État qui en a la responsabilité.",
+   "explication": "C'est l'État qui conserve la compétence pédagogique nationale, quel que soit le niveau scolaire concerné. Les collectivités gèrent les bâtiments et le personnel technique, tandis que l'État définit les programmes, délivre les diplômes et gère les enseignants.",
    "derniereVerification": "2026-08",
    "aVerifier": null
   },
@@ -16747,7 +16758,7 @@
    "derniereVerification": "2026-08",
    "aVerifier": null,
    "options": [
-    "C'est le département qui adopte et met en œuvre le plan départemental des itinéraires de promenade et de randonnée (PDIPR), en application de l'article L361-1 du code de l'environnement."
+    "C'est le département qui adopte et met en œuvre le plan départemental des itinéraires de promenade et de randonnée (PDIPR), en application de l'article L. 361-1 du code de l'environnement."
    ],
    "bonneReponse": 0
   },
@@ -16853,7 +16864,7 @@
    "type": "libre",
    "question": "Pour quels domaines le Département est-il désigné comme \"chef de file\" ?",
    "options": [
-    "L'action sociale, le développement social, l'autonomie des personnes et la solidarité des territoires."
+    "L'action sociale, le développement social, la contribution à la résorption de la précarité énergétique, l'autonomie des personnes et la solidarité des territoires."
    ],
    "bonneReponse": 0,
    "derniereVerification": "2026-08",
@@ -16959,11 +16970,11 @@
    "famille": "M",
    "type": "libre",
    "question": "Combien de compétences obligatoires doit assumer une communauté de communes à terme selon la loi NOTRe ?",
-   "explication": "Le nombre de compétences obligatoires des communautés de communes a évolué à plusieurs reprises (GEMAPI en 2018, eau/assainissement, loi 3DS, loi du 11 avril 2025) ; il convient de se référer directement à l'article L5214-16 du CGCT plutôt qu'à un chiffre figé.",
+   "explication": "Le nombre de compétences obligatoires des communautés de communes a évolué à plusieurs reprises (GEMAPI en 2018, eau/assainissement, loi 3DS, loi du 11 avril 2025) ; il convient de se référer directement à l'article L. 5214-16 du CGCT plutôt qu'à un chiffre figé.",
    "derniereVerification": "2026-08",
-   "aVerifier": null,
+   "aVerifier": "Nombre exact de compétences obligatoires susceptible d'évoluer par réforme législative ; se référer au texte en vigueur de l'article L. 5214-16 du CGCT.",
    "options": [
-    "Le nombre exact de compétences obligatoires d'une communauté de communes a varié au fil des réformes (GEMAPI en 2018, eau et assainissement, loi 3DS, loi du 11 avril 2025) ; il faut se référer directement à l'article L5214-16 du CGCT, l'obligation de transfert eau/assainissement annoncée pour le 1er janvier 2026 ayant été supprimée par la loi n°2025-327 du 11 avril 2025."
+    "Le nombre exact de compétences obligatoires d'une communauté de communes a varié au fil des réformes (GEMAPI en 2018, eau et assainissement, loi 3DS, loi du 11 avril 2025) ; il faut se référer directement à l'article L. 5214-16 du CGCT, l'obligation de transfert eau/assainissement annoncée pour le 1er janvier 2026 ayant été supprimée par la loi n°2025-327 du 11 avril 2025."
    ],
    "bonneReponse": 0
   },
@@ -16977,11 +16988,11 @@
    "famille": "M",
    "type": "libre",
    "question": "Combien de compétences obligatoires incombent à une communauté d'agglomération ?",
-   "explication": "Nombre exact susceptible d'évolutions législatives : se référer à l'article L5216-5 du CGCT en vigueur.",
+   "explication": "Nombre exact susceptible d'évolutions législatives : se référer à l'article L. 5216-5 du CGCT en vigueur.",
    "derniereVerification": "2026-08",
-   "aVerifier": null,
+   "aVerifier": "Nombre exact de groupes de compétences obligatoires susceptible d'évoluer par réforme législative ; se référer au texte en vigueur de l'article L. 5216-5 du CGCT.",
    "options": [
-    "Une communauté d'agglomération doit assumer, en application de l'article L5216-5 du CGCT, plusieurs groupes de compétences obligatoires (développement économique, aménagement de l'espace, équilibre social de l'habitat, politique de la ville, GEMAPI, eau et assainissement, gestion des déchets, etc.) ainsi que des compétences optionnelles à choisir parmi une liste fixée par la loi."
+    "Une communauté d'agglomération doit assumer, en application de l'article L. 5216-5 du CGCT, plusieurs groupes de compétences obligatoires (développement économique, aménagement de l'espace, équilibre social de l'habitat, politique de la ville, GEMAPI, eau et assainissement, gestion des déchets, etc.) ainsi que des compétences optionnelles à choisir parmi une liste fixée par la loi."
    ],
    "bonneReponse": 0
   },
@@ -17013,9 +17024,9 @@
    "famille": "M",
    "type": "libre",
    "question": "À quelle date la loi NOTRe a-t-elle fixé le transfert obligatoire des compétences Eau et Assainissement aux EPCI ?",
-   "explication": "La loi NOTRe avait fixé le transfert obligatoire au 1er janvier 2020, échéance reportée au 1er janvier 2026 par la loi du 3 août 2018, mais l'obligation a finalement été supprimée par la loi n°2025-327 du 11 avril 2025 : les communes qui n'avaient pas transféré ces compétences les conservent, et les transferts déjà réalisés ne sont pas remis en cause.",
+   "explication": "La loi NOTRe avait initialement fixé au 1er janvier 2020 le transfert obligatoire des compétences eau et assainissement aux EPCI à fiscalité propre, mais cette obligation a depuis été assouplie puis supprimée.\n- La loi du 3 août 2018 a permis un report de l'échéance au 1er janvier 2026 pour les communes ayant délibéré en ce sens avant le 1er juillet 2019.\n- La loi n°2025-327 du 11 avril 2025 a supprimé le caractère obligatoire de ce transfert : les communes qui ne l'avaient pas encore réalisé peuvent conserver ces compétences.\n- Les transferts déjà réalisés avant cette loi ne sont pas remis en cause.",
    "derniereVerification": "2026-08",
-   "aVerifier": null,
+   "aVerifier": "Vérifier le contenu exact et l'intitulé définitif de la loi n°2025-327 du 11 avril 2025 auprès de Légifrance, ce texte étant récent.",
    "options": [
     "La loi NOTRe avait fixé le transfert obligatoire des compétences eau et assainissement aux EPCI au 1er janvier 2020, échéance reportée au 1er janvier 2026 par la loi du 3 août 2018 ; cette obligation a finalement été supprimée par la loi n°2025-327 du 11 avril 2025, qui laisse aux communes le choix de conserver ou non ces compétences."
    ],
@@ -17029,7 +17040,7 @@
    "sujet": "g-2",
    "niveau": 9,
    "famille": "M",
-   "explication": "La métropole doit regrouper plusieurs communes d'un seul tenant et sans enclave.",
+   "explication": "La loi impose qu'une métropole regroupe plusieurs communes formant un ensemble d'un seul tenant et sans enclave, comme pour tout EPCI à fiscalité propre.\n- Cette règle de continuité territoriale figure à l'article L. 5217-1 du CGCT.\n- La Métropole du Grand Paris obéit toutefois à un régime particulier, fixé par des dispositions spécifiques du CGCT.",
    "type": "libre",
    "question": "Géographiquement, comment la loi définit-elle le territoire d'une Métropole ?",
    "derniereVerification": "2026-08",
@@ -17067,9 +17078,9 @@
    "famille": "M",
    "type": "libre",
    "question": "Quelle est la source de recettes fiscales remplaçant l'ancienne taxe professionnelle pour les EPCI ?",
-   "explication": "C'est la contribution économique territoriale (CET), composée de la cotisation foncière des entreprises (CFE) et de la cotisation sur la valeur ajoutée des entreprises (CVAE), cette dernière faisant l'objet d'une suppression progressive engagée par la loi de finances pour 2023 dont le calendrier a été reporté à plusieurs reprises.",
+   "explication": "La contribution économique territoriale (CET) a remplacé la taxe professionnelle depuis le 1er janvier 2010 ; elle se compose de la cotisation foncière des entreprises (CFE) et de la cotisation sur la valeur ajoutée des entreprises (CVAE).\n- La loi de finances pour 2023 a engagé la suppression progressive de la CVAE.\n- Ce calendrier de suppression a été reporté à plusieurs reprises par les lois de finances successives, la CVAE n'étant pas encore totalement supprimée au 1er août 2026.",
    "derniereVerification": "2026-08",
-   "aVerifier": null,
+   "aVerifier": "Vérifier le calendrier définitif de suppression de la CVAE en vigueur au 1er août 2026, régulièrement modifié par les lois de finances successives.",
    "options": [
     "La contribution économique territoriale (CET), composée de la cotisation foncière des entreprises (CFE) et de la cotisation sur la valeur ajoutée des entreprises (CVAE), a remplacé la taxe professionnelle depuis 2010 ; la CVAE fait l'objet d'une suppression progressive engagée par la loi de finances pour 2023, dont le calendrier a été reporté à plusieurs reprises."
    ],
@@ -17083,7 +17094,7 @@
    "sujet": "g-2",
    "niveau": 9,
    "famille": "M",
-   "explication": "C'est l'Imposition Forfaitaire sur les Entreprises de Réseaux.",
+   "explication": "L'IFER, ou Imposition Forfaitaire sur les Entreprises de Réseaux, est une composante de la fiscalité économique locale perçue notamment par les EPCI.\n- Elle porte sur les entreprises des secteurs de l'énergie (éoliennes, centrales de production électrique), du transport ferroviaire et des télécommunications.\n- Son régime est fixé par les articles 1519 D et suivants du code général des impôts.",
    "type": "libre",
    "question": "Qu'est-ce que l'IFER, impôt perçu par les EPCI ?",
    "derniereVerification": "2026-08",
@@ -17101,7 +17112,7 @@
    "sujet": "g-2",
    "niveau": 9,
    "famille": "M",
-   "explication": "C'est la Métropole de Lyon.",
+   "explication": "Depuis le 1er janvier 2015, la Métropole de Lyon, collectivité territoriale à statut particulier, exerce sur son territoire à la fois les compétences d'une métropole et celles auparavant dévolues au département du Rhône.\n- Cette création résulte de la loi MAPTAM du 27 janvier 2014.\n- Le département du Rhône subsiste pour le reste de son territoire, hors la Métropole de Lyon.",
    "type": "libre",
    "question": "Quelle collectivité regroupe, depuis le 1er janvier 2015, les compétences du Grand Lyon et celles de son département ?",
    "derniereVerification": "2026-08",
@@ -17119,7 +17130,7 @@
    "sujet": "g-2",
    "niveau": 9,
    "famille": "M",
-   "explication": "Il s'agissait du Schéma Départemental de Coopération Intercommunale (SDCI).",
+   "explication": "En 2016, le préfet devait arrêter le schéma départemental de coopération intercommunale (SDCI), en application de la loi NOTRe.\n- Ce document visait à réduire le nombre de syndicats intercommunaux et à rationaliser la carte des EPCI à fiscalité propre.\n- Il fixait notamment un seuil démographique minimal pour les EPCI à fiscalité propre, sauf dérogations.",
    "type": "libre",
    "question": "Quel document visant à réduire le nombre de syndicats et rationaliser les EPCI le préfet devait-il arrêter en 2016 ?",
    "derniereVerification": "2026-08",
