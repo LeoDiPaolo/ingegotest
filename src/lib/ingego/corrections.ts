@@ -3,7 +3,7 @@
    correction ne vaut plus rien, on repart de zéro sur ces questions.
    Bump de VERSION_CORRECTIONS = nouvelle purge côté navigateur. */
 
-export const VERSION_CORRECTIONS = "2026-08-05a";
+export const VERSION_CORRECTIONS = "2026-08-06a";
 
 export const IDS_CORRIGES: string[] = [
   "a1-01",

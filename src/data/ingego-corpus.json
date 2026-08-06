@@ -4519,7 +4519,7 @@
     ],
     [
      "Automatisation obligatoire des bâtiments tertiaires de 70 à 290 kW (BACS)",
-     "1er janvier 2027"
+      "1er janvier 2030"
     ],
     [
      "Prise en compte obligatoire d'un critère environnemental dans tout marché public",
@@ -4530,7 +4530,7 @@
      "2050"
     ]
    ],
-   "explication": "Attention à ne pas confondre deux calendriers distincts. Le Dispositif Éco Énergie Tertiaire (décret tertiaire) impose une trajectoire de réduction des consommations d'énergie finale de 40 % en 2030, 50 % en 2040 et 60 % en 2050 par rapport à une année de référence choisie postérieure à 2010. L'obligation d'automatisation du pilotage énergétique (systèmes GTB/BACS, article R. 175-1 et suivants du code de la construction et de l'habitation) suit un calendrier propre selon la puissance nominale du système de chauffage, climatisation ou ventilation installé dans le bâtiment : 1er janvier 2025 pour les puissances supérieures à 290 kW, et 1er janvier 2027 pour les puissances comprises entre 70 et 290 kW — donc bien un abaissement du seuil de puissance concerné, pas un report de date à 2030. Par ailleurs, l'obligation de critère environnemental dans la commande publique entre en vigueur le 21 août 2026 (loi Climat et résilience de 2021, avec entrée en vigueur différée), et l'objectif de zéro artificialisation nette (ZAN) vise 2050 avec un jalon intermédiaire de division par deux du rythme de consommation d'espaces sur la décennie 2021-2031. Le non-respect du DEET expose à une procédure de mise en demeure puis, en l'absence de correction, à une sanction publiée nominativement (« name and shame ») sur la plateforme OPERAT.",
+  "explication": "Deux calendriers sont à distinguer. Le Dispositif Éco Énergie Tertiaire impose une réduction des consommations d'énergie finale de 40 % en 2030, 50 % en 2040 et 60 % en 2050 par rapport à une année de référence postérieure à 2010. Pour les systèmes GTB/BACS, l'échéance reste fixée au 1er janvier 2025 au-dessus de 290 kW ; elle est reportée au 1er janvier 2030 entre 70 et 290 kW. L'obligation de critère environnemental dans la commande publique entre en vigueur le 21 août 2026. L'objectif national de zéro artificialisation nette vise 2050, avec un jalon de réduction de moitié du rythme de consommation d'espaces sur la décennie 2021-2031. Le non-respect du DEET peut conduire à une mise en demeure puis à la publication nominative de la sanction sur OPERAT.",
    "derniereVerification": "2026-08",
    "aVerifier": null
   },
@@ -5071,7 +5071,7 @@
    "justification": "L'échéance a été reportée au 1er janvier 2030 par un décret du 26 décembre 2025, pour aligner le calendrier français sur la directive européenne révisée. Le report n'est cependant pas total : tout renouvellement d'un équipement technique déclenche l'obligation de raccordement.",
    "explication": "En programmation, la question utile n'est donc pas l'échéance mais la liste des équipements que la collectivité prévoit de renouveler avant 2030.",
    "derniereVerification": "2026-08",
-   "aVerifier": "Vérifier la date exacte du décret de report de l'échéance BACS à 2030."
+  "aVerifier": null
   },
   {
    "id": "tri-01",
@@ -8601,7 +8601,7 @@
    },
    "bonneCible": 0,
    "question": "Le décret BACS impose un système d'automatisation et de contrôle. Cliquez sur l'équipement dont la puissance nominale déclenche cette obligation dans un bâtiment tertiaire.",
-   "explication": "Le décret BACS vise les bâtiments tertiaires équipés de systèmes de chauffage ou de climatisation, éventuellement combinés à la ventilation, dont la puissance nominale utile dépasse le seuil réglementaire. Le seuil est de 290 kW depuis 2021 et descend à 70 kW au 1er janvier 2027. C'est donc la puissance de production de chaud ou de froid qui déclenche l'obligation, et non l'éclairage ou la sécurité."
+  "explication": "Le décret BACS vise les bâtiments tertiaires équipés de systèmes de chauffage ou de climatisation, éventuellement combinés à la ventilation, dont la puissance nominale utile dépasse le seuil réglementaire. Le seuil de 290 kW est applicable depuis 2021 ; l'équipement des bâtiments existants entre 70 et 290 kW est reporté au 1er janvier 2030. C'est la puissance de production de chaud ou de froid qui déclenche l'obligation, et non l'éclairage ou la sécurité."
   },
   {
    "famille": "S",

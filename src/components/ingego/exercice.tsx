@@ -18,6 +18,12 @@ import { CoupeParoi } from "@/components/ingego/coupe-paroi";
 import { ParcoursPmr } from "@/components/ingego/parcours-pmr";
 import { FacadeSolaire } from "@/components/ingego/facade-solaire";
 import { PlanPluvial } from "@/components/ingego/plan-pluvial";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { cn } from "@/lib/utils";
 
 type Reponse = unknown;
@@ -143,6 +149,58 @@ const optionClass = (etat: "neutre" | "choisi" | "ok" | "ko") =>
 
 const selectClass =
   "w-full rounded-lg border border-input bg-background px-3 py-2 text-sm text-foreground outline-none focus:border-ring";
+
+function decouperExplication(texte: string) {
+  const phrases = texte
+    .replace(/\s+/g, " ")
+    .trim()
+    .split(/(?<=[.!?])\s+(?=[A-ZÀ-ÖØ-Þ0-9«“])/u)
+    .filter(Boolean);
+
+  if (phrases.length === 0) return { essentiel: texte, details: [] as string[] };
+
+  const premiere = phrases[0];
+  if (premiere.length <= 280) {
+    return { essentiel: premiere, details: phrases.slice(1) };
+  }
+
+  const morceaux = premiere.split(/;\s+|\s+—\s+|:\s+(?=[A-ZÀ-ÖØ-Þ])/u).filter(Boolean);
+  if (morceaux.length < 2) return { essentiel: premiere, details: phrases.slice(1) };
+
+  return {
+    essentiel: morceaux[0].replace(/[,:;]$/, "."),
+    details: [...morceaux.slice(1), ...phrases.slice(1)],
+  };
+}
+
+function ExplicationStructuree({ texte }: { texte: string }) {
+  const { essentiel, details } = useMemo(() => decouperExplication(texte), [texte]);
+
+  return (
+    <div className="mt-2 space-y-3">
+      <p className="border-l-2 border-primary pl-3 text-sm leading-relaxed">{essentiel}</p>
+      {details.length > 0 ? (
+        <Accordion type="single" collapsible>
+          <AccordionItem value="details" className="rounded-lg border border-border px-3">
+            <AccordionTrigger className="py-3 text-primary hover:no-underline">
+              En savoir plus
+            </AccordionTrigger>
+            <AccordionContent>
+              <ul className="space-y-2.5 text-sm leading-relaxed text-foreground">
+                {details.map((detail, index) => (
+                  <li key={`${index}-${detail.slice(0, 24)}`} className="flex gap-2.5">
+                    <span aria-hidden="true" className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand" />
+                    <span>{detail}</span>
+                  </li>
+                ))}
+              </ul>
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
+      ) : null}
+    </div>
+  );
+}
 
 export function Exercice({
   q,
@@ -753,7 +811,11 @@ export function Exercice({
             <p className="text-[0.68rem] tracking-[0.15em] text-muted-foreground uppercase">
               Ce qu'il faut retenir
             </p>
-            <p className="mt-1 text-sm leading-relaxed">{q.explication}</p>
+            {numero <= 200 ? (
+              <ExplicationStructuree texte={q.explication} />
+            ) : (
+              <p className="mt-1 text-sm leading-relaxed">{q.explication}</p>
+            )}
             <p className="mt-3 text-xs" style={{ color: famille.c }}>
               {famille.nom}
               {q.derniereVerification ? ` · vérifié ${q.derniereVerification}` : ""}
