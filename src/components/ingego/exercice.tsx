@@ -28,12 +28,23 @@ import { cn } from "@/lib/utils";
 
 type Reponse = unknown;
 
+/* Un mélange qui ne redonne jamais l'ordre d'origine : sinon la bonne réponse
+   est déjà affichée telle quelle (remarque de relecture). */
+function melangeStrict<T>(liste: T[], graine: number): T[] {
+  if (liste.length < 2) return [...liste];
+  let out = melange(liste, graine);
+  let essai = 1;
+  while (out.every((v, i) => v === liste[i]) && essai < 8) out = melange(liste, graine + essai++ * 977);
+  if (out.every((v, i) => v === liste[i])) out = [...liste.slice(1), liste[0]];
+  return out;
+}
+
 const AUTO_NOTE = ["libre", "vf"];
 
 function initiale(q: Question): Reponse {
   switch (q.type) {
     case "ordre":
-      return melange(q.items ?? [], graineDe(q.id));
+      return melangeStrict(q.items ?? [], graineDe(q.id));
     case "libre":
       return "";
     case "frise":
@@ -185,8 +196,9 @@ function decouperExplication(texte: string) {
     resume.push(phrase);
   }
 
-  /* Tout le texte reste disponible en détail : le résumé n'enlève rien. */
-  const details = phrases.length > resume.length ? phrases : [];
+  /* Le détail ne répète pas le résumé : « en savoir plus » reprend uniquement
+     les phrases qui ne sont pas déjà affichées au-dessus. */
+  const details = phrases.slice(resume.length);
   return { essentiel: resume.join(" "), details };
 }
 
@@ -345,6 +357,21 @@ export function Exercice({
     () => melange((q.points ?? []).map((p, i) => ({ texte: p[1], i })), graineDe(q.id + "f")),
     [q],
   );
+  /* Les options d'un QCM, les intitulés à associer et les éléments à trier sont
+     stockés dans l'ordre logique du corpus : on les présente mélangés pour que
+     la bonne réponse ne soit pas devinable à sa position. */
+  const melangeOptions = useMemo(
+    () => melangeStrict((q.options ?? []).map((texte, i) => ({ texte, i })), graineDe(q.id + "o")),
+    [q],
+  );
+  const melangeGauche = useMemo(
+    () => melangeStrict((q.paires ?? []).map((paire, i) => ({ paire, i })), graineDe(q.id + "g")),
+    [q],
+  );
+  const melangeElements = useMemo(
+    () => melangeStrict((q.elements ?? []).map((el, i) => ({ el, i })), graineDe(q.id + "t")),
+    [q],
+  );
 
   const setMap = (cle: number, valeur: number | string) =>
     setRep((r: Reponse) => ({ ...(r as object), [cle]: valeur }));
@@ -384,7 +411,7 @@ export function Exercice({
       {/* ---------- SAISIE ---------- */}
       {q.type === "qcm" && (
         <div className="space-y-2">
-          {(q.options ?? []).map((o, i) => (
+          {melangeOptions.map(({ texte: o, i }) => (
             <button
               key={i}
               disabled={corrige}
@@ -737,7 +764,7 @@ export function Exercice({
 
       {q.type === "assoc" && (
         <div className="space-y-2">
-          {(q.paires ?? []).map((p, i) => {
+          {melangeGauche.map(({ paire: p, i }) => {
             const choisi = (rep as Record<string, number>)[i];
             return (
               <div
@@ -823,7 +850,7 @@ export function Exercice({
 
       {q.type === "tri" && (
         <div className="space-y-2">
-          {(q.elements ?? []).map((el, i) => {
+          {melangeElements.map(({ el, i }) => {
             const choisi = (rep as Record<string, number>)[i];
             return (
               <div
