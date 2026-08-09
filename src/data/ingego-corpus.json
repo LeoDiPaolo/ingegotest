@@ -322,10 +322,10 @@
       "type": "qcm",
       "question": "Les travaux sont réceptionnés dans une nouvelle médiathèque (ERP type S, 3e catégorie). Que faut-il avant d'accueillir le public ?",
       "options": [
-        "Rien de plus, la réception vaut ouverture",
+        "Rien de plus, la réception des travaux vaut de plein droit ouverture au public",
         "Une autorisation d'ouverture délivrée par le maire après visite de la commission de sécurité",
-        "Un simple avis du SDIS",
-        "La déclaration attestant l'achèvement des travaux"
+        "Un simple avis favorable du SDIS transmis au maître d'ouvrage",
+        "Une déclaration d'achèvement des travaux visée par l'architecte"
       ],
       "bonneReponse": 1,
       "explication": "L'ouverture au public est subordonnée à une autorisation du maire, prise après visite de réception de la commission de sécurité compétente. C'est un point de calage de planning souvent sous-estimé : la visite se demande plusieurs semaines à l'avance et suppose un dossier complet de rapports de vérification.",
@@ -403,10 +403,10 @@
       "type": "qcm",
       "question": "Qui adresse la DT (déclaration de projet de travaux) et qui adresse la DICT ?",
       "options": [
-        "Le maître d'ouvrage pour la DT, l'exécutant des travaux pour la DICT",
-        "L'exécutant pour les deux",
-        "Le maître d'ouvrage pour les deux",
-        "Le coordonnateur SPS pour les deux"
+        "Le maître d'ouvrage adresse la DT en phase études, l'exécutant des travaux adresse la DICT avant intervention",
+        "L'exécutant des travaux adresse aussi bien la DT que la DICT tout au long du chantier",
+        "Le maître d'ouvrage adresse à la fois la DT et la DICT dès la conception du projet",
+        "Le coordonnateur SPS adresse la DT et la DICT pour le compte des intervenants"
       ],
       "bonneReponse": 0,
       "explication": "La DT relève du responsable de projet — donc du maître d'ouvrage, ou de son mandataire — en phase études. La DICT relève de chaque exécutant, avant travaux. Elles peuvent être conjointes quand le maître d'ouvrage et l'entreprise sont identifiés simultanément.",
@@ -468,10 +468,10 @@
       "type": "qcm",
       "question": "Quels bâtiments sont soumis à l'obligation de dossier technique amiante (DTA) ?",
       "options": [
-        "Tous les bâtiments",
-        "Les immeubles bâtis dont le permis de construire a été délivré avant le 1er juillet 1997",
-        "Les bâtiments construits avant 1949",
-        "Les seuls ERP"
+        "Tous les bâtiments recevant du public, quelle que soit leur date de construction",
+        "Les immeubles bâtis dont le permis de construire est antérieur au 1er juillet 1997",
+        "Les seuls bâtiments d'habitation collective construits avant le 1er janvier 1949",
+        "Les seuls établissements recevant du public de première catégorie"
       ],
       "bonneReponse": 1,
       "explication": "Le DTA concerne les parties communes d'immeubles collectifs d'habitation et les immeubles bâtis autres que les maisons individuelles, dont le PC est antérieur au 1er juillet 1997 (date d'interdiction de l'amiante). Le DTA est un document d'exploitation ; il ne dispense jamais du repérage avant travaux.",
@@ -506,9 +506,9 @@
       "question": "Le constat de risque d'exposition au plomb (CREP) est obligatoire pour les immeubles :",
       "options": [
         "à usage d'habitation construits avant le 1er janvier 1949",
-        "construits avant le 1er juillet 1997",
-        "de plus de 1 000 m²",
-        "tous, sans condition"
+        "à usage d'habitation construits avant le 1er juillet 1997",
+        "de plus de 1 000 m² de surface habitable",
+        "tous les immeubles, sans condition d'âge ni d'usage"
       ],
       "bonneReponse": 0,
       "explication": "Le CREP vise les immeubles à usage d'habitation construits avant le 1er janvier 1949. Pour un bâtiment tertiaire ou un ERP non résidentiel, l'obligation ne vient pas du code de la santé publique mais du code du travail : le maître d'ouvrage doit informer les entreprises du risque plomb, ce qui suppose un diagnostic préalable.",
@@ -526,10 +526,10 @@
       "type": "qcm",
       "question": "Le diagnostic PEMD (produits, équipements, matériaux, déchets) est obligatoire pour :",
       "options": [
-        "toute démolition",
-        "les démolitions et rénovations significatives de bâtiments de plus de 1 000 m² de surface de plancher",
-        "les seuls bâtiments industriels",
-        "les bâtiments de plus de 2 000 m²"
+        "toute opération de démolition de bâtiment, quelle que soit sa surface",
+        "les démolitions et rénovations de plus de 1 000 m² de surface de plancher",
+        "les seuls bâtiments industriels désaffectés depuis plus de dix ans",
+        "uniquement les bâtiments publics dépassant 2 000 m² de surface"
       ],
       "bonneReponse": 1,
       "explication": "Le PEMD s'applique aux démolitions et rénovations significatives portant sur une surface de plancher cumulée supérieure à 1 000 m², ou sur des bâtiments ayant accueilli une activité agricole, industrielle ou commerciale mettant en œuvre des substances dangereuses. Il a remplacé le diagnostic déchets et va plus loin : il doit identifier ce qui peut être réemployé, et pas seulement évacué.",
@@ -642,10 +642,10 @@
       "type": "qcm",
       "question": "Contenu de la mission de base de maîtrise d'œuvre pour un bâtiment neuf.",
       "options": [
-        "APS, APD, PRO uniquement",
-        "ESQ, APS, APD, PRO, ACT, VISA ou EXE, DET, AOR",
-        "APD, DET, AOR",
-        "ESQ, PRO, DET"
+        "APS, APD et PRO, sans les autres éléments",
+        "ESQ, APS, APD, PRO, ACT, VISA ou EXE, DET et AOR",
+        "APD, DET et AOR, sans phase de conception préalable",
+        "ESQ, PRO et DET, sans phase de suivi de chantier"
       ],
       "bonneReponse": 1,
       "explication": "Les éléments de mission sont désormais codifiés au livre IV de la deuxième partie du code de la commande publique (ex-loi MOP). Pour un bâtiment neuf, la mission de base est obligatoire et indivisible. En réhabilitation, elle n'est pas imposée : le contenu est modulable, ce qui explique la diversité des contrats de MOE sur le parc existant.",
@@ -699,10 +699,10 @@
       "type": "qcm",
       "question": "Le concours de maîtrise d'œuvre est en principe obligatoire pour une commune qui :",
       "options": [
-        "rénove un bâtiment existant, quel que soit le montant",
+        "rénove un bâtiment existant, quel que soit le montant des travaux envisagés",
         "construit un bâtiment neuf pour un marché de MOE au-dessus du seuil de procédure formalisée",
-        "passe un marché de travaux supérieur à 5,4 M€",
-        "recrute un AMO"
+        "passe un marché de travaux d'un montant supérieur à 5,4 millions d'euros",
+        "recrute un assistant à maîtrise d'ouvrage pour son projet"
       ],
       "bonneReponse": 1,
       "explication": "L'obligation de concours porte sur les marchés de maîtrise d'œuvre de bâtiment neuf des collectivités au-dessus du seuil formalisé. Les exceptions sont nombreuses : réhabilitation, réutilisation, ouvrages d'infrastructure, marchés de MOE sans mission de conception, marchés globaux.",
@@ -761,10 +761,10 @@
       "type": "qcm",
       "question": "Une commune doit-elle souscrire une assurance dommages-ouvrage pour la construction d'un centre technique municipal ?",
       "options": [
-        "Non, les personnes publiques en sont dispensées",
-        "Oui, les collectivités territoriales ne bénéficient pas de la dispense reconnue à l'État",
-        "Oui, mais seulement au-delà de 5 M€",
-        "Non, la décennale des entreprises suffit"
+        "Non, les personnes publiques bénéficient toutes d'une dispense d'assurance dommages-ouvrage",
+        "Oui, seul l'État construisant pour son compte bénéficie de la dispense ; les collectivités restent assujetties à l'assurance dommages-ouvrage",
+        "Oui, mais uniquement pour les opérations dont le montant dépasse 5 millions d'euros de travaux",
+        "Non, la garantie décennale souscrite par les entreprises dispense la commune de toute assurance"
       ],
       "bonneReponse": 1,
       "explication": "La dispense d'assurance dommages-ouvrage ne joue que pour l'État construisant pour son compte : les collectivités territoriales y sont bien assujetties. L'intérêt de la DO est le préfinancement : elle indemnise les désordres de nature décennale sous 90 jours, sans attendre qu'un juge désigne un responsable, puis se retourne contre les constructeurs. Sans DO, la commune doit payer les réparations sur son budget et attendre plusieurs années l'issue d'une expertise judiciaire ; si une entreprise a disparu ou n'était pas correctement assurée, la perte reste définitivement à sa charge. Beaucoup de communes s'en dispensent par arbitrage budgétaire (la prime représente environ 1 à 2 % du coût des travaux) : cet arbitrage doit être écrit et motivé, car il expose l'ordonnateur.",
@@ -782,10 +782,10 @@
       "type": "qcm",
       "question": "Le délit de favoritisme suppose-t-il un enrichissement personnel de l'agent ?",
       "options": [
-        "Oui, sinon il n'y a pas d'infraction",
-        "Non, la seule méconnaissance des règles de mise en concurrence procurant un avantage injustifié suffit",
-        "Oui, sauf pour les élus",
-        "Non, mais il faut un préjudice financier avéré"
+        "Oui, l'enrichissement personnel de l'agent est un élément constitutif du délit",
+        "Non, la seule méconnaissance des règles de mise en concurrence procurant un avantage suffit",
+        "Oui, mais seulement lorsque l'auteur des faits est un agent public non élu",
+        "Non, mais un préjudice financier avéré doit être démontré pour l'infraction"
       ],
       "bonneReponse": 1,
       "explication": "L'article 432-14 du code pénal n'exige ni enrichissement ni préjudice : il suffit d'un acte contraire aux règles de publicité et de mise en concurrence procurant à autrui un avantage injustifié. L'élément intentionnel est apprécié largement par la Cour de cassation pour les personnes réputées connaître ces règles — ce qui vise directement un ingénieur territorial.",
@@ -821,10 +821,10 @@
       "type": "qcm",
       "question": "Les trois principes fondamentaux de la commande publique.",
       "options": [
-        "Égalité, transparence, efficacité",
+        "Égalité, transparence, efficacité de la commande publique",
         "Liberté d'accès à la commande publique, égalité de traitement des candidats, transparence des procédures",
-        "Concurrence, publicité, sincérité",
-        "Liberté, allotissement, transparence"
+        "Concurrence loyale, publicité adaptée, sincérité de l'offre",
+        "Liberté contractuelle, allotissement obligatoire, transparence des prix"
       ],
       "bonneReponse": 1,
       "explication": "Ces trois principes, énoncés à l'article L.3 du code de la commande publique, ont valeur constitutionnelle (Conseil constitutionnel, décision du 26 juin 2003) et s'appliquent à tous les contrats de la commande publique, y compris ceux dispensés de publicité et de mise en concurrence formalisées. La liberté d'accès interdit toute barrière artificielle à la candidature (exigences disproportionnées, spécifications orientées vers un opérateur). L'égalité de traitement impose de fournir la même information à tous les candidats et d'appliquer les mêmes critères sans différenciation injustifiée. La transparence des procédures garantit la traçabilité des choix et permet le contrôle du juge administratif et de la chambre régionale des comptes. Leur méconnaissance est le premier motif d'annulation d'une procédure en référé précontractuel. Depuis la loi Climat et résilience, l'article L.3-1 du code ajoute la prise en compte des objectifs de développement durable, qui vient compléter — sans s'y substituer — ce triptyque historique.",
@@ -899,10 +899,10 @@
       "type": "qcm",
       "question": "L'allotissement d'un marché public de travaux est :",
       "options": [
-        "une faculté laissée à l'acheteur",
+        "une simple faculté laissée à la libre appréciation de l'acheteur",
         "le principe, dont on ne peut s'écarter que par une décision motivée",
-        "obligatoire sans exception",
-        "interdit au-delà de dix lots"
+        "une obligation générale, sans aucune dérogation possible en pratique",
+        "une pratique interdite au-delà d'un seuil fixé à dix lots"
       ],
       "bonneReponse": 1,
       "explication": "L'allotissement est le principe. Les trois motifs de dérogation sont limitatifs : incapacité de l'acheteur à assurer lui-même les missions d'organisation, de pilotage et de coordination ; restriction de la concurrence ; exécution techniquement difficile ou financièrement plus coûteuse. La motivation doit figurer dans les documents de la consultation ou le rapport de présentation.",
@@ -1011,10 +1011,10 @@
       "type": "qcm",
       "question": "Face à une offre qui paraît anormalement basse, l'acheteur doit :",
       "options": [
-        "la rejeter immédiatement",
-        "demander par écrit des justifications au candidat avant toute décision",
-        "l'accepter si le candidat la maintient",
-        "alerter le préfet"
+        "La rejeter d'office sans échange contradictoire",
+        "Demander par écrit des justifications au candidat avant toute décision",
+        "L'accepter dès lors que le candidat la maintient",
+        "En référer directement au préfet pour arbitrage"
       ],
       "bonneReponse": 1,
       "explication": "Le rejet d'une OAB n'est possible qu'après une procédure contradictoire écrite. Si les justifications sont insuffisantes, le rejet est obligatoire, pas facultatif. Une OAB non détectée est une source classique de sinistre : défaillance d'entreprise, réclamations, travaux supplémentaires.",
@@ -1032,10 +1032,10 @@
       "type": "qcm",
       "question": "Un acheteur public peut-il retenir le prix comme unique critère d'attribution d'un marché de travaux ?",
       "options": [
-        "Jamais, quelle que soit la nature de la prestation",
-        "Oui, sans aucune condition",
-        "Oui, mais seulement pour des prestations standardisées, et à compter du 22 août 2026 le critère unique éventuel devra être le coût global",
-        "Oui, seulement si la procédure est un accord-cadre"
+        "Jamais, quelle que soit la nature de la prestation ou la procédure retenue",
+        "Oui, sans aucune condition ni justification, dans tous les cas de figure",
+        "Oui, pour des prestations standardisées, et dès août 2026 le critère unique éventuel devra être le coût global",
+        "Oui, mais seulement lorsque la procédure choisie est un accord-cadre multi-attributaires"
       ],
       "bonneReponse": 2,
       "explication": "Le code de la commande publique (art. L. 2152-7) interdit en principe le critère unique du prix, sauf pour les achats de fournitures ou services standardisés dont la qualité est insensible aux variations de méthode. La loi Climat et résilience du 22 août 2021 est allée plus loin : à compter du 22 août 2026 (cinq ans après sa promulgation), si l'acheteur choisit de retenir un critère unique, celui-ci doit obligatoirement être le coût, apprécié selon une approche globale pouvant intégrer le coût du cycle de vie (énergie, maintenance, fin de vie). Pour des travaux de bâtiment, la pluralité des critères (prix, valeur technique, délai, performance environnementale) reste de toute façon quasi systématique, car la prestation n'est jamais réellement standardisée. Ignorer cette règle expose la procédure à un référé précontractuel pour manquement aux obligations de publicité et de mise en concurrence, le choix des critères faisant partie du contrôle du juge.",
@@ -1053,10 +1053,10 @@
       "type": "qcm",
       "question": "Une offre est reçue avec un DPGF incomplet en procédure adaptée. Si l'acheteur ne fait rien de particulier, que se passe-t-il ?",
       "options": [
-        "L'offre doit être automatiquement rejetée comme irrégulière, sans possibilité de régularisation",
-        "L'acheteur peut choisir d'inviter le candidat à régulariser son offre irrégulière dans un délai approprié, mais s'il n'exerce pas cette faculté l'offre reste irrégulière et doit être écartée",
-        "L'acheteur doit obligatoirement relancer toute la consultation",
-        "L'acheteur peut corriger lui-même le document à la place du candidat"
+        "L'offre irrégulière doit être automatiquement rejetée, sans possibilité de régularisation",
+        "L'acheteur peut inviter le candidat à régulariser dans un délai approprié, mais faute de le faire l'offre reste irrégulière et doit être écartée",
+        "L'acheteur doit obligatoirement déclarer la procédure infructueuse et la relancer intégralement",
+        "L'acheteur peut compléter lui-même le document manquant à la place du candidat"
       ],
       "bonneReponse": 1,
       "explication": "Une offre dont le DPGF est incomplet ou incohérent avec l'acte d'engagement est une offre irrégulière au sens de l'article L. 2152-2 du CCP. Sa régularisation est une simple faculté de l'acheteur, ouverte aussi bien en procédure adaptée qu'en procédure formalisée avec négociation : elle n'a pas besoin d'être annoncée à l'avance dans les documents de consultation, mais l'acheteur doit alors offrir la même possibilité à tous les candidats placés dans une situation identique, sous un délai approprié et identique, pour respecter l'égalité de traitement. Si l'acheteur ne met pas en œuvre cette faculté, ou si l'irrégularité provient d'une offre inacceptable (prix hors budget) ou inappropriée (hors sujet), l'offre reste irrégulière et doit purement et simplement être écartée : elle ne peut pas être classée ni retenue en l'état. La régularisation ne peut jamais porter sur les caractéristiques substantielles de l'offre ni revenir à négocier le prix dans un appel d'offres.",
@@ -1074,10 +1074,10 @@
       "type": "qcm",
       "question": "Le titulaire d'un marché de travaux reçoit un ordre de service prescrivant des travaux supplémentaires qu'il estime injustifiés. Selon le CCAG-Travaux 2021, quelle est l'attitude à adopter ?",
       "options": [
-        "Suspendre immédiatement l'exécution des travaux jusqu'à un accord amiable sur ce point",
-        "Exécuter sans délai l'ordre de service et notifier par écrit ses réserves motivées dans le délai fixé par le marché, à défaut 15 jours",
-        "Saisir directement le tribunal administratif sans exécuter l'ordre de service",
-        "Refuser l'ordre de service sans aucune formalité tant qu'aucun accord sur le prix n'est trouvé"
+        "Suspendre l'exécution des travaux dans l'attente d'un accord amiable sur le bien-fondé de cet ordre de service",
+        "Exécuter sans délai l'ordre de service et notifier ses réserves motivées par écrit dans le délai contractuel",
+        "Saisir directement le tribunal administratif en référé sans exécuter l'ordre de service prescrit",
+        "Refuser l'exécution de l'ordre de service tant qu'aucun accord sur le prix des travaux n'est trouvé"
       ],
       "bonneReponse": 1,
       "explication": "Le principe posé par l'article 3.8 du CCAG-Travaux 2021 est celui de l'exécution sous réserve : le titulaire doit exécuter l'ordre de service même s'il le conteste, et faire connaître ses observations par écrit, motivées, dans le délai fixé par les documents particuliers du marché ou, à défaut, dans un délai de quinze jours à compter de sa notification, sous peine de forclusion (perte du droit de réclamer ultérieurement). Refuser purement et simplement d'exécuter l'ordre de service expose l'entreprise à une mise en demeure, puis le cas échéant à une résiliation à ses torts exclusifs. C'est le point sur lequel les entreprises perdent le plus souvent leurs réclamations financières, faute d'avoir formalisé leurs réserves dans les délais ; à l'inverse, un maître d'ouvrage qui multiplie les ordres de service non chiffrés et non régularisés par avenant s'expose à devoir indemniser des surcoûts qu'il n'a pas anticipés budgétairement.",
@@ -1119,7 +1119,7 @@
         "Non, tout dépassement de 10 % impose obligatoirement de relancer une consultation",
         "Oui : plusieurs fondements légaux sont mobilisables, notamment les prestations supplémentaires devenues nécessaires ou les circonstances imprévisibles, chacun plafonné à 50 % du montant initial",
         "Oui, mais seulement si l'avenant reste sous le seuil de 5 % du montant initial",
-        "Non, une modification de plus de 10 % nécessite systématiquement l'accord du préfet"
+        "Non, une modification de plus de 10 % nécessite systématiquement l'accord préalable du préfet"
       ],
       "bonneReponse": 1,
       "explication": "Le code de la commande publique (articles L. 2194-1 et R. 2194-1 et suivants) prévoit six hypothèses limitatives de modification d'un marché en cours d'exécution sans nouvelle mise en concurrence. Elles ne s'appliquent pas toutes de la même façon selon le montant du dépassement : les modifications de faible montant sont plafonnées à 10 % du montant initial pour les marchés de fournitures et de services et à 15 % pour les marchés de travaux, à condition de rester sous les seuils européens de procédure formalisée, et ne nécessitent aucune justification particulière autre que le respect de ce plafond. Au-delà, il faut mobiliser un autre fondement : les prestations supplémentaires devenues nécessaires (travaux non prévus initialement mais indispensables à la réalisation de l'ouvrage, dont le changement de titulaire est impossible pour des raisons économiques ou techniques) et les circonstances imprévisibles (événement extérieur aux parties, imprévisible lors de la conclusion du contrat) sont chacune plafonnées à 50 % du montant initial par modification, sans plafond cumulé global fixé par la loi mais sous réserve de ne jamais changer la nature globale du marché. À 12 %, l'avenant est donc parfaitement licite au titre de l'un de ces deux fondements ; en revanche, s'il s'agissait d'un marché passé par la CAO, cet avenant supérieur à 5 % du montant initial devrait, en application de l'article L. 1414-4 du CGCT, être soumis pour avis à la commission d'appel d'offres avant signature.",
@@ -1158,10 +1158,10 @@
       "type": "qcm",
       "question": "Quel est le délai global de paiement applicable à un marché de travaux passé par une commune, à partir de quelle date commence-t-il à courir, et que se passe-t-il en cas de dépassement ?",
       "options": [
-        "45 jours à compter de l'ordre de service de réception ; seuls des intérêts moratoires sont dus",
-        "30 jours à compter de la réception de la demande de paiement (dépôt de la facture, notamment via Chorus Pro) ; des intérêts moratoires et une indemnité forfaitaire de 40 € pour frais de recouvrement sont dus de plein droit",
-        "60 jours à compter du visa du maître d'œuvre ; aucune sanction n'est prévue",
-        "30 jours à compter du mandatement comptable ; une pénalité de 1 % du montant de la facture est due"
+        "45 jours à compter de l'ordre de service de réception, avec seuls des intérêts moratoires dus en cas de retard",
+        "30 jours à compter du dépôt de la facture (Chorus Pro) ; intérêts moratoires et indemnité forfaitaire de 40 € dus de plein droit",
+        "60 jours à compter du visa du maître d'œuvre sur le décompte, sans aucune sanction prévue en cas de dépassement",
+        "30 jours à compter du mandatement comptable, avec une pénalité de 1 % du montant de la facture en cas de retard"
       ],
       "bonneReponse": 1,
       "explication": "Le délai global de paiement est de 30 jours pour les collectivités territoriales, leurs établissements publics et leurs groupements (50 jours pour les établissements publics de santé), en application du décret n° 2013-269 du 29 mars 2013. Le point de départ est la date de réception de la demande de paiement par le pouvoir adjudicateur ou par le maître d'œuvre s'il en est le destinataire désigné au marché : concrètement, il s'agit de la date de dépôt de la facture électronique sur Chorus Pro, obligatoire pour tous les titulaires y compris sous-traitants payés directement, cette date faisant foi et étant horodatée. Si le marché prévoit une opération de vérification distincte (visa du maître d'œuvre sur le décompte, admission des prestations), ce délai de vérification s'impute sur le délai global de 30 jours et ne s'y ajoute pas, sauf clause contraire limitée et encadrée par le CCP. Le dépassement ouvre droit de plein droit, sans mise en demeure ni formalité préalable, aux intérêts moratoires calculés au taux de la Banque centrale européenne majoré de 8 points, ainsi qu'à une indemnité forfaitaire de 40 € pour frais de recouvrement par facture, cumulable avec les intérêts. Le non-respect répété du délai global de paiement expose en outre la collectivité à un signalement de la chambre régionale des comptes et fragilise la trésorerie des entreprises, en particulier des PME du bâtiment.",
@@ -1234,10 +1234,10 @@
       "type": "qcm",
       "question": "Durée de la garantie de parfait achèvement et périmètre.",
       "options": [
-        "6 mois, réserves uniquement",
-        "1 an, réserves de réception et désordres signalés pendant l'année",
-        "2 ans, tous désordres",
-        "1 an, désordres apparents uniquement"
+        "6 mois, limitée aux réserves inscrites au PV",
+        "1 an, réserves de réception et désordres signalés durant l'année",
+        "2 ans, tous désordres quels qu'ils soient",
+        "1 an, mais seulement les désordres apparents"
       ],
       "bonneReponse": 1,
       "explication": "La GPA dure un an à compter de la réception et couvre à la fois les réserves formulées au PV et les désordres apparus et notifiés pendant l'année. Si l'entreprise ne s'exécute pas, le maître d'ouvrage peut faire réaliser les travaux à ses frais et risques après mise en demeure.",
@@ -1255,10 +1255,10 @@
       "type": "qcm",
       "question": "Le titulaire n'a pas transmis son projet de décompte final dans le délai contractuel. Que peut faire le maître d'ouvrage (ou le maître d'œuvre en son nom) ?",
       "options": [
-        "Attendre indéfiniment la transmission du titulaire, sans autre démarche possible",
-        "Mettre en demeure le titulaire puis, si cela reste sans effet dans un délai de dix jours, établir d'office le projet de décompte final",
-        "Résilier immédiatement le marché pour faute du titulaire",
-        "Saisir directement le comptable public pour qu'il procède au paiement"
+        "Attendre indéfiniment la transmission par le titulaire, sans autre démarche possible",
+        "Mettre en demeure le titulaire puis, sans effet sous dix jours, établir d'office le projet de décompte final",
+        "Résilier immédiatement le marché pour faute du titulaire défaillant",
+        "Saisir directement le comptable public pour qu'il procède au paiement d'office"
       ],
       "bonneReponse": 1,
       "explication": "L'article 13.3.2 du CCAG-Travaux 2021 organise précisément cette hypothèse : si le titulaire ne transmet pas son projet de décompte final dans le délai prévu (en général 30 jours à compter de la notification de la décision de réception ou de la date d'achèvement des travaux), le maître d'œuvre le met en demeure de le faire. Si cette mise en demeure reste infructueuse dans un délai de dix jours, le maître d'œuvre établit lui-même le projet de décompte final aux frais du titulaire défaillant, sur la base des documents en sa possession. Cette procédure évite qu'un titulaire négligent ou en litige avec le maître d'ouvrage ne bloque indéfiniment la clôture financière du marché. Le décompte général, une fois notifié et signé sans réserve (ou tacitement accepté à défaut de contestation dans le délai de 30 jours), devient le décompte général et définitif (DGD) : il a un effet exonératoire réciproque, éteignant toute réclamation ultérieure sauf celles expressément réservées. Omettre cette étape expose le maître d'ouvrage à voir le marché rester financièrement ouvert sine die, avec un risque contentieux et de prescription mal maîtrisé.",
@@ -1294,10 +1294,10 @@
       "type": "qcm",
       "question": "Taux maximal de la retenue de garantie et alternative offerte au titulaire.",
       "options": [
-        "10 %, remplaçable par une caution",
-        "5 %, remplaçable par une garantie à première demande ou, si l'acheteur l'accepte, une caution personnelle et solidaire",
-        "5 %, sans alternative",
-        "3 %, remplaçable par une assurance"
+        "10 % du montant du marché, remplaçable par une caution bancaire simple",
+        "5 % du montant, remplaçable par une garantie à première demande ou, si l'acheteur l'accepte, une caution personnelle et solidaire",
+        "5 % du montant, sans possibilité de substitution par une garantie",
+        "3 % du montant, remplaçable par une assurance dommages-ouvrage"
       ],
       "bonneReponse": 1,
       "explication": "La retenue de garantie est plafonnée à 5 % du montant initial augmenté des avenants. Le titulaire peut la remplacer par une garantie à première demande ; la caution personnelle et solidaire n'est possible que si l'acheteur ne s'y oppose pas. Elle est libérée un mois après l'expiration du délai de garantie."
@@ -1313,10 +1313,10 @@
       "type": "qcm",
       "question": "À compter du 22 août 2026, que doit comporter tout nouveau marché public ?",
       "options": [
-        "Une clause sociale d'insertion",
-        "Au moins un critère d'attribution environnemental et une clause environnementale d'exécution",
-        "Un bilan carbone du titulaire",
-        "Une part minimale de matériaux biosourcés"
+        "Une clause sociale d'insertion pour tous les marchés, quel que soit leur montant",
+        "Un critère d'attribution environnemental et une clause d'exécution environnementale",
+        "Un bilan carbone obligatoire réalisé et transmis par le titulaire du marché",
+        "Une part minimale de matériaux biosourcés ou de réemploi fixée par décret"
       ],
       "bonneReponse": 1,
       "explication": "L'article 35 de la loi Climat et résilience du 22 août 2021 impose, au plus tard cinq ans après sa promulgation soit le 22 août 2026, un critère d'attribution prenant en compte les caractéristiques environnementales de l'offre ainsi que des conditions d'exécution environnementales. Une clause sociale s'ajoute pour les marchés au-dessus des seuils européens. Aucune pondération minimale n'est fixée par la loi.",
@@ -1389,10 +1389,10 @@
       "type": "qcm",
       "question": "Le coût du cycle de vie, tel que le code de la commande publique le définit, peut inclure :",
       "options": [
-        "le seul prix d'acquisition",
+        "le seul prix d'acquisition initial du bien ou de la prestation",
         "l'acquisition, l'utilisation, la maintenance, la fin de vie, et les externalités environnementales monétisables",
-        "uniquement les consommations d'énergie",
-        "uniquement les coûts supportés par l'acheteur"
+        "uniquement les consommations d'énergie sur la durée d'usage",
+        "uniquement les coûts directement supportés par l'acheteur public"
       ],
       "bonneReponse": 1,
       "explication": "La définition intègre les coûts supportés par l'acheteur ou les autres utilisateurs, et les coûts imputés aux externalités environnementales — à condition que leur valeur monétaire puisse être déterminée et vérifiée, sur la base d'une méthode accessible à tous les candidats. C'est cette dernière condition qui rend le critère difficile à manier."
@@ -1463,10 +1463,10 @@
       "type": "qcm",
       "question": "Que garantit le marquage CE d'un produit de construction ?",
       "options": [
-        "Que le produit est apte à l'emploi prévu",
-        "Que ses performances déclarées sont établies selon une méthode harmonisée",
-        "Qu'il est conforme aux DTU",
-        "Qu'il bénéficie d'une garantie décennale"
+        "Que le produit est apte à l'emploi prévu dans l'ouvrage concerné",
+        "Que ses performances déclarées suivent une méthode harmonisée",
+        "Qu'il est conforme aux prescriptions des DTU applicables",
+        "Qu'il bénéficie automatiquement d'une garantie décennale"
       ],
       "bonneReponse": 1,
       "explication": "Le marquage CE atteste que les performances sont déclarées selon une norme harmonisée ou une évaluation technique européenne. Il ne dit rien de l'aptitude à l'emploi dans un contexte donné : c'est le rôle des DTU, avis techniques et documents d'application. Confondre les deux est une erreur courante en rédaction de CCTP."
@@ -1519,10 +1519,10 @@
       "type": "qcm",
       "question": "Pourquoi l'isolation thermique par l'extérieur est-elle en principe préférée en réhabilitation de bâtiment public ?",
       "options": [
-        "Elle coûte moins cher",
+        "Parce qu'elle représente un coût de travaux plus faible",
         "Elle traite les ponts thermiques et préserve l'inertie et la surface utile intérieure",
-        "Elle est exigée par la RE2020",
-        "Elle ne nécessite pas d'échafaudage"
+        "Parce qu'elle est rendue obligatoire par la RE2020",
+        "Parce qu'elle se réalise sans installation d'échafaudage"
       ],
       "bonneReponse": 1,
       "explication": "L'ITE traite les ponts thermiques de liaison (planchers, refends), conserve l'inertie des parois lourdes côté intérieur — utile pour le confort d'été — et évite de perdre de la surface utile. Ses limites : coût, contraintes patrimoniales et d'alignement, traitement des menuiseries et des balcons, et impact sur les autorisations d'urbanisme."
@@ -1570,10 +1570,10 @@
       "type": "qcm",
       "question": "Quels sont les indicateurs de la RE2020 ?",
       "options": [
-        "Bbio, Cep, Tic",
+        "Bbio, Cep et Tic, hérités de la RT2012",
         "Bbio, Cep, Cep,nr, Ic énergie, Ic construction, DH",
-        "Ubat, Cep, Tic",
-        "Cep, DPE, GES"
+        "Ubat, Cep et Tic, issus de la réglementation antérieure",
+        "Cep, DPE et bilan GES du bâtiment"
       ],
       "bonneReponse": 1,
       "explication": "La RE2020 empile un volet besoin (Bbio), un volet consommation (Cep et Cep,nr en énergie primaire non renouvelable), deux volets carbone en analyse de cycle de vie (Ic énergie pour l'exploitation, Ic construction pour les composants et le chantier) et un volet confort d'été (DH, degrés-heures d'inconfort)."
@@ -1653,10 +1653,10 @@
       "type": "qcm",
       "question": "Un projet de rénovation lourde d'une mairie relève-t-il de la RE2020 ?",
       "options": [
-        "Oui, dès que le coût dépasse 25 % de la valeur du bâtiment",
-        "Non : la RE2020 s'applique aux constructions neuves, l'existant relève de la réglementation thermique dans l'existant",
-        "Oui, systématiquement depuis 2022",
-        "Non, la mairie est exclue de toute réglementation"
+        "Oui, dès que le coût des travaux dépasse 25 % de la valeur vénale du bâtiment",
+        "Non, la RE2020 vise le neuf ; l'existant relève de la réglementation thermique dans l'existant",
+        "Oui, systématiquement pour toute rénovation engagée depuis 2022",
+        "Non, les bâtiments communaux sont exclus de toute réglementation thermique"
       ],
       "bonneReponse": 1,
       "explication": "La RE2020 vise le neuf. L'existant relève de la RT dans l'existant, en version « élément par élément » ou « globale » selon l'ampleur des travaux et la surface. Beaucoup de candidats se trompent sur ce point, en supposant une continuité qui n'existe pas."
@@ -1707,10 +1707,10 @@
       "type": "qcm",
       "question": "Quel document doit être mis à disposition du public à l'accueil de tout ERP ?",
       "options": [
-        "Le DTA",
-        "Le registre public d'accessibilité",
-        "Le DIUO",
-        "Le carnet d'entretien"
+        "Le dossier technique amiante de l'établissement",
+        "Le registre public d'accessibilité de l'établissement",
+        "Le dossier d'intervention ultérieure sur l'ouvrage",
+        "Le carnet d'entretien des équipements techniques"
       ],
       "bonneReponse": 1,
       "explication": "Le registre public d'accessibilité rassemble les pièces attestant de la conformité ou des dérogations, la description des prestations, la formation du personnel d'accueil. Il est consultable sur place au principal point d'accueil, et en ligne si l'établissement dispose d'un site internet. Son absence est le premier constat des contrôles."
@@ -1727,9 +1727,9 @@
       "derniereVerification": "2026-08",
       "question": "Que signifie le classement REI 60 attribué à une paroi séparative d'un local à risques dans un ERP ?",
       "options": [
-        "Résistance mécanique pendant 60 minutes uniquement",
+        "Résistance mécanique de la paroi pendant 60 minutes uniquement",
         "Résistance mécanique, étanchéité aux flammes et isolation thermique pendant 60 minutes",
-        "Réaction au feu de niveau 60",
+        "Réaction au feu de niveau 60 selon les euroclasses",
         "Résistance électrique de la paroi pendant 60 minutes"
       ],
       "bonneReponse": 1,
@@ -1767,10 +1767,10 @@
       "type": "qcm",
       "question": "Un avis défavorable de la commission de sécurité oblige-t-il le maire à refuser l'ouverture ?",
       "options": [
-        "Oui, l'avis lie le maire",
-        "Non : l'avis est consultatif, mais passer outre engage lourdement la responsabilité du maire",
-        "Oui, sauf dérogation préfectorale",
-        "Non, l'avis n'a aucune portée"
+        "Oui, l'avis de la commission de sécurité lie juridiquement le maire",
+        "Non, avis consultatif, mais l'ignorer engage la responsabilité du maire",
+        "Oui, sauf dérogation expressément accordée par le préfet du département",
+        "Non, cet avis ne produit strictement aucune portée juridique contraignante"
       ],
       "bonneReponse": 1,
       "explication": "L'avis de la commission est consultatif : le maire conserve le pouvoir de police. Mais ouvrir malgré un avis défavorable engage sa responsabilité administrative et pénale en cas de sinistre. En pratique, l'avis est suivi — et l'enjeu se déplace vers la levée des prescriptions avant la visite, donc vers la préparation par les services techniques."
@@ -1918,10 +1918,10 @@
       "type": "qcm",
       "question": "Dans un bâtiment tertiaire public, quel équipement est le plus souvent responsable des écarts entre consommation prévue et consommation réelle ?",
       "options": [
-        "Les menuiseries",
+        "La qualité et l'étanchéité des menuiseries",
         "Les régulations et la programmation des équipements CVC",
-        "L'isolation des combles",
-        "L'éclairage extérieur"
+        "L'épaisseur de l'isolation posée en combles",
+        "La puissance de l'éclairage des abords extérieurs"
       ],
       "bonneReponse": 1,
       "explication": "L'écart de performance vient rarement de l'enveloppe et presque toujours du pilotage : programmes horaires inadaptés, consignes dérivées, ventilation en marche permanente, chauffage et rafraîchissement simultanés. C'est ce constat qui justifie l'obligation d'automatisation et de contrôle, et le développement des contrats à engagement de résultat."
@@ -1937,10 +1937,10 @@
       "type": "qcm",
       "question": "Le contrôle technique est obligatoire pour un bâtiment public quand :",
       "options": [
-        "il dépasse 1 000 m²",
-        "l'ouvrage présente des risques particuliers, notamment ERP au-delà de certains seuils, bâtiments de grande hauteur, ouvrages en zone sismique",
-        "le montant dépasse 500 000 €",
-        "toujours"
+        "lorsque sa surface dépasse 1 000 m² de plancher",
+        "l'ouvrage présente des risques particuliers : ERP au-delà de certains seuils, grande hauteur, zone sismique",
+        "lorsque le montant des travaux dépasse 500 000 euros",
+        "systématiquement, pour tout bâtiment recevant du public"
       ],
       "bonneReponse": 1,
       "explication": "L'obligation est liée à la nature du risque : ERP recevant du public au-delà de certains seuils, IGH, bâtiments de plus de huit étages, ouvrages en zone sismique, éléments en porte-à-faux importants. Le contrôleur technique intervient sur les missions L (solidité) et S (sécurité des personnes) au minimum, et il est soumis à une obligation d'indépendance vis-à-vis du concepteur et du constructeur."
@@ -2087,10 +2087,10 @@
       "type": "qcm",
       "question": "Une collectivité ne peut atteindre l'objectif -40 % en 2030 sur un bâtiment classé. Quelle voie de droit ?",
       "options": [
-        "Aucune, l'objectif est intangible",
-        "Un dossier technique de modulation des objectifs, notamment pour contraintes patrimoniales ou disproportion économique",
-        "Une dérogation préfectorale",
-        "Une simple déclaration sur l'honneur"
+        "Aucune, l'objectif de réduction de 2030 s'impose sans possibilité d'aménagement",
+        "Un dossier technique de modulation, notamment pour contraintes patrimoniales ou disproportion économique",
+        "Une dérogation accordée directement par le préfet du département",
+        "Une simple déclaration sur l'honneur déposée auprès du gestionnaire OPERAT"
       ],
       "bonneReponse": 1,
       "explication": "Trois familles de modulation existent : contraintes techniques, architecturales ou patrimoniales ; changement d'activité ou de volume d'activité ; coûts manifestement disproportionnés au regard des bénéfices attendus, avec un temps de retour de référence. Le dossier doit être étayé par une étude technique et déposé sur OPERAT — ce n'est pas une échappatoire déclarative."
@@ -2361,10 +2361,10 @@
       "type": "qcm",
       "question": "Quelle sanction principale l'autorité administrative peut-elle prononcer en cas de non-respect du dispositif Éco Énergie Tertiaire ?",
       "options": [
-        "Une astreinte journalière",
-        "Une mise en demeure, puis publication sur un site public et une amende administrative plafonnée",
-        "Une interdiction d'exploiter",
-        "La suspension des dotations de l'État"
+        "Une astreinte journalière jusqu'à mise en conformité de l'assujetti",
+        "Une mise en demeure, puis publication et amende administrative plafonnée",
+        "Une interdiction d'exploiter le bâtiment tertiaire concerné",
+        "La suspension des dotations de l'État à la collectivité concernée"
       ],
       "bonneReponse": 1,
       "explication": "La chaîne est graduée : mise en demeure de déposer un plan d'actions, puis publication du nom de l'assujetti défaillant, puis amende administrative dont le plafond est modeste au regard des enjeux. C'est précisément cette faiblesse du dispositif de sanction qui alimente le débat sur son effet réel."
@@ -2483,10 +2483,10 @@
       "type": "qcm",
       "question": "Pourquoi les matériaux biosourcés sont-ils avantagés par la RE2020 ?",
       "options": [
-        "Ils sont moins chers",
+        "Ils sont globalement moins chers que les matériaux conventionnels",
         "Le stockage de carbone biogénique et l'ACV dynamique réduisent leur contribution à l'Ic construction",
-        "Ils bénéficient d'un bonus réglementaire forfaitaire",
-        "Ils sont exemptés d'ACV"
+        "Ils bénéficient d'un bonus réglementaire forfaitaire automatique",
+        "Ils sont exemptés d'analyse du cycle de vie (ACV)"
       ],
       "bonneReponse": 1,
       "explication": "L'avantage est méthodologique, pas discrétionnaire. Il faut cependant tenir les limites : disponibilité des filières locales, comportement à l'humidité, sécurité incendie, coût, et pour la paille ou la terre crue, l'assurabilité et la disponibilité d'entreprises qualifiées. Un jury appréciera une réponse qui ne se limite pas à l'éloge du bois."
@@ -2534,10 +2534,10 @@
       "type": "qcm",
       "question": "Le BIM est-il obligatoire dans la commande publique française de bâtiment ?",
       "options": [
-        "Oui depuis 2017",
-        "Non : aucune obligation générale ; l'acheteur peut l'exiger, la directive européenne l'y autorise",
-        "Oui, au-delà de 5 M€",
-        "Oui, pour les seuls bâtiments neufs"
+        "Oui, une obligation générale existe depuis la loi ELAN de 2017",
+        "Non, aucune obligation générale ; le droit européen l'autorise seulement",
+        "Oui, obligatoire pour tout marché public dépassant 5 millions d'euros",
+        "Oui, mais seulement pour la construction de bâtiments neufs publics"
       ],
       "bonneReponse": 1,
       "explication": "Beaucoup de candidats croient à une obligation qui n'existe pas. Le droit européen autorise l'acheteur à imposer des outils de modélisation ; le droit français ne l'y contraint pas. La conséquence pour une collectivité est qu'exiger du BIM suppose de savoir ce qu'on en fera en exploitation — sinon c'est un surcoût de conception sans retour."
@@ -2571,10 +2571,10 @@
       "type": "qcm",
       "question": "Quel usage de l'intelligence artificielle est aujourd'hui le plus mature dans la gestion d'un parc public ?",
       "options": [
-        "La conception architecturale automatisée",
-        "La détection d'anomalies et la prévision de consommation à partir des données de comptage et de GTB",
-        "La rédaction autonome de CCTP",
-        "Le contrôle réglementaire automatique"
+        "La conception architecturale générée automatiquement",
+        "La détection d'anomalies et la prévision de consommation à partir du comptage et de la GTB",
+        "La rédaction autonome et fiable des CCTP",
+        "Le contrôle réglementaire automatisé des ouvrages"
       ],
       "bonneReponse": 1,
       "explication": "L'exploitation de séries temporelles — détection de dérives, prévision, aide au réglage — est éprouvée et ne suppose pas de confiance aveugle dans la sortie du modèle. À l'inverse, la production de pièces écrites par un modèle de langage exige une relecture experte intégrale et pose, pour une collectivité, la question du traitement de données de marchés publics par des services hébergés hors Union européenne. Une réponse qui articule apport opérationnel et souveraineté des données sera mieux notée qu'un enthousiasme non qualifié."
@@ -2590,10 +2590,10 @@
       "type": "qcm",
       "question": "Quelle stratégie doit primer pour le confort d'été d'une école en climat méditerranéen ?",
       "options": [
-        "La climatisation dimensionnée sur la pointe",
+        "La climatisation dimensionnée sur la pointe estivale",
         "La protection solaire, l'inertie, la surventilation nocturne et la végétalisation, avant tout recours actif",
-        "L'isolation renforcée seule",
-        "L'augmentation du débit de VMC en journée"
+        "L'isolation thermique renforcée mise en œuvre seule",
+        "L'augmentation du débit de VMC en journée pendant les fortes chaleurs"
       ],
       "bonneReponse": 1,
       "explication": "La hiérarchie est constante : réduire les apports (protections solaires extérieures, orientation, albédo), stocker (inertie), évacuer (surventilation nocturne, ouvrants manœuvrables et sécurisés), puis seulement rafraîchir. Cette hiérarchie est aussi celle de la RE2020 via l'indicateur DH. La difficulté opérationnelle en école tient à la sécurité et à la sûreté des ouvrants la nuit."
@@ -2646,10 +2646,10 @@
       "type": "qcm",
       "question": "Quel levier a l'effet le plus rapide sur l'îlot de chaleur d'une cour d'école existante ?",
       "options": [
-        "Le remplacement des menuiseries",
-        "La désimperméabilisation et l'ombrage végétal ou par ombrières",
-        "L'isolation des combles",
-        "Le changement du système de chauffage"
+        "Le remplacement des menuiseries extérieures pour limiter les apports solaires",
+        "La désimperméabilisation des sols et l'ombrage végétal ou par ombrières",
+        "L'isolation renforcée des combles perdus de l'établissement",
+        "Le changement du système de chauffage collectif du bâtiment"
       ],
       "bonneReponse": 1,
       "explication": "Remplacer l'enrobé par des sols perméables et créer de l'ombre agit sur la température ressentie dès la première saison, pour un coût très inférieur à une rénovation d'enveloppe. C'est le type d'arbitrage — effet d'usage immédiat contre performance énergétique de long terme — qu'un sujet de concours aime faire trancher."
@@ -2665,10 +2665,10 @@
       "type": "qcm",
       "question": "Quel est l'état du dispositif zéro artificialisation nette mi-2026 ?",
       "options": [
-        "Il est appliqué sans modification depuis 2021",
-        "Il a été assoupli plusieurs fois, en dernier lieu par la loi TRACE qui reporte l'échéance intermédiaire de 2031 à 2034",
-        "Il a été abrogé",
-        "Il ne concerne que les régions"
+        "Il est appliqué depuis 2021 sans aucune modification législative",
+        "Il a été assoupli, la loi TRACE reportant l'échéance de 2031 à 2034",
+        "Il a été abrogé par la loi de simplification du 15 avril 2026",
+        "Il ne s'applique qu'aux seuls documents d'urbanisme régionaux"
       ],
       "bonneReponse": 1,
       "explication": "Le ZAN issu de la loi Climat et résilience (moitié moins de consommation d'espaces naturels, agricoles et forestiers sur 2021-2031, zéro artificialisation nette en 2050) a été assoupli par la loi du 20 juillet 2023, puis par la loi TRACE adoptée en 2026 : report de l'étape intermédiaire de 2031 à 2034, objectifs de la période fixés par les régions, faculté pour les communes d'ouvrir à l'urbanisation jusqu'à 20 % de leur enveloppe foncière, et maintien du décompte en consommation d'ENAF au-delà de 2031. L'objectif final de 2050 est maintenu. La loi de simplification du 15 avril 2026 y ajoute des exemptions (data centers, grands projets industriels), déférées au Conseil constitutionnel.",
@@ -3005,10 +3005,10 @@
       "type": "qcm",
       "question": "Le conseil municipal peut déléguer au maire, pour la durée du mandat, le pouvoir de :",
       "options": [
-        "voter le budget",
+        "voter le budget primitif de la commune",
         "prendre toute décision concernant la préparation, la passation, l'exécution et le règlement des marchés dans les limites qu'il fixe",
-        "créer des emplois permanents",
-        "approuver le compte administratif"
+        "créer des emplois permanents dans les services communaux",
+        "approuver le compte administratif de l'exercice"
       ],
       "bonneReponse": 1,
       "explication": "La délégation de l'article L.2122-22 du CGCT couvre notamment les marchés, dans les limites fixées par l'assemblée. Certaines attributions restent inaliénables : budget, compte administratif, taux d'imposition, création d'emplois. Le maire rend compte de l'usage de ses délégations à chaque réunion du conseil."
@@ -3024,10 +3024,10 @@
       "type": "qcm",
       "question": "Que contrôle une chambre régionale des comptes ?",
       "options": [
-        "La légalité des délibérations",
-        "La régularité des comptes et la qualité de la gestion, plus le contrôle budgétaire",
-        "Uniquement les marchés publics",
-        "La performance des agents"
+        "La légalité des délibérations et arrêtés des collectivités territoriales",
+        "La régularité des comptes, la qualité de la gestion et le contrôle budgétaire",
+        "Uniquement la passation et l'exécution des marchés publics locaux",
+        "La performance individuelle et la notation des agents territoriaux"
       ],
       "bonneReponse": 1,
       "explication": "La CRC exerce trois missions : jugement des comptes, contrôle des comptes et de la gestion (qui aboutit à un rapport d'observations définitives présenté à l'assemblée délibérante), et contrôle budgétaire sur saisine du préfet. Elle ne juge pas la légalité des actes — c'est le rôle du juge administratif saisi par le préfet."
@@ -3094,10 +3094,10 @@
       "type": "qcm",
       "question": "Que distinguent les catégories A, B et C ?",
       "options": [
-        "Le niveau de rémunération",
+        "Le niveau de la rémunération perçue",
         "Le niveau des fonctions : conception et direction, application, exécution",
-        "L'ancienneté",
-        "La filière d'appartenance"
+        "L'ancienneté acquise dans le corps ou le cadre d'emplois",
+        "La filière professionnelle d'appartenance"
       ],
       "bonneReponse": 1,
       "explication": "Catégorie A : conception, direction, encadrement supérieur. Catégorie B : application et rédaction, encadrement intermédiaire. Catégorie C : exécution. La FPT se distingue par une part de catégorie C très supérieure aux deux autres versants, ce qui pèse sur sa structure salariale et sur ses politiques de formation."
@@ -3113,10 +3113,10 @@
       "type": "qcm",
       "question": "Qu'obtient le lauréat d'un concours de la fonction publique territoriale ?",
       "options": [
-        "Une nomination automatique dans un emploi",
+        "Une nomination automatique et immédiate dans un emploi",
         "Une inscription sur une liste d'aptitude, à charge pour lui de trouver un employeur",
-        "Un contrat de trois ans",
-        "Un droit à affectation dans son département"
+        "Un contrat de travail de trois ans renouvelable",
+        "Un droit à affectation garanti dans son département d'origine"
       ],
       "bonneReponse": 1,
       "explication": "C'est la singularité majeure de la FPT : le concours ouvre l'accès à un cadre d'emplois, pas à un poste. La nomination relève de l'autorité territoriale, qui recrute librement. Cette liberté est la contrepartie du principe de libre administration des collectivités."
@@ -3213,10 +3213,10 @@
       "type": "qcm",
       "question": "Les ingénieurs territoriaux peuvent notamment se voir confier :",
       "options": [
-        "uniquement la conduite de travaux",
-        "des fonctions d'études, de direction de services techniques, de conduite d'opérations et d'encadrement",
-        "exclusivement des missions d'expertise sans encadrement",
-        "la seule gestion des marchés publics"
+        "Uniquement des missions de conduite de travaux sur chantier",
+        "Des fonctions d'études, de direction de services techniques, de conduite d'opérations et d'encadrement",
+        "Exclusivement des missions d'expertise, sans aucune fonction d'encadrement",
+        "La seule gestion administrative et financière des marchés publics"
       ],
       "bonneReponse": 1,
       "explication": "Le statut particulier ouvre un champ large : études, conception, conduite d'opérations, direction de service, encadrement, informatique, ingénierie des risques. Cette polyvalence est ce que l'oral cherche à sonder : on n'attend pas un spécialiste du bâtiment mais un cadre technique capable de se situer dans une organisation."
@@ -3232,10 +3232,10 @@
       "type": "qcm",
       "question": "Un ingénieur territorial reçoit d'un élu un ordre qu'il estime illégal. Que dit le statut ?",
       "options": [
-        "Il doit toujours obéir",
-        "Il doit obéir, sauf si l'ordre est manifestement illégal et de nature à compromettre gravement un intérêt public",
-        "Il peut refuser tout ordre qu'il juge inopportun",
-        "Il doit saisir directement le préfet"
+        "Il doit toujours obéir, quelle que soit la nature de l'ordre reçu",
+        "Il doit obéir, sauf illégalité manifeste compromettant un intérêt public",
+        "Il peut refuser tout ordre qu'il estime simplement inopportun",
+        "Il doit saisir directement le préfet avant toute exécution"
       ],
       "bonneReponse": 1,
       "explication": "Les deux conditions sont cumulatives et interprétées strictement par le juge : illégalité manifeste et atteinte grave à un intérêt public. Hors de ce cas, l'agent obéit — tout en pouvant, et devant, formaliser par écrit son analyse. La traçabilité de l'avis technique est la protection la plus efficace d'un cadre territorial."
@@ -3288,9 +3288,9 @@
       "question": "Une exclusion temporaire de fonctions de trois jours relève :",
       "options": [
         "du premier groupe de sanctions, sans consultation du conseil de discipline",
-        "du deuxième groupe, avec conseil de discipline",
-        "du troisième groupe",
-        "du quatrième groupe"
+        "du deuxième groupe de sanctions, avec conseil de discipline",
+        "du troisième groupe de sanctions",
+        "du quatrième groupe de sanctions"
       ],
       "bonneReponse": 0,
       "explication": "Le premier groupe comprend l'avertissement, le blâme et l'exclusion temporaire de fonctions de trois jours maximum ; il ne nécessite pas de conseil de discipline. Les groupes 2 à 4, jusqu'à la révocation, l'exigent. Dans tous les cas, la communication du dossier et l'assistance d'un défenseur sont de droit."
@@ -3306,10 +3306,10 @@
       "type": "qcm",
       "question": "Qu'est-ce que la protection fonctionnelle ?",
       "options": [
-        "Une assurance individuelle souscrite par l'agent",
-        "L'obligation pour la collectivité de protéger l'agent contre les attaques subies à raison de ses fonctions et, sous conditions, en cas de poursuites",
-        "Une garantie de maintien dans l'emploi",
-        "Une protection contre la mobilité forcée"
+        "Une assurance individuelle facultative souscrite par l'agent lui-même",
+        "L'obligation de la collectivité de protéger l'agent visé à raison de ses fonctions",
+        "Une garantie statutaire assurant le maintien de l'agent dans son emploi actuel",
+        "Un dispositif protégeant l'agent contre toute mobilité géographique forcée"
       ],
       "bonneReponse": 1,
       "explication": "La collectivité doit protéger l'agent victime d'atteintes (menaces, injures, violences) et, en cas de poursuites pénales, prendre en charge sa défense sauf faute personnelle détachable du service. Elle est étendue aux proches dans certains cas. Elle s'accorde par décision de l'autorité territoriale, et un refus doit être motivé."
@@ -3362,10 +3362,10 @@
       "type": "qcm",
       "question": "Qu'ont changé les lignes directrices de gestion depuis 2019 ?",
       "options": [
-        "Elles ont supprimé les CAP",
-        "Elles fixent la stratégie RH et les orientations de promotion, les CAP n'étant plus consultées sur les mutations, avancements et promotions",
-        "Elles remplacent le tableau des effectifs",
-        "Elles s'imposent au conseil municipal"
+        "Elles ont entraîné la suppression pure et simple des CAP",
+        "Elles fixent la stratégie RH ; les CAP ne sont plus consultées sur mutations, avancements et promotions",
+        "Elles se substituent au tableau des effectifs de la collectivité",
+        "Elles s'imposent directement aux délibérations du conseil municipal"
       ],
       "bonneReponse": 1,
       "explication": "Les LDG sont arrêtées par l'autorité territoriale après avis du CST. Les CAP subsistent mais leur champ est recentré sur les situations individuelles défavorables : discipline, refus de titularisation, licenciement pour insuffisance professionnelle. C'est un déplacement du contrôle collectif a priori vers un recours individuel a posteriori — l'un des points les plus débattus de la réforme de 2019."
@@ -3397,10 +3397,10 @@
       "type": "qcm",
       "question": "De quoi se compose le RIFSEEP ?",
       "options": [
-        "Du traitement indiciaire et de la NBI",
+        "Du traitement indiciaire complété par la NBI",
         "D'une indemnité de fonctions, de sujétions et d'expertise et d'un complément indemnitaire annuel",
         "Du supplément familial et de l'indemnité de résidence",
-        "D'une prime unique liée à l'ancienneté"
+        "D'une prime unique liée uniquement à l'ancienneté de l'agent"
       ],
       "bonneReponse": 1,
       "explication": "IFSE, liée au poste et à l'expertise, versée mensuellement ; CIA, lié à l'engagement professionnel et à la manière de servir, versé annuellement et non reconductible de droit. Le régime indemnitaire relève de la délibération de la collectivité, dans la limite des plafonds applicables au corps de l'État de référence — c'est le principe de parité."
@@ -3490,10 +3490,10 @@
       "type": "qcm",
       "question": "La mobilité entre les trois versants de la fonction publique est-elle réellement fluide ?",
       "options": [
-        "Oui, les corps et cadres d'emplois sont équivalents",
+        "Oui, car les corps de l'État et les cadres d'emplois territoriaux sont juridiquement équivalents",
         "Juridiquement possible par détachement et intégration, elle reste faible en pratique du fait des écarts de rémunération, de culture et de reconnaissance des acquis",
-        "Non, elle est interdite",
-        "Oui, depuis la loi de 2019"
+        "Non, aucun texte n'autorise le passage d'un versant à un autre",
+        "Oui, une loi de 2019 a pleinement unifié les statuts des trois versants"
       ],
       "bonneReponse": 1,
       "explication": "Les outils juridiques de mobilité entre versants existent, mais leur usage réel reste limité par des freins pratiques importants.\n- Le détachement, l'intégration directe, la mise à disposition et la position normale d'activité permettent de changer de versant sans concours.\n- Les régimes indemnitaires très différents à grade égal freinent les candidatures, tout comme l'absence d'équivalence automatique des expériences.\n- Ce constat revient régulièrement dans les rapports publics sans qu'aucune réforme ne l'ait encore tranché."
@@ -3525,10 +3525,10 @@
       "type": "qcm",
       "question": "Que recouvre la règle de l'équilibre réel du budget local ?",
       "options": [
-        "Un excédent obligatoire de fonctionnement",
-        "Deux sections votées en équilibre, des évaluations sincères, et le remboursement du capital de la dette couvert par des ressources propres",
-        "L'interdiction de tout emprunt",
-        "L'obligation d'un fonds de roulement positif"
+        "Un excédent obligatoire constaté sur la section de fonctionnement",
+        "Deux sections équilibrées et sincères, dette couverte par des ressources propres",
+        "L'interdiction de tout recours à l'emprunt pour les collectivités locales",
+        "L'obligation de maintenir un fonds de roulement toujours positif"
       ],
       "bonneReponse": 1,
       "explication": "La règle de l'équilibre réel impose trois conditions cumulatives au budget local.\n- Les deux sections doivent être votées en équilibre, avec des recettes et des dépenses évaluées de façon sincère.\n- Le remboursement du capital de la dette doit être couvert par des ressources propres.\n- Le non-respect de cette règle ouvre la procédure de contrôle budgétaire : saisine de la chambre régionale des comptes par le préfet, propositions de la CRC, puis règlement d'office du budget si la collectivité ne s'exécute pas."
@@ -3544,10 +3544,10 @@
       "type": "qcm",
       "question": "Que mesure l'épargne brute d'une collectivité ?",
       "options": [
-        "Le solde de trésorerie",
+        "Le solde de trésorerie disponible en fin d'exercice",
         "L'excédent des recettes réelles de fonctionnement sur les dépenses réelles de fonctionnement",
-        "Le montant des subventions reçues",
-        "Le résultat de l'exercice précédent"
+        "Le montant total des subventions reçues des partenaires",
+        "Le résultat comptable de l'exercice précédent"
       ],
       "bonneReponse": 1,
       "explication": "L'épargne brute, ou capacité d'autofinancement, mesure la capacité d'une collectivité à rembourser sa dette et à autofinancer l'investissement.\n- L'épargne nette retranche de l'épargne brute le remboursement du capital de la dette.\n- Le ratio de capacité de désendettement rapporte l'encours de dette à l'épargne brute : au-delà d'une dizaine d'années pour le bloc communal, l'alerte est justifiée."
@@ -3563,10 +3563,10 @@
       "type": "qcm",
       "question": "Quelle est aujourd'hui la principale ressource fiscale propre d'une commune ?",
       "options": [
-        "La taxe d'habitation",
-        "La taxe foncière sur les propriétés bâties",
-        "La CVAE",
-        "La taxe d'aménagement"
+        "La taxe d'habitation sur les résidences principales",
+        "La taxe foncière sur les propriétés bâties (TFPB)",
+        "La cotisation sur la valeur ajoutée des entreprises (CVAE)",
+        "La taxe d'aménagement perçue lors des permis de construire"
       ],
       "bonneReponse": 1,
       "explication": "La suppression de la taxe d'habitation sur les résidences principales, achevée en 2023, a fait de la taxe foncière sur les propriétés bâties le principal levier fiscal communal.\n- C'est aujourd'hui l'un des rares impôts locaux sur lequel le conseil municipal vote encore un taux.\n- La compensation de la taxe d'habitation par des fractions d'impôts nationaux réduit d'autant l'autonomie fiscale locale.",
@@ -3583,10 +3583,10 @@
       "type": "qcm",
       "question": "À quoi sert le FCTVA ?",
       "options": [
-        "À exonérer les collectivités de TVA",
+        "À exonérer purement et simplement les collectivités de TVA",
         "À compenser forfaitairement la TVA supportée sur les dépenses d'investissement éligibles",
-        "À financer les dépenses de fonctionnement",
-        "À subventionner les projets énergétiques"
+        "À financer une part des dépenses courantes de fonctionnement",
+        "À subventionner spécifiquement les projets de rénovation énergétique"
       ],
       "bonneReponse": 1,
       "explication": "Le FCTVA est une compensation forfaitaire de la TVA supportée sur les dépenses d'investissement éligibles, versée à un taux unique.\n- Ce n'est pas un remboursement de TVA au sens fiscal, et le délai de versement varie selon le régime de la collectivité.\n- Le périmètre des dépenses éligibles est fixé par l'État et évolue en loi de finances : un point à vérifier chaque année pour le montage financier d'une opération.",
@@ -3623,10 +3623,10 @@
       "type": "qcm",
       "question": "Quel outil permet d'autoriser des engagements pluriannuels sur une opération d'investissement ?",
       "options": [
-        "Le budget supplémentaire",
+        "Le budget supplémentaire voté en cours d'exercice",
         "Les autorisations de programme et crédits de paiement",
-        "La décision modificative",
-        "Le plan pluriannuel d'investissement"
+        "La décision modificative adoptée par l'assemblée délibérante",
+        "Le plan pluriannuel d'investissement établi par la collectivité"
       ],
       "bonneReponse": 1,
       "explication": "Les autorisations de programme et crédits de paiement (AP/CP) permettent de voter le coût total d'une opération d'investissement pluriannuelle et de n'inscrire chaque année que les crédits de paiement correspondants.\n- Ce dispositif évite le report de crédits inutilisés d'un exercice à l'autre.\n- Le plan pluriannuel d'investissement (PPI) reste un document de programmation politique sans portée budgétaire propre : il ne faut pas le confondre avec l'outil juridique que sont les AP/CP."
@@ -3642,10 +3642,10 @@
       "type": "qcm",
       "question": "La FPT connaît des difficultés de recrutement sur les métiers techniques. Quelles réponses sont mobilisables, et quelles sont leurs limites ?",
       "options": [
-        "Augmenter les salaires, et rien d'autre",
+        "Augmenter uniformément les salaires, seule réponse réellement disponible",
         "Régime indemnitaire, apprentissage, contractuels, mutualisation entre collectivités, marque employeur — chacun buttant sur le coût, la parité avec l'État ou la concurrence entre territoires",
-        "Aucune, la situation est structurelle",
-        "Supprimer les concours"
+        "Aucune réponse n'est mobilisable, la pénurie est purement structurelle",
+        "Supprimer les concours pour recruter directement par contrat"
       ],
       "bonneReponse": 1,
       "explication": "Plusieurs leviers existent face aux difficultés de recrutement sur les métiers techniques, mais aucun ne suffit seul à résoudre le problème.\n- Le constat combine concurrence du secteur privé, écarts de rémunération à qualification égale, pyramide des âges défavorable et image du service public.\n- Le régime indemnitaire reste plafonné par le principe de parité et par les contraintes budgétaires.\n- Le recours aux contractuels expose au risque de turnover et de perte de mémoire technique, tandis que la mutualisation via des agences techniques départementales éloigne la compétence du terrain."
@@ -3661,10 +3661,10 @@
       "type": "qcm",
       "question": "Le recours croissant aux agents contractuels dans la FPT est-il un progrès ou un affaiblissement ?",
       "options": [
-        "Un progrès sans réserve",
-        "Un affaiblissement sans nuance",
-        "Les deux lectures se défendent : souplesse et ouverture d'un côté, précarité et fragilisation du modèle de carrière de l'autre",
-        "La question ne se pose pas juridiquement"
+        "Un progrès sans réserve pour la modernisation de la fonction publique",
+        "Un affaiblissement sans nuance du modèle statutaire territorial",
+        "Les deux lectures se défendent : souplesse d'un côté, précarité de l'autre",
+        "La question ne se pose pas en ces termes sur le plan juridique"
       ],
       "bonneReponse": 2,
       "explication": "Le recours croissant aux agents contractuels se prête à deux lectures également défendables à l'oral.\n- En faveur : accès à des compétences rares, réactivité de recrutement, ouverture à des parcours privés, réponse aux besoins temporaires.\n- Contre : précarité des agents, coût du turnover, perte de mémoire technique des opérations, contournement possible du concours et question de l'égal accès aux emplois publics.\n- Position défendable : le sujet n'est pas le statut du recruté mais la capacité de la collectivité à construire des parcours."
@@ -3722,10 +3722,10 @@
       "type": "qcm",
       "question": "L'autonomie financière des collectivités s'est-elle renforcée ou réduite ces quinze dernières années ?",
       "options": [
-        "Renforcée, grâce à la décentralisation",
+        "Renforcée nettement, grâce au mouvement de décentralisation",
         "Réduite en pratique : les impôts à taux votés reculent au profit de fractions d'impôts nationaux, même si le ratio constitutionnel d'autonomie financière reste respecté",
-        "Inchangée",
-        "Réduite, ce qui est inconstitutionnel"
+        "Inchangée depuis la réforme constitutionnelle de 2003",
+        "Réduite fortement, ce qui serait inconstitutionnel"
       ],
       "bonneReponse": 1,
       "explication": "Il faut distinguer l'autonomie financière, protégée par la Constitution, de l'autonomie fiscale, c'est-à-dire le pouvoir de voter des taux d'imposition.\n- La suppression de la taxe d'habitation et la réduction de la CVAE ont fait reculer l'autonomie fiscale sans faire tomber le ratio constitutionnel d'autonomie financière, les fractions de TVA affectées étant comptées comme ressources propres.\n- Argument inverse à connaître : cette architecture sécurise des recettes plus dynamiques et moins inégalitaires que la fiscalité locale assise sur les bases foncières."
@@ -3741,10 +3741,10 @@
       "type": "qcm",
       "question": "Comment une petite commune accède-t-elle aujourd'hui à l'ingénierie technique dont elle a besoin ?",
       "options": [
-        "Par les services de l'État, comme avant 2014",
-        "Par l'EPCI, les agences techniques départementales, les CAUE, les CDG, l'ANCT et le recours à des AMO privés",
-        "Elle ne peut pas y accéder",
-        "Par le préfet uniquement"
+        "Par les services déconcentrés de l'État, comme avant la réforme de 2014",
+        "Par l'EPCI, les ATD, les CAUE, les CDG, l'ANCT et des prestataires privés en AMO",
+        "Elle ne dispose en pratique d'aucun moyen d'accès à cette ingénierie",
+        "Uniquement par une saisine directe du préfet du département concerné"
       ],
       "bonneReponse": 1,
       "explication": "Depuis la fin de l'assistance technique de l'État aux petites communes, l'accès à l'ingénierie technique repose sur plusieurs relais inégalement répartis.\n- Mutualisation intercommunale, agences techniques départementales, CAUE pour le conseil architectural, ANCT pour le montage de projets et prestataires privés en AMO.\n- Les critiques portent sur l'inégalité territoriale du dispositif et sur la dépendance à l'AMO privée pour des décisions structurantes."
@@ -9548,9 +9548,9 @@
       "bonneReponse": 0,
       "options": [
         "La rédaction d'une note assortie de propositions à partir d'un dossier, dans la spécialité choisie",
-        "Une dissertation générale sur les politiques publiques locales",
-        "Un questionnaire à réponses courtes sur le droit administratif",
-        "Une épreuve de mathématiques et physique appliquées"
+        "Une dissertation générale portant sur les politiques publiques locales",
+        "Un questionnaire à réponses courtes portant sur le droit administratif",
+        "Une épreuve de mathématiques et de physique appliquées"
       ]
     },
     {
@@ -10379,10 +10379,10 @@
       "question": "Quelles sont les deux composantes du RIFSEEP ?",
       "bonneReponse": 0,
       "options": [
-        "L'IFSE, versée mensuellement selon le poste, et le CIA, versé annuellement selon la manière de servir.",
-        "La prime de fonction et la prime de résultat, versées trimestriellement.",
-        "L'indemnité de résidence et le supplément familial de traitement.",
-        "La NBI et l'indemnité de sujétions spéciales."
+        "L'IFSE, versée mensuellement selon le poste, et le CIA, versé annuellement selon la manière de servir",
+        "La prime de fonction et la prime de résultat, versées trimestriellement à l'agent",
+        "L'indemnité de résidence et le supplément familial de traitement de l'agent",
+        "La NBI et l'indemnité de sujétions spéciales liées au poste occupé"
       ]
     },
     {
@@ -13762,9 +13762,9 @@
       "question": "Quelles fonctions relèvent des agents de catégorie B dans la fonction publique territoriale ?",
       "options": [
         "Les fonctions d'encadrement intermédiaire et/ou d'application",
-        "Les fonctions de conception et de direction",
-        "Les fonctions d'exécution simple",
-        "Les fonctions de contrôle de légalité"
+        "Les fonctions de conception, d'expertise et de direction générale",
+        "Les seules fonctions d'exécution matérielle sans responsabilité",
+        "Les fonctions de contrôle de légalité exercées en préfecture"
       ],
       "bonneReponse": 0,
       "explication": "La catégorie B correspond aux fonctions d'application et d'encadrement intermédiaire (ex : techniciens territoriaux, rédacteurs).",
@@ -14281,10 +14281,10 @@
       "question": "Qui a la charge de la collecte et du traitement des déchets ménagers ?",
       "bonneReponse": 0,
       "options": [
-        "L'EPCI à fiscalité propre",
-        "Le Département",
-        "La Région",
-        "L'État"
+        "L'EPCI à fiscalité propre, compétent de plein droit",
+        "Le Département, au titre de sa compétence sociale",
+        "La Région, au titre de l'aménagement du territoire",
+        "L'État, par l'intermédiaire des services préfectoraux"
       ]
     },
     {
@@ -14350,10 +14350,10 @@
       "question": "Qui organise les transports urbains et scolaires à l'intérieur d'une ville ?",
       "bonneReponse": 0,
       "options": [
-        "La Commune (ou l'EPCI)",
-        "Le Département",
-        "La Région",
-        "L'État"
+        "La Commune (ou l'EPCI compétent)",
+        "Le Département dans le cadre de ses compétences sociales",
+        "La Région au titre de sa compétence transports",
+        "L'État par l'intermédiaire du préfet"
       ]
     },
     {
