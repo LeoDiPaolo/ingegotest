@@ -196,8 +196,9 @@ function decouperExplication(texte: string) {
     resume.push(phrase);
   }
 
-  /* Tout le texte reste disponible en détail : le résumé n'enlève rien. */
-  const details = phrases.length > resume.length ? phrases : [];
+  /* Le détail ne répète pas le résumé : « en savoir plus » reprend uniquement
+     les phrases qui ne sont pas déjà affichées au-dessus. */
+  const details = phrases.slice(resume.length);
   return { essentiel: resume.join(" "), details };
 }
 
