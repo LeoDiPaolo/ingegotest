@@ -2142,10 +2142,10 @@
       "type": "qcm",
       "question": "Une GTB installée mais non exploitée produit :",
       "options": [
-        "les mêmes économies qu'une GTB exploitée",
-        "aucune économie durable : la performance dépend de la reprise des alarmes, du suivi et du réglage des consignes",
-        "des économies de 30 % automatiquement",
-        "une conformité réglementaire suffisante"
+        "les mêmes économies qu'une GTB exploitée, la régulation automatique suffisant à tenir les consignes",
+        "aucune économie durable, la performance dépendant de la reprise des alarmes, du suivi et du réglage des consignes",
+        "une économie d'environ 30 % dès la mise en service, indépendamment du suivi assuré par l'exploitant",
+        "une conformité réglementaire suffisante au titre du décret BACS, la mise en service valant exploitation"
       ],
       "bonneReponse": 1,
       "explication": "L'équipement ne produit rien par lui-même. La valeur vient du processus : suivi des dérives, traitement des alarmes, ajustement des consignes et des plages horaires, formation des exploitants. C'est pourquoi un marché de GTB sans volet exploitation et sans ressource interne dédiée est un investissement à faible rendement — argument à tenir devant un jury."
@@ -2161,10 +2161,10 @@
       "type": "qcm",
       "question": "Que recouvre le coût global d'un ouvrage ?",
       "options": [
-        "Le coût des travaux et des honoraires",
+        "Le coût des travaux, des honoraires de maîtrise d'œuvre et des études préalables à l'opération",
         "L'investissement, l'exploitation, la maintenance, le gros entretien-renouvellement et la fin de vie",
-        "Le coût des travaux et du foncier",
-        "Le coût annuel de fonctionnement"
+        "Le coût des travaux, du foncier et des raccordements aux réseaux, hors dépenses d'exploitation",
+        "Le coût annuel de fonctionnement du bâtiment, fluides et maintenance courante, hors investissement"
       ],
       "bonneReponse": 1,
       "explication": "L'approche en coût global déplace la décision de l'investissement initial vers la dépense totale sur la durée de vie. Elle est encouragée par le code de la commande publique via le coût du cycle de vie, et rendue plus contraignante par la réforme d'août 2026 quand un critère unique est retenu."
@@ -2251,10 +2251,10 @@
       "type": "qcm",
       "question": "Qu'est-ce qui distingue un contrat de performance énergétique d'un marché d'exploitation classique ?",
       "options": [
-        "Sa durée",
-        "Un engagement contractuel de résultat mesuré, assorti d'un mécanisme d'intéressement et de pénalités",
-        "Son mode de passation",
-        "L'absence de maîtrise d'œuvre"
+        "Sa durée, nécessairement supérieure à celle d'un marché d'exploitation classique de chauffage",
+        "Un engagement de résultat mesuré, assorti d'un mécanisme d'intéressement et de pénalités",
+        "Son mode de passation, qui impose le recours au dialogue compétitif ou à la procédure négociée",
+        "L'absence de maîtrise d'œuvre, les travaux étant conçus et réalisés par le seul exploitant"
       ],
       "bonneReponse": 1,
       "explication": "Le CPE engage le titulaire sur un niveau de consommation vérifié selon un protocole de mesure et de vérification, avec partage des gains et des pertes. Ses conditions de réussite : situation de référence robuste, périmètre stable, comptage suffisant, et clause de traitement des changements d'usage. Sans ces éléments, l'engagement devient inapplicable dès la deuxième année."
@@ -2289,10 +2289,10 @@
       "type": "qcm",
       "question": "Le registre de sécurité d'un ERP est tenu par :",
       "options": [
-        "le SDIS",
-        "l'exploitant, sous la responsabilité du chef d'établissement",
-        "le bureau de contrôle",
-        "la commission de sécurité"
+        "le service départemental d'incendie et de secours, à l'occasion de ses visites périodiques",
+        "l'exploitant de l'établissement, sous la responsabilité du chef d'établissement",
+        "le bureau de contrôle technique, qui y consigne les rapports de vérification réglementaire",
+        "la commission de sécurité, qui le vise et le complète lors de chaque visite de contrôle"
       ],
       "bonneReponse": 1,
       "explication": "Le registre est tenu à jour par l'exploitant et présenté à la commission de sécurité lors des visites périodiques. Il consigne les vérifications, les travaux, les exercices d'évacuation et les formations du personnel. Dans une commune, la répartition entre le chef d'établissement — par exemple un directeur d'école — et les services techniques est une source récurrente de flottement.",
@@ -2418,10 +2418,10 @@
       "type": "qcm",
       "question": "Un matériau déposé sur un chantier et destiné à être réutilisé sur un autre projet est juridiquement :",
       "options": [
-        "automatiquement un déchet",
-        "potentiellement un produit, s'il n'a pas été abandonné et conserve son usage — sinon il faut une sortie de statut de déchet",
-        "toujours un produit",
-        "sans statut défini"
+        "un déchet dans tous les cas, dès lors qu'il a été démonté et sorti de son ouvrage d'origine",
+        "un produit, s'il n'a pas été abandonné et conserve son usage ; sinon une sortie de statut de déchet est nécessaire",
+        "un produit dans tous les cas, la seule intention de réemploi suffisant à écarter le statut de déchet",
+        "un bien sans statut défini, la réglementation ne traitant que des déchets envoyés en installation de traitement"
       ],
       "bonneReponse": 1,
       "explication": "La distinction produit/déchet conditionne toute la chaîne : transport, stockage, traçabilité, responsabilité. Le réemploi direct sans passage par le statut de déchet est la voie la plus simple mais la plus contraignante en organisation, car elle suppose de ne jamais rompre la chaîne de destination."
@@ -3897,10 +3897,10 @@
       "type": "qcm",
       "question": "Un bâtiment tertiaire existant peut être exempté de l'obligation BACS si son propriétaire démontre que…",
       "options": [
-        "le bâtiment a moins de dix ans",
-        "l'installation n'est pas réalisable avec un temps de retour sur investissement inférieur à dix ans",
-        "le bâtiment est classé",
-        "la GTB coûterait plus de 100 000 €"
+        "le bâtiment a été livré depuis moins de dix ans et dispose déjà d'une régulation terminale",
+        "l'installation d'un système d'automatisation n'atteint pas un temps de retour sur investissement inférieur à dix ans",
+        "le bâtiment est protégé au titre des monuments historiques et ne peut recevoir de câblage apparent",
+        "le coût du système d'automatisation dépasse 100 000 € pour l'ensemble du bâtiment concerné"
       ],
       "bonneReponse": 1,
       "explication": "L'exemption repose sur une étude établissant un temps de retour sur investissement supérieur à dix ans — seuil relevé de six à dix ans par le décret modificatif d'avril 2023, ce qui a durci l'exemption. L'étude doit être produite par le propriétaire, aides déduites : dans un dossier de conseil aux élus, c'est l'argument qui neutralise le réflexe « on attendra ».",
