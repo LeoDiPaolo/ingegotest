@@ -761,10 +761,10 @@
       "type": "qcm",
       "question": "Une commune doit-elle souscrire une assurance dommages-ouvrage pour la construction d'un centre technique municipal ?",
       "options": [
-        "Non, les personnes publiques bénéficient toutes d'une dispense d'assurance dommages-ouvrage",
-        "Oui, seul l'État construisant pour son compte bénéficie de la dispense ; les collectivités restent assujetties à l'assurance dommages-ouvrage",
-        "Oui, mais uniquement pour les opérations dont le montant dépasse 5 millions d'euros de travaux",
-        "Non, la garantie décennale souscrite par les entreprises dispense la commune de toute assurance"
+        "Non, toutes les personnes publiques sont dispensées de cette assurance",
+        "Non, seul l'État est dispensé ; les communes restent assujetties à cette assurance",
+        "Oui, mais seulement au-delà de 5 millions d'euros de travaux prévus au marché",
+        "Non, la garantie décennale des entreprises dispense la commune de toute assurance"
       ],
       "bonneReponse": 1,
       "explication": "La dispense d'assurance dommages-ouvrage ne joue que pour l'État construisant pour son compte : les collectivités territoriales y sont bien assujetties. L'intérêt de la DO est le préfinancement : elle indemnise les désordres de nature décennale sous 90 jours, sans attendre qu'un juge désigne un responsable, puis se retourne contre les constructeurs. Sans DO, la commune doit payer les réparations sur son budget et attendre plusieurs années l'issue d'une expertise judiciaire ; si une entreprise a disparu ou n'était pas correctement assurée, la perte reste définitivement à sa charge. Beaucoup de communes s'en dispensent par arbitrage budgétaire (la prime représente environ 1 à 2 % du coût des travaux) : cet arbitrage doit être écrit et motivé, car il expose l'ordonnateur.",
@@ -821,10 +821,10 @@
       "type": "qcm",
       "question": "Les trois principes fondamentaux de la commande publique.",
       "options": [
-        "Égalité, transparence, efficacité de la commande publique",
-        "Liberté d'accès à la commande publique, égalité de traitement des candidats, transparence des procédures",
-        "Concurrence loyale, publicité adaptée, sincérité de l'offre",
-        "Liberté contractuelle, allotissement obligatoire, transparence des prix"
+        "Égalité, transparence et efficacité de la commande publique locale",
+        "Liberté d'accès à la commande, égalité de traitement, transparence des procédures",
+        "Concurrence loyale, publicité adaptée et sincérité de l'offre remise au marché",
+        "Liberté contractuelle, allotissement obligatoire et transparence des prix pratiqués"
       ],
       "bonneReponse": 1,
       "explication": "Ces trois principes, énoncés à l'article L.3 du code de la commande publique, ont valeur constitutionnelle (Conseil constitutionnel, décision du 26 juin 2003) et s'appliquent à tous les contrats de la commande publique, y compris ceux dispensés de publicité et de mise en concurrence formalisées. La liberté d'accès interdit toute barrière artificielle à la candidature (exigences disproportionnées, spécifications orientées vers un opérateur). L'égalité de traitement impose de fournir la même information à tous les candidats et d'appliquer les mêmes critères sans différenciation injustifiée. La transparence des procédures garantit la traçabilité des choix et permet le contrôle du juge administratif et de la chambre régionale des comptes. Leur méconnaissance est le premier motif d'annulation d'une procédure en référé précontractuel. Depuis la loi Climat et résilience, l'article L.3-1 du code ajoute la prise en compte des objectifs de développement durable, qui vient compléter — sans s'y substituer — ce triptyque historique.",
@@ -1011,10 +1011,10 @@
       "type": "qcm",
       "question": "Face à une offre qui paraît anormalement basse, l'acheteur doit :",
       "options": [
-        "La rejeter d'office sans échange contradictoire",
+        "La rejeter d'office, sans aucun échange contradictoire préalable écrit",
         "Demander par écrit des justifications au candidat avant toute décision",
-        "L'accepter dès lors que le candidat la maintient",
-        "En référer directement au préfet pour arbitrage"
+        "L'accepter automatiquement dès lors que le candidat la maintient",
+        "En référer directement au préfet du département pour qu'il tranche"
       ],
       "bonneReponse": 1,
       "explication": "Le rejet d'une OAB n'est possible qu'après une procédure contradictoire écrite. Si les justifications sont insuffisantes, le rejet est obligatoire, pas facultatif. Une OAB non détectée est une source classique de sinistre : défaillance d'entreprise, réclamations, travaux supplémentaires.",
@@ -1053,10 +1053,10 @@
       "type": "qcm",
       "question": "Une offre est reçue avec un DPGF incomplet en procédure adaptée. Si l'acheteur ne fait rien de particulier, que se passe-t-il ?",
       "options": [
-        "L'offre irrégulière doit être automatiquement rejetée, sans possibilité de régularisation",
-        "L'acheteur peut inviter le candidat à régulariser dans un délai approprié, mais faute de le faire l'offre reste irrégulière et doit être écartée",
-        "L'acheteur doit obligatoirement déclarer la procédure infructueuse et la relancer intégralement",
-        "L'acheteur peut compléter lui-même le document manquant à la place du candidat"
+        "L'offre irrégulière doit être rejetée d'office, sans régularisation possible",
+        "L'acheteur peut inviter à régulariser dans un délai adapté, sinon l'offre reste écartée",
+        "L'acheteur doit déclarer la procédure infructueuse et la relancer intégralement",
+        "L'acheteur peut lui-même compléter le document manquant à la place du candidat"
       ],
       "bonneReponse": 1,
       "explication": "Une offre dont le DPGF est incomplet ou incohérent avec l'acte d'engagement est une offre irrégulière au sens de l'article L. 2152-2 du CCP. Sa régularisation est une simple faculté de l'acheteur, ouverte aussi bien en procédure adaptée qu'en procédure formalisée avec négociation : elle n'a pas besoin d'être annoncée à l'avance dans les documents de consultation, mais l'acheteur doit alors offrir la même possibilité à tous les candidats placés dans une situation identique, sous un délai approprié et identique, pour respecter l'égalité de traitement. Si l'acheteur ne met pas en œuvre cette faculté, ou si l'irrégularité provient d'une offre inacceptable (prix hors budget) ou inappropriée (hors sujet), l'offre reste irrégulière et doit purement et simplement être écartée : elle ne peut pas être classée ni retenue en l'état. La régularisation ne peut jamais porter sur les caractéristiques substantielles de l'offre ni revenir à négocier le prix dans un appel d'offres.",
@@ -1116,10 +1116,10 @@
       "type": "qcm",
       "question": "Des travaux supplémentaires imprévus représentent 12 % du montant initial d'un marché de travaux passé en procédure formalisée. Une modification par avenant, sans nouvelle procédure de publicité et de mise en concurrence, est-elle possible ?",
       "options": [
-        "Non, tout dépassement de 10 % impose obligatoirement de relancer une consultation",
-        "Oui : plusieurs fondements légaux sont mobilisables, notamment les prestations supplémentaires devenues nécessaires ou les circonstances imprévisibles, chacun plafonné à 50 % du montant initial",
-        "Oui, mais seulement si l'avenant reste sous le seuil de 5 % du montant initial",
-        "Non, une modification de plus de 10 % nécessite systématiquement l'accord préalable du préfet"
+        "Non, tout dépassement de 10 % impose de relancer une nouvelle consultation",
+        "Oui : prestations imprévues ou circonstances imprévisibles sont mobilisables, plafonnées à 50 %",
+        "Oui, seulement si l'avenant reste en dessous du seuil de 5 % du montant initial",
+        "Non, une modification de plus de 10 % exige l'accord préalable du préfet"
       ],
       "bonneReponse": 1,
       "explication": "Le code de la commande publique (articles L. 2194-1 et R. 2194-1 et suivants) prévoit six hypothèses limitatives de modification d'un marché en cours d'exécution sans nouvelle mise en concurrence. Elles ne s'appliquent pas toutes de la même façon selon le montant du dépassement : les modifications de faible montant sont plafonnées à 10 % du montant initial pour les marchés de fournitures et de services et à 15 % pour les marchés de travaux, à condition de rester sous les seuils européens de procédure formalisée, et ne nécessitent aucune justification particulière autre que le respect de ce plafond. Au-delà, il faut mobiliser un autre fondement : les prestations supplémentaires devenues nécessaires (travaux non prévus initialement mais indispensables à la réalisation de l'ouvrage, dont le changement de titulaire est impossible pour des raisons économiques ou techniques) et les circonstances imprévisibles (événement extérieur aux parties, imprévisible lors de la conclusion du contrat) sont chacune plafonnées à 50 % du montant initial par modification, sans plafond cumulé global fixé par la loi mais sous réserve de ne jamais changer la nature globale du marché. À 12 %, l'avenant est donc parfaitement licite au titre de l'un de ces deux fondements ; en revanche, s'il s'agissait d'un marché passé par la CAO, cet avenant supérieur à 5 % du montant initial devrait, en application de l'article L. 1414-4 du CGCT, être soumis pour avis à la commission d'appel d'offres avant signature.",
@@ -1234,10 +1234,10 @@
       "type": "qcm",
       "question": "Durée de la garantie de parfait achèvement et périmètre.",
       "options": [
-        "6 mois, limitée aux réserves inscrites au PV",
-        "1 an, réserves de réception et désordres signalés durant l'année",
-        "2 ans, tous désordres quels qu'ils soient",
-        "1 an, mais seulement les désordres apparents"
+        "6 mois, limitée aux seules réserves inscrites au PV de réception",
+        "1 an, réserves de réception et désordres signalés durant l'année écoulée",
+        "2 ans, couvrant tous désordres quels qu'ils soient à l'ouvrage",
+        "1 an, mais réservée aux seuls désordres apparents lors de réception"
       ],
       "bonneReponse": 1,
       "explication": "La GPA dure un an à compter de la réception et couvre à la fois les réserves formulées au PV et les désordres apparus et notifiés pendant l'année. Si l'entreprise ne s'exécute pas, le maître d'ouvrage peut faire réaliser les travaux à ses frais et risques après mise en demeure.",
@@ -1295,9 +1295,9 @@
       "question": "Taux maximal de la retenue de garantie et alternative offerte au titulaire.",
       "options": [
         "10 % du montant du marché, remplaçable par une caution bancaire simple",
-        "5 % du montant, remplaçable par une garantie à première demande ou, si l'acheteur l'accepte, une caution personnelle et solidaire",
-        "5 % du montant, sans possibilité de substitution par une garantie",
-        "3 % du montant, remplaçable par une assurance dommages-ouvrage"
+        "5 % du montant, remplaçable par une GAPD ou, si accepté, une caution solidaire",
+        "5 % du montant, sans aucune possibilité de substitution par garantie",
+        "3 % du montant, remplaçable par une assurance dommages-ouvrage souscrite"
       ],
       "bonneReponse": 1,
       "explication": "La retenue de garantie est plafonnée à 5 % du montant initial augmenté des avenants. Le titulaire peut la remplacer par une garantie à première demande ; la caution personnelle et solidaire n'est possible que si l'acheteur ne s'y oppose pas. Elle est libérée un mois après l'expiration du délai de garantie."
@@ -1389,10 +1389,10 @@
       "type": "qcm",
       "question": "Le coût du cycle de vie, tel que le code de la commande publique le définit, peut inclure :",
       "options": [
-        "le seul prix d'acquisition initial du bien ou de la prestation",
-        "l'acquisition, l'utilisation, la maintenance, la fin de vie, et les externalités environnementales monétisables",
-        "uniquement les consommations d'énergie sur la durée d'usage",
-        "uniquement les coûts directement supportés par l'acheteur public"
+        "Le seul prix d'acquisition initial du bien ou de la prestation achetée",
+        "L'acquisition, l'usage, la maintenance, la fin de vie et les externalités monétisables",
+        "Uniquement les consommations d'énergie constatées sur la durée d'usage",
+        "Uniquement les coûts directement supportés par l'acheteur public lui-même"
       ],
       "bonneReponse": 1,
       "explication": "La définition intègre les coûts supportés par l'acheteur ou les autres utilisateurs, et les coûts imputés aux externalités environnementales — à condition que leur valeur monétaire puisse être déterminée et vérifiée, sur la base d'une méthode accessible à tous les candidats. C'est cette dernière condition qui rend le critère difficile à manier."
@@ -1519,10 +1519,10 @@
       "type": "qcm",
       "question": "Pourquoi l'isolation thermique par l'extérieur est-elle en principe préférée en réhabilitation de bâtiment public ?",
       "options": [
-        "Parce qu'elle représente un coût de travaux plus faible",
-        "Elle traite les ponts thermiques et préserve l'inertie et la surface utile intérieure",
-        "Parce qu'elle est rendue obligatoire par la RE2020",
-        "Parce qu'elle se réalise sans installation d'échafaudage"
+        "Parce qu'elle représente un coût de travaux globalement plus faible",
+        "Elle traite les ponts thermiques et préserve l'inertie et la surface intérieure",
+        "Parce qu'elle est rendue obligatoire par la réglementation RE2020",
+        "Parce qu'elle se réalise sans nécessiter d'installer un échafaudage"
       ],
       "bonneReponse": 1,
       "explication": "L'ITE traite les ponts thermiques de liaison (planchers, refends), conserve l'inertie des parois lourdes côté intérieur — utile pour le confort d'été — et évite de perdre de la surface utile. Ses limites : coût, contraintes patrimoniales et d'alignement, traitement des menuiseries et des balcons, et impact sur les autorisations d'urbanisme."
@@ -1937,10 +1937,10 @@
       "type": "qcm",
       "question": "Le contrôle technique est obligatoire pour un bâtiment public quand :",
       "options": [
-        "lorsque sa surface dépasse 1 000 m² de plancher",
-        "l'ouvrage présente des risques particuliers : ERP au-delà de certains seuils, grande hauteur, zone sismique",
-        "lorsque le montant des travaux dépasse 500 000 euros",
-        "systématiquement, pour tout bâtiment recevant du public"
+        "Lorsque sa surface dépasse 1 000 m² de plancher construit, sans autre condition",
+        "L'ouvrage présente des risques particuliers : ERP au-delà de seuils, forte hauteur, sismicité",
+        "Lorsque le montant des travaux dépasse 500 000 euros hors taxes prévus",
+        "Systématiquement, pour tout bâtiment recevant du public, quel qu'il soit"
       ],
       "bonneReponse": 1,
       "explication": "L'obligation est liée à la nature du risque : ERP recevant du public au-delà de certains seuils, IGH, bâtiments de plus de huit étages, ouvrages en zone sismique, éléments en porte-à-faux importants. Le contrôleur technique intervient sur les missions L (solidité) et S (sécurité des personnes) au minimum, et il est soumis à une obligation d'indépendance vis-à-vis du concepteur et du constructeur."
@@ -2483,10 +2483,10 @@
       "type": "qcm",
       "question": "Pourquoi les matériaux biosourcés sont-ils avantagés par la RE2020 ?",
       "options": [
-        "Ils sont globalement moins chers que les matériaux conventionnels",
-        "Le stockage de carbone biogénique et l'ACV dynamique réduisent leur contribution à l'Ic construction",
-        "Ils bénéficient d'un bonus réglementaire forfaitaire automatique",
-        "Ils sont exemptés d'analyse du cycle de vie (ACV)"
+        "Ils sont globalement moins chers que les matériaux conventionnels utilisés",
+        "Le stockage de carbone biogénique et l'ACV dynamique réduisent leur Ic construction",
+        "Ils bénéficient d'un bonus réglementaire forfaitaire attribué automatiquement",
+        "Ils sont exemptés de toute obligation d'analyse du cycle de vie du bâtiment"
       ],
       "bonneReponse": 1,
       "explication": "L'avantage est méthodologique, pas discrétionnaire. Il faut cependant tenir les limites : disponibilité des filières locales, comportement à l'humidité, sécurité incendie, coût, et pour la paille ou la terre crue, l'assurabilité et la disponibilité d'entreprises qualifiées. Un jury appréciera une réponse qui ne se limite pas à l'éloge du bois."
@@ -2571,10 +2571,10 @@
       "type": "qcm",
       "question": "Quel usage de l'intelligence artificielle est aujourd'hui le plus mature dans la gestion d'un parc public ?",
       "options": [
-        "La conception architecturale générée automatiquement",
-        "La détection d'anomalies et la prévision de consommation à partir du comptage et de la GTB",
-        "La rédaction autonome et fiable des CCTP",
-        "Le contrôle réglementaire automatisé des ouvrages"
+        "La conception architecturale générée entièrement de façon automatique",
+        "La détection d'anomalies et la prévision de consommation via comptage et GTB",
+        "La rédaction autonome et fiable des CCTP par un modèle de langage",
+        "Le contrôle réglementaire automatisé des ouvrages déjà construits"
       ],
       "bonneReponse": 1,
       "explication": "L'exploitation de séries temporelles — détection de dérives, prévision, aide au réglage — est éprouvée et ne suppose pas de confiance aveugle dans la sortie du modèle. À l'inverse, la production de pièces écrites par un modèle de langage exige une relecture experte intégrale et pose, pour une collectivité, la question du traitement de données de marchés publics par des services hébergés hors Union européenne. Une réponse qui articule apport opérationnel et souveraineté des données sera mieux notée qu'un enthousiasme non qualifié."
@@ -2590,9 +2590,9 @@
       "type": "qcm",
       "question": "Quelle stratégie doit primer pour le confort d'été d'une école en climat méditerranéen ?",
       "options": [
-        "La climatisation dimensionnée sur la pointe estivale",
-        "La protection solaire, l'inertie, la surventilation nocturne et la végétalisation, avant tout recours actif",
-        "L'isolation thermique renforcée mise en œuvre seule",
+        "La climatisation seule, dimensionnée sur la pointe estivale attendue",
+        "Protection solaire, inertie et surventilation nocturne, avant tout recours actif",
+        "L'isolation thermique renforcée, mise en œuvre seule et isolément",
         "L'augmentation du débit de VMC en journée pendant les fortes chaleurs"
       ],
       "bonneReponse": 1,
@@ -3005,10 +3005,10 @@
       "type": "qcm",
       "question": "Le conseil municipal peut déléguer au maire, pour la durée du mandat, le pouvoir de :",
       "options": [
-        "voter le budget primitif de la commune",
-        "prendre toute décision concernant la préparation, la passation, l'exécution et le règlement des marchés dans les limites qu'il fixe",
-        "créer des emplois permanents dans les services communaux",
-        "approuver le compte administratif de l'exercice"
+        "Voter chaque année le budget primitif de la commune, dans son ensemble",
+        "Prendre toute décision sur la passation et l'exécution des marchés, dans les limites fixées",
+        "Créer des emplois permanents au sein des services de la commune concernée",
+        "Approuver le compte administratif de l'exercice écoulé chaque année civile"
       ],
       "bonneReponse": 1,
       "explication": "La délégation de l'article L.2122-22 du CGCT couvre notamment les marchés, dans les limites fixées par l'assemblée. Certaines attributions restent inaliénables : budget, compte administratif, taux d'imposition, création d'emplois. Le maire rend compte de l'usage de ses délégations à chaque réunion du conseil."
@@ -3362,10 +3362,10 @@
       "type": "qcm",
       "question": "Qu'ont changé les lignes directrices de gestion depuis 2019 ?",
       "options": [
-        "Elles ont entraîné la suppression pure et simple des CAP",
-        "Elles fixent la stratégie RH ; les CAP ne sont plus consultées sur mutations, avancements et promotions",
-        "Elles se substituent au tableau des effectifs de la collectivité",
-        "Elles s'imposent directement aux délibérations du conseil municipal"
+        "Elles ont entraîné la suppression pure et simple des CAP existantes",
+        "Elles fixent la stratégie RH ; les CAP ne traitent plus mutations ni promotions",
+        "Elles se substituent désormais au tableau des effectifs de la collectivité",
+        "Elles s'imposent directement aux délibérations prises par le conseil municipal"
       ],
       "bonneReponse": 1,
       "explication": "Les LDG sont arrêtées par l'autorité territoriale après avis du CST. Les CAP subsistent mais leur champ est recentré sur les situations individuelles défavorables : discipline, refus de titularisation, licenciement pour insuffisance professionnelle. C'est un déplacement du contrôle collectif a priori vers un recours individuel a posteriori — l'un des points les plus débattus de la réforme de 2019."
@@ -3397,10 +3397,10 @@
       "type": "qcm",
       "question": "De quoi se compose le RIFSEEP ?",
       "options": [
-        "Du traitement indiciaire complété par la NBI",
-        "D'une indemnité de fonctions, de sujétions et d'expertise et d'un complément indemnitaire annuel",
-        "Du supplément familial et de l'indemnité de résidence",
-        "D'une prime unique liée uniquement à l'ancienneté de l'agent"
+        "Du traitement indiciaire, complété par la NBI versée le cas échéant",
+        "D'une indemnité de fonctions et d'expertise et d'un complément indemnitaire annuel",
+        "Du supplément familial et de l'indemnité de résidence versés à l'agent",
+        "D'une prime unique liée uniquement à l'ancienneté acquise par l'agent"
       ],
       "bonneReponse": 1,
       "explication": "IFSE, liée au poste et à l'expertise, versée mensuellement ; CIA, lié à l'engagement professionnel et à la manière de servir, versé annuellement et non reconductible de droit. Le régime indemnitaire relève de la délibération de la collectivité, dans la limite des plafonds applicables au corps de l'État de référence — c'est le principe de parité."
@@ -3490,9 +3490,9 @@
       "type": "qcm",
       "question": "La mobilité entre les trois versants de la fonction publique est-elle réellement fluide ?",
       "options": [
-        "Oui, car les corps de l'État et les cadres d'emplois territoriaux sont juridiquement équivalents",
-        "Juridiquement possible par détachement et intégration, elle reste faible en pratique du fait des écarts de rémunération, de culture et de reconnaissance des acquis",
-        "Non, aucun texte n'autorise le passage d'un versant à un autre",
+        "Oui, les corps de l'État et les cadres territoriaux sont juridiquement équivalents",
+        "Juridiquement possible, elle reste faible en pratique du fait des écarts de rémunération",
+        "Non, aucun texte n'autorise le passage entre les différents versants",
         "Oui, une loi de 2019 a pleinement unifié les statuts des trois versants"
       ],
       "bonneReponse": 1,
@@ -3544,10 +3544,10 @@
       "type": "qcm",
       "question": "Que mesure l'épargne brute d'une collectivité ?",
       "options": [
-        "Le solde de trésorerie disponible en fin d'exercice",
-        "L'excédent des recettes réelles de fonctionnement sur les dépenses réelles de fonctionnement",
-        "Le montant total des subventions reçues des partenaires",
-        "Le résultat comptable de l'exercice précédent"
+        "Le solde de trésorerie disponible constaté en fin d'exercice",
+        "L'excédent des recettes réelles de fonctionnement sur les dépenses réelles",
+        "Le montant total des subventions reçues des différents partenaires",
+        "Le résultat comptable constaté lors de l'exercice précédent"
       ],
       "bonneReponse": 1,
       "explication": "L'épargne brute, ou capacité d'autofinancement, mesure la capacité d'une collectivité à rembourser sa dette et à autofinancer l'investissement.\n- L'épargne nette retranche de l'épargne brute le remboursement du capital de la dette.\n- Le ratio de capacité de désendettement rapporte l'encours de dette à l'épargne brute : au-delà d'une dizaine d'années pour le bloc communal, l'alerte est justifiée."
@@ -3643,9 +3643,9 @@
       "question": "La FPT connaît des difficultés de recrutement sur les métiers techniques. Quelles réponses sont mobilisables, et quelles sont leurs limites ?",
       "options": [
         "Augmenter uniformément les salaires, seule réponse réellement disponible",
-        "Régime indemnitaire, apprentissage, contractuels, mutualisation entre collectivités, marque employeur — chacun buttant sur le coût, la parité avec l'État ou la concurrence entre territoires",
-        "Aucune réponse n'est mobilisable, la pénurie est purement structurelle",
-        "Supprimer les concours pour recruter directement par contrat"
+        "Régime indemnitaire, apprentissage, contractuels, mutualisation, chacun limité",
+        "Aucune réponse n'est mobilisable, la pénurie étant purement structurelle",
+        "Supprimer les concours pour recruter directement sous contrat"
       ],
       "bonneReponse": 1,
       "explication": "Plusieurs leviers existent face aux difficultés de recrutement sur les métiers techniques, mais aucun ne suffit seul à résoudre le problème.\n- Le constat combine concurrence du secteur privé, écarts de rémunération à qualification égale, pyramide des âges défavorable et image du service public.\n- Le régime indemnitaire reste plafonné par le principe de parité et par les contraintes budgétaires.\n- Le recours aux contractuels expose au risque de turnover et de perte de mémoire technique, tandis que la mutualisation via des agences techniques départementales éloigne la compétence du terrain."
@@ -3723,9 +3723,9 @@
       "question": "L'autonomie financière des collectivités s'est-elle renforcée ou réduite ces quinze dernières années ?",
       "options": [
         "Renforcée nettement, grâce au mouvement de décentralisation",
-        "Réduite en pratique : les impôts à taux votés reculent au profit de fractions d'impôts nationaux, même si le ratio constitutionnel d'autonomie financière reste respecté",
-        "Inchangée depuis la réforme constitutionnelle de 2003",
-        "Réduite fortement, ce qui serait inconstitutionnel"
+        "Réduite en pratique : les impôts à taux votés reculent malgré la Constitution",
+        "Inchangée depuis la réforme constitutionnelle intervenue en 2003",
+        "Réduite fortement, ce qui serait pourtant jugé inconstitutionnel"
       ],
       "bonneReponse": 1,
       "explication": "Il faut distinguer l'autonomie financière, protégée par la Constitution, de l'autonomie fiscale, c'est-à-dire le pouvoir de voter des taux d'imposition.\n- La suppression de la taxe d'habitation et la réduction de la CVAE ont fait reculer l'autonomie fiscale sans faire tomber le ratio constitutionnel d'autonomie financière, les fractions de TVA affectées étant comptées comme ressources propres.\n- Argument inverse à connaître : cette architecture sécurise des recettes plus dynamiques et moins inégalitaires que la fiscalité locale assise sur les bases foncières."
