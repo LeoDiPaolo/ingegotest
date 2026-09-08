@@ -1,5 +1,5 @@
 import { CloudOff, Flame, RefreshCw } from "lucide-react";
-import { MotIngego, PastilleIngego } from "@/components/ingego/marque";
+import { MotIngego } from "@/components/ingego/marque";
 import { jaugesParAxe } from "@/lib/ingego/session";
 import type { Etat } from "@/lib/ingego/algo";
 
@@ -24,7 +24,6 @@ export function Entete({
     <header className="sticky top-0 z-20 border-b border-border bg-card/95 px-5 py-3 backdrop-blur">
       <div className="mx-auto max-w-2xl">
         <div className="flex items-center gap-2.5">
-          <PastilleIngego className="h-8 w-8 rounded-xl" />
           <div className="min-w-0">
             <MotIngego className="text-lg" />
             <p className="truncate text-[0.65rem] text-muted-foreground">
