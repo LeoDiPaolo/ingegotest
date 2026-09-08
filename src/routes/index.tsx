@@ -17,7 +17,7 @@ import {
 import { Entete } from "@/components/ingego/entete";
 import { NavBas } from "@/components/ingego/nav-bas";
 import { Confettis } from "@/components/ingego/confettis";
-import { Castor } from "@/components/ingego/marque";
+import { Castor, LogoIngego } from "@/components/ingego/marque";
 import { BadgeMaitrise, IconeAxe } from "@/components/ingego/univers";
 import { Button } from "@/components/ui/button";
 import { Exercice } from "@/components/ingego/exercice";
@@ -256,40 +256,65 @@ function Reviser() {
             </section>
           </div>
         ) : !missionCommencee ? (
-          <section className="blueprint anim-pop overflow-hidden rounded-3xl border border-primary/20 bg-card shadow-[var(--shadow-lift)]">
-            <div className="bg-primary px-6 py-5 text-center text-primary-foreground">
-              <p className="text-xs font-bold uppercase opacity-70">Brief de mission</p>
-              <h1 className="mt-1 text-2xl text-primary-foreground">Révision transversale</h1>
+          <section className="anim-pop overflow-hidden rounded-3xl border border-primary/20 bg-card shadow-[var(--shadow-lift)]">
+            <div className="relative overflow-hidden bg-primary px-6 pt-5 pb-14 text-center text-primary-foreground">
+              <div className="blueprint pointer-events-none absolute inset-0 opacity-25" />
+              <div className="pointer-events-none absolute top-7 left-0 h-px w-16 bg-primary-foreground/20" />
+              <div className="pointer-events-none absolute top-7 right-0 h-px w-16 bg-primary-foreground/20" />
+              <div className="relative mx-auto mb-4 w-[12.5rem] -rotate-1 rounded-2xl bg-card px-4 py-3 shadow-[var(--shadow-lift)] ring-1 ring-primary-foreground/20">
+                <LogoIngego className="mx-auto w-full" />
+                <span className="absolute -right-2 -bottom-2 grid h-7 w-7 rotate-6 place-items-center rounded-lg bg-brand text-[0.58rem] font-extrabold text-brand-foreground shadow-[var(--shadow-card)]">
+                  GO
+                </span>
+              </div>
+              <p className="relative text-[0.65rem] font-bold tracking-[0.2em] uppercase opacity-70">
+                Brief de mission
+              </p>
+              <h1 className="relative mt-1 text-2xl font-bold text-primary-foreground">
+                Révision transversale
+              </h1>
             </div>
-            <div className="space-y-5 p-6 text-center">
-              <div className="flex justify-center -space-x-2">
+            <div className="relative -mt-7 rounded-t-3xl bg-card px-5 pt-5 pb-5 text-center">
+              <div className="flex justify-center -space-x-2.5" aria-label="Thèmes de la mission">
                 {(ordre ?? []).slice(0, 5).map((question) => (
-                  <IconeAxe key={question.id} axe={question.axe} className="h-14 w-14 bg-card" />
+                  <IconeAxe
+                    key={question.id}
+                    axe={question.axe}
+                    className="h-12 w-12 border-card bg-card ring-2 ring-card"
+                    active
+                  />
                 ))}
               </div>
-              <p className="text-sm leading-relaxed text-muted-foreground">
+              <p className="mx-auto mt-4 max-w-sm text-sm leading-relaxed text-muted-foreground">
                 Une mission courte mêlant réglementation, technique et décision. Les erreurs
                 reviennent quelques étapes plus loin.
               </p>
-              <div className="grid grid-cols-2 gap-2 text-left">
-                <div className="rounded-xl bg-elevated p-3">
+              <div className="mt-4 grid grid-cols-2 gap-3 text-center">
+                <div className="rounded-2xl border border-border bg-elevated px-3 py-2.5">
                   <p className="text-2xl font-extrabold text-primary">{ordre?.length ?? total}</p>
-                  <p className="text-xs text-muted-foreground">défis</p>
+                  <p className="text-[0.65rem] font-semibold tracking-[0.12em] text-muted-foreground uppercase">
+                    défis
+                  </p>
                 </div>
-                <div className="rounded-xl bg-elevated p-3">
+                <div className="rounded-2xl border border-border bg-elevated px-3 py-2.5">
                   <p className="text-2xl font-extrabold text-brand">
                     ≈ {Math.max(5, Math.round(total * 0.75))}
                   </p>
-                  <p className="text-xs text-muted-foreground">minutes</p>
+                  <p className="text-[0.65rem] font-semibold tracking-[0.12em] text-muted-foreground uppercase">
+                    minutes
+                  </p>
                 </div>
               </div>
               <Button
                 onClick={() => setMissionCommencee(true)}
-                className="touche touche-brand h-14 w-full rounded-xl bg-brand font-extrabold text-brand-foreground hover:bg-brand/90"
+                className="touche touche-brand mt-4 h-14 w-full rounded-xl bg-brand text-base font-extrabold text-brand-foreground hover:bg-brand/90"
               >
                 Démarrer <ArrowRight className="h-5 w-5" />
               </Button>
-              <button onClick={quitter} className="text-xs font-semibold text-muted-foreground">
+              <button
+                onClick={quitter}
+                className="mt-4 text-xs font-semibold text-muted-foreground transition-colors hover:text-foreground"
+              >
                 Retour au tableau de bord
               </button>
             </div>
