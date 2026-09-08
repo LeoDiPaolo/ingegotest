@@ -178,7 +178,7 @@ function Page() {
                           </div>
                         </div>
                         <span className="text-[0.65rem] font-semibold text-muted-foreground">
-                           {terminees}/{questions.length} validées
+                          {terminees}/{questions.length} validées
                         </span>
                       </div>
                     );
