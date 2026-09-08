@@ -5,6 +5,7 @@ import {
   Flame,
   Layers,
   Library,
+  LockKeyhole,
   Play,
   RotateCcw,
   Sparkles,
@@ -22,7 +23,14 @@ import { BadgeMaitrise, IconeAxe } from "@/components/ingego/univers";
 import { Button } from "@/components/ui/button";
 import { Exercice } from "@/components/ingego/exercice";
 import { AXE_BY_ID, type Question } from "@/lib/ingego/corpus";
-import { carteNeuve, composerSession, planifier, resteAFaire } from "@/lib/ingego/algo";
+import {
+  carteNeuve,
+  composerSession,
+  niveauActif,
+  planifier,
+  progressionSousTheme,
+  resteAFaire,
+} from "@/lib/ingego/algo";
 import { jaugesParAxe, reinjecter } from "@/lib/ingego/session";
 import { serieJours, useDonnees } from "@/lib/ingego/stockage";
 
@@ -57,6 +65,7 @@ function Reviser() {
   const [justes, setJustes] = useState(0);
   const [fini, setFini] = useState(false);
   const [missionCommencee, setMissionCommencee] = useState(false);
+  const [niveauxDepart, setNiveauxDepart] = useState<Record<string, number>>({});
 
   const serie = useMemo(
     () => serieJours(donnees.journal.filter((e) => e.id === MARQUE_SESSION).map((e) => e.jour)),
@@ -75,6 +84,16 @@ function Reviser() {
   }, [donnees.cartes]);
 
   const total = donnees.reglages.parSession;
+  const objectif = useMemo(() => {
+    const actifs = donnees.reglages.axes;
+    const themes = [...new Set(bilan.lignes.filter((l) => actifs.includes(l.axe.id)).flatMap((l) =>
+      l.axe.sousThemes,
+    ))];
+    return themes
+      .map((theme) => ({ theme, ...progressionSousTheme(theme, donnees.cartes) }))
+      .filter((item) => !item.termine)
+      .sort((a, b) => a.niveau - b.niveau || a.restantesNiveau - b.restantesNiveau)[0];
+  }, [bilan.lignes, donnees.cartes, donnees.reglages.axes]);
   const mission = useMemo(() => {
     if (!ordre?.length) return null;
     const comptes = ordre.reduce<Record<string, number>>((acc, question) => {
@@ -101,6 +120,9 @@ function Reviser() {
     setJustes(0);
     setFini(false);
     setMissionCommencee(false);
+    setNiveauxDepart(
+      Object.fromEntries([...new Set(lot.map((q) => q.sousTheme))].map((theme) => [theme, niveauActif(theme, donnees.cartes)])),
+    );
   }
 
   function quitter() {
@@ -160,6 +182,13 @@ function Reviser() {
   const q = ordre && !fini ? ordre[i] : null;
   const avance = ordre ? Math.min(100, (faits.length / Math.max(1, total)) * 100) : 0;
   const exerciceActif = Boolean(ordre && missionCommencee && !fini && q);
+  const niveauxDebloques = useMemo(
+    () =>
+      Object.entries(niveauxDepart)
+        .map(([theme, avant]) => ({ theme, avant, apres: niveauActif(theme, donnees.cartes) }))
+        .filter(({ avant, apres }) => apres > avant),
+    [donnees.cartes, niveauxDepart],
+  );
 
   return (
     <div className={exerciceActif ? "min-h-dvh bg-background" : "min-h-screen bg-background pb-24"}>
@@ -198,10 +227,12 @@ function Reviser() {
                 </div>
                 <div className="mt-3 flex items-center justify-between gap-3">
                   <div>
-                    <p className="font-bold">{Math.min(total, reste || total)} défis variés</p>
+                    <p className="text-[0.65rem] font-extrabold tracking-[0.13em] text-brand uppercase">
+                      Prochain objectif
+                    </p>
+                    <p className="font-bold">{objectif?.theme ?? "Consolider les acquis"}</p>
                     <p className="mt-0.5 flex items-center gap-1 text-xs text-muted-foreground">
-                      <Clock3 className="h-3.5 w-3.5" /> environ{" "}
-                      {Math.max(5, Math.round(total * 0.75))} min
+                      <LockKeyhole className="h-3.5 w-3.5" /> Niveau {objectif?.niveau ?? 1} · {objectif?.restantesNiveau ?? reste} validation{(objectif?.restantesNiveau ?? reste) > 1 ? "s" : ""} restante{(objectif?.restantesNiveau ?? reste) > 1 ? "s" : ""}
                     </p>
                   </div>
                   <Castor className="h-16 w-16 shrink-0" />
@@ -391,6 +422,34 @@ function Reviser() {
                   ? "Parcours net : tous les points ont été validés dès le premier passage."
                   : `${mission?.themes.length ?? 0} thèmes parcourus · les points repris restent à valider du premier coup lors d'une prochaine mission.`}
               </p>
+              {niveauxDebloques.length ? (
+                <div className="anim-pop rounded-2xl border-2 border-success/50 bg-success/10 p-3 text-left">
+                  <p className="text-[0.65rem] font-extrabold tracking-[0.14em] text-success uppercase">
+                    Niveau déverrouillé
+                  </p>
+                  {niveauxDebloques.map(({ theme, apres }) => (
+                    <p key={theme} className="mt-1 text-sm font-bold">
+                      {theme} · {Number.isFinite(apres) ? `niveau ${apres}` : "parcours validé"}
+                    </p>
+                  ))}
+                </div>
+              ) : null}
+              {Object.keys(rates).length ? (
+                <div className="grid gap-2 text-left sm:grid-cols-2">
+                  <div className="rounded-xl border border-brand/30 bg-brand/10 p-3">
+                    <p className="text-xs font-bold text-brand">Reprises réussies</p>
+                    <p className="mt-1 text-xs text-muted-foreground">
+                      {Object.keys(rates).length} point{Object.keys(rates).length > 1 ? "s" : ""} corrigé{Object.keys(rates).length > 1 ? "s" : ""} à chaud.
+                    </p>
+                  </div>
+                  <div className="rounded-xl border border-primary/25 bg-primary/10 p-3">
+                    <p className="text-xs font-bold text-primary">Prochaine consolidation</p>
+                    <p className="mt-1 text-xs text-muted-foreground">
+                      Ces questions reviendront demain pour une validation du premier coup.
+                    </p>
+                  </div>
+                </div>
+              ) : null}
               <div className="flex gap-2">
                 <button
                   onClick={demarrer}
