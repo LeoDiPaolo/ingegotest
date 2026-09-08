@@ -1073,7 +1073,7 @@ export function Exercice({
                     ? `Étape partiellement validée · ${Math.round(part * 100)} %`
                     : "Point à reprendre"}
               </span>
-              <span className="pointer-events-none absolute -right-2 -bottom-2 rotate-[-10deg] rounded-md border-2 border-current px-2 py-1 text-[0.58rem] font-black tracking-[0.15em] uppercase opacity-25">
+              <span className="anim-tampon pointer-events-none absolute -right-2 -bottom-2 rounded-md border-2 border-current px-2 py-1 text-[0.58rem] font-black tracking-[0.15em] uppercase">
                 {estJuste ? "Validé" : "À revoir"}
               </span>
             </div>
