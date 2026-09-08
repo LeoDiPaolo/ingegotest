@@ -149,6 +149,52 @@ function juste(q: Question, rep: Reponse): boolean {
   }
 }
 
+/* Notation partielle : sur les formats à plusieurs éléments (association, tri,
+   remise en ordre, frise, texte à trous), la part d'éléments corrects évite le
+   tout-ou-rien qui pénaliserait ces formats face à un simple QCM. */
+export function partJuste(q: Question, rep: unknown): number {
+  const m = rep as Record<string, number>;
+  const ratio = (bons: number, total: number) => (total ? bons / total : 0);
+  switch (q.type) {
+    case "ordre": {
+      const l = (rep as string[]) ?? [];
+      const items = q.items ?? [];
+      return ratio(items.filter((it, i) => l[i] === it).length, items.length);
+    }
+    case "frise":
+      return ratio((q.points ?? []).filter((_, i) => m[i] === i).length, (q.points ?? []).length);
+    case "assoc":
+      return ratio((q.paires ?? []).filter((_, i) => m[i] === i).length, (q.paires ?? []).length);
+    case "trous": {
+      const r = rep as Record<string, string>;
+      const mots = q.mots ?? [];
+      return ratio(mots.filter((mot, i) => r[i] === mot).length, mots.length);
+    }
+    case "tri":
+      return ratio(
+        (q.elements ?? []).filter((el, i) => m[i] === el[1]).length,
+        (q.elements ?? []).length,
+      );
+    case "chantier":
+      return ratio(
+        (q.chantier?.depots ?? []).filter((d, i) => m[i] === d.col).length,
+        (q.chantier?.depots ?? []).length,
+      );
+    case "facade":
+      return ratio(
+        (q.facade?.faces ?? []).filter((f, i) => m[i] === f.col).length,
+        (q.facade?.faces ?? []).length,
+      );
+    case "pluvial":
+      return ratio(
+        (q.pluvial?.ouvrages ?? []).filter((o, i) => m[i] === o.col).length,
+        (q.pluvial?.ouvrages ?? []).length,
+      );
+    default:
+      return juste(q, rep) ? 1 : 0;
+  }
+}
+
 const optionClass = (etat: "neutre" | "choisi" | "ok" | "ko") =>
   cn(
     "tap w-full rounded-xl border px-4 py-3 text-left text-sm leading-snug transition-colors",
@@ -335,7 +381,7 @@ export function Exercice({
   numero: number;
   total: number;
   onNote: (note: number) => void;
-  onCorrige?: (juste: boolean) => void;
+  onCorrige?: (juste: boolean, part: number) => void;
 }) {
   const [rep, setRep] = useState<Reponse>(() => initiale(q));
   const [corrige, setCorrige] = useState(false);
@@ -343,6 +389,7 @@ export function Exercice({
   const axe = AXE_BY_ID[q.axe];
   const famille = FAMILLES[q.fam];
   const estJuste = useMemo(() => (corrige ? juste(q, rep) : false), [corrige, q, rep]);
+  const part = useMemo(() => (corrige ? partJuste(q, rep) : 0), [corrige, q, rep]);
   const autoNote = AUTO_NOTE.includes(q.type);
 
   const melangeMots = useMemo(
@@ -894,7 +941,7 @@ export function Exercice({
         <button
           onClick={() => {
             setCorrige(true);
-            onCorrige?.(juste(q, rep));
+            onCorrige?.(juste(q, rep), partJuste(q, rep));
           }}
           disabled={!complet(q, rep)}
           className="tap w-full rounded-xl bg-primary py-3.5 text-sm font-semibold text-primary-foreground disabled:opacity-40"
@@ -911,7 +958,11 @@ export function Exercice({
               )}
             >
               {estJuste ? <Check className="h-4 w-4" /> : <X className="h-4 w-4" />}
-              {estJuste ? "Réponse juste" : "Réponse à revoir"}
+              {estJuste
+                ? "Réponse juste"
+                : part > 0
+                  ? `Réponse partielle · ${Math.round(part * 100)} % d'éléments corrects`
+                  : "Réponse à revoir"}
             </p>
           ) : null}
 
@@ -978,7 +1029,12 @@ export function Exercice({
                       [2, "Bien"],
                       [3, "Évident"],
                     ] as const)
-                  : ([[0, "Continuer"]] as const)
+                  : part >= 0.6
+                    ? ([
+                        [0, "Raté"],
+                        [1, "Presque"],
+                      ] as const)
+                    : ([[0, "Continuer"]] as const)
               ).map(([note, label]) => (
                 <button
                   key={note}
@@ -990,7 +1046,7 @@ export function Exercice({
                       : note === 3
                         ? "border-success/50 bg-success/15 text-foreground"
                         : "border-border bg-elevated text-foreground",
-                    !autoNote && !estJuste && "col-span-2",
+                    !autoNote && !estJuste && part < 0.6 && "col-span-2",
                   )}
                 >
                   {label}

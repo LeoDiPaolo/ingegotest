@@ -1,27 +1,84 @@
-import { Flame, Star } from "lucide-react";
-import { MotIngego, PastilleIngego } from "@/components/ingego/marque";
+import { CloudOff, Flame, RefreshCw } from "lucide-react";
+import { MotIngego } from "@/components/ingego/marque";
+import { jaugesParAxe } from "@/lib/ingego/session";
+import type { Etat } from "@/lib/ingego/algo";
 
-export function Entete({ xp, serie }: { xp: number; serie: number }) {
+export type EtatSynchro = "local" | "en-cours" | "ok" | "erreur";
+
+/* Bandeau haut : identité, série de jours et jauges de progression par axe,
+   lisibles d'un coup d'œil (couleur de l'axe, épaisseur généreuse). */
+export function Entete({
+  serie,
+  etat,
+  synchro,
+  jauges = true,
+}: {
+  serie: number;
+  etat: Etat;
+  synchro: EtatSynchro;
+  jauges?: boolean;
+}) {
+  const lignes = jaugesParAxe(etat);
+
   return (
     <header className="sticky top-0 z-20 border-b border-border bg-card/95 px-5 py-3 backdrop-blur">
-      <div className="mx-auto flex max-w-2xl items-center gap-2.5">
-        <PastilleIngego className="h-8 w-8 rounded-xl" />
-        <div className="min-w-0">
-          <MotIngego className="text-lg" />
-          <p className="truncate text-[0.65rem] text-muted-foreground">
-            Réussissez votre concours Ingénieur Territorial Bâtiment
-          </p>
+      <div className="mx-auto max-w-2xl">
+        <div className="flex items-center gap-2.5">
+          <div className="min-w-0">
+            <MotIngego className="text-lg" />
+            <p className="truncate text-[0.65rem] text-muted-foreground">
+              Concours d'ingénieur territorial · écrit juin 2027
+            </p>
+          </div>
+          <div className="ml-auto flex shrink-0 items-center gap-2 text-sm font-semibold">
+            {synchro === "erreur" ? (
+              <span title="Sauvegarde en ligne indisponible — progression conservée sur l'appareil">
+                <CloudOff className="h-4 w-4 text-warning" />
+              </span>
+            ) : synchro === "en-cours" ? (
+              <RefreshCw className="h-4 w-4 animate-spin text-muted-foreground" />
+            ) : null}
+            <span
+              className="flex items-center gap-1 rounded-full bg-brand/15 px-2.5 py-1 text-brand"
+              title="Jours consécutifs avec une session terminée"
+            >
+              <Flame className="h-4 w-4" />
+              {serie}
+            </span>
+          </div>
         </div>
-        <div className="ml-auto flex shrink-0 items-center gap-2 text-sm font-semibold">
-          <span className="flex items-center gap-1 rounded-full bg-brand/15 px-2.5 py-1 text-brand">
-            <Flame className="h-4 w-4" />
-            {serie}
-          </span>
-          <span className="flex items-center gap-1 rounded-full bg-primary/10 px-2.5 py-1 text-primary">
-            <Star className="h-4 w-4" />
-            {xp}
-          </span>
-        </div>
+
+        {jauges ? (
+          <div className="mt-3 grid grid-cols-2 gap-x-3 gap-y-2 sm:grid-cols-3">
+            {lignes.map((l) => (
+              <div key={l.axe.id}>
+                <div className="flex items-baseline justify-between gap-1">
+                  <span className="truncate text-[0.66rem] font-semibold" style={{ color: l.axe.couleur }}>
+                    {l.axe.court}
+                  </span>
+                  <span className="text-[0.62rem] text-muted-foreground">
+                    {Math.round(l.part * 100)} %
+                  </span>
+                </div>
+                <div className="mt-1 h-2.5 overflow-hidden rounded-full bg-elevated">
+                  <div className="flex h-full">
+                    <div
+                      className="h-full rounded-l-full transition-[width] duration-500"
+                      style={{ width: `${l.part * 100}%`, backgroundColor: l.axe.couleur }}
+                    />
+                    <div
+                      className="h-full transition-[width] duration-500"
+                      style={{
+                        width: `${Math.max(0, l.partVue - l.part) * 100}%`,
+                        backgroundColor: `${l.axe.couleur}55`,
+                      }}
+                    />
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        ) : null}
       </div>
     </header>
   );
