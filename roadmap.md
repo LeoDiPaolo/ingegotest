@@ -1,19 +1,9 @@
-## Refonte visuelle complète
+## Amélioration globale IngéGo
 
-- [x] Retirer les bandeaux photo décoratifs des questions
-- [x] Refaire l’accueil en tableau de missions avec navigation illustrée
-- [x] Ajouter des écrans de démarrage de niveau et des badges de maîtrise
-- [x] Transformer Élévation en arbre de compétences
-- [x] Harmoniser Corpus et Réglages avec le nouveau langage visuel
-- [x] Renforcer les jeux visuels compacts et les retours tactiles
-- [x] Vérifier mobile et desktop
-- [x] Mettre en scène le logo sur le brief de mission immersif
-
-## Carnet de missions éditorial
-
-- [x] Installer la typographie et les surfaces éditoriales
-- [x] Recomposer l’accueil et le brief comme un journal de mission
-- [x] Déployer la signature IngéGo dans l’en-tête et la navigation
-- [x] Transformer Élévation, Corpus et Réglages en dossiers techniques
-- [x] Recomposer les exercices comme des fiches de mission
-- [x] Vérifier mobile et desktop
+- [x] Conserver la structure et l’identité « Chantier vif »
+- [x] Retirer la transformation éditoriale trop envahissante
+- [x] Maintenir le tableau de bord, les missions, les badges et l’arbre de compétences
+- [x] Maintenir le logo dans l’en-tête, la navigation et le brief de mission
+- [x] Maintenir les exercices compacts et les jeux visuels utiles
+- [x] Vérifier les quatre écrans sur mobile et ordinateur
+- [x] Vérifier le lancement et l’enchaînement d’une mission
