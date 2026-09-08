@@ -193,9 +193,13 @@ export function melange<T>(arr: T[], graine: number): T[] {
 export const jourDe = (t: number) => new Date(t).toISOString().slice(0, 10);
 
 export const REGLAGES_DEFAUT: Reglages = {
-  axes: ["A1", "A2", "A3", "A4", "A5", "A6"],
+  axes: ["A1", "A2", "A3", "A4", "A5", "A6", "A7"],
   familles: ["S", "M", "E"],
-  types: ["qcm", "libre", "ordre", "frise", "assoc", "trous", "vf", "tri", "erreur"],
+  types: [
+    "qcm", "libre", "ordre", "frise", "assoc", "trous", "vf", "tri", "erreur",
+    "carte", "graphe", "camembert", "plan", "courbe", "organigramme", "coupe",
+    "synoptique", "radar", "cycle", "echelle", "chantier", "paroi", "pmr", "facade", "pluvial",
+  ],
   parSession: 12,
   chrono: 0,
   cible: "normal",
@@ -206,8 +210,8 @@ const TYPES_OK = REGLAGES_DEFAUT.types;
 export function normaliserReglages(r: Partial<Reglages> | null | undefined): Reglages {
   const n: Reglages = { ...REGLAGES_DEFAUT, ...(r || {}) };
   if (!["normal", "fragiles"].includes(n.cible)) n.cible = "normal";
-  n.types = (n.types || []).filter((t) => TYPES_OK.includes(t));
-  if (!n.types.length) n.types = [...TYPES_OK];
+  const existants = (n.types || []).filter((t) => TYPES_OK.includes(t));
+  n.types = [...new Set([...existants, ...TYPES_OK])];
   if (!n.axes?.length) n.axes = [...REGLAGES_DEFAUT.axes];
   if (!n.familles?.length) n.familles = [...REGLAGES_DEFAUT.familles];
   return n;
