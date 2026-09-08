@@ -28,6 +28,11 @@ import { CoupeParoi } from "@/components/ingego/coupe-paroi";
 import { ParcoursPmr } from "@/components/ingego/parcours-pmr";
 import { FacadeSolaire } from "@/components/ingego/facade-solaire";
 import { PlanPluvial } from "@/components/ingego/plan-pluvial";
+import { Curseur } from "@/components/ingego/curseur";
+import { Empilement } from "@/components/ingego/empilement";
+import { Zonage } from "@/components/ingego/zonage";
+import { Circuit } from "@/components/ingego/circuit";
+import { Cablage } from "@/components/ingego/cablage";
 import { IconeAxe } from "@/components/ingego/univers";
 import { Button } from "@/components/ui/button";
 
@@ -51,6 +56,16 @@ function melangeStrict<T>(liste: T[], graine: number): T[] {
     out = melange(liste, graine + essai++ * 977);
   if (out.every((v, i) => v === liste[i])) out = [...liste.slice(1), liste[0]];
   return out;
+}
+
+/* Ordre d'affichage de la colonne droite d'un raccordement : déterministe,
+   pour que la correction et l'affichage parlent des mêmes emplacements. */
+export function ordreCablage(q: Question): number[] {
+  const n = (q.cablage?.droite ?? []).length;
+  return melangeStrict(
+    Array.from({ length: n }, (_, i) => i),
+    graineDe(q.id + "c"),
+  );
 }
 
 const AUTO_NOTE = ["libre", "vf"];
@@ -81,6 +96,11 @@ const CONSIGNES: Record<Question["type"], string> = {
   pmr: "Contrôlez le cheminement",
   facade: "Analysez les façades",
   pluvial: "Organisez la gestion des eaux",
+  curseur: "Réglez le curseur sur la bonne valeur",
+  empilement: "Composez la coupe couche par couche",
+  zonage: "Zonez le plan de masse",
+  circuit: "Tracez le circuit dans le bon ordre",
+  cablage: "Raccordez chaque repère",
 };
 
 const CONTEXTES: Partial<Record<Question["type"], string>> = {
@@ -92,6 +112,11 @@ const CONTEXTES: Partial<Record<Question["type"], string>> = {
   assoc: "Raccordement des responsabilités",
   tri: "Organisation du terrain",
   libre: "Passage devant le jury",
+  curseur: "Réglage sur site",
+  empilement: "Composition d'ouvrage",
+  zonage: "Étude d'implantation",
+  circuit: "Circuit de décision",
+  cablage: "Raccordement des repères",
 };
 
 function initiale(q: Question): Reponse {
@@ -100,6 +125,14 @@ function initiale(q: Question): Reponse {
       return melangeStrict(q.items ?? [], graineDe(q.id));
     case "libre":
       return "";
+    case "curseur":
+      return null;
+    case "empilement":
+    case "circuit":
+      return [] as number[];
+    case "zonage":
+    case "cablage":
+      return {} as Record<string, number>;
     case "frise":
     case "assoc":
     case "trous":
@@ -150,6 +183,16 @@ function complet(q: Question, rep: Reponse): boolean {
       return Object.keys(rep as object).length === (q.facade?.faces ?? []).length;
     case "pluvial":
       return Object.keys(rep as object).length === (q.pluvial?.ouvrages ?? []).length;
+    case "curseur":
+      return rep !== null;
+    case "empilement":
+      return (rep as number[]).length === (q.empilement?.couches ?? []).length;
+    case "circuit":
+      return (rep as number[]).length === (q.circuit?.chemin ?? []).length;
+    case "zonage":
+      return Object.keys(rep as object).length === (q.zonage?.cellules ?? []).length;
+    case "cablage":
+      return Object.keys(rep as object).length === (q.cablage?.gauche ?? []).length;
     default:
       return false;
   }
@@ -197,6 +240,21 @@ function juste(q: Question, rep: Reponse): boolean {
       return (q.facade?.faces ?? []).every((f, i) => m[i] === f.col);
     case "pluvial":
       return (q.pluvial?.ouvrages ?? []).every((o, i) => m[i] === o.col);
+    case "curseur":
+      return (
+        rep !== null &&
+        Math.abs((rep as number) - (q.curseur?.cible ?? 0)) <= (q.curseur?.tolerance ?? 0)
+      );
+    case "empilement":
+      return (q.empilement?.couches ?? []).every((_, i) => (rep as number[])[i] === i);
+    case "circuit":
+      return (q.circuit?.chemin ?? []).every((e, i) => (rep as number[])[i] === e);
+    case "zonage":
+      return (q.zonage?.cellules ?? []).every((c, i) => m[i] === c.cat);
+    case "cablage": {
+      const ordre = ordreCablage(q);
+      return (q.cablage?.gauche ?? []).every((_, i) => ordre[m[i]] === i);
+    }
     default:
       return false;
   }
@@ -243,6 +301,26 @@ export function partJuste(q: Question, rep: unknown): number {
         (q.pluvial?.ouvrages ?? []).filter((o, i) => m[i] === o.col).length,
         (q.pluvial?.ouvrages ?? []).length,
       );
+    case "empilement":
+      return ratio(
+        (q.empilement?.couches ?? []).filter((_, i) => (rep as number[])[i] === i).length,
+        (q.empilement?.couches ?? []).length,
+      );
+    case "circuit":
+      return ratio(
+        (q.circuit?.chemin ?? []).filter((e, i) => (rep as number[])[i] === e).length,
+        (q.circuit?.chemin ?? []).length,
+      );
+    case "zonage":
+      return ratio(
+        (q.zonage?.cellules ?? []).filter((c, i) => m[i] === c.cat).length,
+        (q.zonage?.cellules ?? []).length,
+      );
+    case "cablage": {
+      const ordre = ordreCablage(q);
+      const g = q.cablage?.gauche ?? [];
+      return ratio(g.filter((_, i) => ordre[m[i]] === i).length, g.length);
+    }
     default:
       return juste(q, rep) ? 1 : 0;
   }
@@ -465,6 +543,9 @@ export function Exercice({
   const [rep, setRep] = useState<Reponse>(() => initiale(q));
   const [corrige, setCorrige] = useState(false);
   const [observation, setObservation] = useState(commentaire);
+  /* jeux tactiles : couleur active du zonage et repère gauche en attente du câblage */
+  const [pinceau, setPinceau] = useState(0);
+  const [actifCablage, setActifCablage] = useState<number | null>(null);
 
   const axe = AXE_BY_ID[q.axe];
   const famille = FAMILLES[q.fam];
@@ -519,6 +600,8 @@ export function Exercice({
       ),
     [q],
   );
+
+  const ordreDroiteCablage = useMemo(() => ordreCablage(q), [q]);
 
   const setMap = (cle: number, valeur: number | string) =>
     setRep((r: Reponse) => ({ ...(r as object), [cle]: valeur }));
@@ -761,6 +844,75 @@ export function Exercice({
           donnees={q.pluvial}
           reponses={rep as Record<string, number>}
           onAffecter={(i, col) => setMap(i, col)}
+          corrige={corrige}
+        />
+      )}
+
+      {q.type === "curseur" && q.curseur && (
+        <Curseur
+          donnees={q.curseur}
+          valeur={rep as number | null}
+          onChange={(v) => setRep(v)}
+          corrige={corrige}
+        />
+      )}
+
+      {q.type === "empilement" && q.empilement && (
+        <Empilement
+          donnees={q.empilement}
+          pose={rep as number[]}
+          graine={graineDe(q.id + "e")}
+          onPoser={(i) => setRep((r: Reponse) => [...(r as number[]), i])}
+          onRetirer={(rang) => setRep((r: Reponse) => (r as number[]).filter((_, k) => k !== rang))}
+          corrige={corrige}
+        />
+      )}
+
+      {q.type === "zonage" && q.zonage && (
+        <Zonage
+          donnees={q.zonage}
+          reponses={rep as Record<string, number>}
+          pinceau={pinceau}
+          onPinceau={setPinceau}
+          onPeindre={(i, cat) => setMap(i, cat)}
+          corrige={corrige}
+        />
+      )}
+
+      {q.type === "circuit" && q.circuit && (
+        <Circuit
+          donnees={q.circuit}
+          chemin={rep as number[]}
+          onToucher={(i) =>
+            setRep((r: Reponse) => {
+              const l = r as number[];
+              if (l[l.length - 1] === i) return l.slice(0, -1);
+              if (l.includes(i) || l.length >= (q.circuit?.chemin ?? []).length) return l;
+              return [...l, i];
+            })
+          }
+          corrige={corrige}
+        />
+      )}
+
+      {q.type === "cablage" && q.cablage && (
+        <Cablage
+          donnees={q.cablage}
+          liens={rep as Record<string, number>}
+          actif={actifCablage}
+          onActif={setActifCablage}
+          ordreDroite={ordreDroiteCablage}
+          onRelier={(g, d) => {
+            setMap(g, d);
+            setActifCablage(null);
+          }}
+          onDefaire={(g) =>
+            setRep((r: Reponse) => {
+              const m2 = { ...(r as Record<string, number>) };
+              delete m2[g];
+              return m2;
+            })
+          }
           corrige={corrige}
         />
       )}
