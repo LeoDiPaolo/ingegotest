@@ -308,7 +308,9 @@ function Reviser() {
               </p>
               <div className="mt-2 grid grid-cols-2 gap-2 text-center sm:mt-4 sm:gap-3">
                 <div className="rounded-xl border border-border bg-elevated px-3 py-1.5 sm:rounded-2xl sm:py-2.5">
-                  <p className="text-xl font-extrabold text-primary sm:text-2xl">{ordre?.length ?? total}</p>
+                  <p className="text-xl font-extrabold text-primary sm:text-2xl">
+                    {ordre?.length ?? total}
+                  </p>
                   <p className="text-[0.65rem] font-semibold tracking-[0.12em] text-muted-foreground uppercase">
                     défis
                   </p>
