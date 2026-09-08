@@ -28,6 +28,11 @@ import { CoupeParoi } from "@/components/ingego/coupe-paroi";
 import { ParcoursPmr } from "@/components/ingego/parcours-pmr";
 import { FacadeSolaire } from "@/components/ingego/facade-solaire";
 import { PlanPluvial } from "@/components/ingego/plan-pluvial";
+import { Curseur } from "@/components/ingego/curseur";
+import { Empilement } from "@/components/ingego/empilement";
+import { Zonage } from "@/components/ingego/zonage";
+import { Circuit } from "@/components/ingego/circuit";
+import { Cablage } from "@/components/ingego/cablage";
 import { IconeAxe } from "@/components/ingego/univers";
 import { Button } from "@/components/ui/button";
 
@@ -81,6 +86,11 @@ const CONSIGNES: Record<Question["type"], string> = {
   pmr: "Contrôlez le cheminement",
   facade: "Analysez les façades",
   pluvial: "Organisez la gestion des eaux",
+  curseur: "Réglez le curseur sur la bonne valeur",
+  empilement: "Composez la coupe couche par couche",
+  zonage: "Zonez le plan de masse",
+  circuit: "Tracez le circuit dans le bon ordre",
+  cablage: "Raccordez chaque repère",
 };
 
 const CONTEXTES: Partial<Record<Question["type"], string>> = {
@@ -92,6 +102,11 @@ const CONTEXTES: Partial<Record<Question["type"], string>> = {
   assoc: "Raccordement des responsabilités",
   tri: "Organisation du terrain",
   libre: "Passage devant le jury",
+  curseur: "Réglage sur site",
+  empilement: "Composition d'ouvrage",
+  zonage: "Étude d'implantation",
+  circuit: "Circuit de décision",
+  cablage: "Raccordement des repères",
 };
 
 function initiale(q: Question): Reponse {
@@ -100,6 +115,14 @@ function initiale(q: Question): Reponse {
       return melangeStrict(q.items ?? [], graineDe(q.id));
     case "libre":
       return "";
+    case "curseur":
+      return null;
+    case "empilement":
+    case "circuit":
+      return [] as number[];
+    case "zonage":
+    case "cablage":
+      return {} as Record<string, number>;
     case "frise":
     case "assoc":
     case "trous":
@@ -150,6 +173,16 @@ function complet(q: Question, rep: Reponse): boolean {
       return Object.keys(rep as object).length === (q.facade?.faces ?? []).length;
     case "pluvial":
       return Object.keys(rep as object).length === (q.pluvial?.ouvrages ?? []).length;
+    case "curseur":
+      return rep !== null;
+    case "empilement":
+      return (rep as number[]).length === (q.empilement?.couches ?? []).length;
+    case "circuit":
+      return (rep as number[]).length === (q.circuit?.chemin ?? []).length;
+    case "zonage":
+      return Object.keys(rep as object).length === (q.zonage?.cellules ?? []).length;
+    case "cablage":
+      return Object.keys(rep as object).length === (q.cablage?.gauche ?? []).length;
     default:
       return false;
   }
@@ -197,6 +230,19 @@ function juste(q: Question, rep: Reponse): boolean {
       return (q.facade?.faces ?? []).every((f, i) => m[i] === f.col);
     case "pluvial":
       return (q.pluvial?.ouvrages ?? []).every((o, i) => m[i] === o.col);
+    case "curseur":
+      return (
+        rep !== null &&
+        Math.abs((rep as number) - (q.curseur?.cible ?? 0)) <= (q.curseur?.tolerance ?? 0)
+      );
+    case "empilement":
+      return (q.empilement?.couches ?? []).every((_, i) => (rep as number[])[i] === i);
+    case "circuit":
+      return (q.circuit?.chemin ?? []).every((e, i) => (rep as number[])[i] === e);
+    case "zonage":
+      return (q.zonage?.cellules ?? []).every((c, i) => m[i] === c.cat);
+    case "cablage":
+      return (q.cablage?.gauche ?? []).every((_, i) => m[i] !== undefined);
     default:
       return false;
   }
