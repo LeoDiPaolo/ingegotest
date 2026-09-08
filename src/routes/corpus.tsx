@@ -63,16 +63,42 @@ function Page() {
       <Entete serie={serie} etat={donnees.cartes} synchro={synchro} jauges={false} />
 
       <main className="mx-auto max-w-2xl space-y-5 px-5 py-5">
-        <div><p className="text-xs font-bold text-brand uppercase">Bibliothèque technique</p><h1 className="text-2xl text-primary">Corpus</h1></div>
-        <label className="flex items-center gap-2 rounded-2xl border border-input bg-card px-4 shadow-[var(--shadow-card)] focus-within:border-ring"><Search className="h-4 w-4 text-muted-foreground" /><input value={filtre} onChange={(e) => setFiltre(e.target.value)} placeholder="Rechercher une question, un thème…" className="min-w-0 flex-1 bg-transparent py-3.5 text-sm outline-none" /></label>
+        <div>
+          <p className="text-xs font-bold text-brand uppercase">Bibliothèque technique</p>
+          <h1 className="text-2xl text-primary">Corpus</h1>
+        </div>
+        <label className="flex items-center gap-2 rounded-2xl border border-input bg-card px-4 shadow-[var(--shadow-card)] focus-within:border-ring">
+          <Search className="h-4 w-4 text-muted-foreground" />
+          <input
+            value={filtre}
+            onChange={(e) => setFiltre(e.target.value)}
+            placeholder="Rechercher une question, un thème…"
+            className="min-w-0 flex-1 bg-transparent py-3.5 text-sm outline-none"
+          />
+        </label>
 
         {groupes.map(({ axe, parSousTheme }) => (
           <section key={axe.id} className="space-y-2">
-            <div className="flex items-center gap-3"><IconeAxe axe={axe} className="h-11 w-11" /><div><p className="text-[0.62rem] font-bold text-muted-foreground uppercase">Dossier {axe.id}</p><h2 className="text-sm font-bold" style={{ color: axe.couleur }}>{axe.nom}</h2></div></div>
+            <div className="flex items-center gap-3">
+              <IconeAxe axe={axe} className="h-11 w-11" />
+              <div>
+                <p className="text-[0.62rem] font-bold text-muted-foreground uppercase">
+                  Dossier {axe.id}
+                </p>
+                <h2 className="text-sm font-bold" style={{ color: axe.couleur }}>
+                  {axe.nom}
+                </h2>
+              </div>
+            </div>
             {[...parSousTheme.entries()].map(([sousTheme, qs]) => (
-              <div key={sousTheme} className="mission-strip overflow-hidden rounded-2xl border border-border">
+              <div
+                key={sousTheme}
+                className="mission-strip overflow-hidden rounded-2xl border border-border"
+              >
                 <button
-                  onClick={() => setOuvert(ouvert === axe.id + sousTheme ? null : axe.id + sousTheme)}
+                  onClick={() =>
+                    setOuvert(ouvert === axe.id + sousTheme ? null : axe.id + sousTheme)
+                  }
                   className="tap flex w-full items-center gap-2 bg-card px-4 py-3 text-left text-sm font-semibold"
                 >
                   <span className="flex-1">{sousTheme}</span>
@@ -94,7 +120,10 @@ function Page() {
                           </span>
                           <span
                             className="rounded-full px-2 py-0.5 font-semibold"
-                            style={{ backgroundColor: `${FAMILLES[q.fam].c}22`, color: FAMILLES[q.fam].c }}
+                            style={{
+                              backgroundColor: `${FAMILLES[q.fam].c}22`,
+                              color: FAMILLES[q.fam].c,
+                            }}
                           >
                             {FAMILLES[q.fam].nom}
                             {q.fam === "M" && q.derniereVerification

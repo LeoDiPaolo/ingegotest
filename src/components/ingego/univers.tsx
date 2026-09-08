@@ -49,15 +49,7 @@ export function IconeAxe({
   );
 }
 
-export function BadgeMaitrise({
-  axe,
-  acquis,
-  total,
-}: {
-  axe: Axe;
-  acquis: number;
-  total: number;
-}) {
+export function BadgeMaitrise({ axe, acquis, total }: { axe: Axe; acquis: number; total: number }) {
   const part = total ? acquis / total : 0;
   const palier = part >= 0.8 ? "Maîtrisé" : part >= 0.35 ? "En chantier" : "À explorer";
   return (
@@ -74,7 +66,10 @@ export function BadgeMaitrise({
         <p className="truncate text-sm font-bold">{axe.court}</p>
         <p className="text-xs text-muted-foreground">{palier}</p>
         <div className="mt-2 h-2 overflow-hidden rounded-full bg-elevated">
-          <div className="h-full rounded-full" style={{ width: `${part * 100}%`, backgroundColor: axe.couleur }} />
+          <div
+            className="h-full rounded-full"
+            style={{ width: `${part * 100}%`, backgroundColor: axe.couleur }}
+          />
         </div>
       </div>
       {part >= 0.8 ? <Award className="h-5 w-5 text-brand" /> : null}

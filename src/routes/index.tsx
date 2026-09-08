@@ -26,7 +26,6 @@ import { carteNeuve, composerSession, planifier, resteAFaire } from "@/lib/ingeg
 import { jaugesParAxe, reinjecter } from "@/lib/ingego/session";
 import { serieJours, useDonnees } from "@/lib/ingego/stockage";
 
-
 const TITRE = "IngéGo — révision du concours d'ingénieur territorial";
 const DESC =
   "Session de révision par répétition espacée pour préparer l'écrit et l'oral du concours d'ingénieur territorial, spécialité bâtiment.";
@@ -60,8 +59,7 @@ function Reviser() {
   const [missionCommencee, setMissionCommencee] = useState(false);
 
   const serie = useMemo(
-    () =>
-      serieJours(donnees.journal.filter((e) => e.id === MARQUE_SESSION).map((e) => e.jour)),
+    () => serieJours(donnees.journal.filter((e) => e.id === MARQUE_SESSION).map((e) => e.jour)),
     [donnees.journal],
   );
   const reste = useMemo(
@@ -77,7 +75,6 @@ function Reviser() {
   }, [donnees.cartes]);
 
   const total = donnees.reglages.parSession;
-
 
   function demarrer() {
     const lot = composerSession(donnees.cartes, donnees.reglages, Date.now());
@@ -158,7 +155,11 @@ function Reviser() {
                 <div className="flex items-center justify-center gap-1 py-2">
                   {bilan.lignes.slice(0, 5).map((l, index) => (
                     <div key={l.axe.id} className="flex items-center">
-                      <IconeAxe axe={l.axe} className="h-12 w-12 sm:h-14 sm:w-14" active={l.part > 0} />
+                      <IconeAxe
+                        axe={l.axe}
+                        className="h-12 w-12 sm:h-14 sm:w-14"
+                        active={l.part > 0}
+                      />
                       {index < 4 ? <span className="h-1 w-3 bg-border sm:w-6" /> : null}
                     </div>
                   ))}
@@ -167,12 +168,17 @@ function Reviser() {
                   <div>
                     <p className="font-bold">{Math.min(total, reste || total)} défis variés</p>
                     <p className="mt-0.5 flex items-center gap-1 text-xs text-muted-foreground">
-                      <Clock3 className="h-3.5 w-3.5" /> environ {Math.max(5, Math.round(total * 0.75))} min
+                      <Clock3 className="h-3.5 w-3.5" /> environ{" "}
+                      {Math.max(5, Math.round(total * 0.75))} min
                     </p>
                   </div>
                   <Castor className="h-16 w-16 shrink-0" />
                 </div>
-                <Button onClick={demarrer} disabled={!pret} className="touche touche-brand mt-4 h-14 w-full rounded-xl bg-brand text-base font-extrabold text-brand-foreground hover:bg-brand/90">
+                <Button
+                  onClick={demarrer}
+                  disabled={!pret}
+                  className="touche touche-brand mt-4 h-14 w-full rounded-xl bg-brand text-base font-extrabold text-brand-foreground hover:bg-brand/90"
+                >
                   <Play className="h-5 w-5" /> Lancer la mission
                 </Button>
               </div>
@@ -192,9 +198,7 @@ function Reviser() {
               <p className="flex items-center gap-1.5 text-[0.68rem] font-bold tracking-[0.14em] text-muted-foreground uppercase">
                 <Target className="h-3.5 w-3.5 text-success" /> Acquises
               </p>
-              <p className="text-3xl font-extrabold text-success tabular-nums">
-                {bilan.acquises}
-              </p>
+              <p className="text-3xl font-extrabold text-success tabular-nums">{bilan.acquises}</p>
               <div className="h-2.5 overflow-hidden rounded-full bg-elevated">
                 <div
                   className="h-full rounded-full bg-success transition-[width] duration-700"
@@ -226,11 +230,17 @@ function Reviser() {
 
             <section className="anim-monte col-span-2 space-y-3">
               <div className="flex items-center justify-between">
-                <p className="flex items-center gap-1.5 text-sm font-bold"><Sparkles className="h-4 w-4 text-brand" /> Badges de maîtrise</p>
-                <Link to="/elevation" className="flex items-center text-xs font-bold text-primary">Tout voir <ChevronRight className="h-4 w-4" /></Link>
+                <p className="flex items-center gap-1.5 text-sm font-bold">
+                  <Sparkles className="h-4 w-4 text-brand" /> Badges de maîtrise
+                </p>
+                <Link to="/elevation" className="flex items-center text-xs font-bold text-primary">
+                  Tout voir <ChevronRight className="h-4 w-4" />
+                </Link>
               </div>
               <div className="grid gap-2 sm:grid-cols-2">
-                {bilan.lignes.slice(0, 4).map((l) => <BadgeMaitrise key={l.axe.id} axe={l.axe} acquis={l.acquises} total={l.total} />)}
+                {bilan.lignes.slice(0, 4).map((l) => (
+                  <BadgeMaitrise key={l.axe.id} axe={l.axe} acquis={l.acquises} total={l.total} />
+                ))}
               </div>
             </section>
           </div>
@@ -242,15 +252,35 @@ function Reviser() {
             </div>
             <div className="space-y-5 p-6 text-center">
               <div className="flex justify-center -space-x-2">
-                {(ordre ?? []).slice(0, 5).map((question) => <IconeAxe key={question.id} axe={question.axe} className="h-14 w-14 bg-card" />)}
+                {(ordre ?? []).slice(0, 5).map((question) => (
+                  <IconeAxe key={question.id} axe={question.axe} className="h-14 w-14 bg-card" />
+                ))}
               </div>
-              <p className="text-sm leading-relaxed text-muted-foreground">Une mission courte mêlant réglementation, technique et décision. Les erreurs reviennent quelques étapes plus loin.</p>
+              <p className="text-sm leading-relaxed text-muted-foreground">
+                Une mission courte mêlant réglementation, technique et décision. Les erreurs
+                reviennent quelques étapes plus loin.
+              </p>
               <div className="grid grid-cols-2 gap-2 text-left">
-                <div className="rounded-xl bg-elevated p-3"><p className="text-2xl font-extrabold text-primary">{ordre?.length ?? total}</p><p className="text-xs text-muted-foreground">défis</p></div>
-                <div className="rounded-xl bg-elevated p-3"><p className="text-2xl font-extrabold text-brand">≈ {Math.max(5, Math.round(total * 0.75))}</p><p className="text-xs text-muted-foreground">minutes</p></div>
+                <div className="rounded-xl bg-elevated p-3">
+                  <p className="text-2xl font-extrabold text-primary">{ordre?.length ?? total}</p>
+                  <p className="text-xs text-muted-foreground">défis</p>
+                </div>
+                <div className="rounded-xl bg-elevated p-3">
+                  <p className="text-2xl font-extrabold text-brand">
+                    ≈ {Math.max(5, Math.round(total * 0.75))}
+                  </p>
+                  <p className="text-xs text-muted-foreground">minutes</p>
+                </div>
               </div>
-              <Button onClick={() => setMissionCommencee(true)} className="touche touche-brand h-14 w-full rounded-xl bg-brand font-extrabold text-brand-foreground hover:bg-brand/90">Démarrer <ArrowRight className="h-5 w-5" /></Button>
-              <button onClick={quitter} className="text-xs font-semibold text-muted-foreground">Retour au tableau de bord</button>
+              <Button
+                onClick={() => setMissionCommencee(true)}
+                className="touche touche-brand h-14 w-full rounded-xl bg-brand font-extrabold text-brand-foreground hover:bg-brand/90"
+              >
+                Démarrer <ArrowRight className="h-5 w-5" />
+              </Button>
+              <button onClick={quitter} className="text-xs font-semibold text-muted-foreground">
+                Retour au tableau de bord
+              </button>
             </div>
           </section>
         ) : fini ? (
@@ -320,4 +350,3 @@ function Reviser() {
     </div>
   );
 }
-

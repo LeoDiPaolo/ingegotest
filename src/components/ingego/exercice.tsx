@@ -37,7 +37,8 @@ function melangeStrict<T>(liste: T[], graine: number): T[] {
   if (liste.length < 2) return [...liste];
   let out = melange(liste, graine);
   let essai = 1;
-  while (out.every((v, i) => v === liste[i]) && essai < 8) out = melange(liste, graine + essai++ * 977);
+  while (out.every((v, i) => v === liste[i]) && essai < 8)
+    out = melange(liste, graine + essai++ * 977);
   if (out.every((v, i) => v === liste[i])) out = [...liste.slice(1), liste[0]];
   return out;
 }
@@ -207,7 +208,6 @@ const optionClass = (etat: "neutre" | "choisi" | "ok" | "ko") =>
     etat === "ko" && "anim-tremble border-destructive bg-destructive/15 text-foreground",
   );
 
-
 const selectClass =
   "w-full rounded-lg border border-input bg-background px-3 py-2 text-sm text-foreground outline-none focus:border-ring";
 
@@ -252,7 +252,6 @@ function decouperExplication(texte: string) {
   return { essentiel: resume.join(" "), details };
 }
 
-
 function reperesPourcentages(texte: string) {
   const reperes = Array.from(texte.matchAll(/(\d{1,3})\s*%\s+en\s+(\d{4})/gu)).map((match) => ({
     valeur: Number(match[1]),
@@ -267,14 +266,20 @@ function TableauAssociation({ paires }: { paires: [string, string][] }) {
       <table className="w-full table-fixed border-collapse text-left text-xs sm:text-sm">
         <thead className="bg-muted text-muted-foreground">
           <tr>
-            <th scope="col" className="w-2/5 px-3 py-2 font-medium">Repère</th>
-            <th scope="col" className="px-3 py-2 font-medium">À retenir</th>
+            <th scope="col" className="w-2/5 px-3 py-2 font-medium">
+              Repère
+            </th>
+            <th scope="col" className="px-3 py-2 font-medium">
+              À retenir
+            </th>
           </tr>
         </thead>
         <tbody className="divide-y divide-border">
           {paires.map(([repere, contenu]) => (
             <tr key={`${repere}-${contenu}`} className="align-top">
-              <th scope="row" className="px-3 py-2.5 font-medium text-foreground">{repere}</th>
+              <th scope="row" className="px-3 py-2.5 font-medium text-foreground">
+                {repere}
+              </th>
               <td className="px-3 py-2.5 leading-relaxed text-muted-foreground">{contenu}</td>
             </tr>
           ))}
@@ -302,12 +307,20 @@ function ReperesChiffres({ reperes }: { reperes: { valeur: number; label: string
   return (
     <div className="space-y-2.5" aria-label="Repères chiffrés">
       {reperes.map((repere) => (
-        <div key={`${repere.label}-${repere.valeur}`} className="grid grid-cols-[3rem_1fr_3rem] items-center gap-2 text-xs">
+        <div
+          key={`${repere.label}-${repere.valeur}`}
+          className="grid grid-cols-[3rem_1fr_3rem] items-center gap-2 text-xs"
+        >
           <span className="font-medium text-muted-foreground">{repere.label}</span>
           <span className="h-2 overflow-hidden rounded-full bg-muted">
-            <span className="block h-full rounded-full bg-primary" style={{ width: `${repere.valeur}%` }} />
+            <span
+              className="block h-full rounded-full bg-primary"
+              style={{ width: `${repere.valeur}%` }}
+            />
           </span>
-          <span className="text-right font-semibold tabular-nums text-foreground">{repere.valeur} %</span>
+          <span className="text-right font-semibold tabular-nums text-foreground">
+            {repere.valeur} %
+          </span>
         </div>
       ))}
     </div>
@@ -337,7 +350,10 @@ function ExplicationStructuree({ q }: { q: Question }) {
                   <ul className="space-y-2.5 text-sm leading-relaxed text-foreground">
                     {details.map((detail, index) => (
                       <li key={`${index}-${detail.slice(0, 24)}`} className="flex gap-2.5">
-                        <span aria-hidden="true" className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand" />
+                        <span
+                          aria-hidden="true"
+                          className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand"
+                        />
                         <span>{detail}</span>
                       </li>
                     ))}
@@ -345,7 +361,9 @@ function ExplicationStructuree({ q }: { q: Question }) {
                 ) : null}
                 {tableau ? (
                   <section aria-label="Tableau de synthèse" className="space-y-2">
-                    <p className="text-xs font-medium text-muted-foreground uppercase">Tableau de synthèse</p>
+                    <p className="text-xs font-medium text-muted-foreground uppercase">
+                      Tableau de synthèse
+                    </p>
                     <TableauAssociation paires={tableau} />
                   </section>
                 ) : null}
@@ -401,26 +419,46 @@ export function Exercice({
     [q],
   );
   const melangeDroite = useMemo(
-    () => melange((q.paires ?? []).map((p, i) => ({ texte: p[1], i })), graineDe(q.id + "d")),
+    () =>
+      melange(
+        (q.paires ?? []).map((p, i) => ({ texte: p[1], i })),
+        graineDe(q.id + "d"),
+      ),
     [q],
   );
   const melangeFrise = useMemo(
-    () => melange((q.points ?? []).map((p, i) => ({ texte: p[1], i })), graineDe(q.id + "f")),
+    () =>
+      melange(
+        (q.points ?? []).map((p, i) => ({ texte: p[1], i })),
+        graineDe(q.id + "f"),
+      ),
     [q],
   );
   /* Les options d'un QCM, les intitulés à associer et les éléments à trier sont
      stockés dans l'ordre logique du corpus : on les présente mélangés pour que
      la bonne réponse ne soit pas devinable à sa position. */
   const melangeOptions = useMemo(
-    () => melangeStrict((q.options ?? []).map((texte, i) => ({ texte, i })), graineDe(q.id + "o")),
+    () =>
+      melangeStrict(
+        (q.options ?? []).map((texte, i) => ({ texte, i })),
+        graineDe(q.id + "o"),
+      ),
     [q],
   );
   const melangeGauche = useMemo(
-    () => melangeStrict((q.paires ?? []).map((paire, i) => ({ paire, i })), graineDe(q.id + "g")),
+    () =>
+      melangeStrict(
+        (q.paires ?? []).map((paire, i) => ({ paire, i })),
+        graineDe(q.id + "g"),
+      ),
     [q],
   );
   const melangeElements = useMemo(
-    () => melangeStrict((q.elements ?? []).map((el, i) => ({ el, i })), graineDe(q.id + "t")),
+    () =>
+      melangeStrict(
+        (q.elements ?? []).map((el, i) => ({ el, i })),
+        graineDe(q.id + "t"),
+      ),
     [q],
   );
 
@@ -442,21 +480,21 @@ export function Exercice({
       <div className="flex items-center gap-3">
         <IconeAxe axe={axe} className="h-12 w-12 shrink-0" />
         <div className="flex min-w-0 flex-1 flex-wrap items-center gap-1.5 text-[0.68rem]">
-        <span
-          className="rounded-full px-2.5 py-1 font-semibold"
-          style={{ backgroundColor: `${axe.couleur}22`, color: axe.couleur }}
-        >
-          {axe.court} · {q.sousTheme}
-        </span>
-        <span className="rounded-full bg-elevated px-2.5 py-1 text-muted-foreground">
-          {TYPES[q.type]}
-        </span>
-        <span className="rounded-full bg-elevated px-2.5 py-1 text-muted-foreground">
-          Niveau {q.niveau}
-        </span>
-        <span className="ml-auto text-muted-foreground">
-          {numero} / {total}
-        </span>
+          <span
+            className="rounded-full px-2.5 py-1 font-semibold"
+            style={{ backgroundColor: `${axe.couleur}22`, color: axe.couleur }}
+          >
+            {axe.court} · {q.sousTheme}
+          </span>
+          <span className="rounded-full bg-elevated px-2.5 py-1 text-muted-foreground">
+            {TYPES[q.type]}
+          </span>
+          <span className="rounded-full bg-elevated px-2.5 py-1 text-muted-foreground">
+            Niveau {q.niveau}
+          </span>
+          <span className="ml-auto text-muted-foreground">
+            {numero} / {total}
+          </span>
         </div>
       </div>
 
@@ -579,8 +617,6 @@ export function Exercice({
         />
       )}
 
-
-
       {q.type === "cycle" && q.cycle && (
         <CycleVie
           donnees={q.cycle}
@@ -682,7 +718,6 @@ export function Exercice({
         </div>
       )}
 
-
       {q.type === "vf" && (
         <div className="grid grid-cols-2 gap-2">
           {[true, false].map((v) => (
@@ -775,7 +810,6 @@ export function Exercice({
           </ol>
         </div>
       )}
-
 
       {q.type === "frise" && (
         <div className="space-y-2">
@@ -978,7 +1012,6 @@ export function Exercice({
                   : "Réponse à revoir"}
             </p>
           ) : null}
-
 
           {q.type === "libre" && (
             <div className="rounded-xl border border-success/40 bg-success/10 p-3">

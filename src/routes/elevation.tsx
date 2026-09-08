@@ -53,10 +53,10 @@ function Page() {
     <div className="min-h-screen bg-background pb-24">
       <Entete serie={serie} etat={donnees.cartes} synchro={synchro} />
 
-       <main className="blueprint mx-auto min-h-[calc(100vh-8rem)] max-w-2xl space-y-7 px-5 py-5">
+      <main className="blueprint mx-auto min-h-[calc(100vh-8rem)] max-w-2xl space-y-7 px-5 py-5">
         <div>
-           <p className="text-xs font-bold text-brand uppercase">Plan de progression</p>
-           <h1 className="text-2xl text-primary">Arbre de compétences</h1>
+          <p className="text-xs font-bold text-brand uppercase">Plan de progression</p>
+          <h1 className="text-2xl text-primary">Arbre de compétences</h1>
           <ul className="mt-2 flex flex-wrap gap-2 text-[0.68rem]">
             {LEGENDE.map(([etat, label]) => (
               <li
@@ -69,38 +69,71 @@ function Page() {
           </ul>
         </div>
 
-         <div className="grid gap-2 sm:grid-cols-2">
-           {AXES.map((axe) => {
-             const qs = CORPUS.filter((q) => q.axe === axe.id);
-             const acquis = qs.filter((q) => etatCarte(donnees.cartes[q.id]) === "acquis").length;
-             return <BadgeMaitrise key={axe.id} axe={axe} acquis={acquis} total={qs.length} />;
-           })}
-         </div>
+        <div className="grid gap-2 sm:grid-cols-2">
+          {AXES.map((axe) => {
+            const qs = CORPUS.filter((q) => q.axe === axe.id);
+            const acquis = qs.filter((q) => etatCarte(donnees.cartes[q.id]) === "acquis").length;
+            return <BadgeMaitrise key={axe.id} axe={axe} acquis={acquis} total={qs.length} />;
+          })}
+        </div>
 
-         {AXES.map((axe, axeIndex) => {
+        {AXES.map((axe, axeIndex) => {
           const qs = CORPUS.filter((q) => q.axe === axe.id);
           if (!qs.length) return null;
-           const themes = [...new Set(qs.map((q) => q.sousTheme))];
+          const themes = [...new Set(qs.map((q) => q.sousTheme))];
           return (
-             <section key={axe.id} className="relative space-y-3 rounded-3xl border border-border bg-card/95 p-4 shadow-[var(--shadow-card)]">
-               {axeIndex < AXES.length - 1 ? <span className="absolute -bottom-8 left-1/2 h-8 border-l-2 border-dashed border-primary/30" /> : null}
-               <div className="flex items-center gap-3">
-                 <IconeAxe axe={axe} className="h-14 w-14" />
-                 <div><p className="text-[0.65rem] font-bold text-muted-foreground uppercase">Étape {axeIndex + 1}</p><h2 className="text-sm font-bold" style={{ color: axe.couleur }}>{axe.nom}</h2></div>
+            <section
+              key={axe.id}
+              className="relative space-y-3 rounded-3xl border border-border bg-card/95 p-4 shadow-[var(--shadow-card)]"
+            >
+              {axeIndex < AXES.length - 1 ? (
+                <span className="absolute -bottom-8 left-1/2 h-8 border-l-2 border-dashed border-primary/30" />
+              ) : null}
+              <div className="flex items-center gap-3">
+                <IconeAxe axe={axe} className="h-14 w-14" />
+                <div>
+                  <p className="text-[0.65rem] font-bold text-muted-foreground uppercase">
+                    Étape {axeIndex + 1}
+                  </p>
+                  <h2 className="text-sm font-bold" style={{ color: axe.couleur }}>
+                    {axe.nom}
+                  </h2>
+                </div>
               </div>
-               <div className="space-y-3">
-                 {themes.map((theme, themeIndex) => {
-                   const questions = qs.filter((q) => q.sousTheme === theme);
-                   const vus = questions.filter((q) => etatCarte(donnees.cartes[q.id]) !== "neuf").length;
-                   return (
-                     <div key={theme} className="flex items-center gap-3">
-                       <button onClick={() => setChoisie(questions[0] ?? null)} className="tap relative grid h-11 w-11 shrink-0 place-items-center rounded-full border-2 bg-elevated text-xs font-extrabold shadow-[0_3px_0_var(--color-border)] active:translate-y-0.5" style={{ borderColor: `${axe.couleur}77`, color: axe.couleur }}>{themeIndex + 1}</button>
-                       <div className="min-w-0 flex-1"><p className="truncate text-xs font-semibold">{theme}</p><div className="mt-1.5 h-2 overflow-hidden rounded-full bg-elevated"><div className="h-full rounded-full" style={{ width: `${questions.length ? (vus / questions.length) * 100 : 0}%`, backgroundColor: axe.couleur }} /></div></div>
-                       <span className="text-[0.65rem] font-semibold text-muted-foreground">{vus}/{questions.length}</span>
-                     </div>
-                   );
-                 })}
-               </div>
+              <div className="space-y-3">
+                {themes.map((theme, themeIndex) => {
+                  const questions = qs.filter((q) => q.sousTheme === theme);
+                  const vus = questions.filter(
+                    (q) => etatCarte(donnees.cartes[q.id]) !== "neuf",
+                  ).length;
+                  return (
+                    <div key={theme} className="flex items-center gap-3">
+                      <button
+                        onClick={() => setChoisie(questions[0] ?? null)}
+                        className="tap relative grid h-11 w-11 shrink-0 place-items-center rounded-full border-2 bg-elevated text-xs font-extrabold shadow-[0_3px_0_var(--color-border)] active:translate-y-0.5"
+                        style={{ borderColor: `${axe.couleur}77`, color: axe.couleur }}
+                      >
+                        {themeIndex + 1}
+                      </button>
+                      <div className="min-w-0 flex-1">
+                        <p className="truncate text-xs font-semibold">{theme}</p>
+                        <div className="mt-1.5 h-2 overflow-hidden rounded-full bg-elevated">
+                          <div
+                            className="h-full rounded-full"
+                            style={{
+                              width: `${questions.length ? (vus / questions.length) * 100 : 0}%`,
+                              backgroundColor: axe.couleur,
+                            }}
+                          />
+                        </div>
+                      </div>
+                      <span className="text-[0.65rem] font-semibold text-muted-foreground">
+                        {vus}/{questions.length}
+                      </span>
+                    </div>
+                  );
+                })}
+              </div>
             </section>
           );
         })}
