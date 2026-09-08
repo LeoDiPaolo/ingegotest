@@ -12,6 +12,7 @@ import {
   X,
   Clock3,
   ChevronRight,
+  ArrowRight,
 } from "lucide-react";
 import { Entete } from "@/components/ingego/entete";
 import { NavBas } from "@/components/ingego/nav-bas";

@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
-import { Download, RotateCcw } from "lucide-react";
+import { Download, RotateCcw, SlidersHorizontal, Database, ShieldCheck } from "lucide-react";
 import { Entete } from "@/components/ingego/entete";
 import { NavBas } from "@/components/ingego/nav-bas";
 import { AXES, CORPUS, FAMILLES, type Famille } from "@/lib/ingego/corpus";
@@ -58,10 +58,10 @@ function Page() {
       <Entete serie={serie} etat={donnees.cartes} synchro={synchro} jauges={false} />
 
       <main className="mx-auto max-w-2xl space-y-5 px-5 py-5">
-        <h1 className="text-2xl text-primary">Réglages</h1>
+        <div><p className="text-xs font-bold text-brand uppercase">Poste de contrôle</p><h1 className="text-2xl text-primary">Réglages</h1></div>
 
         <section className="surface space-y-3 p-4">
-          <h2 className="text-sm font-bold">Axes actifs</h2>
+          <h2 className="flex items-center gap-2 text-sm font-bold"><SlidersHorizontal className="h-4 w-4 text-brand" /> Axes actifs</h2>
           <div className="flex flex-wrap gap-2">
             {AXES.map((a) => {
               const actif = r.axes.includes(a.id);
@@ -71,7 +71,7 @@ function Page() {
                   onClick={() => majReglages({ axes: bascule(r.axes, a.id) })}
                   className={cn(
                     "tap rounded-full border px-3 py-2 text-xs font-semibold",
-                    actif ? "text-white" : "border-border bg-elevated text-muted-foreground",
+                      actif ? "text-primary-foreground" : "border-border bg-elevated text-muted-foreground",
                   )}
                   style={actif ? { backgroundColor: a.couleur, borderColor: a.couleur } : undefined}
                 >
@@ -83,7 +83,7 @@ function Page() {
         </section>
 
         <section className="surface space-y-3 p-4">
-          <h2 className="text-sm font-bold">Familles de contenu</h2>
+          <h2 className="flex items-center gap-2 text-sm font-bold"><ShieldCheck className="h-4 w-4 text-success" /> Familles de contenu</h2>
           <div className="space-y-2">
             {(Object.keys(FAMILLES) as Famille[]).map((f) => {
               const actif = r.familles.includes(f);
@@ -107,7 +107,7 @@ function Page() {
         </section>
 
         <section className="surface space-y-3 p-4">
-          <h2 className="text-sm font-bold">Questions par session : {r.parSession}</h2>
+          <h2 className="flex items-center gap-2 text-sm font-bold"><SlidersHorizontal className="h-4 w-4 text-brand" /> Questions par mission : {r.parSession}</h2>
           <input
             type="range"
             min={5}
@@ -125,7 +125,7 @@ function Page() {
                 r.cible === "normal" ? "border-primary bg-primary/10" : "border-border bg-elevated",
               )}
             >
-              Session normale
+              Mission normale
             </button>
             <button
               onClick={() => majReglages({ cible: "fragiles" })}
@@ -160,6 +160,7 @@ function Page() {
         </section>
 
         <section className="space-y-2">
+          <p className="flex items-center gap-2 text-sm font-bold"><Database className="h-4 w-4 text-primary" /> Données personnelles</p>
           <button
             onClick={exporter}
             className="tap flex w-full items-center justify-center gap-2 rounded-xl border border-border bg-card py-3 text-sm font-semibold"
