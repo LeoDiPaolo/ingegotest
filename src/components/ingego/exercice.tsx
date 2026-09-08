@@ -1182,7 +1182,7 @@ export function Exercice({
                 ).map(([note, label]) => (
                   <button
                     key={note}
-                    onClick={() => onNote(note, note > 0)}
+                    onClick={() => onNote(note, q.type === "libre" ? note > 0 : estJuste)}
                     className={cn(
                       "tap rounded-xl border py-3 text-sm font-semibold",
                       note === 0

@@ -29,9 +29,9 @@ export const Route = createFileRoute("/corpus")({
 
 const ETIQUETTE: Record<string, string> = {
   neuf: "Jamais posée",
-  encours: "En cours",
-  acquis: "Acquise",
-  fragile: "Fragile",
+  encours: "En consolidation",
+  acquis: "Validée du 1er coup",
+  fragile: "À valider du 1er coup",
 };
 
 function Page() {

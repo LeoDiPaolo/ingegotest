@@ -37,8 +37,8 @@ const COULEUR: Record<EtatCarte, string> = {
 const LEGENDE: [EtatCarte, string][] = [
   ["neuf", "Jamais posée"],
   ["encours", "En cours"],
-  ["acquis", "Acquise"],
-  ["fragile", "Fragile"],
+  ["acquis", "Validée du 1er coup"],
+  ["fragile", "À valider du 1er coup"],
 ];
 
 function Page() {
@@ -178,7 +178,7 @@ function Page() {
                           </div>
                         </div>
                         <span className="text-[0.65rem] font-semibold text-muted-foreground">
-                          {vus}/{questions.length}
+                           {terminees}/{questions.length} validées
                         </span>
                       </div>
                     );
