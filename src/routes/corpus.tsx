@@ -93,10 +93,7 @@ function Page() {
                 </div>
               </div>
               {[...parSousTheme.entries()].map(([sousTheme, qs]) => (
-                <div
-                  key={sousTheme}
-                    className="mission-strip overflow-hidden border border-border"
-                >
+                <div key={sousTheme} className="mission-strip overflow-hidden border border-border">
                   <button
                     onClick={() =>
                       setOuvert(ouvert === axe.id + sousTheme ? null : axe.id + sousTheme)

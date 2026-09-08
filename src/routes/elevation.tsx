@@ -57,7 +57,11 @@ function Page() {
         <div className="relative overflow-hidden border-b border-border pb-7">
           <span className="brand-watermark -top-2 right-0">02</span>
           <p className="editorial-kicker relative">Volume 02 · Progression</p>
-          <h1 className="relative mt-2 text-5xl leading-none text-primary sm:text-7xl">L’ouvrage<br /><em>s’élève.</em></h1>
+          <h1 className="relative mt-2 text-5xl leading-none text-primary sm:text-7xl">
+            L’ouvrage
+            <br />
+            <em>s’élève.</em>
+          </h1>
           <ul className="mt-2 flex flex-wrap gap-2 text-[0.68rem]">
             {LEGENDE.map(([etat, label]) => (
               <li
@@ -84,10 +88,7 @@ function Page() {
             if (!qs.length) return null;
             const themes = [...new Set(qs.map((q) => q.sousTheme))];
             return (
-              <section
-                key={axe.id}
-                className="dossier-sheet relative min-w-0 space-y-4 p-5"
-              >
+              <section key={axe.id} className="dossier-sheet relative min-w-0 space-y-4 p-5">
                 {axeIndex < AXES.length - 1 ? (
                   <span className="absolute -bottom-8 left-1/2 h-8 border-l-2 border-dashed border-primary/30" />
                 ) : null}

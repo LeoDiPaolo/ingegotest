@@ -163,76 +163,117 @@ function Reviser() {
                 <LogoIngego className="w-52 object-contain object-left sm:w-64" />
                 <p className="editorial-kicker mt-8">Carnet de missions · Volume 01</p>
                 <h1 className="mt-3 text-6xl leading-[0.85] text-primary sm:text-7xl">
-                  Réviser.<br /><em className="text-brand">Décider.</em><br />Construire.
+                  Réviser.
+                  <br />
+                  <em className="text-brand">Décider.</em>
+                  <br />
+                  Construire.
                 </h1>
                 <p className="mt-7 max-w-sm text-base leading-relaxed text-muted-foreground">
                   Votre préparation de terrain au concours d’ingénieur territorial, entre faits,
                   réglementation et décisions techniques.
                 </p>
                 <div className="journal-rule mt-8 flex gap-8 pt-4 text-sm">
-                  <div><p className="editorial-kicker">Série</p><p className="mt-1 text-xl font-bold text-brand">{serie} j</p></div>
-                  <div><p className="editorial-kicker">Acquises</p><p className="mt-1 text-xl font-bold text-success">{bilan.acquises}</p></div>
-                  <div><p className="editorial-kicker">Corpus</p><p className="mt-1 text-xl font-bold text-primary">{bilan.total}</p></div>
+                  <div>
+                    <p className="editorial-kicker">Série</p>
+                    <p className="mt-1 text-xl font-bold text-brand">{serie} j</p>
+                  </div>
+                  <div>
+                    <p className="editorial-kicker">Acquises</p>
+                    <p className="mt-1 text-xl font-bold text-success">{bilan.acquises}</p>
+                  </div>
+                  <div>
+                    <p className="editorial-kicker">Corpus</p>
+                    <p className="mt-1 text-xl font-bold text-primary">{bilan.total}</p>
+                  </div>
                 </div>
               </div>
             </section>
 
             <div className="grid gap-4 sm:grid-cols-2 lg:col-span-7">
-            <section className="dossier-sheet anim-monte relative flex min-h-[25rem] flex-col justify-end overflow-hidden bg-primary p-6 text-primary-foreground sm:min-h-[29rem]">
-              <div className="blueprint absolute inset-0 opacity-25" />
-              <div className="absolute top-6 right-6 text-[7rem] font-display leading-none text-primary-foreground/10">01</div>
-              <div className="relative">
-                <p className="editorial-kicker text-primary-foreground/60">Mission du jour</p>
-                <h2 className="mt-2 text-4xl leading-none text-primary-foreground">Consolider<br /><em>le terrain.</em></h2>
-                <div className="mt-8 flex items-center gap-1">
-                  {bilan.lignes.slice(0, 5).map((l, index) => (
-                    <div key={l.axe.id} className="flex items-center">
-                      <IconeAxe
-                        axe={l.axe}
-                        className="h-10 w-10 border-primary-foreground/30 bg-card sm:h-11 sm:w-11"
-                        active={l.part > 0}
-                      />
-                      {index < 4 ? <span className="h-px w-2 bg-primary-foreground/30" /> : null}
+              <section className="dossier-sheet anim-monte relative flex min-h-[25rem] flex-col justify-end overflow-hidden bg-primary p-6 text-primary-foreground sm:min-h-[29rem]">
+                <div className="blueprint absolute inset-0 opacity-25" />
+                <div className="absolute top-6 right-6 text-[7rem] font-display leading-none text-primary-foreground/10">
+                  01
+                </div>
+                <div className="relative">
+                  <p className="editorial-kicker text-primary-foreground/60">Mission du jour</p>
+                  <h2 className="mt-2 text-4xl leading-none text-primary-foreground">
+                    Consolider
+                    <br />
+                    <em>le terrain.</em>
+                  </h2>
+                  <div className="mt-8 flex items-center gap-1">
+                    {bilan.lignes.slice(0, 5).map((l, index) => (
+                      <div key={l.axe.id} className="flex items-center">
+                        <IconeAxe
+                          axe={l.axe}
+                          className="h-10 w-10 border-primary-foreground/30 bg-card sm:h-11 sm:w-11"
+                          active={l.part > 0}
+                        />
+                        {index < 4 ? <span className="h-px w-2 bg-primary-foreground/30" /> : null}
+                      </div>
+                    ))}
+                  </div>
+                  <div className="mt-6 flex items-end justify-between gap-3 border-t border-primary-foreground/20 pt-4">
+                    <div className="text-primary-foreground">
+                      <p className="font-bold">{Math.min(total, reste || total)} défis</p>
+                      <p className="mt-0.5 flex items-center gap-1 text-xs opacity-65">
+                        <Clock3 className="h-3.5 w-3.5" /> environ{" "}
+                        {Math.max(5, Math.round(total * 0.75))} min
+                      </p>
                     </div>
+                    <span className="font-display text-4xl italic text-brand">Go.</span>
+                  </div>
+                  <Button
+                    onClick={demarrer}
+                    disabled={!pret}
+                    className="touche touche-brand mt-5 h-14 w-full rounded-none bg-brand text-base font-extrabold text-brand-foreground hover:bg-brand/90"
+                  >
+                    <Play className="h-5 w-5" /> Lancer la mission
+                  </Button>
+                </div>
+              </section>
+
+              <section className="dossier-sheet anim-monte flex min-h-[25rem] flex-col p-6 sm:min-h-[29rem]">
+                <p className="editorial-kicker">Journal de progression</p>
+                <h2 className="mt-2 text-3xl text-primary">
+                  Vos domaines
+                  <br />
+                  <em>en mouvement.</em>
+                </h2>
+                <div className="journal-rule mt-6 space-y-3 pt-5">
+                  {bilan.lignes.slice(0, 4).map((l) => (
+                    <BadgeMaitrise key={l.axe.id} axe={l.axe} acquis={l.acquises} total={l.total} />
                   ))}
                 </div>
-                <div className="mt-6 flex items-end justify-between gap-3 border-t border-primary-foreground/20 pt-4">
-                  <div className="text-primary-foreground">
-                    <p className="font-bold">{Math.min(total, reste || total)} défis</p>
-                    <p className="mt-0.5 flex items-center gap-1 text-xs opacity-65">
-                      <Clock3 className="h-3.5 w-3.5" /> environ{" "}
-                      {Math.max(5, Math.round(total * 0.75))} min
-                    </p>
-                  </div>
-                  <span className="font-display text-4xl italic text-brand">Go.</span>
+                <div className="mt-auto grid grid-cols-2 border-t border-border pt-4">
+                  <Link
+                    to="/elevation"
+                    className="tap flex items-center gap-2 text-sm font-bold text-primary"
+                  >
+                    <Layers className="h-4 w-4" /> Élévation
+                  </Link>
+                  <Link
+                    to="/corpus"
+                    className="tap flex items-center justify-end gap-2 text-sm font-bold text-primary"
+                  >
+                    Corpus <Library className="h-4 w-4" />
+                  </Link>
                 </div>
-                <Button
-                  onClick={demarrer}
-                  disabled={!pret}
-                  className="touche touche-brand mt-5 h-14 w-full rounded-none bg-brand text-base font-extrabold text-brand-foreground hover:bg-brand/90"
-                >
-                  <Play className="h-5 w-5" /> Lancer la mission
-                </Button>
-              </div>
-            </section>
-
-            <section className="dossier-sheet anim-monte flex min-h-[25rem] flex-col p-6 sm:min-h-[29rem]">
-              <p className="editorial-kicker">Journal de progression</p>
-              <h2 className="mt-2 text-3xl text-primary">Vos domaines<br /><em>en mouvement.</em></h2>
-              <div className="journal-rule mt-6 space-y-3 pt-5">
-                {bilan.lignes.slice(0, 4).map((l) => (
-                  <BadgeMaitrise key={l.axe.id} axe={l.axe} acquis={l.acquises} total={l.total} />
-                ))}
-              </div>
-              <div className="mt-auto grid grid-cols-2 border-t border-border pt-4">
-                <Link to="/elevation" className="tap flex items-center gap-2 text-sm font-bold text-primary"><Layers className="h-4 w-4" /> Élévation</Link>
-                <Link to="/corpus" className="tap flex items-center justify-end gap-2 text-sm font-bold text-primary">Corpus <Library className="h-4 w-4" /></Link>
-              </div>
-            </section>
-            <Link to="/corpus" className="tap journal-rule flex items-center justify-between py-5 sm:col-span-2">
-              <div><p className="font-display text-2xl text-primary">Explorer les archives</p><p className="editorial-kicker mt-1">{bilan.total} questions documentées</p></div>
-              <span className="grid h-10 w-10 place-items-center rounded-full border border-primary text-primary"><ChevronRight className="h-5 w-5" /></span>
-            </Link>
+              </section>
+              <Link
+                to="/corpus"
+                className="tap journal-rule flex items-center justify-between py-5 sm:col-span-2"
+              >
+                <div>
+                  <p className="font-display text-2xl text-primary">Explorer les archives</p>
+                  <p className="editorial-kicker mt-1">{bilan.total} questions documentées</p>
+                </div>
+                <span className="grid h-10 w-10 place-items-center rounded-full border border-primary text-primary">
+                  <ChevronRight className="h-5 w-5" />
+                </span>
+              </Link>
             </div>
           </div>
         ) : !missionCommencee ? (
@@ -287,7 +328,7 @@ function Reviser() {
               </div>
               <Button
                 onClick={() => setMissionCommencee(true)}
-                  className="touche touche-brand mt-4 h-14 w-full rounded-none bg-brand text-base font-extrabold text-brand-foreground hover:bg-brand/90"
+                className="touche touche-brand mt-4 h-14 w-full rounded-none bg-brand text-base font-extrabold text-brand-foreground hover:bg-brand/90"
               >
                 Démarrer <ArrowRight className="h-5 w-5" />
               </Button>

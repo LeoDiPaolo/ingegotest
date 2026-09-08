@@ -87,10 +87,26 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:card", content: "summary_large_image" },
       { property: "og:title", content: "IngéGo bêta — relecture des questions" },
       { name: "twitter:title", content: "IngéGo bêta — relecture des questions" },
-      { property: "og:description", content: "Mode bêta test : parcours linéaire des questions du concours d'ingénieur territorial, une par une, numérotées, sans compte ni validation." },
-      { name: "twitter:description", content: "Mode bêta test : parcours linéaire des questions du concours d'ingénieur territorial, une par une, numérotées, sans compte ni validation." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/33a09a89-aae7-43b3-abc4-0aeb083dd3a7/id-preview-af81bb39--8c38ab3e-8798-44c9-84e1-f31b4fb638c8.lovable.app-1785442268195.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/33a09a89-aae7-43b3-abc4-0aeb083dd3a7/id-preview-af81bb39--8c38ab3e-8798-44c9-84e1-f31b4fb638c8.lovable.app-1785442268195.png" },
+      {
+        property: "og:description",
+        content:
+          "Mode bêta test : parcours linéaire des questions du concours d'ingénieur territorial, une par une, numérotées, sans compte ni validation.",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "Mode bêta test : parcours linéaire des questions du concours d'ingénieur territorial, une par une, numérotées, sans compte ni validation.",
+      },
+      {
+        property: "og:image",
+        content:
+          "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/33a09a89-aae7-43b3-abc4-0aeb083dd3a7/id-preview-af81bb39--8c38ab3e-8798-44c9-84e1-f31b4fb638c8.lovable.app-1785442268195.png",
+      },
+      {
+        name: "twitter:image",
+        content:
+          "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/33a09a89-aae7-43b3-abc4-0aeb083dd3a7/id-preview-af81bb39--8c38ab3e-8798-44c9-84e1-f31b4fb638c8.lovable.app-1785442268195.png",
+      },
     ],
     links: [
       {
@@ -104,7 +120,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: "https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Work+Sans:wght@400;500;600;700&display=swap",
       },
       { rel: "icon", href: "/favicon.png", type: "image/png" },
-
     ],
   }),
   shellComponent: RootShell,
