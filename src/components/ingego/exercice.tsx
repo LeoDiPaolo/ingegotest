@@ -18,6 +18,8 @@ import { CoupeParoi } from "@/components/ingego/coupe-paroi";
 import { ParcoursPmr } from "@/components/ingego/parcours-pmr";
 import { FacadeSolaire } from "@/components/ingego/facade-solaire";
 import { PlanPluvial } from "@/components/ingego/plan-pluvial";
+import { IllustrationTheme } from "@/components/ingego/illustration-theme";
+
 import {
   Accordion,
   AccordionContent,
