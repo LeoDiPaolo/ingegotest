@@ -143,10 +143,10 @@ function Reviser() {
     <div className="min-h-screen bg-background pb-24">
       <Entete serie={serie} etat={donnees.cartes} synchro={synchro} jauges={false} />
 
-      <main className="mx-auto max-w-2xl px-5 py-5">
+      <main className={ordre ? "mx-auto max-w-2xl px-5 py-5" : "mx-auto max-w-5xl px-5 py-5"}>
         {!ordre ? (
-          <div className="grid grid-cols-2 gap-3">
-            <section className="blueprint anim-monte col-span-2 overflow-hidden rounded-3xl border border-primary/20 bg-card shadow-[var(--shadow-lift)]">
+          <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
+            <section className="blueprint anim-monte col-span-2 overflow-hidden rounded-3xl border border-primary/20 bg-card shadow-[var(--shadow-lift)] lg:row-span-2">
               <div className="bg-primary px-5 py-3 text-primary-foreground">
                 <p className="text-[0.68rem] font-bold uppercase opacity-75">Mission du jour</p>
                 <h1 className="mt-0.5 text-2xl text-primary-foreground">Consolider le terrain</h1>
@@ -228,7 +228,7 @@ function Reviser() {
               <span className="text-sm font-bold text-foreground">Corpus</span>
             </Link>
 
-            <section className="anim-monte col-span-2 space-y-3">
+            <section className="anim-monte col-span-2 space-y-3 lg:col-start-3 lg:row-span-3">
               <div className="flex items-center justify-between">
                 <p className="flex items-center gap-1.5 text-sm font-bold">
                   <Sparkles className="h-4 w-4 text-brand" /> Badges de maîtrise

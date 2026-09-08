@@ -53,7 +53,7 @@ function Page() {
     <div className="min-h-screen bg-background pb-24">
       <Entete serie={serie} etat={donnees.cartes} synchro={synchro} />
 
-      <main className="blueprint mx-auto min-h-[calc(100vh-8rem)] max-w-2xl space-y-7 px-5 py-5">
+      <main className="blueprint mx-auto min-h-[calc(100vh-8rem)] max-w-5xl space-y-7 px-5 py-5">
         <div>
           <p className="text-xs font-bold text-brand uppercase">Plan de progression</p>
           <h1 className="text-2xl text-primary">Arbre de compétences</h1>
@@ -77,6 +77,7 @@ function Page() {
           })}
         </div>
 
+        <div className="grid gap-7 lg:grid-cols-2">
         {AXES.map((axe, axeIndex) => {
           const qs = CORPUS.filter((q) => q.axe === axe.id);
           if (!qs.length) return null;
@@ -137,6 +138,7 @@ function Page() {
             </section>
           );
         })}
+        </div>
       </main>
 
       {choisie ? (

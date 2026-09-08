@@ -22,7 +22,7 @@ export function Entete({
 
   return (
     <header className="sticky top-0 z-20 border-b border-border bg-card/95 px-5 py-3 backdrop-blur">
-      <div className="mx-auto max-w-2xl">
+      <div className="mx-auto max-w-5xl">
         <div className="flex items-center gap-3">
           <LogoIngego className="h-11 w-auto max-w-[12rem] object-contain object-left" />
           <div className="ml-auto flex shrink-0 items-center gap-2 text-sm font-semibold">

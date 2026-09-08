@@ -12,7 +12,7 @@ const ONGLETS = [
 export function NavBas() {
   return (
     <nav className="fixed inset-x-0 bottom-0 z-30 border-t border-border bg-card/95 shadow-[0_-8px_30px_-20px_color-mix(in_oklab,var(--color-primary)_35%,transparent)] backdrop-blur">
-      <ul className="relative mx-auto flex max-w-2xl px-2 py-1.5">
+      <ul className="relative mx-auto flex max-w-5xl px-2 py-1.5">
         {ONGLETS.map(({ to, label, Icone }) => (
           <li key={to} className="flex-1">
             <Link

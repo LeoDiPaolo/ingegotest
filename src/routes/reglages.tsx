@@ -57,7 +57,7 @@ function Page() {
     <div className="min-h-screen bg-background pb-24">
       <Entete serie={serie} etat={donnees.cartes} synchro={synchro} jauges={false} />
 
-      <main className="mx-auto max-w-2xl space-y-5 px-5 py-5">
+      <main className="mx-auto max-w-3xl space-y-5 px-5 py-5">
         <div>
           <p className="text-xs font-bold text-brand uppercase">Poste de contrôle</p>
           <h1 className="text-2xl text-primary">Réglages</h1>

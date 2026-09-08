@@ -62,7 +62,7 @@ function Page() {
     <div className="min-h-screen bg-background pb-24">
       <Entete serie={serie} etat={donnees.cartes} synchro={synchro} jauges={false} />
 
-      <main className="mx-auto max-w-2xl space-y-5 px-5 py-5">
+      <main className="mx-auto max-w-4xl space-y-5 px-5 py-5">
         <div>
           <p className="text-xs font-bold text-brand uppercase">Bibliothèque technique</p>
           <h1 className="text-2xl text-primary">Corpus</h1>
@@ -77,6 +77,7 @@ function Page() {
           />
         </label>
 
+        <div className="grid items-start gap-5 lg:grid-cols-2">
         {groupes.map(({ axe, parSousTheme }) => (
           <section key={axe.id} className="space-y-2">
             <div className="flex items-center gap-3">
@@ -154,6 +155,7 @@ function Page() {
             ))}
           </section>
         ))}
+        </div>
       </main>
 
       <NavBas />
