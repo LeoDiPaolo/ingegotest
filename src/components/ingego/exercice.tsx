@@ -18,6 +18,8 @@ import { CoupeParoi } from "@/components/ingego/coupe-paroi";
 import { ParcoursPmr } from "@/components/ingego/parcours-pmr";
 import { FacadeSolaire } from "@/components/ingego/facade-solaire";
 import { PlanPluvial } from "@/components/ingego/plan-pluvial";
+import { IllustrationTheme } from "@/components/ingego/illustration-theme";
+
 import {
   Accordion,
   AccordionContent,
@@ -436,7 +438,9 @@ export function Exercice({
 
   return (
     <article className="space-y-5">
+      <IllustrationTheme axe={q.axe} stIdx={q.stIdx} couleur={axe.couleur} />
       <div className="flex flex-wrap items-center gap-2 text-[0.68rem]">
+
         <span
           className="rounded-full px-2.5 py-1 font-semibold"
           style={{ backgroundColor: `${axe.couleur}22`, color: axe.couleur }}
