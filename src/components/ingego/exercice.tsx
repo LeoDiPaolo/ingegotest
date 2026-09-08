@@ -197,12 +197,13 @@ export function partJuste(q: Question, rep: unknown): number {
 
 const optionClass = (etat: "neutre" | "choisi" | "ok" | "ko") =>
   cn(
-    "tap w-full rounded-xl border px-4 py-3 text-left text-sm leading-snug transition-colors",
-    etat === "neutre" && "border-border bg-elevated text-foreground",
-    etat === "choisi" && "border-primary bg-primary/15 text-foreground",
-    etat === "ok" && "border-success bg-success/15 text-foreground",
-    etat === "ko" && "border-destructive bg-destructive/15 text-foreground",
+    "tap w-full rounded-2xl border-2 px-4 py-4 text-left text-sm font-medium leading-snug transition-all duration-150 active:scale-[0.98]",
+    etat === "neutre" && "border-border bg-elevated text-foreground hover:border-primary/40",
+    etat === "choisi" && "border-primary bg-primary/15 text-foreground shadow-[var(--shadow-card)]",
+    etat === "ok" && "anim-pop border-success bg-success/15 text-foreground",
+    etat === "ko" && "anim-tremble border-destructive bg-destructive/15 text-foreground",
   );
+
 
 const selectClass =
   "w-full rounded-lg border border-input bg-background px-3 py-2 text-sm text-foreground outline-none focus:border-ring";
