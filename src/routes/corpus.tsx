@@ -78,83 +78,83 @@ function Page() {
         </label>
 
         <div className="grid items-start gap-5 lg:grid-cols-2">
-        {groupes.map(({ axe, parSousTheme }) => (
-          <section key={axe.id} className="space-y-2">
-            <div className="flex items-center gap-3">
-              <IconeAxe axe={axe} className="h-11 w-11" />
-              <div>
-                <p className="text-[0.62rem] font-bold text-muted-foreground uppercase">
-                  Dossier {axe.id}
-                </p>
-                <h2 className="text-sm font-bold" style={{ color: axe.couleur }}>
-                  {axe.nom}
-                </h2>
+          {groupes.map(({ axe, parSousTheme }) => (
+            <section key={axe.id} className="space-y-2">
+              <div className="flex items-center gap-3">
+                <IconeAxe axe={axe} className="h-11 w-11" />
+                <div>
+                  <p className="text-[0.62rem] font-bold text-muted-foreground uppercase">
+                    Dossier {axe.id}
+                  </p>
+                  <h2 className="text-sm font-bold" style={{ color: axe.couleur }}>
+                    {axe.nom}
+                  </h2>
+                </div>
               </div>
-            </div>
-            {[...parSousTheme.entries()].map(([sousTheme, qs]) => (
-              <div
-                key={sousTheme}
-                className="mission-strip overflow-hidden rounded-2xl border border-border"
-              >
-                <button
-                  onClick={() =>
-                    setOuvert(ouvert === axe.id + sousTheme ? null : axe.id + sousTheme)
-                  }
-                  className="tap flex w-full items-center gap-2 bg-card px-4 py-3 text-left text-sm font-semibold"
+              {[...parSousTheme.entries()].map(([sousTheme, qs]) => (
+                <div
+                  key={sousTheme}
+                  className="mission-strip overflow-hidden rounded-2xl border border-border"
                 >
-                  <span className="flex-1">{sousTheme}</span>
-                  <span className="text-xs text-muted-foreground">{qs.length}</span>
-                  <ChevronDown
-                    className={cn(
-                      "h-4 w-4 transition-transform",
-                      ouvert === axe.id + sousTheme && "rotate-180",
-                    )}
-                  />
-                </button>
-                {ouvert === axe.id + sousTheme ? (
-                  <ul className="divide-y divide-border border-t border-border">
-                    {qs.map((q) => (
-                      <li key={q.id} className="space-y-2 bg-background px-4 py-3">
-                        <div className="flex flex-wrap items-center gap-1.5 text-[0.62rem]">
-                          <span className="rounded-full bg-elevated px-2 py-0.5 text-muted-foreground">
-                            Niveau {q.niv} · {TYPES[q.type]}
-                          </span>
-                          <span
-                            className="rounded-full px-2 py-0.5 font-semibold"
-                            style={{
-                              backgroundColor: `${FAMILLES[q.fam].c}22`,
-                              color: FAMILLES[q.fam].c,
-                            }}
-                          >
-                            {FAMILLES[q.fam].nom}
-                            {q.fam === "M" && q.derniereVerification
-                              ? ` · vérifié ${q.derniereVerification}`
-                              : ""}
-                          </span>
-                          <span className="rounded-full bg-elevated px-2 py-0.5 text-muted-foreground">
-                            {ETIQUETTE[etatCarte(donnees.cartes[q.id])]}
-                          </span>
-                        </div>
-                        <p className="text-sm leading-snug">{q.question}</p>
-                        {attendue(q) ? (
-                          <p className="text-xs text-success">Réponse : {attendue(q)}</p>
-                        ) : null}
-                        <p className="text-xs text-muted-foreground">{q.explication}</p>
-                        <textarea
-                          defaultValue={donnees.commentaires[q.id] ?? ""}
-                          onBlur={(e) => commenter(q.id, e.target.value)}
-                          placeholder="Observation personnelle…"
-                          rows={2}
-                          className="w-full rounded-lg border border-input bg-card px-3 py-2 text-xs outline-none focus:border-ring"
-                        />
-                      </li>
-                    ))}
-                  </ul>
-                ) : null}
-              </div>
-            ))}
-          </section>
-        ))}
+                  <button
+                    onClick={() =>
+                      setOuvert(ouvert === axe.id + sousTheme ? null : axe.id + sousTheme)
+                    }
+                    className="tap flex w-full items-center gap-2 bg-card px-4 py-3 text-left text-sm font-semibold"
+                  >
+                    <span className="flex-1">{sousTheme}</span>
+                    <span className="text-xs text-muted-foreground">{qs.length}</span>
+                    <ChevronDown
+                      className={cn(
+                        "h-4 w-4 transition-transform",
+                        ouvert === axe.id + sousTheme && "rotate-180",
+                      )}
+                    />
+                  </button>
+                  {ouvert === axe.id + sousTheme ? (
+                    <ul className="divide-y divide-border border-t border-border">
+                      {qs.map((q) => (
+                        <li key={q.id} className="space-y-2 bg-background px-4 py-3">
+                          <div className="flex flex-wrap items-center gap-1.5 text-[0.62rem]">
+                            <span className="rounded-full bg-elevated px-2 py-0.5 text-muted-foreground">
+                              Niveau {q.niv} · {TYPES[q.type]}
+                            </span>
+                            <span
+                              className="rounded-full px-2 py-0.5 font-semibold"
+                              style={{
+                                backgroundColor: `${FAMILLES[q.fam].c}22`,
+                                color: FAMILLES[q.fam].c,
+                              }}
+                            >
+                              {FAMILLES[q.fam].nom}
+                              {q.fam === "M" && q.derniereVerification
+                                ? ` · vérifié ${q.derniereVerification}`
+                                : ""}
+                            </span>
+                            <span className="rounded-full bg-elevated px-2 py-0.5 text-muted-foreground">
+                              {ETIQUETTE[etatCarte(donnees.cartes[q.id])]}
+                            </span>
+                          </div>
+                          <p className="text-sm leading-snug">{q.question}</p>
+                          {attendue(q) ? (
+                            <p className="text-xs text-success">Réponse : {attendue(q)}</p>
+                          ) : null}
+                          <p className="text-xs text-muted-foreground">{q.explication}</p>
+                          <textarea
+                            defaultValue={donnees.commentaires[q.id] ?? ""}
+                            onBlur={(e) => commenter(q.id, e.target.value)}
+                            placeholder="Observation personnelle…"
+                            rows={2}
+                            className="w-full rounded-lg border border-input bg-card px-3 py-2 text-xs outline-none focus:border-ring"
+                          />
+                        </li>
+                      ))}
+                    </ul>
+                  ) : null}
+                </div>
+              ))}
+            </section>
+          ))}
         </div>
       </main>
 
