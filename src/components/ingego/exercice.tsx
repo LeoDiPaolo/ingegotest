@@ -1044,7 +1044,7 @@ export function Exercice({
             </div>
           )}
 
-            <div className="rounded-xl border border-border bg-card p-2.5 sm:p-3">
+          <div className="rounded-xl border border-border bg-card p-2.5 sm:p-3">
             <p className="text-[0.68rem] tracking-[0.15em] text-muted-foreground uppercase">
               Ce qu'il faut retenir
             </p>
