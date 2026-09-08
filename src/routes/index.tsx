@@ -1,13 +1,26 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
-import { CheckCircle2, Play, RotateCcw, X } from "lucide-react";
+import {
+  CheckCircle2,
+  Flame,
+  Layers,
+  Library,
+  Play,
+  RotateCcw,
+  Sparkles,
+  Target,
+  X,
+} from "lucide-react";
 import { Entete } from "@/components/ingego/entete";
 import { NavBas } from "@/components/ingego/nav-bas";
+import { Confettis } from "@/components/ingego/confettis";
+import { Castor } from "@/components/ingego/marque";
 import { Exercice } from "@/components/ingego/exercice";
 import { AXE_BY_ID, type Question } from "@/lib/ingego/corpus";
 import { carteNeuve, composerSession, planifier, resteAFaire } from "@/lib/ingego/algo";
-import { reinjecter } from "@/lib/ingego/session";
+import { jaugesParAxe, reinjecter } from "@/lib/ingego/session";
 import { serieJours, useDonnees } from "@/lib/ingego/stockage";
+
 
 const TITRE = "IngéGo — révision du concours d'ingénieur territorial";
 const DESC =
@@ -50,7 +63,15 @@ function Reviser() {
     [donnees.cartes, donnees.reglages, pret],
   );
 
+  const bilan = useMemo(() => {
+    const l = jaugesParAxe(donnees.cartes);
+    const total = l.reduce((s, x) => s + x.total, 0);
+    const acquises = l.reduce((s, x) => s + x.acquises, 0);
+    return { total, acquises, part: total ? acquises / total : 0, lignes: l };
+  }, [donnees.cartes]);
+
   const total = donnees.reglages.parSession;
+
 
   function demarrer() {
     const lot = composerSession(donnees.cartes, donnees.reglages, Date.now());
@@ -70,6 +91,9 @@ function Reviser() {
 
   function noter(q: Question, note: number) {
     const maintenant = Date.now();
+    if (typeof navigator !== "undefined" && "vibrate" in navigator) {
+      navigator.vibrate(note === 0 ? [18, 40, 18] : 14);
+    }
     enregistrerCarte(
       q.id,
       planifier(donnees.cartes[q.id] ?? carteNeuve(), note, maintenant),
@@ -113,47 +137,144 @@ function Reviser() {
 
   return (
     <div className="min-h-screen bg-background pb-24">
-      <Entete serie={serie} etat={donnees.cartes} synchro={synchro} jauges={!ordre} />
+      <Entete serie={serie} etat={donnees.cartes} synchro={synchro} jauges={false} />
 
       <main className="mx-auto max-w-2xl px-5 py-5">
         {!ordre ? (
-          <section className="surface space-y-4 p-5">
-            <h1 className="text-2xl text-primary">Session du jour</h1>
-            <p className="text-sm text-muted-foreground">
-              {reste > 0
-                ? `${reste} question${reste > 1 ? "s" : ""} à travailler aujourd'hui (révisions dues et nouveautés du niveau en cours de chaque thème).`
-                : "Rien d'obligatoire aujourd'hui : les révisions dues sont à jour. Vous pouvez tout de même ouvrir une session."}
-            </p>
-            <button
-              onClick={demarrer}
-              disabled={!pret || reste === 0}
-              className="tap flex w-full items-center justify-center gap-2 rounded-2xl bg-brand py-4 text-base font-bold text-brand-foreground disabled:opacity-40"
+          <div className="grid grid-cols-2 gap-3">
+            {/* Tuile principale : la séance du jour */}
+            <section className="anim-monte col-span-2 overflow-hidden rounded-3xl bg-primary p-5 text-primary-foreground shadow-[var(--shadow-lift)]">
+              <div className="flex items-start gap-3">
+                <div className="min-w-0 flex-1">
+                  <p className="text-[0.68rem] font-bold tracking-[0.18em] uppercase opacity-70">
+                    Séance du jour
+                  </p>
+                  <h1 className="mt-1 text-2xl text-primary-foreground">
+                    {reste > 0 ? `${Math.min(total, reste)} questions vous attendent` : "Tout est à jour"}
+                  </h1>
+                  <p className="mt-1 text-sm opacity-80">
+                    {reste > 0
+                      ? `${reste} question${reste > 1 ? "s" : ""} dues au total (révisions et nouveautés du niveau en cours).`
+                      : "Aucune révision due. Vous pouvez tout de même ouvrir une séance libre."}
+                  </p>
+                </div>
+                <Castor className="hidden h-20 w-20 shrink-0 sm:block" />
+              </div>
+              <button
+                onClick={demarrer}
+                disabled={!pret || reste === 0}
+                className="tap touche touche-brand mt-4 flex w-full items-center justify-center gap-2 bg-brand py-4 text-base font-extrabold text-brand-foreground uppercase disabled:opacity-40"
+              >
+                <Play className="h-5 w-5" />
+                Commencer
+              </button>
+            </section>
+
+            <section className="anim-monte surface flex flex-col justify-between gap-1 p-4">
+              <p className="flex items-center gap-1.5 text-[0.68rem] font-bold tracking-[0.14em] text-muted-foreground uppercase">
+                <Flame className="h-3.5 w-3.5 text-brand" /> Série
+              </p>
+              <p className="text-3xl font-extrabold text-brand tabular-nums">{serie}</p>
+              <p className="text-xs text-muted-foreground">
+                jour{serie > 1 ? "s" : ""} d'affilée — une séance non terminée ne compte pas.
+              </p>
+            </section>
+
+            <section className="anim-monte surface flex flex-col justify-between gap-1 p-4">
+              <p className="flex items-center gap-1.5 text-[0.68rem] font-bold tracking-[0.14em] text-muted-foreground uppercase">
+                <Target className="h-3.5 w-3.5 text-success" /> Acquises
+              </p>
+              <p className="text-3xl font-extrabold text-success tabular-nums">
+                {bilan.acquises}
+              </p>
+              <div className="h-2.5 overflow-hidden rounded-full bg-elevated">
+                <div
+                  className="h-full rounded-full bg-success transition-[width] duration-700"
+                  style={{ width: `${bilan.part * 100}%` }}
+                />
+              </div>
+              <p className="text-xs text-muted-foreground">sur {bilan.total} questions</p>
+            </section>
+
+            <Link
+              to="/elevation"
+              className="tap anim-monte surface flex items-center gap-3 p-4 transition-transform active:scale-[0.98]"
             >
-              <Play className="h-5 w-5" />
-              Commencer · {Math.min(total, Math.max(reste, 0))} questions
-            </button>
-            <p className="text-xs text-muted-foreground">
-              Série en cours : {serie} jour{serie > 1 ? "s" : ""} · une session non terminée ne
-              compte pas dans la série.
-            </p>
-          </section>
+              <span className="grid h-10 w-10 place-items-center rounded-xl bg-primary/10 text-primary">
+                <Layers className="h-5 w-5" />
+              </span>
+              <span className="text-sm font-bold text-foreground">Élévation</span>
+            </Link>
+
+            <Link
+              to="/corpus"
+              className="tap anim-monte surface flex items-center gap-3 p-4 transition-transform active:scale-[0.98]"
+            >
+              <span className="grid h-10 w-10 place-items-center rounded-xl bg-brand/15 text-brand">
+                <Library className="h-5 w-5" />
+              </span>
+              <span className="text-sm font-bold text-foreground">Corpus</span>
+            </Link>
+
+            {/* Progression par axe, en gros et en couleur */}
+            <section className="anim-monte surface col-span-2 space-y-3 p-4">
+              <p className="flex items-center gap-1.5 text-[0.68rem] font-bold tracking-[0.14em] text-muted-foreground uppercase">
+                <Sparkles className="h-3.5 w-3.5 text-brand" /> Progression par axe
+              </p>
+              {bilan.lignes.map((l) => (
+                <div key={l.axe.id}>
+                  <div className="flex items-baseline justify-between">
+                    <span className="text-sm font-bold" style={{ color: l.axe.couleur }}>
+                      {l.axe.court}
+                    </span>
+                    <span className="text-xs font-semibold text-muted-foreground tabular-nums">
+                      {l.acquises}/{l.total}
+                    </span>
+                  </div>
+                  <div className="mt-1 h-4 overflow-hidden rounded-full bg-elevated ring-1 ring-border/60">
+                    <div className="flex h-full">
+                      <div
+                        className="h-full rounded-l-full transition-[width] duration-700"
+                        style={{ width: `${l.part * 100}%`, backgroundColor: l.axe.couleur }}
+                      />
+                      <div
+                        className="h-full transition-[width] duration-700"
+                        style={{
+                          width: `${Math.max(0, l.partVue - l.part) * 100}%`,
+                          backgroundColor: `${l.axe.couleur}55`,
+                        }}
+                      />
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </section>
+          </div>
         ) : fini ? (
-          <section className="surface space-y-4 p-6 text-center">
-            <CheckCircle2 className="mx-auto h-12 w-12 text-success" />
-            <h1 className="text-2xl text-primary">Session terminée</h1>
+          <section className="surface anim-pop space-y-4 p-6 text-center">
+            <Confettis />
+            <Castor className="mx-auto h-28 w-28" />
+            <CheckCircle2 className="mx-auto h-10 w-10 text-success" />
+            <h1 className="text-2xl text-primary">Séance terminée</h1>
             <p className="text-sm text-muted-foreground">
               {justes} / {faits.length} questions réussies du premier coup.
             </p>
+            <div className="h-4 overflow-hidden rounded-full bg-elevated ring-1 ring-border/60">
+              <div
+                className="h-full rounded-full bg-success transition-[width] duration-1000"
+                style={{ width: `${(justes / Math.max(1, faits.length)) * 100}%` }}
+              />
+            </div>
             <div className="flex gap-2">
               <button
                 onClick={demarrer}
-                className="tap flex-1 rounded-xl bg-brand py-3 text-sm font-bold text-brand-foreground"
+                className="tap touche touche-brand flex-1 bg-brand py-3.5 text-sm font-extrabold text-brand-foreground uppercase"
               >
-                <RotateCcw className="mr-1 inline h-4 w-4" /> Nouvelle session
+                <RotateCcw className="mr-1 inline h-4 w-4" /> Nouvelle séance
               </button>
               <button
                 onClick={quitter}
-                className="tap flex-1 rounded-xl border border-border bg-card py-3 text-sm font-semibold"
+                className="tap touche flex-1 border border-border bg-card py-3.5 text-sm font-bold"
               >
                 Terminer
               </button>
@@ -162,24 +283,24 @@ function Reviser() {
         ) : q ? (
           <section className="space-y-4">
             <div className="flex items-center gap-3">
-              <button onClick={quitter} aria-label="Quitter la session" className="tap p-1">
+              <button onClick={quitter} aria-label="Quitter la séance" className="tap p-1">
                 <X className="h-5 w-5 text-muted-foreground" />
               </button>
-              <div className="h-3 flex-1 overflow-hidden rounded-full bg-elevated">
+              <div className="h-4 flex-1 overflow-hidden rounded-full bg-elevated ring-1 ring-border/60">
                 <div
-                  className="h-full rounded-full transition-[width] duration-300"
+                  className="h-full rounded-full transition-[width] duration-500"
                   style={{
                     width: `${avance}%`,
                     backgroundColor: AXE_BY_ID[q.axe]?.couleur ?? "var(--color-brand)",
                   }}
                 />
               </div>
-              <span className="text-xs font-semibold text-muted-foreground">
+              <span className="text-xs font-bold text-muted-foreground tabular-nums">
                 {faits.length}/{total}
               </span>
             </div>
 
-            <div className="surface p-5">
+            <div className="surface anim-pop p-5">
               <Exercice
                 key={`${q.id}-${i}`}
                 q={q}
@@ -196,3 +317,4 @@ function Reviser() {
     </div>
   );
 }
+

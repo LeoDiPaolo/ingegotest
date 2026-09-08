@@ -1,11 +1,11 @@
 import { CloudOff, Flame, RefreshCw } from "lucide-react";
-import { MotIngego } from "@/components/ingego/marque";
+import { MotIngego, PastilleIngego } from "@/components/ingego/marque";
 import { jaugesParAxe } from "@/lib/ingego/session";
 import type { Etat } from "@/lib/ingego/algo";
 
 export type EtatSynchro = "local" | "en-cours" | "ok" | "erreur";
 
-/* Bandeau haut : identité, série de jours et jauges de progression par axe,
+/* Bandeau haut : logo IngéGo, série de jours et jauges de progression par axe,
    lisibles d'un coup d'œil (couleur de l'axe, épaisseur généreuse). */
 export function Entete({
   serie,
@@ -23,9 +23,10 @@ export function Entete({
   return (
     <header className="sticky top-0 z-20 border-b border-border bg-card/95 px-5 py-3 backdrop-blur">
       <div className="mx-auto max-w-2xl">
-        <div className="flex items-center gap-2.5">
+        <div className="flex items-center gap-3">
+          <PastilleIngego className="h-10 w-10 shrink-0 shadow-[var(--shadow-card)]" />
           <div className="min-w-0">
-            <MotIngego className="text-lg" />
+            <MotIngego className="text-xl" />
             <p className="truncate text-[0.65rem] text-muted-foreground">
               Concours d'ingénieur territorial · écrit juin 2027
             </p>
@@ -39,10 +40,10 @@ export function Entete({
               <RefreshCw className="h-4 w-4 animate-spin text-muted-foreground" />
             ) : null}
             <span
-              className="flex items-center gap-1 rounded-full bg-brand/15 px-2.5 py-1 text-brand"
+              className="flex items-center gap-1 rounded-full bg-brand/15 px-3 py-1.5 text-brand"
               title="Jours consécutifs avec une session terminée"
             >
-              <Flame className="h-4 w-4" />
+              <Flame className={serie > 0 ? "h-4 w-4 animate-pulse" : "h-4 w-4"} />
               {serie}
             </span>
           </div>
@@ -53,21 +54,24 @@ export function Entete({
             {lignes.map((l) => (
               <div key={l.axe.id}>
                 <div className="flex items-baseline justify-between gap-1">
-                  <span className="truncate text-[0.66rem] font-semibold" style={{ color: l.axe.couleur }}>
+                  <span
+                    className="truncate text-[0.68rem] font-bold"
+                    style={{ color: l.axe.couleur }}
+                  >
                     {l.axe.court}
                   </span>
-                  <span className="text-[0.62rem] text-muted-foreground">
+                  <span className="text-[0.62rem] font-semibold text-muted-foreground tabular-nums">
                     {Math.round(l.part * 100)} %
                   </span>
                 </div>
-                <div className="mt-1 h-2.5 overflow-hidden rounded-full bg-elevated">
+                <div className="mt-1 h-3.5 overflow-hidden rounded-full bg-elevated ring-1 ring-border/60">
                   <div className="flex h-full">
                     <div
-                      className="h-full rounded-l-full transition-[width] duration-500"
+                      className="h-full rounded-l-full transition-[width] duration-700"
                       style={{ width: `${l.part * 100}%`, backgroundColor: l.axe.couleur }}
                     />
                     <div
-                      className="h-full transition-[width] duration-500"
+                      className="h-full transition-[width] duration-700"
                       style={{
                         width: `${Math.max(0, l.partVue - l.part) * 100}%`,
                         backgroundColor: `${l.axe.couleur}55`,

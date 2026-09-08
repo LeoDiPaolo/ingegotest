@@ -197,12 +197,13 @@ export function partJuste(q: Question, rep: unknown): number {
 
 const optionClass = (etat: "neutre" | "choisi" | "ok" | "ko") =>
   cn(
-    "tap w-full rounded-xl border px-4 py-3 text-left text-sm leading-snug transition-colors",
-    etat === "neutre" && "border-border bg-elevated text-foreground",
-    etat === "choisi" && "border-primary bg-primary/15 text-foreground",
-    etat === "ok" && "border-success bg-success/15 text-foreground",
-    etat === "ko" && "border-destructive bg-destructive/15 text-foreground",
+    "tap w-full rounded-2xl border-2 px-4 py-4 text-left text-sm font-medium leading-snug transition-all duration-150 active:scale-[0.98]",
+    etat === "neutre" && "border-border bg-elevated text-foreground hover:border-primary/40",
+    etat === "choisi" && "border-primary bg-primary/15 text-foreground shadow-[var(--shadow-card)]",
+    etat === "ok" && "anim-pop border-success bg-success/15 text-foreground",
+    etat === "ko" && "anim-tremble border-destructive bg-destructive/15 text-foreground",
   );
+
 
 const selectClass =
   "w-full rounded-lg border border-input bg-background px-3 py-2 text-sm text-foreground outline-none focus:border-ring";
@@ -941,10 +942,14 @@ export function Exercice({
         <button
           onClick={() => {
             setCorrige(true);
-            onCorrige?.(juste(q, rep), partJuste(q, rep));
+            const ok = juste(q, rep);
+            if (typeof navigator !== "undefined" && "vibrate" in navigator) {
+              navigator.vibrate(ok ? 16 : [20, 45, 20]);
+            }
+            onCorrige?.(ok, partJuste(q, rep));
           }}
           disabled={!complet(q, rep)}
-          className="tap w-full rounded-xl bg-primary py-3.5 text-sm font-semibold text-primary-foreground disabled:opacity-40"
+          className="tap touche w-full bg-primary py-4 text-sm font-extrabold text-primary-foreground uppercase disabled:opacity-40 disabled:shadow-none"
         >
           {q.type === "libre" ? "Voir la réponse attendue" : "Valider"}
         </button>
@@ -953,18 +958,21 @@ export function Exercice({
           {!autoNote || q.type === "vf" ? (
             <p
               className={cn(
-                "flex items-center gap-2 text-sm font-semibold",
-                estJuste ? "text-success" : "text-destructive",
+                "flex items-center gap-2 rounded-xl px-3 py-3 text-sm font-bold",
+                estJuste
+                  ? "anim-pop bg-success/15 text-success"
+                  : "anim-tremble bg-destructive/15 text-destructive",
               )}
             >
-              {estJuste ? <Check className="h-4 w-4" /> : <X className="h-4 w-4" />}
+              {estJuste ? <Check className="h-5 w-5" /> : <X className="h-5 w-5" />}
               {estJuste
-                ? "Réponse juste"
+                ? "Bravo, réponse juste !"
                 : part > 0
                   ? `Réponse partielle · ${Math.round(part * 100)} % d'éléments corrects`
                   : "Réponse à revoir"}
             </p>
           ) : null}
+
 
           {q.type === "libre" && (
             <div className="rounded-xl border border-success/40 bg-success/10 p-3">
