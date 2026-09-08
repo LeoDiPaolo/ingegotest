@@ -91,6 +91,9 @@ function Reviser() {
 
   function noter(q: Question, note: number) {
     const maintenant = Date.now();
+    if (typeof navigator !== "undefined" && "vibrate" in navigator) {
+      navigator.vibrate(note === 0 ? [18, 40, 18] : 14);
+    }
     enregistrerCarte(
       q.id,
       planifier(donnees.cartes[q.id] ?? carteNeuve(), note, maintenant),
@@ -134,7 +137,7 @@ function Reviser() {
 
   return (
     <div className="min-h-screen bg-background pb-24">
-      <Entete serie={serie} etat={donnees.cartes} synchro={synchro} jauges={!!ordre === false} />
+      <Entete serie={serie} etat={donnees.cartes} synchro={synchro} jauges={false} />
 
       <main className="mx-auto max-w-2xl px-5 py-5">
         {!ordre ? (
@@ -155,7 +158,7 @@ function Reviser() {
                       : "Aucune révision due. Vous pouvez tout de même ouvrir une séance libre."}
                   </p>
                 </div>
-                <Castor className="hidden h-20 w-20 shrink-0 xs:block sm:block" />
+                <Castor className="hidden h-20 w-20 shrink-0 sm:block" />
               </div>
               <button
                 onClick={demarrer}
