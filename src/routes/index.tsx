@@ -138,12 +138,23 @@ function Reviser() {
 
   const q = ordre && !fini ? ordre[i] : null;
   const avance = ordre ? Math.min(100, (faits.length / Math.max(1, total)) * 100) : 0;
+  const exerciceActif = Boolean(ordre && missionCommencee && !fini && q);
 
   return (
-    <div className="min-h-screen bg-background pb-24">
-      <Entete serie={serie} etat={donnees.cartes} synchro={synchro} jauges={false} />
+    <div className={exerciceActif ? "min-h-dvh bg-background" : "min-h-screen bg-background pb-24"}>
+      {!exerciceActif ? (
+        <Entete serie={serie} etat={donnees.cartes} synchro={synchro} jauges={false} />
+      ) : null}
 
-      <main className={ordre ? "mx-auto max-w-2xl px-5 py-5" : "mx-auto max-w-5xl px-5 py-5"}>
+      <main
+        className={
+          exerciceActif
+            ? "mx-auto max-w-2xl px-3 py-3 sm:px-5 sm:py-5"
+            : ordre
+              ? "mx-auto max-w-2xl px-5 py-5"
+              : "mx-auto max-w-5xl px-5 py-5"
+        }
+      >
         {!ordre ? (
           <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
             <section className="blueprint anim-monte col-span-2 overflow-hidden rounded-3xl border border-primary/20 bg-card shadow-[var(--shadow-lift)] lg:row-span-2">
@@ -314,8 +325,8 @@ function Reviser() {
             </div>
           </section>
         ) : q ? (
-          <section className="space-y-4">
-            <div className="flex items-center gap-3">
+          <section className="space-y-2.5 sm:space-y-4">
+            <div className="flex items-center gap-2 sm:gap-3">
               <button onClick={quitter} aria-label="Quitter la séance" className="tap p-1">
                 <X className="h-5 w-5 text-muted-foreground" />
               </button>
@@ -333,7 +344,7 @@ function Reviser() {
               </span>
             </div>
 
-            <div className="surface anim-pop p-5">
+            <div className="surface anim-pop p-3.5 sm:p-5">
               <Exercice
                 key={`${q.id}-${i}`}
                 q={q}
@@ -346,7 +357,7 @@ function Reviser() {
         ) : null}
       </main>
 
-      <NavBas />
+      {!exerciceActif ? <NavBas /> : null}
     </div>
   );
 }

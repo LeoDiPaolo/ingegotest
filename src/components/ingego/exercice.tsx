@@ -201,7 +201,7 @@ export function partJuste(q: Question, rep: unknown): number {
 
 const optionClass = (etat: "neutre" | "choisi" | "ok" | "ko") =>
   cn(
-    "tap w-full rounded-2xl border-2 px-4 py-4 text-left text-sm font-medium leading-snug transition-all duration-150 active:scale-[0.98]",
+    "tap w-full rounded-xl border-2 px-3.5 py-3 text-left text-sm font-medium leading-snug transition-all duration-150 active:scale-[0.98] sm:rounded-2xl sm:px-4 sm:py-4",
     etat === "neutre" && "border-border bg-elevated text-foreground hover:border-primary/40",
     etat === "choisi" && "border-primary bg-primary/15 text-foreground shadow-[var(--shadow-card)]",
     etat === "ok" && "anim-pop border-success bg-success/15 text-foreground",
@@ -337,7 +337,9 @@ function ExplicationStructuree({ q }: { q: Question }) {
 
   return (
     <div className="mt-2 space-y-3">
-      <p className="border-l-2 border-primary pl-3 text-sm leading-relaxed">{essentiel}</p>
+      <p className="border-l-2 border-primary pl-3 text-[0.82rem] leading-5 sm:text-sm sm:leading-relaxed">
+        {essentiel}
+      </p>
       {avecComplements ? (
         <Accordion type="single" collapsible>
           <AccordionItem value="details" className="rounded-lg border border-border px-3">
@@ -476,33 +478,33 @@ export function Exercice({
   }
 
   return (
-    <article className="space-y-5">
-      <div className="flex items-center gap-3">
-        <IconeAxe axe={axe} className="h-12 w-12 shrink-0" />
+    <article className="space-y-3 sm:space-y-5">
+      <div className="flex items-center gap-2 sm:gap-3">
+        <IconeAxe axe={axe} className="h-9 w-9 shrink-0 sm:h-12 sm:w-12" />
         <div className="flex min-w-0 flex-1 flex-wrap items-center gap-1.5 text-[0.68rem]">
           <span
-            className="rounded-full px-2.5 py-1 font-semibold"
+            className="rounded-full px-2 py-0.5 font-semibold sm:px-2.5 sm:py-1"
             style={{ backgroundColor: `${axe.couleur}22`, color: axe.couleur }}
           >
             {axe.court} · {q.sousTheme}
           </span>
-          <span className="rounded-full bg-elevated px-2.5 py-1 text-muted-foreground">
+          <span className="hidden rounded-full bg-elevated px-2 py-0.5 text-muted-foreground sm:inline sm:px-2.5 sm:py-1">
             {TYPES[q.type]}
           </span>
-          <span className="rounded-full bg-elevated px-2.5 py-1 text-muted-foreground">
+          <span className="hidden rounded-full bg-elevated px-2 py-0.5 text-muted-foreground sm:inline sm:px-2.5 sm:py-1">
             Niveau {q.niveau}
           </span>
-          <span className="ml-auto text-muted-foreground">
+          <span className="ml-auto hidden text-muted-foreground sm:inline">
             {numero} / {total}
           </span>
         </div>
       </div>
 
-      <h2 className="text-xl leading-snug">{q.question}</h2>
+      <h2 className="text-lg leading-snug sm:text-xl">{q.question}</h2>
 
       {/* ---------- SAISIE ---------- */}
       {q.type === "qcm" && (
-        <div className="space-y-2">
+        <div className="space-y-1.5 sm:space-y-2">
           {melangeOptions.map(({ texte: o, i }) => (
             <button
               key={i}
@@ -989,16 +991,16 @@ export function Exercice({
             onCorrige?.(ok, partJuste(q, rep));
           }}
           disabled={!complet(q, rep)}
-          className="tap touche h-14 w-full rounded-xl text-sm font-extrabold uppercase disabled:opacity-40 disabled:shadow-none"
+          className="tap touche h-12 w-full rounded-xl text-sm font-extrabold uppercase disabled:opacity-40 disabled:shadow-none sm:h-14"
         >
           {q.type === "libre" ? "Voir la réponse attendue" : "Valider"}
         </Button>
       ) : (
-        <div className="space-y-4">
+        <div className="space-y-3 sm:space-y-4">
           {!autoNote || q.type === "vf" ? (
             <p
               className={cn(
-                "flex items-center gap-2 rounded-xl px-3 py-3 text-sm font-bold",
+                "flex items-center gap-2 rounded-xl px-3 py-2 text-sm font-bold sm:py-3",
                 estJuste
                   ? "anim-pop bg-success/15 text-success"
                   : "anim-tremble bg-destructive/15 text-destructive",
@@ -1042,7 +1044,7 @@ export function Exercice({
             </div>
           )}
 
-          <div className="rounded-xl border border-border bg-card p-3">
+          <div className="rounded-xl border border-border bg-card p-2.5 sm:p-3">
             <p className="text-[0.68rem] tracking-[0.15em] text-muted-foreground uppercase">
               Ce qu'il faut retenir
             </p>
@@ -1091,7 +1093,7 @@ export function Exercice({
             <div className="space-y-2">
               <Button
                 onClick={() => onNote(estJuste ? 2 : part >= 0.6 ? 1 : 0)}
-                className="tap touche-brand h-14 w-full rounded-xl bg-brand text-base font-bold text-brand-foreground hover:bg-brand/90"
+                className="tap touche-brand h-12 w-full rounded-xl bg-brand text-base font-bold text-brand-foreground hover:bg-brand/90 sm:h-14"
               >
                 Question suivante <ArrowRight className="h-4 w-4" />
               </Button>
