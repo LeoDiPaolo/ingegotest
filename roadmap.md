@@ -15,3 +15,4 @@
 - [x] Transformer Élévation en parcours avec jalons, prochain objectif et états visuels
 - [x] Personnaliser les briefs et enrichir les bilans de mission
 - [x] Vérifier les quatre écrans et une mission complète sur téléphone et ordinateur
+- [x] Réduire le défilement des questions simples et garder l’action suivante accessible

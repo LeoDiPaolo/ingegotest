@@ -164,7 +164,7 @@ function Reviser() {
       <main
         className={
           exerciceActif
-            ? "mx-auto max-w-2xl px-3 py-3 sm:px-5 sm:py-5"
+            ? "mx-auto max-w-2xl px-2.5 py-2.5 sm:px-5 sm:py-5"
             : ordre
               ? "mx-auto max-w-2xl px-5 py-5"
               : "mx-auto max-w-5xl px-5 py-5"
@@ -400,7 +400,7 @@ function Reviser() {
             </div>
           </section>
         ) : q ? (
-          <section className="space-y-2.5 sm:space-y-4">
+          <section className="space-y-2 sm:space-y-4">
             <div className="flex items-center gap-2 sm:gap-3">
               <button onClick={quitter} aria-label="Quitter la séance" className="tap p-1">
                 <X className="h-5 w-5 text-muted-foreground" />
@@ -419,7 +419,7 @@ function Reviser() {
               </span>
             </div>
 
-            <div className="surface anim-pop p-3.5 sm:p-5">
+            <div className="surface anim-pop p-2.5 sm:p-5">
               <Exercice
                 key={`${q.id}-${i}`}
                 q={q}
