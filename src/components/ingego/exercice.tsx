@@ -862,8 +862,8 @@ export function Exercice({
           donnees={q.empilement}
           pose={rep as number[]}
           graine={graineDe(q.id + "e")}
-          onPoser={(i) => setRep((r) => [...(r as number[]), i])}
-          onRetirer={(rang) => setRep((r) => (r as number[]).filter((_, k) => k !== rang))}
+          onPoser={(i) => setRep((r: Reponse) => [...(r as number[]), i])}
+          onRetirer={(rang) => setRep((r: Reponse) => (r as number[]).filter((_, k) => k !== rang))}
           corrige={corrige}
         />
       )}
@@ -884,7 +884,7 @@ export function Exercice({
           donnees={q.circuit}
           chemin={rep as number[]}
           onToucher={(i) =>
-            setRep((r) => {
+            setRep((r: Reponse) => {
               const l = r as number[];
               if (l[l.length - 1] === i) return l.slice(0, -1);
               if (l.includes(i) || l.length >= (q.circuit?.chemin ?? []).length) return l;
@@ -907,7 +907,7 @@ export function Exercice({
             setActifCablage(null);
           }}
           onDefaire={(g) =>
-            setRep((r) => {
+            setRep((r: Reponse) => {
               const m2 = { ...(r as Record<string, number>) };
               delete m2[g];
               return m2;
