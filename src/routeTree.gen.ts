@@ -10,12 +10,18 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as BetaRouteImport } from './routes/beta'
 import { Route as QaVisuelsRouteImport } from './routes/qa-visuels'
 import { Route as QuestionsRouteImport } from './routes/questions'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BetaRoute = BetaRouteImport.update({
+  id: '/beta',
+  path: '/beta',
   getParentRoute: () => rootRouteImport,
 } as any)
 const QaVisuelsRoute = QaVisuelsRouteImport.update({
@@ -31,30 +37,34 @@ const QuestionsRoute = QuestionsRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/beta': typeof BetaRoute
   '/qa-visuels': typeof QaVisuelsRoute
   '/questions': typeof QuestionsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/beta': typeof BetaRoute
   '/qa-visuels': typeof QaVisuelsRoute
   '/questions': typeof QuestionsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/beta': typeof BetaRoute
   '/qa-visuels': typeof QaVisuelsRoute
   '/questions': typeof QuestionsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/qa-visuels' | '/questions'
+  fullPaths: '/' | '/beta' | '/qa-visuels' | '/questions'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/qa-visuels' | '/questions'
-  id: '__root__' | '/' | '/qa-visuels' | '/questions'
+  to: '/' | '/beta' | '/qa-visuels' | '/questions'
+  id: '__root__' | '/' | '/beta' | '/qa-visuels' | '/questions'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  BetaRoute: typeof BetaRoute
   QaVisuelsRoute: typeof QaVisuelsRoute
   QuestionsRoute: typeof QuestionsRoute
 }
@@ -66,6 +76,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/beta': {
+      id: '/beta'
+      path: '/beta'
+      fullPath: '/beta'
+      preLoaderRoute: typeof BetaRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/qa-visuels': {
@@ -87,6 +104,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  BetaRoute: BetaRoute,
   QaVisuelsRoute: QaVisuelsRoute,
   QuestionsRoute: QuestionsRoute,
 }
