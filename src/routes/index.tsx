@@ -419,7 +419,7 @@ function Reviser() {
               </span>
             </div>
 
-            <div className="surface anim-pop p-2.5 sm:p-5">
+            <div className="anim-pop sm:surface sm:p-5">
               <Exercice
                 key={`${q.id}-${i}`}
                 q={q}

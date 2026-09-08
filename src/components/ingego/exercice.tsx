@@ -521,12 +521,12 @@ export function Exercice({
   }
 
   return (
-    <article className="exercice-compact space-y-2.5 sm:space-y-4">
-      <div className="flex items-center gap-2 sm:gap-3">
-        <IconeAxe axe={axe} className="h-8 w-8 shrink-0 sm:h-11 sm:w-11" />
-        <div className="flex min-w-0 flex-1 flex-wrap items-center gap-1.5 text-[0.68rem]">
+    <article className={cn("exercice-compact space-y-2 sm:space-y-4", corrige && "est-corrige")}>
+      <div className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-1.5 sm:flex sm:gap-3">
+        <IconeAxe axe={axe} className="hidden h-8 w-8 shrink-0 sm:block sm:h-11 sm:w-11" />
+        <div className="flex min-w-0 items-center gap-1.5 text-[0.68rem] sm:flex-1 sm:flex-wrap">
           <span
-            className="rounded-full px-2 py-0.5 font-semibold sm:px-2.5 sm:py-1"
+            className="min-w-0 truncate rounded-full px-2 py-0.5 font-semibold sm:px-2.5 sm:py-1"
             style={{ backgroundColor: `${axe.couleur}22`, color: axe.couleur }}
           >
             {axe.court} · {q.sousTheme}
@@ -534,17 +534,17 @@ export function Exercice({
           <span className="hidden rounded-full bg-elevated px-2 py-0.5 text-muted-foreground sm:inline sm:px-2.5 sm:py-1">
             {TYPES[q.type]}
           </span>
-          <span
-            className="rounded-full bg-elevated px-2 py-0.5 font-semibold text-foreground sm:px-2.5 sm:py-1"
-            aria-label={`Niveau de difficulté ${q.niveau} sur 10`}
-          >
-            <span className="sm:hidden">Niv. {q.niveau}</span>
-            <span className="hidden sm:inline">Niveau {q.niveau} / 10</span>
-          </span>
           <span className="ml-auto hidden text-muted-foreground sm:inline">
             {numero} / {total}
           </span>
         </div>
+        <span
+          className="shrink-0 rounded-full bg-elevated px-2 py-0.5 text-[0.68rem] font-semibold text-foreground sm:px-2.5 sm:py-1"
+          aria-label={`Niveau de difficulté ${q.niveau} sur 10`}
+        >
+          <span className="sm:hidden">Niv. {q.niveau}</span>
+          <span className="hidden sm:inline">Niveau {q.niveau} / 10</span>
+        </span>
       </div>
 
       <div className="mission-strip rounded-r-xl bg-primary/[0.055] px-3 py-2 sm:px-4 sm:py-3">
@@ -557,26 +557,28 @@ export function Exercice({
       {/* ---------- SAISIE ---------- */}
       {q.type === "qcm" && (
         <div className="space-y-1.5 sm:space-y-2">
-          {melangeOptions.map(({ texte: o, i }) => (
-            <button
-              key={i}
-              disabled={corrige}
-              onClick={() => setRep(i)}
-              className={optionClass(
-                corrige
-                  ? i === q.bonneReponse
-                    ? "ok"
+          {melangeOptions
+            .filter(({ i }) => !corrige || i === q.bonneReponse || i === rep)
+            .map(({ texte: o, i }) => (
+              <button
+                key={i}
+                disabled={corrige}
+                onClick={() => setRep(i)}
+                className={optionClass(
+                  corrige
+                    ? i === q.bonneReponse
+                      ? "ok"
+                      : rep === i
+                        ? "ko"
+                        : "neutre"
                     : rep === i
-                      ? "ko"
-                      : "neutre"
-                  : rep === i
-                    ? "choisi"
-                    : "neutre",
-              )}
-            >
-              {o}
-            </button>
-          ))}
+                      ? "choisi"
+                      : "neutre",
+                )}
+              >
+                {o}
+              </button>
+            ))}
         </div>
       )}
 
@@ -740,31 +742,34 @@ export function Exercice({
 
       {q.type === "erreur" && (
         <div className="space-y-2">
-          {(q.segments ?? []).map((s, i) => (
-            <button
-              key={i}
-              disabled={corrige}
-              onClick={() => setRep(i)}
-              className={optionClass(
-                corrige
-                  ? i === q.phraseFautive
-                    ? "ok"
+          {(q.segments ?? [])
+            .map((s, i) => ({ s, i }))
+            .filter(({ i }) => !corrige || i === q.phraseFautive || i === rep)
+            .map(({ s, i }) => (
+              <button
+                key={i}
+                disabled={corrige}
+                onClick={() => setRep(i)}
+                className={optionClass(
+                  corrige
+                    ? i === q.phraseFautive
+                      ? "ok"
+                      : rep === i
+                        ? "ko"
+                        : "neutre"
                     : rep === i
-                      ? "ko"
-                      : "neutre"
-                  : rep === i
-                    ? "choisi"
-                    : "neutre",
-              )}
-            >
-              {corrige && i === q.phraseFautive ? (
-                <span className="mb-1 block text-[0.68rem] font-semibold tracking-[0.12em] text-success uppercase">
-                  Phrase fautive
-                </span>
-              ) : null}
-              {s}
-            </button>
-          ))}
+                      ? "choisi"
+                      : "neutre",
+                )}
+              >
+                {corrige && i === q.phraseFautive ? (
+                  <span className="mb-1 block text-[0.68rem] font-semibold tracking-[0.12em] text-success uppercase">
+                    Phrase fautive
+                  </span>
+                ) : null}
+                {s}
+              </button>
+            ))}
           <p className="text-xs text-muted-foreground">
             Les phrases se lisent à la suite. Touchez celle qui est fautive : en correction, elle
             apparaît en vert, et votre choix erroné éventuel en rouge.
@@ -1101,7 +1106,10 @@ export function Exercice({
 
           {q.correction && (
             <Accordion type="single" collapsible>
-              <AccordionItem value="correction" className="rounded-xl border border-border bg-elevated px-3">
+              <AccordionItem
+                value="correction"
+                className="rounded-xl border border-border bg-elevated px-3"
+              >
                 <AccordionTrigger className="py-2.5 text-sm text-primary hover:no-underline">
                   Correction détaillée
                 </AccordionTrigger>
@@ -1127,8 +1135,15 @@ export function Exercice({
           </div>
 
           {onCommentaire ? (
-            <Accordion type="single" collapsible defaultValue={observation ? "observation" : undefined}>
-              <AccordionItem value="observation" className="rounded-xl border border-border bg-elevated/60 px-3">
+            <Accordion
+              type="single"
+              collapsible
+              defaultValue={observation ? "observation" : undefined}
+            >
+              <AccordionItem
+                value="observation"
+                className="rounded-xl border border-border bg-elevated/60 px-3"
+              >
                 <AccordionTrigger className="py-2.5 text-sm text-primary hover:no-underline">
                   <span className="flex items-center gap-1.5">
                     <MessageSquareText className="h-3.5 w-3.5" /> Ajouter une observation
@@ -1143,7 +1158,9 @@ export function Exercice({
                     placeholder="Notez un doute, une précision ou une correction à revoir…"
                     className="w-full resize-none rounded-lg border border-input bg-card px-3 py-2 text-sm leading-snug outline-none focus:border-ring"
                   />
-                  <p className="mt-1 text-[0.65rem] text-muted-foreground">Enregistrée automatiquement.</p>
+                  <p className="mt-1 text-[0.65rem] text-muted-foreground">
+                    Enregistrée automatiquement.
+                  </p>
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
