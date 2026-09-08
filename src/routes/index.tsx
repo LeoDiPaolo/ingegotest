@@ -63,7 +63,15 @@ function Reviser() {
     [donnees.cartes, donnees.reglages, pret],
   );
 
+  const bilan = useMemo(() => {
+    const l = jaugesParAxe(donnees.cartes);
+    const total = l.reduce((s, x) => s + x.total, 0);
+    const acquises = l.reduce((s, x) => s + x.acquises, 0);
+    return { total, acquises, part: total ? acquises / total : 0, lignes: l };
+  }, [donnees.cartes]);
+
   const total = donnees.reglages.parSession;
+
 
   function demarrer() {
     const lot = composerSession(donnees.cartes, donnees.reglages, Date.now());
