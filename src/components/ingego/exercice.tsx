@@ -451,6 +451,7 @@ export function Exercice({
   onCorrige,
   commentaire = "",
   onCommentaire,
+  reprise = false,
 }: {
   q: Question;
   numero: number;
@@ -459,6 +460,7 @@ export function Exercice({
   onCorrige?: (juste: boolean, part: number) => void;
   commentaire?: string;
   onCommentaire?: (texte: string) => void;
+  reprise?: boolean;
 }) {
   const [rep, setRep] = useState<Reponse>(() => initiale(q));
   const [corrige, setCorrige] = useState(false);
@@ -557,6 +559,13 @@ export function Exercice({
           <span className="hidden sm:inline">Niveau {q.niveau} / 10</span>
         </span>
       </div>
+
+      {reprise ? (
+        <div className="anim-pop flex items-center justify-between rounded-lg border border-brand/35 bg-brand/10 px-3 py-1.5 text-xs">
+          <span className="font-bold text-brand">Reprise à chaud</span>
+          <span className="text-muted-foreground">Réussissez pour terminer la mission</span>
+        </div>
+      ) : null}
 
       <div className="mission-strip rounded-r-xl bg-primary/[0.055] px-3 py-2 sm:px-4 sm:py-3">
         <div className="mb-0.5 flex items-center justify-between gap-2 sm:mb-1">

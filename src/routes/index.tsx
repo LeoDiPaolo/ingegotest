@@ -103,12 +103,15 @@ function Reviser() {
     const [axeId, nombre] = Object.entries(comptes).sort((a, b) => b[1] - a[1])[0] ?? [];
     const dominant = axeId && nombre / ordre.length >= 0.5 ? AXE_BY_ID[axeId] : null;
     const themes = [...new Set(ordre.map((question) => question.sousTheme))];
+    const nouvelles = ordre.filter((question) => !donnees.cartes[question.id]?.vu).length;
     return {
       titre: dominant ? `Mission · ${dominant.court}` : "Mission transversale",
       detail: themes.slice(0, 3).join(" · "),
       themes,
+      nouvelles,
+      revisions: ordre.length - nouvelles,
     };
-  }, [ordre]);
+  }, [donnees.cartes, ordre]);
 
   function demarrer() {
     const lot = composerSession(donnees.cartes, donnees.reglages, Date.now());
@@ -343,6 +346,14 @@ function Reviser() {
               <p className="mission-brief-note mx-auto mt-1 max-w-sm text-xs leading-snug text-muted-foreground sm:leading-relaxed">
                 Les erreurs reviennent quelques étapes plus loin pour être consolidées.
               </p>
+              <div className="mx-auto mt-2 flex w-fit items-center gap-2 text-[0.65rem] font-bold">
+                <span className="rounded-full bg-success/12 px-2 py-1 text-success">
+                  {mission?.nouvelles ?? 0} nouvelles
+                </span>
+                <span className="rounded-full bg-primary/10 px-2 py-1 text-primary">
+                  {mission?.revisions ?? 0} révisions
+                </span>
+              </div>
               <div className="mt-2 grid grid-cols-2 gap-2 text-center sm:mt-4 sm:gap-3">
                 <div className="rounded-xl border border-border bg-elevated px-3 py-1.5 sm:rounded-2xl sm:py-2.5">
                   <p className="text-xl font-extrabold text-primary sm:text-2xl">
@@ -493,6 +504,7 @@ function Reviser() {
                 numero={faits.length + 1}
                 total={total}
                 onNote={(note, juste) => noter(q, note, juste)}
+                reprise={(rates[q.id] ?? 0) > 0}
                 commentaire={donnees.commentaires[q.id] ?? ""}
                 onCommentaire={(texte) => commenter(q.id, texte)}
               />

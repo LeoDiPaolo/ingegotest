@@ -4,7 +4,7 @@ import { Check, Flag, LockKeyhole, Sparkles } from "lucide-react";
 import { Entete } from "@/components/ingego/entete";
 import { NavBas } from "@/components/ingego/nav-bas";
 import { AXES, CORPUS, FAMILLES, TYPES, type Question } from "@/lib/ingego/corpus";
-import { etatCarte, type EtatCarte } from "@/lib/ingego/algo";
+import { etatCarte, progressionSousTheme, type EtatCarte } from "@/lib/ingego/algo";
 import { serieJours, useDonnees } from "@/lib/ingego/stockage";
 import { cn } from "@/lib/utils";
 import { BadgeMaitrise, IconeAxe } from "@/components/ingego/univers";
@@ -131,6 +131,7 @@ function Page() {
                 <div className="space-y-3">
                   {themes.map((theme, themeIndex) => {
                     const questions = qs.filter((q) => q.sousTheme === theme);
+                    const progression = progressionSousTheme(theme, donnees.cartes);
                     const vus = questions.filter(
                       (q) => etatCarte(donnees.cartes[q.id]) !== "neuf",
                     ).length;
@@ -166,7 +167,14 @@ function Page() {
                           )}
                         </button>
                         <div className="min-w-0 flex-1">
-                          <p className="truncate text-xs font-semibold">{theme}</p>
+                          <div className="flex items-center gap-2">
+                            <p className="min-w-0 truncate text-xs font-semibold">{theme}</p>
+                            {!progression.termine ? (
+                              <span className="shrink-0 rounded-full bg-primary/10 px-1.5 py-0.5 text-[0.58rem] font-bold text-primary">
+                                Niv. {progression.niveau}
+                              </span>
+                            ) : null}
+                          </div>
                           <div className="mt-1.5 h-2 overflow-hidden rounded-full bg-elevated">
                             <div
                               className="h-full rounded-full transition-[width] duration-700"
@@ -176,6 +184,11 @@ function Page() {
                               }}
                             />
                           </div>
+                          {!progression.termine ? (
+                            <p className="mt-1 text-[0.6rem] text-muted-foreground">
+                              {progression.restantesNiveau} validation{progression.restantesNiveau > 1 ? "s" : ""} avant le niveau {progression.niveau + 1}
+                            </p>
+                          ) : null}
                         </div>
                         <span className="text-[0.65rem] font-semibold text-muted-foreground">
                           {terminees}/{questions.length} validées
