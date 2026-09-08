@@ -491,8 +491,12 @@ export function Exercice({
           <span className="hidden rounded-full bg-elevated px-2 py-0.5 text-muted-foreground sm:inline sm:px-2.5 sm:py-1">
             {TYPES[q.type]}
           </span>
-          <span className="hidden rounded-full bg-elevated px-2 py-0.5 text-muted-foreground sm:inline sm:px-2.5 sm:py-1">
-            Niveau {q.niveau}
+          <span
+            className="rounded-full bg-elevated px-2 py-0.5 font-semibold text-foreground sm:px-2.5 sm:py-1"
+            aria-label={`Niveau de difficulté ${q.niveau} sur 10`}
+          >
+            <span className="sm:hidden">Niv. {q.niveau}</span>
+            <span className="hidden sm:inline">Niveau {q.niveau} / 10</span>
           </span>
           <span className="ml-auto hidden text-muted-foreground sm:inline">
             {numero} / {total}
