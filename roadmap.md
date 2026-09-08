@@ -6,3 +6,4 @@
 - [x] Harmoniser Corpus et Réglages avec le nouveau langage visuel
 - [x] Renforcer les jeux visuels compacts et les retours tactiles
 - [x] Vérifier mobile et desktop
+- [ ] Mettre en scène le logo sur le brief de mission immersif
