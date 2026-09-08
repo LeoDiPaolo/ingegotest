@@ -1,10 +1,4 @@
-import {
-  CORPUS,
-  NIVEAUX_SOUS_THEME,
-  type Famille,
-  type Question,
-  type TypeExo,
-} from "./corpus";
+import { CORPUS, NIVEAUX_SOUS_THEME, type Famille, type Question, type TypeExo } from "./corpus";
 
 /* ============================================================
    Répétition espacée — repris verbatim de l'artefact IngéGo.
@@ -96,7 +90,9 @@ export function niveauActif(sousTheme: string, etat: Etat) {
 export function progressionSousTheme(sousTheme: string, etat: Etat) {
   const questions = NIVEAUX_SOUS_THEME[sousTheme] ?? [];
   const niveau = niveauActif(sousTheme, etat);
-  const niveauCourant = Number.isFinite(niveau) ? niveau : Math.max(1, ...questions.map((q) => q.niv));
+  const niveauCourant = Number.isFinite(niveau)
+    ? niveau
+    : Math.max(1, ...questions.map((q) => q.niv));
   const duNiveau = questions.filter((q) => q.niv === niveauCourant);
   const valideesNiveau = duNiveau.filter((q) => validee(etat[q.id])).length;
   const validees = questions.filter((q) => validee(etat[q.id])).length;

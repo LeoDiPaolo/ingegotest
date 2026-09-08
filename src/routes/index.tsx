@@ -86,9 +86,11 @@ function Reviser() {
   const total = donnees.reglages.parSession;
   const objectif = useMemo(() => {
     const actifs = donnees.reglages.axes;
-    const themes = [...new Set(bilan.lignes.filter((l) => actifs.includes(l.axe.id)).flatMap((l) =>
-      l.axe.sousThemes,
-    ))];
+    const themes = [
+      ...new Set(
+        bilan.lignes.filter((l) => actifs.includes(l.axe.id)).flatMap((l) => l.axe.sousThemes),
+      ),
+    ];
     return themes
       .map((theme) => ({ theme, ...progressionSousTheme(theme, donnees.cartes) }))
       .filter((item) => !item.termine)
@@ -124,7 +126,12 @@ function Reviser() {
     setFini(false);
     setMissionCommencee(false);
     setNiveauxDepart(
-      Object.fromEntries([...new Set(lot.map((q) => q.sousTheme))].map((theme) => [theme, niveauActif(theme, donnees.cartes)])),
+      Object.fromEntries(
+        [...new Set(lot.map((q) => q.sousTheme))].map((theme) => [
+          theme,
+          niveauActif(theme, donnees.cartes),
+        ]),
+      ),
     );
   }
 
@@ -235,7 +242,10 @@ function Reviser() {
                     </p>
                     <p className="font-bold">{objectif?.theme ?? "Consolider les acquis"}</p>
                     <p className="mt-0.5 flex items-center gap-1 text-xs text-muted-foreground">
-                      <LockKeyhole className="h-3.5 w-3.5" /> Niveau {objectif?.niveau ?? 1} · {objectif?.restantesNiveau ?? reste} validation{(objectif?.restantesNiveau ?? reste) > 1 ? "s" : ""} restante{(objectif?.restantesNiveau ?? reste) > 1 ? "s" : ""}
+                      <LockKeyhole className="h-3.5 w-3.5" /> Niveau {objectif?.niveau ?? 1} ·{" "}
+                      {objectif?.restantesNiveau ?? reste} validation
+                      {(objectif?.restantesNiveau ?? reste) > 1 ? "s" : ""} restante
+                      {(objectif?.restantesNiveau ?? reste) > 1 ? "s" : ""}
                     </p>
                   </div>
                   <Castor className="h-16 w-16 shrink-0" />
@@ -348,7 +358,8 @@ function Reviser() {
               </p>
               {objectif ? (
                 <p className="mx-auto mt-1 max-w-sm text-[0.68rem] font-bold text-primary">
-                  Cap niveau {objectif.niveau} · {objectif.restantesNiveau} validation{objectif.restantesNiveau > 1 ? "s" : ""} à obtenir du premier coup
+                  Cap niveau {objectif.niveau} · {objectif.restantesNiveau} validation
+                  {objectif.restantesNiveau > 1 ? "s" : ""} à obtenir du premier coup
                 </p>
               ) : null}
               <div className="mx-auto mt-2 flex w-fit items-center gap-2 text-[0.65rem] font-bold">
@@ -455,7 +466,8 @@ function Reviser() {
                   <div className="rounded-xl border border-brand/30 bg-brand/10 p-3">
                     <p className="text-xs font-bold text-brand">Reprises réussies</p>
                     <p className="mt-1 text-xs text-muted-foreground">
-                      {Object.keys(rates).length} point{Object.keys(rates).length > 1 ? "s" : ""} corrigé{Object.keys(rates).length > 1 ? "s" : ""} à chaud.
+                      {Object.keys(rates).length} point{Object.keys(rates).length > 1 ? "s" : ""}{" "}
+                      corrigé{Object.keys(rates).length > 1 ? "s" : ""} à chaud.
                     </p>
                   </div>
                   <div className="rounded-xl border border-primary/25 bg-primary/10 p-3">

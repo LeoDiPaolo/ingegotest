@@ -186,7 +186,9 @@ function Page() {
                           </div>
                           {!progression.termine ? (
                             <p className="mt-1 text-[0.6rem] text-muted-foreground">
-                              {progression.restantesNiveau} validation{progression.restantesNiveau > 1 ? "s" : ""} avant le niveau {progression.niveau + 1}
+                              {progression.restantesNiveau} validation
+                              {progression.restantesNiveau > 1 ? "s" : ""} avant le niveau{" "}
+                              {progression.niveau + 1}
                             </p>
                           ) : null}
                         </div>
