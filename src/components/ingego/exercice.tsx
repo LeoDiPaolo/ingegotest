@@ -337,7 +337,9 @@ function ExplicationStructuree({ q }: { q: Question }) {
 
   return (
     <div className="mt-2 space-y-3">
-      <p className="border-l-2 border-primary pl-3 text-sm leading-relaxed">{essentiel}</p>
+      <p className="border-l-2 border-primary pl-3 text-[0.82rem] leading-5 sm:text-sm sm:leading-relaxed">
+        {essentiel}
+      </p>
       {avecComplements ? (
         <Accordion type="single" collapsible>
           <AccordionItem value="details" className="rounded-lg border border-border px-3">
@@ -486,13 +488,13 @@ export function Exercice({
           >
             {axe.court} · {q.sousTheme}
           </span>
-          <span className="rounded-full bg-elevated px-2 py-0.5 text-muted-foreground sm:px-2.5 sm:py-1">
+          <span className="hidden rounded-full bg-elevated px-2 py-0.5 text-muted-foreground sm:inline sm:px-2.5 sm:py-1">
             {TYPES[q.type]}
           </span>
-          <span className="rounded-full bg-elevated px-2 py-0.5 text-muted-foreground sm:px-2.5 sm:py-1">
+          <span className="hidden rounded-full bg-elevated px-2 py-0.5 text-muted-foreground sm:inline sm:px-2.5 sm:py-1">
             Niveau {q.niveau}
           </span>
-          <span className="ml-auto text-muted-foreground">
+          <span className="ml-auto hidden text-muted-foreground sm:inline">
             {numero} / {total}
           </span>
         </div>
@@ -1042,7 +1044,7 @@ export function Exercice({
             </div>
           )}
 
-          <div className="rounded-xl border border-border bg-card p-3">
+            <div className="rounded-xl border border-border bg-card p-2.5 sm:p-3">
             <p className="text-[0.68rem] tracking-[0.15em] text-muted-foreground uppercase">
               Ce qu'il faut retenir
             </p>
