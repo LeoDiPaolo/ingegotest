@@ -8,3 +8,12 @@
 - [x] Renforcer les jeux visuels compacts et les retours tactiles
 - [x] Vérifier mobile et desktop
 - [x] Mettre en scène le logo sur le brief de mission immersif
+
+## Carnet de missions éditorial
+
+- [x] Installer la typographie et les surfaces éditoriales
+- [x] Recomposer l’accueil et le brief comme un journal de mission
+- [x] Déployer la signature IngéGo dans l’en-tête et la navigation
+- [x] Transformer Élévation, Corpus et Réglages en dossiers techniques
+- [x] Recomposer les exercices comme des fiches de mission
+- [x] Vérifier mobile et desktop
