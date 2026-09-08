@@ -198,7 +198,10 @@ export function composerSession(etat: Etat, reglages: Reglages, now: number): Qu
     lot = lot.concat(pool.slice(partNeuves.length, partNeuves.length + (n - lot.length)));
   if (lot.length < n) lot = lot.concat(dues.slice(lot.length, n));
   const actifs = CORPUS.filter(ouvert);
-  return entrelacer(repartirParTheme(lot, actifs, n));
+  const candidats = [...lot, ...dues, ...pool].filter(
+    (q, index, liste) => liste.findIndex((autre) => autre.id === q.id) === index,
+  );
+  return entrelacer(repartirParTheme(candidats, actifs, n));
 }
 
 export function resteAFaire(etat: Etat, reglages: Reglages, now: number) {
