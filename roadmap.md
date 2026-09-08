@@ -5,5 +5,5 @@
 - [x] Maintenir le tableau de bord, les missions, les badges et l’arbre de compétences
 - [x] Maintenir le logo dans l’en-tête, la navigation et le brief de mission
 - [x] Maintenir les exercices compacts et les jeux visuels utiles
-- [ ] Vérifier les quatre écrans sur mobile et ordinateur
-- [ ] Vérifier le lancement et l’enchaînement d’une mission
+- [x] Vérifier les quatre écrans sur mobile et ordinateur
+- [x] Vérifier le lancement et l’enchaînement d’une mission
