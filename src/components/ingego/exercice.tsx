@@ -239,7 +239,7 @@ export function partJuste(q: Question, rep: unknown): number {
 
 const optionClass = (etat: "neutre" | "choisi" | "ok" | "ko") =>
   cn(
-    "tap w-full rounded-xl border-2 px-3.5 py-3 text-left text-sm font-medium leading-snug transition-all duration-150 active:scale-[0.98] sm:rounded-2xl sm:px-4 sm:py-4",
+    "tap w-full rounded-xl border-2 px-3 py-2.5 text-left text-sm font-medium leading-snug transition-all duration-150 active:scale-[0.98] sm:rounded-2xl sm:px-4 sm:py-3.5",
     etat === "neutre" && "border-border bg-elevated text-foreground hover:border-primary/40",
     etat === "choisi" && "border-primary bg-primary/15 text-foreground shadow-[var(--shadow-card)]",
     etat === "ok" && "anim-pop border-success bg-success/15 text-foreground",
@@ -521,9 +521,9 @@ export function Exercice({
   }
 
   return (
-    <article className="space-y-3 sm:space-y-5">
+    <article className="exercice-compact space-y-2.5 sm:space-y-4">
       <div className="flex items-center gap-2 sm:gap-3">
-        <IconeAxe axe={axe} className="h-9 w-9 shrink-0 sm:h-12 sm:w-12" />
+        <IconeAxe axe={axe} className="h-8 w-8 shrink-0 sm:h-11 sm:w-11" />
         <div className="flex min-w-0 flex-1 flex-wrap items-center gap-1.5 text-[0.68rem]">
           <span
             className="rounded-full px-2 py-0.5 font-semibold sm:px-2.5 sm:py-1"
@@ -547,11 +547,11 @@ export function Exercice({
         </div>
       </div>
 
-      <div className="mission-strip rounded-r-xl bg-primary/[0.055] px-3 py-2.5 sm:px-4 sm:py-3">
-        <p className="mb-1 flex items-center gap-1.5 text-[0.65rem] font-extrabold tracking-[0.12em] text-brand uppercase">
+      <div className="mission-strip rounded-r-xl bg-primary/[0.055] px-3 py-2 sm:px-4 sm:py-3">
+        <p className="mb-0.5 flex items-center gap-1.5 text-[0.62rem] font-extrabold tracking-[0.12em] text-brand uppercase sm:mb-1 sm:text-[0.65rem]">
           <ClipboardCheck className="h-3.5 w-3.5" /> {CONSIGNES[q.type]}
         </p>
-        <h2 className="text-lg leading-snug sm:text-xl">{q.question}</h2>
+        <h2 className="text-base leading-snug sm:text-xl">{q.question}</h2>
       </div>
 
       {/* ---------- SAISIE ---------- */}
@@ -1043,12 +1043,12 @@ export function Exercice({
             onCorrige?.(ok, partJuste(q, rep));
           }}
           disabled={!complet(q, rep)}
-          className="tap touche h-12 w-full rounded-xl text-sm font-extrabold uppercase disabled:opacity-40 disabled:shadow-none sm:h-14"
+          className="tap touche sticky bottom-2 z-10 h-11 w-full rounded-xl text-sm font-extrabold uppercase disabled:opacity-40 disabled:shadow-none sm:static sm:h-14"
         >
           {q.type === "libre" ? "Voir la réponse attendue" : "Valider"}
         </Button>
       ) : (
-        <div className="space-y-3 sm:space-y-4">
+        <div className="space-y-2.5 sm:space-y-4">
           {!autoNote || q.type === "vf" ? (
             <div
               className={cn(
@@ -1100,12 +1100,16 @@ export function Exercice({
           )}
 
           {q.correction && (
-            <div className="rounded-xl border border-border bg-elevated p-3">
-              <p className="text-[0.68rem] tracking-[0.15em] text-muted-foreground uppercase">
-                Correction
-              </p>
-              <p className="mt-1 text-sm leading-relaxed">{q.correction}</p>
-            </div>
+            <Accordion type="single" collapsible>
+              <AccordionItem value="correction" className="rounded-xl border border-border bg-elevated px-3">
+                <AccordionTrigger className="py-2.5 text-sm text-primary hover:no-underline">
+                  Correction détaillée
+                </AccordionTrigger>
+                <AccordionContent>
+                  <p className="text-sm leading-relaxed">{q.correction}</p>
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
           )}
 
           <div className="rounded-xl border border-border bg-card p-2.5 sm:p-3">
@@ -1123,22 +1127,26 @@ export function Exercice({
           </div>
 
           {onCommentaire ? (
-            <div className="rounded-xl border border-border bg-elevated/60 p-3">
-              <label className="flex items-center gap-1.5 text-[0.68rem] font-bold tracking-[0.12em] text-muted-foreground uppercase">
-                <MessageSquareText className="h-3.5 w-3.5" /> Observation personnelle
-              </label>
-              <textarea
-                value={observation}
-                onChange={(e) => setObservation(e.target.value)}
-                onBlur={() => onCommentaire(observation)}
-                rows={2}
-                placeholder="Notez un doute, une précision ou une correction à revoir…"
-                className="mt-2 w-full resize-none rounded-lg border border-input bg-card px-3 py-2 text-sm leading-snug outline-none focus:border-ring"
-              />
-              <p className="mt-1 text-[0.65rem] text-muted-foreground">
-                Enregistrée automatiquement.
-              </p>
-            </div>
+            <Accordion type="single" collapsible defaultValue={observation ? "observation" : undefined}>
+              <AccordionItem value="observation" className="rounded-xl border border-border bg-elevated/60 px-3">
+                <AccordionTrigger className="py-2.5 text-sm text-primary hover:no-underline">
+                  <span className="flex items-center gap-1.5">
+                    <MessageSquareText className="h-3.5 w-3.5" /> Ajouter une observation
+                  </span>
+                </AccordionTrigger>
+                <AccordionContent>
+                  <textarea
+                    value={observation}
+                    onChange={(e) => setObservation(e.target.value)}
+                    onBlur={() => onCommentaire(observation)}
+                    rows={2}
+                    placeholder="Notez un doute, une précision ou une correction à revoir…"
+                    className="w-full resize-none rounded-lg border border-input bg-card px-3 py-2 text-sm leading-snug outline-none focus:border-ring"
+                  />
+                  <p className="mt-1 text-[0.65rem] text-muted-foreground">Enregistrée automatiquement.</p>
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
           ) : null}
 
           {autoNote ? (
@@ -1173,7 +1181,7 @@ export function Exercice({
               </div>
             </div>
           ) : (
-            <div className="space-y-2">
+            <div className="sticky bottom-2 z-20 space-y-2 rounded-xl bg-card/95 pt-1 backdrop-blur-sm sm:static sm:bg-transparent sm:pt-0 sm:backdrop-blur-none">
               <Button
                 onClick={() => onNote(estJuste ? 2 : part >= 0.6 ? 1 : 0)}
                 className="tap touche-brand h-12 w-full rounded-xl bg-brand text-base font-bold text-brand-foreground hover:bg-brand/90 sm:h-14"
