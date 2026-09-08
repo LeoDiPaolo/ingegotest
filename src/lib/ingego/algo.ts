@@ -1,4 +1,4 @@
-import { CORPUS, NIVEAUX_SUJET, type Famille, type Question, type TypeExo } from "./corpus";
+import { CORPUS, NIVEAUX_SOUS_THEME, type Famille, type Question, type TypeExo } from "./corpus";
 
 /* ============================================================
    Répétition espacée — repris verbatim de l'artefact IngéGo.
@@ -82,9 +82,29 @@ export const validee = (c: Carte | undefined) => !!c && c.p >= 1;
 
 /* Chaque thème avance à son rythme : on ne propose en nouveauté que le plus bas
    niveau non encore validé du thème. Les révisions dues remontent, elles, à tout niveau. */
-export function niveauActif(sujet: string, etat: Etat) {
-  for (const q of NIVEAUX_SUJET[sujet] || []) if (!validee(etat[q.id])) return q.niv;
+export function niveauActif(sousTheme: string, etat: Etat) {
+  for (const q of NIVEAUX_SOUS_THEME[sousTheme] || []) if (!validee(etat[q.id])) return q.niv;
   return Infinity;
+}
+
+export function progressionSousTheme(sousTheme: string, etat: Etat) {
+  const questions = NIVEAUX_SOUS_THEME[sousTheme] ?? [];
+  const niveau = niveauActif(sousTheme, etat);
+  const niveauCourant = Number.isFinite(niveau)
+    ? niveau
+    : Math.max(1, ...questions.map((q) => q.niv));
+  const duNiveau = questions.filter((q) => q.niv === niveauCourant);
+  const valideesNiveau = duNiveau.filter((q) => validee(etat[q.id])).length;
+  const validees = questions.filter((q) => validee(etat[q.id])).length;
+  return {
+    niveau: niveauCourant,
+    termine: !Number.isFinite(niveau),
+    valideesNiveau,
+    totalNiveau: duNiveau.length,
+    restantesNiveau: Math.max(0, duNiveau.length - valideesNiveau),
+    validees,
+    total: questions.length,
+  };
 }
 
 export type EtatCarte = "neuf" | "fragile" | "acquis" | "encours";
@@ -196,7 +216,7 @@ export function composerSession(etat: Etat, reglages: Reglages, now: number): Qu
     const c = etat[q.id];
     if (c && c.vu) {
       if (c.du <= now) dues.push(q);
-    } else if (q.niv === nivDe(q.sujet)) neuves.push(q);
+    } else if (q.niv === nivDe(q.sousTheme)) neuves.push(q);
   }
   dues.sort((a, b) => etat[a.id]!.du - etat[b.id]!.du);
   neuves.sort((a, b) => a.niv - b.niv || a.id.localeCompare(b.id));
@@ -231,7 +251,7 @@ export function resteAFaire(etat: Etat, reglages: Reglages, now: number) {
     const c = etat[q.id];
     if (c && c.vu) {
       if (c.du <= now) n++;
-    } else if (q.niv === nivDe(q.sujet)) n++;
+    } else if (q.niv === nivDe(q.sousTheme)) n++;
   }
   return n;
 }

@@ -159,6 +159,11 @@ export const NIVEAUX_SUJET: Record<string, Question[]> = {};
 for (const q of CORPUS) (NIVEAUX_SUJET[q.sujet] = NIVEAUX_SUJET[q.sujet] || []).push(q);
 Object.values(NIVEAUX_SUJET).forEach((l) => l.sort((a, b) => a.niv - b.niv));
 
+export const NIVEAUX_SOUS_THEME: Record<string, Question[]> = {};
+for (const q of CORPUS)
+  (NIVEAUX_SOUS_THEME[q.sousTheme] = NIVEAUX_SOUS_THEME[q.sousTheme] || []).push(q);
+Object.values(NIVEAUX_SOUS_THEME).forEach((l) => l.sort((a, b) => a.niv - b.niv));
+
 /* Ancienneté en mois d'une date de vérification "AAAA-MM". */
 export function moisDepuis(maj: string | null | undefined, now: number) {
   if (!maj) return Infinity;

@@ -83,6 +83,17 @@ const CONSIGNES: Record<Question["type"], string> = {
   pluvial: "Organisez la gestion des eaux",
 };
 
+const CONTEXTES: Partial<Record<Question["type"], string>> = {
+  qcm: "Décision à prendre",
+  vf: "Contrôle de conformité",
+  erreur: "Inspection d'un dossier",
+  ordre: "Préparation d'une intervention",
+  frise: "Reconstitution du calendrier",
+  assoc: "Raccordement des responsabilités",
+  tri: "Organisation du terrain",
+  libre: "Passage devant le jury",
+};
+
 function initiale(q: Question): Reponse {
   switch (q.type) {
     case "ordre":
@@ -440,6 +451,7 @@ export function Exercice({
   onCorrige,
   commentaire = "",
   onCommentaire,
+  reprise = false,
 }: {
   q: Question;
   numero: number;
@@ -448,6 +460,7 @@ export function Exercice({
   onCorrige?: (juste: boolean, part: number) => void;
   commentaire?: string;
   onCommentaire?: (texte: string) => void;
+  reprise?: boolean;
 }) {
   const [rep, setRep] = useState<Reponse>(() => initiale(q));
   const [corrige, setCorrige] = useState(false);
@@ -547,10 +560,22 @@ export function Exercice({
         </span>
       </div>
 
+      {reprise ? (
+        <div className="anim-pop flex items-center justify-between rounded-lg border border-brand/35 bg-brand/10 px-3 py-1.5 text-xs">
+          <span className="font-bold text-brand">Reprise à chaud</span>
+          <span className="text-muted-foreground">Réussissez pour terminer la mission</span>
+        </div>
+      ) : null}
+
       <div className="mission-strip rounded-r-xl bg-primary/[0.055] px-3 py-2 sm:px-4 sm:py-3">
-        <p className="mb-0.5 flex items-center gap-1.5 text-[0.62rem] font-extrabold tracking-[0.12em] text-brand uppercase sm:mb-1 sm:text-[0.65rem]">
-          <ClipboardCheck className="h-3.5 w-3.5" /> {CONSIGNES[q.type]}
-        </p>
+        <div className="mb-0.5 flex items-center justify-between gap-2 sm:mb-1">
+          <p className="flex items-center gap-1.5 text-[0.62rem] font-extrabold tracking-[0.12em] text-brand uppercase sm:text-[0.65rem]">
+            <ClipboardCheck className="h-3.5 w-3.5" /> {CONSIGNES[q.type]}
+          </p>
+          <span className="hidden text-[0.62rem] font-semibold text-muted-foreground sm:inline">
+            {CONTEXTES[q.type] ?? "Mission technique"}
+          </span>
+        </div>
         <h2 className="text-base leading-snug sm:text-xl">{q.question}</h2>
       </div>
 

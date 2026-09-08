@@ -1,48 +1,37 @@
 # Amélioration globale IngéGo
 
 ## Objectif
+Rendre l’application plus vivante et moins scolaire, sans modifier le corpus, les règles de difficulté ni l’algorithme de maîtrise désormais validé.
 
-Conserver l’organisation actuelle et l’identité « Chantier vif », tout en rendant l’application moins scolaire grâce à des missions plus incarnées, des interactions plus tactiles et une progression visuelle plus gratifiante.
+## Modifications prévues
 
-## Ce qui va changer
+1. **Progression et niveaux plus lisibles**
+   - Afficher, pour chaque sous-thème, le niveau actif, les niveaux verrouillés et le nombre exact de validations encore nécessaires.
+   - Différencier clairement une question « réussie après reprise » d’une question « validée du premier coup ».
+   - Ajouter un moment visuel de déverrouillage lorsqu’un niveau atteint 100 %.
 
-### 1. Exercices plus actifs
+2. **Exercices plus concrets et tactiles**
+   - Renforcer la mise en situation selon le format : contrôle de chantier, arbitrage, diagnostic, chronologie ou décision réglementaire.
+   - Donner davantage de présence aux jeux visuels existants et améliorer leurs contrôles tactiles, sans ajouter d’illustrations décoratives ni rallonger les questions simples.
+   - Préserver la notation partielle pour les exercices à plusieurs éléments.
 
-- Donner à chaque format une consigne d’action courte et adaptée : décider, diagnostiquer, localiser, ordonner, associer ou compléter.
-- Transformer la zone de question en fiche de mission compacte, sans ajouter d’illustration décorative ni imposer de défilement aux questions simples.
-- Renforcer les choix tactiles, les états sélectionnés et la lisibilité des jeux à plusieurs éléments.
+3. **Débuts et fins de niveau scénarisés**
+   - Introduire une courte ouverture de niveau avec le logo IngéGo, le sous-thème, l’objectif et l’avancement.
+   - Ajouter une validation de niveau marquée par un sceau, une animation et un résumé utile.
+   - Garder ces écrans compacts et sans défilement sur téléphone.
 
-### 2. Correction plus expressive
+4. **Bilan de mission plus utile**
+   - Présenter séparément : réussites du premier coup, reprises réussies et questions à revoir dans une prochaine mission.
+   - Montrer les sous-thèmes concernés et la prochaine échéance pédagogique.
+   - Adapter le message final au résultat réel, sans récompense aléatoire.
 
-- Remplacer le simple message scolaire par un retour de mission clair : validé, partiellement validé ou à reprendre.
-- Ajouter une validation visuelle inspirée d’un tampon IngéGo, avec animation et vibration déjà compatibles avec l’application.
-- Conserver les explications complètes, la notation partielle et « En savoir plus ».
-- Ajouter une partie commentaire une fois la question fini, les commentaires seront gardés en mémoire dans un tableau récapitulatif des commentaires, uniquement les questions qui auront eu des commentaires seront présentés dans le tableau pour ne pas le surcharger.  Tableau commentaires accessible depuis un bouton très discret dans l'onglet corpus 
+5. **Accueil plus vivant**
+   - Faire évoluer le tableau de bord vers un poste de mission : prochain objectif, progression construite, niveaux disponibles et reprise prioritaire.
+   - Mettre davantage en scène le logo et les codes visuels IngéGo aux endroits utiles.
+   - Conserver les quatre espaces actuels et la navigation mobile.
 
-### 3. Progression Élévation plus vivante
-
-- Faire évoluer l’écran actuel vers un parcours construit : sous-thèmes reliés, jalons clairement atteints, prochains objectifs et badges déverrouillés.
-- Garder l’accès à l’état de chaque question, sans modifier l’algorithme de répétition espacée.
-
-### 4. Début et fin de mission
-
-- Personnaliser le brief selon les thèmes réellement sélectionnés dans la séance.
-- Mettre davantage en scène le logo aux moments clés, sans le répéter partout.
-- Enrichir la fin de séance avec un bilan utile : réussite, éléments consolidés, points à reprendre et badge éventuel.
-
-### 5. Cohérence des quatre écrans
-
-- Alléger les alignements de cartes blanches sur l’accueil, le corpus et les réglages grâce à davantage de hiérarchie, de rythme et de repères circulaires.
-- Préserver les quatre onglets, le fonctionnement sans connexion, les données existantes et l’affichage compact sur téléphone.
-
-## Limites conservées
-
-- Aucun changement du corpus, des réponses ou des règles pédagogiques.
-- Pas de mascotte omniprésente, vies bloquantes, classement social, récompenses aléatoires ou illustrations purement décoratives.
-- Pas de refonte éditoriale : la structure et la charte actuelles restent la base.
-
-## Vérification
-
-- Tester les quatre écrans sur téléphone et ordinateur.
-- Tester une séance complète, les corrections automatiques, la réponse libre et le passage à la question suivante.
-- Vérifier l’absence de débordement horizontal, d’erreur visible et de défilement inutile sur les questions simples.
+## Contrôles
+- Vérifier le parcours complet : accueil, brief, erreur, reprise, réussite, bilan et niveau suivant.
+- Vérifier Élévation, Corpus et Réglages sur téléphone et ordinateur.
+- Vérifier l’absence de défilement sur les questions simples et les écrans courts.
+- Vérifier la sauvegarde locale et distante, sans connexion.

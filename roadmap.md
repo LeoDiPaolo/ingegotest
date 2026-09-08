@@ -21,3 +21,8 @@
 - [x] Exiger 100 % de validation d'un niveau avant de débloquer le suivant
 - [x] Réinjecter chaque erreur dans la mission jusqu'à réussite
 - [x] Ne valider une question qu'après une réussite du premier coup dans une mission
+- [x] Rendre les niveaux actifs, verrouillés et restant à valider explicites
+- [x] Renforcer les mises en situation et les interactions sans rallonger les exercices simples
+- [x] Scénariser le déverrouillage des niveaux avec l'identité IngéGo
+- [x] Distinguer premier passage, reprise à chaud et consolidation future dans le bilan
+- [x] Transformer l'accueil en poste de mission avec un prochain objectif concret
