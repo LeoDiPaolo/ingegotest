@@ -15,6 +15,7 @@ import { Route as ProfilRouteImport } from './routes/profil'
 import { Route as ProgresRouteImport } from './routes/progres'
 import { Route as QaVisuelsRouteImport } from './routes/qa-visuels'
 import { Route as QuestionsRouteImport } from './routes/questions'
+import { Route as LeconIdRouteImport } from './routes/lecon.$id'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -46,6 +47,11 @@ const QuestionsRoute = QuestionsRouteImport.update({
   path: '/questions',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LeconIdRoute = LeconIdRouteImport.update({
+  id: '/lecon/$id',
+  path: '/lecon/$id',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -54,6 +60,7 @@ export interface FileRoutesByFullPath {
   '/progres': typeof ProgresRoute
   '/qa-visuels': typeof QaVisuelsRoute
   '/questions': typeof QuestionsRoute
+  '/lecon/$id': typeof LeconIdRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -62,6 +69,7 @@ export interface FileRoutesByTo {
   '/progres': typeof ProgresRoute
   '/qa-visuels': typeof QaVisuelsRoute
   '/questions': typeof QuestionsRoute
+  '/lecon/$id': typeof LeconIdRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -71,13 +79,27 @@ export interface FileRoutesById {
   '/progres': typeof ProgresRoute
   '/qa-visuels': typeof QaVisuelsRoute
   '/questions': typeof QuestionsRoute
+  '/lecon/$id': typeof LeconIdRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
-    '/' | '/beta' | '/profil' | '/progres' | '/qa-visuels' | '/questions'
+    | '/'
+    | '/beta'
+    | '/profil'
+    | '/progres'
+    | '/qa-visuels'
+    | '/questions'
+    | '/lecon/$id'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/beta' | '/profil' | '/progres' | '/qa-visuels' | '/questions'
+  to:
+    | '/'
+    | '/beta'
+    | '/profil'
+    | '/progres'
+    | '/qa-visuels'
+    | '/questions'
+    | '/lecon/$id'
   id:
     | '__root__'
     | '/'
@@ -86,6 +108,7 @@ export interface FileRouteTypes {
     | '/progres'
     | '/qa-visuels'
     | '/questions'
+    | '/lecon/$id'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -95,6 +118,7 @@ export interface RootRouteChildren {
   ProgresRoute: typeof ProgresRoute
   QaVisuelsRoute: typeof QaVisuelsRoute
   QuestionsRoute: typeof QuestionsRoute
+  LeconIdRoute: typeof LeconIdRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -141,6 +165,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof QuestionsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/lecon/$id': {
+      id: '/lecon/$id'
+      path: '/lecon/$id'
+      fullPath: '/lecon/$id'
+      preLoaderRoute: typeof LeconIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -151,6 +182,7 @@ const rootRouteChildren: RootRouteChildren = {
   ProgresRoute: ProgresRoute,
   QaVisuelsRoute: QaVisuelsRoute,
   QuestionsRoute: QuestionsRoute,
+  LeconIdRoute: LeconIdRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
