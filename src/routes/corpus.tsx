@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
-import { ChevronDown, Search } from "lucide-react";
+import { ChevronDown, MessageSquareText, Search, X } from "lucide-react";
 import { Entete } from "@/components/ingego/entete";
 import { NavBas } from "@/components/ingego/nav-bas";
 import { AXES, CORPUS, FAMILLES, TYPES, attendue } from "@/lib/ingego/corpus";
@@ -38,6 +38,7 @@ function Page() {
   const { donnees, synchro, commenter } = useDonnees();
   const [ouvert, setOuvert] = useState<string | null>(null);
   const [filtre, setFiltre] = useState("");
+  const [voirCommentaires, setVoirCommentaires] = useState(false);
 
   const serie = useMemo(
     () => serieJours(donnees.journal.filter((e) => e.id === "__session").map((e) => e.jour)),
@@ -57,15 +58,32 @@ function Page() {
       return { axe, parSousTheme };
     }).filter((g) => g.parSousTheme.size > 0);
   }, [filtre]);
+  const commentaires = useMemo(
+    () =>
+      CORPUS.filter((q) => Boolean(donnees.commentaires[q.id]?.trim())).map((q) => ({
+        q,
+        texte: donnees.commentaires[q.id],
+      })),
+    [donnees.commentaires],
+  );
 
   return (
     <div className="min-h-screen bg-background pb-24">
       <Entete serie={serie} etat={donnees.cartes} synchro={synchro} jauges={false} />
 
       <main className="mx-auto max-w-4xl space-y-5 px-5 py-5">
-        <div>
-          <p className="text-xs font-bold text-brand uppercase">Bibliothèque technique</p>
-          <h1 className="text-2xl text-primary">Corpus</h1>
+        <div className="flex items-end justify-between gap-3">
+          <div>
+            <p className="text-xs font-bold text-brand uppercase">Bibliothèque technique</p>
+            <h1 className="text-2xl text-primary">Corpus</h1>
+          </div>
+          <button
+            onClick={() => setVoirCommentaires(true)}
+            className="tap flex items-center gap-1.5 text-[0.68rem] font-semibold text-muted-foreground hover:text-primary"
+          >
+            <MessageSquareText className="h-3.5 w-3.5" /> Commentaires
+            {commentaires.length ? <span className="rounded-full bg-brand/15 px-1.5 py-0.5 text-brand">{commentaires.length}</span> : null}
+          </button>
         </div>
         <label className="flex items-center gap-2 rounded-2xl border border-input bg-card px-4 shadow-[var(--shadow-card)] focus-within:border-ring">
           <Search className="h-4 w-4 text-muted-foreground" />
@@ -157,6 +175,40 @@ function Page() {
           ))}
         </div>
       </main>
+
+      {voirCommentaires ? (
+        <div className="fixed inset-0 z-50 bg-primary/35 p-3 backdrop-blur-sm sm:p-6" role="dialog" aria-modal="true" aria-label="Tableau des commentaires">
+          <section className="mx-auto flex max-h-[calc(100dvh-1.5rem)] max-w-4xl flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-[var(--shadow-lift)] sm:max-h-[calc(100dvh-3rem)]">
+            <header className="flex items-center gap-3 border-b border-border px-4 py-3">
+              <MessageSquareText className="h-5 w-5 text-brand" />
+              <div className="min-w-0 flex-1">
+                <h2 className="text-base font-bold">Commentaires enregistrés</h2>
+                <p className="text-xs text-muted-foreground">{commentaires.length} question{commentaires.length > 1 ? "s" : ""} annotée{commentaires.length > 1 ? "s" : ""}</p>
+              </div>
+              <button onClick={() => setVoirCommentaires(false)} aria-label="Fermer" className="tap rounded-full p-2 text-muted-foreground hover:bg-elevated">
+                <X className="h-5 w-5" />
+              </button>
+            </header>
+            <div className="overflow-auto">
+              {commentaires.length ? (
+                <table className="w-full table-fixed border-collapse text-left text-xs sm:text-sm">
+                  <thead className="sticky top-0 bg-elevated text-muted-foreground">
+                    <tr><th className="w-[38%] px-4 py-2.5">Question</th><th className="px-4 py-2.5">Commentaire</th></tr>
+                  </thead>
+                  <tbody className="divide-y divide-border">
+                    {commentaires.map(({ q, texte }) => (
+                      <tr key={q.id} className="align-top">
+                        <td className="px-4 py-3"><span className="mb-1 block text-[0.62rem] font-bold text-brand uppercase">{q.sousTheme} · Niv. {q.niveau}</span>{q.question}</td>
+                        <td className="px-4 py-3 leading-relaxed text-muted-foreground">{texte}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              ) : <p className="p-8 text-center text-sm text-muted-foreground">Aucun commentaire enregistré pour le moment.</p>}
+            </div>
+          </section>
+        </div>
+      ) : null}
 
       <NavBas />
     </div>

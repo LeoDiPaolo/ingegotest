@@ -1,5 +1,15 @@
 import { useMemo, useState } from "react";
-import { ArrowRight, ArrowDown, ArrowUp, BarChart3, Check, Clock3, X } from "lucide-react";
+import {
+  ArrowRight,
+  ArrowDown,
+  ArrowUp,
+  BarChart3,
+  Check,
+  ClipboardCheck,
+  Clock3,
+  MessageSquareText,
+  X,
+} from "lucide-react";
 import { AXE_BY_ID, FAMILLES, TYPES, type Question } from "@/lib/ingego/corpus";
 import { graineDe, melange } from "@/lib/ingego/algo";
 import { CarteFrance } from "@/components/ingego/carte-france";
@@ -44,6 +54,34 @@ function melangeStrict<T>(liste: T[], graine: number): T[] {
 }
 
 const AUTO_NOTE = ["libre", "vf"];
+
+const CONSIGNES: Record<Question["type"], string> = {
+  qcm: "Prenez une décision",
+  libre: "Préparez votre réponse au jury",
+  ordre: "Remettez l'opération dans le bon ordre",
+  frise: "Reconstituez la chronologie",
+  assoc: "Reliez les bons repères",
+  trous: "Complétez le document",
+  vf: "Contrôlez cette affirmation",
+  tri: "Classez les éléments",
+  erreur: "Repérez l'anomalie",
+  carte: "Localisez la bonne zone",
+  graphe: "Analysez les données",
+  camembert: "Identifiez la bonne part",
+  plan: "Intervenez sur le plan",
+  courbe: "Lisez le bon point",
+  organigramme: "Identifiez le bon acteur",
+  coupe: "Diagnostiquez la coupe",
+  synoptique: "Suivez le système",
+  radar: "Arbitrez les critères",
+  cycle: "Situez l'étape",
+  echelle: "Placez le bon niveau",
+  chantier: "Affectez chaque élément",
+  paroi: "Inspectez la paroi",
+  pmr: "Contrôlez le cheminement",
+  facade: "Analysez les façades",
+  pluvial: "Organisez la gestion des eaux",
+};
 
 function initiale(q: Question): Reponse {
   switch (q.type) {
@@ -400,15 +438,20 @@ export function Exercice({
   total,
   onNote,
   onCorrige,
+  commentaire = "",
+  onCommentaire,
 }: {
   q: Question;
   numero: number;
   total: number;
   onNote: (note: number) => void;
   onCorrige?: (juste: boolean, part: number) => void;
+  commentaire?: string;
+  onCommentaire?: (texte: string) => void;
 }) {
   const [rep, setRep] = useState<Reponse>(() => initiale(q));
   const [corrige, setCorrige] = useState(false);
+  const [observation, setObservation] = useState(commentaire);
 
   const axe = AXE_BY_ID[q.axe];
   const famille = FAMILLES[q.fam];
@@ -504,7 +547,12 @@ export function Exercice({
         </div>
       </div>
 
-      <h2 className="text-lg leading-snug sm:text-xl">{q.question}</h2>
+      <div className="mission-strip rounded-r-xl bg-primary/[0.055] px-3 py-2.5 sm:px-4 sm:py-3">
+        <p className="mb-1 flex items-center gap-1.5 text-[0.65rem] font-extrabold tracking-[0.12em] text-brand uppercase">
+          <ClipboardCheck className="h-3.5 w-3.5" /> {CONSIGNES[q.type]}
+        </p>
+        <h2 className="text-lg leading-snug sm:text-xl">{q.question}</h2>
+      </div>
 
       {/* ---------- SAISIE ---------- */}
       {q.type === "qcm" && (
@@ -1002,21 +1050,33 @@ export function Exercice({
       ) : (
         <div className="space-y-3 sm:space-y-4">
           {!autoNote || q.type === "vf" ? (
-            <p
+            <div
               className={cn(
-                "flex items-center gap-2 rounded-xl px-3 py-2 text-sm font-bold sm:py-3",
+                "relative flex min-h-14 items-center gap-3 overflow-hidden rounded-xl border-2 px-3 py-2 text-sm font-bold sm:py-3",
                 estJuste
-                  ? "anim-pop bg-success/15 text-success"
-                  : "anim-tremble bg-destructive/15 text-destructive",
+                  ? "anim-pop border-success/50 bg-success/15 text-success"
+                  : part > 0
+                    ? "anim-pop border-warning/60 bg-warning/15 text-foreground"
+                    : "anim-tremble border-destructive/45 bg-destructive/15 text-destructive",
               )}
             >
-              {estJuste ? <Check className="h-5 w-5" /> : <X className="h-5 w-5" />}
-              {estJuste
-                ? "Bravo, réponse juste !"
-                : part > 0
-                  ? `Réponse partielle · ${Math.round(part * 100)} % d'éléments corrects`
-                  : "Réponse à revoir"}
-            </p>
+              <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full border-2 border-current">
+                {estJuste ? <Check className="h-5 w-5" /> : <X className="h-5 w-5" />}
+              </span>
+              <span>
+                <span className="block text-[0.62rem] font-extrabold tracking-[0.14em] uppercase opacity-70">
+                  Contrôle IngéGo
+                </span>
+                {estJuste
+                  ? "Mission validée"
+                  : part > 0
+                    ? `Étape partiellement validée · ${Math.round(part * 100)} %`
+                    : "Point à reprendre"}
+              </span>
+              <span className="pointer-events-none absolute -right-2 -bottom-2 rotate-[-10deg] rounded-md border-2 border-current px-2 py-1 text-[0.58rem] font-black tracking-[0.15em] uppercase opacity-25">
+                {estJuste ? "Validé" : "À revoir"}
+              </span>
+            </div>
           ) : null}
 
           {q.type === "libre" && (
@@ -1061,6 +1121,23 @@ export function Exercice({
               <p className="mt-2 text-xs text-warning">À revérifier : {q.aVerifier}</p>
             ) : null}
           </div>
+
+          {onCommentaire ? (
+            <div className="rounded-xl border border-border bg-elevated/60 p-3">
+              <label className="flex items-center gap-1.5 text-[0.68rem] font-bold tracking-[0.12em] text-muted-foreground uppercase">
+                <MessageSquareText className="h-3.5 w-3.5" /> Observation personnelle
+              </label>
+              <textarea
+                value={observation}
+                onChange={(e) => setObservation(e.target.value)}
+                onBlur={() => onCommentaire(observation)}
+                rows={2}
+                placeholder="Notez un doute, une précision ou une correction à revoir…"
+                className="mt-2 w-full resize-none rounded-lg border border-input bg-card px-3 py-2 text-sm leading-snug outline-none focus:border-ring"
+              />
+              <p className="mt-1 text-[0.65rem] text-muted-foreground">Enregistrée automatiquement.</p>
+            </div>
+          ) : null}
 
           {autoNote ? (
             <div>

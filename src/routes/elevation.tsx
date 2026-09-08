@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
+import { Check, Flag, LockKeyhole, Sparkles } from "lucide-react";
 import { Entete } from "@/components/ingego/entete";
 import { NavBas } from "@/components/ingego/nav-bas";
 import { AXES, CORPUS, FAMILLES, TYPES, type Question } from "@/lib/ingego/corpus";
@@ -48,6 +49,11 @@ function Page() {
     () => serieJours(donnees.journal.filter((e) => e.id === "__session").map((e) => e.jour)),
     [donnees.journal],
   );
+  const prochain = useMemo(() => CORPUS.find((q) => etatCarte(donnees.cartes[q.id]) !== "acquis"), [donnees.cartes]);
+  const totalAcquis = useMemo(
+    () => CORPUS.filter((q) => etatCarte(donnees.cartes[q.id]) === "acquis").length,
+    [donnees.cartes],
+  );
 
   return (
     <div className="min-h-screen bg-background pb-24">
@@ -68,6 +74,18 @@ function Page() {
             ))}
           </ul>
         </div>
+
+        <section className="mission-strip flex items-center gap-3 rounded-r-2xl bg-card px-4 py-3 shadow-[var(--shadow-card)]">
+          <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-brand/15 text-brand">
+            <Flag className="h-5 w-5" />
+          </span>
+          <div className="min-w-0 flex-1">
+            <p className="text-[0.62rem] font-extrabold tracking-[0.13em] text-brand uppercase">Prochain jalon</p>
+            <p className="truncate text-sm font-bold">{prochain?.sousTheme ?? "Tous les jalons sont construits"}</p>
+            <p className="text-xs text-muted-foreground">{totalAcquis} compétences acquises sur {CORPUS.length}</p>
+          </div>
+          <Sparkles className="h-5 w-5 text-brand" />
+        </section>
 
         <div className="grid gap-2 sm:grid-cols-2">
           {AXES.map((axe) => {
@@ -107,20 +125,31 @@ function Page() {
                     const vus = questions.filter(
                       (q) => etatCarte(donnees.cartes[q.id]) !== "neuf",
                     ).length;
+                    const terminees = questions.filter(
+                      (q) => etatCarte(donnees.cartes[q.id]) === "acquis",
+                    ).length;
+                    const complet = terminees === questions.length;
+                    const actif = vus > 0 && !complet;
                     return (
-                      <div key={theme} className="flex items-center gap-3">
+                      <div key={theme} className="relative flex items-center gap-3 py-1">
+                        {themeIndex < themes.length - 1 ? (
+                          <span className="absolute top-11 bottom-[-0.8rem] left-[1.3rem] border-l-2 border-dashed border-primary/25" />
+                        ) : null}
                         <button
                           onClick={() => setChoisie(questions[0] ?? null)}
-                          className="tap relative grid h-11 w-11 shrink-0 place-items-center rounded-full border-2 bg-elevated text-xs font-extrabold shadow-[0_3px_0_var(--color-border)] active:translate-y-0.5"
+                          className={cn(
+                            "tap relative z-10 grid h-11 w-11 shrink-0 place-items-center rounded-full border-2 text-xs font-extrabold shadow-[0_3px_0_var(--color-border)] transition-transform active:translate-y-0.5",
+                            complet ? "bg-success text-success-foreground ring-4 ring-success/15" : actif ? "bg-card ring-4 ring-primary/10" : "bg-elevated",
+                          )}
                           style={{ borderColor: `${axe.couleur}77`, color: axe.couleur }}
                         >
-                          {themeIndex + 1}
+                          {complet ? <Check className="h-5 w-5" /> : actif ? themeIndex + 1 : <LockKeyhole className="h-4 w-4 opacity-55" />}
                         </button>
                         <div className="min-w-0 flex-1">
                           <p className="truncate text-xs font-semibold">{theme}</p>
                           <div className="mt-1.5 h-2 overflow-hidden rounded-full bg-elevated">
                             <div
-                              className="h-full rounded-full"
+                              className="h-full rounded-full transition-[width] duration-700"
                               style={{
                                 width: `${questions.length ? (vus / questions.length) * 100 : 0}%`,
                                 backgroundColor: axe.couleur,

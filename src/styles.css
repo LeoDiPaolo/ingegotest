@@ -290,6 +290,21 @@
   }
 }
 
+@keyframes ing-tampon {
+  0% {
+    transform: scale(1.35) rotate(-14deg);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(0.96) rotate(-8deg);
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(1) rotate(-10deg);
+    opacity: 0.25;
+  }
+}
+
 @utility anim-pop {
   animation: ing-pop 0.28s cubic-bezier(0.34, 1.56, 0.64, 1) both;
 }
@@ -300,6 +315,10 @@
 
 @utility anim-monte {
   animation: ing-monte 0.35s ease-out both;
+}
+
+@utility anim-tampon {
+  animation: ing-tampon 0.32s cubic-bezier(0.2, 0.9, 0.3, 1.2) both;
 }
 
 @utility confetti {
@@ -316,6 +335,7 @@
   .anim-pop,
   .anim-tremble,
   .anim-monte,
+  .anim-tampon,
   .confetti {
     animation: none;
   }
