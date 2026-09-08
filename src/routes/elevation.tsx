@@ -77,7 +77,7 @@ function Page() {
           })}
         </div>
 
-        <div className="grid gap-7 lg:grid-cols-2">
+        <div className="grid min-w-0 gap-7 lg:grid-cols-2">
           {AXES.map((axe, axeIndex) => {
             const qs = CORPUS.filter((q) => q.axe === axe.id);
             if (!qs.length) return null;
@@ -85,7 +85,7 @@ function Page() {
             return (
               <section
                 key={axe.id}
-                className="relative space-y-3 rounded-3xl border border-border bg-card/95 p-4 shadow-[var(--shadow-card)]"
+              className="relative min-w-0 space-y-3 overflow-hidden rounded-3xl border border-border bg-card/95 p-4 shadow-[var(--shadow-card)]"
               >
                 {axeIndex < AXES.length - 1 ? (
                   <span className="absolute -bottom-8 left-1/2 h-8 border-l-2 border-dashed border-primary/30" />
