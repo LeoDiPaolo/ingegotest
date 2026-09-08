@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { ArrowDown, ArrowUp, BarChart3, Check, Clock3, X } from "lucide-react";
+import { ArrowRight, ArrowDown, ArrowUp, BarChart3, Check, Clock3, X } from "lucide-react";
 import { AXE_BY_ID, FAMILLES, TYPES, type Question } from "@/lib/ingego/corpus";
 import { graineDe, melange } from "@/lib/ingego/algo";
 import { CarteFrance } from "@/components/ingego/carte-france";
@@ -1009,51 +1009,63 @@ export function Exercice({
             ) : null}
           </div>
 
-          <div>
-            <p className="mb-2 text-xs text-muted-foreground">
-              {autoNote
-                ? "Évaluez votre restitution : c'est elle qui règle la prochaine échéance."
-                : "Comment était la reprise ?"}
-            </p>
-            <div className="grid grid-cols-2 gap-2">
-              {(autoNote
-                ? ([
+          {autoNote ? (
+            <div>
+              <p className="mb-2 text-xs text-muted-foreground">
+                Évaluez votre restitution : c'est elle qui règle la prochaine échéance.
+              </p>
+              <div className="grid grid-cols-2 gap-2">
+                {(
+                  [
                     [0, "Raté"],
                     [1, "Difficile"],
                     [2, "Correct"],
                     [3, "Évident"],
-                  ] as const)
-                : estJuste
-                  ? ([
-                      [1, "Difficile"],
-                      [2, "Bien"],
-                      [3, "Évident"],
-                    ] as const)
-                  : part >= 0.6
-                    ? ([
-                        [0, "Raté"],
-                        [1, "Presque"],
-                      ] as const)
-                    : ([[0, "Continuer"]] as const)
-              ).map(([note, label]) => (
-                <button
-                  key={note}
-                  onClick={() => onNote(note)}
-                  className={cn(
-                    "tap rounded-xl border py-3 text-sm font-semibold",
-                    note === 0
-                      ? "border-destructive/50 bg-destructive/15 text-foreground"
-                      : note === 3
-                        ? "border-success/50 bg-success/15 text-foreground"
-                        : "border-border bg-elevated text-foreground",
-                    !autoNote && !estJuste && part < 0.6 && "col-span-2",
-                  )}
-                >
-                  {label}
-                </button>
-              ))}
+                  ] as const
+                ).map(([note, label]) => (
+                  <button
+                    key={note}
+                    onClick={() => onNote(note)}
+                    className={cn(
+                      "tap rounded-xl border py-3 text-sm font-semibold",
+                      note === 0
+                        ? "border-destructive/50 bg-destructive/15 text-foreground"
+                        : note === 3
+                          ? "border-success/50 bg-success/15 text-foreground"
+                          : "border-border bg-elevated text-foreground",
+                    )}
+                  >
+                    {label}
+                  </button>
+                ))}
+              </div>
             </div>
-          </div>
+          ) : (
+            <div className="space-y-2">
+              <button
+                onClick={() => onNote(estJuste ? 2 : part >= 0.6 ? 1 : 0)}
+                className="tap flex w-full items-center justify-center gap-2 rounded-xl bg-brand py-4 text-base font-bold text-brand-foreground"
+              >
+                Question suivante <ArrowRight className="h-4 w-4" />
+              </button>
+              {estJuste ? (
+                <div className="grid grid-cols-2 gap-2">
+                  <button
+                    onClick={() => onNote(1)}
+                    className="tap rounded-xl border border-border bg-elevated py-2.5 text-xs font-semibold"
+                  >
+                    C'était difficile
+                  </button>
+                  <button
+                    onClick={() => onNote(3)}
+                    className="tap rounded-xl border border-success/50 bg-success/15 py-2.5 text-xs font-semibold"
+                  >
+                    C'était évident
+                  </button>
+                </div>
+              ) : null}
+            </div>
+          )}
         </div>
       )}
     </article>
