@@ -139,6 +139,7 @@ function Page() {
                     ).length;
                     const complet = terminees === questions.length;
                     const actif = vus > 0 && !complet;
+                    const estProchain = prochain?.sousTheme === theme;
                     return (
                       <div key={theme} className="relative flex items-center gap-3 py-1">
                         {themeIndex < themes.length - 1 ? (
@@ -150,7 +151,7 @@ function Page() {
                             "tap relative z-10 grid h-11 w-11 shrink-0 place-items-center rounded-full border-2 text-xs font-extrabold shadow-[0_3px_0_var(--color-border)] transition-transform active:translate-y-0.5",
                             complet
                               ? "bg-success text-success-foreground ring-4 ring-success/15"
-                              : actif
+                              : actif || estProchain
                                 ? "bg-card ring-4 ring-primary/10"
                                 : "bg-elevated",
                           )}
@@ -158,7 +159,7 @@ function Page() {
                         >
                           {complet ? (
                             <Check className="h-5 w-5" />
-                          ) : actif ? (
+                          ) : actif || estProchain ? (
                             themeIndex + 1
                           ) : (
                             <LockKeyhole className="h-4 w-4 opacity-55" />
