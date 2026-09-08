@@ -7,3 +7,5 @@
 - [x] Maintenir les exercices compacts et les jeux visuels utiles
 - [x] Vérifier les quatre écrans sur mobile et ordinateur
 - [x] Vérifier le lancement et l’enchaînement d’une mission
+- [ ] Afficher le niveau sur chaque question
+- [ ] Répartir les questions d’une séance proportionnellement au poids de chaque thème dans le corpus
