@@ -14,4 +14,4 @@
 - [x] Ajouter les observations après correction et leur tableau récapitulatif dans Corpus
 - [x] Transformer Élévation en parcours avec jalons, prochain objectif et états visuels
 - [x] Personnaliser les briefs et enrichir les bilans de mission
-- [ ] Vérifier les quatre écrans et une mission complète sur téléphone et ordinateur
+- [x] Vérifier les quatre écrans et une mission complète sur téléphone et ordinateur
