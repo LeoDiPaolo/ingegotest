@@ -2,13 +2,10 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
 import {
   CheckCircle2,
-  Flame,
   Layers,
   Library,
   Play,
   RotateCcw,
-  Sparkles,
-  Target,
   X,
   Clock3,
   ChevronRight,
@@ -160,16 +157,16 @@ function Reviser() {
             <section className="anim-monte relative overflow-hidden border-b border-border pb-8 lg:col-span-5 lg:border-r lg:border-b-0 lg:pr-10">
               <span className="brand-watermark -top-3 -left-5">IG</span>
               <div className="relative z-10">
-                <LogoIngego className="w-52 object-contain object-left sm:w-64" />
+                <LogoIngego className="hidden w-52 object-contain object-left sm:block sm:w-64" />
                 <p className="editorial-kicker mt-8">Carnet de missions · Volume 01</p>
-                <h1 className="mt-3 text-6xl leading-[0.85] text-primary sm:text-7xl">
+                <h1 className="mt-3 text-5xl leading-[0.88] text-primary sm:text-7xl">
                   Réviser.
                   <br />
                   <em className="text-brand">Décider.</em>
                   <br />
                   Construire.
                 </h1>
-                <p className="mt-7 max-w-sm text-base leading-relaxed text-muted-foreground">
+                <p className="mt-5 max-w-sm text-sm leading-relaxed text-muted-foreground sm:mt-7 sm:text-base">
                   Votre préparation de terrain au concours d’ingénieur territorial, entre faits,
                   réglementation et décisions techniques.
                 </p>

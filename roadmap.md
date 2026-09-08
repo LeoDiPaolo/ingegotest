@@ -11,9 +11,9 @@
 
 ## Carnet de missions éditorial
 
-- [ ] Installer la typographie et les surfaces éditoriales
-- [ ] Recomposer l’accueil et le brief comme un journal de mission
-- [ ] Déployer la signature IngéGo dans l’en-tête et la navigation
-- [ ] Transformer Élévation, Corpus et Réglages en dossiers techniques
-- [ ] Recomposer les exercices comme des fiches de mission
-- [ ] Vérifier mobile et desktop
+- [x] Installer la typographie et les surfaces éditoriales
+- [x] Recomposer l’accueil et le brief comme un journal de mission
+- [x] Déployer la signature IngéGo dans l’en-tête et la navigation
+- [x] Transformer Élévation, Corpus et Réglages en dossiers techniques
+- [x] Recomposer les exercices comme des fiches de mission
+- [x] Vérifier mobile et desktop

@@ -23,8 +23,8 @@ export function NavBas() {
               className="tap group relative flex flex-col items-center gap-1 py-2 text-[0.65rem] font-bold transition-transform after:absolute after:inset-x-7 after:top-0 after:h-0.5 after:origin-center after:scale-x-0 after:bg-brand after:transition-transform data-[status=active]:after:scale-x-100 active:scale-95"
             >
               {to === "/" ? (
-                <span className="-mt-4 grid h-11 w-11 place-items-center border-4 border-card bg-primary shadow-[var(--shadow-card)]">
-                  <PastilleIngego className="h-8 w-8 rounded-none" />
+                <span className="-mt-4 grid h-11 w-11 place-items-center rounded-full border-4 border-card bg-primary shadow-[var(--shadow-card)]">
+                  <PastilleIngego className="h-8 w-8 rounded-full" />
                 </span>
               ) : (
                 <span className="grid h-7 w-9 place-items-center border-x border-border group-data-[status=active]:border-primary">
