@@ -9,3 +9,9 @@
 - [x] Vérifier le lancement et l’enchaînement d’une mission
 - [x] Afficher le niveau sur chaque question
 - [x] Répartir les questions d’une séance proportionnellement au poids de chaque thème dans le corpus
+- [x] Donner une consigne active et une fiche de mission compacte à chaque format
+- [x] Ajouter une correction expressive avec validation visuelle IngéGo
+- [x] Ajouter les observations après correction et leur tableau récapitulatif dans Corpus
+- [x] Transformer Élévation en parcours avec jalons, prochain objectif et états visuels
+- [x] Personnaliser les briefs et enrichir les bilans de mission
+- [x] Vérifier les quatre écrans et une mission complète sur téléphone et ordinateur

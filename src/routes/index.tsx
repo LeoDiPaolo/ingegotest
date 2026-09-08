@@ -49,7 +49,7 @@ export const Route = createFileRoute("/")({
 const MARQUE_SESSION = "__session";
 
 function Reviser() {
-  const { donnees, pret, synchro, enregistrerCarte, maj } = useDonnees();
+  const { donnees, pret, synchro, enregistrerCarte, commenter, maj } = useDonnees();
   const [ordre, setOrdre] = useState<Question[] | null>(null);
   const [i, setI] = useState(0);
   const [faits, setFaits] = useState<string[]>([]);
@@ -75,6 +75,21 @@ function Reviser() {
   }, [donnees.cartes]);
 
   const total = donnees.reglages.parSession;
+  const mission = useMemo(() => {
+    if (!ordre?.length) return null;
+    const comptes = ordre.reduce<Record<string, number>>((acc, question) => {
+      acc[question.axe] = (acc[question.axe] ?? 0) + 1;
+      return acc;
+    }, {});
+    const [axeId, nombre] = Object.entries(comptes).sort((a, b) => b[1] - a[1])[0] ?? [];
+    const dominant = axeId && nombre / ordre.length >= 0.5 ? AXE_BY_ID[axeId] : null;
+    const themes = [...new Set(ordre.map((question) => question.sousTheme))];
+    return {
+      titre: dominant ? `Mission · ${dominant.court}` : "Mission transversale",
+      detail: themes.slice(0, 3).join(" · "),
+      themes,
+    };
+  }, [ordre]);
 
   function demarrer() {
     const lot = composerSession(donnees.cartes, donnees.reglages, Date.now());
@@ -271,7 +286,7 @@ function Reviser() {
                 Brief de mission
               </p>
               <h1 className="relative mt-1 text-2xl font-bold text-primary-foreground">
-                Révision transversale
+                {mission?.titre ?? "Mission transversale"}
               </h1>
             </div>
             <div className="relative -mt-7 rounded-t-3xl bg-card px-5 pt-5 pb-5 text-center">
@@ -285,9 +300,11 @@ function Reviser() {
                   />
                 ))}
               </div>
-              <p className="mx-auto mt-4 max-w-sm text-sm leading-relaxed text-muted-foreground">
-                Une mission courte mêlant réglementation, technique et décision. Les erreurs
-                reviennent quelques étapes plus loin.
+              <p className="mx-auto mt-4 max-w-sm text-sm font-semibold leading-relaxed text-foreground">
+                {mission?.detail}
+              </p>
+              <p className="mx-auto mt-1 max-w-sm text-xs leading-relaxed text-muted-foreground">
+                Les erreurs reviennent quelques étapes plus loin pour être consolidées.
               </p>
               <div className="mt-4 grid grid-cols-2 gap-3 text-center">
                 <div className="rounded-2xl border border-border bg-elevated px-3 py-2.5">
@@ -320,33 +337,66 @@ function Reviser() {
             </div>
           </section>
         ) : fini ? (
-          <section className="surface anim-pop space-y-4 p-6 text-center">
+          <section className="surface anim-pop overflow-hidden text-center">
             <Confettis />
-            <Castor className="mx-auto h-28 w-28" />
-            <CheckCircle2 className="mx-auto h-10 w-10 text-success" />
-            <h1 className="text-2xl text-primary">Séance terminée</h1>
-            <p className="text-sm text-muted-foreground">
-              {justes} / {faits.length} questions réussies du premier coup.
-            </p>
-            <div className="h-4 overflow-hidden rounded-full bg-elevated ring-1 ring-border/60">
-              <div
-                className="h-full rounded-full bg-success transition-[width] duration-1000"
-                style={{ width: `${(justes / Math.max(1, faits.length)) * 100}%` }}
-              />
+            <div className="blueprint bg-primary px-6 pt-6 pb-12 text-primary-foreground">
+              <LogoIngego className="mx-auto w-44 rounded-xl bg-card p-2 shadow-[var(--shadow-card)]" />
+              <div className="relative mx-auto mt-4 h-24 w-28">
+                <Castor
+                  className={`mx-auto h-24 w-24 ${justes / Math.max(1, faits.length) >= 0.75 ? "anim-pop rotate-2" : ""}`}
+                />
+                <CheckCircle2 className="absolute right-0 bottom-1 h-9 w-9 rounded-full bg-card p-1 text-success" />
+              </div>
+              <h1 className="mt-2 text-2xl text-primary-foreground">Mission accomplie</h1>
             </div>
-            <div className="flex gap-2">
-              <button
-                onClick={demarrer}
-                className="tap touche touche-brand flex-1 bg-brand py-3.5 text-sm font-extrabold text-brand-foreground uppercase"
-              >
-                <RotateCcw className="mr-1 inline h-4 w-4" /> Nouvelle séance
-              </button>
-              <button
-                onClick={quitter}
-                className="tap touche flex-1 border border-border bg-card py-3.5 text-sm font-bold"
-              >
-                Terminer
-              </button>
+            <div className="relative -mt-7 space-y-4 rounded-t-3xl bg-card p-5">
+              <div className="grid grid-cols-3 gap-2">
+                <div className="rounded-xl bg-success/12 p-2">
+                  <p className="text-2xl font-extrabold text-success">{justes}</p>
+                  <p className="text-[0.62rem] font-bold text-muted-foreground uppercase">
+                    du 1er coup
+                  </p>
+                </div>
+                <div className="rounded-xl bg-brand/12 p-2">
+                  <p className="text-2xl font-extrabold text-brand">{faits.length}</p>
+                  <p className="text-[0.62rem] font-bold text-muted-foreground uppercase">
+                    consolidées
+                  </p>
+                </div>
+                <div className="rounded-xl bg-destructive/10 p-2">
+                  <p className="text-2xl font-extrabold text-destructive">
+                    {Object.keys(rates).length}
+                  </p>
+                  <p className="text-[0.62rem] font-bold text-muted-foreground uppercase">
+                    à reprendre
+                  </p>
+                </div>
+              </div>
+              <div className="h-4 overflow-hidden rounded-full bg-elevated ring-1 ring-border/60">
+                <div
+                  className="h-full rounded-full bg-success transition-[width] duration-1000"
+                  style={{ width: `${(justes / Math.max(1, faits.length)) * 100}%` }}
+                />
+              </div>
+              <p className="text-sm text-muted-foreground">
+                {justes === faits.length
+                  ? "Parcours net : tous les points ont été validés dès le premier passage."
+                  : `${mission?.themes.length ?? 0} thèmes parcourus · les points fragiles sont déjà reprogrammés.`}
+              </p>
+              <div className="flex gap-2">
+                <button
+                  onClick={demarrer}
+                  className="tap touche touche-brand flex-1 bg-brand py-3.5 text-sm font-extrabold text-brand-foreground uppercase"
+                >
+                  <RotateCcw className="mr-1 inline h-4 w-4" /> Nouvelle séance
+                </button>
+                <button
+                  onClick={quitter}
+                  className="tap touche flex-1 border border-border bg-card py-3.5 text-sm font-bold"
+                >
+                  Terminer
+                </button>
+              </div>
             </div>
           </section>
         ) : q ? (
@@ -376,6 +426,8 @@ function Reviser() {
                 numero={faits.length + 1}
                 total={total}
                 onNote={(note) => noter(q, note)}
+                commentaire={donnees.commentaires[q.id] ?? ""}
+                onCommentaire={(texte) => commenter(q.id, texte)}
               />
             </div>
           </section>
