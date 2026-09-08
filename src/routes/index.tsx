@@ -346,6 +346,11 @@ function Reviser() {
               <p className="mission-brief-note mx-auto mt-1 max-w-sm text-xs leading-snug text-muted-foreground sm:leading-relaxed">
                 Les erreurs reviennent quelques étapes plus loin pour être consolidées.
               </p>
+              {objectif ? (
+                <p className="mx-auto mt-1 max-w-sm text-[0.68rem] font-bold text-primary">
+                  Cap niveau {objectif.niveau} · {objectif.restantesNiveau} validation{objectif.restantesNiveau > 1 ? "s" : ""} à obtenir du premier coup
+                </p>
+              ) : null}
               <div className="mx-auto mt-2 flex w-fit items-center gap-2 text-[0.65rem] font-bold">
                 <span className="rounded-full bg-success/12 px-2 py-1 text-success">
                   {mission?.nouvelles ?? 0} nouvelles
@@ -434,7 +439,7 @@ function Reviser() {
                   : `${mission?.themes.length ?? 0} thèmes parcourus · les points repris restent à valider du premier coup lors d'une prochaine mission.`}
               </p>
               {niveauxDebloques.length ? (
-                <div className="anim-pop rounded-2xl border-2 border-success/50 bg-success/10 p-3 text-left">
+                <div className="anim-unlock rounded-2xl border-2 border-success/50 bg-success/10 p-3 text-left">
                   <p className="text-[0.65rem] font-extrabold tracking-[0.14em] text-success uppercase">
                     Niveau déverrouillé
                   </p>
