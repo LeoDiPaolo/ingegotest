@@ -560,25 +560,25 @@ export function Exercice({
           {melangeOptions
             .filter(({ i }) => !corrige || i === q.bonneReponse || i === rep)
             .map(({ texte: o, i }) => (
-            <button
-              key={i}
-              disabled={corrige}
-              onClick={() => setRep(i)}
-              className={optionClass(
-                corrige
-                  ? i === q.bonneReponse
-                    ? "ok"
+              <button
+                key={i}
+                disabled={corrige}
+                onClick={() => setRep(i)}
+                className={optionClass(
+                  corrige
+                    ? i === q.bonneReponse
+                      ? "ok"
+                      : rep === i
+                        ? "ko"
+                        : "neutre"
                     : rep === i
-                      ? "ko"
-                      : "neutre"
-                  : rep === i
-                    ? "choisi"
-                    : "neutre",
-              )}
-            >
-              {o}
-            </button>
-          ))}
+                      ? "choisi"
+                      : "neutre",
+                )}
+              >
+                {o}
+              </button>
+            ))}
         </div>
       )}
 
@@ -742,31 +742,34 @@ export function Exercice({
 
       {q.type === "erreur" && (
         <div className="space-y-2">
-          {(q.segments ?? []).map((s, i) => ({ s, i })).filter(({ i }) => !corrige || i === q.phraseFautive || i === rep).map(({ s, i }) => (
-            <button
-              key={i}
-              disabled={corrige}
-              onClick={() => setRep(i)}
-              className={optionClass(
-                corrige
-                  ? i === q.phraseFautive
-                    ? "ok"
+          {(q.segments ?? [])
+            .map((s, i) => ({ s, i }))
+            .filter(({ i }) => !corrige || i === q.phraseFautive || i === rep)
+            .map(({ s, i }) => (
+              <button
+                key={i}
+                disabled={corrige}
+                onClick={() => setRep(i)}
+                className={optionClass(
+                  corrige
+                    ? i === q.phraseFautive
+                      ? "ok"
+                      : rep === i
+                        ? "ko"
+                        : "neutre"
                     : rep === i
-                      ? "ko"
-                      : "neutre"
-                  : rep === i
-                    ? "choisi"
-                    : "neutre",
-              )}
-            >
-              {corrige && i === q.phraseFautive ? (
-                <span className="mb-1 block text-[0.68rem] font-semibold tracking-[0.12em] text-success uppercase">
-                  Phrase fautive
-                </span>
-              ) : null}
-              {s}
-            </button>
-          ))}
+                      ? "choisi"
+                      : "neutre",
+                )}
+              >
+                {corrige && i === q.phraseFautive ? (
+                  <span className="mb-1 block text-[0.68rem] font-semibold tracking-[0.12em] text-success uppercase">
+                    Phrase fautive
+                  </span>
+                ) : null}
+                {s}
+              </button>
+            ))}
           <p className="text-xs text-muted-foreground">
             Les phrases se lisent à la suite. Touchez celle qui est fautive : en correction, elle
             apparaît en vert, et votre choix erroné éventuel en rouge.
@@ -1103,7 +1106,10 @@ export function Exercice({
 
           {q.correction && (
             <Accordion type="single" collapsible>
-              <AccordionItem value="correction" className="rounded-xl border border-border bg-elevated px-3">
+              <AccordionItem
+                value="correction"
+                className="rounded-xl border border-border bg-elevated px-3"
+              >
                 <AccordionTrigger className="py-2.5 text-sm text-primary hover:no-underline">
                   Correction détaillée
                 </AccordionTrigger>
@@ -1129,8 +1135,15 @@ export function Exercice({
           </div>
 
           {onCommentaire ? (
-            <Accordion type="single" collapsible defaultValue={observation ? "observation" : undefined}>
-              <AccordionItem value="observation" className="rounded-xl border border-border bg-elevated/60 px-3">
+            <Accordion
+              type="single"
+              collapsible
+              defaultValue={observation ? "observation" : undefined}
+            >
+              <AccordionItem
+                value="observation"
+                className="rounded-xl border border-border bg-elevated/60 px-3"
+              >
                 <AccordionTrigger className="py-2.5 text-sm text-primary hover:no-underline">
                   <span className="flex items-center gap-1.5">
                     <MessageSquareText className="h-3.5 w-3.5" /> Ajouter une observation
@@ -1145,7 +1158,9 @@ export function Exercice({
                     placeholder="Notez un doute, une précision ou une correction à revoir…"
                     className="w-full resize-none rounded-lg border border-input bg-card px-3 py-2 text-sm leading-snug outline-none focus:border-ring"
                   />
-                  <p className="mt-1 text-[0.65rem] text-muted-foreground">Enregistrée automatiquement.</p>
+                  <p className="mt-1 text-[0.65rem] text-muted-foreground">
+                    Enregistrée automatiquement.
+                  </p>
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
