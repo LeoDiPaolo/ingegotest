@@ -1,5 +1,5 @@
 import { CloudOff, Flame, RefreshCw } from "lucide-react";
-import { MotIngego, PastilleIngego } from "@/components/ingego/marque";
+import { LogoIngego } from "@/components/ingego/marque";
 import { jaugesParAxe } from "@/lib/ingego/session";
 import type { Etat } from "@/lib/ingego/algo";
 
@@ -24,13 +24,7 @@ export function Entete({
     <header className="sticky top-0 z-20 border-b border-border bg-card/95 px-5 py-3 backdrop-blur">
       <div className="mx-auto max-w-2xl">
         <div className="flex items-center gap-3">
-          <PastilleIngego className="h-10 w-10 shrink-0 shadow-[var(--shadow-card)]" />
-          <div className="min-w-0">
-            <MotIngego className="text-xl" />
-            <p className="truncate text-[0.65rem] text-muted-foreground">
-              Concours d'ingénieur territorial · écrit juin 2027
-            </p>
-          </div>
+          <LogoIngego className="h-11 w-auto max-w-[12rem] object-contain object-left" />
           <div className="ml-auto flex shrink-0 items-center gap-2 text-sm font-semibold">
             {synchro === "erreur" ? (
               <span title="Sauvegarde en ligne indisponible — progression conservée sur l'appareil">

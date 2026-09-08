@@ -18,7 +18,8 @@ import { CoupeParoi } from "@/components/ingego/coupe-paroi";
 import { ParcoursPmr } from "@/components/ingego/parcours-pmr";
 import { FacadeSolaire } from "@/components/ingego/facade-solaire";
 import { PlanPluvial } from "@/components/ingego/plan-pluvial";
-import { IllustrationTheme } from "@/components/ingego/illustration-theme";
+import { IconeAxe } from "@/components/ingego/univers";
+import { Button } from "@/components/ui/button";
 
 import {
   Accordion,
@@ -438,9 +439,9 @@ export function Exercice({
 
   return (
     <article className="space-y-5">
-      <IllustrationTheme axe={q.axe} stIdx={q.stIdx} couleur={axe.couleur} />
-      <div className="flex flex-wrap items-center gap-2 text-[0.68rem]">
-
+      <div className="flex items-center gap-3">
+        <IconeAxe axe={axe} className="h-12 w-12 shrink-0" />
+        <div className="flex min-w-0 flex-1 flex-wrap items-center gap-1.5 text-[0.68rem]">
         <span
           className="rounded-full px-2.5 py-1 font-semibold"
           style={{ backgroundColor: `${axe.couleur}22`, color: axe.couleur }}
@@ -456,6 +457,7 @@ export function Exercice({
         <span className="ml-auto text-muted-foreground">
           {numero} / {total}
         </span>
+        </div>
       </div>
 
       <h2 className="text-xl leading-snug">{q.question}</h2>
@@ -943,7 +945,7 @@ export function Exercice({
 
       {/* ---------- VALIDATION ET CORRECTION ---------- */}
       {!corrige ? (
-        <button
+        <Button
           onClick={() => {
             setCorrige(true);
             const ok = juste(q, rep);
@@ -953,10 +955,10 @@ export function Exercice({
             onCorrige?.(ok, partJuste(q, rep));
           }}
           disabled={!complet(q, rep)}
-          className="tap touche w-full bg-primary py-4 text-sm font-extrabold text-primary-foreground uppercase disabled:opacity-40 disabled:shadow-none"
+          className="tap touche h-14 w-full rounded-xl text-sm font-extrabold uppercase disabled:opacity-40 disabled:shadow-none"
         >
           {q.type === "libre" ? "Voir la réponse attendue" : "Valider"}
-        </button>
+        </Button>
       ) : (
         <div className="space-y-4">
           {!autoNote || q.type === "vf" ? (
@@ -1054,12 +1056,12 @@ export function Exercice({
             </div>
           ) : (
             <div className="space-y-2">
-              <button
+              <Button
                 onClick={() => onNote(estJuste ? 2 : part >= 0.6 ? 1 : 0)}
-                className="tap flex w-full items-center justify-center gap-2 rounded-xl bg-brand py-4 text-base font-bold text-brand-foreground"
+                className="tap touche-brand h-14 w-full rounded-xl bg-brand text-base font-bold text-brand-foreground hover:bg-brand/90"
               >
                 Question suivante <ArrowRight className="h-4 w-4" />
-              </button>
+              </Button>
               {estJuste ? (
                 <div className="grid grid-cols-2 gap-2">
                   <button
