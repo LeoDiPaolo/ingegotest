@@ -53,10 +53,11 @@ function Page() {
     <div className="min-h-screen bg-background pb-24">
       <Entete serie={serie} etat={donnees.cartes} synchro={synchro} />
 
-      <main className="blueprint mx-auto min-h-[calc(100vh-8rem)] max-w-5xl space-y-7 px-5 py-5">
-        <div>
-          <p className="text-xs font-bold text-brand uppercase">Plan de progression</p>
-          <h1 className="text-2xl text-primary">Arbre de compétences</h1>
+      <main className="journal-page mx-auto min-h-[calc(100vh-8rem)] max-w-6xl space-y-9 px-5 py-7">
+        <div className="relative overflow-hidden border-b border-border pb-7">
+          <span className="brand-watermark -top-2 right-0">02</span>
+          <p className="editorial-kicker relative">Volume 02 · Progression</p>
+          <h1 className="relative mt-2 text-5xl leading-none text-primary sm:text-7xl">L’ouvrage<br /><em>s’élève.</em></h1>
           <ul className="mt-2 flex flex-wrap gap-2 text-[0.68rem]">
             {LEGENDE.map(([etat, label]) => (
               <li
@@ -69,7 +70,7 @@ function Page() {
           </ul>
         </div>
 
-        <div className="grid gap-2 sm:grid-cols-2">
+        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {AXES.map((axe) => {
             const qs = CORPUS.filter((q) => q.axe === axe.id);
             const acquis = qs.filter((q) => etatCarte(donnees.cartes[q.id]) === "acquis").length;
@@ -85,7 +86,7 @@ function Page() {
             return (
               <section
                 key={axe.id}
-                className="relative min-w-0 space-y-3 overflow-hidden rounded-3xl border border-border bg-card/95 p-4 shadow-[var(--shadow-card)]"
+                className="dossier-sheet relative min-w-0 space-y-4 p-5"
               >
                 {axeIndex < AXES.length - 1 ? (
                   <span className="absolute -bottom-8 left-1/2 h-8 border-l-2 border-dashed border-primary/30" />

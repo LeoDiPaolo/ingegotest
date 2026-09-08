@@ -57,13 +57,15 @@ function Page() {
     <div className="min-h-screen bg-background pb-24">
       <Entete serie={serie} etat={donnees.cartes} synchro={synchro} jauges={false} />
 
-      <main className="mx-auto max-w-3xl space-y-5 px-5 py-5">
-        <div>
-          <p className="text-xs font-bold text-brand uppercase">Poste de contrôle</p>
-          <h1 className="text-2xl text-primary">Réglages</h1>
+      <main className="journal-page mx-auto max-w-5xl space-y-7 px-5 py-7">
+        <div className="relative overflow-hidden border-b border-border pb-7">
+          <span className="brand-watermark -top-2 right-0">04</span>
+          <p className="editorial-kicker relative">Volume 04 · Poste de contrôle</p>
+          <h1 className="relative mt-2 text-5xl text-primary sm:text-7xl">Réglages.</h1>
         </div>
 
-        <section className="surface space-y-3 p-4">
+        <div className="grid items-start gap-6 md:grid-cols-2">
+        <section className="dossier-sheet space-y-3 p-5">
           <h2 className="flex items-center gap-2 text-sm font-bold">
             <SlidersHorizontal className="h-4 w-4 text-brand" /> Axes actifs
           </h2>
@@ -89,7 +91,7 @@ function Page() {
           </div>
         </section>
 
-        <section className="surface space-y-3 p-4">
+        <section className="dossier-sheet space-y-3 p-5">
           <h2 className="flex items-center gap-2 text-sm font-bold">
             <ShieldCheck className="h-4 w-4 text-success" /> Familles de contenu
           </h2>
@@ -115,7 +117,7 @@ function Page() {
           </div>
         </section>
 
-        <section className="surface space-y-3 p-4">
+        <section className="dossier-sheet space-y-3 p-5">
           <h2 className="flex items-center gap-2 text-sm font-bold">
             <SlidersHorizontal className="h-4 w-4 text-brand" /> Questions par mission :{" "}
             {r.parSession}
@@ -153,7 +155,7 @@ function Page() {
           </div>
         </section>
 
-        <section className="surface space-y-2 p-4">
+        <section className="dossier-sheet space-y-2 p-5">
           <h2 className="text-sm font-bold">À revérifier avant l'écrit ({aVerifier.length})</h2>
           <ul className="space-y-2">
             {aVerifier.slice(0, 40).map((q) => (
@@ -171,7 +173,7 @@ function Page() {
           ) : null}
         </section>
 
-        <section className="space-y-2">
+        <section className="journal-rule space-y-2 pt-5 md:col-span-2">
           <p className="flex items-center gap-2 text-sm font-bold">
             <Database className="h-4 w-4 text-primary" /> Données personnelles
           </p>
@@ -192,6 +194,7 @@ function Page() {
             Progression enregistrée en ligne et sur cet appareil, sans compte à créer.
           </p>
         </section>
+        </div>
       </main>
 
       <NavBas />

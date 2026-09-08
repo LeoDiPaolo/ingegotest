@@ -18,7 +18,7 @@
   --radius-xl: calc(var(--radius) + 4px);
   --radius-2xl: calc(var(--radius) + 8px);
   --radius-3xl: calc(var(--radius) + 12px);
-  --font-display: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Instrument Serif", Georgia, serif;
   --font-sans: "Work Sans", ui-sans-serif, system-ui, sans-serif;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -170,9 +170,67 @@
   h2,
   h3 {
     font-family: var(--font-display);
-    font-weight: 600;
+    font-weight: 400;
     letter-spacing: 0;
   }
+}
+
+@utility journal-page {
+  background-color: var(--color-background);
+  background-image: linear-gradient(
+    to right,
+    transparent 0,
+    transparent calc(50% - 1px),
+    color-mix(in oklab, var(--color-border) 45%, transparent) 50%,
+    transparent calc(50% + 1px)
+  );
+}
+
+@utility journal-rule {
+  border-top: 1px solid var(--color-border);
+  position: relative;
+  &::before {
+    background-color: var(--color-brand);
+    content: "";
+    height: 3px;
+    left: 0;
+    position: absolute;
+    top: -2px;
+    width: 4rem;
+  }
+}
+
+@utility editorial-kicker {
+  color: var(--color-muted-foreground);
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+@utility dossier-sheet {
+  background-color: var(--color-card);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-card);
+  position: relative;
+  &::after {
+    border: 1px solid var(--color-border);
+    content: "";
+    inset: 6px -6px -6px 6px;
+    pointer-events: none;
+    position: absolute;
+    z-index: -1;
+  }
+}
+
+@utility brand-watermark {
+  color: color-mix(in oklab, var(--color-primary) 6%, transparent);
+  font-family: var(--font-display);
+  font-size: clamp(8rem, 24vw, 18rem);
+  line-height: 0.7;
+  pointer-events: none;
+  position: absolute;
+  user-select: none;
 }
 
 @utility blueprint {

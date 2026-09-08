@@ -62,12 +62,13 @@ function Page() {
     <div className="min-h-screen bg-background pb-24">
       <Entete serie={serie} etat={donnees.cartes} synchro={synchro} jauges={false} />
 
-      <main className="mx-auto max-w-4xl space-y-5 px-5 py-5">
-        <div>
-          <p className="text-xs font-bold text-brand uppercase">Bibliothèque technique</p>
-          <h1 className="text-2xl text-primary">Corpus</h1>
+      <main className="journal-page mx-auto max-w-6xl space-y-7 px-5 py-7">
+        <div className="relative overflow-hidden border-b border-border pb-7">
+          <span className="brand-watermark -top-2 right-0">03</span>
+          <p className="editorial-kicker relative">Volume 03 · Archives techniques</p>
+          <h1 className="relative mt-2 text-5xl text-primary sm:text-7xl">Le corpus.</h1>
         </div>
-        <label className="flex items-center gap-2 rounded-2xl border border-input bg-card px-4 shadow-[var(--shadow-card)] focus-within:border-ring">
+        <label className="dossier-sheet flex items-center gap-2 px-4 focus-within:border-ring">
           <Search className="h-4 w-4 text-muted-foreground" />
           <input
             value={filtre}
@@ -77,7 +78,7 @@ function Page() {
           />
         </label>
 
-        <div className="grid items-start gap-5 lg:grid-cols-2">
+        <div className="grid items-start gap-8 lg:grid-cols-2">
           {groupes.map(({ axe, parSousTheme }) => (
             <section key={axe.id} className="space-y-2">
               <div className="flex items-center gap-3">
@@ -94,7 +95,7 @@ function Page() {
               {[...parSousTheme.entries()].map(([sousTheme, qs]) => (
                 <div
                   key={sousTheme}
-                  className="mission-strip overflow-hidden rounded-2xl border border-border"
+                    className="mission-strip overflow-hidden border border-border"
                 >
                   <button
                     onClick={() =>
