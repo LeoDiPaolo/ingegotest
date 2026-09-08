@@ -116,6 +116,49 @@ export function entrelacer(liste: Question[]): Question[] {
   return out;
 }
 
+/* Répartit une mission selon le poids de chaque sous-thème dans le corpus actif.
+   Le plafond d'un thème est son poids arrondi au-dessus : un thème représentant
+   10 % du corpus ne peut ainsi fournir qu'une question dans une mission de 8. */
+export function repartirParTheme(
+  priorite: Question[],
+  corpusActif: Question[],
+  nombre: number,
+): Question[] {
+  if (priorite.length <= nombre) return priorite;
+  const poids = new Map<string, number>();
+  for (const q of corpusActif) poids.set(q.sousTheme, (poids.get(q.sousTheme) ?? 0) + 1);
+  const total = Math.max(1, corpusActif.length);
+  const plafonds = new Map<string, number>();
+  for (const [theme, quantite] of poids)
+    plafonds.set(theme, Math.max(1, Math.ceil((quantite / total) * nombre)));
+
+  const selection: Question[] = [];
+  const retenues = new Set<string>();
+  const compte = new Map<string, number>();
+  while (selection.length < nombre) {
+    let meilleur: Question | undefined;
+    let meilleurScore = Infinity;
+    for (let rang = 0; rang < priorite.length; rang++) {
+      const q = priorite[rang];
+      if (retenues.has(q.id)) continue;
+      const pris = compte.get(q.sousTheme) ?? 0;
+      const plafond = plafonds.get(q.sousTheme) ?? 1;
+      if (pris >= plafond) continue;
+      const part = (poids.get(q.sousTheme) ?? 1) / total;
+      const score = pris / part + rang / Math.max(1, priorite.length * 100);
+      if (score < meilleurScore) {
+        meilleur = q;
+        meilleurScore = score;
+      }
+    }
+    if (!meilleur) break;
+    selection.push(meilleur);
+    retenues.add(meilleur.id);
+    compte.set(meilleur.sousTheme, (compte.get(meilleur.sousTheme) ?? 0) + 1);
+  }
+  return selection;
+}
+
 export function composerSession(etat: Etat, reglages: Reglages, now: number): Question[] {
   const ouvert = (q: Question) =>
     reglages.axes.includes(q.axe) &&
@@ -127,7 +170,10 @@ export function composerSession(etat: Etat, reglages: Reglages, now: number): Qu
     const frag = CORPUS.filter((q) => ouvert(q) && etatCarte(etat[q.id]) === "fragile").sort(
       (a, b) => etat[a.id]!.du - etat[b.id]!.du,
     );
-    return entrelacer(rondeParFormat(frag).slice(0, reglages.parSession));
+    const actifs = CORPUS.filter(ouvert);
+    return entrelacer(
+      repartirParTheme(rondeParFormat(frag), actifs, reglages.parSession),
+    );
   }
   const cache: Record<string, number> = {};
   const nivDe = (s: string) =>
@@ -151,7 +197,8 @@ export function composerSession(etat: Etat, reglages: Reglages, now: number): Qu
   if (lot.length < n)
     lot = lot.concat(pool.slice(partNeuves.length, partNeuves.length + (n - lot.length)));
   if (lot.length < n) lot = lot.concat(dues.slice(lot.length, n));
-  return entrelacer(lot.slice(0, n));
+  const actifs = CORPUS.filter(ouvert);
+  return entrelacer(repartirParTheme(lot, actifs, n));
 }
 
 export function resteAFaire(etat: Etat, reglages: Reglages, now: number) {
@@ -222,7 +269,7 @@ export const REGLAGES_DEFAUT: Reglages = {
     "facade",
     "pluvial",
   ],
-  parSession: 12,
+  parSession: 8,
   chrono: 0,
   cible: "normal",
 };
@@ -231,6 +278,8 @@ const TYPES_OK = REGLAGES_DEFAUT.types;
 
 export function normaliserReglages(r: Partial<Reglages> | null | undefined): Reglages {
   const n: Reglages = { ...REGLAGES_DEFAUT, ...(r || {}) };
+  /* L'ancienne valeur par défaut était 12 ; les missions standard passent à 8. */
+  if (n.parSession === 12) n.parSession = 8;
   if (!["normal", "fragiles"].includes(n.cible)) n.cible = "normal";
   const existants = (n.types || []).filter((t) => TYPES_OK.includes(t));
   n.types = [...new Set([...existants, ...TYPES_OK])];
