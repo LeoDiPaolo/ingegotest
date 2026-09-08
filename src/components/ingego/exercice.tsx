@@ -444,7 +444,7 @@ export function Exercice({
   q: Question;
   numero: number;
   total: number;
-  onNote: (note: number) => void;
+  onNote: (note: number, juste: boolean) => void;
   onCorrige?: (juste: boolean, part: number) => void;
   commentaire?: string;
   onCommentaire?: (texte: string) => void;
@@ -1182,7 +1182,7 @@ export function Exercice({
                 ).map(([note, label]) => (
                   <button
                     key={note}
-                    onClick={() => onNote(note)}
+                    onClick={() => onNote(note, q.type === "libre" ? note > 0 : estJuste)}
                     className={cn(
                       "tap rounded-xl border py-3 text-sm font-semibold",
                       note === 0
@@ -1200,7 +1200,7 @@ export function Exercice({
           ) : (
             <div className="sticky bottom-2 z-20 space-y-2 rounded-xl bg-card/95 pt-1 backdrop-blur-sm sm:static sm:bg-transparent sm:pt-0 sm:backdrop-blur-none">
               <Button
-                onClick={() => onNote(estJuste ? 2 : part >= 0.6 ? 1 : 0)}
+                onClick={() => onNote(estJuste ? 2 : part >= 0.6 ? 1 : 0, estJuste)}
                 className="tap touche-brand h-12 w-full rounded-xl bg-brand text-base font-bold text-brand-foreground hover:bg-brand/90 sm:h-14"
               >
                 Question suivante <ArrowRight className="h-4 w-4" />
@@ -1208,13 +1208,13 @@ export function Exercice({
               {estJuste ? (
                 <div className="grid grid-cols-2 gap-2">
                   <button
-                    onClick={() => onNote(1)}
+                    onClick={() => onNote(1, true)}
                     className="tap rounded-xl border border-border bg-elevated py-2.5 text-xs font-semibold"
                   >
                     C'était difficile
                   </button>
                   <button
-                    onClick={() => onNote(3)}
+                    onClick={() => onNote(3, true)}
                     className="tap rounded-xl border border-success/50 bg-success/15 py-2.5 text-xs font-semibold"
                   >
                     C'était évident
