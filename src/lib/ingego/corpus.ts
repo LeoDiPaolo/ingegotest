@@ -14,6 +14,11 @@ import type { DonneesParoi } from "@/components/ingego/coupe-paroi";
 import type { DonneesPmr } from "@/components/ingego/parcours-pmr";
 import type { DonneesFacade } from "@/components/ingego/facade-solaire";
 import type { DonneesPluvial } from "@/components/ingego/plan-pluvial";
+import type { DonneesCurseur } from "@/components/ingego/curseur";
+import type { DonneesEmpilement } from "@/components/ingego/empilement";
+import type { DonneesZonage } from "@/components/ingego/zonage";
+import type { DonneesCircuit } from "@/components/ingego/circuit";
+import type { DonneesCablage } from "@/components/ingego/cablage";
 
 export type TypeExo =
   | "qcm"
@@ -40,7 +45,12 @@ export type TypeExo =
   | "paroi"
   | "pmr"
   | "facade"
-  | "pluvial";
+  | "pluvial"
+  | "curseur"
+  | "empilement"
+  | "zonage"
+  | "circuit"
+  | "cablage";
 
 export type Famille = "S" | "M" | "E";
 
@@ -102,6 +112,13 @@ export interface Question {
   pmr?: DonneesPmr;
   facade?: DonneesFacade;
   pluvial?: DonneesPluvial;
+  /* jeux tactiles : curseur à régler, coupe à composer, plan à zoner,
+     chemin à tracer, raccordement à câbler */
+  curseur?: DonneesCurseur;
+  empilement?: DonneesEmpilement;
+  zonage?: DonneesZonage;
+  circuit?: DonneesCircuit;
+  cablage?: DonneesCablage;
   correction?: string;
   /* alias courts utilisés par l'algorithme (verbatim de l'artefact) */
   niv: number;
