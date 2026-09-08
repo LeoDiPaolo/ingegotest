@@ -436,7 +436,9 @@ export function Exercice({
 
   return (
     <article className="space-y-5">
+      <IllustrationTheme axe={q.axe} stIdx={q.stIdx} couleur={axe.couleur} />
       <div className="flex flex-wrap items-center gap-2 text-[0.68rem]">
+
         <span
           className="rounded-full px-2.5 py-1 font-semibold"
           style={{ backgroundColor: `${axe.couleur}22`, color: axe.couleur }}
