@@ -10,31 +10,24 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as BetaRouteImport } from './routes/beta'
-import { Route as ProfilRouteImport } from './routes/profil'
-import { Route as ProgresRouteImport } from './routes/progres'
+import { Route as CorpusRouteImport } from './routes/corpus'
+import { Route as ElevationRouteImport } from './routes/elevation'
 import { Route as QaVisuelsRouteImport } from './routes/qa-visuels'
-import { Route as QuestionsRouteImport } from './routes/questions'
-import { Route as LeconIdRouteImport } from './routes/lecon.$id'
+import { Route as ReglagesRouteImport } from './routes/reglages'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const BetaRoute = BetaRouteImport.update({
-  id: '/beta',
-  path: '/beta',
+const CorpusRoute = CorpusRouteImport.update({
+  id: '/corpus',
+  path: '/corpus',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ProfilRoute = ProfilRouteImport.update({
-  id: '/profil',
-  path: '/profil',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ProgresRoute = ProgresRouteImport.update({
-  id: '/progres',
-  path: '/progres',
+const ElevationRoute = ElevationRouteImport.update({
+  id: '/elevation',
+  path: '/elevation',
   getParentRoute: () => rootRouteImport,
 } as any)
 const QaVisuelsRoute = QaVisuelsRouteImport.update({
@@ -42,83 +35,48 @@ const QaVisuelsRoute = QaVisuelsRouteImport.update({
   path: '/qa-visuels',
   getParentRoute: () => rootRouteImport,
 } as any)
-const QuestionsRoute = QuestionsRouteImport.update({
-  id: '/questions',
-  path: '/questions',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const LeconIdRoute = LeconIdRouteImport.update({
-  id: '/lecon/$id',
-  path: '/lecon/$id',
+const ReglagesRoute = ReglagesRouteImport.update({
+  id: '/reglages',
+  path: '/reglages',
   getParentRoute: () => rootRouteImport,
 } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/beta': typeof BetaRoute
-  '/profil': typeof ProfilRoute
-  '/progres': typeof ProgresRoute
+  '/corpus': typeof CorpusRoute
+  '/elevation': typeof ElevationRoute
   '/qa-visuels': typeof QaVisuelsRoute
-  '/questions': typeof QuestionsRoute
-  '/lecon/$id': typeof LeconIdRoute
+  '/reglages': typeof ReglagesRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/beta': typeof BetaRoute
-  '/profil': typeof ProfilRoute
-  '/progres': typeof ProgresRoute
+  '/corpus': typeof CorpusRoute
+  '/elevation': typeof ElevationRoute
   '/qa-visuels': typeof QaVisuelsRoute
-  '/questions': typeof QuestionsRoute
-  '/lecon/$id': typeof LeconIdRoute
+  '/reglages': typeof ReglagesRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/beta': typeof BetaRoute
-  '/profil': typeof ProfilRoute
-  '/progres': typeof ProgresRoute
+  '/corpus': typeof CorpusRoute
+  '/elevation': typeof ElevationRoute
   '/qa-visuels': typeof QaVisuelsRoute
-  '/questions': typeof QuestionsRoute
-  '/lecon/$id': typeof LeconIdRoute
+  '/reglages': typeof ReglagesRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths:
-    | '/'
-    | '/beta'
-    | '/profil'
-    | '/progres'
-    | '/qa-visuels'
-    | '/questions'
-    | '/lecon/$id'
+  fullPaths: '/' | '/corpus' | '/elevation' | '/qa-visuels' | '/reglages'
   fileRoutesByTo: FileRoutesByTo
-  to:
-    | '/'
-    | '/beta'
-    | '/profil'
-    | '/progres'
-    | '/qa-visuels'
-    | '/questions'
-    | '/lecon/$id'
-  id:
-    | '__root__'
-    | '/'
-    | '/beta'
-    | '/profil'
-    | '/progres'
-    | '/qa-visuels'
-    | '/questions'
-    | '/lecon/$id'
+  to: '/' | '/corpus' | '/elevation' | '/qa-visuels' | '/reglages'
+  id: '__root__' | '/' | '/corpus' | '/elevation' | '/qa-visuels' | '/reglages'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  BetaRoute: typeof BetaRoute
-  ProfilRoute: typeof ProfilRoute
-  ProgresRoute: typeof ProgresRoute
+  CorpusRoute: typeof CorpusRoute
+  ElevationRoute: typeof ElevationRoute
   QaVisuelsRoute: typeof QaVisuelsRoute
-  QuestionsRoute: typeof QuestionsRoute
-  LeconIdRoute: typeof LeconIdRoute
+  ReglagesRoute: typeof ReglagesRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -130,25 +88,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/beta': {
-      id: '/beta'
-      path: '/beta'
-      fullPath: '/beta'
-      preLoaderRoute: typeof BetaRouteImport
+    '/corpus': {
+      id: '/corpus'
+      path: '/corpus'
+      fullPath: '/corpus'
+      preLoaderRoute: typeof CorpusRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/profil': {
-      id: '/profil'
-      path: '/profil'
-      fullPath: '/profil'
-      preLoaderRoute: typeof ProfilRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/progres': {
-      id: '/progres'
-      path: '/progres'
-      fullPath: '/progres'
-      preLoaderRoute: typeof ProgresRouteImport
+    '/elevation': {
+      id: '/elevation'
+      path: '/elevation'
+      fullPath: '/elevation'
+      preLoaderRoute: typeof ElevationRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/qa-visuels': {
@@ -158,18 +109,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof QaVisuelsRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/questions': {
-      id: '/questions'
-      path: '/questions'
-      fullPath: '/questions'
-      preLoaderRoute: typeof QuestionsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/lecon/$id': {
-      id: '/lecon/$id'
-      path: '/lecon/$id'
-      fullPath: '/lecon/$id'
-      preLoaderRoute: typeof LeconIdRouteImport
+    '/reglages': {
+      id: '/reglages'
+      path: '/reglages'
+      fullPath: '/reglages'
+      preLoaderRoute: typeof ReglagesRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
@@ -177,12 +121,10 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  BetaRoute: BetaRoute,
-  ProfilRoute: ProfilRoute,
-  ProgresRoute: ProgresRoute,
+  CorpusRoute: CorpusRoute,
+  ElevationRoute: ElevationRoute,
   QaVisuelsRoute: QaVisuelsRoute,
-  QuestionsRoute: QuestionsRoute,
-  LeconIdRoute: LeconIdRoute,
+  ReglagesRoute: ReglagesRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

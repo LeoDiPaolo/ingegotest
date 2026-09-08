@@ -1,11 +1,11 @@
 import { Link } from "@tanstack/react-router";
-import { Home, BookOpen, Trophy, User } from "lucide-react";
+import { Layers, Library, Settings, Zap } from "lucide-react";
 
 const ONGLETS = [
-  { to: "/", label: "Accueil", Icone: Home },
-  { to: "/questions", label: "Leçons", Icone: BookOpen },
-  { to: "/progres", label: "Progrès", Icone: Trophy },
-  { to: "/profil", label: "Profil", Icone: User },
+  { to: "/", label: "Réviser", Icone: Zap },
+  { to: "/elevation", label: "Élévation", Icone: Layers },
+  { to: "/corpus", label: "Corpus", Icone: Library },
+  { to: "/reglages", label: "Réglages", Icone: Settings },
 ] as const;
 
 export function NavBas() {
@@ -16,11 +16,10 @@ export function NavBas() {
           <li key={to} className="flex-1">
             <Link
               to={to}
-              search={to === "/" ? { q: undefined } : undefined}
               activeOptions={{ exact: true }}
               activeProps={{ className: "text-primary" }}
               inactiveProps={{ className: "text-muted-foreground" }}
-              className="tap flex flex-col items-center gap-1 py-2.5 text-[0.68rem] font-medium"
+              className="tap flex flex-col items-center gap-1 py-2.5 text-[0.7rem] font-semibold"
             >
               <Icone className="h-5 w-5" />
               {label}

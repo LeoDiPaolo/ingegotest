@@ -53,6 +53,36 @@ export type Database = {
         }
         Relationships: []
       }
+      etat_ingego: {
+        Row: {
+          cartes: Json
+          cle: string
+          commentaires: Json
+          created_at: string
+          journal: Json
+          reglages: Json
+          updated_at: string
+        }
+        Insert: {
+          cartes?: Json
+          cle: string
+          commentaires?: Json
+          created_at?: string
+          journal?: Json
+          reglages?: Json
+          updated_at?: string
+        }
+        Update: {
+          cartes?: Json
+          cle?: string
+          commentaires?: Json
+          created_at?: string
+          journal?: Json
+          reglages?: Json
+          updated_at?: string
+        }
+        Relationships: []
+      }
       journal: {
         Row: {
           created_at: string
