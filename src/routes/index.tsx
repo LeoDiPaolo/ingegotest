@@ -1,10 +1,14 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
-import { useEffect, useState } from "react";
-import { ArrowRight, ListOrdered, SkipForward } from "lucide-react";
-import { Exercice } from "@/components/ingego/exercice";
-import { MotIngego, PastilleIngego } from "@/components/ingego/marque";
-import { AXE_BY_ID, CORPUS } from "@/lib/ingego/corpus";
-import { useHistorique } from "@/lib/ingego/historique";
+import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
+import { Check, Lock, Play, Star } from "lucide-react";
+import castor from "@/assets/ingego-castor.png.asset.json";
+import { Entete } from "@/components/ingego/entete";
+import { NavBas } from "@/components/ingego/nav-bas";
+import { UNITES, ouverte, prochaineLecon, useProgres, type Lecon } from "@/lib/ingego/parcours";
+import { cn } from "@/lib/utils";
+
+const TITRE = "IngéGo — parcours du concours d'ingénieur territorial";
+const DESC =
+  "Apprenez le concours d'ingénieur territorial bâtiment leçon par leçon : parcours par thème, exercices variés, séries quotidiennes et points d'expérience.";
 
 export const Route = createFileRoute("/")({
   validateSearch: (search: Record<string, unknown>) => ({
@@ -12,239 +16,142 @@ export const Route = createFileRoute("/")({
   }),
   head: () => ({
     meta: [
-      { title: "IngéGo bêta — relecture des questions" },
-      {
-        name: "description",
-        content:
-          "Mode bêta test : parcours linéaire des questions du concours d'ingénieur territorial, une par une, numérotées, sans compte ni validation.",
-      },
-      { property: "og:title", content: "IngéGo bêta — relecture des questions" },
-      {
-        property: "og:description",
-        content: "Mode bêta test : parcours linéaire des questions du concours d'ingénieur territorial, une par une, numérotées, sans compte ni validation.",
-      },
+      { title: TITRE },
+      { name: "description", content: DESC },
+      { property: "og:title", content: TITRE },
+      { property: "og:description", content: DESC },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
+      { name: "twitter:title", content: TITRE },
+      { name: "twitter:description", content: DESC },
     ],
   }),
-  component: BetaTest,
+  component: Parcours,
 });
 
-const CLE = "ingego-beta-index";
-
-function BetaTest() {
-  const total = CORPUS.length;
-  const { q: cible } = Route.useSearch();
-  const [i, setI] = useState(0);
-  const [saut, setSaut] = useState("");
-  const [repondu, setRepondu] = useState(false);
-  const { historique, commentaires, noter, commenter } = useHistorique();
-
-  useEffect(() => {
-    if (cible && Number.isFinite(cible)) {
-      setI(Math.min(Math.max(1, Math.round(cible)), total) - 1);
-      return;
-    }
-    const brut = Number(localStorage.getItem(CLE));
-    if (Number.isFinite(brut) && brut > 0 && brut < total) setI(brut);
-  }, [total, cible]);
-
-  useEffect(() => {
-    localStorage.setItem(CLE, String(i));
-    setRepondu(false);
-  }, [i]);
-
-  const q = CORPUS[i];
-  const statut = q ? historique[q.id] : undefined;
-
-  function suivante(note?: number) {
-    if (q && typeof note === "number") noter(q.id, note >= 2 ? "ok" : "ko");
-    setI((n) => Math.min(n + 1, total));
-    window.scrollTo({ top: 0 });
-  }
-
-
-  function allerA(n: number) {
-    if (!Number.isFinite(n)) return;
-    setI(Math.min(Math.max(1, Math.round(n)), total) - 1);
-    window.scrollTo({ top: 0 });
-  }
+function Parcours() {
+  const { progres, pret } = useProgres();
+  const navigate = useNavigate();
+  const prochaine = prochaineLecon(progres);
 
   return (
-    <div className="min-h-screen bg-background pb-16">
-      <header className="border-b border-border bg-card/90 px-5 pt-4 pb-4 backdrop-blur">
-        <div className="mx-auto flex max-w-2xl items-center gap-2.5">
-          <PastilleIngego className="h-7 w-7 rounded-lg" />
-          <MotIngego className="text-lg" />
-          <Link
-            to="/questions"
-            className="tap ml-auto inline-flex items-center gap-1.5 rounded-full border border-border px-3 py-1.5 text-xs font-medium"
-          >
-            <ListOrdered className="h-3.5 w-3.5" />
-            Toutes les questions
-          </Link>
-        </div>
-        <div className="mx-auto mt-3 flex max-w-2xl items-end justify-between gap-3">
+    <div className="min-h-screen bg-background pb-24">
+      <Entete xp={progres.xp} serie={progres.serie} />
+
+      <main className="mx-auto max-w-2xl px-5 py-5">
+        <section className="surface flex items-center gap-4 overflow-hidden p-4">
+          <img src={castor.url} alt="" className="h-20 w-20 shrink-0 object-contain" />
           <div className="min-w-0">
-            <p className="truncate text-[0.7rem] font-medium tracking-[0.12em] text-brand uppercase">
-              {q ? `${AXE_BY_ID[q.axe]?.court ?? q.axe} · ${q.sousTheme}` : "Relecture linéaire"}
+            <h1 className="text-xl text-primary">Reprenons l'entraînement</h1>
+            <p className="mt-1 text-sm text-muted-foreground">
+              {prochaine.sousTheme} · leçon {prochaine.rang}
             </p>
-            <h1 className="truncate text-3xl text-primary">
-              {q ? `Question ${i + 1}` : "Corpus terminé"}
-              <span className="text-lg text-muted-foreground"> / {total}</span>
-            </h1>
-          </div>
-          <form
-            onSubmit={(e) => {
-              e.preventDefault();
-              allerA(Number(saut));
-              setSaut("");
-            }}
-            className="flex shrink-0 items-center gap-1.5"
-          >
-            <input
-              inputMode="numeric"
-              value={saut}
-              onChange={(e) => setSaut(e.target.value)}
-              placeholder="N°"
-              aria-label="Aller à la question numéro"
-              className="w-16 rounded-lg border border-input bg-background px-2 py-1.5 text-sm outline-none focus:border-ring"
-            />
             <button
-              type="submit"
-              className="tap rounded-lg border border-border bg-elevated px-2.5 py-1.5 text-xs font-medium"
+              onClick={() => navigate({ to: "/lecon/$id", params: { id: prochaine.id } })}
+              className="tap mt-3 inline-flex items-center gap-2 rounded-xl bg-brand px-4 py-2.5 text-sm font-semibold text-brand-foreground"
             >
-              Aller
+              <Play className="h-4 w-4" /> Continuer
             </button>
-          </form>
-        </div>
-        <div className="mx-auto mt-3 h-1 max-w-2xl overflow-hidden rounded-full bg-elevated">
-          <div
-            className="h-full rounded-full bg-primary transition-[width] duration-300"
-            style={{ width: `${(i / total) * 100}%` }}
-          />
-        </div>
-      </header>
+          </div>
+        </section>
 
-      <main className="mx-auto max-w-2xl px-5 py-6">
-        {q ? (
-          <div className="space-y-4">
-            <p className="flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
-              <span className="font-mono">{q.id}</span> · {AXE_BY_ID[q.axe]?.nom ?? q.axe} · format{" "}
-              {q.type} · niveau {q.niv}
-              {statut ? (
-                <span
-                  className={
-                    statut === "ok"
-                      ? "rounded-full bg-success/15 px-2 py-0.5 text-success"
-                      : "rounded-full bg-destructive/15 px-2 py-0.5 text-destructive"
-                  }
+        <div className="mt-6 space-y-8">
+          {UNITES.map((unite) => {
+            const faites = unite.lecons.filter((l) => progres.lecons[l.id]).length;
+            return (
+              <section key={`${unite.axe.id}-${unite.sousTheme}`} className="space-y-4">
+                <div
+                  className="rounded-2xl px-4 py-3 text-card"
+                  style={{ backgroundColor: unite.axe.couleur }}
                 >
-                  {statut === "ok" ? "déjà juste" : "déjà à revoir"}
-                </span>
-              ) : null}
-            </p>
-            <Exercice
-              key={q.id}
-              q={q}
-              numero={i + 1}
-              total={total}
-              onNote={suivante}
-              onCorrige={(juste) => {
-                noter(q.id, juste ? "ok" : "ko");
-                setRepondu(true);
-              }}
-            />
-            {repondu || commentaires[q.id] ? (
-              <Observation
-                key={`obs-${q.id}`}
-                valeur={commentaires[q.id] ?? ""}
-                onChange={(t) => commenter(q.id, t)}
-              />
-            ) : null}
+                  <p className="text-[0.65rem] font-semibold tracking-[0.16em] text-white/80 uppercase">
+                    {unite.axe.court}
+                  </p>
+                  <h2 className="text-lg text-white">{unite.sousTheme}</h2>
+                  <p className="text-xs text-white/85">
+                    {faites} / {unite.lecons.length} leçons terminées
+                  </p>
+                </div>
 
-            <div className="grid grid-cols-2 gap-2">
-              <button
-                onClick={() => allerA(i)}
-                disabled={i === 0}
-                className="tap rounded-xl border border-border py-3 text-sm font-medium disabled:opacity-40"
-              >
-                Question précédente
-              </button>
-              <button
-                onClick={() => suivante()}
-                className="tap flex items-center justify-center gap-2 rounded-xl bg-primary py-3 text-sm font-semibold text-primary-foreground"
-              >
-                Passer à la suivante
-                <SkipForward className="h-4 w-4" />
-              </button>
-            </div>
-          </div>
-        ) : (
-          <div className="surface space-y-4 p-6 text-center">
-            <p className="text-sm text-muted-foreground">
-              Les {total} questions ont été parcourues.
-            </p>
-            <button
-              onClick={() => allerA(1)}
-              className="tap inline-flex items-center gap-2 rounded-xl bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground"
-            >
-              Repartir de la question 1
-              <ArrowRight className="h-4 w-4" />
-            </button>
-          </div>
-        )}
+                <ol className="space-y-3">
+                  {unite.lecons.map((lecon, i) => (
+                    <li
+                      key={lecon.id}
+                      className="flex"
+                      style={{
+                        justifyContent: ["center", "flex-end", "center", "flex-start"][i % 4],
+                      }}
+                    >
+                      <Bulle
+                        lecon={lecon}
+                        etoiles={progres.lecons[lecon.id]?.etoiles ?? 0}
+                        ouverte={pret ? ouverte(lecon.id, progres) : lecon.id === prochaine.id}
+                        couleur={unite.axe.couleur}
+                      />
+                    </li>
+                  ))}
+                </ol>
+              </section>
+            );
+          })}
+        </div>
       </main>
+
+      <NavBas />
     </div>
   );
 }
 
-function Observation({
-  valeur,
-  onChange,
+function Bulle({
+  lecon,
+  etoiles,
+  ouverte: dispo,
+  couleur,
 }: {
-  valeur: string;
-  onChange: (texte: string) => void;
+  lecon: Lecon;
+  etoiles: number;
+  ouverte: boolean;
+  couleur: string;
 }) {
-  const [texte, setTexte] = useState(valeur);
-  const [enregistre, setEnregistre] = useState(false);
+  const contenu = (
+    <span
+      className={cn(
+        "flex h-16 w-16 items-center justify-center rounded-full border-4 border-b-[6px] text-lg font-bold",
+        dispo ? "text-white" : "border-border bg-muted text-muted-foreground",
+      )}
+      style={
+        dispo
+          ? { backgroundColor: couleur, borderColor: "color-mix(in oklab, black 18%, transparent)" }
+          : undefined
+      }
+    >
+      {!dispo ? (
+        <Lock className="h-5 w-5" />
+      ) : etoiles > 0 ? (
+        <Check className="h-6 w-6" />
+      ) : (
+        lecon.rang
+      )}
+    </span>
+  );
 
   return (
-    <div className="surface space-y-2 p-4">
-      <label htmlFor="observation" className="block text-sm font-semibold text-primary">
-        Observation sur cette question
-      </label>
-      <textarea
-        id="observation"
-        value={texte}
-        rows={3}
-        placeholder="Remarques sur la pertinence, la formulation, la correction…"
-        onChange={(e) => {
-          setTexte(e.target.value);
-          setEnregistre(false);
-        }}
-        onBlur={() => {
-          onChange(texte);
-          setEnregistre(true);
-        }}
-        className="w-full resize-y rounded-lg border border-input bg-background px-3 py-2 text-sm outline-none focus:border-ring"
-      />
-      <div className="flex items-center justify-between gap-2">
-        <span className="text-xs text-muted-foreground">
-          {enregistre ? "Commentaire enregistré." : "Enregistré localement à la sortie du champ."}
-        </span>
-        <button
-          type="button"
-          onClick={() => {
-            onChange(texte);
-            setEnregistre(true);
-          }}
-          className="tap rounded-lg border border-border bg-elevated px-3 py-1.5 text-xs font-medium"
-        >
-          Enregistrer
-        </button>
-      </div>
+    <div className="flex flex-col items-center gap-1">
+      {dispo ? (
+        <Link to="/lecon/$id" params={{ id: lecon.id }} className="tap" aria-label={`Leçon ${lecon.rang}`}>
+          {contenu}
+        </Link>
+      ) : (
+        contenu
+      )}
+      <span className="flex gap-0.5" aria-label={`${etoiles} étoiles sur 3`}>
+        {[0, 1, 2].map((s) => (
+          <Star
+            key={s}
+            className={cn("h-3 w-3", s < etoiles ? "fill-brand text-brand" : "text-border")}
+          />
+        ))}
+      </span>
     </div>
   );
 }
-

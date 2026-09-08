@@ -70,7 +70,7 @@ function ListeQuestions() {
       <header className="border-b border-border bg-card/90 px-5 pt-4 pb-4 backdrop-blur">
         <div className="mx-auto flex max-w-2xl items-center gap-2">
           <Link
-            to="/"
+            to="/beta"
             search={{ q: undefined }}
             className="tap inline-flex items-center gap-1.5 rounded-full border border-border px-3 py-1.5 text-xs font-medium"
           >
@@ -136,7 +136,7 @@ function ListeQuestions() {
           {liste.map(({ q, numero, statut }) => (
             <li key={q.id}>
               <Link
-                to="/"
+                to="/beta"
                 search={{ q: numero }}
                 className="tap flex items-start gap-3 rounded-xl border border-border bg-card p-3"
               >
