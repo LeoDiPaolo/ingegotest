@@ -17,3 +17,4 @@
 - [x] Vérifier les quatre écrans et une mission complète sur téléphone et ordinateur
 - [x] Réduire le défilement des questions simples et garder l’action suivante accessible
 - [x] Compacter davantage les questions et masquer les choix inutiles après correction
+- [x] Faire tenir le brief de mission sur un écran mobile sans défilement

@@ -341,6 +341,12 @@
   }
 }
 
+@media (max-width: 639px) and (max-height: 760px) {
+  .mission-brief-note {
+    display: none;
+  }
+}
+
 /* Trame de papier millimétré pour les visuels de plan */
 @utility trame-plan {
   background-color: var(--color-plan-fill);

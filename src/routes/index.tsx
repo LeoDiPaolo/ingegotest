@@ -166,7 +166,7 @@ function Reviser() {
           exerciceActif
             ? "mx-auto max-w-2xl px-2.5 py-2.5 sm:px-5 sm:py-5"
             : ordre
-              ? "mx-auto max-w-2xl px-5 py-5"
+              ? "mx-auto max-w-2xl px-3 py-2 sm:px-5 sm:py-5"
               : "mx-auto max-w-5xl px-5 py-5"
         }
       >
@@ -271,12 +271,12 @@ function Reviser() {
             </section>
           </div>
         ) : !missionCommencee ? (
-          <section className="anim-pop overflow-hidden rounded-3xl border border-primary/20 bg-card shadow-[var(--shadow-lift)]">
-            <div className="relative overflow-hidden bg-primary px-6 pt-5 pb-14 text-center text-primary-foreground">
+          <section className="mission-brief anim-pop overflow-hidden rounded-2xl border border-primary/20 bg-card shadow-[var(--shadow-lift)] sm:rounded-3xl">
+            <div className="relative overflow-hidden bg-primary px-4 pt-3 pb-9 text-center text-primary-foreground sm:px-6 sm:pt-5 sm:pb-14">
               <div className="blueprint pointer-events-none absolute inset-0 opacity-25" />
               <div className="pointer-events-none absolute top-7 left-0 h-px w-16 bg-primary-foreground/20" />
               <div className="pointer-events-none absolute top-7 right-0 h-px w-16 bg-primary-foreground/20" />
-              <div className="relative mx-auto mb-4 w-[12.5rem] -rotate-1 rounded-2xl bg-card px-4 py-3 shadow-[var(--shadow-lift)] ring-1 ring-primary-foreground/20">
+              <div className="relative mx-auto mb-2 w-[9.5rem] -rotate-1 rounded-xl bg-card px-3 py-2 shadow-[var(--shadow-lift)] ring-1 ring-primary-foreground/20 sm:mb-4 sm:w-[12.5rem] sm:rounded-2xl sm:px-4 sm:py-3">
                 <LogoIngego className="mx-auto w-full" />
                 <span className="absolute -right-2 -bottom-2 grid h-7 w-7 rotate-6 place-items-center rounded-lg bg-brand text-[0.58rem] font-extrabold text-brand-foreground shadow-[var(--shadow-card)]">
                   GO
@@ -285,36 +285,38 @@ function Reviser() {
               <p className="relative text-[0.65rem] font-bold tracking-[0.2em] uppercase opacity-70">
                 Brief de mission
               </p>
-              <h1 className="relative mt-1 text-2xl font-bold text-primary-foreground">
+              <h1 className="relative mt-0.5 text-xl font-bold text-primary-foreground sm:mt-1 sm:text-2xl">
                 {mission?.titre ?? "Mission transversale"}
               </h1>
             </div>
-            <div className="relative -mt-7 rounded-t-3xl bg-card px-5 pt-5 pb-5 text-center">
+            <div className="relative -mt-5 rounded-t-3xl bg-card px-4 pt-3 pb-3 text-center sm:-mt-7 sm:px-5 sm:pt-5 sm:pb-5">
               <div className="flex justify-center -space-x-2.5" aria-label="Thèmes de la mission">
                 {(ordre ?? []).slice(0, 5).map((question) => (
                   <IconeAxe
                     key={question.id}
                     axe={question.axe}
-                    className="h-12 w-12 border-card bg-card ring-2 ring-card"
+                    className="h-9 w-9 border-card bg-card ring-2 ring-card sm:h-12 sm:w-12"
                     active
                   />
                 ))}
               </div>
-              <p className="mx-auto mt-4 max-w-sm text-sm font-semibold leading-relaxed text-foreground">
+              <p className="mx-auto mt-2 max-w-sm text-sm font-semibold leading-snug text-foreground sm:mt-4 sm:leading-relaxed">
                 {mission?.detail}
               </p>
-              <p className="mx-auto mt-1 max-w-sm text-xs leading-relaxed text-muted-foreground">
+              <p className="mission-brief-note mx-auto mt-1 max-w-sm text-xs leading-snug text-muted-foreground sm:leading-relaxed">
                 Les erreurs reviennent quelques étapes plus loin pour être consolidées.
               </p>
-              <div className="mt-4 grid grid-cols-2 gap-3 text-center">
-                <div className="rounded-2xl border border-border bg-elevated px-3 py-2.5">
-                  <p className="text-2xl font-extrabold text-primary">{ordre?.length ?? total}</p>
+              <div className="mt-2 grid grid-cols-2 gap-2 text-center sm:mt-4 sm:gap-3">
+                <div className="rounded-xl border border-border bg-elevated px-3 py-1.5 sm:rounded-2xl sm:py-2.5">
+                  <p className="text-xl font-extrabold text-primary sm:text-2xl">
+                    {ordre?.length ?? total}
+                  </p>
                   <p className="text-[0.65rem] font-semibold tracking-[0.12em] text-muted-foreground uppercase">
                     défis
                   </p>
                 </div>
-                <div className="rounded-2xl border border-border bg-elevated px-3 py-2.5">
-                  <p className="text-2xl font-extrabold text-brand">
+                <div className="rounded-xl border border-border bg-elevated px-3 py-1.5 sm:rounded-2xl sm:py-2.5">
+                  <p className="text-xl font-extrabold text-brand sm:text-2xl">
                     ≈ {Math.max(5, Math.round(total * 0.75))}
                   </p>
                   <p className="text-[0.65rem] font-semibold tracking-[0.12em] text-muted-foreground uppercase">
@@ -324,13 +326,13 @@ function Reviser() {
               </div>
               <Button
                 onClick={() => setMissionCommencee(true)}
-                className="touche touche-brand mt-4 h-14 w-full rounded-xl bg-brand text-base font-extrabold text-brand-foreground hover:bg-brand/90"
+                className="touche touche-brand mt-2 h-12 w-full rounded-xl bg-brand text-base font-extrabold text-brand-foreground hover:bg-brand/90 sm:mt-4 sm:h-14"
               >
                 Démarrer <ArrowRight className="h-5 w-5" />
               </Button>
               <button
                 onClick={quitter}
-                className="mt-4 text-xs font-semibold text-muted-foreground transition-colors hover:text-foreground"
+                className="mt-2 text-xs font-semibold text-muted-foreground transition-colors hover:text-foreground sm:mt-4"
               >
                 Retour au tableau de bord
               </button>
