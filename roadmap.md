@@ -1,4 +1,5 @@
 ## Refonte visuelle complète
+
 - [x] Retirer les bandeaux photo décoratifs des questions
 - [x] Refaire l’accueil en tableau de missions avec navigation illustrée
 - [x] Ajouter des écrans de démarrage de niveau et des badges de maîtrise
