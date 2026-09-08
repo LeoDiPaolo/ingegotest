@@ -1,13 +1,26 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
-import { CheckCircle2, Play, RotateCcw, X } from "lucide-react";
+import {
+  CheckCircle2,
+  Flame,
+  Layers,
+  Library,
+  Play,
+  RotateCcw,
+  Sparkles,
+  Target,
+  X,
+} from "lucide-react";
 import { Entete } from "@/components/ingego/entete";
 import { NavBas } from "@/components/ingego/nav-bas";
+import { Confettis } from "@/components/ingego/confettis";
+import { Castor } from "@/components/ingego/marque";
 import { Exercice } from "@/components/ingego/exercice";
 import { AXE_BY_ID, type Question } from "@/lib/ingego/corpus";
 import { carteNeuve, composerSession, planifier, resteAFaire } from "@/lib/ingego/algo";
-import { reinjecter } from "@/lib/ingego/session";
+import { jaugesParAxe, reinjecter } from "@/lib/ingego/session";
 import { serieJours, useDonnees } from "@/lib/ingego/stockage";
+
 
 const TITRE = "IngéGo — révision du concours d'ingénieur territorial";
 const DESC =
