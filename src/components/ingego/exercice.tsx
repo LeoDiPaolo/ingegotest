@@ -1135,7 +1135,9 @@ export function Exercice({
                 placeholder="Notez un doute, une précision ou une correction à revoir…"
                 className="mt-2 w-full resize-none rounded-lg border border-input bg-card px-3 py-2 text-sm leading-snug outline-none focus:border-ring"
               />
-              <p className="mt-1 text-[0.65rem] text-muted-foreground">Enregistrée automatiquement.</p>
+              <p className="mt-1 text-[0.65rem] text-muted-foreground">
+                Enregistrée automatiquement.
+              </p>
             </div>
           ) : null}
 

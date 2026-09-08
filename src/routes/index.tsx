@@ -353,15 +353,23 @@ function Reviser() {
               <div className="grid grid-cols-3 gap-2">
                 <div className="rounded-xl bg-success/12 p-2">
                   <p className="text-2xl font-extrabold text-success">{justes}</p>
-                  <p className="text-[0.62rem] font-bold text-muted-foreground uppercase">du 1er coup</p>
+                  <p className="text-[0.62rem] font-bold text-muted-foreground uppercase">
+                    du 1er coup
+                  </p>
                 </div>
                 <div className="rounded-xl bg-brand/12 p-2">
                   <p className="text-2xl font-extrabold text-brand">{faits.length}</p>
-                  <p className="text-[0.62rem] font-bold text-muted-foreground uppercase">consolidées</p>
+                  <p className="text-[0.62rem] font-bold text-muted-foreground uppercase">
+                    consolidées
+                  </p>
                 </div>
                 <div className="rounded-xl bg-destructive/10 p-2">
-                  <p className="text-2xl font-extrabold text-destructive">{Object.keys(rates).length}</p>
-                  <p className="text-[0.62rem] font-bold text-muted-foreground uppercase">à reprendre</p>
+                  <p className="text-2xl font-extrabold text-destructive">
+                    {Object.keys(rates).length}
+                  </p>
+                  <p className="text-[0.62rem] font-bold text-muted-foreground uppercase">
+                    à reprendre
+                  </p>
                 </div>
               </div>
               <div className="h-4 overflow-hidden rounded-full bg-elevated ring-1 ring-border/60">
@@ -376,18 +384,18 @@ function Reviser() {
                   : `${mission?.themes.length ?? 0} thèmes parcourus · les points fragiles sont déjà reprogrammés.`}
               </p>
               <div className="flex gap-2">
-              <button
-                onClick={demarrer}
-                className="tap touche touche-brand flex-1 bg-brand py-3.5 text-sm font-extrabold text-brand-foreground uppercase"
-              >
-                <RotateCcw className="mr-1 inline h-4 w-4" /> Nouvelle séance
-              </button>
-              <button
-                onClick={quitter}
-                className="tap touche flex-1 border border-border bg-card py-3.5 text-sm font-bold"
-              >
-                Terminer
-              </button>
+                <button
+                  onClick={demarrer}
+                  className="tap touche touche-brand flex-1 bg-brand py-3.5 text-sm font-extrabold text-brand-foreground uppercase"
+                >
+                  <RotateCcw className="mr-1 inline h-4 w-4" /> Nouvelle séance
+                </button>
+                <button
+                  onClick={quitter}
+                  className="tap touche flex-1 border border-border bg-card py-3.5 text-sm font-bold"
+                >
+                  Terminer
+                </button>
               </div>
             </div>
           </section>

@@ -49,7 +49,10 @@ function Page() {
     () => serieJours(donnees.journal.filter((e) => e.id === "__session").map((e) => e.jour)),
     [donnees.journal],
   );
-  const prochain = useMemo(() => CORPUS.find((q) => etatCarte(donnees.cartes[q.id]) !== "acquis"), [donnees.cartes]);
+  const prochain = useMemo(
+    () => CORPUS.find((q) => etatCarte(donnees.cartes[q.id]) !== "acquis"),
+    [donnees.cartes],
+  );
   const totalAcquis = useMemo(
     () => CORPUS.filter((q) => etatCarte(donnees.cartes[q.id]) === "acquis").length,
     [donnees.cartes],
@@ -80,9 +83,15 @@ function Page() {
             <Flag className="h-5 w-5" />
           </span>
           <div className="min-w-0 flex-1">
-            <p className="text-[0.62rem] font-extrabold tracking-[0.13em] text-brand uppercase">Prochain jalon</p>
-            <p className="truncate text-sm font-bold">{prochain?.sousTheme ?? "Tous les jalons sont construits"}</p>
-            <p className="text-xs text-muted-foreground">{totalAcquis} compétences acquises sur {CORPUS.length}</p>
+            <p className="text-[0.62rem] font-extrabold tracking-[0.13em] text-brand uppercase">
+              Prochain jalon
+            </p>
+            <p className="truncate text-sm font-bold">
+              {prochain?.sousTheme ?? "Tous les jalons sont construits"}
+            </p>
+            <p className="text-xs text-muted-foreground">
+              {totalAcquis} compétences acquises sur {CORPUS.length}
+            </p>
           </div>
           <Sparkles className="h-5 w-5 text-brand" />
         </section>
@@ -139,11 +148,21 @@ function Page() {
                           onClick={() => setChoisie(questions[0] ?? null)}
                           className={cn(
                             "tap relative z-10 grid h-11 w-11 shrink-0 place-items-center rounded-full border-2 text-xs font-extrabold shadow-[0_3px_0_var(--color-border)] transition-transform active:translate-y-0.5",
-                            complet ? "bg-success text-success-foreground ring-4 ring-success/15" : actif ? "bg-card ring-4 ring-primary/10" : "bg-elevated",
+                            complet
+                              ? "bg-success text-success-foreground ring-4 ring-success/15"
+                              : actif
+                                ? "bg-card ring-4 ring-primary/10"
+                                : "bg-elevated",
                           )}
                           style={{ borderColor: `${axe.couleur}77`, color: axe.couleur }}
                         >
-                          {complet ? <Check className="h-5 w-5" /> : actif ? themeIndex + 1 : <LockKeyhole className="h-4 w-4 opacity-55" />}
+                          {complet ? (
+                            <Check className="h-5 w-5" />
+                          ) : actif ? (
+                            themeIndex + 1
+                          ) : (
+                            <LockKeyhole className="h-4 w-4 opacity-55" />
+                          )}
                         </button>
                         <div className="min-w-0 flex-1">
                           <p className="truncate text-xs font-semibold">{theme}</p>

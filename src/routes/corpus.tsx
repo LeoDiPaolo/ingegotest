@@ -82,7 +82,11 @@ function Page() {
             className="tap flex items-center gap-1.5 text-[0.68rem] font-semibold text-muted-foreground hover:text-primary"
           >
             <MessageSquareText className="h-3.5 w-3.5" /> Commentaires
-            {commentaires.length ? <span className="rounded-full bg-brand/15 px-1.5 py-0.5 text-brand">{commentaires.length}</span> : null}
+            {commentaires.length ? (
+              <span className="rounded-full bg-brand/15 px-1.5 py-0.5 text-brand">
+                {commentaires.length}
+              </span>
+            ) : null}
           </button>
         </div>
         <label className="flex items-center gap-2 rounded-2xl border border-input bg-card px-4 shadow-[var(--shadow-card)] focus-within:border-ring">
@@ -177,15 +181,27 @@ function Page() {
       </main>
 
       {voirCommentaires ? (
-        <div className="fixed inset-0 z-50 bg-primary/35 p-3 backdrop-blur-sm sm:p-6" role="dialog" aria-modal="true" aria-label="Tableau des commentaires">
+        <div
+          className="fixed inset-0 z-50 bg-primary/35 p-3 backdrop-blur-sm sm:p-6"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Tableau des commentaires"
+        >
           <section className="mx-auto flex max-h-[calc(100dvh-1.5rem)] max-w-4xl flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-[var(--shadow-lift)] sm:max-h-[calc(100dvh-3rem)]">
             <header className="flex items-center gap-3 border-b border-border px-4 py-3">
               <MessageSquareText className="h-5 w-5 text-brand" />
               <div className="min-w-0 flex-1">
                 <h2 className="text-base font-bold">Commentaires enregistrés</h2>
-                <p className="text-xs text-muted-foreground">{commentaires.length} question{commentaires.length > 1 ? "s" : ""} annotée{commentaires.length > 1 ? "s" : ""}</p>
+                <p className="text-xs text-muted-foreground">
+                  {commentaires.length} question{commentaires.length > 1 ? "s" : ""} annotée
+                  {commentaires.length > 1 ? "s" : ""}
+                </p>
               </div>
-              <button onClick={() => setVoirCommentaires(false)} aria-label="Fermer" className="tap rounded-full p-2 text-muted-foreground hover:bg-elevated">
+              <button
+                onClick={() => setVoirCommentaires(false)}
+                aria-label="Fermer"
+                className="tap rounded-full p-2 text-muted-foreground hover:bg-elevated"
+              >
                 <X className="h-5 w-5" />
               </button>
             </header>
@@ -193,18 +209,30 @@ function Page() {
               {commentaires.length ? (
                 <table className="w-full table-fixed border-collapse text-left text-xs sm:text-sm">
                   <thead className="sticky top-0 bg-elevated text-muted-foreground">
-                    <tr><th className="w-[38%] px-4 py-2.5">Question</th><th className="px-4 py-2.5">Commentaire</th></tr>
+                    <tr>
+                      <th className="w-[38%] px-4 py-2.5">Question</th>
+                      <th className="px-4 py-2.5">Commentaire</th>
+                    </tr>
                   </thead>
                   <tbody className="divide-y divide-border">
                     {commentaires.map(({ q, texte }) => (
                       <tr key={q.id} className="align-top">
-                        <td className="px-4 py-3"><span className="mb-1 block text-[0.62rem] font-bold text-brand uppercase">{q.sousTheme} · Niv. {q.niveau}</span>{q.question}</td>
+                        <td className="px-4 py-3">
+                          <span className="mb-1 block text-[0.62rem] font-bold text-brand uppercase">
+                            {q.sousTheme} · Niv. {q.niveau}
+                          </span>
+                          {q.question}
+                        </td>
                         <td className="px-4 py-3 leading-relaxed text-muted-foreground">{texte}</td>
                       </tr>
                     ))}
                   </tbody>
                 </table>
-              ) : <p className="p-8 text-center text-sm text-muted-foreground">Aucun commentaire enregistré pour le moment.</p>}
+              ) : (
+                <p className="p-8 text-center text-sm text-muted-foreground">
+                  Aucun commentaire enregistré pour le moment.
+                </p>
+              )}
             </div>
           </section>
         </div>
