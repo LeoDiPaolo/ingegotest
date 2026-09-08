@@ -40,13 +40,26 @@ export const carteNeuve = (): Carte => ({
   dernier: 0,
 });
 
-export function planifier(c: Carte, note: number, maintenant: number): Carte {
+export function planifier(
+  c: Carte,
+  note: number,
+  maintenant: number,
+  validationPremierCoup = true,
+): Carte {
   const n = { ...c, vu: true, reps: c.reps + 1, dernier: maintenant };
   if (note === 0) {
     n.p = 0;
     n.e = Math.max(1.5, c.e - 0.25);
     n.echecs = c.echecs + 1;
     n.du = maintenant + JOUR; // la reprise à chaud est gérée par la file de session
+    return n;
+  }
+  /* Une réussite après une erreur dans la même mission clôt la reprise à chaud,
+     mais ne valide pas la carte. Elle devra être réussie du premier coup lors
+     d'une mission ultérieure avant de pouvoir débloquer le niveau suivant. */
+  if (!validationPremierCoup) {
+    n.p = 0;
+    n.du = maintenant + JOUR;
     return n;
   }
   if (note === 1) {

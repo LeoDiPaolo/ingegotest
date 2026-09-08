@@ -1,9 +1,9 @@
 import { AXES, CORPUS, type Question } from "./corpus";
 import { etatCarte, type Etat } from "./algo";
 
-/* File de session : une question ratée revient un peu plus loin dans la même
-   session ; ratée une seconde fois, elle est reportée à un autre jour par
-   l'algorithme de répétition espacée. */
+/* File de session : une question ratée revient quelques étapes plus loin autant
+   de fois que nécessaire. Sa réussite à chaud termine la mission, mais seule
+   une réussite au premier passage d'une mission ultérieure la validera. */
 
 export const RECUL = 3; // nombre de questions intercalées avant la reprise à chaud
 
@@ -19,8 +19,8 @@ export const fileNeuve = (questions: Question[]): File => ({
   rates: {},
 });
 
-/* Insère la question ratée quelques positions plus loin (jamais en toute fin
-   pour qu'elle soit bien reprise avant la clôture). */
+/* Insère la question ratée quelques positions plus loin. S'il ne reste pas
+   assez de questions, elle est ajoutée à la fin et bloque ainsi la clôture. */
 export function reinjecter(ordre: Question[], position: number, q: Question) {
   const suite = [...ordre];
   const cible = Math.min(suite.length, position + 1 + RECUL);

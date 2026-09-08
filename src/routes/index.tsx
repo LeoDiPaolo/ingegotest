@@ -108,31 +108,37 @@ function Reviser() {
     setFini(false);
   }
 
-  function noter(q: Question, note: number) {
+  function noter(q: Question, note: number, reponseJuste: boolean) {
     const maintenant = Date.now();
     if (typeof navigator !== "undefined" && "vibrate" in navigator) {
       navigator.vibrate(note === 0 ? [18, 40, 18] : 14);
     }
+    const premierPassage = !faits.includes(q.id);
+    const valideDuPremierCoup = premierPassage && reponseJuste;
     enregistrerCarte(
       q.id,
-      planifier(donnees.cartes[q.id] ?? carteNeuve(), note, maintenant),
-      note,
+      planifier(
+        donnees.cartes[q.id] ?? carteNeuve(),
+        reponseJuste ? note : 0,
+        maintenant,
+        valideDuPremierCoup,
+      ),
+      reponseJuste ? note : 0,
       maintenant,
     );
 
-    const premierPassage = !faits.includes(q.id);
     if (premierPassage) {
       setFaits((f) => [...f, q.id]);
-      if (note >= 2) setJustes((n) => n + 1);
+      if (reponseJuste) setJustes((n) => n + 1);
     }
 
-    const echecs = (rates[q.id] ?? 0) + (note === 0 ? 1 : 0);
-    if (note === 0) setRates((r) => ({ ...r, [q.id]: echecs }));
+    const echecs = (rates[q.id] ?? 0) + (reponseJuste ? 0 : 1);
+    if (!reponseJuste) setRates((r) => ({ ...r, [q.id]: echecs }));
 
-    /* Ratée une première fois : on la remet un peu plus loin dans la session.
-       Ratée une seconde fois : elle repart sur l'échéance de répétition espacée. */
+    /* Toute erreur revient dans la mission jusqu'à réussite. Même corrigée à
+       chaud, la carte reste à valider du premier coup dans une autre mission. */
     let suite = ordre ?? [];
-    if (note === 0 && echecs === 1) suite = reinjecter(suite, i, q);
+    if (!reponseJuste) suite = reinjecter(suite, i, q);
     setOrdre(suite);
 
     if (i + 1 >= suite.length) {
@@ -383,7 +389,7 @@ function Reviser() {
               <p className="text-sm text-muted-foreground">
                 {justes === faits.length
                   ? "Parcours net : tous les points ont été validés dès le premier passage."
-                  : `${mission?.themes.length ?? 0} thèmes parcourus · les points fragiles sont déjà reprogrammés.`}
+                  : `${mission?.themes.length ?? 0} thèmes parcourus · les points repris restent à valider du premier coup lors d'une prochaine mission.`}
               </p>
               <div className="flex gap-2">
                 <button
@@ -427,7 +433,7 @@ function Reviser() {
                 q={q}
                 numero={faits.length + 1}
                 total={total}
-                onNote={(note) => noter(q, note)}
+                onNote={(note, juste) => noter(q, note, juste)}
                 commentaire={donnees.commentaires[q.id] ?? ""}
                 onCommentaire={(texte) => commenter(q.id, texte)}
               />

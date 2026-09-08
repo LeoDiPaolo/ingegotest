@@ -18,3 +18,6 @@
 - [x] Réduire le défilement des questions simples et garder l’action suivante accessible
 - [x] Compacter davantage les questions et masquer les choix inutiles après correction
 - [x] Faire tenir le brief de mission sur un écran mobile sans défilement
+- [x] Exiger 100 % de validation d'un niveau avant de débloquer le suivant
+- [x] Réinjecter chaque erreur dans la mission jusqu'à réussite
+- [x] Ne valider une question qu'après une réussite du premier coup dans une mission
