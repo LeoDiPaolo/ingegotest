@@ -21,14 +21,10 @@ export function Entete({
   const lignes = jaugesParAxe(etat);
 
   return (
-    <header className="sticky top-0 z-20 border-b border-border bg-card/95 px-5 py-2.5 backdrop-blur">
-      <div className="mx-auto max-w-6xl">
+    <header className="sticky top-0 z-20 border-b border-border bg-card/95 px-5 py-3 backdrop-blur">
+      <div className="mx-auto max-w-5xl">
         <div className="flex items-center gap-3">
-          <div className="flex items-center gap-3">
-            <LogoIngego className="h-12 w-auto max-w-[13rem] object-contain object-left" />
-            <span className="hidden h-7 border-l border-border sm:block" />
-            <span className="editorial-kicker hidden sm:block">Carnet de missions</span>
-          </div>
+          <LogoIngego className="h-11 w-auto max-w-[12rem] object-contain object-left" />
           <div className="ml-auto flex shrink-0 items-center gap-2 text-sm font-semibold">
             {synchro === "erreur" ? (
               <span title="Sauvegarde en ligne indisponible — progression conservée sur l'appareil">
@@ -38,7 +34,7 @@ export function Entete({
               <RefreshCw className="h-4 w-4 animate-spin text-muted-foreground" />
             ) : null}
             <span
-              className="flex items-center gap-1 border-l border-border px-3 py-1.5 text-brand"
+              className="flex items-center gap-1 rounded-full bg-brand/15 px-3 py-1.5 text-brand"
               title="Jours consécutifs avec une session terminée"
             >
               <Flame className={serie > 0 ? "h-4 w-4 animate-pulse" : "h-4 w-4"} />
@@ -48,7 +44,7 @@ export function Entete({
         </div>
 
         {jauges ? (
-          <div className="journal-rule mt-3 grid grid-cols-2 gap-x-3 gap-y-2 pt-3 sm:grid-cols-3">
+          <div className="mt-3 grid grid-cols-2 gap-x-3 gap-y-2 sm:grid-cols-3">
             {lignes.map((l) => (
               <div key={l.axe.id}>
                 <div className="flex items-baseline justify-between gap-1">
@@ -62,7 +58,7 @@ export function Entete({
                     {Math.round(l.part * 100)} %
                   </span>
                 </div>
-                <div className="mt-1 h-1.5 overflow-hidden bg-elevated">
+                <div className="mt-1 h-3.5 overflow-hidden rounded-full bg-elevated ring-1 ring-border/60">
                   <div className="flex h-full">
                     <div
                       className="h-full rounded-l-full transition-[width] duration-700"

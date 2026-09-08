@@ -478,21 +478,20 @@ export function Exercice({
   }
 
   return (
-    <article className="relative space-y-3 sm:space-y-5">
-      <span className="brand-watermark -top-2 -right-3 z-0 text-[7rem] sm:text-[9rem]">IG</span>
-      <div className="relative z-10 flex items-center gap-2 border-b border-border pb-2 sm:gap-3 sm:pb-3">
+    <article className="space-y-3 sm:space-y-5">
+      <div className="flex items-center gap-2 sm:gap-3">
         <IconeAxe axe={axe} className="h-9 w-9 shrink-0 sm:h-12 sm:w-12" />
         <div className="flex min-w-0 flex-1 flex-wrap items-center gap-1.5 text-[0.68rem]">
           <span
-            className="border-l-2 px-2 py-0.5 font-semibold sm:px-2.5 sm:py-1"
+            className="rounded-full px-2 py-0.5 font-semibold sm:px-2.5 sm:py-1"
             style={{ backgroundColor: `${axe.couleur}22`, color: axe.couleur }}
           >
             {axe.court} · {q.sousTheme}
           </span>
-          <span className="hidden border-l border-border px-2 py-0.5 text-muted-foreground sm:inline sm:px-2.5 sm:py-1">
+          <span className="hidden rounded-full bg-elevated px-2 py-0.5 text-muted-foreground sm:inline sm:px-2.5 sm:py-1">
             {TYPES[q.type]}
           </span>
-          <span className="hidden border-l border-border px-2 py-0.5 text-muted-foreground sm:inline sm:px-2.5 sm:py-1">
+          <span className="hidden rounded-full bg-elevated px-2 py-0.5 text-muted-foreground sm:inline sm:px-2.5 sm:py-1">
             Niveau {q.niveau}
           </span>
           <span className="ml-auto hidden text-muted-foreground sm:inline">
@@ -501,10 +500,7 @@ export function Exercice({
         </div>
       </div>
 
-      <div className="relative z-10">
-        <p className="editorial-kicker mb-1">Mission {String(numero).padStart(2, "0")}</p>
-        <h2 className="text-[1.45rem] leading-[1.08] text-primary sm:text-3xl">{q.question}</h2>
-      </div>
+      <h2 className="text-lg leading-snug sm:text-xl">{q.question}</h2>
 
       {/* ---------- SAISIE ---------- */}
       {q.type === "qcm" && (
@@ -995,7 +991,7 @@ export function Exercice({
             onCorrige?.(ok, partJuste(q, rep));
           }}
           disabled={!complet(q, rep)}
-          className="tap touche h-12 w-full rounded-none text-sm font-extrabold uppercase disabled:opacity-40 disabled:shadow-none sm:h-14"
+          className="tap touche h-12 w-full rounded-xl text-sm font-extrabold uppercase disabled:opacity-40 disabled:shadow-none sm:h-14"
         >
           {q.type === "libre" ? "Voir la réponse attendue" : "Valider"}
         </Button>
@@ -1004,7 +1000,7 @@ export function Exercice({
           {!autoNote || q.type === "vf" ? (
             <p
               className={cn(
-                "flex items-center gap-2 border-l-4 px-3 py-2 text-sm font-bold sm:py-3",
+                "flex items-center gap-2 rounded-xl px-3 py-2 text-sm font-bold sm:py-3",
                 estJuste
                   ? "anim-pop bg-success/15 text-success"
                   : "anim-tremble bg-destructive/15 text-destructive",
@@ -1020,7 +1016,7 @@ export function Exercice({
           ) : null}
 
           {q.type === "libre" && (
-            <div className="border-l-4 border-success bg-success/10 p-3">
+            <div className="rounded-xl border border-success/40 bg-success/10 p-3">
               <p className="text-[0.68rem] tracking-[0.15em] text-muted-foreground uppercase">
                 Réponse attendue
               </p>
@@ -1031,7 +1027,7 @@ export function Exercice({
           )}
 
           {q.type === "vf" && q.justification && (
-            <div className="border-l-4 border-primary bg-elevated p-3">
+            <div className="rounded-xl border border-border bg-elevated p-3">
               <p className="text-[0.68rem] tracking-[0.15em] text-muted-foreground uppercase">
                 Justification
               </p>
@@ -1040,7 +1036,7 @@ export function Exercice({
           )}
 
           {q.correction && (
-            <div className="border-l-4 border-brand bg-elevated p-3">
+            <div className="rounded-xl border border-border bg-elevated p-3">
               <p className="text-[0.68rem] tracking-[0.15em] text-muted-foreground uppercase">
                 Correction
               </p>
@@ -1048,7 +1044,7 @@ export function Exercice({
             </div>
           )}
 
-          <div className="journal-rule bg-card p-2.5 pt-4 sm:p-3 sm:pt-4">
+          <div className="rounded-xl border border-border bg-card p-2.5 sm:p-3">
             <p className="text-[0.68rem] tracking-[0.15em] text-muted-foreground uppercase">
               Ce qu'il faut retenir
             </p>

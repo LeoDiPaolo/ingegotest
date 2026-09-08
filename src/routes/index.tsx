@@ -2,10 +2,13 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
 import {
   CheckCircle2,
+  Flame,
   Layers,
   Library,
   Play,
   RotateCcw,
+  Sparkles,
+  Target,
   X,
   Clock3,
   ChevronRight,
@@ -153,146 +156,125 @@ function Reviser() {
         }
       >
         {!ordre ? (
-          <div className="journal-page relative grid gap-8 overflow-hidden lg:grid-cols-12 lg:gap-12">
-            <section className="anim-monte relative overflow-hidden border-b border-border pb-8 lg:col-span-5 lg:border-r lg:border-b-0 lg:pr-10">
-              <span className="brand-watermark -top-3 -left-5">IG</span>
-              <div className="relative z-10">
-                <LogoIngego className="hidden w-52 object-contain object-left sm:block sm:w-64" />
-                <p className="editorial-kicker mt-8">Carnet de missions · Volume 01</p>
-                <h1 className="mt-3 text-5xl leading-[0.88] text-primary sm:text-7xl">
-                  Réviser.
-                  <br />
-                  <em className="text-brand">Décider.</em>
-                  <br />
-                  Construire.
-                </h1>
-                <p className="mt-5 max-w-sm text-sm leading-relaxed text-muted-foreground sm:mt-7 sm:text-base">
-                  Votre préparation de terrain au concours d’ingénieur territorial, entre faits,
-                  réglementation et décisions techniques.
-                </p>
-                <div className="journal-rule mt-8 flex gap-8 pt-4 text-sm">
-                  <div>
-                    <p className="editorial-kicker">Série</p>
-                    <p className="mt-1 text-xl font-bold text-brand">{serie} j</p>
-                  </div>
-                  <div>
-                    <p className="editorial-kicker">Acquises</p>
-                    <p className="mt-1 text-xl font-bold text-success">{bilan.acquises}</p>
-                  </div>
-                  <div>
-                    <p className="editorial-kicker">Corpus</p>
-                    <p className="mt-1 text-xl font-bold text-primary">{bilan.total}</p>
-                  </div>
+          <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
+            <section className="blueprint anim-monte col-span-2 overflow-hidden rounded-3xl border border-primary/20 bg-card shadow-[var(--shadow-lift)] lg:row-span-2">
+              <div className="bg-primary px-5 py-3 text-primary-foreground">
+                <p className="text-[0.68rem] font-bold uppercase opacity-75">Mission du jour</p>
+                <h1 className="mt-0.5 text-2xl text-primary-foreground">Consolider le terrain</h1>
+              </div>
+              <div className="relative p-5">
+                <div className="flex items-center justify-center gap-1 py-2">
+                  {bilan.lignes.slice(0, 5).map((l, index) => (
+                    <div key={l.axe.id} className="flex items-center">
+                      <IconeAxe
+                        axe={l.axe}
+                        className="h-12 w-12 sm:h-14 sm:w-14"
+                        active={l.part > 0}
+                      />
+                      {index < 4 ? <span className="h-1 w-3 bg-border sm:w-6" /> : null}
+                    </div>
+                  ))}
                 </div>
+                <div className="mt-3 flex items-center justify-between gap-3">
+                  <div>
+                    <p className="font-bold">{Math.min(total, reste || total)} défis variés</p>
+                    <p className="mt-0.5 flex items-center gap-1 text-xs text-muted-foreground">
+                      <Clock3 className="h-3.5 w-3.5" /> environ{" "}
+                      {Math.max(5, Math.round(total * 0.75))} min
+                    </p>
+                  </div>
+                  <Castor className="h-16 w-16 shrink-0" />
+                </div>
+                <Button
+                  onClick={demarrer}
+                  disabled={!pret}
+                  className="touche touche-brand mt-4 h-14 w-full rounded-xl bg-brand text-base font-extrabold text-brand-foreground hover:bg-brand/90"
+                >
+                  <Play className="h-5 w-5" /> Lancer la mission
+                </Button>
               </div>
             </section>
 
-            <div className="grid gap-4 sm:grid-cols-2 lg:col-span-7">
-              <section className="dossier-sheet anim-monte relative flex min-h-[25rem] flex-col justify-end overflow-hidden bg-primary p-6 text-primary-foreground sm:min-h-[29rem]">
-                <div className="blueprint absolute inset-0 opacity-25" />
-                <div className="absolute top-6 right-6 text-[7rem] font-display leading-none text-primary-foreground/10">
-                  01
-                </div>
-                <div className="relative">
-                  <p className="editorial-kicker text-primary-foreground/60">Mission du jour</p>
-                  <h2 className="mt-2 text-4xl leading-none text-primary-foreground">
-                    Consolider
-                    <br />
-                    <em>le terrain.</em>
-                  </h2>
-                  <div className="mt-8 flex items-center gap-1">
-                    {bilan.lignes.slice(0, 5).map((l, index) => (
-                      <div key={l.axe.id} className="flex items-center">
-                        <IconeAxe
-                          axe={l.axe}
-                          className="h-10 w-10 border-primary-foreground/30 bg-card sm:h-11 sm:w-11"
-                          active={l.part > 0}
-                        />
-                        {index < 4 ? <span className="h-px w-2 bg-primary-foreground/30" /> : null}
-                      </div>
-                    ))}
-                  </div>
-                  <div className="mt-6 flex items-end justify-between gap-3 border-t border-primary-foreground/20 pt-4">
-                    <div className="text-primary-foreground">
-                      <p className="font-bold">{Math.min(total, reste || total)} défis</p>
-                      <p className="mt-0.5 flex items-center gap-1 text-xs opacity-65">
-                        <Clock3 className="h-3.5 w-3.5" /> environ{" "}
-                        {Math.max(5, Math.round(total * 0.75))} min
-                      </p>
-                    </div>
-                    <span className="font-display text-4xl italic text-brand">Go.</span>
-                  </div>
-                  <Button
-                    onClick={demarrer}
-                    disabled={!pret}
-                    className="touche touche-brand mt-5 h-14 w-full rounded-none bg-brand text-base font-extrabold text-brand-foreground hover:bg-brand/90"
-                  >
-                    <Play className="h-5 w-5" /> Lancer la mission
-                  </Button>
-                </div>
-              </section>
+            <section className="anim-monte surface flex flex-col justify-between gap-1 p-4">
+              <p className="flex items-center gap-1.5 text-[0.68rem] font-bold tracking-[0.14em] text-muted-foreground uppercase">
+                <Flame className="h-3.5 w-3.5 text-brand" /> Série
+              </p>
+              <p className="text-3xl font-extrabold text-brand tabular-nums">{serie}</p>
+              <p className="text-xs text-muted-foreground">
+                jour{serie > 1 ? "s" : ""} d'affilée — une séance non terminée ne compte pas.
+              </p>
+            </section>
 
-              <section className="dossier-sheet anim-monte flex min-h-[25rem] flex-col p-6 sm:min-h-[29rem]">
-                <p className="editorial-kicker">Journal de progression</p>
-                <h2 className="mt-2 text-3xl text-primary">
-                  Vos domaines
-                  <br />
-                  <em>en mouvement.</em>
-                </h2>
-                <div className="journal-rule mt-6 space-y-3 pt-5">
-                  {bilan.lignes.slice(0, 4).map((l) => (
-                    <BadgeMaitrise key={l.axe.id} axe={l.axe} acquis={l.acquises} total={l.total} />
-                  ))}
-                </div>
-                <div className="mt-auto grid grid-cols-2 border-t border-border pt-4">
-                  <Link
-                    to="/elevation"
-                    className="tap flex items-center gap-2 text-sm font-bold text-primary"
-                  >
-                    <Layers className="h-4 w-4" /> Élévation
-                  </Link>
-                  <Link
-                    to="/corpus"
-                    className="tap flex items-center justify-end gap-2 text-sm font-bold text-primary"
-                  >
-                    Corpus <Library className="h-4 w-4" />
-                  </Link>
-                </div>
-              </section>
-              <Link
-                to="/corpus"
-                className="tap journal-rule flex items-center justify-between py-5 sm:col-span-2"
-              >
-                <div>
-                  <p className="font-display text-2xl text-primary">Explorer les archives</p>
-                  <p className="editorial-kicker mt-1">{bilan.total} questions documentées</p>
-                </div>
-                <span className="grid h-10 w-10 place-items-center rounded-full border border-primary text-primary">
-                  <ChevronRight className="h-5 w-5" />
-                </span>
-              </Link>
-            </div>
+            <section className="anim-monte surface flex flex-col justify-between gap-1 p-4">
+              <p className="flex items-center gap-1.5 text-[0.68rem] font-bold tracking-[0.14em] text-muted-foreground uppercase">
+                <Target className="h-3.5 w-3.5 text-success" /> Acquises
+              </p>
+              <p className="text-3xl font-extrabold text-success tabular-nums">{bilan.acquises}</p>
+              <div className="h-2.5 overflow-hidden rounded-full bg-elevated">
+                <div
+                  className="h-full rounded-full bg-success transition-[width] duration-700"
+                  style={{ width: `${bilan.part * 100}%` }}
+                />
+              </div>
+              <p className="text-xs text-muted-foreground">sur {bilan.total} questions</p>
+            </section>
+
+            <Link
+              to="/elevation"
+              className="tap anim-monte surface flex items-center gap-3 p-4 transition-transform active:scale-[0.98]"
+            >
+              <span className="grid h-10 w-10 place-items-center rounded-xl bg-primary/10 text-primary">
+                <Layers className="h-5 w-5" />
+              </span>
+              <span className="text-sm font-bold text-foreground">Élévation</span>
+            </Link>
+
+            <Link
+              to="/corpus"
+              className="tap anim-monte surface flex items-center gap-3 p-4 transition-transform active:scale-[0.98]"
+            >
+              <span className="grid h-10 w-10 place-items-center rounded-xl bg-brand/15 text-brand">
+                <Library className="h-5 w-5" />
+              </span>
+              <span className="text-sm font-bold text-foreground">Corpus</span>
+            </Link>
+
+            <section className="anim-monte col-span-2 space-y-3 lg:col-start-3 lg:row-span-3">
+              <div className="flex items-center justify-between">
+                <p className="flex items-center gap-1.5 text-sm font-bold">
+                  <Sparkles className="h-4 w-4 text-brand" /> Badges de maîtrise
+                </p>
+                <Link to="/elevation" className="flex items-center text-xs font-bold text-primary">
+                  Tout voir <ChevronRight className="h-4 w-4" />
+                </Link>
+              </div>
+              <div className="grid gap-2 sm:grid-cols-2">
+                {bilan.lignes.slice(0, 4).map((l) => (
+                  <BadgeMaitrise key={l.axe.id} axe={l.axe} acquis={l.acquises} total={l.total} />
+                ))}
+              </div>
+            </section>
           </div>
         ) : !missionCommencee ? (
-          <section className="dossier-sheet anim-pop overflow-hidden">
-            <div className="relative overflow-hidden bg-primary px-6 pt-7 pb-16 text-center text-primary-foreground">
+          <section className="anim-pop overflow-hidden rounded-3xl border border-primary/20 bg-card shadow-[var(--shadow-lift)]">
+            <div className="relative overflow-hidden bg-primary px-6 pt-5 pb-14 text-center text-primary-foreground">
               <div className="blueprint pointer-events-none absolute inset-0 opacity-25" />
               <div className="pointer-events-none absolute top-7 left-0 h-px w-16 bg-primary-foreground/20" />
               <div className="pointer-events-none absolute top-7 right-0 h-px w-16 bg-primary-foreground/20" />
-              <div className="relative mx-auto mb-5 w-[14rem] -rotate-1 bg-card px-5 py-4 shadow-[var(--shadow-lift)] ring-1 ring-primary-foreground/20">
+              <div className="relative mx-auto mb-4 w-[12.5rem] -rotate-1 rounded-2xl bg-card px-4 py-3 shadow-[var(--shadow-lift)] ring-1 ring-primary-foreground/20">
                 <LogoIngego className="mx-auto w-full" />
-                <span className="absolute -right-2 -bottom-2 grid h-7 w-7 rotate-6 place-items-center bg-brand text-[0.58rem] font-extrabold text-brand-foreground shadow-[var(--shadow-card)]">
+                <span className="absolute -right-2 -bottom-2 grid h-7 w-7 rotate-6 place-items-center rounded-lg bg-brand text-[0.58rem] font-extrabold text-brand-foreground shadow-[var(--shadow-card)]">
                   GO
                 </span>
               </div>
               <p className="relative text-[0.65rem] font-bold tracking-[0.2em] uppercase opacity-70">
                 Brief de mission
               </p>
-              <h1 className="relative mt-2 text-4xl leading-none text-primary-foreground">
-                Révision <em>transversale.</em>
+              <h1 className="relative mt-1 text-2xl font-bold text-primary-foreground">
+                Révision transversale
               </h1>
             </div>
-            <div className="relative -mt-7 bg-card px-5 pt-5 pb-5 text-center">
+            <div className="relative -mt-7 rounded-t-3xl bg-card px-5 pt-5 pb-5 text-center">
               <div className="flex justify-center -space-x-2.5" aria-label="Thèmes de la mission">
                 {(ordre ?? []).slice(0, 5).map((question) => (
                   <IconeAxe
@@ -325,7 +307,7 @@ function Reviser() {
               </div>
               <Button
                 onClick={() => setMissionCommencee(true)}
-                className="touche touche-brand mt-4 h-14 w-full rounded-none bg-brand text-base font-extrabold text-brand-foreground hover:bg-brand/90"
+                className="touche touche-brand mt-4 h-14 w-full rounded-xl bg-brand text-base font-extrabold text-brand-foreground hover:bg-brand/90"
               >
                 Démarrer <ArrowRight className="h-5 w-5" />
               </Button>
@@ -387,7 +369,7 @@ function Reviser() {
               </span>
             </div>
 
-            <div className="dossier-sheet anim-pop p-3.5 sm:p-6">
+            <div className="surface anim-pop p-3.5 sm:p-5">
               <Exercice
                 key={`${q.id}-${i}`}
                 q={q}
