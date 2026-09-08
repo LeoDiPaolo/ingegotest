@@ -171,9 +171,7 @@ export function composerSession(etat: Etat, reglages: Reglages, now: number): Qu
       (a, b) => etat[a.id]!.du - etat[b.id]!.du,
     );
     const actifs = CORPUS.filter(ouvert);
-    return entrelacer(
-      repartirParTheme(rondeParFormat(frag), actifs, reglages.parSession),
-    );
+    return entrelacer(repartirParTheme(rondeParFormat(frag), actifs, reglages.parSession));
   }
   const cache: Record<string, number> = {};
   const nivDe = (s: string) =>
