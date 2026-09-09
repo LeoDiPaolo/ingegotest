@@ -629,6 +629,76 @@ function Reviser() {
         ) : null}
       </main>
 
+      <Dialog open={Boolean(detailAxe)} onOpenChange={(o) => !o && setAxeOuvert(null)}>
+        <DialogContent className="max-h-[85dvh] overflow-y-auto rounded-2xl">
+          {detailAxe ? (
+            <>
+              <DialogHeader className="flex-row items-center gap-3 text-left">
+                <IconeAxe axe={detailAxe.ligne.axe} className="h-12 w-12 shrink-0" active />
+                <div className="min-w-0">
+                  <DialogTitle className="text-lg">{detailAxe.ligne.axe.court}</DialogTitle>
+                  <DialogDescription>{detailAxe.ligne.axe.nom}</DialogDescription>
+                </div>
+              </DialogHeader>
+
+              <div>
+                <p className="text-[0.65rem] font-extrabold tracking-[0.14em] text-muted-foreground uppercase">
+                  Points abordés
+                </p>
+                <div className="mt-1.5 flex flex-wrap gap-1.5">
+                  {detailAxe.ligne.axe.sousThemes.map((t) => (
+                    <span
+                      key={t}
+                      className="rounded-full bg-elevated px-2.5 py-1 text-xs font-semibold"
+                    >
+                      {t}
+                    </span>
+                  ))}
+                </div>
+                <p className="mt-2 text-xs text-muted-foreground">
+                  Objectif : maîtriser du premier coup les faits et repères réglementaires de{" "}
+                  {detailAxe.ligne.axe.nom.toLowerCase()}, niveau par niveau.
+                </p>
+              </div>
+
+              <div className="rounded-2xl border border-border bg-elevated p-3">
+                <div className="flex items-baseline justify-between">
+                  <p className="text-sm font-bold">
+                    {detailAxe.ligne.acquises}/{detailAxe.ligne.total} validées
+                  </p>
+                  <p
+                    className="text-sm font-extrabold tabular-nums"
+                    style={{ color: detailAxe.ligne.axe.couleur }}
+                  >
+                    {Math.round(detailAxe.ligne.part * 100)} %
+                  </p>
+                </div>
+                <div className="mt-2 h-2.5 overflow-hidden rounded-full bg-card">
+                  <div
+                    className="h-full rounded-full transition-[width] duration-700"
+                    style={{
+                      width: `${detailAxe.ligne.part * 100}%`,
+                      backgroundColor: detailAxe.ligne.axe.couleur,
+                    }}
+                  />
+                </div>
+                <p className="mt-2 text-xs text-muted-foreground">
+                  Dernière session :{" "}
+                  {detailAxe.derniereEntree
+                    ? new Date(detailAxe.derniereEntree.t).toLocaleDateString("fr-FR")
+                    : "aucune pour l'instant"}
+                </p>
+                <p className="mt-1 text-xs font-semibold text-primary">
+                  {detailAxe.suivant
+                    ? `Prochain objectif : ${detailAxe.suivant.theme} · niveau ${detailAxe.suivant.niveau} (${detailAxe.suivant.restantesNiveau} à valider)`
+                    : "Catégorie entièrement validée."}
+                </p>
+              </div>
+            </>
+          ) : null}
+        </DialogContent>
+      </Dialog>
+
       {!exerciceActif ? <NavBas /> : null}
     </div>
   );
