@@ -123,28 +123,71 @@ export function BadgeMaitrise({
             />
           ))}
         </div>
-        {prochain ? (
-          <div
-            className="mt-2 flex items-center gap-2 rounded-xl border border-dashed px-2 py-1.5"
-            style={{ borderColor: `${axe.couleur}55`, backgroundColor: `${axe.couleur}0d` }}
-          >
-            <span
-              className="grid h-6 w-6 shrink-0 place-items-center rounded-full"
-              style={{ backgroundColor: `${axe.couleur}22`, color: axe.couleur }}
-            >
-              <Award className="h-3.5 w-3.5" />
-            </span>
-            <p className="min-w-0 flex-1 text-[0.68rem] font-bold text-muted-foreground">
-              Prochain objectif : badge{" "}
-              <span className="font-extrabold" style={{ color: axe.couleur }}>
-                {Math.round(prochain * 100)} %
-              </span>
-              {restant > 0 ? ` · encore ${restant} question${restant > 1 ? "s" : ""}` : ""}
-            </p>
-          </div>
-        ) : null}
       </div>
       {part >= 0.8 ? <Award className="h-5 w-5 shrink-0 text-brand" /> : null}
     </Balise>
+  );
+}
+
+/* Médaille : vrai badge visuel, verrouillé ou débloqué. */
+export function Medaille({
+  libelle,
+  legende,
+  couleur,
+  acquis,
+  taille = "sm",
+  icone: Icone = Award,
+}: {
+  libelle: string;
+  legende?: string;
+  couleur?: string;
+  acquis: boolean;
+  taille?: "sm" | "lg";
+  icone?: LucideIcon;
+}) {
+  const c = couleur ?? "var(--color-brand)";
+  const grand = taille === "lg";
+  return (
+    <div className="flex flex-col items-center gap-1">
+      <div
+        className={cn(
+          "relative grid aspect-square place-items-center rounded-full border-[3px] transition-transform",
+          grand ? "w-28 shadow-[var(--shadow-lift)]" : "w-full max-w-16",
+          !acquis && "opacity-45 grayscale",
+        )}
+        style={{
+          borderColor: acquis ? c : "var(--color-border)",
+          background: acquis
+            ? `radial-gradient(circle at 30% 25%, color-mix(in oklab, ${c} 28%, var(--color-card)), var(--color-card))`
+            : "var(--color-elevated)",
+          color: acquis ? c : "var(--color-muted-foreground)",
+        }}
+      >
+        <span className="absolute inset-1.5 rounded-full border border-dashed border-current opacity-35" />
+        <div className="flex flex-col items-center leading-none">
+          <Icone className={grand ? "h-7 w-7" : "h-4 w-4"} strokeWidth={2.4} />
+          <span
+            className={cn("mt-0.5 font-extrabold tabular-nums", grand ? "text-lg" : "text-[0.7rem]")}
+          >
+            {libelle}
+          </span>
+        </div>
+        {acquis ? (
+          <span className="absolute -right-1 -bottom-1 grid h-6 w-6 place-items-center rounded-full bg-success text-success-foreground ring-2 ring-card">
+            <ShieldCheck className="h-3.5 w-3.5" />
+          </span>
+        ) : null}
+      </div>
+      {legende ? (
+        <p
+          className={cn(
+            "text-center font-bold text-muted-foreground",
+            grand ? "text-sm" : "text-[0.6rem]",
+          )}
+        >
+          {legende}
+        </p>
+      ) : null}
+    </div>
   );
 }
