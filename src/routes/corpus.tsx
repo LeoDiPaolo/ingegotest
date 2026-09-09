@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
-import { CheckCircle2, ChevronDown, MessageSquareText, Search, X } from "lucide-react";
+import { CheckCircle2, ChevronDown, Lock, MessageSquareText, Search, X } from "lucide-react";
 import { Entete } from "@/components/ingego/entete";
 import { NavBas } from "@/components/ingego/nav-bas";
 import { AXES, CORPUS, FAMILLES, TYPES, attendue, type Question } from "@/lib/ingego/corpus";
