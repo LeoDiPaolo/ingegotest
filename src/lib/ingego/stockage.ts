@@ -167,11 +167,14 @@ export function useDonnees() {
 
   useEffect(() => {
     let vivant = true;
-    const local = purger(lireLocal());
+    const purgeCartes = aPurger(CLE_PURGE, VERSION_CORRECTIONS);
+    const purgeCom = aPurger(CLE_PURGE_COM, VERSION_COMMENTAIRES);
+    const local = purger(lireLocal(), purgeCartes, purgeCom);
     setDonnees(local);
     dernier.current = local;
     setPret(true);
     cle.current = cleAppareil();
+
     (async () => {
       if (!cle.current) return;
       setSynchro("en-cours");
