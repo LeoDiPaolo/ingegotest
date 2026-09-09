@@ -134,7 +134,6 @@ function Reviser() {
     return { ligne, progression, suivant, derniereEntree };
   }, [axeOuvert, bilan.lignes, donnees.cartes, donnees.journal]);
 
-
   const total = donnees.reglages.parSession;
   const objectif = useMemo(() => {
     const actifs = donnees.reglages.axes;
@@ -403,9 +402,7 @@ function Reviser() {
                           ? "border-brand/40 bg-brand/15 text-brand"
                           : "border-border bg-elevated text-muted-foreground/60"
                       } ${p === 783 ? "col-span-2 aspect-auto py-2" : ""}`}
-                      title={
-                        p === 783 ? "Corpus complet" : `${p} bonnes réponses`
-                      }
+                      title={p === 783 ? "Corpus complet" : `${p} bonnes réponses`}
                     >
                       {p === 783 ? "783 · corpus" : p}
                     </div>
@@ -415,7 +412,9 @@ function Reviser() {
               <p className="text-xs text-muted-foreground">
                 {bonnesReponses} bonne{bonnesReponses > 1 ? "s" : ""} réponse
                 {bonnesReponses > 1 ? "s" : ""} cumulée{bonnesReponses > 1 ? "s" : ""}
-                {prochainPalier ? ` · prochain palier à ${prochainPalier}` : " · tous les paliers atteints"}
+                {prochainPalier
+                  ? ` · prochain palier à ${prochainPalier}`
+                  : " · tous les paliers atteints"}
               </p>
             </section>
           </div>
