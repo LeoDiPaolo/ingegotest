@@ -28,7 +28,7 @@ import { Castor, LogoIngego } from "@/components/ingego/marque";
 import { BadgeMaitrise, IconeAxe } from "@/components/ingego/univers";
 import { Button } from "@/components/ui/button";
 import { Exercice } from "@/components/ingego/exercice";
-import { AXE_BY_ID, type Question } from "@/lib/ingego/corpus";
+import { AXE_BY_ID, Q_BY_ID, type Question } from "@/lib/ingego/corpus";
 import {
   carteNeuve,
   composerSession,
@@ -75,6 +75,7 @@ function Reviser() {
   const [fini, setFini] = useState(false);
   const [missionCommencee, setMissionCommencee] = useState(false);
   const [niveauxDepart, setNiveauxDepart] = useState<Record<string, number>>({});
+  const [axeOuvert, setAxeOuvert] = useState<string | null>(null);
 
   const serie = useMemo(
     () => serieJours(donnees.journal.filter((e) => e.id === MARQUE_SESSION).map((e) => e.jour)),
