@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from "react";
-import { supabase } from "@/integrations/supabase/client";
+import { ecrireEtat, lireEtat } from "./etat.functions";
 import { normaliserReglages, type Carte, type Etat, type Reglages } from "./algo";
 import { IDS_CORRIGES, VERSION_CORRECTIONS } from "./corrections";
 
@@ -128,17 +128,20 @@ export function useDonnees() {
     if (attente.current) clearTimeout(attente.current);
     attente.current = setTimeout(async () => {
       setSynchro("en-cours");
-      const { error } = await supabase.from("etat_ingego").upsert(
-        {
-          cle: cle.current!,
-          cartes: dernier.current.cartes as never,
-          journal: dernier.current.journal as never,
-          reglages: dernier.current.reglages as never,
-          commentaires: dernier.current.commentaires as never,
-        },
-        { onConflict: "cle" },
-      );
-      setSynchro(error ? "erreur" : "ok");
+      try {
+        await ecrireEtat({
+          data: {
+            cle: cle.current!,
+            cartes: dernier.current.cartes as never,
+            journal: dernier.current.journal as never,
+            reglages: dernier.current.reglages as never,
+            commentaires: dernier.current.commentaires,
+          },
+        });
+        setSynchro("ok");
+      } catch {
+        setSynchro("erreur");
+      }
     }, 800);
   }, []);
 
@@ -152,16 +155,14 @@ export function useDonnees() {
     (async () => {
       if (!cle.current) return;
       setSynchro("en-cours");
-      const { data, error } = await supabase
-        .from("etat_ingego")
-        .select("cartes, journal, reglages, commentaires")
-        .eq("cle", cle.current)
-        .maybeSingle();
-      if (!vivant) return;
-      if (error) {
-        setSynchro("erreur");
+      let data: Awaited<ReturnType<typeof lireEtat>> = null;
+      try {
+        data = await lireEtat({ data: { cle: cle.current } });
+      } catch {
+        if (vivant) setSynchro("erreur");
         return;
       }
+      if (!vivant) return;
       if (data) {
         const distant: Donnees = {
           cartes: (data.cartes as unknown as Etat) ?? {},
