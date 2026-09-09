@@ -89,6 +89,48 @@ function Reviser() {
     return { total, acquises, part: total ? acquises / total : 0, lignes: l };
   }, [donnees.cartes]);
 
+  /* Paliers de bonnes réponses, toutes catégories confondues. */
+  const bonnesReponses = useMemo(
+    () => donnees.journal.filter((e) => e.id !== MARQUE_SESSION && e.note > 0).length,
+    [donnees.journal],
+  );
+  const prochainPalier = PALIERS_REPONSES.find((p) => p > bonnesReponses) ?? null;
+
+  /* Aperçu de la dernière séquence répondue. */
+  const derniere = useMemo(
+    () =>
+      donnees.journal
+        .filter((e) => e.id !== MARQUE_SESSION && Q_BY_ID[e.id])
+        .slice(-4)
+        .reverse()
+        .map((e) => ({
+          id: e.id,
+          t: e.t,
+          note: e.note,
+          jour: e.jour.slice(5),
+          libelle: Q_BY_ID[e.id].sousTheme,
+        })),
+    [donnees.journal],
+  );
+
+  const detailAxe = useMemo(() => {
+    if (!axeOuvert) return null;
+    const ligne = bilan.lignes.find((l) => l.axe.id === axeOuvert);
+    if (!ligne) return null;
+    const progression = ligne.axe.sousThemes.map((theme) => ({
+      theme,
+      ...progressionSousTheme(theme, donnees.cartes),
+    }));
+    const suivant = progression
+      .filter((p) => !p.termine)
+      .sort((a, b) => a.niveau - b.niveau || a.restantesNiveau - b.restantesNiveau)[0];
+    const derniereEntree = [...donnees.journal]
+      .reverse()
+      .find((e) => Q_BY_ID[e.id]?.axe === axeOuvert);
+    return { ligne, progression, suivant, derniereEntree };
+  }, [axeOuvert, bilan.lignes, donnees.cartes, donnees.journal]);
+
+
   const total = donnees.reglages.parSession;
   const objectif = useMemo(() => {
     const actifs = donnees.reglages.axes;
