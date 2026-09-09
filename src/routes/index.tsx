@@ -389,21 +389,16 @@ function Reviser() {
               <div className="flex items-center gap-1.5 pt-1 text-sm font-bold">
                 <Medal className="h-4 w-4 text-brand" /> Paliers de bonnes réponses
               </div>
-              <div className="surface grid grid-cols-4 gap-2 p-3 sm:grid-cols-6">
+              <div className="surface grid grid-cols-4 gap-3 p-3 sm:grid-cols-6">
                 {PALIERS_REPONSES.map((p) => {
-                  const acquis = bonnesReponses >= p;
+                  const b = badgePalierReponses(p);
                   return (
-                    <div
+                    <Medaille
                       key={p}
-                      className={`grid aspect-square place-items-center rounded-xl border text-[0.7rem] font-extrabold tabular-nums ${
-                        acquis
-                          ? "border-brand/40 bg-brand/15 text-brand"
-                          : "border-border bg-elevated text-muted-foreground/60"
-                      } ${p === 783 ? "col-span-2 aspect-auto py-2" : ""}`}
-                      title={p === 783 ? "Corpus complet" : `${p} bonnes réponses`}
-                    >
-                      {p === 783 ? "783 · corpus" : p}
-                    </div>
+                      libelle={b.libelle}
+                      acquis={bonnesReponses >= p}
+                      icone={p === 783 ? Trophy : Medal}
+                    />
                   );
                 })}
               </div>
