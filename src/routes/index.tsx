@@ -3,9 +3,8 @@ import { useMemo, useState } from "react";
 import {
   CheckCircle2,
   Flame,
-  Layers,
-  Library,
   LockKeyhole,
+  Medal,
   Play,
   RotateCcw,
   Sparkles,
@@ -15,6 +14,13 @@ import {
   ChevronRight,
   ArrowRight,
 } from "lucide-react";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 import { Entete } from "@/components/ingego/entete";
 import { NavBas } from "@/components/ingego/nav-bas";
 import { Confettis } from "@/components/ingego/confettis";
@@ -22,7 +28,7 @@ import { Castor, LogoIngego } from "@/components/ingego/marque";
 import { BadgeMaitrise, IconeAxe } from "@/components/ingego/univers";
 import { Button } from "@/components/ui/button";
 import { Exercice } from "@/components/ingego/exercice";
-import { AXE_BY_ID, type Question } from "@/lib/ingego/corpus";
+import { AXE_BY_ID, Q_BY_ID, type Question } from "@/lib/ingego/corpus";
 import {
   carteNeuve,
   composerSession,
@@ -56,6 +62,9 @@ export const Route = createFileRoute("/")({
 
 const MARQUE_SESSION = "__session";
 
+/* Paliers de bonnes réponses cumulées, dernier palier = corpus complet. */
+const PALIERS_REPONSES = [10, 25, 50, 100, 200, 300, 400, 500, 600, 700, 783];
+
 function Reviser() {
   const { donnees, pret, synchro, enregistrerCarte, commenter, maj } = useDonnees();
   const [ordre, setOrdre] = useState<Question[] | null>(null);
@@ -66,6 +75,7 @@ function Reviser() {
   const [fini, setFini] = useState(false);
   const [missionCommencee, setMissionCommencee] = useState(false);
   const [niveauxDepart, setNiveauxDepart] = useState<Record<string, number>>({});
+  const [axeOuvert, setAxeOuvert] = useState<string | null>(null);
 
   const serie = useMemo(
     () => serieJours(donnees.journal.filter((e) => e.id === MARQUE_SESSION).map((e) => e.jour)),
@@ -82,6 +92,47 @@ function Reviser() {
     const acquises = l.reduce((s, x) => s + x.acquises, 0);
     return { total, acquises, part: total ? acquises / total : 0, lignes: l };
   }, [donnees.cartes]);
+
+  /* Paliers de bonnes réponses, toutes catégories confondues. */
+  const bonnesReponses = useMemo(
+    () => donnees.journal.filter((e) => e.id !== MARQUE_SESSION && e.note > 0).length,
+    [donnees.journal],
+  );
+  const prochainPalier = PALIERS_REPONSES.find((p) => p > bonnesReponses) ?? null;
+
+  /* Aperçu de la dernière séquence répondue. */
+  const derniere = useMemo(
+    () =>
+      donnees.journal
+        .filter((e) => e.id !== MARQUE_SESSION && Q_BY_ID[e.id])
+        .slice(-4)
+        .reverse()
+        .map((e) => ({
+          id: e.id,
+          t: e.t,
+          note: e.note,
+          jour: e.jour.slice(5),
+          libelle: Q_BY_ID[e.id].sousTheme,
+        })),
+    [donnees.journal],
+  );
+
+  const detailAxe = useMemo(() => {
+    if (!axeOuvert) return null;
+    const ligne = bilan.lignes.find((l) => l.axe.id === axeOuvert);
+    if (!ligne) return null;
+    const progression = ligne.axe.sousThemes.map((theme) => ({
+      theme,
+      ...progressionSousTheme(theme, donnees.cartes),
+    }));
+    const suivant = progression
+      .filter((p) => !p.termine)
+      .sort((a, b) => a.niveau - b.niveau || a.restantesNiveau - b.restantesNiveau)[0];
+    const derniereEntree = [...donnees.journal]
+      .reverse()
+      .find((e) => Q_BY_ID[e.id]?.axe === axeOuvert);
+    return { ligne, progression, suivant, derniereEntree };
+  }, [axeOuvert, bilan.lignes, donnees.cartes, donnees.journal]);
 
   const total = donnees.reglages.parSession;
   const objectif = useMemo(() => {
@@ -223,15 +274,24 @@ function Reviser() {
                 <h1 className="mt-0.5 text-2xl text-primary-foreground">Consolider le terrain</h1>
               </div>
               <div className="relative p-5">
-                <div className="flex items-center justify-center gap-1 py-2">
-                  {bilan.lignes.slice(0, 5).map((l, index) => (
+                <div className="flex flex-wrap items-center justify-center gap-1 py-2">
+                  {bilan.lignes.map((l, index) => (
                     <div key={l.axe.id} className="flex items-center">
-                      <IconeAxe
-                        axe={l.axe}
-                        className="h-12 w-12 sm:h-14 sm:w-14"
-                        active={l.part > 0}
-                      />
-                      {index < 4 ? <span className="h-1 w-3 bg-border sm:w-6" /> : null}
+                      <button
+                        type="button"
+                        onClick={() => setAxeOuvert(l.axe.id)}
+                        aria-label={`Ouvrir la catégorie ${l.axe.court}`}
+                        className="tap rounded-full transition-transform active:scale-95"
+                      >
+                        <IconeAxe
+                          axe={l.axe}
+                          className="h-11 w-11 sm:h-14 sm:w-14"
+                          active={l.part > 0}
+                        />
+                      </button>
+                      {index < bilan.lignes.length - 1 ? (
+                        <span className="h-1 w-2 bg-border sm:w-4" />
+                      ) : null}
                     </div>
                   ))}
                 </div>
@@ -284,25 +344,28 @@ function Reviser() {
               <p className="text-xs text-muted-foreground">sur {bilan.total} questions</p>
             </section>
 
-            <Link
-              to="/elevation"
-              className="tap anim-monte surface flex items-center gap-3 p-4 transition-transform active:scale-[0.98]"
-            >
-              <span className="grid h-10 w-10 place-items-center rounded-xl bg-primary/10 text-primary">
-                <Layers className="h-5 w-5" />
-              </span>
-              <span className="text-sm font-bold text-foreground">Élévation</span>
-            </Link>
-
-            <Link
-              to="/corpus"
-              className="tap anim-monte surface flex items-center gap-3 p-4 transition-transform active:scale-[0.98]"
-            >
-              <span className="grid h-10 w-10 place-items-center rounded-xl bg-brand/15 text-brand">
-                <Library className="h-5 w-5" />
-              </span>
-              <span className="text-sm font-bold text-foreground">Corpus</span>
-            </Link>
+            <section className="anim-monte surface col-span-2 space-y-2 p-4">
+              <p className="flex items-center gap-1.5 text-[0.68rem] font-bold tracking-[0.14em] text-muted-foreground uppercase">
+                <Clock3 className="h-3.5 w-3.5 text-primary" /> Dernière séquence
+              </p>
+              {derniere.length ? (
+                <ul className="space-y-1.5">
+                  {derniere.map((e) => (
+                    <li key={`${e.id}-${e.t}`} className="flex items-center gap-2 text-xs">
+                      <span
+                        className={`h-2 w-2 shrink-0 rounded-full ${e.note > 0 ? "bg-success" : "bg-destructive"}`}
+                      />
+                      <span className="truncate text-foreground">{e.libelle}</span>
+                      <span className="ml-auto shrink-0 text-muted-foreground">{e.jour}</span>
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <p className="text-xs text-muted-foreground">
+                  Aucune séquence encore : lancez la première mission.
+                </p>
+              )}
+            </section>
 
             <section className="anim-monte col-span-2 space-y-3 lg:col-start-3 lg:row-span-3">
               <div className="flex items-center justify-between">
@@ -314,10 +377,45 @@ function Reviser() {
                 </Link>
               </div>
               <div className="grid gap-2 sm:grid-cols-2">
-                {bilan.lignes.slice(0, 4).map((l) => (
-                  <BadgeMaitrise key={l.axe.id} axe={l.axe} acquis={l.acquises} total={l.total} />
+                {bilan.lignes.map((l) => (
+                  <BadgeMaitrise
+                    key={l.axe.id}
+                    axe={l.axe}
+                    acquis={l.acquises}
+                    total={l.total}
+                    onClick={() => setAxeOuvert(l.axe.id)}
+                  />
                 ))}
               </div>
+
+              <div className="flex items-center gap-1.5 pt-1 text-sm font-bold">
+                <Medal className="h-4 w-4 text-brand" /> Paliers de bonnes réponses
+              </div>
+              <div className="surface grid grid-cols-4 gap-2 p-3 sm:grid-cols-6">
+                {PALIERS_REPONSES.map((p) => {
+                  const acquis = bonnesReponses >= p;
+                  return (
+                    <div
+                      key={p}
+                      className={`grid aspect-square place-items-center rounded-xl border text-[0.7rem] font-extrabold tabular-nums ${
+                        acquis
+                          ? "border-brand/40 bg-brand/15 text-brand"
+                          : "border-border bg-elevated text-muted-foreground/60"
+                      } ${p === 783 ? "col-span-2 aspect-auto py-2" : ""}`}
+                      title={p === 783 ? "Corpus complet" : `${p} bonnes réponses`}
+                    >
+                      {p === 783 ? "783 · corpus" : p}
+                    </div>
+                  );
+                })}
+              </div>
+              <p className="text-xs text-muted-foreground">
+                {bonnesReponses} bonne{bonnesReponses > 1 ? "s" : ""} réponse
+                {bonnesReponses > 1 ? "s" : ""} cumulée{bonnesReponses > 1 ? "s" : ""}
+                {prochainPalier
+                  ? ` · prochain palier à ${prochainPalier}`
+                  : " · tous les paliers atteints"}
+              </p>
             </section>
           </div>
         ) : !missionCommencee ? (
@@ -529,6 +627,76 @@ function Reviser() {
           </section>
         ) : null}
       </main>
+
+      <Dialog open={Boolean(detailAxe)} onOpenChange={(o) => !o && setAxeOuvert(null)}>
+        <DialogContent className="max-h-[85dvh] overflow-y-auto rounded-2xl">
+          {detailAxe ? (
+            <>
+              <DialogHeader className="flex-row items-center gap-3 text-left">
+                <IconeAxe axe={detailAxe.ligne.axe} className="h-12 w-12 shrink-0" active />
+                <div className="min-w-0">
+                  <DialogTitle className="text-lg">{detailAxe.ligne.axe.court}</DialogTitle>
+                  <DialogDescription>{detailAxe.ligne.axe.nom}</DialogDescription>
+                </div>
+              </DialogHeader>
+
+              <div>
+                <p className="text-[0.65rem] font-extrabold tracking-[0.14em] text-muted-foreground uppercase">
+                  Points abordés
+                </p>
+                <div className="mt-1.5 flex flex-wrap gap-1.5">
+                  {detailAxe.ligne.axe.sousThemes.map((t) => (
+                    <span
+                      key={t}
+                      className="rounded-full bg-elevated px-2.5 py-1 text-xs font-semibold"
+                    >
+                      {t}
+                    </span>
+                  ))}
+                </div>
+                <p className="mt-2 text-xs text-muted-foreground">
+                  Objectif : maîtriser du premier coup les faits et repères réglementaires de{" "}
+                  {detailAxe.ligne.axe.nom.toLowerCase()}, niveau par niveau.
+                </p>
+              </div>
+
+              <div className="rounded-2xl border border-border bg-elevated p-3">
+                <div className="flex items-baseline justify-between">
+                  <p className="text-sm font-bold">
+                    {detailAxe.ligne.acquises}/{detailAxe.ligne.total} validées
+                  </p>
+                  <p
+                    className="text-sm font-extrabold tabular-nums"
+                    style={{ color: detailAxe.ligne.axe.couleur }}
+                  >
+                    {Math.round(detailAxe.ligne.part * 100)} %
+                  </p>
+                </div>
+                <div className="mt-2 h-2.5 overflow-hidden rounded-full bg-card">
+                  <div
+                    className="h-full rounded-full transition-[width] duration-700"
+                    style={{
+                      width: `${detailAxe.ligne.part * 100}%`,
+                      backgroundColor: detailAxe.ligne.axe.couleur,
+                    }}
+                  />
+                </div>
+                <p className="mt-2 text-xs text-muted-foreground">
+                  Dernière session :{" "}
+                  {detailAxe.derniereEntree
+                    ? new Date(detailAxe.derniereEntree.t).toLocaleDateString("fr-FR")
+                    : "aucune pour l'instant"}
+                </p>
+                <p className="mt-1 text-xs font-semibold text-primary">
+                  {detailAxe.suivant
+                    ? `Prochain objectif : ${detailAxe.suivant.theme} · niveau ${detailAxe.suivant.niveau} (${detailAxe.suivant.restantesNiveau} à valider)`
+                    : "Catégorie entièrement validée."}
+                </p>
+              </div>
+            </>
+          ) : null}
+        </DialogContent>
+      </Dialog>
 
       {!exerciceActif ? <NavBas /> : null}
     </div>

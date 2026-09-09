@@ -1,4 +1,4 @@
-import { CloudOff, Flame, RefreshCw } from "lucide-react";
+import { CloudOff, RefreshCw } from "lucide-react";
 import { LogoIngego } from "@/components/ingego/marque";
 import { jaugesParAxe } from "@/lib/ingego/session";
 import type { Etat } from "@/lib/ingego/algo";
@@ -8,7 +8,6 @@ export type EtatSynchro = "local" | "en-cours" | "ok" | "erreur";
 /* Bandeau haut : logo IngéGo, série de jours et jauges de progression par axe,
    lisibles d'un coup d'œil (couleur de l'axe, épaisseur généreuse). */
 export function Entete({
-  serie,
   etat,
   synchro,
   jauges = true,
@@ -33,13 +32,6 @@ export function Entete({
             ) : synchro === "en-cours" ? (
               <RefreshCw className="h-4 w-4 animate-spin text-muted-foreground" />
             ) : null}
-            <span
-              className="flex items-center gap-1 rounded-full bg-brand/15 px-3 py-1.5 text-brand"
-              title="Jours consécutifs avec une session terminée"
-            >
-              <Flame className={serie > 0 ? "h-4 w-4 animate-pulse" : "h-4 w-4"} />
-              {serie}
-            </span>
           </div>
         </div>
 
