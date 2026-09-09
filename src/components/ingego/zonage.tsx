@@ -87,7 +87,7 @@ export function Zonage({
 
       <div
         className="relative w-full overflow-hidden rounded-xl border border-plan-line/70 bg-card"
-        style={{ aspectRatio: `${cols} / ${lignes}` }}
+        style={{ aspectRatio: `${cols} / ${Math.max(0.6, lignes * 0.5)}` }}
       >
         <svg viewBox={`0 0 ${cols * 10} ${lignes * 10}`} className="absolute inset-0 h-full w-full">
           {Array.from({ length: cols - 1 }, (_, i) => (
