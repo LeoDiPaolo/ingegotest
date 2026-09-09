@@ -162,25 +162,45 @@ function Page() {
                       onClick={() =>
                         setOuvert(ouvert === axe.id + sousTheme ? null : axe.id + sousTheme)
                       }
-                      className="tap flex w-full items-center gap-2 bg-card px-4 py-3 text-left text-sm font-semibold"
+                      className="tap w-full bg-card px-4 py-3 text-left text-sm font-semibold"
                     >
-                      <span className="flex-1">{sousTheme}</span>
-                      <span
-                        className={cn(
-                          "rounded-full px-2 py-0.5 text-[0.62rem] font-bold",
-                          nbValidees === qs.length
-                            ? "bg-success/15 text-success"
-                            : "bg-elevated text-muted-foreground",
-                        )}
-                      >
-                        {nbValidees}/{qs.length} validées
+                      <span className="flex items-center gap-2">
+                        <span className="flex-1">{sousTheme}</span>
+                        <span
+                          className={cn(
+                            "rounded-full px-2 py-0.5 text-[0.62rem] font-bold",
+                            nbValidees === qs.length
+                              ? "bg-success/15 text-success"
+                              : "bg-elevated text-muted-foreground",
+                          )}
+                        >
+                          {nbValidees}/{qs.length} validées
+                        </span>
+                        <ChevronDown
+                          className={cn(
+                            "h-4 w-4 transition-transform",
+                            ouvert === axe.id + sousTheme && "rotate-180",
+                          )}
+                        />
                       </span>
-                      <ChevronDown
-                        className={cn(
-                          "h-4 w-4 transition-transform",
-                          ouvert === axe.id + sousTheme && "rotate-180",
-                        )}
-                      />
+                      <span className="mt-2 flex h-1.5 w-full overflow-hidden rounded-full bg-elevated">
+                        <span
+                          className="h-full rounded-full bg-success transition-all"
+                          style={{ width: `${(nbValidees / qs.length) * 100}%` }}
+                        />
+                      </span>
+                      <span className="mt-1.5 flex flex-wrap gap-1">
+                        {qs.map((q) => (
+                          <span
+                            key={q.id}
+                            aria-hidden
+                            className={cn(
+                              "h-1.5 w-4 rounded-full",
+                              validee(donnees.cartes[q.id]) ? "bg-success" : "bg-border",
+                            )}
+                          />
+                        ))}
+                      </span>
                     </button>
                     {ouvert === axe.id + sousTheme ? (
                       <ul className="divide-y divide-border border-t border-border">
