@@ -155,16 +155,14 @@ export function useDonnees() {
     (async () => {
       if (!cle.current) return;
       setSynchro("en-cours");
-      const { data, error } = await supabase
-        .from("etat_ingego")
-        .select("cartes, journal, reglages, commentaires")
-        .eq("cle", cle.current)
-        .maybeSingle();
-      if (!vivant) return;
-      if (error) {
-        setSynchro("erreur");
+      let data: Awaited<ReturnType<typeof lireEtat>> = null;
+      try {
+        data = await lireEtat({ data: { cle: cle.current } });
+      } catch {
+        if (vivant) setSynchro("erreur");
         return;
       }
+      if (!vivant) return;
       if (data) {
         const distant: Donnees = {
           cartes: (data.cartes as unknown as Etat) ?? {},
