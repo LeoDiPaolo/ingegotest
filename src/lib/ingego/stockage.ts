@@ -1,7 +1,12 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { ecrireEtat, lireEtat } from "./etat.functions";
 import { normaliserReglages, type Carte, type Etat, type Reglages } from "./algo";
-import { IDS_CORRIGES, VERSION_CORRECTIONS } from "./corrections";
+import {
+  COMMENTAIRES_TRAITES,
+  IDS_CORRIGES,
+  VERSION_COMMENTAIRES,
+  VERSION_CORRECTIONS,
+} from "./corrections";
 
 /* Sauvegarde de la progression : écriture immédiate sur l'appareil (réactivité,
    utilisable hors ligne sur un chantier) puis synchronisation avec la base.
@@ -25,6 +30,7 @@ export interface Donnees {
 const CLE_LOCALE = "ingego-donnees";
 const CLE_APPAREIL = "ingego-cle-appareil";
 const CLE_PURGE = "ingego-purge";
+const CLE_PURGE_COM = "ingego-purge-commentaires";
 
 export const VIDE: Donnees = {
   cartes: {},
@@ -72,20 +78,35 @@ function ecrireLocal(d: Donnees) {
    portait sur un énoncé qui n'existe plus. */
 function purger(d: Donnees): Donnees {
   let deja = "";
+  let dejaCom = "";
   try {
     deja = localStorage.getItem(CLE_PURGE) || "";
+    dejaCom = localStorage.getItem(CLE_PURGE_COM) || "";
   } catch {
     return d;
   }
-  if (deja === VERSION_CORRECTIONS) return d;
-  const cartes = { ...d.cartes };
-  for (const id of IDS_CORRIGES) delete cartes[id];
-  try {
-    localStorage.setItem(CLE_PURGE, VERSION_CORRECTIONS);
-  } catch {
-    /* ignore */
+  let sortie = d;
+  if (deja !== VERSION_CORRECTIONS) {
+    const cartes = { ...sortie.cartes };
+    for (const id of IDS_CORRIGES) delete cartes[id];
+    sortie = { ...sortie, cartes };
+    try {
+      localStorage.setItem(CLE_PURGE, VERSION_CORRECTIONS);
+    } catch {
+      /* ignore */
+    }
   }
-  return { ...d, cartes };
+  if (dejaCom !== VERSION_COMMENTAIRES) {
+    const commentaires = { ...sortie.commentaires };
+    for (const id of COMMENTAIRES_TRAITES) delete commentaires[id];
+    sortie = { ...sortie, commentaires };
+    try {
+      localStorage.setItem(CLE_PURGE_COM, VERSION_COMMENTAIRES);
+    } catch {
+      /* ignore */
+    }
+  }
+  return sortie;
 }
 
 /* Fusion appareil ↔ serveur : pour chaque question on garde la révision la plus récente. */
