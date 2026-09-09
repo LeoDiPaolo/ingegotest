@@ -9050,7 +9050,7 @@
       "type": "echelle",
       "derniereVerification": "2026-08",
       "bonneCible": 2,
-      "question": "Une salle des fêtes communale, seule activité du bâtiment, a son plancher bas du dernier niveau situé à 32 m au-dessus du sol accessible aux engins de secours. Cliquez sur la tranche de hauteur qui détermine son classement éventuel en immeuble de grande hauteur (IGH).",
+      "question": "Une salle des fêtes communale, seule activité du bâtiment, a son plancher bas du dernier niveau situé à 32 m au-dessus du sol accessible aux engins de secours. Cliquez sur la tranche de hauteur dans laquelle se situe ce bâtiment et qui entraîne, pour son usage, un classement en immeuble de grande hauteur (IGH).",
       "explication": "Le classement IGH dépend de la hauteur du plancher bas du dernier niveau par rapport au sol accessible aux engins de secours, et le seuil varie selon l'usage : 28 m pour tous les immeubles autres que l'habitation (bureaux, ERP, hôtels...), 50 m pour l'habitation (article R122-2 du code de la construction et de l'habitation). Une salle des fêtes à 32 m dépasse donc le seuil de 28 m applicable aux usages non résidentiels : elle serait classée IGH si sa hauteur est bien mesurée ainsi, avec toutes les conséquences que cela emporte — règlement de sécurité IGH spécifique (et non celui des ERP), compartimentage renforcé, désenfumage mécanique, service de sécurité incendie permanent et poste de sécurité, avis obligatoire de la commission de sécurité compétente pour les IGH. À l'inverse, un immeuble d'habitation de 32 m reste hors IGH puisque le seuil applicable est 50 m. Cette différence de seuil selon l'usage est un piège classique de concours.",
       "echelle_g": {
         "titre": "Classement en immeuble de grande hauteur (IGH)",
@@ -9058,15 +9058,15 @@
         "tranches": [
           {
             "borne": "≤ 28 m",
-            "l": "Aucun immeuble n'est classé IGH, quel que soit l'usage"
+            "l": "Plancher bas du dernier niveau à 28 m ou moins"
           },
           {
             "borne": "28 à 50 m",
-            "l": "Immeuble à usage autre que l'habitation (bureaux, ERP, hôtels…) : classé IGH ; l'habitation reste hors IGH"
+            "l": "Plancher bas du dernier niveau entre 28 m et 50 m"
           },
           {
             "borne": "> 50 m",
-            "l": "Immeuble à usage d'habitation : classé IGH (les autres usages le sont déjà depuis 28 m)"
+            "l": "Plancher bas du dernier niveau au-delà de 50 m"
           }
         ]
       },
@@ -15200,7 +15200,7 @@
       "niveau": 7,
       "famille": "M",
       "type": "graphe",
-      "question": "Cliquez sur la barre correspondant à l'effectif approximatif de la fonction publique territoriale (FPT), qui compte environ deux millions d'agents répartis entre communes, intercommunalités, départements et régions.",
+      "question": "Cliquez sur la barre correspondant à l'effectif approximatif de la fonction publique territoriale (FPT).",
       "graphe": {
         "titre": "Effectifs approximatifs par fonction publique (en millions d'agents)",
         "unite": "millions",
