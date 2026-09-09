@@ -18039,18 +18039,35 @@
       "sujet": "cp-env",
       "niveau": 1,
       "famille": "M",
-      "type": "qcm",
-      "question": "En-dessous de quel montant un achat peut-il être passé sans écrit ni mise en concurrence préalables, avec une simple obligation de moyens pour intégrer les objectifs de développement durable ?",
-      "options": [
-        "40 000 € HT",
-        "100 000 € HT",
-        "5 000 € HT",
-        "25 000 € HT"
-      ],
-      "bonneReponse": 3,
+      "type": "curseur",
+      "question": "Réglez le curseur sur le montant en-dessous duquel un achat peut être passé sans écrit ni mise en concurrence, avec une simple obligation de moyens en matière de développement durable.",
       "explication": "En-dessous de 25 000 € HT, il n'y a pas d'écrit : l'acheteur doit simplement faire son possible pour intégrer les objectifs de développement durable, notamment via le coût global. Un devis élaboré (même sans marché formalisé) impose déjà de vérifier que les conditions générales comprennent une clause environnementale.",
       "derniereVerification": "2026-09",
-      "aVerifier": false
+      "aVerifier": false,
+      "curseur": {
+        "min": 0,
+        "max": 100000,
+        "pas": 5000,
+        "cible": 25000,
+        "tolerance": 0,
+        "unite": "€ HT",
+        "titre": "Seuil des achats sans écrit ni publicité",
+        "reperes": [
+          {
+            "v": 25000,
+            "l": "Achat sans écrit"
+          },
+          {
+            "v": 40000,
+            "l": "Sans publicité ni MEC"
+          },
+          {
+            "v": 100000,
+            "l": "MAPA travaux"
+          }
+        ],
+        "legende": "Faites glisser jusqu'au montant applicable."
+      }
     },
     {
       "id": "a2-88",
@@ -18228,18 +18245,29 @@
       "sujet": "cp-env",
       "niveau": 4,
       "famille": "M",
-      "type": "qcm",
-      "question": "Pour un marché en procédure formalisée d'une valeur égale ou supérieure au seuil européen, combien de dispositifs distincts l'acheteur doit-il obligatoirement prévoir au titre de l'article 35 ?",
-      "options": [
-        "Quatre, en ajoutant un critère social obligatoire à ceux prévus pour le MAPA",
-        "Trois : un critère environnemental, une clause environnementale et une clause sociale",
-        "Deux seulement : un critère et une clause, tous deux environnementaux",
-        "Un seul dispositif global couvrant à la fois l'environnement et le social"
-      ],
-      "bonneReponse": 1,
+      "type": "tri",
+      "question": "Triez ces dispositifs de l'article 35 selon qu'ils sont exigés dès le MAPA ou seulement à partir du seuil européen.",
       "explication": "Au-dessus du seuil européen, en procédure formalisée, trois obligations se cumulent : un critère d'attribution environnemental, une clause d'exécution environnementale, et une clause sociale (sauf dérogation justifiée). Le critère social, lui, reste facultatif — c'est ce qui le distingue de la clause sociale, qui est obligatoire.",
       "derniereVerification": "2026-09",
-      "aVerifier": false
+      "aVerifier": false,
+      "colonnes": [
+        "Dès le MAPA (sous le seuil UE)",
+        "En plus au-dessus du seuil UE"
+      ],
+      "elements": [
+        [
+          "Une clause environnementale, comme condition d'exécution",
+          0
+        ],
+        [
+          "Un critère environnemental d'attribution",
+          0
+        ],
+        [
+          "Une clause sociale, comme condition d'exécution",
+          1
+        ]
+      ]
     },
     {
       "id": "a2-85",
@@ -18249,18 +18277,17 @@
       "sujet": "cp-env",
       "niveau": 5,
       "famille": "M",
-      "type": "qcm",
-      "question": "Laquelle de ces formulations de critère environnemental est jugée insuffisamment précise par la DAJ ?",
-      "options": [
-        "« Valeur environnementale de l'offre (pondération 15 %), appréciée au regard de la part de produits écolabellisés et de matériaux recyclés proposés »",
-        "« Critère environnemental apprécié au regard du mémoire technique » (pondération 15 %)",
-        "« Performance environnementale du matériel proposé (pondération 20 %), mesurée par sa consommation énergétique en exploitation »",
-        "« Valeur environnementale de l'offre (pondération 10 %), appréciée au regard de la réduction des émissions de gaz à effet de serre du chantier »"
-      ],
-      "bonneReponse": 1,
+      "type": "erreur",
+      "question": "Trois critères environnementaux rédigés par un acheteur : lequel est jugé insuffisamment précis par la DAJ ?",
       "explication": "Un critère renvoyant globalement au « mémoire technique » n'est ni précis ni mesurable : il ne permet pas de savoir sur quoi porte réellement l'appréciation environnementale. Un critère valable doit être objectif, précis, lié à l'objet du marché, et reposer sur des éléments vérifiables (écolabels, taux de matériaux recyclés, émissions mesurées...).",
       "derniereVerification": "2026-09",
-      "aVerifier": false
+      "aVerifier": false,
+      "segments": [
+        "« Valeur environnementale de l'offre (pondération 15 %), appréciée au regard de la part de produits écolabellisés et de matériaux recyclés proposés »",
+        "« Critère environnemental apprécié au regard du mémoire technique » (pondération 15 %)",
+        "« Performance environnementale du matériel proposé (pondération 20 %), mesurée par sa consommation énergétique en exploitation »"
+      ],
+      "phraseFautive": 1
     },
     {
       "id": "a2-90",
@@ -18312,18 +18339,35 @@
       "sujet": "cp-env",
       "niveau": 5,
       "famille": "M",
-      "type": "qcm",
-      "question": "Quelle pondération minimale la DAJ recommande-t-elle, à titre de bonne pratique, pour un critère environnemental afin de ne pas le priver de sa portée ?",
-      "options": [
-        "Aucune recommandation chiffrée n'existe, la pondération est totalement libre",
-        "Au moins 50 % de la note totale, pour garantir l'effectivité du critère",
-        "Environ 10 % de la note totale, à adapter selon l'objet du marché",
-        "Exactement 15 %, seuil fixé par décret"
-      ],
-      "bonneReponse": 2,
+      "type": "curseur",
+      "question": "Réglez le curseur sur la pondération minimale recommandée par la DAJ, à titre de bonne pratique, pour un critère environnemental.",
       "explication": "Il est recommandé de prévoir une pondération suffisamment élevée pour ne pas priver les critères de leur portée. Une pondération a minima de 10 % de la note totale peut être une pratique pertinente, à adapter selon l'objet du marché — ce n'est pas un seuil imposé par un texte, mais une recommandation de bonne pratique.",
       "derniereVerification": "2026-09",
-      "aVerifier": false
+      "aVerifier": false,
+      "curseur": {
+        "min": 0,
+        "max": 50,
+        "pas": 5,
+        "cible": 10,
+        "tolerance": 0,
+        "unite": "% de la note",
+        "titre": "Pondération du critère environnemental",
+        "reperes": [
+          {
+            "v": 10,
+            "l": "Bonne pratique DAJ"
+          },
+          {
+            "v": 30,
+            "l": "Critère structurant"
+          },
+          {
+            "v": 50,
+            "l": "Critère dominant"
+          }
+        ],
+        "legende": "En-deçà, le critère perd sa portée ; la pondération s'adapte ensuite à l'objet du marché."
+      }
     },
     {
       "id": "a2-87",
@@ -18333,18 +18377,37 @@
       "sujet": "cp-env",
       "niveau": 6,
       "famille": "M",
-      "type": "qcm",
-      "question": "Laquelle de ces situations NE constitue PAS une dérogation possible à l'obligation de clause sociale au-dessus des seuils européens ?",
-      "options": [
-        "Le besoin peut être satisfait par une solution immédiatement disponible sur le marché",
-        "Le marché porte sur une durée de travaux supérieure à six mois",
-        "Le lien entre la prestation et l'insertion sociale n'est pas suffisant",
-        "La prise en compte sociale restreindrait la concurrence ou rendrait l'exécution difficile"
-      ],
-      "bonneReponse": 1,
+      "type": "tri",
+      "question": "Triez ces situations selon qu'elles permettent ou non de déroger à l'obligation de clause sociale au-dessus des seuils européens.",
       "explication": "C'est l'inverse : la dérogation liée à la durée ne joue que pour un marché de travaux d'une durée INFÉRIEURE à six mois, pas supérieure. Les trois autres cas sont bien des dérogations reconnues : absence de lien suffisant avec l'objet, restriction de la concurrence ou difficulté d'exécution, et solution immédiatement disponible (fourniture standard).",
       "derniereVerification": "2026-09",
-      "aVerifier": false
+      "aVerifier": false,
+      "colonnes": [
+        "Dérogation possible",
+        "Pas un motif de dérogation"
+      ],
+      "elements": [
+        [
+          "Le besoin peut être satisfait par une solution immédiatement disponible sur le marché",
+          0
+        ],
+        [
+          "Le lien entre la prestation et l'insertion sociale n'est pas suffisant",
+          0
+        ],
+        [
+          "La prise en compte sociale restreindrait la concurrence ou rendrait l'exécution difficile",
+          0
+        ],
+        [
+          "Le marché porte sur une durée de travaux supérieure à six mois",
+          1
+        ],
+        [
+          "Le marché est alloti en plusieurs lots",
+          1
+        ]
+      ]
     },
     {
       "id": "a2-93",
