@@ -8,7 +8,6 @@ export type EtatSynchro = "local" | "en-cours" | "ok" | "erreur";
 /* Bandeau haut : logo IngéGo, série de jours et jauges de progression par axe,
    lisibles d'un coup d'œil (couleur de l'axe, épaisseur généreuse). */
 export function Entete({
-  serie,
   etat,
   synchro,
   jauges = true,
