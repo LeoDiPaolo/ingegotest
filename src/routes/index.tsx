@@ -25,7 +25,14 @@ import { Entete } from "@/components/ingego/entete";
 import { NavBas } from "@/components/ingego/nav-bas";
 import { Confettis } from "@/components/ingego/confettis";
 import { Castor, LogoIngego } from "@/components/ingego/marque";
-import { BadgeMaitrise, IconeAxe } from "@/components/ingego/univers";
+import { BadgeMaitrise, IconeAxe, Medaille } from "@/components/ingego/univers";
+import { Recompense } from "@/components/ingego/recompense";
+import {
+  PALIERS_REPONSES,
+  badgePalierReponses,
+  badgesDebloques,
+  useRecompenses,
+} from "@/lib/ingego/badges";
 import { Button } from "@/components/ui/button";
 import { Exercice } from "@/components/ingego/exercice";
 import { AXE_BY_ID, Q_BY_ID, type Question } from "@/lib/ingego/corpus";
