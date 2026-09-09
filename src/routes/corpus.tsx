@@ -155,10 +155,10 @@ function reponseAttendue(q: Question) {
     return <p>Bonne zone : <span className="font-semibold">{q.bonneZone}</span></p>;
   }
 
-  if (q.type === "graphe" && q.bonneBarre != null && q.graphe?.labels) {
+  if (q.type === "graphe" && q.bonneBarre != null && q.graphe?.barres?.[q.bonneBarre]) {
     return (
       <p>
-        Bonne barre : <span className="font-semibold">{q.graphe.labels[q.bonneBarre]}</span>
+        Bonne barre : <span className="font-semibold">{q.graphe.barres[q.bonneBarre].l}</span>
       </p>
     );
   }
