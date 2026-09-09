@@ -105,6 +105,13 @@ function Reviser() {
   );
   const prochainPalier = PALIERS_REPONSES.find((p) => p > bonnesReponses) ?? null;
 
+  /* Récompenses : file des badges nouvellement débloqués. */
+  const badges = useMemo(
+    () => badgesDebloques(bilan.lignes, bonnesReponses),
+    [bilan.lignes, bonnesReponses],
+  );
+  const { badge: recompense, suivant: recompenseSuivante } = useRecompenses(badges, pret);
+
   /* Aperçu de la dernière séquence répondue. */
   const derniere = useMemo(
     () =>
