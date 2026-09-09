@@ -3,6 +3,12 @@
    correction ne vaut plus rien, on repart de zéro sur ces questions.
    Bump de VERSION_CORRECTIONS = nouvelle purge côté navigateur. */
 
+/* Commentaires déjà traités : une fois la question corrigée, l'observation
+   n'a plus lieu d'être et disparaît de l'appareil à la prochaine ouverture. */
+export const VERSION_COMMENTAIRES = "2026-09-09a";
+
+export const COMMENTAIRES_TRAITES: string[] = ["n1-01", "as-02", "ec-01", "g-029"];
+
 export const VERSION_CORRECTIONS = "2026-09-09a";
 
 export const IDS_CORRIGES: string[] = [
