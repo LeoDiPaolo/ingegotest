@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
-import { CheckCircle2, ChevronDown, MessageSquareText, Search, X } from "lucide-react";
+import { CheckCircle2, ChevronDown, Lock, MessageSquareText, Search, X } from "lucide-react";
 import { Entete } from "@/components/ingego/entete";
 import { NavBas } from "@/components/ingego/nav-bas";
 import { AXES, CORPUS, FAMILLES, TYPES, attendue, type Question } from "@/lib/ingego/corpus";
@@ -189,19 +189,23 @@ function Page() {
                           return (
                             <li key={q.id}>
                               <button
-                                onClick={() => ouvrir(q)}
-                                className="tap flex w-full items-start gap-2 bg-background px-4 py-3 text-left"
+                                onClick={() => ok && ouvrir(q)}
+                                disabled={!ok}
+                                className={cn(
+                                  "tap flex w-full items-start gap-2 bg-background px-4 py-3 text-left",
+                                  !ok && "cursor-not-allowed opacity-60",
+                                )}
                               >
-                                <CheckCircle2
-                                  className={cn(
-                                    "mt-0.5 h-4 w-4 shrink-0",
-                                    ok ? "text-success" : "text-muted-foreground/35",
-                                  )}
-                                />
+                                {ok ? (
+                                  <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-success" />
+                                ) : (
+                                  <Lock className="mt-0.5 h-4 w-4 shrink-0 text-muted-foreground/35" />
+                                )}
                                 <span className="min-w-0 flex-1">
                                   <span className="block text-sm leading-snug">{q.question}</span>
                                   <span className="mt-1 block text-[0.62rem] text-muted-foreground">
-                                    Niveau {q.niv} · {ETIQUETTE[etatCarte(donnees.cartes[q.id])]}
+                                    Niveau {q.niv} ·{" "}
+                                    {ok ? "Validée — voir la fiche" : "Validez-la en session pour l'ouvrir"}
                                   </span>
                                 </span>
                               </button>
