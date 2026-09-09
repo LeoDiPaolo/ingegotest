@@ -62,9 +62,6 @@ export const Route = createFileRoute("/")({
 
 const MARQUE_SESSION = "__session";
 
-/* Paliers de bonnes réponses cumulées, dernier palier = corpus complet. */
-const PALIERS_REPONSES = [10, 25, 50, 100, 200, 300, 400, 500, 600, 700, 783];
-
 function Reviser() {
   const { donnees, pret, synchro, enregistrerCarte, commenter, maj } = useDonnees();
   const [ordre, setOrdre] = useState<Question[] | null>(null);
