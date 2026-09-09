@@ -76,38 +76,37 @@ function ecrireLocal(d: Donnees) {
 
 /* Les questions corrigées après coup repartent à zéro : la progression acquise
    portait sur un énoncé qui n'existe plus. */
-function purger(d: Donnees): Donnees {
-  let deja = "";
-  let dejaCom = "";
+function aPurger(cle: string, version: string): boolean {
   try {
-    deja = localStorage.getItem(CLE_PURGE) || "";
-    dejaCom = localStorage.getItem(CLE_PURGE_COM) || "";
+    return (localStorage.getItem(cle) || "") !== version;
   } catch {
-    return d;
+    return false;
   }
+}
+
+function marquerPurge(cle: string, version: string) {
+  try {
+    localStorage.setItem(cle, version);
+  } catch {
+    /* ignore */
+  }
+}
+
+function purger(d: Donnees, purgeCartes: boolean, purgeCom: boolean): Donnees {
   let sortie = d;
-  if (deja !== VERSION_CORRECTIONS) {
+  if (purgeCartes) {
     const cartes = { ...sortie.cartes };
     for (const id of IDS_CORRIGES) delete cartes[id];
     sortie = { ...sortie, cartes };
-    try {
-      localStorage.setItem(CLE_PURGE, VERSION_CORRECTIONS);
-    } catch {
-      /* ignore */
-    }
   }
-  if (dejaCom !== VERSION_COMMENTAIRES) {
+  if (purgeCom) {
     const commentaires = { ...sortie.commentaires };
     for (const id of COMMENTAIRES_TRAITES) delete commentaires[id];
     sortie = { ...sortie, commentaires };
-    try {
-      localStorage.setItem(CLE_PURGE_COM, VERSION_COMMENTAIRES);
-    } catch {
-      /* ignore */
-    }
   }
   return sortie;
 }
+
 
 /* Fusion appareil ↔ serveur : pour chaque question on garde la révision la plus récente. */
 function fusionner(local: Donnees, distant: Donnees): Donnees {
