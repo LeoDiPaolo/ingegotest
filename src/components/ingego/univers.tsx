@@ -87,16 +87,35 @@ export function BadgeMaitrise({
         ) : null}
       </div>
       <div className="min-w-0 flex-1">
-        <p className="truncate text-sm font-bold">{axe.court}</p>
-        <p className="text-xs text-muted-foreground">{palier}</p>
-        <div className="mt-2 h-2 overflow-hidden rounded-full bg-elevated">
+        <div className="flex items-center justify-between gap-2">
+          <p className="truncate text-sm font-bold">{axe.court}</p>
+          {atteint ? (
+            <span
+              className="shrink-0 rounded-full px-2 py-0.5 text-[0.6rem] font-extrabold"
+              style={{ backgroundColor: `${axe.couleur}22`, color: axe.couleur }}
+            >
+              {Math.round(atteint * 100)} %
+            </span>
+          ) : null}
+        </div>
+        <p className="text-xs text-muted-foreground">
+          {palier} · {acquis}/{total}
+        </p>
+        <div className="relative mt-2 h-2.5 overflow-hidden rounded-full bg-elevated">
           <div
-            className="h-full rounded-full"
+            className="h-full rounded-full transition-[width] duration-700"
             style={{ width: `${part * 100}%`, backgroundColor: axe.couleur }}
           />
+          {PALIERS_PART.slice(0, 4).map((p) => (
+            <span
+              key={p}
+              className="absolute top-0 h-full w-px bg-card/80"
+              style={{ left: `${p * 100}%` }}
+            />
+          ))}
         </div>
       </div>
-      {part >= 0.8 ? <Award className="h-5 w-5 text-brand" /> : null}
-    </div>
+      {part >= 0.8 ? <Award className="h-5 w-5 shrink-0 text-brand" /> : null}
+    </Balise>
   );
 }
