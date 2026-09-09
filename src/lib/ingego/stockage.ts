@@ -30,6 +30,7 @@ export interface Donnees {
 const CLE_LOCALE = "ingego-donnees";
 const CLE_APPAREIL = "ingego-cle-appareil";
 const CLE_PURGE = "ingego-purge";
+const CLE_PURGE_COM = "ingego-purge-commentaires";
 
 export const VIDE: Donnees = {
   cartes: {},
