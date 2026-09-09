@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from "react";
-import { supabase } from "@/integrations/supabase/client";
+import { ecrireEtat, lireEtat } from "./etat.functions";
 import { normaliserReglages, type Carte, type Etat, type Reglages } from "./algo";
 import { IDS_CORRIGES, VERSION_CORRECTIONS } from "./corrections";
 
@@ -128,17 +128,20 @@ export function useDonnees() {
     if (attente.current) clearTimeout(attente.current);
     attente.current = setTimeout(async () => {
       setSynchro("en-cours");
-      const { error } = await supabase.from("etat_ingego").upsert(
-        {
-          cle: cle.current!,
-          cartes: dernier.current.cartes as never,
-          journal: dernier.current.journal as never,
-          reglages: dernier.current.reglages as never,
-          commentaires: dernier.current.commentaires as never,
-        },
-        { onConflict: "cle" },
-      );
-      setSynchro(error ? "erreur" : "ok");
+      try {
+        await ecrireEtat({
+          data: {
+            cle: cle.current!,
+            cartes: dernier.current.cartes as never,
+            journal: dernier.current.journal as never,
+            reglages: dernier.current.reglages as never,
+            commentaires: dernier.current.commentaires,
+          },
+        });
+        setSynchro("ok");
+      } catch {
+        setSynchro("erreur");
+      }
     }, 800);
   }, []);
 
