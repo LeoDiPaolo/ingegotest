@@ -165,7 +165,10 @@ export function Medaille({
         <div className="flex flex-col items-center leading-none">
           <Icone className={grand ? "h-7 w-7" : "h-4 w-4"} strokeWidth={2.4} />
           <span
-            className={cn("mt-0.5 font-extrabold tabular-nums", grand ? "text-lg" : "text-[0.7rem]")}
+            className={cn(
+              "mt-0.5 font-extrabold tabular-nums",
+              grand ? "text-lg" : "text-[0.7rem]",
+            )}
           >
             {libelle}
           </span>
