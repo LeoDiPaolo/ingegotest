@@ -229,15 +229,24 @@ function Reviser() {
                 <h1 className="mt-0.5 text-2xl text-primary-foreground">Consolider le terrain</h1>
               </div>
               <div className="relative p-5">
-                <div className="flex items-center justify-center gap-1 py-2">
-                  {bilan.lignes.slice(0, 5).map((l, index) => (
+                <div className="flex flex-wrap items-center justify-center gap-1 py-2">
+                  {bilan.lignes.map((l, index) => (
                     <div key={l.axe.id} className="flex items-center">
-                      <IconeAxe
-                        axe={l.axe}
-                        className="h-12 w-12 sm:h-14 sm:w-14"
-                        active={l.part > 0}
-                      />
-                      {index < 4 ? <span className="h-1 w-3 bg-border sm:w-6" /> : null}
+                      <button
+                        type="button"
+                        onClick={() => setAxeOuvert(l.axe.id)}
+                        aria-label={`Ouvrir la catégorie ${l.axe.court}`}
+                        className="tap rounded-full transition-transform active:scale-95"
+                      >
+                        <IconeAxe
+                          axe={l.axe}
+                          className="h-11 w-11 sm:h-14 sm:w-14"
+                          active={l.part > 0}
+                        />
+                      </button>
+                      {index < bilan.lignes.length - 1 ? (
+                        <span className="h-1 w-2 bg-border sm:w-4" />
+                      ) : null}
                     </div>
                   ))}
                 </div>
