@@ -9,6 +9,7 @@ import {
   RotateCcw,
   Sparkles,
   Target,
+  Trophy,
   X,
   Clock3,
   ChevronRight,
