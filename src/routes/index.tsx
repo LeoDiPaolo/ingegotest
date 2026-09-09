@@ -3,9 +3,8 @@ import { useMemo, useState } from "react";
 import {
   CheckCircle2,
   Flame,
-  Layers,
-  Library,
   LockKeyhole,
+  Medal,
   Play,
   RotateCcw,
   Sparkles,
@@ -15,6 +14,13 @@ import {
   ChevronRight,
   ArrowRight,
 } from "lucide-react";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 import { Entete } from "@/components/ingego/entete";
 import { NavBas } from "@/components/ingego/nav-bas";
 import { Confettis } from "@/components/ingego/confettis";
