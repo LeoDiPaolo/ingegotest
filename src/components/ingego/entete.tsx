@@ -32,13 +32,6 @@ export function Entete({
             ) : synchro === "en-cours" ? (
               <RefreshCw className="h-4 w-4 animate-spin text-muted-foreground" />
             ) : null}
-            <span
-              className="flex items-center gap-1 rounded-full bg-brand/15 px-3 py-1.5 text-brand"
-              title="Jours consécutifs avec une session terminée"
-            >
-              <Flame className={serie > 0 ? "h-4 w-4 animate-pulse" : "h-4 w-4"} />
-              {serie}
-            </span>
           </div>
         </div>
 
