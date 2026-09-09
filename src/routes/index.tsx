@@ -503,89 +503,78 @@ function Reviser() {
         ) : fini ? (
           <section className="surface anim-pop overflow-hidden text-center">
             <Confettis />
-            <div className="blueprint bg-primary px-6 pt-6 pb-12 text-primary-foreground">
-              <LogoIngego className="mx-auto w-44 rounded-xl bg-card p-2 shadow-[var(--shadow-card)]" />
-              <div className="relative mx-auto mt-4 h-24 w-28">
+            <div className="blueprint bg-primary px-4 pt-3 pb-8 text-primary-foreground">
+              <div className="relative mx-auto h-16 w-20">
                 <Castor
-                  className={`mx-auto h-24 w-24 ${justes / Math.max(1, faits.length) >= 0.75 ? "anim-pop rotate-2" : ""}`}
+                  className={`mx-auto h-16 w-16 ${justes / Math.max(1, faits.length) >= 0.75 ? "anim-pop rotate-2" : ""}`}
                 />
-                <CheckCircle2 className="absolute right-0 bottom-1 h-9 w-9 rounded-full bg-card p-1 text-success" />
+                <CheckCircle2 className="absolute right-0 bottom-0 h-7 w-7 rounded-full bg-card p-0.5 text-success" />
               </div>
-              <h1 className="mt-2 text-2xl text-primary-foreground">Mission accomplie</h1>
+              <h1 className="mt-1 text-xl text-primary-foreground">Mission accomplie</h1>
             </div>
-            <div className="relative -mt-7 space-y-4 rounded-t-3xl bg-card p-5">
-              <div className="grid grid-cols-3 gap-2">
-                <div className="rounded-xl bg-success/12 p-2">
-                  <p className="text-2xl font-extrabold text-success">{justes}</p>
-                  <p className="text-[0.62rem] font-bold text-muted-foreground uppercase">
+            <div className="relative -mt-5 space-y-2.5 rounded-t-3xl bg-card p-4">
+              <div className="grid grid-cols-3 gap-1.5">
+                <div className="rounded-xl bg-success/12 p-1.5">
+                  <p className="text-xl font-extrabold text-success">{justes}</p>
+                  <p className="text-[0.58rem] font-bold text-muted-foreground uppercase">
                     du 1er coup
                   </p>
                 </div>
-                <div className="rounded-xl bg-brand/12 p-2">
-                  <p className="text-2xl font-extrabold text-brand">{faits.length}</p>
-                  <p className="text-[0.62rem] font-bold text-muted-foreground uppercase">
+                <div className="rounded-xl bg-brand/12 p-1.5">
+                  <p className="text-xl font-extrabold text-brand">{faits.length}</p>
+                  <p className="text-[0.58rem] font-bold text-muted-foreground uppercase">
                     consolidées
                   </p>
                 </div>
-                <div className="rounded-xl bg-destructive/10 p-2">
-                  <p className="text-2xl font-extrabold text-destructive">
+                <div className="rounded-xl bg-destructive/10 p-1.5">
+                  <p className="text-xl font-extrabold text-destructive">
                     {Object.keys(rates).length}
                   </p>
-                  <p className="text-[0.62rem] font-bold text-muted-foreground uppercase">
+                  <p className="text-[0.58rem] font-bold text-muted-foreground uppercase">
                     à reprendre
                   </p>
                 </div>
               </div>
-              <div className="h-4 overflow-hidden rounded-full bg-elevated ring-1 ring-border/60">
+              <div className="h-3 overflow-hidden rounded-full bg-elevated ring-1 ring-border/60">
                 <div
                   className="h-full rounded-full bg-success transition-[width] duration-1000"
                   style={{ width: `${(justes / Math.max(1, faits.length)) * 100}%` }}
                 />
               </div>
-              <p className="text-sm text-muted-foreground">
+              <p className="text-xs text-muted-foreground">
                 {justes === faits.length
-                  ? "Parcours net : tous les points ont été validés dès le premier passage."
-                  : `${mission?.themes.length ?? 0} thèmes parcourus · les points repris restent à valider du premier coup lors d'une prochaine mission.`}
+                  ? "Parcours net : tous les points validés dès le premier passage."
+                  : `${mission?.themes.length ?? 0} thèmes parcourus · les points repris reviendront demain pour une validation du premier coup.`}
               </p>
               {niveauxDebloques.length ? (
-                <div className="anim-unlock rounded-2xl border-2 border-success/50 bg-success/10 p-3 text-left">
-                  <p className="text-[0.65rem] font-extrabold tracking-[0.14em] text-success uppercase">
+                <div className="anim-unlock rounded-xl border-2 border-success/50 bg-success/10 p-2 text-left">
+                  <p className="text-[0.6rem] font-extrabold tracking-[0.14em] text-success uppercase">
                     Niveau déverrouillé
                   </p>
                   {niveauxDebloques.map(({ theme, apres }) => (
-                    <p key={theme} className="mt-1 text-sm font-bold">
+                    <p key={theme} className="mt-0.5 text-xs font-bold">
                       {theme} · {Number.isFinite(apres) ? `niveau ${apres}` : "parcours validé"}
                     </p>
                   ))}
                 </div>
               ) : null}
               {Object.keys(rates).length ? (
-                <div className="grid gap-2 text-left sm:grid-cols-2">
-                  <div className="rounded-xl border border-brand/30 bg-brand/10 p-3">
-                    <p className="text-xs font-bold text-brand">Reprises réussies</p>
-                    <p className="mt-1 text-xs text-muted-foreground">
-                      {Object.keys(rates).length} point{Object.keys(rates).length > 1 ? "s" : ""}{" "}
-                      corrigé{Object.keys(rates).length > 1 ? "s" : ""} à chaud.
-                    </p>
-                  </div>
-                  <div className="rounded-xl border border-primary/25 bg-primary/10 p-3">
-                    <p className="text-xs font-bold text-primary">Prochaine consolidation</p>
-                    <p className="mt-1 text-xs text-muted-foreground">
-                      Ces questions reviendront demain pour une validation du premier coup.
-                    </p>
-                  </div>
-                </div>
+                <p className="rounded-xl border border-brand/30 bg-brand/10 px-3 py-1.5 text-left text-[0.7rem] text-muted-foreground">
+                  <span className="font-bold text-brand">Reprises réussies :</span>{" "}
+                  {Object.keys(rates).length} point{Object.keys(rates).length > 1 ? "s" : ""}{" "}
+                  corrigé{Object.keys(rates).length > 1 ? "s" : ""} à chaud.
+                </p>
               ) : null}
               <div className="flex gap-2">
                 <button
                   onClick={demarrer}
-                  className="tap touche touche-brand flex-1 bg-brand py-3.5 text-sm font-extrabold text-brand-foreground uppercase"
+                  className="tap touche touche-brand flex-1 bg-brand py-3 text-xs font-extrabold text-brand-foreground uppercase"
                 >
                   <RotateCcw className="mr-1 inline h-4 w-4" /> Nouvelle séance
                 </button>
                 <button
                   onClick={quitter}
-                  className="tap touche flex-1 border border-border bg-card py-3.5 text-sm font-bold"
+                  className="tap touche flex-1 border border-border bg-card py-3 text-xs font-bold"
                 >
                   Terminer
                 </button>
