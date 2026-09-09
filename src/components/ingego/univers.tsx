@@ -49,11 +49,35 @@ export function IconeAxe({
   );
 }
 
-export function BadgeMaitrise({ axe, acquis, total }: { axe: Axe; acquis: number; total: number }) {
+/* Paliers de progression par catégorie : 10 %, 25 %, 50 %, 75 %, 100 %. */
+export const PALIERS_PART = [0.1, 0.25, 0.5, 0.75, 1];
+
+export const palierAtteint = (part: number) =>
+  [...PALIERS_PART].reverse().find((p) => part >= p) ?? null;
+
+export function BadgeMaitrise({
+  axe,
+  acquis,
+  total,
+  onClick,
+}: {
+  axe: Axe;
+  acquis: number;
+  total: number;
+  onClick?: () => void;
+}) {
   const part = total ? acquis / total : 0;
   const palier = part >= 0.8 ? "Maîtrisé" : part >= 0.35 ? "En chantier" : "À explorer";
+  const atteint = palierAtteint(part);
+  const Balise = onClick ? "button" : "div";
   return (
-    <div className="flex items-center gap-3 rounded-2xl border border-border bg-card p-3 shadow-[var(--shadow-card)]">
+    <Balise
+      onClick={onClick}
+      className={cn(
+        "flex w-full items-center gap-3 rounded-2xl border border-border bg-card p-3 text-left shadow-[var(--shadow-card)]",
+        onClick && "tap transition-transform active:scale-[0.98]",
+      )}
+    >
       <div className="relative">
         <IconeAxe axe={axe} className="h-14 w-14" active={part >= 0.8} />
         {part >= 0.8 ? (
