@@ -212,8 +212,10 @@ function Page() {
                                 onClick={() => ok && ouvrir(q)}
                                 disabled={!ok}
                                 className={cn(
-                                  "tap flex w-full items-start gap-2 bg-background px-4 py-3 text-left",
-                                  !ok && "cursor-not-allowed opacity-60",
+                                  "tap flex w-full items-start gap-2 border-l-4 px-4 py-3 text-left",
+                                  ok
+                                    ? "border-success bg-success/8"
+                                    : "cursor-not-allowed border-transparent bg-background opacity-60",
                                 )}
                               >
                                 {ok ? (
