@@ -50,6 +50,134 @@ function decouper(explication: string) {
   };
 }
 
+/* Affiche explicitement la ou les bonnes réponses d'une question validée. */
+function reponseAttendue(q: Question) {
+  if (q.type === "qcm") {
+    const idx = q.bonneReponse ?? 0;
+    const texte = q.options?.[idx];
+    if (!texte) return null;
+    return (
+      <div className="space-y-1.5">
+        {q.options?.map((opt, i) => (
+          <div
+            key={i}
+            className={cn(
+              "flex items-start gap-2 rounded-lg border px-2.5 py-1.5 text-sm",
+              i === idx
+                ? "border-success/40 bg-success/15 font-semibold text-success"
+                : "border-success/15 bg-success/5 text-muted-foreground",
+            )}
+          >
+            <span
+              className={cn(
+                "flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-[0.65rem] font-bold",
+                i === idx ? "bg-success text-white" : "bg-success/10 text-success/70",
+              )}
+            >
+              {String.fromCharCode(65 + i)}
+            </span>
+            <span className="flex-1">{opt}</span>
+          </div>
+        ))}
+      </div>
+    );
+  }
+
+  if (q.type === "libre") {
+    const texte = q.options?.[q.bonneReponse ?? 0] ?? "";
+    return texte ? <p>{texte}</p> : null;
+  }
+
+  if (q.type === "vf") {
+    return q.justification ? (
+      <p>
+        <span className="font-semibold">{q.vrai ? "Vrai" : "Faux"}</span> — {q.justification}
+      </p>
+    ) : null;
+  }
+
+  if (q.type === "ordre" && q.items && q.items.length > 0) {
+    return (
+      <ol className="list-decimal pl-4">
+        {q.items.map((item, i) => (
+          <li key={i}>{item}</li>
+        ))}
+      </ol>
+    );
+  }
+
+  if (q.type === "assoc" && q.paires && q.paires.length > 0) {
+    return (
+      <ul className="space-y-1">
+        {q.paires.map(([a, b], i) => (
+          <li key={i}>
+            <span className="font-semibold">{a}</span> → {b}
+          </li>
+        ))}
+      </ul>
+    );
+  }
+
+  if (q.type === "tri" && q.colonnes && q.elements) {
+    const parColonne: Record<string, string[]> = {};
+    for (const [nom] of q.colonnes.map((c) => [c] as const)) parColonne[nom] = [];
+    for (const [elt, idx] of q.elements) {
+      const col = q.colonnes[idx];
+      if (col) (parColonne[col] ??= []).push(elt);
+    }
+    return (
+      <div className="grid gap-3 sm:grid-cols-2">
+        {q.colonnes.map((col) => (
+          <div key={col} className="rounded-lg border border-success/20 bg-success/5 px-2.5 py-2">
+            <p className="text-[0.62rem] font-bold text-success uppercase">{col}</p>
+            <ul className="list-disc pl-4 text-sm">
+              {parColonne[col]?.map((e, i) => <li key={i}>{e}</li>)}
+            </ul>
+          </div>
+        ))}
+      </div>
+    );
+  }
+
+  if (q.type === "erreur" && q.correction) {
+    return <p>{q.correction}</p>;
+  }
+
+  if (q.type === "trous" && q.texte && q.mots) {
+    let texte = q.texte;
+    for (const mot of q.mots) {
+      texte = texte.replace("_____", `<strong>${mot}</strong>`);
+    }
+    return <p dangerouslySetInnerHTML={{ __html: texte }} />;
+  }
+
+  if (q.type === "carte" && q.bonneZone) {
+    return <p>Bonne zone : <span className="font-semibold">{q.bonneZone}</span></p>;
+  }
+
+  if (q.type === "graphe" && q.bonneBarre != null && q.graphe?.barres?.[q.bonneBarre]) {
+    return (
+      <p>
+        Bonne barre : <span className="font-semibold">{q.graphe.barres[q.bonneBarre].l}</span>
+      </p>
+    );
+  }
+
+  if ((q.type === "camembert" || q.type === "plan") && q.bonneCible != null) {
+    return <p>Bonne cible n° <span className="font-semibold">{q.bonneCible + 1}</span></p>;
+  }
+
+  if (q.type === "courbe" && q.bonnePoint != null) {
+    return <p>Bon point n° <span className="font-semibold">{q.bonnePoint + 1}</span></p>;
+  }
+
+  if (q.correction) {
+    return <p>{q.correction}</p>;
+  }
+
+  return null;
+}
+
 function Page() {
   const { donnees, synchro, commenter } = useDonnees();
   const [ouvert, setOuvert] = useState<string | null>(null);
@@ -286,12 +414,12 @@ function Page() {
                 </span>
               </div>
 
-              {attendue(detail) ? (
+              {reponseAttendue(detail) ? (
                 <div className="rounded-xl border border-success/30 bg-success/10 px-3 py-2.5">
                   <p className="text-[0.62rem] font-bold text-success uppercase">
                     Réponse attendue
                   </p>
-                  <p className="text-sm">{attendue(detail)}</p>
+                  <div className="text-sm">{reponseAttendue(detail)}</div>
                 </div>
               ) : null}
 
