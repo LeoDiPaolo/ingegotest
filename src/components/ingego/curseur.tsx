@@ -47,7 +47,7 @@ export function Curseur({
   const pose = valeur !== null;
 
   const borne = (v: number) => Math.min(max, Math.max(min, Math.round(v / pas) * pas));
-  const decimales = pas < 1 ? String(pas).split(".")[1]?.length ?? 1 : 0;
+  const decimales = pas < 1 ? (String(pas).split(".")[1]?.length ?? 1) : 0;
   const format = (v: number) => v.toFixed(decimales).replace(".", ",");
 
   return (
@@ -167,7 +167,6 @@ export function Curseur({
           </div>
         </div>
       )}
-
 
       {corrige && (
         <p className="text-xs text-muted-foreground">

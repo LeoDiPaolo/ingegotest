@@ -155,9 +155,7 @@ export function Cablage({
                 }}
                 type="button"
                 disabled={corrige}
-                onClick={() =>
-                  lie === undefined ? onActif(actif === i ? null : i) : onDefaire(i)
-                }
+                onClick={() => (lie === undefined ? onActif(actif === i ? null : i) : onDefaire(i))}
                 className={cn(
                   "tap relative z-10 flex min-h-[1.9rem] w-full items-center rounded-lg border-2 px-2 py-1 text-left text-[0.68rem] leading-tight font-medium transition-all active:scale-[0.97]",
                   lie === undefined && actif !== i && "border-border bg-elevated",
