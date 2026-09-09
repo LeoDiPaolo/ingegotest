@@ -1344,7 +1344,7 @@ export function Exercice({
           ) : null}
 
           {autoNote ? (
-            <div>
+            <div className="sticky bottom-2 z-20 rounded-xl bg-card/95 p-2 pb-[max(0.5rem,env(safe-area-inset-bottom))] backdrop-blur-sm sm:static sm:bg-transparent sm:p-0 sm:backdrop-blur-none">
               <p className="mb-2 text-xs text-muted-foreground">
                 Évaluez votre restitution : c'est elle qui règle la prochaine échéance.
               </p>
