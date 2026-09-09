@@ -7,8 +7,8 @@
    "oral": "automne 2027"
   },
   "genere": "2026-07-30",
-  "version": "2026-07",
-  "totalQuestions": 711,
+  "version": "2026-09",
+  "totalQuestions": 783,
   "schema": "Chaque question porte : id, axe (A1-A6), sousTheme, sujet (clé de progression par niveaux), niveau (1-3), famille (S stable / M mouvant / E enjeu), type, les champs propres au type, explication, et le cas échéant derniereVerification (AAAA-MM) et aVerifier."
  },
  "axes": [
@@ -17144,6 +17144,2687 @@
     "En 2016, le préfet devait arrêter le schéma départemental de coopération intercommunale (SDCI), visant notamment à réduire le nombre de syndicats intercommunaux et à rationaliser la carte des EPCI à fiscalité propre, en application de la loi NOTRe."
    ],
    "bonneReponse": 0
+  },
+  {
+   "id": "n1-01",
+   "axe": "A1",
+   "sousTheme": "Autorisations d'urbanisme",
+   "stIdx": 0,
+   "sujet": "u-seuils",
+   "niveau": 1,
+   "famille": "S",
+   "type": "curseur",
+   "question": "Extension d'un bâtiment communal en zone U d'un PLU : réglez le curseur sur la surface de plancher créée au-delà de laquelle un permis de construire devient obligatoire.",
+   "curseur": {
+    "min": 0,
+    "max": 100,
+    "pas": 5,
+    "cible": 40,
+    "tolerance": 0,
+    "unite": "m²",
+    "titre": "Seuil de bascule DP / PC",
+    "reperes": [
+     {
+      "v": 5,
+      "l": "Aucune formalité"
+     },
+     {
+      "v": 20,
+      "l": "Hors zone U"
+     },
+     {
+      "v": 40,
+      "l": "Zone U"
+     }
+    ],
+    "legende": "Faites glisser jusqu'au seuil applicable en zone U."
+   },
+   "explication": "En zone U d'une commune dotée d'un PLU, la déclaration préalable suffit jusqu'à 40 m² de surface de plancher ou d'emprise au sol créée ; au-delà, c'est un permis de construire. Hors zone U, ou en l'absence de PLU, le basculement intervient dès 20 m². Le seuil de 5 m² est celui en dessous duquel aucune formalité n'est exigée."
+  },
+  {
+   "id": "n1-02",
+   "axe": "A1",
+   "sousTheme": "Autorisations d'urbanisme",
+   "stIdx": 0,
+   "sujet": "u-seuils",
+   "niveau": 1,
+   "famille": "S",
+   "type": "circuit",
+   "question": "Tracez le circuit d'instruction d'une déclaration préalable déposée par une commune, du dépôt à la décision.",
+   "circuit": {
+    "etapes": [
+     {
+      "l": "Dépôt du dossier en mairie",
+      "x": 26,
+      "y": 51
+     },
+     {
+      "l": "Récépissé et affichage en mairie",
+      "x": 26,
+      "y": 14
+     },
+     {
+      "l": "Instruction (1 mois)",
+      "x": 26,
+      "y": 88
+     },
+     {
+      "l": "Décision ou non-opposition tacite",
+      "sub": "expresse ou tacite",
+      "x": 74,
+      "y": 32
+     },
+     {
+      "l": "Affichage sur le terrain",
+      "sub": "départ du recours des tiers",
+      "x": 74,
+      "y": 70
+     }
+    ],
+    "chemin": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ],
+    "titre": "Instruction d'une déclaration préalable"
+   },
+   "explication": "La déclaration préalable est déposée en mairie, qui délivre un récépissé mentionnant la date de dépôt et le délai d'instruction. Ce délai est d'un mois en règle générale, porté à deux mois en cas de consultation (architecte des Bâtiments de France, par exemple). L'absence de réponse dans le délai vaut décision tacite de non-opposition, que le pétitionnaire matérialise par l'affichage sur le terrain, point de départ du délai de recours des tiers."
+  },
+  {
+   "id": "n1-03",
+   "axe": "A1",
+   "sousTheme": "ERP : autorisation de travaux et accessibilité",
+   "stIdx": 1,
+   "sujet": "erp-at",
+   "niveau": 1,
+   "famille": "S",
+   "type": "cablage",
+   "question": "Raccordez chaque catégorie d'ERP à l'effectif du public correspondant.",
+   "cablage": {
+    "gauche": [
+     "1re catégorie",
+     "2e catégorie",
+     "3e catégorie",
+     "4e catégorie",
+     "5e catégorie"
+    ],
+    "droite": [
+     "Plus de 1 500 personnes",
+     "De 701 à 1 500 personnes",
+     "De 301 à 700 personnes",
+     "300 personnes et moins, au-dessus du seuil du 5e",
+     "Effectif sous le seuil d'assujettissement"
+    ],
+    "gaucheTitre": "Catégorie",
+    "droiteTitre": "Effectif du public",
+    "titre": "Catégories d'ERP"
+   },
+   "explication": "Les catégories d'ERP se lisent par l'effectif : 1re au-delà de 1 500 personnes, 2e de 701 à 1 500, 3e de 301 à 700, 4e jusqu'à 300 au-dessus du seuil du 5e. La 5e catégorie regroupe les petits établissements dont l'effectif du public reste sous le seuil d'assujettissement fixé par type d'activité. Les quatre premières catégories forment le « premier groupe », soumis aux obligations les plus lourdes."
+  },
+  {
+   "id": "n1-04",
+   "axe": "A1",
+   "sousTheme": "ERP : autorisation de travaux et accessibilité",
+   "stIdx": 1,
+   "sujet": "erp-at",
+   "niveau": 1,
+   "famille": "S",
+   "type": "circuit",
+   "question": "Tracez le parcours d'une autorisation de travaux dans un ERP existant, du dossier à l'ouverture au public.",
+   "circuit": {
+    "etapes": [
+     {
+      "l": "Dépôt du dossier d'autorisation de travaux",
+      "x": 26,
+      "y": 44
+     },
+     {
+      "l": "Avis des commissions sécurité et accessibilité",
+      "x": 74,
+      "y": 91
+     },
+     {
+      "l": "Arrêté d'autorisation du maire",
+      "x": 74,
+      "y": 61
+     },
+     {
+      "l": "Réalisation des travaux",
+      "x": 74,
+      "y": 27
+     },
+     {
+      "l": "Visite de réception",
+      "sub": "commission de sécurité",
+      "x": 26,
+      "y": 77
+     },
+     {
+      "l": "Arrêté d'ouverture au public",
+      "x": 26,
+      "y": 12
+     }
+    ],
+    "chemin": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5
+    ],
+    "titre": "Autorisation de travaux ERP"
+   },
+   "explication": "L'autorisation de travaux ERP est instruite par le maire après avis de la commission de sécurité et de la commission d'accessibilité. Elle est distincte de l'autorisation d'urbanisme, même si les deux dossiers peuvent être déposés ensemble. Avant toute ouverture au public, une visite de réception de la commission de sécurité conditionne l'arrêté d'ouverture pris par le maire."
+  },
+  {
+   "id": "n1-05",
+   "axe": "A1",
+   "sousTheme": "Préalables et diagnostics",
+   "stIdx": 2,
+   "sujet": "dict",
+   "niveau": 1,
+   "famille": "S",
+   "type": "circuit",
+   "question": "Tracez l'ordre des formalités préalables à des travaux à proximité de réseaux enterrés.",
+   "circuit": {
+    "etapes": [
+     {
+      "l": "Consultation du téléservice réseaux",
+      "x": 26,
+      "y": 51
+     },
+     {
+      "l": "DT du maître d'ouvrage",
+      "x": 26,
+      "y": 14
+     },
+     {
+      "l": "DICT de l'entreprise exécutante",
+      "x": 26,
+      "y": 88
+     },
+     {
+      "l": "Marquage-piquetage",
+      "sub": "à la charge du maître d'ouvrage",
+      "x": 74,
+      "y": 32
+     },
+     {
+      "l": "Ouverture du chantier",
+      "x": 74,
+      "y": 70
+     }
+    ],
+    "chemin": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ],
+    "titre": "Travaux à proximité des réseaux"
+   },
+   "explication": "Le maître d'ouvrage consulte le téléservice réseaux-et-canalisations pour identifier les exploitants concernés, puis leur adresse une déclaration de projet de travaux (DT). L'entreprise qui exécute adresse ensuite sa déclaration d'intention de commencement de travaux (DICT). Le marquage-piquetage au sol, à la charge du maître d'ouvrage, précède le démarrage effectif ; en cas de doute sur la localisation d'un réseau sensible, des investigations complémentaires sont menées avant d'ouvrir la fouille."
+  },
+  {
+   "id": "n1-06",
+   "axe": "A1",
+   "sousTheme": "Préalables et diagnostics",
+   "stIdx": 2,
+   "sujet": "dict",
+   "niveau": 1,
+   "famille": "S",
+   "type": "curseur",
+   "question": "Repérage amiante avant travaux : réglez le curseur sur l'année du permis de construire qui sert de limite d'obligation.",
+   "curseur": {
+    "min": 1980,
+    "max": 2010,
+    "pas": 1,
+    "cible": 1997,
+    "tolerance": 0,
+    "titre": "Interdiction de l'amiante",
+    "reperes": [
+     {
+      "v": 1997,
+      "l": "1er juillet 1997"
+     }
+    ],
+    "legende": "Placez le curseur sur l'année charnière."
+   },
+   "explication": "Le repérage amiante avant travaux vise les immeubles dont le permis de construire a été délivré avant le 1er juillet 1997, date de l'interdiction générale de l'amiante en France. Ce repérage est à la charge du maître d'ouvrage et doit être réalisé avant la consultation des entreprises, faute de quoi les découvertes en cours de chantier entraînent arrêt, avenant et surcoût."
+  },
+  {
+   "id": "n1-07",
+   "axe": "A1",
+   "sousTheme": "Prévention, SPS, chantier",
+   "stIdx": 3,
+   "sujet": "sps-cat",
+   "niveau": 1,
+   "famille": "S",
+   "type": "cablage",
+   "question": "Raccordez chaque niveau de coordination sécurité et protection de la santé au chantier qui lui correspond.",
+   "cablage": {
+    "gauche": [
+     "Chantier de 1re catégorie",
+     "Chantier de 2e catégorie",
+     "Chantier de 3e catégorie",
+     "Déclaration préalable à l'inspection du travail"
+    ],
+    "droite": [
+     "Plus de 10 000 hommes-jours et plus de dix entreprises",
+     "Plus de 500 hommes-jours, hors 1re catégorie",
+     "Au moins deux entreprises, volume inférieur à 500 hommes-jours",
+     "Chantier de plus de 500 hommes-jours ou de plus de 30 jours avec plus de 20 travailleurs"
+    ],
+    "gaucheTitre": "Situation",
+    "droiteTitre": "Seuil",
+    "titre": "Coordination SPS"
+   },
+   "explication": "La catégorie de chantier détermine le niveau de la coordination SPS et les documents exigés. La 1re catégorie (au-delà de 10 000 hommes-jours et plus de dix entreprises) et la 2e catégorie imposent un plan général de coordination et un collège interentreprises pour la première. La 3e catégorie concerne les opérations plus modestes, dès lors qu'au moins deux entreprises interviennent, y compris en sous-traitance."
+  },
+  {
+   "id": "n1-08",
+   "axe": "A1",
+   "sousTheme": "Maîtrise d'ouvrage, maîtrise d'œuvre, responsabilités",
+   "stIdx": 4,
+   "sujet": "moe-mission",
+   "niveau": 1,
+   "famille": "S",
+   "type": "circuit",
+   "question": "Tracez l'enchaînement des éléments de mission de maîtrise d'œuvre pour une opération de bâtiment neuf.",
+   "circuit": {
+    "etapes": [
+     {
+      "l": "ESQ",
+      "sub": "esquisse",
+      "x": 26,
+      "y": 44
+     },
+     {
+      "l": "APS",
+      "sub": "avant-projet sommaire",
+      "x": 74,
+      "y": 91
+     },
+     {
+      "l": "APD",
+      "sub": "avant-projet définitif",
+      "x": 74,
+      "y": 61
+     },
+     {
+      "l": "PRO",
+      "sub": "projet",
+      "x": 74,
+      "y": 27
+     },
+     {
+      "l": "ACT",
+      "sub": "passation des marchés",
+      "x": 26,
+      "y": 77
+     },
+     {
+      "l": "AOR",
+      "sub": "assistance à la réception",
+      "x": 26,
+      "y": 12
+     }
+    ],
+    "chemin": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5
+    ],
+    "titre": "Éléments de mission loi MOP"
+   },
+   "explication": "La mission de base suit l'ordre esquisse, avant-projet sommaire, avant-projet définitif, projet, assistance à la passation des contrats de travaux, puis direction de l'exécution et assistance aux opérations de réception. L'APD fixe le coût prévisionnel des travaux sur lequel le maître d'œuvre s'engage. Les études d'exécution ne figurent pas d'office dans cette chaîne : elles relèvent par défaut de l'entreprise, le maître d'œuvre se limitant au visa."
+  },
+  {
+   "id": "n1-09",
+   "axe": "A1",
+   "sousTheme": "Maîtrise d'ouvrage, maîtrise d'œuvre, responsabilités",
+   "stIdx": 4,
+   "sujet": "moe-mission",
+   "niveau": 1,
+   "famille": "S",
+   "type": "cablage",
+   "question": "Raccordez chaque sigle de mission de maîtrise d'œuvre à son contenu réel.",
+   "cablage": {
+    "gauche": [
+     "VISA",
+     "EXE",
+     "DET",
+     "AOR",
+     "OPC"
+    ],
+    "droite": [
+     "Examen des plans d'exécution produits par l'entreprise",
+     "Établissement des documents d'exécution par la maîtrise d'œuvre",
+     "Direction de l'exécution des travaux et suivi financier",
+     "Assistance aux opérations de réception",
+     "Ordonnancement, pilotage et coordination des corps d'état"
+    ],
+    "gaucheTitre": "Sigle",
+    "droiteTitre": "Contenu",
+    "titre": "Sigles de maîtrise d'œuvre"
+   },
+   "explication": "Le VISA est l'examen par le maître d'œuvre des plans d'exécution produits par l'entreprise ; il ne consiste pas à les dessiner. L'EXE est au contraire un élément de mission distinct, confié explicitement et rémunéré à part, par lequel le maître d'œuvre produit lui-même ces documents. La DET couvre la direction du chantier et le contrôle des situations de travaux, l'AOR la préparation et l'assistance aux opérations de réception, l'OPC la coordination des différents corps d'état dans le temps."
+  },
+  {
+   "id": "n1-10",
+   "axe": "A2",
+   "sousTheme": "Principes, sources, seuils",
+   "stIdx": 0,
+   "sujet": "cp-principes",
+   "niveau": 1,
+   "famille": "M",
+   "type": "curseur",
+   "question": "Réglez le curseur sur le montant en dessous duquel un marché public peut être passé sans publicité ni mise en concurrence préalables.",
+   "curseur": {
+    "min": 0,
+    "max": 120000,
+    "pas": 5000,
+    "cible": 40000,
+    "tolerance": 0,
+    "unite": "€ HT",
+    "titre": "Seuil de dispense de procédure",
+    "reperes": [
+     {
+      "v": 40000,
+      "l": "Dispense"
+     },
+     {
+      "v": 100000,
+      "l": "Travaux : cas particuliers"
+     }
+    ],
+    "legende": "Montant hors taxes par marché et par besoin."
+   },
+   "explication": "En dessous de 40 000 € HT, l'acheteur peut conclure un marché sans publicité ni mise en concurrence, à condition de choisir une offre pertinente, de faire une bonne utilisation des deniers publics et de ne pas contracter systématiquement avec le même opérateur. La dispense ne supprime donc ni la traçabilité de la décision ni les principes fondamentaux de la commande publique.",
+   "derniereVerification": "2026-09"
+  },
+  {
+   "id": "n1-11",
+   "axe": "A2",
+   "sousTheme": "Principes, sources, seuils",
+   "stIdx": 0,
+   "sujet": "cp-principes",
+   "niveau": 1,
+   "famille": "S",
+   "type": "cablage",
+   "question": "Raccordez chaque principe de la commande publique à sa traduction concrète dans une consultation.",
+   "cablage": {
+    "gauche": [
+     "Liberté d'accès à la commande publique",
+     "Égalité de traitement des candidats",
+     "Transparence des procédures"
+    ],
+    "droite": [
+     "Publicité adaptée et allotissement permettant aux PME de candidater",
+     "Mêmes informations et mêmes critères pour tous les candidats",
+     "Critères annoncés à l'avance, échanges tracés, rejets motivés"
+    ],
+    "gaucheTitre": "Principe",
+    "droiteTitre": "Traduction concrète",
+    "titre": "Principes fondamentaux"
+   },
+   "explication": "Les trois principes fondamentaux — liberté d'accès, égalité de traitement, transparence des procédures — ont valeur constitutionnelle et s'appliquent quel que soit le montant. Ils se traduisent par une publicité adaptée, des critères annoncés à l'avance et appliqués à tous de la même façon, et une traçabilité des échanges et des décisions permettant de motiver le rejet d'une offre."
+  },
+  {
+   "id": "n1-12",
+   "axe": "A2",
+   "sousTheme": "Principes, sources, seuils",
+   "stIdx": 0,
+   "sujet": "cp-principes",
+   "niveau": 1,
+   "famille": "S",
+   "type": "curseur",
+   "question": "Réglez le curseur sur le délai global de paiement applicable aux collectivités territoriales.",
+   "curseur": {
+    "min": 0,
+    "max": 90,
+    "pas": 5,
+    "cible": 30,
+    "tolerance": 0,
+    "unite": "jours",
+    "titre": "Délai global de paiement",
+    "reperes": [
+     {
+      "v": 30,
+      "l": "Collectivités"
+     },
+     {
+      "v": 50,
+      "l": "Établissements de santé"
+     },
+     {
+      "v": 60,
+      "l": "Entreprises publiques"
+     }
+    ],
+    "legende": "Délai courant à compter de la réception de la demande de paiement."
+   },
+   "explication": "Le délai global de paiement des collectivités territoriales et de leurs établissements publics est de 30 jours ; il est de 50 jours pour les établissements publics de santé. Son dépassement fait courir de plein droit les intérêts moratoires et une indemnité forfaitaire de recouvrement, sans que le titulaire ait à les demander."
+  },
+  {
+   "id": "n1-13",
+   "axe": "A2",
+   "sousTheme": "Formes et montages contractuels",
+   "stIdx": 1,
+   "sujet": "cp-allot",
+   "niveau": 1,
+   "famille": "S",
+   "type": "cablage",
+   "question": "Raccordez chaque montage contractuel à sa définition.",
+   "cablage": {
+    "gauche": [
+     "Conception-réalisation",
+     "Marché global de performance",
+     "Marché de partenariat",
+     "Accord-cadre"
+    ],
+    "droite": [
+     "Un même titulaire conçoit et exécute, sur motif technique ou d'engagement de performance",
+     "Conception, réalisation et exploitation avec objectifs chiffrés vérifiables",
+     "Confie aussi le financement de l'ouvrage au titulaire",
+     "Fixe le cadre de commandes successives par bons ou marchés subséquents"
+    ],
+    "gaucheTitre": "Montage",
+    "droiteTitre": "Définition",
+    "titre": "Formes contractuelles"
+   },
+   "explication": "L'allotissement est le principe : un marché global reste une dérogation à motiver. Le marché de conception-réalisation suppose des motifs techniques ou d'engagement de performance, le marché global de performance associe conception, réalisation et exploitation avec des objectifs chiffrés vérifiables, le marché de partenariat comporte un financement privé et l'accord-cadre organise des commandes successives sans engagement de volume dès la signature."
+  },
+  {
+   "id": "n1-14",
+   "axe": "A2",
+   "sousTheme": "Passation et analyse des offres",
+   "stIdx": 2,
+   "sujet": "cp-oab",
+   "niveau": 1,
+   "famille": "S",
+   "type": "circuit",
+   "question": "Tracez le déroulement d'un appel d'offres ouvert, de la publicité à l'attribution.",
+   "circuit": {
+    "etapes": [
+     {
+      "l": "Publication de l'avis d'appel public à la concurrence",
+      "x": 26,
+      "y": 51
+     },
+     {
+      "l": "Remise et ouverture des plis",
+      "x": 26,
+      "y": 14
+     },
+     {
+      "l": "Analyse des candidatures puis des offres",
+      "sub": "selon les critères annoncés",
+      "x": 26,
+      "y": 88
+     },
+     {
+      "l": "Attribution par la commission d'appel d'offres",
+      "sub": "collectivités territoriales",
+      "x": 74,
+      "y": 32
+     },
+     {
+      "l": "Notification au titulaire et avis d'attribution",
+      "x": 74,
+      "y": 70
+     }
+    ],
+    "chemin": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ],
+    "titre": "Appel d'offres ouvert"
+   },
+   "explication": "L'appel d'offres ouvert permet à tout opérateur de remettre une offre. Après la publication de l'avis et la remise des plis, l'acheteur ouvre les candidatures et les offres, analyse les candidatures avant les offres, puis classe ces dernières selon les critères annoncés. Pour une collectivité, l'attribution relève de la commission d'appel d'offres ; le marché n'est conclu qu'après notification, suivie de l'avis d'attribution."
+  },
+  {
+   "id": "n1-15",
+   "axe": "A2",
+   "sousTheme": "Exécution : CCAG-Travaux 2021",
+   "stIdx": 3,
+   "sujet": "ccag-os",
+   "niveau": 1,
+   "famille": "S",
+   "type": "cablage",
+   "question": "Raccordez chaque ordre de service à sa fonction dans l'exécution d'un marché de travaux.",
+   "cablage": {
+    "gauche": [
+     "OS de démarrage",
+     "OS d'arrêt",
+     "OS de reprise",
+     "OS de modification"
+    ],
+    "droite": [
+     "Fixe la date de début du délai contractuel d'exécution",
+     "Suspend l'exécution des travaux pour une cause déterminée",
+     "Remet le chantier en route et fixe le nouveau terme du délai",
+     "Prescrit une prestation nouvelle ou modifiée, à régulariser si besoin par avenant"
+    ],
+    "gaucheTitre": "Type d'OS",
+    "droiteTitre": "Fonction",
+    "titre": "Ordres de service"
+   },
+   "explication": "Les ordres de service formalisent par écrit les décisions du maître d'ouvrage prises par l'intermédiaire du maître d'œuvre. Ils fixent le point de départ du délai d'exécution, suspendent ou reprennent les travaux, ou prescrivent une modification. Un ordre de service entraînant un bouleversement du marché ou une modification substantielle appelle un avenant : la signature d'un OS avec réserves permet au titulaire de préserver ses droits financiers."
+  },
+  {
+   "id": "n1-16",
+   "axe": "A2",
+   "sousTheme": "Achèvement, réception, DGD",
+   "stIdx": 4,
+   "sujet": "ccag-opr",
+   "niveau": 1,
+   "famille": "S",
+   "type": "circuit",
+   "question": "Tracez la chronologie de l'achèvement d'un marché de travaux, des OPR au solde financier.",
+   "circuit": {
+    "etapes": [
+     {
+      "l": "Avis d'achèvement des travaux par l'entreprise",
+      "x": 26,
+      "y": 44
+     },
+     {
+      "l": "Opérations préalables à la réception (OPR)",
+      "x": 74,
+      "y": 91
+     },
+     {
+      "l": "Décision de réception du maître d'ouvrage",
+      "sub": "avec ou sans réserves",
+      "x": 74,
+      "y": 61
+     },
+     {
+      "l": "Levée des réserves",
+      "x": 74,
+      "y": 27
+     },
+     {
+      "l": "Garantie de parfait achèvement",
+      "sub": "un an à compter de la réception",
+      "x": 26,
+      "y": 77
+     },
+     {
+      "l": "Décompte général et définitif",
+      "sub": "clôture financière du marché",
+      "x": 26,
+      "y": 12
+     }
+    ],
+    "chemin": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5
+    ],
+    "titre": "Achèvement d'un marché de travaux"
+   },
+   "explication": "Les opérations préalables à la réception sont menées par le maître d'œuvre à la demande de l'entreprise ; la décision de réception appartient au seul maître d'ouvrage, avec ou sans réserves. La réception fait courir la garantie de parfait achèvement d'un an, ainsi que les garanties biennale et décennale. Le décompte général et définitif clôt financièrement le marché et rend en principe irrecevable toute réclamation ultérieure."
+  },
+  {
+   "id": "n1-17",
+   "axe": "A2",
+   "sousTheme": "Achat responsable",
+   "stIdx": 5,
+   "sujet": "cp-env",
+   "niveau": 1,
+   "famille": "M",
+   "type": "curseur",
+   "question": "Réglez le curseur sur le montant annuel d'achats à partir duquel une collectivité doit adopter un SPASER.",
+   "curseur": {
+    "min": 0,
+    "max": 200,
+    "pas": 10,
+    "cible": 50,
+    "tolerance": 0,
+    "unite": "M€ HT",
+    "titre": "Seuil SPASER",
+    "reperes": [
+     {
+      "v": 50,
+      "l": "SPASER obligatoire"
+     },
+     {
+      "v": 100,
+      "l": "Ancien seuil"
+     }
+    ],
+    "legende": "Montant annuel d'achats hors taxes."
+   },
+   "explication": "Le schéma de promotion des achats socialement et écologiquement responsables est obligatoire au-delà de 50 millions d'euros HT d'achats annuels, seuil abaissé depuis la loi Climat et résilience. Il doit être rendu public et comporter des objectifs chiffrés assortis d'indicateurs de suivi ; en pratique, le taux de collectivités réellement dotées d'un schéma conforme reste faible.",
+   "derniereVerification": "2026-09"
+  },
+  {
+   "id": "n1-18",
+   "axe": "A3",
+   "sousTheme": "Statut des normes, DTU, Eurocodes",
+   "stIdx": 0,
+   "sujet": "norme-statut",
+   "niveau": 1,
+   "famille": "S",
+   "type": "empilement",
+   "question": "Composez la hiérarchie des textes techniques et juridiques applicables à une opération, du plus contraignant au plus souple.",
+   "empilement": {
+    "couches": [
+     {
+      "l": "Règlement européen et loi",
+      "sub": "portée générale"
+     },
+     {
+      "l": "Décret",
+      "sub": "modalités d'application"
+     },
+     {
+      "l": "Arrêté",
+      "sub": "exigences techniques détaillées"
+     },
+     {
+      "l": "Norme NF DTU",
+      "sub": "référence, contractuelle si visée au marché"
+     },
+     {
+      "l": "Règles professionnelles et avis techniques",
+      "sub": "cas non couverts par un DTU"
+     }
+    ],
+    "titre": "Hiérarchie des textes",
+    "base": "Base du raisonnement",
+    "sommet": "Portée la plus forte"
+   },
+   "explication": "Le règlement européen et la loi priment sur le décret, lui-même supérieur à l'arrêté qui fixe les exigences techniques détaillées. Les normes NF DTU se situent en dessous : elles ne sont d'application obligatoire que lorsqu'un texte réglementaire ou le marché les rend contractuelles. Un DTU visé au CCTP devient donc contraignant par le contrat, pas par nature."
+  },
+  {
+   "id": "n1-19",
+   "axe": "A3",
+   "sousTheme": "Statut des normes, DTU, Eurocodes",
+   "stIdx": 0,
+   "sujet": "norme-statut",
+   "niveau": 1,
+   "famille": "S",
+   "type": "cablage",
+   "question": "Raccordez chaque référentiel technique à ce qu'il désigne exactement.",
+   "cablage": {
+    "gauche": [
+     "NF DTU",
+     "Eurocode",
+     "Avis Technique",
+     "ATEx",
+     "Règles professionnelles"
+    ],
+    "droite": [
+     "Règles de l'art d'une technique courante de mise en œuvre",
+     "Règles de calcul et de dimensionnement des structures",
+     "Évaluation de l'aptitude à l'emploi d'un procédé non traditionnel",
+     "Appréciation expérimentale d'une technique très innovante, souvent pour une seule opération",
+     "Document de filière comblant l'absence de DTU"
+    ],
+    "gaucheTitre": "Référentiel",
+    "droiteTitre": "Objet",
+    "titre": "Référentiels techniques"
+   },
+   "explication": "Le NF DTU décrit les règles de l'art d'une technique traditionnelle, l'Eurocode donne les règles de calcul des structures, l'Avis Technique évalue l'aptitude à l'emploi d'un procédé non traditionnel, l'ATEx couvre une technique très innovante pour une opération donnée, et les règles professionnelles comblent les vides entre ces documents. Ce classement conditionne l'assurabilité : un procédé sans Avis Technique ni ATEx expose le maître d'ouvrage à un refus de garantie décennale."
+  },
+  {
+   "id": "n1-20",
+   "axe": "A3",
+   "sousTheme": "Points singuliers par lot",
+   "stIdx": 1,
+   "sujet": "lot-etancheite",
+   "niveau": 1,
+   "famille": "S",
+   "type": "empilement",
+   "question": "Composez la coupe d'une toiture-terrasse isolée en partie courante, de l'extérieur vers le support.",
+   "empilement": {
+    "couches": [
+     {
+      "l": "Protection",
+      "sub": "gravillons, dalles ou végétalisation"
+     },
+     {
+      "l": "Revêtement d'étanchéité",
+      "sub": "bicouche ou membrane"
+     },
+     {
+      "l": "Isolant thermique",
+      "sub": "panneaux"
+     },
+     {
+      "l": "Pare-vapeur",
+      "sub": "côté chaud, sous l'isolant"
+     },
+     {
+      "l": "Élément porteur",
+      "sub": "dalle béton ou bac acier"
+     }
+    ],
+    "titre": "Toiture-terrasse",
+    "base": "Support",
+    "sommet": "Extérieur"
+   },
+   "explication": "En toiture-terrasse traditionnelle, l'ordre est protection, revêtement d'étanchéité, isolant, pare-vapeur, élément porteur. Le pare-vapeur se place sous l'isolant, du côté chaud, pour éviter la migration de vapeur d'eau et la condensation dans l'isolant. Inverser pare-vapeur et étanchéité est l'erreur classique qui conduit à des désordres rapides."
+  },
+  {
+   "id": "n1-21",
+   "axe": "A3",
+   "sousTheme": "RE2020 et thermique",
+   "stIdx": 2,
+   "sujet": "re2020-ind",
+   "niveau": 1,
+   "famille": "S",
+   "type": "cablage",
+   "question": "Raccordez chaque indicateur de la RE2020 à ce qu'il mesure.",
+   "cablage": {
+    "gauche": [
+     "Bbio",
+     "Cep,nr",
+     "Ic construction",
+     "Ic énergie",
+     "DH"
+    ],
+    "droite": [
+     "Besoin bioclimatique : chauffage, refroidissement et éclairage, indépendamment des systèmes",
+     "Consommation d'énergie primaire non renouvelable",
+     "Impact carbone des composants et du chantier sur le cycle de vie",
+     "Impact carbone des consommations d'énergie en exploitation",
+     "Degrés-heures d'inconfort d'été cumulés"
+    ],
+    "gaucheTitre": "Indicateur",
+    "droiteTitre": "Ce qu'il mesure",
+    "titre": "Indicateurs RE2020"
+   },
+   "explication": "La RE2020 ajoute au besoin bioclimatique et à la consommation d'énergie primaire non renouvelable deux indicateurs carbone et un indicateur de confort d'été. Ic construction couvre l'impact des composants et du chantier sur l'ensemble du cycle de vie, Ic énergie les émissions liées aux consommations d'exploitation, et les degrés-heures traduisent l'inconfort estival cumulé au-delà d'un seuil de température."
+  },
+  {
+   "id": "n1-22",
+   "axe": "A3",
+   "sousTheme": "RE2020 et thermique",
+   "stIdx": 2,
+   "sujet": "re2020-ind",
+   "niveau": 1,
+   "famille": "S",
+   "type": "curseur",
+   "question": "Confort d'été RE2020 : réglez le curseur sur le seuil bas de degrés-heures au-delà duquel un bâtiment doit prévoir des mesures de rafraîchissement.",
+   "curseur": {
+    "min": 500,
+    "max": 2500,
+    "pas": 50,
+    "cible": 1250,
+    "tolerance": 0,
+    "unite": "°C.h",
+    "titre": "Degrés-heures d'inconfort",
+    "reperes": [
+     {
+      "v": 1250,
+      "l": "Seuil bas"
+     },
+     {
+      "v": 1750,
+      "l": "Seuil haut : non-conformité"
+     }
+    ],
+    "legende": "Placez le curseur sur le seuil bas."
+   },
+   "explication": "L'indicateur DH s'exprime en degrés-heures d'inconfort cumulés sur l'été. En dessous du seuil bas de 1 250 °C.h, aucune pénalité ; entre le seuil bas et le seuil haut de 1 750 °C.h, une consommation forfaitaire de refroidissement est ajoutée au calcul ; au-delà du seuil haut, le projet est non conforme et doit être repris."
+  },
+  {
+   "id": "n1-23",
+   "axe": "A3",
+   "sousTheme": "Accessibilité",
+   "stIdx": 3,
+   "sujet": "acc-dim",
+   "niveau": 1,
+   "famille": "S",
+   "type": "curseur",
+   "question": "Réglez le curseur sur la largeur minimale d'un cheminement extérieur accessible.",
+   "curseur": {
+    "min": 0.8,
+    "max": 2.0,
+    "pas": 0.05,
+    "cible": 1.4,
+    "tolerance": 0,
+    "unite": "m",
+    "titre": "Cheminement accessible",
+    "reperes": [
+     {
+      "v": 1.2,
+      "l": "Rétrécissement ponctuel"
+     },
+     {
+      "v": 1.4,
+      "l": "Largeur minimale"
+     },
+     {
+      "v": 1.5,
+      "l": "Aire de rotation"
+     }
+    ],
+    "legende": "Largeur courante d'un cheminement extérieur."
+   },
+   "explication": "Un cheminement accessible doit offrir une largeur minimale de 1,40 m, réductible ponctuellement à 1,20 m en cas de rétrécissement dû à un obstacle ne pouvant être supprimé. Cette largeur est à distinguer de l'aire de rotation d'un fauteuil, d'un diamètre de 1,50 m, et du passage utile d'une porte, de 0,83 m pour une porte de 0,90 m."
+  },
+  {
+   "id": "n1-24",
+   "axe": "A3",
+   "sousTheme": "Accessibilité",
+   "stIdx": 3,
+   "sujet": "acc-dim",
+   "niveau": 1,
+   "famille": "S",
+   "type": "cablage",
+   "question": "Raccordez chaque exigence d'accessibilité à sa valeur réglementaire.",
+   "cablage": {
+    "gauche": [
+     "Largeur d'une porte principale",
+     "Aire de rotation d'un fauteuil",
+     "Pente maximale d'un plan incliné",
+     "Ressaut maximal sur un cheminement"
+    ],
+    "droite": [
+     "0,90 m, soit 0,83 m de passage utile",
+     "1,50 m de diamètre",
+     "5 %, avec paliers de repos",
+     "2 cm, ou 4 cm si chanfreiné"
+    ],
+    "gaucheTitre": "Exigence",
+    "droiteTitre": "Valeur",
+    "titre": "Dimensions d'accessibilité"
+   },
+   "explication": "Ces valeurs sont les plus fréquemment mobilisées en jury : porte de 0,90 m de largeur pour 0,83 m de passage utile, aire de rotation de 1,50 m de diamètre, pente maximale de 5 % avec paliers de repos, ressaut limité à 2 cm et chassé à 4 cm s'il est chanfreiné à un pour trois."
+  },
+  {
+   "id": "n1-25",
+   "axe": "A3",
+   "sousTheme": "Sécurité incendie ERP",
+   "stIdx": 4,
+   "sujet": "inc-classement",
+   "niveau": 1,
+   "famille": "S",
+   "type": "cablage",
+   "question": "Raccordez chaque type d'ERP à l'activité qu'il désigne.",
+   "cablage": {
+    "gauche": [
+     "Type R",
+     "Type L",
+     "Type X",
+     "Type J",
+     "Type W"
+    ],
+    "droite": [
+     "Établissements d'enseignement, crèches, centres de loisirs",
+     "Salles de spectacles, de réunion et polyvalentes",
+     "Établissements sportifs couverts",
+     "Structures d'accueil de personnes âgées ou handicapées",
+     "Administrations, bureaux, banques"
+    ],
+    "gaucheTitre": "Type",
+    "droiteTitre": "Activité",
+    "titre": "Types d'ERP"
+   },
+   "explication": "Le type indique l'activité, la catégorie l'effectif : les deux se combinent, par exemple un gymnase de type X en 3e catégorie. Pour un patrimoine communal, les types les plus courants sont R pour les écoles, L pour les salles polyvalentes, X pour les gymnases, M pour les commerces, N pour la restauration, W pour les bureaux et J pour les structures d'accueil de personnes âgées ou handicapées."
+  },
+  {
+   "id": "n1-26",
+   "axe": "A3",
+   "sousTheme": "Sécurité incendie ERP",
+   "stIdx": 4,
+   "sujet": "inc-classement",
+   "niveau": 1,
+   "famille": "S",
+   "type": "curseur",
+   "question": "Réglez le curseur sur la hauteur du plancher bas du dernier niveau qui fait basculer un bâtiment d'habitation en immeuble de grande hauteur.",
+   "curseur": {
+    "min": 0,
+    "max": 80,
+    "pas": 1,
+    "cible": 50,
+    "tolerance": 0,
+    "unite": "m",
+    "titre": "Seuil IGH",
+    "reperes": [
+     {
+      "v": 28,
+      "l": "Autres bâtiments"
+     },
+     {
+      "v": 50,
+      "l": "Habitation"
+     }
+    ],
+    "legende": "Placez le curseur sur le seuil applicable à l'habitation."
+   },
+   "explication": "Un bâtiment est un IGH lorsque le plancher bas du dernier niveau est situé à plus de 50 m du niveau accessible aux engins de secours pour l'habitation, et à plus de 28 m pour tous les autres bâtiments. Le classement IGH déclenche un régime de sécurité incendie spécifique : compartimentage, service de sécurité permanent, alimentation électrique de sécurité."
+  },
+  {
+   "id": "n1-27",
+   "axe": "A3",
+   "sousTheme": "Confort, santé, pathologies",
+   "stIdx": 5,
+   "sujet": "qai",
+   "niveau": 1,
+   "famille": "S",
+   "type": "curseur",
+   "question": "Réglez le curseur sur le niveau de référence en radon au-delà duquel une action correctrice s'impose dans un bâtiment recevant du public.",
+   "curseur": {
+    "min": 0,
+    "max": 800,
+    "pas": 50,
+    "cible": 300,
+    "tolerance": 0,
+    "unite": "Bq/m³",
+    "titre": "Radon : niveau de référence",
+    "reperes": [
+     {
+      "v": 300,
+      "l": "Action correctrice"
+     }
+    ],
+    "legende": "Moyenne annuelle dans les locaux occupés."
+   },
+   "explication": "Le niveau de référence est fixé à 300 becquerels par mètre cube en moyenne annuelle. Son dépassement impose des actions correctrices, en commençant par l'amélioration de la ventilation et l'étanchement des liaisons avec le sol, puis un nouveau mesurage. La surveillance concerne notamment les établissements d'enseignement et d'accueil situés dans les zones à potentiel radon de niveau 3."
+  },
+  {
+   "id": "n1-28",
+   "axe": "A3",
+   "sousTheme": "Confort, santé, pathologies",
+   "stIdx": 5,
+   "sujet": "qai",
+   "niveau": 1,
+   "famille": "S",
+   "type": "curseur",
+   "question": "Réglez le curseur sur la concentration en dioxyde de carbone intérieur qui traduit une ventilation insuffisante dans une salle de classe.",
+   "curseur": {
+    "min": 400,
+    "max": 2000,
+    "pas": 100,
+    "cible": 1000,
+    "tolerance": 0,
+    "unite": "ppm",
+    "titre": "CO₂ intérieur",
+    "reperes": [
+     {
+      "v": 400,
+      "l": "Air extérieur"
+     },
+     {
+      "v": 1000,
+      "l": "Ventilation insuffisante"
+     },
+     {
+      "v": 1700,
+      "l": "Confinement sévère"
+     }
+    ],
+    "legende": "Placez le curseur sur le seuil d'alerte courant."
+   },
+   "explication": "Au-delà de 1 000 ppm de CO₂, l'air intérieur est considéré comme confiné et la ventilation insuffisante ; à partir de 1 700 ppm, le confinement est jugé sévère et impose une action rapide. Le CO₂ ne mesure pas la pollution chimique mais sert de traceur simple et peu coûteux du renouvellement d'air, utile pour piloter l'aération des salles de classe."
+  },
+  {
+   "id": "n1-29",
+   "axe": "A4",
+   "sousTheme": "Connaissance et stratégie de parc",
+   "stIdx": 0,
+   "sujet": "pat-sdie",
+   "niveau": 1,
+   "famille": "S",
+   "type": "cablage",
+   "question": "Raccordez chaque outil de gestion de parc à sa finalité.",
+   "cablage": {
+    "gauche": [
+     "SDIE",
+     "Diagnostic technique de bâtiment",
+     "Audit énergétique",
+     "GMAO",
+     "Ratio en euros par mètre carré"
+    ],
+    "droite": [
+     "Stratégie patrimoniale et énergétique pluriannuelle du parc",
+     "État réel de la structure, du clos-couvert et des équipements",
+     "Consommations, déperditions et scénarios de travaux chiffrés",
+     "Traçabilité des interventions et historique de maintenance",
+     "Comparaison des coûts entre bâtiments d'un même parc"
+    ],
+    "gaucheTitre": "Outil",
+    "droiteTitre": "Finalité",
+    "titre": "Outils de gestion de parc"
+   },
+   "explication": "Le schéma directeur immobilier et énergétique articule la connaissance du parc et la stratégie pluriannuelle d'investissement ; il s'appuie sur des diagnostics techniques, un audit énergétique et des ratios de coûts au mètre carré. La GMAO ne sert pas à décider de la stratégie mais à tracer les interventions et à alimenter en données la programmation."
+  },
+  {
+   "id": "n1-30",
+   "axe": "A4",
+   "sousTheme": "Dispositif Éco Énergie Tertiaire",
+   "stIdx": 1,
+   "sujet": "deet-champ",
+   "niveau": 1,
+   "famille": "S",
+   "type": "curseur",
+   "question": "Réglez le curseur sur la surface d'activités tertiaires à partir de laquelle un bâtiment est assujetti au dispositif Éco Énergie Tertiaire.",
+   "curseur": {
+    "min": 0,
+    "max": 3000,
+    "pas": 100,
+    "cible": 1000,
+    "tolerance": 0,
+    "unite": "m²",
+    "titre": "Assujettissement Éco Énergie Tertiaire",
+    "reperes": [
+     {
+      "v": 1000,
+      "l": "Seuil"
+     }
+    ],
+    "legende": "Surface cumulée d'activités tertiaires."
+   },
+   "explication": "Le dispositif s'applique dès 1 000 m² de surface de plancher cumulée dédiée à des activités tertiaires, que ce soit dans un bâtiment, un ensemble de bâtiments sur une même unité foncière ou une partie de bâtiment. Les collectivités sont donc très largement concernées : écoles, gymnases, mairies, médiathèques."
+  },
+  {
+   "id": "n1-31",
+   "axe": "A4",
+   "sousTheme": "Dispositif Éco Énergie Tertiaire",
+   "stIdx": 1,
+   "sujet": "deet-champ",
+   "niveau": 1,
+   "famille": "S",
+   "type": "cablage",
+   "question": "Raccordez chaque échéance du dispositif Éco Énergie Tertiaire à son objectif de réduction des consommations.",
+   "cablage": {
+    "gauche": [
+     "2030",
+     "2040",
+     "2050"
+    ],
+    "droite": [
+     "Réduction de 40 % des consommations d'énergie finale",
+     "Réduction de 50 %",
+     "Réduction de 60 %"
+    ],
+    "gaucheTitre": "Échéance",
+    "droiteTitre": "Objectif",
+    "titre": "Trajectoire Éco Énergie Tertiaire"
+   },
+   "explication": "Les objectifs sont de −40 % en 2030, −50 % en 2040 et −60 % en 2050 par rapport à une année de référence choisie postérieure à 2010. Une seconde voie, dite valeur absolue, consiste à atteindre un niveau de consommation fixé par arrêté selon la catégorie d'activité, ce qui avantage les bâtiments déjà performants."
+  },
+  {
+   "id": "n1-32",
+   "axe": "A4",
+   "sousTheme": "BACS, GTB, pilotage",
+   "stIdx": 2,
+   "sujet": "bacs-seuils",
+   "niveau": 1,
+   "famille": "M",
+   "type": "curseur",
+   "question": "Réglez le curseur sur la puissance nominale des systèmes de chauffage ou de climatisation qui déclenche aujourd'hui l'obligation d'un système d'automatisation et de contrôle des bâtiments.",
+   "curseur": {
+    "min": 0,
+    "max": 400,
+    "pas": 10,
+    "cible": 290,
+    "tolerance": 0,
+    "unite": "kW",
+    "titre": "Seuil BACS",
+    "reperes": [
+     {
+      "v": 70,
+      "l": "Seuil abaissé, échéance 2030"
+     },
+     {
+      "v": 290,
+      "l": "Seuil actuel"
+     }
+    ],
+    "legende": "Puissance nominale des équipements."
+   },
+   "explication": "Le décret BACS impose un système d'automatisation et de contrôle aux bâtiments tertiaires dont les équipements de chauffage ou de climatisation, éventuellement combinés à la ventilation, dépassent 290 kW de puissance nominale. Le seuil doit être abaissé à 70 kW à l'échéance de 2030, ce qui élargira fortement le nombre de bâtiments communaux concernés.",
+   "derniereVerification": "2026-09",
+   "aVerifier": "Vérifier l'échéance d'abaissement à 70 kW."
+  },
+  {
+   "id": "n1-33",
+   "axe": "A4",
+   "sousTheme": "BACS, GTB, pilotage",
+   "stIdx": 2,
+   "sujet": "bacs-seuils",
+   "niveau": 1,
+   "famille": "S",
+   "type": "cablage",
+   "question": "Raccordez chaque fonction de gestion technique du bâtiment à l'exemple qui l'illustre.",
+   "cablage": {
+    "gauche": [
+     "Programmation horaire",
+     "Détection de dérive",
+     "Gestion d'alarmes",
+     "Comptage par usage"
+    ],
+    "droite": [
+     "Réduit les consignes hors périodes d'occupation",
+     "Signale une consommation anormale par rapport à l'historique",
+     "Alerte sur un défaut technique avant la panne complète",
+     "Répartit les consommations entre chauffage, éclairage et autres postes"
+    ],
+    "gaucheTitre": "Fonction",
+    "droiteTitre": "Exemple",
+    "titre": "Fonctions de GTB"
+   },
+   "explication": "Une GTB utile ne se limite pas à l'affichage de courbes : elle règle des consignes selon l'occupation, détecte les dérives, alarme sur les défauts et documente les consommations poste par poste. Sans référent formé ni reprise régulière des réglages, l'investissement en GTB ne produit pas les économies attendues."
+  },
+  {
+   "id": "n1-34",
+   "axe": "A4",
+   "sousTheme": "Coût global et cycle de vie",
+   "stIdx": 3,
+   "sujet": "cout-global",
+   "niveau": 1,
+   "famille": "S",
+   "type": "cablage",
+   "question": "Raccordez chaque composante du coût global d'un bâtiment à un exemple de dépense.",
+   "cablage": {
+    "gauche": [
+     "Investissement initial",
+     "Exploitation",
+     "Maintenance",
+     "Fin de vie"
+    ],
+    "droite": [
+     "Études, travaux et raccordements",
+     "Énergie, eau, nettoyage",
+     "Contrats d'entretien et remplacement de composants",
+     "Déconstruction, tri et évacuation des matériaux"
+    ],
+    "gaucheTitre": "Composante",
+    "droiteTitre": "Exemple",
+    "titre": "Coût global"
+   },
+   "explication": "Le coût global additionne l'investissement initial, les coûts d'exploitation et de maintenance sur la durée de vie, les coûts de remplacement des composants, et le coût de fin de vie. Le raisonnement en coût global justifie souvent un surcoût d'investissement, mais suppose un chiffrage crédible des durées de vie et des coûts d'énergie futurs : sans ces hypothèses, la démonstration reste fragile devant un élu."
+  },
+  {
+   "id": "n1-35",
+   "axe": "A4",
+   "sousTheme": "Exploitation-maintenance",
+   "stIdx": 4,
+   "sujet": "exploit-p1p4",
+   "niveau": 1,
+   "famille": "S",
+   "type": "cablage",
+   "question": "Raccordez chaque poste d'un marché d'exploitation de chauffage à son contenu.",
+   "cablage": {
+    "gauche": [
+     "P1",
+     "P2",
+     "P3",
+     "P4"
+    ],
+    "droite": [
+     "Fourniture de l'énergie ou du combustible",
+     "Conduite, surveillance et petit entretien des installations",
+     "Garantie totale : gros entretien et renouvellement des matériels",
+     "Financement de l'installation nouvelle par l'exploitant"
+    ],
+    "gaucheTitre": "Poste",
+    "droiteTitre": "Contenu",
+    "titre": "Marché d'exploitation"
+   },
+   "explication": "La décomposition P1 à P4 structure les marchés d'exploitation : P1 la fourniture d'énergie, P2 la conduite et le petit entretien, P3 la garantie totale de renouvellement des matériels, P4 le financement d'une installation nouvelle. Confier P3 sans état des lieux précis des équipements expose à des surcoûts et à des contestations sur le périmètre du renouvellement."
+  },
+  {
+   "id": "n1-36",
+   "axe": "A4",
+   "sousTheme": "Contrôles réglementaires",
+   "stIdx": 5,
+   "sujet": "controles",
+   "niveau": 1,
+   "famille": "S",
+   "type": "cablage",
+   "question": "Raccordez chaque vérification réglementaire d'un ERP à sa périodicité courante.",
+   "cablage": {
+    "gauche": [
+     "Installations électriques d'un ERP",
+     "Entretien d'un ascenseur",
+     "Contrôle technique quinquennal d'un ascenseur",
+     "Extincteurs et systèmes de sécurité incendie"
+    ],
+    "droite": [
+     "Annuelle",
+     "Toutes les six semaines",
+     "Tous les cinq ans",
+     "Annuelle"
+    ],
+    "gaucheTitre": "Vérification",
+    "droiteTitre": "Périodicité",
+    "titre": "Contrôles réglementaires"
+   },
+   "explication": "Le registre de sécurité doit rassembler ces contrôles et les suites données aux observations. Le point sensible d'un patrimoine communal n'est pas la réalisation des vérifications mais la levée effective des réserves : une observation non traitée engage la responsabilité de la collectivité en cas de sinistre."
+  },
+  {
+   "id": "n1-37",
+   "axe": "A5",
+   "sousTheme": "Bas carbone et ACV",
+   "stIdx": 0,
+   "sujet": "acv-dyn",
+   "niveau": 1,
+   "famille": "S",
+   "type": "cablage",
+   "question": "Raccordez chaque phase du cycle de vie d'un bâtiment à ce qu'elle recouvre dans une analyse de cycle de vie.",
+   "cablage": {
+    "gauche": [
+     "Production",
+     "Chantier",
+     "Exploitation",
+     "Fin de vie"
+    ],
+    "droite": [
+     "Extraction, fabrication et transport des produits de construction",
+     "Consommations et déchets de la phase de travaux",
+     "Énergie, eau et remplacement des composants pendant la vie du bâtiment",
+     "Déconstruction, transport, recyclage ou élimination"
+    ],
+    "gaucheTitre": "Phase",
+    "droiteTitre": "Contenu",
+    "titre": "Cycle de vie du bâtiment"
+   },
+   "explication": "L'analyse de cycle de vie découpe l'impact en production des produits, chantier, exploitation, et fin de vie. En construction neuve performante, la part de l'énergie d'exploitation diminue et le carbone des matériaux devient prépondérant, ce qui justifie l'introduction d'un indicateur Ic construction dans la RE2020."
+  },
+  {
+   "id": "n1-38",
+   "axe": "A5",
+   "sousTheme": "Réemploi et économie circulaire",
+   "stIdx": 1,
+   "sujet": "reemploi-statut",
+   "niveau": 1,
+   "famille": "S",
+   "type": "circuit",
+   "question": "Tracez le parcours d'un matériau réemployé, du diagnostic à la remise en œuvre.",
+   "circuit": {
+    "etapes": [
+     {
+      "l": "Diagnostic PEMD",
+      "sub": "repérage des gisements",
+      "x": 26,
+      "y": 51
+     },
+     {
+      "l": "Dépose sélective",
+      "x": 26,
+      "y": 14
+     },
+     {
+      "l": "Tri et stockage",
+      "x": 26,
+      "y": 88
+     },
+     {
+      "l": "Caractérisation du produit",
+      "sub": "essais, traçabilité, assurance",
+      "x": 74,
+      "y": 32
+     },
+     {
+      "l": "Remise en œuvre dans le projet",
+      "x": 74,
+      "y": 70
+     }
+    ],
+    "chemin": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ],
+    "titre": "Filière réemploi"
+   },
+   "explication": "Le diagnostic produits-équipements-matériaux-déchets identifie en amont les gisements réemployables. Vient ensuite la dépose sélective, plus lente qu'une démolition classique, le tri et le stockage, puis la caractérisation qui conditionne l'assurabilité de la remise en œuvre. Le point de blocage habituel n'est pas technique mais assurantiel : sans caractérisation ni couverture, l'entreprise refuse d'engager sa décennale."
+  },
+  {
+   "id": "n1-39",
+   "axe": "A5",
+   "sousTheme": "Réemploi et économie circulaire",
+   "stIdx": 1,
+   "sujet": "reemploi-statut",
+   "niveau": 1,
+   "famille": "S",
+   "type": "curseur",
+   "question": "Réglez le curseur sur la surface de plancher au-delà de laquelle un diagnostic produits-équipements-matériaux-déchets est obligatoire avant démolition ou rénovation significative.",
+   "curseur": {
+    "min": 0,
+    "max": 3000,
+    "pas": 100,
+    "cible": 1000,
+    "tolerance": 0,
+    "unite": "m²",
+    "titre": "Diagnostic PEMD",
+    "reperes": [
+     {
+      "v": 1000,
+      "l": "Seuil"
+     }
+    ],
+    "legende": "Surface de plancher concernée."
+   },
+   "explication": "Le diagnostic PEMD est exigé pour les opérations de démolition ou de rénovation significative portant sur une surface de plancher de plus de 1 000 m², ainsi que pour les bâtiments ayant accueilli une activité utilisant des substances dangereuses. Il doit être réalisé avant la consultation des entreprises pour peser réellement sur la conception et le tri."
+  },
+  {
+   "id": "n1-40",
+   "axe": "A5",
+   "sousTheme": "Matériaux biosourcés",
+   "stIdx": 2,
+   "sujet": "biosource",
+   "niveau": 1,
+   "famille": "S",
+   "type": "cablage",
+   "question": "Raccordez chaque matériau biosourcé à son usage courant dans le bâtiment.",
+   "cablage": {
+    "gauche": [
+     "Botte de paille",
+     "Bois lamellé-collé",
+     "Ouate de cellulose",
+     "Béton de chanvre",
+     "Liège expansé"
+    ],
+    "droite": [
+     "Remplissage isolant de caissons bois préfabriqués",
+     "Structure porteuse de grande portée",
+     "Isolation soufflée en combles perdus",
+     "Remplissage isolant non porteur et correcteur d'humidité",
+     "Isolation en milieu humide ou sous dallage"
+    ],
+    "gaucheTitre": "Matériau",
+    "droiteTitre": "Usage courant",
+    "titre": "Matériaux biosourcés"
+   },
+   "explication": "Les matériaux biosourcés stockent du carbone pendant la vie de l'ouvrage, ce que valorise le calcul dynamique de la RE2020. Chaque filière a un usage dominant : la paille en remplissage isolant de caissons bois, le bois lamellé-collé en structure de grande portée, la ouate de cellulose en isolation soufflée de combles, le chanvre en béton de chanvre de remplissage non porteur, le liège en isolation résistante à l'humidité."
+  },
+  {
+   "id": "n1-41",
+   "axe": "A5",
+   "sousTheme": "Numérique, BIM, IA",
+   "stIdx": 3,
+   "sujet": "bim-oblig",
+   "niveau": 1,
+   "famille": "S",
+   "type": "cablage",
+   "question": "Raccordez chaque notion de la maquette numérique à sa définition.",
+   "cablage": {
+    "gauche": [
+     "Maquette numérique",
+     "Convention BIM",
+     "IFC",
+     "DOE numérique"
+    ],
+    "droite": [
+     "Modèle 3D enrichi de données sur les ouvrages et les équipements",
+     "Document contractuel fixant usages, rôles et niveaux de détail",
+     "Format d'échange ouvert entre logiciels de modélisation",
+     "Dossier des ouvrages exécutés remis sous forme de maquette exploitable"
+    ],
+    "gaucheTitre": "Notion",
+    "droiteTitre": "Définition",
+    "titre": "Notions BIM"
+   },
+   "explication": "Le BIM est d'abord une méthode de travail, pas un logiciel. La convention BIM fixe les usages attendus, les responsabilités et le niveau de détail ; l'IFC garantit l'échange entre logiciels différents ; le DOE numérique conditionne la valeur de la maquette en exploitation. Une maquette livrée sans convention préalable ni contrôle est rarement exploitable par les services techniques."
+  },
+  {
+   "id": "n1-42",
+   "axe": "A5",
+   "sousTheme": "Adaptation au changement climatique",
+   "stIdx": 4,
+   "sujet": "adapt-confort",
+   "niveau": 1,
+   "famille": "E",
+   "type": "zonage",
+   "question": "Zonez ce projet de cour d'école : classez chaque emprise selon le levier d'adaptation à la chaleur qu'elle représente.",
+   "zonage": {
+    "cols": 2,
+    "lignes": 3,
+    "legende": [
+     "Ombrage",
+     "Désimperméabilisation",
+     "Eau et fraîcheur"
+    ],
+    "cellules": [
+     {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1,
+      "l": "Alignement d'arbres de haut jet",
+      "cat": 0
+     },
+     {
+      "x": 1,
+      "y": 0,
+      "w": 1,
+      "h": 1,
+      "l": "Noue plantée à la place de l'enrobé",
+      "cat": 1
+     },
+     {
+      "x": 0,
+      "y": 1,
+      "w": 1,
+      "h": 1,
+      "l": "Point d'eau potable et brumisation",
+      "cat": 2
+     },
+     {
+      "x": 1,
+      "y": 1,
+      "w": 1,
+      "h": 1,
+      "l": "Voile d'ombrage sur le préau",
+      "cat": 0
+     },
+     {
+      "x": 0,
+      "y": 2,
+      "w": 1,
+      "h": 1,
+      "l": "Sol en copeaux et pleine terre",
+      "cat": 1
+     },
+     {
+      "x": 1,
+      "y": 2,
+      "w": 1,
+      "h": 1,
+      "l": "Bassin tampon végétalisé",
+      "cat": 2
+     }
+    ],
+    "titre": "Cour d'école adaptée à la chaleur",
+    "legendeBas": "Choisissez une couleur, puis peignez chaque emprise."
+   },
+   "explication": "Une cour désimperméabilisée combine trois leviers : réduction des surfaces minérales sombres, ombrage végétal, et présence d'eau ou de fraîcheur. L'ombrage arboré est le levier le plus efficace à long terme mais suppose une fosse de plantation suffisante et un arrosage les premières années ; les surfaces claires ou les brumisateurs n'ont d'effet que localisé."
+  },
+  {
+   "id": "n1-43",
+   "axe": "A5",
+   "sousTheme": "Sobriété foncière",
+   "stIdx": 5,
+   "sujet": "zan",
+   "niveau": 1,
+   "famille": "M",
+   "type": "curseur",
+   "question": "Réglez le curseur sur l'objectif national de réduction du rythme d'artificialisation des sols pour la décennie 2021-2031, par rapport à la décennie précédente.",
+   "curseur": {
+    "min": 0,
+    "max": 100,
+    "pas": 5,
+    "cible": 50,
+    "tolerance": 0,
+    "unite": "%",
+    "titre": "Sobriété foncière 2021-2031",
+    "reperes": [
+     {
+      "v": 50,
+      "l": "Objectif décennal"
+     }
+    ],
+    "legende": "Réduction par rapport à la décennie 2011-2021."
+   },
+   "explication": "La trajectoire de sobriété foncière fixe une réduction de 50 % du rythme de consommation d'espaces naturels, agricoles et forestiers sur 2021-2031, avant un objectif d'absence d'artificialisation nette à l'horizon 2050. La déclinaison de cet objectif entre régions, intercommunalités et communes reste l'un des points de tension majeurs du sujet.",
+   "derniereVerification": "2026-09",
+   "aVerifier": "Vérifier les évolutions législatives de la trajectoire."
+  },
+  {
+   "id": "n1-44",
+   "axe": "A5",
+   "sousTheme": "Sobriété foncière",
+   "stIdx": 5,
+   "sujet": "zan",
+   "niveau": 1,
+   "famille": "S",
+   "type": "cablage",
+   "question": "Raccordez chaque notion de sobriété foncière à sa définition.",
+   "cablage": {
+    "gauche": [
+     "Consommation d'ENAF",
+     "Artificialisation nette",
+     "Renaturation",
+     "Friche"
+    ],
+    "droite": [
+     "Transformation d'espaces naturels, agricoles ou forestiers en surfaces urbanisées",
+     "Solde entre surfaces artificialisées et surfaces renaturées sur une période",
+     "Retour d'un sol artificialisé à un état naturel ou agricole fonctionnel",
+     "Terrain déjà artificialisé, sans usage, dont la réutilisation évite une extension"
+    ],
+    "gaucheTitre": "Notion",
+    "droiteTitre": "Définition",
+    "titre": "Sobriété foncière"
+   },
+   "explication": "Le vocabulaire est piégeux : la consommation d'espaces naturels, agricoles et forestiers sert de référence pour la première décennie, tandis que l'artificialisation nette, appréciée par la nomenclature réglementaire, prend le relais ensuite. La renaturation permet de compenser une artificialisation, et la mobilisation des friches est le principal gisement alternatif à l'extension urbaine."
+  },
+  {
+   "id": "n1-45",
+   "axe": "A6",
+   "sousTheme": "Organisation territoriale et compétences",
+   "stIdx": 0,
+   "sujet": "org-niveaux",
+   "niveau": 1,
+   "famille": "S",
+   "type": "empilement",
+   "question": "Composez la pile des échelons d'administration territoriale, du périmètre le plus large au plus proche de l'habitant.",
+   "empilement": {
+    "couches": [
+     {
+      "l": "État",
+      "sub": "services déconcentrés, préfet"
+     },
+     {
+      "l": "Région",
+      "sub": "aménagement, transports, lycées"
+     },
+     {
+      "l": "Département",
+      "sub": "action sociale, collèges, routes"
+     },
+     {
+      "l": "EPCI",
+      "sub": "compétences transférées par les communes"
+     },
+     {
+      "l": "Commune",
+      "sub": "échelon de proximité"
+     }
+    ],
+    "titre": "Échelons territoriaux",
+    "base": "Proximité de l'habitant",
+    "sommet": "Périmètre le plus large"
+   },
+   "explication": "L'État, la région, le département, l'intercommunalité et la commune se superposent sans hiérarchie juridique entre collectivités : aucune ne peut exercer de tutelle sur une autre. La loi organise seulement des chefs de file par domaine, par exemple la région pour le développement économique et le département pour l'action sociale."
+  },
+  {
+   "id": "n1-46",
+   "axe": "A6",
+   "sousTheme": "Organisation territoriale et compétences",
+   "stIdx": 0,
+   "sujet": "org-niveaux",
+   "niveau": 1,
+   "famille": "S",
+   "type": "cablage",
+   "question": "Raccordez chaque compétence à la collectivité qui l'exerce à titre principal.",
+   "cablage": {
+    "gauche": [
+     "Écoles maternelles et élémentaires",
+     "Collèges",
+     "Lycées",
+     "Revenu de solidarité active",
+     "Transports ferroviaires régionaux"
+    ],
+    "droite": [
+     "Commune",
+     "Département",
+     "Région",
+     "Département",
+     "Région"
+    ],
+    "gaucheTitre": "Compétence",
+    "droiteTitre": "Collectivité",
+    "titre": "Répartition des compétences"
+   },
+   "explication": "La répartition scolaire est un classique d'oral : écoles pour la commune, collèges pour le département, lycées pour la région. Le département reste le chef de file de l'action sociale, avec le RSA et l'aide sociale à l'enfance ; la région pilote le développement économique et les transports régionaux."
+  },
+  {
+   "id": "n1-47",
+   "axe": "A6",
+   "sousTheme": "Actes locaux et contrôle",
+   "stIdx": 1,
+   "sujet": "acte-exec",
+   "niveau": 1,
+   "famille": "S",
+   "type": "circuit",
+   "question": "Tracez le circuit qui rend exécutoire une délibération soumise au contrôle de légalité.",
+   "circuit": {
+    "etapes": [
+     {
+      "l": "Adoption par l'assemblée délibérante",
+      "x": 26,
+      "y": 51
+     },
+     {
+      "l": "Transmission au représentant de l'État",
+      "x": 26,
+      "y": 14
+     },
+     {
+      "l": "Publication ou notification",
+      "x": 26,
+      "y": 88
+     },
+     {
+      "l": "Caractère exécutoire",
+      "sub": "l'acte produit ses effets",
+      "x": 74,
+      "y": 32
+     },
+     {
+      "l": "Déféré préfectoral éventuel",
+      "sub": "contrôle de légalité a posteriori",
+      "x": 74,
+      "y": 70
+     }
+    ],
+    "chemin": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ],
+    "titre": "Caractère exécutoire d'un acte local"
+   },
+   "explication": "Une délibération devient exécutoire après son adoption, sa transmission au représentant de l'État lorsqu'elle relève des actes transmissibles, et sa publication ou notification. Le contrôle de légalité s'exerce a posteriori : le préfet ne peut pas annuler l'acte lui-même, il défère au tribunal administratif dans les deux mois, éventuellement après un recours gracieux."
+  },
+  {
+   "id": "n1-48",
+   "axe": "A6",
+   "sousTheme": "Statut : sources et carrière",
+   "stIdx": 2,
+   "sujet": "fpt-sources",
+   "niveau": 1,
+   "famille": "S",
+   "type": "empilement",
+   "question": "Composez la hiérarchie des sources qui déterminent la situation statutaire d'un agent territorial.",
+   "empilement": {
+    "couches": [
+     {
+      "l": "Code général de la fonction publique",
+      "sub": "droits et obligations communs"
+     },
+     {
+      "l": "Décret portant statut particulier",
+      "sub": "cadre d'emplois, grades, échelonnement"
+     },
+     {
+      "l": "Délibération de la collectivité",
+      "sub": "emplois, régime indemnitaire, temps de travail"
+     },
+     {
+      "l": "Arrêté individuel",
+      "sub": "situation propre à l'agent"
+     }
+    ],
+    "titre": "Sources du statut",
+    "base": "Situation de l'agent",
+    "sommet": "Norme la plus élevée"
+   },
+   "explication": "La situation de l'agent est statutaire et réglementaire, non contractuelle : elle résulte du code général de la fonction publique, des décrets portant statut particulier de chaque cadre d'emplois, des délibérations de la collectivité, puis de l'arrêté individuel. Une délibération ne peut donc pas créer un régime plus favorable que le statut particulier."
+  },
+  {
+   "id": "n1-49",
+   "axe": "A6",
+   "sousTheme": "Statut : sources et carrière",
+   "stIdx": 2,
+   "sujet": "fpt-sources",
+   "niveau": 1,
+   "famille": "S",
+   "type": "curseur",
+   "question": "Réglez le curseur sur la durée normale du stage avant titularisation d'un ingénieur territorial.",
+   "curseur": {
+    "min": 0,
+    "max": 3,
+    "pas": 0.5,
+    "cible": 1,
+    "tolerance": 0,
+    "unite": "an(s)",
+    "titre": "Durée du stage",
+    "reperes": [
+     {
+      "v": 1,
+      "l": "Durée normale"
+     },
+     {
+      "v": 2,
+      "l": "Prorogation possible"
+     }
+    ],
+    "legende": "Durée avant titularisation."
+   },
+   "explication": "Le stage dure un an et peut être prorogé une fois pour la même durée. Il n'aboutit pas automatiquement : la titularisation est une décision de l'autorité territoriale, prise après avis, et le stage peut se conclure par une prolongation ou un licenciement pour insuffisance professionnelle."
+  },
+  {
+   "id": "n1-50",
+   "axe": "A6",
+   "sousTheme": "Le cadre d'emplois d'ingénieur",
+   "stIdx": 3,
+   "sujet": "ing-cadre",
+   "niveau": 1,
+   "famille": "S",
+   "type": "cablage",
+   "question": "Raccordez chaque grade du cadre d'emplois des ingénieurs territoriaux à sa position.",
+   "cablage": {
+    "gauche": [
+     "Ingénieur",
+     "Ingénieur principal",
+     "Ingénieur hors classe",
+     "Ingénieur en chef"
+    ],
+    "droite": [
+     "Grade de recrutement du concours externe",
+     "Grade d'avancement, encadrement et projets complexes",
+     "Grade sommital du cadre d'emplois",
+     "Cadre d'emplois distinct, accès aux emplois de direction"
+    ],
+    "gaucheTitre": "Grade",
+    "droiteTitre": "Position",
+    "titre": "Cadre d'emplois"
+   },
+   "explication": "Le cadre d'emplois des ingénieurs territoriaux relève de la catégorie A, filière technique, et comporte les grades d'ingénieur, d'ingénieur principal et d'ingénieur hors classe. Il se distingue du cadre d'emplois des ingénieurs en chef, recruté par un concours distinct et donnant accès aux emplois de direction des grandes collectivités."
+  },
+  {
+   "id": "n1-51",
+   "axe": "A6",
+   "sousTheme": "Le cadre d'emplois d'ingénieur",
+   "stIdx": 3,
+   "sujet": "ing-cadre",
+   "niveau": 1,
+   "famille": "S",
+   "type": "circuit",
+   "question": "Tracez le parcours d'un lauréat du concours externe d'ingénieur territorial jusqu'à sa titularisation.",
+   "circuit": {
+    "etapes": [
+     {
+      "l": "Admissibilité : épreuves écrites",
+      "x": 26,
+      "y": 44
+     },
+     {
+      "l": "Admission : épreuves orales",
+      "x": 74,
+      "y": 91
+     },
+     {
+      "l": "Inscription sur liste d'aptitude",
+      "sub": "la réussite ne vaut pas recrutement",
+      "x": 74,
+      "y": 61
+     },
+     {
+      "l": "Recherche d'un employeur et recrutement",
+      "x": 74,
+      "y": 27
+     },
+     {
+      "l": "Stage d'un an",
+      "sub": "prorogeable une fois",
+      "x": 26,
+      "y": 77
+     },
+     {
+      "l": "Titularisation",
+      "x": 26,
+      "y": 12
+     }
+    ],
+    "chemin": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5
+    ],
+    "titre": "Du concours à la titularisation"
+   },
+   "explication": "La réussite au concours ne vaut pas recrutement : le lauréat est inscrit sur une liste d'aptitude et doit trouver lui-même un employeur, d'où l'expression de « reçu-collé ». Une fois recruté, il est nommé stagiaire pour un an, puis titularisé par décision de l'autorité territoriale."
+  },
+  {
+   "id": "n1-52",
+   "axe": "A6",
+   "sousTheme": "Droits, obligations, déontologie",
+   "stIdx": 4,
+   "sujet": "deonto-oblig",
+   "niveau": 1,
+   "famille": "S",
+   "type": "cablage",
+   "question": "Raccordez chaque obligation déontologique de l'agent public à sa portée concrète.",
+   "cablage": {
+    "gauche": [
+     "Neutralité et laïcité",
+     "Secret professionnel",
+     "Discrétion professionnelle",
+     "Obéissance hiérarchique",
+     "Dignité et impartialité"
+    ],
+    "droite": [
+     "Aucune manifestation d'opinion dans l'exercice des fonctions",
+     "Protection des informations personnelles dont l'agent a connaissance",
+     "Ne pas divulguer les faits et documents connus dans le service",
+     "Exécuter les instructions, sauf ordre manifestement illégal et gravement préjudiciable",
+     "Traiter les usagers sans favoritisme et préserver l'image du service"
+    ],
+    "gaucheTitre": "Obligation",
+    "droiteTitre": "Portée",
+    "titre": "Obligations déontologiques"
+   },
+   "explication": "Les obligations sont cumulatives et opposables même hors service pour certaines d'entre elles. La neutralité et la laïcité s'imposent dans l'exercice des fonctions, le secret professionnel protège les informations relatives aux personnes, la discrétion professionnelle couvre les faits connus dans le service, et l'obéissance hiérarchique cède devant un ordre manifestement illégal de nature à compromettre gravement un intérêt public."
+  },
+  {
+   "id": "n1-53",
+   "axe": "A6",
+   "sousTheme": "Dialogue social et temps de travail",
+   "stIdx": 5,
+   "sujet": "dialogue-cst",
+   "niveau": 1,
+   "famille": "S",
+   "type": "curseur",
+   "question": "Réglez le curseur sur la durée annuelle de travail applicable à un agent territorial à temps complet.",
+   "curseur": {
+    "min": 1400,
+    "max": 1800,
+    "pas": 1,
+    "cible": 1607,
+    "tolerance": 0,
+    "unite": "heures",
+    "titre": "Temps de travail annuel",
+    "reperes": [
+     {
+      "v": 1607,
+      "l": "Durée légale"
+     }
+    ],
+    "legende": "Durée pour un agent à temps complet."
+   },
+   "explication": "La durée annuelle est de 1 607 heures, incluant la journée de solidarité. La loi de transformation de la fonction publique a supprimé les régimes dérogatoires antérieurs, ce qui a conduit de nombreuses collectivités à revoir leurs cycles de travail, sujet fréquent de dialogue social conflictuel."
+  },
+  {
+   "id": "n1-54",
+   "axe": "A6",
+   "sousTheme": "Dialogue social et temps de travail",
+   "stIdx": 5,
+   "sujet": "dialogue-cst",
+   "niveau": 1,
+   "famille": "S",
+   "type": "cablage",
+   "question": "Raccordez chaque instance de dialogue social à son domaine de compétence.",
+   "cablage": {
+    "gauche": [
+     "Comité social territorial",
+     "Formation spécialisée en santé et sécurité",
+     "Commission administrative paritaire",
+     "Commission consultative paritaire"
+    ],
+    "droite": [
+     "Organisation, fonctionnement et lignes directrices de gestion",
+     "Conditions de travail, prévention des risques professionnels",
+     "Décisions individuelles défavorables concernant les fonctionnaires",
+     "Décisions individuelles concernant les agents contractuels"
+    ],
+    "gaucheTitre": "Instance",
+    "droiteTitre": "Compétence",
+    "titre": "Instances de dialogue social"
+   },
+   "explication": "Le comité social territorial traite l'organisation et le fonctionnement des services, avec en son sein une formation spécialisée en santé, sécurité et conditions de travail au-delà d'un seuil d'effectifs. Les commissions administratives paritaires ne sont plus consultées sur les mutations et avancements et se concentrent sur les décisions individuelles défavorables ; les commissions consultatives paritaires jouent ce rôle pour les agents contractuels."
+  },
+  {
+   "id": "n1-55",
+   "axe": "A6",
+   "sousTheme": "Comparaison FPT / FPE / FPH",
+   "stIdx": 6,
+   "sujet": "comp-effectifs",
+   "niveau": 1,
+   "famille": "M",
+   "type": "curseur",
+   "question": "Réglez le curseur sur la part approximative de la fonction publique territoriale dans l'emploi public français.",
+   "curseur": {
+    "min": 0,
+    "max": 60,
+    "pas": 1,
+    "cible": 34,
+    "tolerance": 3,
+    "unite": "%",
+    "titre": "Part de la FPT",
+    "reperes": [
+     {
+      "v": 20,
+      "l": "Hospitalière"
+     },
+     {
+      "v": 34,
+      "l": "Territoriale"
+     },
+     {
+      "v": 44,
+      "l": "État"
+     }
+    ],
+    "legende": "Ordre de grandeur, tolérance de trois points."
+   },
+   "explication": "La fonction publique territoriale représente environ un tiers des agents publics, soit de l'ordre de 1,9 million d'agents sur environ 5,7 millions, derrière la fonction publique de l'État et devant l'hospitalière. Elle se caractérise par une part importante d'agents de catégorie C et par une forte présence des filières technique et médico-sociale.",
+   "derniereVerification": "2026-09"
+  },
+  {
+   "id": "n1-56",
+   "axe": "A6",
+   "sousTheme": "Finances locales",
+   "stIdx": 7,
+   "sujet": "fin-sections",
+   "niveau": 1,
+   "famille": "S",
+   "type": "zonage",
+   "question": "Zonez ce budget communal : classez chaque dépense dans la bonne section.",
+   "zonage": {
+    "cols": 2,
+    "lignes": 3,
+    "legende": [
+     "Fonctionnement",
+     "Investissement"
+    ],
+    "cellules": [
+     {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1,
+      "l": "Charges de personnel",
+      "cat": 0
+     },
+     {
+      "x": 1,
+      "y": 0,
+      "w": 1,
+      "h": 1,
+      "l": "Construction d'un groupe scolaire",
+      "cat": 1
+     },
+     {
+      "x": 0,
+      "y": 1,
+      "w": 1,
+      "h": 1,
+      "l": "Intérêts de la dette",
+      "cat": 0
+     },
+     {
+      "x": 1,
+      "y": 1,
+      "w": 1,
+      "h": 1,
+      "l": "Remboursement du capital de la dette",
+      "cat": 1
+     },
+     {
+      "x": 0,
+      "y": 2,
+      "w": 1,
+      "h": 1,
+      "l": "Achat de fournitures d'entretien",
+      "cat": 0
+     },
+     {
+      "x": 1,
+      "y": 2,
+      "w": 1,
+      "h": 1,
+      "l": "Acquisition d'un véhicule de service",
+      "cat": 1
+     }
+    ],
+    "titre": "Sections du budget communal",
+    "legendeBas": "Peignez chaque dépense dans sa section."
+   },
+   "explication": "La section de fonctionnement regroupe les dépenses courantes et récurrentes, dont les charges de personnel et les intérêts de la dette ; la section d'investissement porte les dépenses qui modifient le patrimoine, dont le remboursement du capital de la dette. Le partage intérêts en fonctionnement et capital en investissement est le piège classique de l'oral."
+  },
+  {
+   "id": "n1-57",
+   "axe": "A6",
+   "sousTheme": "Débats et critiques",
+   "stIdx": 8,
+   "sujet": "debat-attract",
+   "niveau": 1,
+   "famille": "E",
+   "type": "zonage",
+   "question": "Zonez ce débat sur l'attractivité de la fonction publique territoriale : classez chaque constat en atout ou en limite.",
+   "zonage": {
+    "cols": 2,
+    "lignes": 3,
+    "legende": [
+     "Atout",
+     "Limite"
+    ],
+    "cellules": [
+     {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1,
+      "l": "Sécurité de l'emploi et déroulé de carrière lisible",
+      "cat": 0
+     },
+     {
+      "x": 1,
+      "y": 0,
+      "w": 1,
+      "h": 1,
+      "l": "Rémunération de début de carrière peu compétitive sur les métiers techniques",
+      "cat": 1
+     },
+     {
+      "x": 0,
+      "y": 1,
+      "w": 1,
+      "h": 1,
+      "l": "Diversité des métiers et proximité du terrain",
+      "cat": 0
+     },
+     {
+      "x": 1,
+      "y": 1,
+      "w": 1,
+      "h": 1,
+      "l": "Délais de recrutement longs face à la réactivité du privé",
+      "cat": 1
+     },
+     {
+      "x": 0,
+      "y": 2,
+      "w": 1,
+      "h": 1,
+      "l": "Sens du service public et utilité sociale",
+      "cat": 0
+     },
+     {
+      "x": 1,
+      "y": 2,
+      "w": 1,
+      "h": 1,
+      "l": "Difficulté à pourvoir certains postes spécialisés",
+      "cat": 1
+     }
+    ],
+    "titre": "Attractivité de la FPT",
+    "legendeBas": "Peignez chaque constat."
+   },
+   "explication": "L'analyse doit rester équilibrée : sécurité de l'emploi, diversité des métiers et sens du service public constituent des atouts réels, tandis que la faiblesse relative des rémunérations en début de carrière, la concurrence du privé sur les métiers techniques et la lourdeur des procédures de recrutement pèsent sur l'attractivité. Un jury attend une position argumentée, pas un plaidoyer."
+  },
+  {
+   "id": "n1-58",
+   "axe": "A7",
+   "sousTheme": "Concours et statut de l'ingénieur",
+   "stIdx": 0,
+   "sujet": "g-0",
+   "niveau": 1,
+   "famille": "S",
+   "type": "cablage",
+   "question": "Raccordez chaque épreuve du concours externe d'ingénieur territorial à sa nature.",
+   "cablage": {
+    "gauche": [
+     "Épreuve d'admissibilité",
+     "Note à partir d'un dossier",
+     "Entretien avec le jury",
+     "Liste d'aptitude"
+    ],
+    "droite": [
+     "Épreuve écrite anonyme, éliminatoire en dessous d'une note plancher",
+     "Restitution structurée et opérationnelle d'un dossier technique",
+     "Épreuve orale d'admission portant sur le parcours et les mises en situation",
+     "Document listant les lauréats, sans valoir recrutement"
+    ],
+    "gaucheTitre": "Élément",
+    "droiteTitre": "Nature",
+    "titre": "Concours externe"
+   },
+   "explication": "Le concours externe comporte des épreuves d'admissibilité écrites, dont une note à partir d'un dossier, puis une épreuve orale d'admission devant un jury, à dominante entretien de motivation et de mise en situation professionnelle. La préparation de l'oral suppose une culture territoriale factuelle et la capacité à défendre une position sans caricature."
+  },
+  {
+   "id": "n1-59",
+   "axe": "A7",
+   "sousTheme": "Concours et statut de l'ingénieur",
+   "stIdx": 0,
+   "sujet": "g-0",
+   "niveau": 1,
+   "famille": "S",
+   "type": "circuit",
+   "question": "Tracez la chronologie du concours externe d'ingénieur territorial, de l'inscription à la prise de poste.",
+   "circuit": {
+    "etapes": [
+     {
+      "l": "Inscription au concours",
+      "x": 26,
+      "y": 51
+     },
+     {
+      "l": "Épreuves écrites d'admissibilité",
+      "x": 26,
+      "y": 14
+     },
+     {
+      "l": "Épreuve orale d'admission",
+      "x": 26,
+      "y": 88
+     },
+     {
+      "l": "Inscription sur la liste d'aptitude",
+      "x": 74,
+      "y": 32
+     },
+     {
+      "l": "Recrutement par une collectivité",
+      "sub": "nomination comme stagiaire",
+      "x": 74,
+      "y": 70
+     }
+    ],
+    "chemin": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ],
+    "titre": "Calendrier du concours"
+   },
+   "explication": "L'inscription précède les épreuves écrites d'admissibilité, puis l'oral d'admission. Le lauréat est ensuite inscrit sur liste d'aptitude et recherche un employeur ; la nomination en qualité de stagiaire n'intervient qu'au moment de son recrutement par une collectivité."
+  },
+  {
+   "id": "n1-60",
+   "axe": "A7",
+   "sousTheme": "Institutions et décentralisation",
+   "stIdx": 1,
+   "sujet": "g-1",
+   "niveau": 1,
+   "famille": "S",
+   "type": "empilement",
+   "question": "Composez la hiérarchie des normes applicables en droit français, de la plus élevée à la plus locale.",
+   "empilement": {
+    "couches": [
+     {
+      "l": "Bloc de constitutionnalité",
+      "sub": "Constitution, Déclaration de 1789, principes fondamentaux"
+     },
+     {
+      "l": "Traités et droit de l'Union européenne",
+      "sub": ""
+     },
+     {
+      "l": "Lois",
+      "sub": "votées par le Parlement"
+     },
+     {
+      "l": "Règlements",
+      "sub": "décrets, arrêtés ministériels et préfectoraux"
+     },
+     {
+      "l": "Actes des collectivités",
+      "sub": "délibérations, arrêtés du maire"
+     }
+    ],
+    "titre": "Hiérarchie des normes",
+    "base": "Norme la plus locale",
+    "sommet": "Norme la plus élevée"
+   },
+   "explication": "Le bloc de constitutionnalité prime sur les traités et le droit de l'Union, eux-mêmes supérieurs aux lois, puis aux règlements — décrets et arrêtés —, et enfin aux actes des collectivités. Un arrêté municipal contraire à une loi est illégal : le préfet peut le déférer au juge administratif dans le cadre du contrôle de légalité."
+  },
+  {
+   "id": "n1-61",
+   "axe": "A7",
+   "sousTheme": "Institutions et décentralisation",
+   "stIdx": 1,
+   "sujet": "g-1",
+   "niveau": 1,
+   "famille": "S",
+   "type": "curseur",
+   "question": "Réglez le curseur sur l'année de la première grande loi de décentralisation, dite loi Defferre.",
+   "curseur": {
+    "min": 1970,
+    "max": 2020,
+    "pas": 1,
+    "cible": 1982,
+    "tolerance": 0,
+    "titre": "Actes de la décentralisation",
+    "reperes": [
+     {
+      "v": 1982,
+      "l": "Loi Defferre"
+     },
+     {
+      "v": 2003,
+      "l": "Acte II, révision constitutionnelle"
+     },
+     {
+      "v": 2015,
+      "l": "Loi NOTRe"
+     }
+    ],
+    "legende": "Placez le curseur sur l'acte I."
+   },
+   "explication": "La loi du 2 mars 1982 relative aux droits et libertés des communes, des départements et des régions supprime la tutelle a priori du préfet, transfère l'exécutif départemental au président du conseil général et fait de la région une collectivité territoriale de plein exercice, effective en 1986. Elle ouvre l'acte I de la décentralisation, complété en 2003-2004 puis par les lois MAPTAM et NOTRe."
+  },
+  {
+   "id": "n1-62",
+   "axe": "A7",
+   "sousTheme": "Collectivités, EPCI et compétences",
+   "stIdx": 2,
+   "sujet": "g-2",
+   "niveau": 1,
+   "famille": "M",
+   "type": "cablage",
+   "question": "Raccordez chaque catégorie d'EPCI à fiscalité propre à son seuil de population.",
+   "cablage": {
+    "gauche": [
+     "Communauté de communes",
+     "Communauté d'agglomération",
+     "Communauté urbaine",
+     "Métropole"
+    ],
+    "droite": [
+     "Pas de seuil de principe pour la création, régime le plus souple",
+     "Ensemble d'au moins 50 000 habitants autour d'une ville-centre",
+     "Ensemble d'au moins 250 000 habitants",
+     "Ensemble d'au moins 400 000 habitants"
+    ],
+    "gaucheTitre": "Catégorie",
+    "droiteTitre": "Seuil de population",
+    "titre": "EPCI à fiscalité propre"
+   },
+   "explication": "Les seuils démographiques distinguent la communauté de communes, la communauté d'agglomération autour d'une ville-centre, la communauté urbaine et la métropole. Des dérogations existent, notamment pour les zones de montagne et les territoires peu denses, et certaines structures conservent leur statut malgré une population inférieure au seuil actuel.",
+   "derniereVerification": "2026-09"
+  },
+  {
+   "id": "n1-63",
+   "axe": "A7",
+   "sousTheme": "Service public et usagers",
+   "stIdx": 3,
+   "sujet": "g-3",
+   "niveau": 1,
+   "famille": "S",
+   "type": "cablage",
+   "question": "Raccordez chaque loi du service public à son contenu.",
+   "cablage": {
+    "gauche": [
+     "Continuité",
+     "Égalité",
+     "Mutabilité"
+    ],
+    "droite": [
+     "Le service fonctionne de façon régulière et sans interruption injustifiée",
+     "Les usagers placés dans la même situation sont traités de la même façon",
+     "Le service s'adapte aux évolutions des besoins et des techniques"
+    ],
+    "gaucheTitre": "Principe",
+    "droiteTitre": "Contenu",
+    "titre": "Lois du service public"
+   },
+   "explication": "Les lois de Rolland structurent le service public : continuité, égalité et mutabilité. La continuité justifie l'encadrement du droit de grève et la permanence des astreintes techniques, l'égalité interdit les différences de traitement non justifiées entre usagers placés dans la même situation, la mutabilité permet d'adapter le service sans que l'usager puisse invoquer un droit au maintien des règles."
+  },
+  {
+   "id": "n1-64",
+   "axe": "A7",
+   "sousTheme": "Fonction publique : accès, droits, carrière",
+   "stIdx": 4,
+   "sujet": "g-4",
+   "niveau": 1,
+   "famille": "S",
+   "type": "cablage",
+   "question": "Raccordez chaque catégorie de la fonction publique au niveau de recrutement correspondant.",
+   "cablage": {
+    "gauche": [
+     "Catégorie A",
+     "Catégorie B",
+     "Catégorie C"
+    ],
+    "droite": [
+     "Conception et encadrement, recrutement au niveau licence",
+     "Fonctions d'application, recrutement au niveau baccalauréat",
+     "Fonctions d'exécution, sans diplôme ou niveau CAP-BEP"
+    ],
+    "gaucheTitre": "Catégorie",
+    "droiteTitre": "Niveau",
+    "titre": "Catégories hiérarchiques"
+   },
+   "explication": "Les catégories traduisent le niveau de fonctions et de diplôme : A pour les fonctions de conception et d'encadrement, à partir de la licence, B pour l'application, au niveau du baccalauréat, C pour l'exécution, sans diplôme ou avec un CAP-BEP. La fonction publique territoriale se caractérise par la part majoritaire des agents de catégorie C."
+  },
+  {
+   "id": "n1-65",
+   "axe": "A7",
+   "sousTheme": "Fonction publique : accès, droits, carrière",
+   "stIdx": 4,
+   "sujet": "g-4",
+   "niveau": 1,
+   "famille": "S",
+   "type": "circuit",
+   "question": "Tracez le déroulement classique d'une carrière de fonctionnaire territorial.",
+   "circuit": {
+    "etapes": [
+     {
+      "l": "Réussite au concours",
+      "x": 26,
+      "y": 51
+     },
+     {
+      "l": "Nomination en qualité de stagiaire",
+      "x": 26,
+      "y": 14
+     },
+     {
+      "l": "Titularisation dans un grade",
+      "x": 26,
+      "y": 88
+     },
+     {
+      "l": "Avancement d'échelon",
+      "sub": "à l'ancienneté",
+      "x": 74,
+      "y": 32
+     },
+     {
+      "l": "Avancement de grade ou promotion interne",
+      "sub": "selon les lignes directrices de gestion",
+      "x": 74,
+      "y": 70
+     }
+    ],
+    "chemin": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ],
+    "titre": "Déroulement de carrière"
+   },
+   "explication": "La carrière se déroule dans un cadre d'emplois : après le concours, la nomination comme stagiaire et la titularisation, l'agent progresse par avancement d'échelon à l'ancienneté, puis par avancement de grade ou promotion interne, sous réserve des lignes directrices de gestion de la collectivité et des postes disponibles."
+  },
+  {
+   "id": "n1-66",
+   "axe": "A7",
+   "sousTheme": "Pouvoirs du maire et actes locaux",
+   "stIdx": 5,
+   "sujet": "g-5",
+   "niveau": 1,
+   "famille": "S",
+   "type": "zonage",
+   "question": "Zonez les attributions du maire : classez chaque action selon qu'il l'exerce au nom de la commune ou au nom de l'État.",
+   "zonage": {
+    "cols": 2,
+    "lignes": 3,
+    "legende": [
+     "Au nom de la commune",
+     "Au nom de l'État"
+    ],
+    "cellules": [
+     {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1,
+      "l": "Exécution des délibérations du conseil municipal",
+      "cat": 0
+     },
+     {
+      "x": 1,
+      "y": 0,
+      "w": 1,
+      "h": 1,
+      "l": "Célébration des mariages et état civil",
+      "cat": 1
+     },
+     {
+      "x": 0,
+      "y": 1,
+      "w": 1,
+      "h": 1,
+      "l": "Police municipale et arrêtés de circulation",
+      "cat": 0
+     },
+     {
+      "x": 1,
+      "y": 1,
+      "w": 1,
+      "h": 1,
+      "l": "Organisation matérielle des élections",
+      "cat": 1
+     },
+     {
+      "x": 0,
+      "y": 2,
+      "w": 1,
+      "h": 1,
+      "l": "Direction des services communaux",
+      "cat": 0
+     },
+     {
+      "x": 1,
+      "y": 2,
+      "w": 1,
+      "h": 1,
+      "l": "Publication des lois et règlements",
+      "cat": 1
+     }
+    ],
+    "titre": "Attributions du maire",
+    "legendeBas": "Peignez chaque attribution."
+   },
+   "explication": "Le maire a une double casquette : exécutif de la commune sous le contrôle du conseil municipal, et agent de l'État pour l'état civil, les élections, la publication des lois et certaines fonctions de police judiciaire. Cette distinction commande le régime de responsabilité et l'autorité dont il relève dans chaque cas."
+  },
+  {
+   "id": "n1-67",
+   "axe": "A7",
+   "sousTheme": "Budget et finances locales",
+   "stIdx": 6,
+   "sujet": "g-6",
+   "niveau": 1,
+   "famille": "S",
+   "type": "circuit",
+   "question": "Tracez le cycle budgétaire annuel d'une commune.",
+   "circuit": {
+    "etapes": [
+     {
+      "l": "Débat d'orientation budgétaire",
+      "sub": "dans les deux mois précédant le vote",
+      "x": 26,
+      "y": 51
+     },
+     {
+      "l": "Vote du budget primitif",
+      "sub": "avant le 15 avril",
+      "x": 26,
+      "y": 14
+     },
+     {
+      "l": "Exécution des dépenses et recettes",
+      "x": 26,
+      "y": 88
+     },
+     {
+      "l": "Décisions modificatives",
+      "x": 74,
+      "y": 32
+     },
+     {
+      "l": "Vote du compte administratif",
+      "sub": "avant le 30 juin N+1",
+      "x": 74,
+      "y": 70
+     }
+    ],
+    "chemin": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ],
+    "titre": "Cycle budgétaire communal"
+   },
+   "explication": "Le débat d'orientation budgétaire précède le vote du budget primitif, qui doit intervenir avant le 15 avril de l'exercice, ou le 30 avril l'année de renouvellement de l'assemblée. L'exécution est ajustée par des décisions modificatives, puis le compte administratif — ou compte financier unique dans les collectivités expérimentatrices — est voté avant le 30 juin de l'année suivante."
+  },
+  {
+   "id": "n1-68",
+   "axe": "A7",
+   "sousTheme": "Budget et finances locales",
+   "stIdx": 6,
+   "sujet": "g-6",
+   "niveau": 1,
+   "famille": "S",
+   "type": "cablage",
+   "question": "Raccordez chaque principe budgétaire à sa signification.",
+   "cablage": {
+    "gauche": [
+     "Annualité",
+     "Unité",
+     "Universalité",
+     "Sincérité",
+     "Équilibre réel"
+    ],
+    "droite": [
+     "Le budget est voté pour un exercice de douze mois",
+     "L'ensemble des recettes et des dépenses figure dans un document unique",
+     "Les recettes ne sont pas affectées à des dépenses déterminées",
+     "Les prévisions doivent être évaluées de façon plausible",
+     "Chaque section est équilibrée et le capital de la dette est couvert par des ressources propres"
+    ],
+    "gaucheTitre": "Principe",
+    "droiteTitre": "Signification",
+    "titre": "Principes budgétaires"
+   },
+   "explication": "Les principes budgétaires encadrent la préparation et le vote : annualité, unité, universalité, sincérité, et équilibre réel propre aux collectivités. L'équilibre réel impose notamment que le remboursement du capital de la dette soit couvert par des ressources propres, ce qui interdit d'emprunter pour rembourser un emprunt."
+  },
+  {
+   "id": "n1-69",
+   "axe": "A7",
+   "sousTheme": "Marchés publics et MOP",
+   "stIdx": 7,
+   "sujet": "g-7",
+   "niveau": 1,
+   "famille": "S",
+   "type": "cablage",
+   "question": "Raccordez chaque document contractuel d'un marché de travaux à son rôle.",
+   "cablage": {
+    "gauche": [
+     "Acte d'engagement",
+     "CCAP",
+     "CCTP",
+     "CCAG-Travaux",
+     "Règlement de consultation"
+    ],
+    "droite": [
+     "Pièce signée engageant les parties sur le prix et les délais",
+     "Clauses administratives particulières du marché",
+     "Exigences techniques et description des ouvrages",
+     "Clauses administratives générales applicables par référence",
+     "Organise la procédure, non contractuel après signature"
+    ],
+    "gaucheTitre": "Pièce",
+    "droiteTitre": "Rôle",
+    "titre": "Pièces d'un marché de travaux"
+   },
+   "explication": "L'acte d'engagement porte la signature et le prix, le CCAP fixe les clauses administratives propres au marché, le CCTP décrit les exigences techniques, le CCAG s'applique par référence et le règlement de consultation organise la procédure sans faire partie des pièces contractuelles du marché signé."
+  },
+  {
+   "id": "n1-70",
+   "axe": "A7",
+   "sousTheme": "ERP, IGH et urbanisme",
+   "stIdx": 8,
+   "sujet": "g-8",
+   "niveau": 1,
+   "famille": "S",
+   "type": "curseur",
+   "question": "Réglez le curseur sur la hauteur qui fait entrer un bâtiment autre qu'une habitation dans la catégorie des immeubles de grande hauteur.",
+   "curseur": {
+    "min": 0,
+    "max": 60,
+    "pas": 1,
+    "cible": 28,
+    "tolerance": 0,
+    "unite": "m",
+    "titre": "Seuil IGH hors habitation",
+    "reperes": [
+     {
+      "v": 28,
+      "l": "Autres bâtiments"
+     },
+     {
+      "v": 50,
+      "l": "Habitation"
+     }
+    ],
+    "legende": "Hauteur du plancher bas du dernier niveau."
+   },
+   "explication": "Pour tous les bâtiments autres que l'habitation, le seuil est de 28 m mesurés entre le niveau accessible aux engins de secours et le plancher bas du dernier niveau ; il est porté à 50 m pour l'habitation. Le franchissement de ce seuil change complètement le régime de sécurité incendie applicable."
+  },
+  {
+   "id": "n1-71",
+   "axe": "A7",
+   "sousTheme": "Patrimoine, transition et métier du BTP",
+   "stIdx": 9,
+   "sujet": "g-9",
+   "niveau": 1,
+   "famille": "M",
+   "type": "curseur",
+   "question": "Réglez le curseur sur la part approximative du secteur du bâtiment dans la consommation d'énergie finale en France.",
+   "curseur": {
+    "min": 0,
+    "max": 80,
+    "pas": 1,
+    "cible": 44,
+    "tolerance": 4,
+    "unite": "%",
+    "titre": "Part du bâtiment",
+    "reperes": [
+     {
+      "v": 25,
+      "l": "Transports"
+     },
+     {
+      "v": 44,
+      "l": "Bâtiment"
+     }
+    ],
+    "legende": "Ordre de grandeur, tolérance de quatre points."
+   },
+   "explication": "Le bâtiment représente de l'ordre de 40 à 45 % de la consommation d'énergie finale nationale et environ un quart des émissions de gaz à effet de serre, ce qui explique la densité des politiques publiques sur ce secteur : rénovation énergétique, dispositif tertiaire, décret BACS, RE2020.",
+   "derniereVerification": "2026-09"
+  },
+  {
+   "id": "n1-72",
+   "axe": "A7",
+   "sousTheme": "Patrimoine, transition et métier du BTP",
+   "stIdx": 9,
+   "sujet": "g-9",
+   "niveau": 1,
+   "famille": "S",
+   "type": "cablage",
+   "question": "Raccordez chaque sigle du bâtiment à sa signification.",
+   "cablage": {
+    "gauche": [
+     "DOE",
+     "DIUO",
+     "GPA",
+     "VEFA",
+     "DPE"
+    ],
+    "droite": [
+     "Dossier des ouvrages exécutés remis à la réception",
+     "Dossier d'intervention ultérieure sur l'ouvrage, établi par le coordonnateur SPS",
+     "Garantie de parfait achèvement d'un an après la réception",
+     "Vente en l'état futur d'achèvement",
+     "Diagnostic de performance énergétique"
+    ],
+    "gaucheTitre": "Sigle",
+    "droiteTitre": "Signification",
+    "titre": "Sigles du bâtiment"
+   },
+   "explication": "Ces sigles reviennent constamment à l'oral : le DOE rassemble les documents des ouvrages exécutés, le DIUO prépare les interventions ultérieures en sécurité, la GPA couvre la première année après réception, la VEFA est une acquisition en l'état futur d'achèvement et le DPE informe sur la performance énergétique."
   }
  ]
 }
