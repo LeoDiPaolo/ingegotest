@@ -299,25 +299,28 @@ function Reviser() {
               <p className="text-xs text-muted-foreground">sur {bilan.total} questions</p>
             </section>
 
-            <Link
-              to="/elevation"
-              className="tap anim-monte surface flex items-center gap-3 p-4 transition-transform active:scale-[0.98]"
-            >
-              <span className="grid h-10 w-10 place-items-center rounded-xl bg-primary/10 text-primary">
-                <Layers className="h-5 w-5" />
-              </span>
-              <span className="text-sm font-bold text-foreground">Élévation</span>
-            </Link>
-
-            <Link
-              to="/corpus"
-              className="tap anim-monte surface flex items-center gap-3 p-4 transition-transform active:scale-[0.98]"
-            >
-              <span className="grid h-10 w-10 place-items-center rounded-xl bg-brand/15 text-brand">
-                <Library className="h-5 w-5" />
-              </span>
-              <span className="text-sm font-bold text-foreground">Corpus</span>
-            </Link>
+            <section className="anim-monte surface col-span-2 space-y-2 p-4">
+              <p className="flex items-center gap-1.5 text-[0.68rem] font-bold tracking-[0.14em] text-muted-foreground uppercase">
+                <Clock3 className="h-3.5 w-3.5 text-primary" /> Dernière séquence
+              </p>
+              {derniere.length ? (
+                <ul className="space-y-1.5">
+                  {derniere.map((e) => (
+                    <li key={`${e.id}-${e.t}`} className="flex items-center gap-2 text-xs">
+                      <span
+                        className={`h-2 w-2 shrink-0 rounded-full ${e.note > 0 ? "bg-success" : "bg-destructive"}`}
+                      />
+                      <span className="truncate text-foreground">{e.libelle}</span>
+                      <span className="ml-auto shrink-0 text-muted-foreground">{e.jour}</span>
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <p className="text-xs text-muted-foreground">
+                  Aucune séquence encore : lancez la première mission.
+                </p>
+              )}
+            </section>
 
             <section className="anim-monte col-span-2 space-y-3 lg:col-start-3 lg:row-span-3">
               <div className="flex items-center justify-between">
@@ -329,10 +332,45 @@ function Reviser() {
                 </Link>
               </div>
               <div className="grid gap-2 sm:grid-cols-2">
-                {bilan.lignes.slice(0, 4).map((l) => (
-                  <BadgeMaitrise key={l.axe.id} axe={l.axe} acquis={l.acquises} total={l.total} />
+                {bilan.lignes.map((l) => (
+                  <BadgeMaitrise
+                    key={l.axe.id}
+                    axe={l.axe}
+                    acquis={l.acquises}
+                    total={l.total}
+                    onClick={() => setAxeOuvert(l.axe.id)}
+                  />
                 ))}
               </div>
+
+              <div className="flex items-center gap-1.5 pt-1 text-sm font-bold">
+                <Medal className="h-4 w-4 text-brand" /> Paliers de bonnes réponses
+              </div>
+              <div className="surface grid grid-cols-4 gap-2 p-3 sm:grid-cols-6">
+                {PALIERS_REPONSES.map((p) => {
+                  const acquis = bonnesReponses >= p;
+                  return (
+                    <div
+                      key={p}
+                      className={`grid aspect-square place-items-center rounded-xl border text-[0.7rem] font-extrabold tabular-nums ${
+                        acquis
+                          ? "border-brand/40 bg-brand/15 text-brand"
+                          : "border-border bg-elevated text-muted-foreground/60"
+                      } ${p === 783 ? "col-span-2 aspect-auto py-2" : ""}`}
+                      title={
+                        p === 783 ? "Corpus complet" : `${p} bonnes réponses`
+                      }
+                    >
+                      {p === 783 ? "783 · corpus" : p}
+                    </div>
+                  );
+                })}
+              </div>
+              <p className="text-xs text-muted-foreground">
+                {bonnesReponses} bonne{bonnesReponses > 1 ? "s" : ""} réponse
+                {bonnesReponses > 1 ? "s" : ""} cumulée{bonnesReponses > 1 ? "s" : ""}
+                {prochainPalier ? ` · prochain palier à ${prochainPalier}` : " · tous les paliers atteints"}
+              </p>
             </section>
           </div>
         ) : !missionCommencee ? (
