@@ -17,8 +17,8 @@ import { cn } from "@/lib/utils";
 const ICONES: Record<string, LucideIcon> = {
   A1: HardHat,
   A2: Gavel,
-  A3: Building2,
-  A4: Wrench,
+  A3: Wrench,
+  A4: Building2,
   A5: Leaf,
   A6: Landmark,
   A7: BookOpenCheck,

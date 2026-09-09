@@ -1,4 +1,4 @@
-import { CloudOff, Flame, RefreshCw } from "lucide-react";
+import { CloudOff, RefreshCw } from "lucide-react";
 import { LogoIngego } from "@/components/ingego/marque";
 import { jaugesParAxe } from "@/lib/ingego/session";
 import type { Etat } from "@/lib/ingego/algo";
