@@ -193,9 +193,12 @@ export function useDonnees() {
           reglages: normaliserReglages(data.reglages as unknown as Partial<Reglages>),
           commentaires: (data.commentaires as unknown as Record<string, string>) ?? {},
         };
-        const fusion = purger(fusionner(dernier.current, distant));
+        const fusion = purger(fusionner(dernier.current, distant), purgeCartes, purgeCom);
         setDonnees(fusion);
         pousser(fusion);
+        if (purgeCartes) marquerPurge(CLE_PURGE, VERSION_CORRECTIONS);
+        if (purgeCom) marquerPurge(CLE_PURGE_COM, VERSION_COMMENTAIRES);
+
       } else {
         pousser(dernier.current);
       }
