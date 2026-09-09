@@ -72,8 +72,6 @@ export function BadgeMaitrise({
   const partVue = total ? Math.max(part, vus / total) : 0;
   const palier = part >= 0.8 ? "Maîtrisé" : part >= 0.35 ? "En chantier" : "À explorer";
   const atteint = palierAtteint(part);
-  const prochain = PALIERS_PART.find((p) => part < p) ?? null;
-  const restant = prochain ? Math.max(0, Math.ceil(prochain * total) - acquis) : 0;
   const pct = (v: number) => (v > 0 && v < 0.01 ? 1 : Math.round(v * 100));
   const Balise = onClick ? "button" : "div";
   return (
