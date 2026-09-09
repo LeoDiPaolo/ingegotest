@@ -59,16 +59,20 @@ export function BadgeMaitrise({
   axe,
   acquis,
   total,
+  vus = 0,
   onClick,
 }: {
   axe: Axe;
   acquis: number;
   total: number;
+  vus?: number;
   onClick?: () => void;
 }) {
   const part = total ? acquis / total : 0;
+  const partVue = total ? Math.max(part, vus / total) : 0;
   const palier = part >= 0.8 ? "Maîtrisé" : part >= 0.35 ? "En chantier" : "À explorer";
   const atteint = palierAtteint(part);
+  const pct = (v: number) => (v > 0 && v < 0.01 ? 1 : Math.round(v * 100));
   const Balise = onClick ? "button" : "div";
   return (
     <Balise
