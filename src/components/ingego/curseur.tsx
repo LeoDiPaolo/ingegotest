@@ -47,7 +47,7 @@ export function Curseur({
   const pose = valeur !== null;
 
   const borne = (v: number) => Math.min(max, Math.max(min, Math.round(v / pas) * pas));
-  const decimales = pas < 1 ? String(pas).split(".")[1]?.length ?? 1 : 0;
+  const decimales = pas < 1 ? (String(pas).split(".")[1]?.length ?? 1) : 0;
   const format = (v: number) => v.toFixed(decimales).replace(".", ",");
 
   return (
@@ -142,17 +142,29 @@ export function Curseur({
       </div>
 
       {reperes.length > 0 && (
-        <div className="relative h-8">
-          {reperes.map((r) => (
-            <span
-              key={`${r.v}-${r.l}`}
-              className="absolute top-0 -translate-x-1/2 text-center text-[0.6rem] leading-tight text-muted-foreground"
-              style={{ left: `${Math.min(94, Math.max(6, pct(r.v, min, max)))}%`, width: "4.5rem" }}
-            >
-              <span className="mx-auto mb-1 block h-2 w-px bg-plan-line" />
-              {r.l}
-            </span>
-          ))}
+        <div className="space-y-1.5">
+          <div className="relative h-4">
+            {reperes.map((r, i) => (
+              <span
+                key={`${r.v}-${r.l}`}
+                className="absolute top-0 -translate-x-1/2 text-center text-[0.6rem] leading-none text-muted-foreground"
+                style={{ left: `${Math.min(97, Math.max(3, pct(r.v, min, max)))}%` }}
+              >
+                <span className="mx-auto mb-0.5 block h-2 w-px bg-plan-line" />
+                {i + 1}
+              </span>
+            ))}
+          </div>
+          <div className="flex flex-wrap gap-x-2.5 gap-y-1">
+            {reperes.map((r, i) => (
+              <span
+                key={`l-${r.v}-${r.l}`}
+                className="text-[0.6rem] leading-tight text-muted-foreground"
+              >
+                <strong className="text-foreground">{i + 1}</strong> · {r.l}
+              </span>
+            ))}
+          </div>
         </div>
       )}
 

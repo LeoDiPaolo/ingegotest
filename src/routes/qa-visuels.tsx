@@ -2,7 +2,31 @@ import { createFileRoute } from "@tanstack/react-router";
 import { CORPUS } from "@/lib/ingego/corpus";
 import { Exercice } from "@/components/ingego/exercice";
 
-const IDS = ["pm-01", "fa-01", "ep-01", "ch-01", "ch-02", "pa-01", "pa-02", "cs-01", "sy-01", "rd-01", "cy-01", "ec-01", "gr-01", "cm-01", "pl-01", "co-01", "og-01", "ca-01"];
+const IDS = [
+  "pm-01",
+  "fa-01",
+  "ep-01",
+  "ch-01",
+  "ch-02",
+  "pa-01",
+  "pa-02",
+  "cs-01",
+  "sy-01",
+  "rd-01",
+  "cy-01",
+  "ec-01",
+  "gr-01",
+  "cm-01",
+  "pl-01",
+  "co-01",
+  "og-01",
+  "ca-01",
+  "n1-01",
+  "n1-02",
+  "n1-03",
+  "n1-18",
+  "n1-42",
+];
 
 export const Route = createFileRoute("/qa-visuels")({
   component: Page,
