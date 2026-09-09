@@ -1,10 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
-import { ChevronDown, MessageSquareText, Search, X } from "lucide-react";
+import { CheckCircle2, ChevronDown, MessageSquareText, Search, X } from "lucide-react";
 import { Entete } from "@/components/ingego/entete";
 import { NavBas } from "@/components/ingego/nav-bas";
-import { AXES, CORPUS, FAMILLES, TYPES, attendue } from "@/lib/ingego/corpus";
-import { etatCarte } from "@/lib/ingego/algo";
+import { AXES, CORPUS, FAMILLES, TYPES, attendue, type Question } from "@/lib/ingego/corpus";
+import { etatCarte, validee } from "@/lib/ingego/algo";
 import { serieJours, useDonnees } from "@/lib/ingego/stockage";
 import { cn } from "@/lib/utils";
 import { IconeAxe } from "@/components/ingego/univers";
@@ -34,15 +34,38 @@ const ETIQUETTE: Record<string, string> = {
   fragile: "À valider du 1er coup",
 };
 
+const MARQUEUR = "En savoir plus";
+
+/* L'explication porte parfois un bloc de définitions ajouté après relecture :
+   on le détache pour l'afficher comme un vrai « en savoir plus ». */
+function decouper(explication: string) {
+  const i = explication.indexOf(MARQUEUR);
+  if (i < 0) return { corps: explication, plus: "" };
+  return {
+    corps: explication.slice(0, i).trim(),
+    plus: explication
+      .slice(i + MARQUEUR.length)
+      .replace(/^\s*[—-]\s*/, "")
+      .trim(),
+  };
+}
+
 function Page() {
   const { donnees, synchro, commenter } = useDonnees();
   const [ouvert, setOuvert] = useState<string | null>(null);
   const [filtre, setFiltre] = useState("");
   const [voirCommentaires, setVoirCommentaires] = useState(false);
+  const [detail, setDetail] = useState<Question | null>(null);
+  const [voirPlus, setVoirPlus] = useState(false);
 
   const serie = useMemo(
     () => serieJours(donnees.journal.filter((e) => e.id === "__session").map((e) => e.jour)),
     [donnees.journal],
+  );
+
+  const totalValidees = useMemo(
+    () => CORPUS.filter((q) => validee(donnees.cartes[q.id])).length,
+    [donnees.cartes],
   );
 
   const groupes = useMemo(() => {
@@ -58,6 +81,7 @@ function Page() {
       return { axe, parSousTheme };
     }).filter((g) => g.parSousTheme.size > 0);
   }, [filtre]);
+
   const commentaires = useMemo(
     () =>
       CORPUS.filter((q) => Boolean(donnees.commentaires[q.id]?.trim())).map((q) => ({
@@ -66,6 +90,13 @@ function Page() {
       })),
     [donnees.commentaires],
   );
+
+  const ouvrir = (q: Question) => {
+    setDetail(q);
+    setVoirPlus(false);
+  };
+
+  const detailDecoupe = detail ? decouper(detail.explication) : null;
 
   return (
     <div className="min-h-screen bg-background pb-24">
@@ -76,6 +107,13 @@ function Page() {
           <div>
             <p className="text-xs font-bold text-brand uppercase">Bibliothèque technique</p>
             <h1 className="text-2xl text-primary">Corpus</h1>
+            <p className="mt-1 flex items-center gap-1.5 text-xs text-muted-foreground">
+              <CheckCircle2 className="h-3.5 w-3.5 text-success" />
+              <span>
+                <span className="font-bold text-success">{totalValidees}</span> / {CORPUS.length}{" "}
+                questions validées
+              </span>
+            </p>
           </div>
           <button
             onClick={() => setVoirCommentaires(true)}
@@ -113,72 +151,161 @@ function Page() {
                   </h2>
                 </div>
               </div>
-              {[...parSousTheme.entries()].map(([sousTheme, qs]) => (
-                <div
-                  key={sousTheme}
-                  className="mission-strip overflow-hidden rounded-2xl border border-border"
-                >
-                  <button
-                    onClick={() =>
-                      setOuvert(ouvert === axe.id + sousTheme ? null : axe.id + sousTheme)
-                    }
-                    className="tap flex w-full items-center gap-2 bg-card px-4 py-3 text-left text-sm font-semibold"
+              {[...parSousTheme.entries()].map(([sousTheme, qs]) => {
+                const nbValidees = qs.filter((q) => validee(donnees.cartes[q.id])).length;
+                return (
+                  <div
+                    key={sousTheme}
+                    className="mission-strip overflow-hidden rounded-2xl border border-border"
                   >
-                    <span className="flex-1">{sousTheme}</span>
-                    <span className="text-xs text-muted-foreground">{qs.length}</span>
-                    <ChevronDown
-                      className={cn(
-                        "h-4 w-4 transition-transform",
-                        ouvert === axe.id + sousTheme && "rotate-180",
-                      )}
-                    />
-                  </button>
-                  {ouvert === axe.id + sousTheme ? (
-                    <ul className="divide-y divide-border border-t border-border">
-                      {qs.map((q) => (
-                        <li key={q.id} className="space-y-2 bg-background px-4 py-3">
-                          <div className="flex flex-wrap items-center gap-1.5 text-[0.62rem]">
-                            <span className="rounded-full bg-elevated px-2 py-0.5 text-muted-foreground">
-                              Niveau {q.niv} · {TYPES[q.type]}
-                            </span>
-                            <span
-                              className="rounded-full px-2 py-0.5 font-semibold"
-                              style={{
-                                backgroundColor: `${FAMILLES[q.fam].c}22`,
-                                color: FAMILLES[q.fam].c,
-                              }}
-                            >
-                              {FAMILLES[q.fam].nom}
-                              {q.fam === "M" && q.derniereVerification
-                                ? ` · vérifié ${q.derniereVerification}`
-                                : ""}
-                            </span>
-                            <span className="rounded-full bg-elevated px-2 py-0.5 text-muted-foreground">
-                              {ETIQUETTE[etatCarte(donnees.cartes[q.id])]}
-                            </span>
-                          </div>
-                          <p className="text-sm leading-snug">{q.question}</p>
-                          {attendue(q) ? (
-                            <p className="text-xs text-success">Réponse : {attendue(q)}</p>
-                          ) : null}
-                          <p className="text-xs text-muted-foreground">{q.explication}</p>
-                          <textarea
-                            defaultValue={donnees.commentaires[q.id] ?? ""}
-                            onBlur={(e) => commenter(q.id, e.target.value)}
-                            placeholder="Observation personnelle…"
-                            rows={2}
-                            className="w-full rounded-lg border border-input bg-card px-3 py-2 text-xs outline-none focus:border-ring"
-                          />
-                        </li>
-                      ))}
-                    </ul>
-                  ) : null}
-                </div>
-              ))}
+                    <button
+                      onClick={() =>
+                        setOuvert(ouvert === axe.id + sousTheme ? null : axe.id + sousTheme)
+                      }
+                      className="tap flex w-full items-center gap-2 bg-card px-4 py-3 text-left text-sm font-semibold"
+                    >
+                      <span className="flex-1">{sousTheme}</span>
+                      <span
+                        className={cn(
+                          "rounded-full px-2 py-0.5 text-[0.62rem] font-bold",
+                          nbValidees === qs.length
+                            ? "bg-success/15 text-success"
+                            : "bg-elevated text-muted-foreground",
+                        )}
+                      >
+                        {nbValidees}/{qs.length} validées
+                      </span>
+                      <ChevronDown
+                        className={cn(
+                          "h-4 w-4 transition-transform",
+                          ouvert === axe.id + sousTheme && "rotate-180",
+                        )}
+                      />
+                    </button>
+                    {ouvert === axe.id + sousTheme ? (
+                      <ul className="divide-y divide-border border-t border-border">
+                        {qs.map((q) => {
+                          const ok = validee(donnees.cartes[q.id]);
+                          return (
+                            <li key={q.id}>
+                              <button
+                                onClick={() => ouvrir(q)}
+                                className="tap flex w-full items-start gap-2 bg-background px-4 py-3 text-left"
+                              >
+                                <CheckCircle2
+                                  className={cn(
+                                    "mt-0.5 h-4 w-4 shrink-0",
+                                    ok ? "text-success" : "text-muted-foreground/35",
+                                  )}
+                                />
+                                <span className="min-w-0 flex-1">
+                                  <span className="block text-sm leading-snug">{q.question}</span>
+                                  <span className="mt-1 block text-[0.62rem] text-muted-foreground">
+                                    Niveau {q.niv} · {ETIQUETTE[etatCarte(donnees.cartes[q.id])]}
+                                  </span>
+                                </span>
+                              </button>
+                            </li>
+                          );
+                        })}
+                      </ul>
+                    ) : null}
+                  </div>
+                );
+              })}
             </section>
           ))}
         </div>
       </main>
+
+      {detail && detailDecoupe ? (
+        <div
+          className="fixed inset-0 z-50 bg-primary/35 p-3 backdrop-blur-sm sm:p-6"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Détail de la question"
+        >
+          <section className="mx-auto flex max-h-[calc(100dvh-1.5rem)] max-w-2xl flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-[var(--shadow-lift)] sm:max-h-[calc(100dvh-3rem)]">
+            <header className="flex items-start gap-3 border-b border-border px-4 py-3">
+              <div className="min-w-0 flex-1">
+                <p className="text-[0.62rem] font-bold text-brand uppercase">
+                  {detail.sousTheme} · Niveau {detail.niv} · {TYPES[detail.type]}
+                </p>
+                <h2 className="text-base leading-snug font-bold">{detail.question}</h2>
+              </div>
+              <button
+                onClick={() => setDetail(null)}
+                aria-label="Fermer"
+                className="tap rounded-full p-2 text-muted-foreground hover:bg-elevated"
+              >
+                <X className="h-5 w-5" />
+              </button>
+            </header>
+            <div className="space-y-3 overflow-auto px-4 py-4">
+              <div className="flex flex-wrap items-center gap-1.5 text-[0.62rem]">
+                <span
+                  className="rounded-full px-2 py-0.5 font-semibold"
+                  style={{
+                    backgroundColor: `${FAMILLES[detail.fam].c}22`,
+                    color: FAMILLES[detail.fam].c,
+                  }}
+                >
+                  {FAMILLES[detail.fam].nom}
+                  {detail.fam === "M" && detail.derniereVerification
+                    ? ` · vérifié ${detail.derniereVerification}`
+                    : ""}
+                </span>
+                <span className="rounded-full bg-elevated px-2 py-0.5 text-muted-foreground">
+                  {ETIQUETTE[etatCarte(donnees.cartes[detail.id])]}
+                </span>
+              </div>
+
+              {attendue(detail) ? (
+                <div className="rounded-xl border border-success/30 bg-success/10 px-3 py-2.5">
+                  <p className="text-[0.62rem] font-bold text-success uppercase">
+                    Réponse attendue
+                  </p>
+                  <p className="text-sm">{attendue(detail)}</p>
+                </div>
+              ) : null}
+
+              <p className="text-sm leading-relaxed text-muted-foreground">
+                {detailDecoupe.corps}
+              </p>
+
+              {detailDecoupe.plus ? (
+                <div className="overflow-hidden rounded-xl border border-border">
+                  <button
+                    onClick={() => setVoirPlus((v) => !v)}
+                    className="tap flex w-full items-center gap-2 bg-elevated px-3 py-2.5 text-left text-xs font-bold"
+                  >
+                    <span className="flex-1">En savoir plus</span>
+                    <ChevronDown className={cn("h-4 w-4 transition-transform", voirPlus && "rotate-180")} />
+                  </button>
+                  {voirPlus ? (
+                    <p className="border-t border-border px-3 py-2.5 text-xs leading-relaxed text-muted-foreground">
+                      {detailDecoupe.plus}
+                    </p>
+                  ) : null}
+                </div>
+              ) : null}
+
+              <div>
+                <p className="mb-1 text-[0.62rem] font-bold text-muted-foreground uppercase">
+                  Observation personnelle
+                </p>
+                <textarea
+                  defaultValue={donnees.commentaires[detail.id] ?? ""}
+                  onBlur={(e) => commenter(detail.id, e.target.value)}
+                  placeholder="Observation personnelle…"
+                  rows={3}
+                  className="w-full rounded-lg border border-input bg-background px-3 py-2 text-xs outline-none focus:border-ring"
+                />
+              </div>
+            </div>
+          </section>
+        </div>
+      ) : null}
 
       {voirCommentaires ? (
         <div
