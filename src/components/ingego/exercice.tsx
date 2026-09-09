@@ -1344,7 +1344,7 @@ export function Exercice({
           ) : null}
 
           {autoNote ? (
-            <div>
+            <div className="sticky bottom-2 z-20 rounded-xl bg-card/95 p-2 pb-[max(0.5rem,env(safe-area-inset-bottom))] backdrop-blur-sm sm:static sm:bg-transparent sm:p-0 sm:backdrop-blur-none">
               <p className="mb-2 text-xs text-muted-foreground">
                 Évaluez votre restitution : c'est elle qui règle la prochaine échéance.
               </p>
@@ -1375,7 +1375,7 @@ export function Exercice({
               </div>
             </div>
           ) : (
-            <div className="sticky bottom-2 z-20 space-y-2 rounded-xl bg-card/95 pt-1 backdrop-blur-sm sm:static sm:bg-transparent sm:pt-0 sm:backdrop-blur-none">
+            <div className="sticky bottom-2 z-20 space-y-2 rounded-xl bg-card/95 pt-1 pb-[max(0.5rem,env(safe-area-inset-bottom))] backdrop-blur-sm sm:static sm:bg-transparent sm:pt-0 sm:pb-0 sm:backdrop-blur-none">
               <Button
                 onClick={() => onNote(estJuste ? 2 : part >= 0.6 ? 1 : 0, estJuste)}
                 className="tap touche-brand h-12 w-full rounded-xl bg-brand text-base font-bold text-brand-foreground hover:bg-brand/90 sm:h-14"
