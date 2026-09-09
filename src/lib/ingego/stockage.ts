@@ -198,10 +198,12 @@ export function useDonnees() {
         pousser(fusion);
         if (purgeCartes) marquerPurge(CLE_PURGE, VERSION_CORRECTIONS);
         if (purgeCom) marquerPurge(CLE_PURGE_COM, VERSION_COMMENTAIRES);
-
       } else {
         pousser(dernier.current);
+        if (purgeCartes) marquerPurge(CLE_PURGE, VERSION_CORRECTIONS);
+        if (purgeCom) marquerPurge(CLE_PURGE_COM, VERSION_COMMENTAIRES);
       }
+
       setSynchro("ok");
     })();
     return () => {
