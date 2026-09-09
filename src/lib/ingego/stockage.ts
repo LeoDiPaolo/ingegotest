@@ -168,7 +168,11 @@ export function useDonnees() {
   useEffect(() => {
     let vivant = true;
     const purgeCartes = aPurger(CLE_PURGE, VERSION_CORRECTIONS);
-    const purgeCom = aPurger(CLE_PURGE_COM, VERSION_COMMENTAIRES);
+    /* Les commentaires déjà traités sont retirés à chaque ouverture : la version
+       seule ne suffisait pas (une copie pouvait revenir du serveur plus tard). */
+    const purgeCom = true;
+    void CLE_PURGE_COM;
+    void VERSION_COMMENTAIRES;
     const local = purger(lireLocal(), purgeCartes, purgeCom);
     setDonnees(local);
     dernier.current = local;
