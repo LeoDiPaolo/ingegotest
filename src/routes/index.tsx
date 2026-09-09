@@ -265,6 +265,7 @@ function Reviser() {
 
   return (
     <div className={exerciceActif ? "min-h-dvh bg-background" : "min-h-screen bg-background pb-24"}>
+      {recompense ? <Recompense badge={recompense} onFermer={recompenseSuivante} /> : null}
       {!exerciceActif ? (
         <Entete serie={serie} etat={donnees.cartes} synchro={synchro} jauges={false} />
       ) : null}
