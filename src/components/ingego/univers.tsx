@@ -121,6 +121,26 @@ export function BadgeMaitrise({
             />
           ))}
         </div>
+        {prochain ? (
+          <div
+            className="mt-2 flex items-center gap-2 rounded-xl border border-dashed px-2 py-1.5"
+            style={{ borderColor: `${axe.couleur}55`, backgroundColor: `${axe.couleur}0d` }}
+          >
+            <span
+              className="grid h-6 w-6 shrink-0 place-items-center rounded-full"
+              style={{ backgroundColor: `${axe.couleur}22`, color: axe.couleur }}
+            >
+              <Award className="h-3.5 w-3.5" />
+            </span>
+            <p className="min-w-0 flex-1 text-[0.68rem] font-bold text-muted-foreground">
+              Prochain objectif : badge{" "}
+              <span className="font-extrabold" style={{ color: axe.couleur }}>
+                {Math.round(prochain * 100)} %
+              </span>
+              {restant > 0 ? ` · encore ${restant} question${restant > 1 ? "s" : ""}` : ""}
+            </p>
+          </div>
+        ) : null}
       </div>
       {part >= 0.8 ? <Award className="h-5 w-5 shrink-0 text-brand" /> : null}
     </Balise>
