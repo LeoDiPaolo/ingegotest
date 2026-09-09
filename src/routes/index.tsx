@@ -9,6 +9,7 @@ import {
   RotateCcw,
   Sparkles,
   Target,
+  Trophy,
   X,
   Clock3,
   ChevronRight,
@@ -25,7 +26,14 @@ import { Entete } from "@/components/ingego/entete";
 import { NavBas } from "@/components/ingego/nav-bas";
 import { Confettis } from "@/components/ingego/confettis";
 import { Castor, LogoIngego } from "@/components/ingego/marque";
-import { BadgeMaitrise, IconeAxe } from "@/components/ingego/univers";
+import { BadgeMaitrise, IconeAxe, Medaille } from "@/components/ingego/univers";
+import { Recompense } from "@/components/ingego/recompense";
+import {
+  PALIERS_REPONSES,
+  badgePalierReponses,
+  badgesDebloques,
+  useRecompenses,
+} from "@/lib/ingego/badges";
 import { Button } from "@/components/ui/button";
 import { Exercice } from "@/components/ingego/exercice";
 import { AXE_BY_ID, Q_BY_ID, type Question } from "@/lib/ingego/corpus";
@@ -62,9 +70,6 @@ export const Route = createFileRoute("/")({
 
 const MARQUE_SESSION = "__session";
 
-/* Paliers de bonnes réponses cumulées, dernier palier = corpus complet. */
-const PALIERS_REPONSES = [10, 25, 50, 100, 200, 300, 400, 500, 600, 700, 783];
-
 function Reviser() {
   const { donnees, pret, synchro, enregistrerCarte, commenter, maj } = useDonnees();
   const [ordre, setOrdre] = useState<Question[] | null>(null);
@@ -99,6 +104,13 @@ function Reviser() {
     [donnees.journal],
   );
   const prochainPalier = PALIERS_REPONSES.find((p) => p > bonnesReponses) ?? null;
+
+  /* Récompenses : file des badges nouvellement débloqués. */
+  const badges = useMemo(
+    () => badgesDebloques(bilan.lignes, bonnesReponses),
+    [bilan.lignes, bonnesReponses],
+  );
+  const { badge: recompense, suivant: recompenseSuivante } = useRecompenses(badges, pret);
 
   /* Aperçu de la dernière séquence répondue. */
   const derniere = useMemo(
@@ -253,6 +265,7 @@ function Reviser() {
 
   return (
     <div className={exerciceActif ? "min-h-dvh bg-background" : "min-h-screen bg-background pb-24"}>
+      {recompense ? <Recompense badge={recompense} onFermer={recompenseSuivante} /> : null}
       {!exerciceActif ? (
         <Entete serie={serie} etat={donnees.cartes} synchro={synchro} jauges={false} />
       ) : null}
@@ -392,21 +405,16 @@ function Reviser() {
               <div className="flex items-center gap-1.5 pt-1 text-sm font-bold">
                 <Medal className="h-4 w-4 text-brand" /> Paliers de bonnes réponses
               </div>
-              <div className="surface grid grid-cols-4 gap-2 p-3 sm:grid-cols-6">
+              <div className="surface grid grid-cols-4 gap-3 p-3 sm:grid-cols-6">
                 {PALIERS_REPONSES.map((p) => {
-                  const acquis = bonnesReponses >= p;
+                  const b = badgePalierReponses(p);
                   return (
-                    <div
+                    <Medaille
                       key={p}
-                      className={`grid aspect-square place-items-center rounded-xl border text-[0.7rem] font-extrabold tabular-nums ${
-                        acquis
-                          ? "border-brand/40 bg-brand/15 text-brand"
-                          : "border-border bg-elevated text-muted-foreground/60"
-                      } ${p === 783 ? "col-span-2 aspect-auto py-2" : ""}`}
-                      title={p === 783 ? "Corpus complet" : `${p} bonnes réponses`}
-                    >
-                      {p === 783 ? "783 · corpus" : p}
-                    </div>
+                      libelle={b.libelle}
+                      acquis={bonnesReponses >= p}
+                      icone={p === 783 ? Trophy : Medal}
+                    />
                   );
                 })}
               </div>
