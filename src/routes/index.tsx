@@ -383,6 +383,7 @@ function Reviser() {
                     axe={l.axe}
                     acquis={l.acquises}
                     total={l.total}
+                    vus={l.acquises + l.encours}
                     onClick={() => setAxeOuvert(l.axe.id)}
                   />
                 ))}

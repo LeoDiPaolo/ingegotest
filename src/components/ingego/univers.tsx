@@ -59,16 +59,20 @@ export function BadgeMaitrise({
   axe,
   acquis,
   total,
+  vus = 0,
   onClick,
 }: {
   axe: Axe;
   acquis: number;
   total: number;
+  vus?: number;
   onClick?: () => void;
 }) {
   const part = total ? acquis / total : 0;
+  const partVue = total ? Math.max(part, vus / total) : 0;
   const palier = part >= 0.8 ? "Maîtrisé" : part >= 0.35 ? "En chantier" : "À explorer";
   const atteint = palierAtteint(part);
+  const pct = (v: number) => (v > 0 && v < 0.01 ? 1 : Math.round(v * 100));
   const Balise = onClick ? "button" : "div";
   return (
     <Balise
@@ -89,21 +93,24 @@ export function BadgeMaitrise({
       <div className="min-w-0 flex-1">
         <div className="flex items-center justify-between gap-2">
           <p className="truncate text-sm font-bold">{axe.court}</p>
-          {atteint ? (
-            <span
-              className="shrink-0 rounded-full px-2 py-0.5 text-[0.6rem] font-extrabold"
-              style={{ backgroundColor: `${axe.couleur}22`, color: axe.couleur }}
-            >
-              {Math.round(atteint * 100)} %
-            </span>
-          ) : null}
+          <span
+            className="shrink-0 rounded-full px-2 py-0.5 text-[0.6rem] font-extrabold"
+            style={{ backgroundColor: `${axe.couleur}22`, color: axe.couleur }}
+          >
+            {atteint ? `Palier ${Math.round(atteint * 100)} %` : `${pct(part)} %`}
+          </span>
         </div>
         <p className="text-xs text-muted-foreground">
-          {palier} · {acquis}/{total}
+          {palier} · {pct(part)} % validé
+          {partVue > part ? ` · ${pct(partVue)} % entamé` : ""}
         </p>
         <div className="relative mt-2 h-2.5 overflow-hidden rounded-full bg-elevated">
           <div
-            className="h-full rounded-full transition-[width] duration-700"
+            className="absolute inset-y-0 left-0 rounded-full transition-[width] duration-700"
+            style={{ width: `${partVue * 100}%`, backgroundColor: `${axe.couleur}55` }}
+          />
+          <div
+            className="absolute inset-y-0 left-0 rounded-full transition-[width] duration-700"
             style={{ width: `${part * 100}%`, backgroundColor: axe.couleur }}
           />
           {PALIERS_PART.slice(0, 4).map((p) => (
