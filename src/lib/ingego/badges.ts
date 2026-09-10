@@ -1,9 +1,11 @@
 import { useCallback, useEffect, useRef, useState } from "react";
-import type { Axe } from "@/lib/ingego/corpus";
+import { CORPUS, type Axe } from "@/lib/ingego/corpus";
 import { PALIERS_PART } from "@/components/ingego/univers";
 
-/* Paliers de bonnes réponses cumulées, dernier palier = corpus complet. */
-export const PALIERS_REPONSES = [10, 25, 50, 100, 200, 300, 400, 500, 600, 700, 783];
+/* Paliers de questions validées, dernier palier = corpus complet. */
+export const PALIERS_REPONSES = [
+  10, 25, 50, 100, 200, 300, 400, 500, 600, 700, CORPUS.length,
+];
 
 export type Badge = {
   cle: string;
@@ -16,11 +18,12 @@ export type Badge = {
 export type LigneAxe = { axe: Axe; acquises: number; total: number };
 
 export function badgePalierReponses(p: number): Badge {
+  const complet = p >= CORPUS.length;
   return {
     cle: `rep-${p}`,
-    libelle: p === 783 ? "783" : String(p),
-    titre: p === 783 ? "Corpus complet" : `${p} bonnes réponses`,
-    legende: p === 783 ? "Toutes les questions validées" : "Palier cumulé",
+    libelle: String(p),
+    titre: complet ? "Corpus complet" : `${p} questions validées`,
+    legende: complet ? "Toutes les questions validées" : "Palier cumulé",
   };
 }
 
