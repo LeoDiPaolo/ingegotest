@@ -1,4 +1,11 @@
-import { CORPUS, NIVEAUX_SOUS_THEME, type Famille, type Question, type TypeExo } from "./corpus";
+import {
+  CORPUS,
+  NIVEAUX_AXE,
+  NIVEAUX_SOUS_THEME,
+  type Famille,
+  type Question,
+  type TypeExo,
+} from "./corpus";
 
 /* ============================================================
    Répétition espacée — repris verbatim de l'artefact IngéGo.
