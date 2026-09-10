@@ -11,7 +11,7 @@ import {
   Target,
   Trophy,
   X,
-  Clock3,
+  
   ChevronRight,
   ArrowRight,
 } from "lucide-react";
