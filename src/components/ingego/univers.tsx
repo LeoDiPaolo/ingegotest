@@ -111,12 +111,13 @@ export function BadgeMaitrise({
             className="shrink-0 rounded-full px-2 py-0.5 text-[0.6rem] font-extrabold"
             style={{ backgroundColor: `${axe.couleur}22`, color: axe.couleur }}
           >
-            {atteint ? `Palier ${Math.round(atteint * 100)} %` : `${pct(part)} %`}
+            {atteint ? `Badge ${Math.round(atteint * 100)} %` : `${pct(part)} %`}
           </span>
         </div>
         <p className="text-xs text-muted-foreground">
-          {palier} · {pct(part)} % validé
-          {partVue > part ? ` · ${pct(partVue)} % entamé` : ""}
+          <span className="font-semibold text-foreground/80">{palier}</span>
+          {" · "}
+          {sousTitre}
         </p>
         <div className="relative mt-2 h-2.5 overflow-hidden rounded-full bg-elevated">
           <div
