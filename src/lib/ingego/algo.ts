@@ -185,11 +185,16 @@ export function repartirParTheme(
     attribues += base;
     restes.push({ theme, reste: exact - base });
   }
-  /* Restes décroissants, avec une rotation par graine pour varier les égalités. */
-  const decalage = themes.length ? Math.abs(graine) % themes.length : 0;
+  /* Tirage pondéré par les restes (course exponentielle) : un thème deux fois
+     plus lourd a deux fois plus de chances de prendre la place suivante, sans
+     jamais exclure définitivement les petits thèmes. La graine change à chaque
+     mission, si bien que la répartition tend vers le poids réel du corpus. */
   const ordonnes = restes
-    .map((r, i) => ({ ...r, rang: (i + decalage) % Math.max(1, themes.length) }))
-    .sort((a, b) => b.reste - a.reste || a.rang - b.rang);
+    .map((r) => {
+      const u = (graineDe(`${r.theme}|${graine}`) % 100000) / 100000 || 0.00001;
+      return { ...r, cle: r.reste > 0 ? -Math.log(u) / r.reste : Infinity };
+    })
+    .sort((a, b) => a.cle - b.cle);
   for (const r of ordonnes) {
     if (attribues >= nombre) break;
     const dejà = quotas.get(r.theme) ?? 0;
@@ -197,6 +202,7 @@ export function repartirParTheme(
     quotas.set(r.theme, dejà + 1);
     attribues++;
   }
+
 
   const selection: Question[] = [];
   const compte = new Map<string, number>();
