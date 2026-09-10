@@ -2158,7 +2158,7 @@
    "niveau": 1,
    "famille": "M",
    "type": "qcm",
-   "question": "Échéance d'équipement en système d'automatisation et de contrôle pour un bâtiment tertiaire existant dont la puissance CVC est comprise entre 70 et 290 kW.",
+   "question": "À partir de quelle date l'obligation d'équipement en système d'automatisation et de contrôle (BACS) s'applique-t-elle à tous les bâtiments tertiaires existants dont la puissance CVC dépasse 70 kW ?",
    "options": [
     "1er janvier 2025",
     "1er janvier 2027",
@@ -2166,8 +2166,9 @@
     "1er janvier 2035"
    ],
    "bonneReponse": 2,
-   "explication": "Attention, la plupart des supports de préparation donnent encore 2027 : l'échéance a été reportée au 1er janvier 2030 par un décret du 26 décembre 2025, pour aligner le calendrier français sur la directive européenne révisée et alléger la charge normative pesant sur les exécutifs locaux. L'échéance du 1er janvier 2025 pour les puissances supérieures à 290 kW, elle, est passée et reste applicable.",
-   "derniereVerification": "2026-07"
+   "explication": "Attention, la plupart des supports de préparation donnent encore 2027 : l'échéance a été reportée au 1er janvier 2030 par un décret du 26 décembre 2025, pour aligner le calendrier français sur la directive européenne révisée. À cette date, l'obligation couvre tous les bâtiments dont la puissance CVC dépasse 70 kW — pas seulement la tranche 70-290 kW. Les bâtiments de plus de 290 kW y sont soumis depuis le 1er janvier 2025, échéance passée et toujours applicable.",
+   "derniereVerification": "2026-09",
+   "aVerifier": false
   },
   {
    "id": "a4-08",
@@ -4686,11 +4687,11 @@
      "2030"
     ],
     [
-     "BACS : bâtiments tertiaires dont la puissance CVC dépasse 290 kW",
+     "BACS : bâtiments tertiaires dont la puissance CVC dépasse 290 kW (première vague)",
      "1er janvier 2025"
     ],
     [
-     "BACS : bâtiments tertiaires dont la puissance CVC est comprise entre 70 et 290 kW",
+     "BACS : tous les bâtiments tertiaires dont la puissance CVC dépasse 70 kW",
      "1er janvier 2030"
     ],
     [
@@ -4702,9 +4703,9 @@
      "2050"
     ]
    ],
-   "explication": "Deux calendriers sont à distinguer. Le Dispositif Éco Énergie Tertiaire impose une réduction des consommations d'énergie finale de 40 % en 2030, 50 % en 2040 et 60 % en 2050 par rapport à une année de référence postérieure à 2010. Pour les systèmes GTB/BACS, l'obligation a d'abord visé les puissances les plus élevées : au-dessus de 290 kW l'échéance du 1er janvier 2025 est passée et reste applicable ; le seuil a ensuite été abaissé à 70 kW, avec une échéance reportée au 1er janvier 2030 pour la tranche 70-290 kW (décret du 26 décembre 2025). L'obligation de critère environnemental dans la commande publique entre en vigueur le 21 août 2026. L'objectif national de zéro artificialisation nette vise 2050, avec un jalon de réduction de moitié du rythme de consommation d'espaces sur la décennie 2021-2031. Le non-respect du DEET peut conduire à une mise en demeure puis à la publication nominative de la sanction sur OPERAT. En savoir plus — GTB : gestion technique du bâtiment, système qui pilote et supervise chauffage, ventilation, éclairage et alarmes ; dispositif Éco Énergie Tertiaire : obligation de réduire les consommations d'énergie finale des bâtiments accueillant des activités tertiaires sur au moins 1 000 m², avec déclaration annuelle sur la plateforme OPERAT.",
-   "derniereVerification": "2026-08",
-   "aVerifier": null
+   "explication": "Deux calendriers sont à distinguer. Le Dispositif Éco Énergie Tertiaire impose une réduction des consommations d'énergie finale de 40 % en 2030, 50 % en 2040 et 60 % en 2050 par rapport à une année de référence postérieure à 2010. Pour les systèmes GTB/BACS, l'obligation a d'abord visé les puissances les plus élevées : au-dessus de 290 kW l'échéance du 1er janvier 2025 est passée et reste applicable ; le seuil a ensuite été abaissé à 70 kW : au 1er janvier 2030, l'obligation vise l'ensemble des bâtiments dont la puissance CVC dépasse 70 kW, et non la seule tranche 70-290 kW (décret du 26 décembre 2025). Les bâtiments de plus de 290 kW restent donc concernés, simplement depuis 2025. L'obligation de critère environnemental dans la commande publique entre en vigueur le 21 août 2026. L'objectif national de zéro artificialisation nette vise 2050, avec un jalon de réduction de moitié du rythme de consommation d'espaces sur la décennie 2021-2031. Le non-respect du DEET peut conduire à une mise en demeure puis à la publication nominative de la sanction sur OPERAT. En savoir plus — GTB : gestion technique du bâtiment, système qui pilote et supervise chauffage, ventilation, éclairage et alarmes ; dispositif Éco Énergie Tertiaire : obligation de réduire les consommations d'énergie finale des bâtiments accueillant des activités tertiaires sur au moins 1 000 m², avec déclaration annuelle sur la plateforme OPERAT.",
+   "derniereVerification": "2026-09",
+   "aVerifier": false
   },
   {
    "id": "as-08",
