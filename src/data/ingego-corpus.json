@@ -9065,7 +9065,7 @@
    "famille": "S",
    "type": "echelle",
    "derniereVerification": "2026-08",
-   "bonneCible": 2,
+   "bonneCible": 1,
    "question": "Une salle des fêtes communale, seule activité du bâtiment, a son plancher bas du dernier niveau situé à 32 m au-dessus du sol accessible aux engins de secours. Cliquez sur la tranche de hauteur dans laquelle se situe ce bâtiment et qui entraîne, pour son usage, un classement en immeuble de grande hauteur (IGH).",
    "explication": "Le classement IGH dépend de la hauteur du plancher bas du dernier niveau par rapport au sol accessible aux engins de secours, et le seuil varie selon l'usage : 28 m pour tous les immeubles autres que l'habitation (bureaux, ERP, hôtels...), 50 m pour l'habitation (article R122-2 du code de la construction et de l'habitation). Une salle des fêtes à 32 m dépasse donc le seuil de 28 m applicable aux usages non résidentiels : elle serait classée IGH si sa hauteur est bien mesurée ainsi, avec toutes les conséquences que cela emporte — règlement de sécurité IGH spécifique (et non celui des ERP), compartimentage renforcé, désenfumage mécanique, service de sécurité incendie permanent et poste de sécurité, avis obligatoire de la commission de sécurité compétente pour les IGH. À l'inverse, un immeuble d'habitation de 32 m reste hors IGH puisque le seuil applicable est 50 m. Cette différence de seuil selon l'usage est un piège classique de concours. En savoir plus — ERP : établissement recevant du public, soumis à un règlement de sécurité incendie et à des obligations d'accessibilité selon son type d'activité et sa catégorie d'effectif.",
    "echelle_g": {
