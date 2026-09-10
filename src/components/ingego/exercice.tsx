@@ -928,6 +928,7 @@ export function Exercice({
           actif={actifCablage}
           onActif={setActifCablage}
           ordreDroite={ordreDroiteCablage}
+          estJuste={(g, d) => cablageJuste(q, g, d)}
           onRelier={(g, d) => {
             setMap(g, d);
             setActifCablage(null);
