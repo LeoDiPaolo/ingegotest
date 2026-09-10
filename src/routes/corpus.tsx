@@ -3,7 +3,7 @@ import { useMemo, useState } from "react";
 import { CheckCircle2, ChevronDown, Lock, MessageSquareText, Search, X } from "lucide-react";
 import { Entete } from "@/components/ingego/entete";
 import { NavBas } from "@/components/ingego/nav-bas";
-import { AXES, CORPUS, FAMILLES, TYPES, attendue, type Question } from "@/lib/ingego/corpus";
+import { AXES, CORPUS, FAMILLES, TYPES, type Question } from "@/lib/ingego/corpus";
 import { etatCarte, validee } from "@/lib/ingego/algo";
 import { serieJours, useDonnees } from "@/lib/ingego/stockage";
 import { cn } from "@/lib/utils";
@@ -52,6 +52,22 @@ function decouper(explication: string) {
 
 /* Affiche explicitement la ou les bonnes réponses d'une question validée. */
 function reponseAttendue(q: Question) {
+  const cible = q.bonneCible ?? -1;
+  const liste = (items: string[]) => (
+    <ol className="list-decimal space-y-1 pl-5">
+      {items.map((item, i) => <li key={`${i}-${item}`}>{item}</li>)}
+    </ol>
+  );
+  const associations = (items: Array<[string, string]>) => (
+    <ul className="space-y-1.5">
+      {items.map(([gauche, droite], i) => (
+        <li key={`${i}-${gauche}`} className="grid grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] gap-2">
+          <span className="font-semibold">{gauche}</span><span aria-hidden>→</span><span>{droite}</span>
+        </li>
+      ))}
+    </ul>
+  );
+
   if (q.type === "qcm") {
     const texte = q.options?.[q.bonneReponse ?? 0];
     if (!texte) return null;
@@ -63,12 +79,17 @@ function reponseAttendue(q: Question) {
     return texte ? <p>{texte}</p> : null;
   }
 
+  if (q.type === "frise" && q.points?.length) {
+    return associations(q.points);
+  }
+
   if (q.type === "vf") {
-    return q.justification ? (
+    return (
       <p>
-        <span className="font-semibold">{q.vrai ? "Vrai" : "Faux"}</span> — {q.justification}
+        <span className="font-semibold">{q.vrai ? "Vrai" : "Faux"}</span>
+        {q.justification ? ` — ${q.justification}` : ""}
       </p>
-    ) : null;
+    );
   }
 
   if (q.type === "ordre" && q.items && q.items.length > 0) {
@@ -118,39 +139,115 @@ function reponseAttendue(q: Question) {
     return <p>{q.correction}</p>;
   }
 
+  if (q.type === "erreur" && q.phraseFautive != null) {
+    const phrase = q.segments?.[q.phraseFautive];
+    return phrase ? <p><span className="font-semibold">Phrase fautive :</span> {phrase}</p> : null;
+  }
+
   if (q.type === "trous" && q.texte && q.mots) {
     let texte = q.texte;
-    for (const mot of q.mots) {
-      texte = texte.replace("_____", `<strong>${mot}</strong>`);
-    }
+    q.mots.forEach((mot, i) => {
+      texte = texte.replace(`{${i + 1}}`, `<strong>${mot}</strong>`).replace("_____", `<strong>${mot}</strong>`);
+    });
     return <p dangerouslySetInnerHTML={{ __html: texte }} />;
   }
 
   if (q.type === "carte" && q.bonneZone) {
-    return <p>Bonne zone : <span className="font-semibold">{q.bonneZone}</span></p>;
+    return <p className="font-semibold">{q.bonneZone}</p>;
   }
 
   if (q.type === "graphe" && q.bonneBarre != null && q.graphe?.barres?.[q.bonneBarre]) {
     return (
       <p>
-        Bonne barre : <span className="font-semibold">{q.graphe.barres[q.bonneBarre].l}</span>
+        <span className="font-semibold">{q.graphe.barres[q.bonneBarre].l}</span>
+        {` — ${q.graphe.barres[q.bonneBarre].v.toLocaleString("fr-FR")}${q.graphe.unite ? ` ${q.graphe.unite}` : ""}`}
       </p>
     );
   }
 
-  if ((q.type === "camembert" || q.type === "plan") && q.bonneCible != null) {
-    return <p>Bonne cible n° <span className="font-semibold">{q.bonneCible + 1}</span></p>;
+  if (q.type === "camembert" && q.camembert?.segments[cible]) {
+    const segment = q.camembert.segments[cible];
+    const total = q.camembert.segments.reduce((s, item) => s + item.v, 0);
+    const part = total ? Math.round((segment.v / total) * 100) : 0;
+    return <p><span className="font-semibold">{segment.l}</span> — {segment.v.toLocaleString("fr-FR")}{q.camembert.unite ? ` ${q.camembert.unite}` : ""} ({part} %)</p>;
+  }
+
+  if (q.type === "plan" && q.plan?.cibles[cible]) {
+    const zone = q.plan.cibles[cible];
+    return <p><span className="font-semibold">{zone.l}</span>{zone.sub ? ` — ${zone.sub}` : ""}</p>;
   }
 
   if (q.type === "courbe" && q.bonnePoint != null) {
-    return <p>Bon point n° <span className="font-semibold">{q.bonnePoint + 1}</span></p>;
+    const serie = q.courbe?.series.find((s) => !s.contexte) ?? q.courbe?.series[0];
+    const point = serie?.points[q.bonnePoint];
+    return point ? <p><span className="font-semibold">{point.x}</span> — {point.y.toLocaleString("fr-FR")}{q.courbe?.unite ? ` ${q.courbe.unite}` : ""}{point.sub ? ` — ${point.sub}` : ""}</p> : null;
+  }
+
+  if (q.type === "organigramme" && q.orga?.noeuds[cible]) {
+    const item = q.orga.noeuds[cible];
+    return <p><span className="font-semibold">{item.l}</span>{item.sub ? ` — ${item.sub}` : ""}</p>;
+  }
+  if (q.type === "coupe" && q.coupe?.strates[cible]) {
+    const item = q.coupe.strates[cible];
+    return <p><span className="font-semibold">{item.l}</span> — {item.ep.toLocaleString("fr-FR")} m{item.note ? ` — ${item.note}` : ""}</p>;
+  }
+  if (q.type === "synoptique" && q.synoptique?.equipements[cible]) {
+    const item = q.synoptique.equipements[cible];
+    return <p><span className="font-semibold">{item.l}</span>{item.sub ? ` — ${item.sub}` : ""}</p>;
+  }
+  if (q.type === "radar" && q.radar?.axes[cible]) {
+    const item = q.radar.axes[cible];
+    return <p><span className="font-semibold">{item.l}</span> — {item.v}/{q.radar.max ?? 5}</p>;
+  }
+  if (q.type === "cycle" && q.cycle?.etapes[cible]) {
+    const item = q.cycle.etapes[cible];
+    return <p><span className="font-semibold">{item.code} · {item.l}</span>{item.d ? ` — ${item.d}` : ""}</p>;
+  }
+  if (q.type === "echelle" && q.echelle_g?.tranches[cible]) {
+    const item = q.echelle_g.tranches[cible];
+    return <p><span className="font-semibold">{item.borne}</span> — {item.l}</p>;
+  }
+  if (q.type === "paroi" && q.paroi?.couches[cible]) {
+    const item = q.paroi.couches[cible];
+    return <p><span className="font-semibold">{item.l}</span>{item.d ? ` — ${item.d}` : ""}</p>;
+  }
+  if (q.type === "pmr" && q.pmr?.etapes[cible]) {
+    const item = q.pmr.etapes[cible];
+    return <p><span className="font-semibold">{item.l}</span> — {item.cote}{item.regle ? ` — ${item.regle}` : ""}</p>;
+  }
+  if (q.type === "chantier" && q.chantier) {
+    return associations(q.chantier.depots.map((item) => [item.l, q.chantier?.colonnes[item.col] ?? ""]));
+  }
+  if (q.type === "facade" && q.facade) {
+    return associations(q.facade.faces.map((item) => [item.l, q.facade?.colonnes[item.col] ?? ""]));
+  }
+  if (q.type === "pluvial" && q.pluvial) {
+    return associations(q.pluvial.ouvrages.map((item) => [item.l, q.pluvial?.colonnes[item.col] ?? ""]));
+  }
+  if (q.type === "curseur" && q.curseur) {
+    return <p className="font-semibold">{q.curseur.cible.toLocaleString("fr-FR")} {q.curseur.unite ?? ""}</p>;
+  }
+  if (q.type === "empilement" && q.empilement) {
+    return liste(q.empilement.couches.map((item) => item.sub ? `${item.l} — ${item.sub}` : item.l));
+  }
+  if (q.type === "zonage" && q.zonage) {
+    return associations(q.zonage.cellules.map((item) => [item.l, q.zonage?.legende[item.cat] ?? ""]));
+  }
+  if (q.type === "circuit" && q.circuit) {
+    return liste(q.circuit.chemin.map((index) => {
+      const item = q.circuit?.etapes[index];
+      return item ? `${item.l}${item.sub ? ` — ${item.sub}` : ""}` : "";
+    }).filter(Boolean));
+  }
+  if (q.type === "cablage" && q.cablage) {
+    return associations(q.cablage.gauche.map((item, i) => [item, q.cablage?.droite[i] ?? ""]));
   }
 
   if (q.correction) {
     return <p>{q.correction}</p>;
   }
 
-  return null;
+  return <p>{q.explication}</p>;
 }
 
 function Page() {

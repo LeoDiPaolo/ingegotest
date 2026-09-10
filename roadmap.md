@@ -26,6 +26,6 @@
 - [x] Scénariser le déverrouillage des niveaux avec l'identité IngéGo
 - [x] Distinguer premier passage, reprise à chaud et consolidation future dans le bilan
 - [x] Transformer l'accueil en poste de mission avec un prochain objectif concret
-- [ ] Garantir sur mobile l'ordre contenu → correction → actions, sans recouvrement
-- [ ] Afficher une réponse explicite et complète pour chaque format dans le Corpus
-- [ ] Vérifier une mission complète et les fiches Corpus sur petit écran
+- [x] Garantir sur mobile l'ordre contenu → correction → actions, sans recouvrement
+- [x] Afficher une réponse explicite et complète pour chaque format dans le Corpus
+- [x] Vérifier une mission complète et les fiches Corpus sur petit écran
