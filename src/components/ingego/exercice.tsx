@@ -68,8 +68,6 @@ export function ordreCablage(q: Question): number[] {
   );
 }
 
-const AUTO_NOTE = ["libre", "vf"];
-
 const CONSIGNES: Record<Question["type"], string> = {
   qcm: "Prenez une décision",
   libre: "Préparez votre réponse au jury",
@@ -543,8 +541,6 @@ export function Exercice({
   const famille = FAMILLES[q.fam];
   const estJuste = useMemo(() => (corrige ? juste(q, rep) : false), [corrige, q, rep]);
   const part = useMemo(() => (corrige ? partJuste(q, rep) : 0), [corrige, q, rep]);
-  const autoNote = AUTO_NOTE.includes(q.type);
-
   const melangeMots = useMemo(
     () => melange([...new Set([...(q.mots ?? []), ...(q.leurres ?? [])])], graineDe(q.id)),
     [q],
@@ -1223,7 +1219,7 @@ export function Exercice({
         </Button>
       ) : (
         <div className="space-y-2.5 sm:space-y-4">
-          {!autoNote || q.type === "vf" ? (
+          {q.type !== "libre" ? (
             <div
               className={cn(
                 "relative flex min-h-14 items-center gap-3 overflow-hidden rounded-xl border-2 px-3 py-2 text-sm font-bold sm:py-3",
@@ -1335,63 +1331,19 @@ export function Exercice({
             </Accordion>
           ) : null}
 
-          {autoNote ? (
-            <div className="rounded-xl border border-border bg-card p-3 pb-[max(0.75rem,env(safe-area-inset-bottom))]">
-              <p className="mb-2 text-xs text-muted-foreground">
-                Évaluez votre restitution : c'est elle qui règle la prochaine échéance.
-              </p>
-              <div className="grid grid-cols-2 gap-2">
-                {(
-                  [
-                    [0, "Raté"],
-                    [1, "Difficile"],
-                    [2, "Correct"],
-                    [3, "Évident"],
-                  ] as const
-                ).map(([note, label]) => (
-                  <button
-                    key={note}
-                    onClick={() => onNote(note, q.type === "libre" ? note > 0 : estJuste)}
-                    className={cn(
-                      "tap rounded-xl border py-3 text-sm font-semibold",
-                      note === 0
-                        ? "border-destructive/50 bg-destructive/15 text-foreground"
-                        : note === 3
-                          ? "border-success/50 bg-success/15 text-foreground"
-                          : "border-border bg-elevated text-foreground",
-                    )}
-                  >
-                    {label}
-                  </button>
-                ))}
-              </div>
-            </div>
-          ) : (
-            <div className="space-y-2 rounded-xl border border-border bg-card p-3 pb-[max(0.75rem,env(safe-area-inset-bottom))]">
-              <Button
-                onClick={() => onNote(estJuste ? 2 : part >= 0.6 ? 1 : 0, estJuste)}
-                className="tap touche-brand h-12 w-full rounded-xl bg-brand text-base font-bold text-brand-foreground hover:bg-brand/90 sm:h-14"
-              >
-                Question suivante <ArrowRight className="h-4 w-4" />
-              </Button>
-              {estJuste ? (
-                <div className="grid grid-cols-2 gap-2">
-                  <button
-                    onClick={() => onNote(1, true)}
-                    className="tap rounded-xl border border-border bg-elevated py-2.5 text-xs font-semibold"
-                  >
-                    C'était difficile
-                  </button>
-                  <button
-                    onClick={() => onNote(3, true)}
-                    className="tap rounded-xl border border-success/50 bg-success/15 py-2.5 text-xs font-semibold"
-                  >
-                    C'était évident
-                  </button>
-                </div>
-              ) : null}
-            </div>
-          )}
+          <div className="pb-[max(0.75rem,env(safe-area-inset-bottom))]">
+            <Button
+              onClick={() =>
+                onNote(
+                  q.type === "libre" ? 2 : estJuste ? 2 : part >= 0.6 ? 1 : 0,
+                  q.type === "libre" || estJuste,
+                )
+              }
+              className="tap touche-brand h-12 w-full rounded-xl bg-brand text-base font-bold text-brand-foreground hover:bg-brand/90 sm:h-14"
+            >
+              Question suivante <ArrowRight className="h-4 w-4" />
+            </Button>
+          </div>
         </div>
       )}
     </article>
