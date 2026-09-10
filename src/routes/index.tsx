@@ -591,7 +591,7 @@ function Reviser() {
             </div>
           </section>
         ) : q ? (
-          <section className="space-y-2 pb-[max(1.5rem,env(safe-area-inset-bottom))] sm:space-y-4 sm:pb-0">
+          <section className="space-y-2 pb-[calc(15rem+env(safe-area-inset-bottom))] sm:space-y-4 sm:pb-0">
             <div className="flex items-center gap-2 sm:gap-3">
               <button onClick={quitter} aria-label="Quitter la séance" className="tap p-1">
                 <X className="h-5 w-5 text-muted-foreground" />
