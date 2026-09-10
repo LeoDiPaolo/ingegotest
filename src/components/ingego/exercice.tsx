@@ -88,6 +88,43 @@ export function trouJuste(q: Question, idx: number, valeur: string | undefined) 
   return groupe.some((j) => mots[j] === valeur);
 }
 
+/* Correction d'un texte à trous : chaque mot attendu ne peut servir qu'une fois.
+   Un trou rempli avec un mot déjà utilisé ailleurs est faux, et on lui affiche
+   le mot qui manquait réellement, même s'il n'était pas prévu à cet endroit. */
+export function resolutionTrous(q: Question, rep: unknown) {
+  const mots = q.mots ?? [];
+  const r = (rep ?? {}) as Record<string, string>;
+  const restants = [...mots];
+  const res: { ok: boolean; attendu: string }[] = mots.map(() => ({ ok: false, attendu: "" }));
+
+  const consommer = (mot: string) => {
+    const k = restants.indexOf(mot);
+    if (k === -1) return false;
+    restants.splice(k, 1);
+    return true;
+  };
+
+  // 1) trous répondus exactement comme prévu
+  mots.forEach((mot, i) => {
+    if (r[i] === mot && consommer(mot)) res[i] = { ok: true, attendu: mot };
+  });
+  // 2) trous répondus avec un mot permutable encore disponible
+  mots.forEach((_, i) => {
+    if (res[i].ok) return;
+    const v = r[i];
+    if (v && trouJuste(q, i, v) && consommer(v)) res[i] = { ok: true, attendu: v };
+  });
+  // 3) trous faux : on y place un mot encore manquant
+  mots.forEach((mot, i) => {
+    if (res[i].ok) return;
+    const prefere = restants.includes(mot) ? mot : restants[0];
+    if (prefere) consommer(prefere);
+    res[i] = { ok: false, attendu: prefere ?? mot };
+  });
+  return res;
+}
+
+
 /* Ordre d'affichage de la colonne droite d'un raccordement : déterministe,
    pour que la correction et l'affichage parlent des mêmes emplacements. */
 export function ordreCablage(q: Question): number[] {
