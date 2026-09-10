@@ -29,9 +29,12 @@ export const COMMENTAIRES_TRAITES: string[] = [
 
 /* Lot de révision du 10/09/2026 : ces questions ont été reformulées ou leur
    réponse corrigée, elles doivent être rejouées même si elles étaient validées. */
-export const VERSION_REVISIONS = "2026-09-10c";
+export const VERSION_REVISIONS = "2026-09-10d";
 
 export const IDS_REVUS: string[] = [
+  "as-10",
+  "n1-42",
+  "n1-66",
   "a4-07",
   "ec-01",
   "a1-29",
