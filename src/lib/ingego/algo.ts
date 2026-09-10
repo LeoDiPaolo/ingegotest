@@ -305,7 +305,7 @@ export function resteAFaire(etat: Etat, reglages: Reglages, now: number) {
     const c = etat[q.id];
     if (c && c.vu) {
       if (c.du <= now) n++;
-    } else if (q.niv === nivDe(q.sousTheme)) n++;
+    } else if (q.niv <= nivDe(q.axe)) n++;
   }
   return n;
 }
