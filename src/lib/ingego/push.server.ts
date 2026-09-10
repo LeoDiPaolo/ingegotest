@@ -33,7 +33,7 @@ export async function envoyerA(ab: Abonnement, message: Message): Promise<boolea
   };
 
   const payload = await buildPushPayload(
-    { data: { ...message }, options: { ttl: 12 * 3600, urgency: "normal" } },
+    { data: JSON.stringify(message), options: { ttl: 12 * 3600, urgency: "normal" } },
     subscription,
     clesVapid(),
   );
