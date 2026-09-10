@@ -70,9 +70,23 @@ export function BadgeMaitrise({
 }) {
   const part = total ? acquis / total : 0;
   const partVue = total ? Math.max(part, vus / total) : 0;
-  const palier = part >= 0.8 ? "Maîtrisé" : part >= 0.35 ? "En chantier" : "À explorer";
   const atteint = palierAtteint(part);
   const pct = (v: number) => (v > 0 && v < 0.01 ? 1 : Math.round(v * 100));
+  /* Prochain palier et réussites manquantes : message orienté objectif. */
+  const prochain = PALIERS_PART.find((p) => part < p) ?? null;
+  const restants = prochain != null ? Math.max(1, Math.ceil(prochain * total) - acquis) : 0;
+  const palier =
+    part >= 1
+      ? "Catégorie maîtrisée"
+      : part > 0
+        ? `${pct(part)} % maîtrisé`
+        : partVue > 0
+          ? "Premières réussites en cours"
+          : "À découvrir";
+  const sousTitre =
+    prochain != null
+      ? `Prochain badge à ${Math.round(prochain * 100)} % · encore ${restants} réussite${restants > 1 ? "s" : ""}`
+      : "Tous les badges sont débloqués";
   const Balise = onClick ? "button" : "div";
   return (
     <Balise
@@ -97,12 +111,13 @@ export function BadgeMaitrise({
             className="shrink-0 rounded-full px-2 py-0.5 text-[0.6rem] font-extrabold"
             style={{ backgroundColor: `${axe.couleur}22`, color: axe.couleur }}
           >
-            {atteint ? `Palier ${Math.round(atteint * 100)} %` : `${pct(part)} %`}
+            {atteint ? `Badge ${Math.round(atteint * 100)} %` : `${pct(part)} %`}
           </span>
         </div>
         <p className="text-xs text-muted-foreground">
-          {palier} · {pct(part)} % validé
-          {partVue > part ? ` · ${pct(partVue)} % entamé` : ""}
+          <span className="font-semibold text-foreground/80">{palier}</span>
+          {" · "}
+          {sousTitre}
         </p>
         <div className="relative mt-2 h-2.5 overflow-hidden rounded-full bg-elevated">
           <div
