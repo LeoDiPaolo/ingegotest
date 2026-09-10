@@ -151,6 +151,19 @@ function RootShell({ children }: { children: ReactNode }) {
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
 
+  useEffect(() => {
+    /* Service worker de notifications uniquement (aucun cache) : on l'installe
+       seulement si l'utilisateur a déjà accepté les rappels. */
+    void (async () => {
+      const { environnementCompatible, enregistrerServiceWorker } = await import(
+        "@/lib/ingego/push"
+      );
+      if (!environnementCompatible()) return;
+      if (Notification.permission !== "granted") return;
+      await enregistrerServiceWorker();
+    })();
+  }, []);
+
   return (
     <QueryClientProvider client={queryClient}>
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
