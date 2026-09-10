@@ -14,6 +14,42 @@ export type Database = {
   }
   public: {
     Tables: {
+      abonnements_push: {
+        Row: {
+          auth: string
+          cle: string
+          created_at: string
+          dernier_envoi: string | null
+          endpoint: string
+          fuseau: string
+          id: string
+          p256dh: string
+          updated_at: string
+        }
+        Insert: {
+          auth: string
+          cle: string
+          created_at?: string
+          dernier_envoi?: string | null
+          endpoint: string
+          fuseau?: string
+          id?: string
+          p256dh: string
+          updated_at?: string
+        }
+        Update: {
+          auth?: string
+          cle?: string
+          created_at?: string
+          dernier_envoi?: string | null
+          endpoint?: string
+          fuseau?: string
+          id?: string
+          p256dh?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
       cartes: {
         Row: {
           dernier: number
