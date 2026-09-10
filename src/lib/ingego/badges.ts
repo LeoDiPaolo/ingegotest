@@ -18,11 +18,12 @@ export type Badge = {
 export type LigneAxe = { axe: Axe; acquises: number; total: number };
 
 export function badgePalierReponses(p: number): Badge {
+  const complet = p >= CORPUS.length;
   return {
     cle: `rep-${p}`,
-    libelle: p === 783 ? "783" : String(p),
-    titre: p === 783 ? "Corpus complet" : `${p} bonnes réponses`,
-    legende: p === 783 ? "Toutes les questions validées" : "Palier cumulé",
+    libelle: String(p),
+    titre: complet ? "Corpus complet" : `${p} questions validées`,
+    legende: complet ? "Toutes les questions validées" : "Palier cumulé",
   };
 }
 
