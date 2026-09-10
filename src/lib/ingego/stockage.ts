@@ -33,6 +33,7 @@ const CLE_LOCALE = "ingego-donnees";
 const CLE_APPAREIL = "ingego-cle-appareil";
 const CLE_PURGE = "ingego-purge";
 const CLE_PURGE_COM = "ingego-purge-commentaires";
+const CLE_PURGE_REV = "ingego-purge-revisions";
 
 export const VIDE: Donnees = {
   cartes: {},
@@ -94,11 +95,21 @@ function marquerPurge(cle: string, version: string) {
   }
 }
 
-function purger(d: Donnees, purgeCartes: boolean, purgeCom: boolean): Donnees {
+function purger(
+  d: Donnees,
+  purgeCartes: boolean,
+  purgeCom: boolean,
+  purgeRev: boolean,
+): Donnees {
   let sortie = d;
   if (purgeCartes) {
     const cartes = { ...sortie.cartes };
     for (const id of IDS_CORRIGES) delete cartes[id];
+    sortie = { ...sortie, cartes };
+  }
+  if (purgeRev) {
+    const cartes = { ...sortie.cartes };
+    for (const id of IDS_REVUS) delete cartes[id];
     sortie = { ...sortie, cartes };
   }
   if (purgeCom) {
