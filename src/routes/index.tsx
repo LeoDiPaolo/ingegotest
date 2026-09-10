@@ -97,11 +97,8 @@ function Reviser() {
     return { total, acquises, part: total ? acquises / total : 0, lignes: l };
   }, [donnees.cartes]);
 
-  /* Paliers de bonnes réponses, toutes catégories confondues. */
-  const bonnesReponses = useMemo(
-    () => donnees.journal.filter((e) => e.id !== MARQUE_SESSION && e.note > 0).length,
-    [donnees.journal],
-  );
+  /* Paliers cumulés : uniquement les questions validées (réussies du premier coup). */
+  const bonnesReponses = bilan.acquises;
   const prochainPalier = PALIERS_REPONSES.find((p) => p > bonnesReponses) ?? null;
 
   /* Récompenses : file des badges nouvellement débloqués. */
