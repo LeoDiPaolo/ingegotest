@@ -75,6 +75,9 @@ export interface Question {
   points?: [string, string][];
   texte?: string;
   mots?: string[];
+  /* groupes de trous interchangeables : les mots d'un même groupe sont
+     acceptés dans n'importe quel ordre (énumérations sans hiérarchie) */
+  motsPermutables?: number[][];
   leurres?: string[];
   vrai?: boolean;
   justification?: string;
