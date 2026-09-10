@@ -1,4 +1,11 @@
-import { CORPUS, NIVEAUX_SOUS_THEME, type Famille, type Question, type TypeExo } from "./corpus";
+import {
+  CORPUS,
+  NIVEAUX_AXE,
+  NIVEAUX_SOUS_THEME,
+  type Famille,
+  type Question,
+  type TypeExo,
+} from "./corpus";
 
 /* ============================================================
    Répétition espacée — repris verbatim de l'artefact IngéGo.
@@ -86,6 +93,16 @@ export function niveauActif(sousTheme: string, etat: Etat) {
   for (const q of NIVEAUX_SOUS_THEME[sousTheme] || []) if (!validee(etat[q.id])) return q.niv;
   return Infinity;
 }
+
+/* Déblocage raisonné par chapitre : tant que 100 % des questions d'un niveau
+   d'un chapitre ne sont pas validées, aucune nouveauté d'un niveau supérieur
+   n'est proposée, quel que soit le sous-thème. Une question de niveau inférieur
+   ajoutée plus tard redevient donc prioritaire pour tout le chapitre. */
+export function niveauActifAxe(axe: string, etat: Etat) {
+  for (const q of NIVEAUX_AXE[axe] || []) if (!validee(etat[q.id])) return q.niv;
+  return Infinity;
+}
+
 
 export function progressionSousTheme(sousTheme: string, etat: Etat) {
   const questions = NIVEAUX_SOUS_THEME[sousTheme] ?? [];
@@ -244,8 +261,8 @@ export function composerSession(etat: Etat, reglages: Reglages, now: number): Qu
     );
   }
   const cache: Record<string, number> = {};
-  const nivDe = (s: string) =>
-    cache[s] !== undefined ? cache[s] : (cache[s] = niveauActif(s, etat));
+  const nivDe = (a: string) =>
+    cache[a] !== undefined ? cache[a] : (cache[a] = niveauActifAxe(a, etat));
   const dues: Question[] = [],
     neuves: Question[] = [];
   for (const q of CORPUS) {
@@ -253,7 +270,7 @@ export function composerSession(etat: Etat, reglages: Reglages, now: number): Qu
     const c = etat[q.id];
     if (c && c.vu) {
       if (c.du <= now) dues.push(q);
-    } else if (q.niv === nivDe(q.sousTheme)) neuves.push(q);
+    } else if (q.niv <= nivDe(q.axe)) neuves.push(q);
   }
   dues.sort((a, b) => etat[a.id]!.du - etat[b.id]!.du);
   neuves.sort((a, b) => a.niv - b.niv || a.id.localeCompare(b.id));
@@ -280,15 +297,15 @@ export function resteAFaire(etat: Etat, reglages: Reglages, now: number) {
   if (reglages.cible === "fragiles")
     return CORPUS.filter((q) => ouvert(q) && etatCarte(etat[q.id]) === "fragile").length;
   const cache: Record<string, number> = {};
-  const nivDe = (s: string) =>
-    cache[s] !== undefined ? cache[s] : (cache[s] = niveauActif(s, etat));
+  const nivDe = (a: string) =>
+    cache[a] !== undefined ? cache[a] : (cache[a] = niveauActifAxe(a, etat));
   let n = 0;
   for (const q of CORPUS) {
     if (!ouvert(q)) continue;
     const c = etat[q.id];
     if (c && c.vu) {
       if (c.du <= now) n++;
-    } else if (q.niv === nivDe(q.sousTheme)) n++;
+    } else if (q.niv <= nivDe(q.axe)) n++;
   }
   return n;
 }
