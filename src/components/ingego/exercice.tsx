@@ -366,17 +366,9 @@ function decouperExplication(texte: string) {
   const phrases = phrasesDe(texte);
   if (phrases.length === 0) return { essentiel: texte, details: [] as string[] };
 
-  const resume: string[] = [];
-  for (const phrase of phrases) {
-    const longueur = resume.join(" ").length;
-    if (resume.length > 0 && (longueur >= 160 || longueur + phrase.length > 320)) break;
-    resume.push(phrase);
-  }
-
-  /* Le détail ne répète pas le résumé : « en savoir plus » reprend uniquement
-     les phrases qui ne sont pas déjà affichées au-dessus. */
-  const details = phrases.slice(resume.length);
-  return { essentiel: resume.join(" "), details };
+  /* Une seule idée dans le résumé : les précisions restent ainsi toujours
+     accessibles dans « En savoir plus », y compris sur un petit écran. */
+  return { essentiel: phrases[0], details: phrases.slice(1) };
 }
 
 function reperesPourcentages(texte: string) {
@@ -1225,7 +1217,7 @@ export function Exercice({
             onCorrige?.(ok, partJuste(q, rep));
           }}
           disabled={!complet(q, rep)}
-          className="tap touche fixed inset-x-3 bottom-[max(0.5rem,env(safe-area-inset-bottom))] z-40 h-12 w-auto rounded-xl text-sm font-extrabold uppercase shadow-[var(--shadow-lift)] disabled:opacity-40 disabled:shadow-none sm:static sm:inset-auto sm:h-14 sm:w-full"
+          className="tap touche h-12 w-full rounded-xl text-sm font-extrabold uppercase disabled:opacity-40 disabled:shadow-none sm:h-14"
         >
           {q.type === "libre" ? "Voir la réponse attendue" : "Valider"}
         </Button>
@@ -1344,7 +1336,7 @@ export function Exercice({
           ) : null}
 
           {autoNote ? (
-            <div className="fixed inset-x-0 bottom-0 z-40 max-h-[46dvh] overflow-y-auto border-t border-border bg-card/95 px-3 pt-2 pb-[max(0.75rem,env(safe-area-inset-bottom))] backdrop-blur-sm sm:static sm:max-h-none sm:overflow-visible sm:border-0 sm:bg-transparent sm:p-0 sm:backdrop-blur-none">
+            <div className="rounded-xl border border-border bg-card p-3 pb-[max(0.75rem,env(safe-area-inset-bottom))]">
               <p className="mb-2 text-xs text-muted-foreground">
                 Évaluez votre restitution : c'est elle qui règle la prochaine échéance.
               </p>
@@ -1375,7 +1367,7 @@ export function Exercice({
               </div>
             </div>
           ) : (
-            <div className="fixed inset-x-0 bottom-0 z-40 max-h-[46dvh] space-y-2 overflow-y-auto border-t border-border bg-card/95 px-3 pt-2 pb-[max(0.75rem,env(safe-area-inset-bottom))] backdrop-blur-sm sm:static sm:max-h-none sm:space-y-2 sm:overflow-visible sm:border-0 sm:bg-transparent sm:p-0 sm:backdrop-blur-none">
+            <div className="space-y-2 rounded-xl border border-border bg-card p-3 pb-[max(0.75rem,env(safe-area-inset-bottom))]">
               <Button
                 onClick={() => onNote(estJuste ? 2 : part >= 0.6 ? 1 : 0, estJuste)}
                 className="tap touche-brand h-12 w-full rounded-xl bg-brand text-base font-bold text-brand-foreground hover:bg-brand/90 sm:h-14"
