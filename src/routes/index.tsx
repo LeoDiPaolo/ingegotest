@@ -11,7 +11,6 @@ import {
   Target,
   Trophy,
   X,
-  Clock3,
   ChevronRight,
   ArrowRight,
 } from "lucide-react";
@@ -111,23 +110,6 @@ function Reviser() {
     [bilan.lignes, bonnesReponses],
   );
   const { badge: recompense, suivant: recompenseSuivante } = useRecompenses(badges, pret);
-
-  /* Aperçu de la dernière séquence répondue. */
-  const derniere = useMemo(
-    () =>
-      donnees.journal
-        .filter((e) => e.id !== MARQUE_SESSION && Q_BY_ID[e.id])
-        .slice(-4)
-        .reverse()
-        .map((e) => ({
-          id: e.id,
-          t: e.t,
-          note: e.note,
-          jour: e.jour.slice(5),
-          libelle: Q_BY_ID[e.id].sousTheme,
-        })),
-    [donnees.journal],
-  );
 
   const detailAxe = useMemo(() => {
     if (!axeOuvert) return null;
@@ -355,29 +337,6 @@ function Reviser() {
                 />
               </div>
               <p className="text-xs text-muted-foreground">sur {bilan.total} questions</p>
-            </section>
-
-            <section className="anim-monte surface col-span-2 space-y-2 p-4">
-              <p className="flex items-center gap-1.5 text-[0.68rem] font-bold tracking-[0.14em] text-muted-foreground uppercase">
-                <Clock3 className="h-3.5 w-3.5 text-primary" /> Dernière séquence
-              </p>
-              {derniere.length ? (
-                <ul className="space-y-1.5">
-                  {derniere.map((e) => (
-                    <li key={`${e.id}-${e.t}`} className="flex items-center gap-2 text-xs">
-                      <span
-                        className={`h-2 w-2 shrink-0 rounded-full ${e.note > 0 ? "bg-success" : "bg-destructive"}`}
-                      />
-                      <span className="truncate text-foreground">{e.libelle}</span>
-                      <span className="ml-auto shrink-0 text-muted-foreground">{e.jour}</span>
-                    </li>
-                  ))}
-                </ul>
-              ) : (
-                <p className="text-xs text-muted-foreground">
-                  Aucune séquence encore : lancez la première mission.
-                </p>
-              )}
             </section>
 
             <section className="anim-monte col-span-2 space-y-3 lg:col-start-3 lg:row-span-3">
