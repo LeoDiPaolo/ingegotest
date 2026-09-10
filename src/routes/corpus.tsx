@@ -84,11 +84,12 @@ function reponseAttendue(q: Question) {
   }
 
   if (q.type === "vf") {
-    return q.justification ? (
+    return (
       <p>
-        <span className="font-semibold">{q.vrai ? "Vrai" : "Faux"}</span> — {q.justification}
+        <span className="font-semibold">{q.vrai ? "Vrai" : "Faux"}</span>
+        {q.justification ? ` — ${q.justification}` : ""}
       </p>
-    ) : null;
+    );
   }
 
   if (q.type === "ordre" && q.items && q.items.length > 0) {
@@ -145,9 +146,9 @@ function reponseAttendue(q: Question) {
 
   if (q.type === "trous" && q.texte && q.mots) {
     let texte = q.texte;
-    for (const mot of q.mots) {
-      texte = texte.replace("_____", `<strong>${mot}</strong>`);
-    }
+    q.mots.forEach((mot, i) => {
+      texte = texte.replace(`{${i + 1}}`, `<strong>${mot}</strong>`).replace("_____", `<strong>${mot}</strong>`);
+    });
     return <p dangerouslySetInnerHTML={{ __html: texte }} />;
   }
 
@@ -246,7 +247,7 @@ function reponseAttendue(q: Question) {
     return <p>{q.correction}</p>;
   }
 
-  return null;
+  return <p>{q.explication}</p>;
 }
 
 function Page() {
