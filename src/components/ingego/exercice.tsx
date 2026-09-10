@@ -354,9 +354,8 @@ export function partJuste(q: Question, rep: unknown): number {
         (q.zonage?.cellules ?? []).length,
       );
     case "cablage": {
-      const ordre = ordreCablage(q);
       const g = q.cablage?.gauche ?? [];
-      return ratio(g.filter((_, i) => ordre[m[i]] === i).length, g.length);
+      return ratio(g.filter((_, i) => cablageJuste(q, i, m[i])).length, g.length);
     }
     default:
       return juste(q, rep) ? 1 : 0;
