@@ -58,6 +58,36 @@ function melangeStrict<T>(liste: T[], graine: number): T[] {
   return out;
 }
 
+/* Réponses équivalentes : quand deux cibles portent exactement le même libellé
+   (deux « Annuelle », deux « Région »…), l'une ou l'autre est juste. Le
+   raccordement et l'association comparent donc les libellés, pas les indices. */
+const memeLibelle = (a: string | undefined, b: string | undefined) =>
+  (a ?? "").trim().toLowerCase() === (b ?? "").trim().toLowerCase();
+
+export function cablageJuste(q: Question, i: number, choix: number | undefined) {
+  if (choix === undefined || choix === null) return false;
+  const droite = q.cablage?.droite ?? [];
+  return memeLibelle(droite[ordreCablage(q)[choix]], droite[i]);
+}
+
+export function assocJuste(q: Question, i: number, choix: number | undefined) {
+  if (choix === undefined || choix === null) return false;
+  const paires = q.paires ?? [];
+  return memeLibelle(paires[choix]?.[1], paires[i]?.[1]);
+}
+
+/* Trous interchangeables : dans une énumération sans hiérarchie, chaque mot du
+   groupe est accepté dans n'importe quel trou du groupe, à condition qu'aucun
+   mot ne soit utilisé deux fois. */
+export function trouJuste(q: Question, idx: number, valeur: string | undefined) {
+  const mots = q.mots ?? [];
+  if (!valeur) return false;
+  if (valeur === mots[idx]) return true;
+  const groupe = (q.motsPermutables ?? []).find((g) => g.includes(idx));
+  if (!groupe) return false;
+  return groupe.some((j) => mots[j] === valeur);
+}
+
 /* Ordre d'affichage de la colonne droite d'un raccordement : déterministe,
    pour que la correction et l'affichage parlent des mêmes emplacements. */
 export function ordreCablage(q: Question): number[] {
