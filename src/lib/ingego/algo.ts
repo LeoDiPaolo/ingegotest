@@ -260,7 +260,7 @@ export function composerSession(etat: Etat, reglages: Reglages, now: number): Qu
   const candidats = [...lot, ...dues, ...pool].filter(
     (q, index, liste) => liste.findIndex((autre) => autre.id === q.id) === index,
   );
-  return entrelacer(repartirParTheme(candidats, actifs, n));
+  return entrelacer(repartirParTheme(candidats, actifs, n, Math.floor(now / JOUR)));
 }
 
 export function resteAFaire(etat: Etat, reglages: Reglages, now: number) {
