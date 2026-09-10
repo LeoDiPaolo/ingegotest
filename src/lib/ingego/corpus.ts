@@ -198,3 +198,8 @@ export const attendue = (q: Question) =>
     : q.type === "vf"
       ? (q.justification ?? "")
       : "";
+
+/* Progression raisonnée par chapitre (axe) : liste des questions d'un axe triées par niveau. */
+export const NIVEAUX_AXE: Record<string, Question[]> = {};
+for (const q of CORPUS) (NIVEAUX_AXE[q.axe] = NIVEAUX_AXE[q.axe] || []).push(q);
+Object.values(NIVEAUX_AXE).forEach((l) => l.sort((a, b) => a.niv - b.niv));
