@@ -11108,20 +11108,20 @@
       "sousTheme": "ERP, IGH et urbanisme",
       "stIdx": 8,
       "sujet": "g-8",
-      "niveau": 2,
+      "niveau": 4,
       "famille": "S",
       "type": "ordre",
-      "question": "Classez les catégories d'ERP dans l'ordre, de la 1ère (effectif le plus élevé) à la 5ème (effectif le plus faible).",
+      "question": "Classez ces établissements recevant du public de l'effectif accueilli le plus élevé au plus faible.",
       "items": [
-        "1ère catégorie",
-        "2ème catégorie",
-        "3ème catégorie",
-        "4ème catégorie",
-        "5ème catégorie"
+        "Plus de 1 500 personnes",
+        "De 701 à 1 500 personnes",
+        "De 301 à 700 personnes",
+        "Jusqu'à 300 personnes, au-dessus du seuil d'assujettissement du type",
+        "En dessous du seuil d'assujettissement du type d'activité"
       ],
-      "explication": "Les ERP sont classés en cinq catégories selon leur effectif, de la 1ère (plus de 1500 personnes) à la 5ème (petits établissements sous le seuil réglementaire), en application de l'article R.123-19 du CCH. En savoir plus — ERP : établissement recevant du public, soumis à un règlement de sécurité incendie et à des obligations d'accessibilité selon son type d'activité et sa catégorie d'effectif.",
-      "derniereVerification": "2026-08",
-      "aVerifier": null
+      "explication": "Les ERP sont classés en cinq catégories selon l'effectif admis (article R.143-19 du CCH) : 1re au-delà de 1 500 personnes, 2e de 701 à 1 500, 3e de 301 à 700, 4e jusqu'à 300 personnes dès lors que le seuil d'assujettissement du type est atteint, 5e en dessous de ce seuil. Les quatre premières catégories forment le « premier groupe », soumis à l'ensemble du règlement de sécurité ; la 5e catégorie relève d'obligations allégées. En savoir plus — ERP : établissement recevant du public, soumis à un règlement de sécurité incendie et à des obligations d'accessibilité selon son type d'activité et sa catégorie d'effectif.",
+      "derniereVerification": "2026-09",
+      "aVerifier": false
     },
     {
       "id": "g-074",
