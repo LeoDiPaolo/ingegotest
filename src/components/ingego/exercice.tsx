@@ -257,9 +257,17 @@ function juste(q: Question, rep: Reponse): boolean {
     case "frise":
       return (q.points ?? []).every((_, i) => m[i] === i);
     case "assoc":
-      return (q.paires ?? []).every((_, i) => m[i] === i);
-    case "trous":
-      return (q.mots ?? []).every((mot, i) => (rep as Record<string, string>)[i] === mot);
+      return (q.paires ?? []).every((_, i) => assocJuste(q, i, m[i]));
+    case "trous": {
+      const r = rep as Record<string, string>;
+      const utilises = new Set<string>();
+      return (q.mots ?? []).every((_, i) => {
+        const v = r[i];
+        if (!trouJuste(q, i, v) || utilises.has(v)) return false;
+        utilises.add(v);
+        return true;
+      });
+    }
     case "tri":
       return (q.elements ?? []).every((el, i) => m[i] === el[1]);
     case "chantier":
