@@ -94,6 +94,16 @@ export function niveauActif(sousTheme: string, etat: Etat) {
   return Infinity;
 }
 
+/* Déblocage raisonné par chapitre : tant que 100 % des questions d'un niveau
+   d'un chapitre ne sont pas validées, aucune nouveauté d'un niveau supérieur
+   n'est proposée, quel que soit le sous-thème. Une question de niveau inférieur
+   ajoutée plus tard redevient donc prioritaire pour tout le chapitre. */
+export function niveauActifAxe(axe: string, etat: Etat) {
+  for (const q of NIVEAUX_AXE[axe] || []) if (!validee(etat[q.id])) return q.niv;
+  return Infinity;
+}
+
+
 export function progressionSousTheme(sousTheme: string, etat: Etat) {
   const questions = NIVEAUX_SOUS_THEME[sousTheme] ?? [];
   const niveau = niveauActif(sousTheme, etat);
