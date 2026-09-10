@@ -11,7 +11,6 @@ import {
   Target,
   Trophy,
   X,
-  
   ChevronRight,
   ArrowRight,
 } from "lucide-react";
@@ -111,7 +110,6 @@ function Reviser() {
     [bilan.lignes, bonnesReponses],
   );
   const { badge: recompense, suivant: recompenseSuivante } = useRecompenses(badges, pret);
-
 
   const detailAxe = useMemo(() => {
     if (!axeOuvert) return null;
@@ -340,7 +338,6 @@ function Reviser() {
               </div>
               <p className="text-xs text-muted-foreground">sur {bilan.total} questions</p>
             </section>
-
 
             <section className="anim-monte col-span-2 space-y-3 lg:col-start-3 lg:row-span-3">
               <div className="flex items-center justify-between">
