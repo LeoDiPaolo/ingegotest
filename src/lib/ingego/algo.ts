@@ -191,7 +191,10 @@ export function repartirParTheme(
      mission, si bien que la répartition tend vers le poids réel du corpus. */
   const ordonnes = restes
     .map((r) => {
-      const u = (graineDe(`${r.theme}|${graine}`) % 100000) / 100000 || 0.00001;
+      let x = (graineDe(r.theme) ^ (graine * 2654435761)) >>> 0;
+      for (let i = 0; i < 3; i++) x = (Math.imul(x ^ (x >>> 15), 2246822507) + 3266489909) >>> 0;
+      const u = (x % 1000000) / 1000000 || 0.000001;
+
       return { ...r, cle: r.reste > 0 ? -Math.log(u) / r.reste : Infinity };
     })
     .sort((a, b) => a.cle - b.cle);
