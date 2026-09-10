@@ -261,8 +261,8 @@ export function composerSession(etat: Etat, reglages: Reglages, now: number): Qu
     );
   }
   const cache: Record<string, number> = {};
-  const nivDe = (s: string) =>
-    cache[s] !== undefined ? cache[s] : (cache[s] = niveauActif(s, etat));
+  const nivDe = (a: string) =>
+    cache[a] !== undefined ? cache[a] : (cache[a] = niveauActifAxe(a, etat));
   const dues: Question[] = [],
     neuves: Question[] = [];
   for (const q of CORPUS) {
@@ -270,7 +270,7 @@ export function composerSession(etat: Etat, reglages: Reglages, now: number): Qu
     const c = etat[q.id];
     if (c && c.vu) {
       if (c.du <= now) dues.push(q);
-    } else if (q.niv === nivDe(q.sousTheme)) neuves.push(q);
+    } else if (q.niv <= nivDe(q.axe)) neuves.push(q);
   }
   dues.sort((a, b) => etat[a.id]!.du - etat[b.id]!.du);
   neuves.sort((a, b) => a.niv - b.niv || a.id.localeCompare(b.id));
