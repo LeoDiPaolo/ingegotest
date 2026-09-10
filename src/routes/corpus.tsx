@@ -53,34 +53,9 @@ function decouper(explication: string) {
 /* Affiche explicitement la ou les bonnes réponses d'une question validée. */
 function reponseAttendue(q: Question) {
   if (q.type === "qcm") {
-    const idx = q.bonneReponse ?? 0;
-    const texte = q.options?.[idx];
+    const texte = q.options?.[q.bonneReponse ?? 0];
     if (!texte) return null;
-    return (
-      <div className="space-y-1.5">
-        {q.options?.map((opt, i) => (
-          <div
-            key={i}
-            className={cn(
-              "flex items-start gap-2 rounded-lg border px-2.5 py-1.5 text-sm",
-              i === idx
-                ? "border-success/40 bg-success/15 font-semibold text-success"
-                : "border-success/15 bg-success/5 text-muted-foreground",
-            )}
-          >
-            <span
-              className={cn(
-                "flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-[0.65rem] font-bold",
-                i === idx ? "bg-success text-white" : "bg-success/10 text-success/70",
-              )}
-            >
-              {String.fromCharCode(65 + i)}
-            </span>
-            <span className="flex-1">{opt}</span>
-          </div>
-        ))}
-      </div>
-    );
+    return <p className="font-semibold">{texte}</p>;
   }
 
   if (q.type === "libre") {

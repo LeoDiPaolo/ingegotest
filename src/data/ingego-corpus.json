@@ -767,7 +767,7 @@
       "question": "Une commune doit-elle souscrire une assurance dommages-ouvrage pour la construction d'un centre technique municipal ?",
       "options": [
         "Non, toutes les personnes publiques sont dispensées de cette assurance",
-        "Non, seul l'État est dispensé ; les communes restent assujetties à cette assurance",
+        "Oui, elle est obligatoire : seul l'État construisant pour son compte est dispensé",
         "Oui, mais seulement au-delà de 5 millions d'euros de travaux prévus au marché",
         "Non, la garantie décennale des entreprises dispense la commune de toute assurance"
       ],
@@ -18040,8 +18040,8 @@
       "niveau": 1,
       "famille": "M",
       "type": "curseur",
-      "question": "Réglez le curseur sur le montant en-dessous duquel un achat peut être passé sans écrit ni mise en concurrence, avec une simple obligation de moyens en matière de développement durable.",
-      "explication": "En-dessous de 25 000 € HT, il n'y a pas d'écrit : l'acheteur doit simplement faire son possible pour intégrer les objectifs de développement durable, notamment via le coût global. Un devis élaboré (même sans marché formalisé) impose déjà de vérifier que les conditions générales comprennent une clause environnementale.",
+      "question": "Marché de fournitures, de services ou de travaux : réglez le curseur sur le montant HT en-dessous duquel un achat peut être conclu sans écrit ni mise en concurrence, avec une simple obligation de moyens en matière de développement durable.",
+      "explication": "Ce seuil est le même quel que soit l'objet du marché (fournitures, services ou travaux) : en-dessous de 25 000 € HT, le contrat peut rester verbal, sans écrit ni mise en concurrence ; l'acheteur doit seulement faire son possible pour intégrer les objectifs de développement durable, notamment via le coût global. Il ne faut pas le confondre avec le seuil de 40 000 € HT, en-dessous duquel un écrit est exigé mais la publicité et la mise en concurrence préalables restent facultatives. En savoir plus — MEC : mise en concurrence, c'est-à-dire la consultation de plusieurs candidats avant d'attribuer le marché ; MAPA : marché à procédure adaptée, dont l'acheteur fixe librement les modalités dans le respect des principes de la commande publique.",
       "derniereVerification": "2026-09",
       "aVerifier": false,
       "curseur": {
@@ -18055,11 +18055,11 @@
         "reperes": [
           {
             "v": 25000,
-            "l": "Achat sans écrit"
+            "l": "Sans écrit (tous marchés)"
           },
           {
             "v": 40000,
-            "l": "Sans publicité ni MEC"
+            "l": "Écrit, sans publicité ni MEC"
           },
           {
             "v": 100000,

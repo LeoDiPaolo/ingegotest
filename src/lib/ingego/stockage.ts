@@ -4,8 +4,10 @@ import { normaliserReglages, type Carte, type Etat, type Reglages } from "./algo
 import {
   COMMENTAIRES_TRAITES,
   IDS_CORRIGES,
+  IDS_REVUS,
   VERSION_COMMENTAIRES,
   VERSION_CORRECTIONS,
+  VERSION_REVISIONS,
 } from "./corrections";
 
 /* Sauvegarde de la progression : écriture immédiate sur l'appareil (réactivité,
