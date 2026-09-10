@@ -5,7 +5,7 @@
 
 /* Commentaires déjà traités : une fois la question corrigée, l'observation
    n'a plus lieu d'être et disparaît de l'appareil à la prochaine ouverture. */
-export const VERSION_COMMENTAIRES = "2026-09-10a";
+export const VERSION_COMMENTAIRES = "2026-09-10b";
 
 export const COMMENTAIRES_TRAITES: string[] = [
   "n1-01",
@@ -14,13 +14,45 @@ export const COMMENTAIRES_TRAITES: string[] = [
   "g-029",
   "a1-29",
   "a2-83",
+  "n1-06",
+  "n1-10",
+  "as-07",
+  "as-09",
 ];
 
 /* Lot de révision du 10/09/2026 : ces questions ont été reformulées ou leur
    réponse corrigée, elles doivent être rejouées même si elles étaient validées. */
-export const VERSION_REVISIONS = "2026-09-10a";
+export const VERSION_REVISIONS = "2026-09-10b";
 
-export const IDS_REVUS: string[] = ["ec-01", "a1-29", "a2-83"];
+export const IDS_REVUS: string[] = [
+  "ec-01",
+  "a1-29",
+  "a2-100",
+  "a2-83",
+  "a8-20",
+  "as-07",
+  "as-09",
+  "n1-01",
+  "n1-06",
+  "n1-10",
+  "n1-12",
+  "n1-17",
+  "n1-22",
+  "n1-23",
+  "n1-26",
+  "n1-27",
+  "n1-28",
+  "n1-30",
+  "n1-32",
+  "n1-39",
+  "n1-43",
+  "n1-49",
+  "n1-53",
+  "n1-55",
+  "n1-61",
+  "n1-70",
+  "n1-71",
+];
 
 export const VERSION_CORRECTIONS = "2026-09-09a";
 
