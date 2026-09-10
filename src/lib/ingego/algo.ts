@@ -297,8 +297,8 @@ export function resteAFaire(etat: Etat, reglages: Reglages, now: number) {
   if (reglages.cible === "fragiles")
     return CORPUS.filter((q) => ouvert(q) && etatCarte(etat[q.id]) === "fragile").length;
   const cache: Record<string, number> = {};
-  const nivDe = (s: string) =>
-    cache[s] !== undefined ? cache[s] : (cache[s] = niveauActif(s, etat));
+  const nivDe = (a: string) =>
+    cache[a] !== undefined ? cache[a] : (cache[a] = niveauActifAxe(a, etat));
   let n = 0;
   for (const q of CORPUS) {
     if (!ouvert(q)) continue;
