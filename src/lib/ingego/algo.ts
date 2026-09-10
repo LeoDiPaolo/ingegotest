@@ -109,8 +109,10 @@ export function progressionSousTheme(sousTheme: string, etat: Etat) {
 
 export type EtatCarte = "neuf" | "fragile" | "acquis" | "encours";
 
+/* « Acquis » suit la règle de maîtrise de l'application : une carte validée
+   (réussie du premier coup dans une mission) compte comme acquise. */
 export const etatCarte = (c: Carte | undefined): EtatCarte =>
-  !c || !c.vu ? "neuf" : c.echecs > 0 && c.p <= 1 ? "fragile" : c.p >= 4 ? "acquis" : "encours";
+  !c || !c.vu ? "neuf" : c.p >= 1 ? "acquis" : c.echecs > 0 ? "fragile" : "encours";
 
 export function graineDe(s: string) {
   let h = 0;
