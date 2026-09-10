@@ -151,48 +151,72 @@ export function entrelacer(liste: Question[]): Question[] {
   return out;
 }
 
-/* Répartit une mission selon le poids de chaque sous-thème dans le corpus actif.
-   Le plafond d'un thème est son poids arrondi au-dessus : un thème représentant
-   10 % du corpus ne peut ainsi fournir qu'une question dans une mission de 8. */
+/* Répartit une mission au prorata du poids réel de chaque sous-thème disponible.
+   Chaque thème reçoit un quota = part du corpus actif × taille de la mission,
+   réparti à la plus forte moyenne (partie entière puis restes décroissants).
+   Un gros thème (ex. le Guide, ~43 % du corpus) obtient ainsi plusieurs
+   questions par mission, alors qu'un petit thème n'en donne qu'une de temps
+   en temps : la graine fait tourner les restes d'une mission à l'autre. */
 export function repartirParTheme(
   priorite: Question[],
   corpusActif: Question[],
   nombre: number,
+  graine = 0,
 ): Question[] {
   if (priorite.length <= nombre) return priorite;
+
+  /* Seuls les thèmes réellement proposables entrent dans la répartition. */
+  const dispo = new Map<string, number>();
+  for (const q of priorite) dispo.set(q.sousTheme, (dispo.get(q.sousTheme) ?? 0) + 1);
   const poids = new Map<string, number>();
-  for (const q of corpusActif) poids.set(q.sousTheme, (poids.get(q.sousTheme) ?? 0) + 1);
-  const total = Math.max(1, corpusActif.length);
-  const plafonds = new Map<string, number>();
-  for (const [theme, quantite] of poids)
-    plafonds.set(theme, Math.max(1, Math.ceil((quantite / total) * nombre)));
+  for (const q of corpusActif)
+    if (dispo.has(q.sousTheme)) poids.set(q.sousTheme, (poids.get(q.sousTheme) ?? 0) + 1);
+  for (const theme of dispo.keys()) if (!poids.has(theme)) poids.set(theme, 1);
+  const total = Math.max(1, [...poids.values()].reduce((a, b) => a + b, 0));
+
+  const themes = [...poids.keys()];
+  const quotas = new Map<string, number>();
+  const restes: { theme: string; reste: number }[] = [];
+  let attribues = 0;
+  for (const theme of themes) {
+    const exact = Math.min(dispo.get(theme) ?? 0, ((poids.get(theme) ?? 1) / total) * nombre);
+    const base = Math.floor(exact);
+    quotas.set(theme, base);
+    attribues += base;
+    restes.push({ theme, reste: exact - base });
+  }
+  /* Restes décroissants, avec une rotation par graine pour varier les égalités. */
+  const decalage = themes.length ? Math.abs(graine) % themes.length : 0;
+  const ordonnes = restes
+    .map((r, i) => ({ ...r, rang: (i + decalage) % Math.max(1, themes.length) }))
+    .sort((a, b) => b.reste - a.reste || a.rang - b.rang);
+  for (const r of ordonnes) {
+    if (attribues >= nombre) break;
+    const dejà = quotas.get(r.theme) ?? 0;
+    if (dejà >= (dispo.get(r.theme) ?? 0)) continue;
+    quotas.set(r.theme, dejà + 1);
+    attribues++;
+  }
 
   const selection: Question[] = [];
-  const retenues = new Set<string>();
   const compte = new Map<string, number>();
-  while (selection.length < nombre) {
-    let meilleur: Question | undefined;
-    let meilleurScore = Infinity;
-    for (let rang = 0; rang < priorite.length; rang++) {
-      const q = priorite[rang];
-      if (retenues.has(q.id)) continue;
-      const pris = compte.get(q.sousTheme) ?? 0;
-      const plafond = plafonds.get(q.sousTheme) ?? 1;
-      if (pris >= plafond) continue;
-      const part = (poids.get(q.sousTheme) ?? 1) / total;
-      const score = pris / part + rang / Math.max(1, priorite.length * 100);
-      if (score < meilleurScore) {
-        meilleur = q;
-        meilleurScore = score;
-      }
-    }
-    if (!meilleur) break;
-    selection.push(meilleur);
-    retenues.add(meilleur.id);
-    compte.set(meilleur.sousTheme, (compte.get(meilleur.sousTheme) ?? 0) + 1);
+  const restant: Question[] = [];
+  for (const q of priorite) {
+    if (selection.length >= nombre) break;
+    const pris = compte.get(q.sousTheme) ?? 0;
+    if (pris < (quotas.get(q.sousTheme) ?? 0)) {
+      selection.push(q);
+      compte.set(q.sousTheme, pris + 1);
+    } else restant.push(q);
+  }
+  /* Complément si un thème n'avait pas assez de questions proposables. */
+  for (const q of restant) {
+    if (selection.length >= nombre) break;
+    selection.push(q);
   }
   return selection;
 }
+
 
 export function composerSession(etat: Etat, reglages: Reglages, now: number): Question[] {
   const ouvert = (q: Question) =>
