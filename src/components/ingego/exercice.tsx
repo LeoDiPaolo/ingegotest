@@ -345,10 +345,10 @@ export function partJuste(q: Question, rep: unknown): number {
         (q.paires ?? []).length,
       );
     case "trous": {
-      const r = rep as Record<string, string>;
-      const mots = q.mots ?? [];
-      return ratio(mots.filter((_, i) => trouJuste(q, i, r[i])).length, mots.length);
+      const t = resolutionTrous(q, rep);
+      return ratio(t.filter((x) => x.ok).length, t.length);
     }
+
     case "tri":
       return ratio(
         (q.elements ?? []).filter((el, i) => m[i] === el[1]).length,
