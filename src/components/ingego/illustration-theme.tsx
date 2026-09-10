@@ -105,6 +105,15 @@ const TABLE: Record<string, Ill[]> = {
     I(urbanisme, "Urbanisme, ERP et IGH"),
     I(patrimoine, "Patrimoine bâti, transition et métiers du BTP"),
   ],
+  A8: [
+    I(concours, "Lecture et cadrage du sujet de la note"),
+    I(concours, "Plan, titres et forme de la copie"),
+    I(concours, "Exploitation du dossier et gestion du temps"),
+    I(concours, "Partie propositions de la note"),
+    I(concours, "Entretien avec le jury : déroulé et posture"),
+    I(concours, "Culture territoriale attendue à l'oral"),
+    I(concours, "Motivation et projet professionnel"),
+  ],
 };
 
 export function illustrationDe(axe: string, stIdx: number): Ill | null {

@@ -4,6 +4,7 @@ import {
   Building2,
   FileCheck2,
   Gavel,
+  GraduationCap,
   HardHat,
   Landmark,
   Leaf,
@@ -22,6 +23,7 @@ const ICONES: Record<string, LucideIcon> = {
   A5: Leaf,
   A6: Landmark,
   A7: BookOpenCheck,
+  A8: GraduationCap,
 };
 
 export function IconeAxe({
