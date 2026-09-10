@@ -287,10 +287,8 @@ function juste(q: Question, rep: Reponse): boolean {
       return (q.circuit?.chemin ?? []).every((e, i) => (rep as number[])[i] === e);
     case "zonage":
       return (q.zonage?.cellules ?? []).every((c, i) => m[i] === c.cat);
-    case "cablage": {
-      const ordre = ordreCablage(q);
-      return (q.cablage?.gauche ?? []).every((_, i) => ordre[m[i]] === i);
-    }
+    case "cablage":
+      return (q.cablage?.gauche ?? []).every((_, i) => cablageJuste(q, i, m[i]));
     default:
       return false;
   }
@@ -311,11 +309,14 @@ export function partJuste(q: Question, rep: unknown): number {
     case "frise":
       return ratio((q.points ?? []).filter((_, i) => m[i] === i).length, (q.points ?? []).length);
     case "assoc":
-      return ratio((q.paires ?? []).filter((_, i) => m[i] === i).length, (q.paires ?? []).length);
+      return ratio(
+        (q.paires ?? []).filter((_, i) => assocJuste(q, i, m[i])).length,
+        (q.paires ?? []).length,
+      );
     case "trous": {
       const r = rep as Record<string, string>;
       const mots = q.mots ?? [];
-      return ratio(mots.filter((mot, i) => r[i] === mot).length, mots.length);
+      return ratio(mots.filter((_, i) => trouJuste(q, i, r[i])).length, mots.length);
     }
     case "tri":
       return ratio(
