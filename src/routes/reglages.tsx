@@ -1,6 +1,14 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
-import { Download, RotateCcw, SlidersHorizontal, Database, ShieldCheck } from "lucide-react";
+import {
+  Download,
+  RotateCcw,
+  SlidersHorizontal,
+  Database,
+  ShieldCheck,
+  Bell,
+} from "lucide-react";
+import { CarteRappels } from "@/components/ingego/rappels";
 import { Entete } from "@/components/ingego/entete";
 import { NavBas } from "@/components/ingego/nav-bas";
 import { AXES, CORPUS, FAMILLES, type Famille } from "@/lib/ingego/corpus";
@@ -170,6 +178,8 @@ function Page() {
             <p className="text-xs text-muted-foreground">…et {aVerifier.length - 40} autres.</p>
           ) : null}
         </section>
+
+        <CarteRappels />
 
         <section className="space-y-2">
           <p className="flex items-center gap-2 text-sm font-bold">
