@@ -21058,7 +21058,7 @@
         "min": 0,
         "max": 20,
         "pas": 1,
-        "cible": 8,
+        "cible": 12,
         "tolerance": 0,
         "unite": "points",
         "titre": "Barème de l'épreuve de note",
@@ -21068,7 +21068,7 @@
             "l": "0"
           },
           {
-            "v": 8,
+            "v": 12,
             "l": "Propositions"
           },
           {
