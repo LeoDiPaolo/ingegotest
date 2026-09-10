@@ -14,6 +14,7 @@ import { Route as CorpusRouteImport } from './routes/corpus'
 import { Route as ElevationRouteImport } from './routes/elevation'
 import { Route as QaVisuelsRouteImport } from './routes/qa-visuels'
 import { Route as ReglagesRouteImport } from './routes/reglages'
+import { Route as ApiPublicRappelsRouteImport } from './routes/api/public/rappels'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -40,6 +41,11 @@ const ReglagesRoute = ReglagesRouteImport.update({
   path: '/reglages',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiPublicRappelsRoute = ApiPublicRappelsRouteImport.update({
+  id: '/api/public/rappels',
+  path: '/api/public/rappels',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -47,6 +53,7 @@ export interface FileRoutesByFullPath {
   '/elevation': typeof ElevationRoute
   '/qa-visuels': typeof QaVisuelsRoute
   '/reglages': typeof ReglagesRoute
+  '/api/public/rappels': typeof ApiPublicRappelsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -54,6 +61,7 @@ export interface FileRoutesByTo {
   '/elevation': typeof ElevationRoute
   '/qa-visuels': typeof QaVisuelsRoute
   '/reglages': typeof ReglagesRoute
+  '/api/public/rappels': typeof ApiPublicRappelsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -62,13 +70,33 @@ export interface FileRoutesById {
   '/elevation': typeof ElevationRoute
   '/qa-visuels': typeof QaVisuelsRoute
   '/reglages': typeof ReglagesRoute
+  '/api/public/rappels': typeof ApiPublicRappelsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/corpus' | '/elevation' | '/qa-visuels' | '/reglages'
+  fullPaths:
+    | '/'
+    | '/corpus'
+    | '/elevation'
+    | '/qa-visuels'
+    | '/reglages'
+    | '/api/public/rappels'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/corpus' | '/elevation' | '/qa-visuels' | '/reglages'
-  id: '__root__' | '/' | '/corpus' | '/elevation' | '/qa-visuels' | '/reglages'
+  to:
+    | '/'
+    | '/corpus'
+    | '/elevation'
+    | '/qa-visuels'
+    | '/reglages'
+    | '/api/public/rappels'
+  id:
+    | '__root__'
+    | '/'
+    | '/corpus'
+    | '/elevation'
+    | '/qa-visuels'
+    | '/reglages'
+    | '/api/public/rappels'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -77,6 +105,7 @@ export interface RootRouteChildren {
   ElevationRoute: typeof ElevationRoute
   QaVisuelsRoute: typeof QaVisuelsRoute
   ReglagesRoute: typeof ReglagesRoute
+  ApiPublicRappelsRoute: typeof ApiPublicRappelsRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -116,6 +145,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ReglagesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/public/rappels': {
+      id: '/api/public/rappels'
+      path: '/api/public/rappels'
+      fullPath: '/api/public/rappels'
+      preLoaderRoute: typeof ApiPublicRappelsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -125,6 +161,7 @@ const rootRouteChildren: RootRouteChildren = {
   ElevationRoute: ElevationRoute,
   QaVisuelsRoute: QaVisuelsRoute,
   ReglagesRoute: ReglagesRoute,
+  ApiPublicRappelsRoute: ApiPublicRappelsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

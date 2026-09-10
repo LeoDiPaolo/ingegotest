@@ -125,6 +125,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { rel: "icon", href: "/favicon.png", type: "image/png" },
       { rel: "apple-touch-icon", href: "/icon-180.png" },
+      { rel: "manifest", href: "/manifest.json" },
     ],
   }),
   shellComponent: RootShell,
@@ -149,6 +150,19 @@ function RootShell({ children }: { children: ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+
+  useEffect(() => {
+    /* Service worker de notifications uniquement (aucun cache) : on l'installe
+       seulement si l'utilisateur a déjà accepté les rappels. */
+    void (async () => {
+      const { environnementCompatible, enregistrerServiceWorker } = await import(
+        "@/lib/ingego/push"
+      );
+      if (!environnementCompatible()) return;
+      if (Notification.permission !== "granted") return;
+      await enregistrerServiceWorker();
+    })();
+  }, []);
 
   return (
     <QueryClientProvider client={queryClient}>
