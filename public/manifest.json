@@ -1,0 +1,16 @@
+{
+  "name": "IngéGo",
+  "short_name": "IngéGo",
+  "description": "Révision du concours externe d'ingénieur territorial",
+  "display": "standalone",
+  "start_url": "/",
+  "scope": "/",
+  "orientation": "portrait",
+  "background_color": "#ffffff",
+  "theme_color": "#B2472D",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
