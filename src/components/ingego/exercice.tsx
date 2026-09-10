@@ -1186,31 +1186,35 @@ export function Exercice({
       {q.type === "trous" && (
         <div className="space-y-3">
           <p className="rounded-xl border border-border bg-elevated p-3 text-sm leading-relaxed">
-            {(q.texte ?? "").split(/(\{\d+\})/).map((frag, k) => {
-              const m = frag.match(/^\{(\d+)\}$/);
-              if (!m) return <span key={k}>{frag}</span>;
-              const idx = Number(m[1]) - 1;
-              const val = (rep as Record<string, string>)[idx];
-              const bon = (q.mots ?? [])[idx];
-              return (
-                <span
-                  key={k}
-                  className={cn(
-                    "mx-0.5 rounded px-1.5 py-0.5 font-semibold",
-                    corrige
-                      ? trouJuste(q, idx, val)
-                        ? "bg-success/25"
-                        : "bg-destructive/25"
-                      : val
-                        ? "bg-primary/20"
-                        : "bg-background text-muted-foreground",
-                  )}
-                >
-                  {corrige ? (trouJuste(q, idx, val) ? val : bon) : (val ?? `…${idx + 1}`)}
-                </span>
-              );
-            })}
+            {(() => {
+              const res = resolutionTrous(q, rep);
+              return (q.texte ?? "").split(/(\{\d+\})/).map((frag, k) => {
+                const m = frag.match(/^\{(\d+)\}$/);
+                if (!m) return <span key={k}>{frag}</span>;
+                const idx = Number(m[1]) - 1;
+                const val = (rep as Record<string, string>)[idx];
+                const etat = res[idx];
+                return (
+                  <span
+                    key={k}
+                    className={cn(
+                      "mx-0.5 rounded px-1.5 py-0.5 font-semibold",
+                      corrige
+                        ? etat?.ok
+                          ? "bg-success/25"
+                          : "bg-destructive/25"
+                        : val
+                          ? "bg-primary/20"
+                          : "bg-background text-muted-foreground",
+                    )}
+                  >
+                    {corrige ? (etat?.ok ? val : etat?.attendu) : (val ?? `…${idx + 1}`)}
+                  </span>
+                );
+              });
+            })()}
           </p>
+
           {!corrige &&
             (q.mots ?? []).map((_, idx) => (
               <select
