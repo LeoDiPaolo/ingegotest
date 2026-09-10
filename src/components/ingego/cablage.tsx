@@ -28,6 +28,7 @@ export function Cablage({
   onRelier,
   onDefaire,
   ordreDroite,
+  estJuste,
   corrige,
 }: {
   donnees: DonneesCablage;
@@ -39,9 +40,12 @@ export function Cablage({
   onDefaire: (g: number) => void;
   /** ordre d'affichage de la colonne droite (indices d'origine) */
   ordreDroite: number[];
+  /** un raccordement est-il juste ? (libellés identiques acceptés) */
+  estJuste?: (gauche: number, droite: number) => boolean;
   corrige: boolean;
 }) {
   const { titre, gauche, droite, gaucheTitre, droiteTitre, legende } = donnees;
+  const juste = estJuste ?? ((g: number, d: number) => ordreDroite[d] === g);
 
   const boite = useRef<HTMLDivElement>(null);
   const refsG = useRef<(HTMLButtonElement | null)[]>([]);
@@ -118,7 +122,7 @@ export function Cablage({
           >
             {Object.entries(liens).map(([g, d]) => {
               const gi = Number(g);
-              const bon = ordreDroite[d] === gi;
+              const bon = juste(gi, d);
               const y1 = geo.g[gi] ?? 0;
               const y2 = geo.d[d] ?? 0;
               const mx = (geo.xg + geo.xd) / 2;
@@ -144,7 +148,7 @@ export function Cablage({
 
         {gauche.map((g, i) => {
           const lie = relieA(i);
-          const bon = corrige && ordreDroite[lie] === i;
+          const bon = corrige && lie !== undefined && juste(i, lie);
           const origine = ordreDroite[i];
           const prise = droiteUtilisee.has(i);
           return (

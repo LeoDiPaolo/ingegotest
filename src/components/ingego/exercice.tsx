@@ -58,6 +58,36 @@ function melangeStrict<T>(liste: T[], graine: number): T[] {
   return out;
 }
 
+/* Réponses équivalentes : quand deux cibles portent exactement le même libellé
+   (deux « Annuelle », deux « Région »…), l'une ou l'autre est juste. Le
+   raccordement et l'association comparent donc les libellés, pas les indices. */
+const memeLibelle = (a: string | undefined, b: string | undefined) =>
+  (a ?? "").trim().toLowerCase() === (b ?? "").trim().toLowerCase();
+
+export function cablageJuste(q: Question, i: number, choix: number | undefined) {
+  if (choix === undefined || choix === null) return false;
+  const droite = q.cablage?.droite ?? [];
+  return memeLibelle(droite[ordreCablage(q)[choix]], droite[i]);
+}
+
+export function assocJuste(q: Question, i: number, choix: number | undefined) {
+  if (choix === undefined || choix === null) return false;
+  const paires = q.paires ?? [];
+  return memeLibelle(paires[choix]?.[1], paires[i]?.[1]);
+}
+
+/* Trous interchangeables : dans une énumération sans hiérarchie, chaque mot du
+   groupe est accepté dans n'importe quel trou du groupe, à condition qu'aucun
+   mot ne soit utilisé deux fois. */
+export function trouJuste(q: Question, idx: number, valeur: string | undefined) {
+  const mots = q.mots ?? [];
+  if (!valeur) return false;
+  if (valeur === mots[idx]) return true;
+  const groupe = (q.motsPermutables ?? []).find((g) => g.includes(idx));
+  if (!groupe) return false;
+  return groupe.some((j) => mots[j] === valeur);
+}
+
 /* Ordre d'affichage de la colonne droite d'un raccordement : déterministe,
    pour que la correction et l'affichage parlent des mêmes emplacements. */
 export function ordreCablage(q: Question): number[] {
@@ -227,9 +257,17 @@ function juste(q: Question, rep: Reponse): boolean {
     case "frise":
       return (q.points ?? []).every((_, i) => m[i] === i);
     case "assoc":
-      return (q.paires ?? []).every((_, i) => m[i] === i);
-    case "trous":
-      return (q.mots ?? []).every((mot, i) => (rep as Record<string, string>)[i] === mot);
+      return (q.paires ?? []).every((_, i) => assocJuste(q, i, m[i]));
+    case "trous": {
+      const r = rep as Record<string, string>;
+      const utilises = new Set<string>();
+      return (q.mots ?? []).every((_, i) => {
+        const v = r[i];
+        if (!trouJuste(q, i, v) || utilises.has(v)) return false;
+        utilises.add(v);
+        return true;
+      });
+    }
     case "tri":
       return (q.elements ?? []).every((el, i) => m[i] === el[1]);
     case "chantier":
@@ -249,10 +287,8 @@ function juste(q: Question, rep: Reponse): boolean {
       return (q.circuit?.chemin ?? []).every((e, i) => (rep as number[])[i] === e);
     case "zonage":
       return (q.zonage?.cellules ?? []).every((c, i) => m[i] === c.cat);
-    case "cablage": {
-      const ordre = ordreCablage(q);
-      return (q.cablage?.gauche ?? []).every((_, i) => ordre[m[i]] === i);
-    }
+    case "cablage":
+      return (q.cablage?.gauche ?? []).every((_, i) => cablageJuste(q, i, m[i]));
     default:
       return false;
   }
@@ -273,11 +309,14 @@ export function partJuste(q: Question, rep: unknown): number {
     case "frise":
       return ratio((q.points ?? []).filter((_, i) => m[i] === i).length, (q.points ?? []).length);
     case "assoc":
-      return ratio((q.paires ?? []).filter((_, i) => m[i] === i).length, (q.paires ?? []).length);
+      return ratio(
+        (q.paires ?? []).filter((_, i) => assocJuste(q, i, m[i])).length,
+        (q.paires ?? []).length,
+      );
     case "trous": {
       const r = rep as Record<string, string>;
       const mots = q.mots ?? [];
-      return ratio(mots.filter((mot, i) => r[i] === mot).length, mots.length);
+      return ratio(mots.filter((_, i) => trouJuste(q, i, r[i])).length, mots.length);
     }
     case "tri":
       return ratio(
@@ -315,9 +354,8 @@ export function partJuste(q: Question, rep: unknown): number {
         (q.zonage?.cellules ?? []).length,
       );
     case "cablage": {
-      const ordre = ordreCablage(q);
       const g = q.cablage?.gauche ?? [];
-      return ratio(g.filter((_, i) => ordre[m[i]] === i).length, g.length);
+      return ratio(g.filter((_, i) => cablageJuste(q, i, m[i])).length, g.length);
     }
     default:
       return juste(q, rep) ? 1 : 0;
@@ -890,6 +928,7 @@ export function Exercice({
           actif={actifCablage}
           onActif={setActifCablage}
           ordreDroite={ordreDroiteCablage}
+          estJuste={(g, d) => cablageJuste(q, g, d)}
           onRelier={(g, d) => {
             setMap(g, d);
             setActifCablage(null);
@@ -1084,7 +1123,7 @@ export function Exercice({
                 className={cn(
                   "rounded-xl border p-3",
                   corrige
-                    ? choisi === i
+                    ? assocJuste(q, i, choisi)
                       ? "border-success bg-success/10"
                       : "border-destructive bg-destructive/10"
                     : "border-border bg-elevated",
@@ -1128,7 +1167,7 @@ export function Exercice({
                   className={cn(
                     "mx-0.5 rounded px-1.5 py-0.5 font-semibold",
                     corrige
-                      ? val === bon
+                      ? trouJuste(q, idx, val)
                         ? "bg-success/25"
                         : "bg-destructive/25"
                       : val
@@ -1136,7 +1175,7 @@ export function Exercice({
                         : "bg-background text-muted-foreground",
                   )}
                 >
-                  {corrige ? bon : (val ?? `…${idx + 1}`)}
+                  {corrige ? (trouJuste(q, idx, val) ? val : bon) : (val ?? `…${idx + 1}`)}
                 </span>
               );
             })}
