@@ -8,7 +8,7 @@
     },
     "genere": "2026-07-30",
     "version": "2026-09",
-    "totalQuestions": 803,
+    "totalQuestions": 849,
     "schema": "Chaque question porte : id, axe (A1-A6), sousTheme, sujet (clé de progression par niveaux), niveau (1-3), famille (S stable / M mouvant / E enjeu), type, les champs propres au type, explication, et le cas échéant derniereVerification (AAAA-MM) et aVerifier."
   },
   "axes": [
@@ -114,6 +114,21 @@
         "Marchés publics et MOP",
         "ERP, IGH et urbanisme",
         "Patrimoine, transition et métier du BTP"
+      ]
+    },
+    {
+      "id": "A8",
+      "nom": "Méthode du concours : l'écrit et l'oral",
+      "court": "Méthode",
+      "couleur": "#B2472D",
+      "sousThemes": [
+        "Lecture et cadrage du sujet",
+        "Structure et forme de la note",
+        "Exploitation du dossier et gestion du temps",
+        "La partie propositions",
+        "Déroulé et posture de l'entretien",
+        "Connaissances attendues au-delà de la spécialité",
+        "Motivation et projet professionnel"
       ]
     }
   ],
@@ -20626,6 +20641,989 @@
       "explication": "Ces sigles reviennent constamment à l'oral : le DOE rassemble les documents des ouvrages exécutés, le DIUO prépare les interventions ultérieures en sécurité, la GPA couvre la première année après réception, la VEFA est une acquisition en l'état futur d'achèvement et le DPE informe sur la performance énergétique. En savoir plus — VEFA : vente en l'état futur d'achèvement, acquisition d'un bâtiment construit par un promoteur.",
       "aVerifier": false,
       "derniereVerification": "2026-09"
+    },
+    {
+      "id": "a8-01",
+      "axe": "A8",
+      "sousTheme": "Lecture et cadrage du sujet",
+      "stIdx": 0,
+      "sujet": "m-cadrage",
+      "niveau": 4,
+      "famille": "S",
+      "type": "qcm",
+      "question": "Selon les conseils des correcteurs, quelle est la première recommandation pour aborder le sujet de la note à partir d'un dossier ?",
+      "options": [
+        "Commencer par recopier les chiffres clés du dossier",
+        "Se concentrer uniquement sur la dimension technique du sujet",
+        "Lire attentivement la commande du sujet en tenant compte du contexte",
+        "Rédiger immédiatement le plan avant d'avoir lu le dossier en entier"
+      ],
+      "bonneReponse": 2,
+      "explication": "Les correcteurs rappellent, en tête de leurs conseils, qu'il faut lire attentivement la commande du sujet en tenant compte du contexte avant de se lancer dans la rédaction. Source : CDG Loire-Atlantique, Rapport du président du jury, concours d'ingénieur territorial, session 2023, consulté le 10/09/2026, https://www.cdg44.fr/sites/default/files/content/fiche_concours_examens/pdf/Rapport%20jury%20INGE%2023.pdf Source : CDG Auvergne-Rhône-Alpes, Rapport de la présidente du jury, concours d'ingénieur territorial, session 2019, consulté le 10/09/2026, https://www.cdg-aura.fr/file/7852/download?token=Uqaa2fQ2",
+      "derniereVerification": "2026-09",
+      "aVerifier": false
+    },
+    {
+      "id": "a8-02",
+      "axe": "A8",
+      "sousTheme": "Lecture et cadrage du sujet",
+      "stIdx": 0,
+      "sujet": "m-cadrage",
+      "niveau": 5,
+      "famille": "S",
+      "type": "qcm",
+      "question": "D'après les rapports de jury, pourquoi le candidat doit-il éviter de traiter le sujet uniquement sous l'angle technique ?",
+      "options": [
+        "Parce que le barème ne note pas les aspects techniques",
+        "Parce que le jury est composé uniquement de non-techniciens",
+        "Parce que l'épreuve technique est déjà couverte par une autre épreuve du concours",
+        "Parce que la note doit être appréhendée de manière transversale, du point de vue du commanditaire et de tous les acteurs, y compris élus et citoyens"
+      ],
+      "bonneReponse": 3,
+      "explication": "Les correcteurs demandent d'appréhender le sujet de manière transversale, en se plaçant du point de vue du commanditaire et en tenant compte de tous les acteurs, élus et citoyens compris, qui sont généralement les utilisateurs finaux des services. Source : CDG Loire-Atlantique, Rapport du président du jury, concours d'ingénieur territorial, session 2023, consulté le 10/09/2026, https://www.cdg44.fr/sites/default/files/content/fiche_concours_examens/pdf/Rapport%20jury%20INGE%2023.pdf",
+      "derniereVerification": "2026-09",
+      "aVerifier": false
+    },
+    {
+      "id": "a8-03",
+      "axe": "A8",
+      "sousTheme": "Lecture et cadrage du sujet",
+      "stIdx": 0,
+      "sujet": "m-cadrage",
+      "niveau": 4,
+      "famille": "S",
+      "type": "qcm",
+      "question": "Qui est le destinataire principal que le candidat doit garder à l'esprit en rédigeant sa note ?",
+      "options": [
+        "Le jury du concours en tant que tel",
+        "Le commanditaire de la note, dans le contexte professionnel simulé par le sujet",
+        "Les autres candidats de la même spécialité",
+        "Le correcteur uniquement"
+      ],
+      "bonneReponse": 1,
+      "explication": "Les correcteurs insistent sur la nécessité de se placer du point de vue du commanditaire de la note, c'est-à-dire du destinataire professionnel fictif du document, et non du seul jury qui la corrige. Source : CDG Loire-Atlantique, Rapport du président du jury, concours d'ingénieur territorial, session 2023, consulté le 10/09/2026, https://www.cdg44.fr/sites/default/files/content/fiche_concours_examens/pdf/Rapport%20jury%20INGE%2023.pdf",
+      "derniereVerification": "2026-09",
+      "aVerifier": false
+    },
+    {
+      "id": "a8-04",
+      "axe": "A8",
+      "sousTheme": "Lecture et cadrage du sujet",
+      "stIdx": 0,
+      "sujet": "m-cadrage",
+      "niveau": 5,
+      "famille": "S",
+      "type": "qcm",
+      "question": "Au-delà des aspects techniques, quels acteurs le candidat doit-il prendre en compte dans son analyse du sujet ?",
+      "options": [
+        "Les élus et les citoyens, souvent utilisateurs finaux des services à mettre en œuvre",
+        "Uniquement les prestataires extérieurs à la collectivité",
+        "Le jury et les correcteurs de l'épreuve",
+        "Uniquement les services techniques de la collectivité"
+      ],
+      "bonneReponse": 0,
+      "explication": "Le sujet doit être appréhendé en tenant compte de tous les acteurs, y compris les élus et les citoyens, qui sont généralement les utilisateurs finaux des services à mettre en œuvre. Source : CDG Loire-Atlantique, Rapport du président du jury, concours d'ingénieur territorial, session 2023, consulté le 10/09/2026, https://www.cdg44.fr/sites/default/files/content/fiche_concours_examens/pdf/Rapport%20jury%20INGE%2023.pdf",
+      "derniereVerification": "2026-09",
+      "aVerifier": false
+    },
+    {
+      "id": "a8-05",
+      "axe": "A8",
+      "sousTheme": "Lecture et cadrage du sujet",
+      "stIdx": 0,
+      "sujet": "m-cadrage",
+      "niveau": 5,
+      "famille": "S",
+      "type": "qcm",
+      "question": "Quelle erreur récurrente les correcteurs identifient-ils concernant le développement des idées dans la note ?",
+      "options": [
+        "Les candidats ne citent jamais le dossier",
+        "Les candidats développent trop longuement chaque idée",
+        "Les candidats citent trop longuement le dossier",
+        "Les idées sont trop souvent survolées ou présentées sous forme d'énumérations plutôt que développées"
+      ],
+      "bonneReponse": 3,
+      "explication": "Les rapports de jury relèvent, de session en session, que les copies ne sont pas suffisamment riches en informations, les idées étant survolées ou listées plutôt que réellement développées. Source : CDG Loire-Atlantique, Rapport du président du jury, concours d'ingénieur territorial, session 2023, consulté le 10/09/2026, https://www.cdg44.fr/sites/default/files/content/fiche_concours_examens/pdf/Rapport%20jury%20INGE%2023.pdf Source : CDG Auvergne-Rhône-Alpes, Rapport de la présidente du jury, concours d'ingénieur territorial, session 2019, consulté le 10/09/2026, https://www.cdg-aura.fr/file/7852/download?token=Uqaa2fQ2",
+      "derniereVerification": "2026-09",
+      "aVerifier": false
+    },
+    {
+      "id": "a8-06",
+      "axe": "A8",
+      "sousTheme": "Lecture et cadrage du sujet",
+      "stIdx": 0,
+      "sujet": "m-cadrage",
+      "niveau": 7,
+      "famille": "E",
+      "type": "qcm",
+      "question": "Comment le jury 2023 (CDG Auvergne-Rhône-Alpes) qualifie-t-il l'évolution de la préparation des candidats sur la forme de leur copie (plan, titres, structuration) ?",
+      "options": [
+        "En net recul par rapport aux sessions précédentes",
+        "Globalement bien maîtrisée et visible, mais une analyse plus fine du fond du sujet reste attendue",
+        "Absente dans la quasi-totalité des copies",
+        "Sans lien avec le niveau final obtenu à l'épreuve"
+      ],
+      "bonneReponse": 1,
+      "explication": "Le jury 2023 constate que la préparation est visible sur la forme (annonce du plan, titres, structuration en parties et sous-parties), mais qu'une analyse plus fine du sujet était attendue sur la partie informative. Source : CDG Auvergne-Rhône-Alpes, Rapport de la présidente du jury, concours d'ingénieur territorial, session 2023, consulté le 10/09/2026, https://www.cdg-aura.fr/sites/default/files/Rapport%20de%20jurys/2023-cingenieur_rapportpdte_jury.pdf",
+      "derniereVerification": "2026-09",
+      "aVerifier": false
+    },
+    {
+      "id": "a8-07",
+      "axe": "A8",
+      "sousTheme": "Lecture et cadrage du sujet",
+      "stIdx": 0,
+      "sujet": "m-cadrage",
+      "niveau": 7,
+      "famille": "S",
+      "type": "qcm",
+      "question": "Quel manque le jury du concours externe relève-t-il en 2023 concernant la culture territoriale des candidats à l'écrit ?",
+      "options": [
+        "Aucun manque n'est relevé, le niveau est jugé homogène",
+        "Une méconnaissance exclusive du droit de la commande publique",
+        "Une méconnaissance des règles de sécurité incendie",
+        "Une méconnaissance des instances de concertation et de décision des collectivités territoriales"
+      ],
+      "bonneReponse": 3,
+      "explication": "Le rapport 2023 note encore des connaissances insuffisantes sur les collectivités territoriales et sur l'organisation de leurs instances de concertation et de décision. Source : CDG Auvergne-Rhône-Alpes, Rapport de la présidente du jury, concours d'ingénieur territorial, session 2023, consulté le 10/09/2026, https://www.cdg-aura.fr/sites/default/files/Rapport%20de%20jurys/2023-cingenieur_rapportpdte_jury.pdf",
+      "derniereVerification": "2026-09",
+      "aVerifier": false
+    },
+    {
+      "id": "a8-08",
+      "axe": "A8",
+      "sousTheme": "Structure et forme de la note",
+      "stIdx": 1,
+      "sujet": "m-forme",
+      "niveau": 6,
+      "famille": "S",
+      "type": "qcm",
+      "question": "D'après le rapport de jury 2019, quel défaut fréquent affecte l'introduction des notes ?",
+      "options": [
+        "Un manque de contextualisation du sujet, une problématique peu claire et une annonce du plan maladroite",
+        "Elle est trop longue par rapport au reste de la copie",
+        "Elle recopie l'énoncé du sujet mot pour mot",
+        "Elle est absente dans la totalité des copies"
+      ],
+      "bonneReponse": 0,
+      "explication": "Beaucoup de candidats ne travaillent pas suffisamment l'introduction : manque de contextualisation du sujet, absence de problématique claire et affirmée, maladresse dans l'annonce du plan. Source : CDG Auvergne-Rhône-Alpes, Rapport de la présidente du jury, concours d'ingénieur territorial, session 2019, consulté le 10/09/2026, https://www.cdg-aura.fr/file/7852/download?token=Uqaa2fQ2",
+      "derniereVerification": "2026-09",
+      "aVerifier": false
+    },
+    {
+      "id": "a8-09",
+      "axe": "A8",
+      "sousTheme": "Structure et forme de la note",
+      "stIdx": 1,
+      "sujet": "m-forme",
+      "niveau": 5,
+      "famille": "S",
+      "type": "qcm",
+      "question": "Que doivent permettre les titres des parties et sous-parties d'une note, selon le jury ?",
+      "options": [
+        "Résumer clairement les lignes directrices du raisonnement",
+        "Mentionner le nom du candidat",
+        "Simplement numéroter les sections de la copie",
+        "Reprendre l'intitulé exact du sujet"
+      ],
+      "bonneReponse": 0,
+      "explication": "Les candidats n'apportent généralement pas suffisamment d'attention aux titres des parties et sous-parties, qui doivent pourtant résumer clairement les lignes directrices de la note. Source : CDG Auvergne-Rhône-Alpes, Rapport de la présidente du jury, concours d'ingénieur territorial, session 2019, consulté le 10/09/2026, https://www.cdg-aura.fr/file/7852/download?token=Uqaa2fQ2",
+      "derniereVerification": "2026-09",
+      "aVerifier": false
+    },
+    {
+      "id": "a8-10",
+      "axe": "A8",
+      "sousTheme": "Structure et forme de la note",
+      "stIdx": 1,
+      "sujet": "m-forme",
+      "niveau": 5,
+      "famille": "S",
+      "type": "qcm",
+      "question": "Selon les correcteurs, quel critère de forme, indépendant du contenu technique, pèse sur la notation de la note ?",
+      "options": [
+        "La taille de l'écriture",
+        "La couleur du stylo utilisé",
+        "L'orthographe et la qualité de l'expression écrite",
+        "Le nombre de pages rendues"
+      ],
+      "bonneReponse": 2,
+      "explication": "Les copies montrent parfois des lacunes en orthographe et une qualité d'expression médiocre ; de nombreuses copies sont pénalisées pour ce motif. Les futurs candidats sont invités à porter une attention particulière à l'orthographe. Source : CDG Auvergne-Rhône-Alpes, Rapport de la présidente du jury, concours d'ingénieur territorial, session 2019, consulté le 10/09/2026, https://www.cdg-aura.fr/file/7852/download?token=Uqaa2fQ2 Source : CDG Loire-Atlantique, Rapport du président du jury, concours d'ingénieur territorial, session 2023, consulté le 10/09/2026, https://www.cdg44.fr/sites/default/files/content/fiche_concours_examens/pdf/Rapport%20jury%20INGE%2023.pdf",
+      "derniereVerification": "2026-09",
+      "aVerifier": false
+    },
+    {
+      "id": "a8-11",
+      "axe": "A8",
+      "sousTheme": "Structure et forme de la note",
+      "stIdx": 1,
+      "sujet": "m-forme",
+      "niveau": 6,
+      "famille": "S",
+      "type": "qcm",
+      "question": "Comment le dossier remis au candidat doit-il être exploité, d'après les rapports de jury successifs ?",
+      "options": [
+        "Il doit être recopié intégralement dans la copie",
+        "Ses éléments essentiels doivent être utilisés et valorisés, notamment par des exemples ; trop de copies les occultent alors qu'ils sont présents",
+        "Il ne sert que de prétexte et son contenu n'est pas noté",
+        "Seule sa première page doit être analysée"
+      ],
+      "bonneReponse": 1,
+      "explication": "La partie note occulte souvent certaines informations pourtant présentes dans le dossier ; les correcteurs regrettent la faible valorisation des exemples qu'il contient. Source : CDG Loire-Atlantique, Rapport du président du jury, concours d'ingénieur territorial, session 2023, consulté le 10/09/2026, https://www.cdg44.fr/sites/default/files/content/fiche_concours_examens/pdf/Rapport%20jury%20INGE%2023.pdf Source : CDG Auvergne-Rhône-Alpes, Rapport de la présidente du jury, concours d'ingénieur territorial, session 2019, consulté le 10/09/2026, https://www.cdg-aura.fr/file/7852/download?token=Uqaa2fQ2",
+      "derniereVerification": "2026-09",
+      "aVerifier": false
+    },
+    {
+      "id": "a8-12",
+      "axe": "A8",
+      "sousTheme": "Structure et forme de la note",
+      "stIdx": 1,
+      "sujet": "m-forme",
+      "niveau": 7,
+      "famille": "E",
+      "type": "qcm",
+      "question": "Un candidat rend une copie avec un plan apparent et des titres de parties clairs, mais une analyse superficielle du sujet. D'après le jury 2023, cette copie illustre :",
+      "options": [
+        "Un profil de moins en moins fréquent chez les candidats",
+        "Une copie qui obtient systématiquement une note éliminatoire",
+        "Un cas hors barème, non noté par le jury",
+        "Un profil identifié par le jury : la forme est de mieux en mieux maîtrisée, mais le fond de l'analyse reste le point faible"
+      ],
+      "bonneReponse": 3,
+      "explication": "Le jury 2023 observe précisément ce profil : préparation visible sur la forme, mais analyse encore insuffisante sur le fond du sujet. Source : CDG Auvergne-Rhône-Alpes, Rapport de la présidente du jury, concours d'ingénieur territorial, session 2023, consulté le 10/09/2026, https://www.cdg-aura.fr/sites/default/files/Rapport%20de%20jurys/2023-cingenieur_rapportpdte_jury.pdf",
+      "derniereVerification": "2026-09",
+      "aVerifier": false
+    },
+    {
+      "id": "a8-13",
+      "axe": "A8",
+      "sousTheme": "Structure et forme de la note",
+      "stIdx": 1,
+      "sujet": "m-forme",
+      "niveau": 5,
+      "famille": "S",
+      "type": "qcm",
+      "question": "Au-delà du fond, quelle exigence de présentation liée à la structuration de la copie les rapports de jury rappellent-ils explicitement ?",
+      "options": [
+        "L'utilisation obligatoire d'une couleur différente par partie",
+        "Un nombre de pages imposé par le barème",
+        "La présence d'un plan apparent, structurant visiblement la copie en parties et sous-parties",
+        "La rédaction manuscrite en lettres capitales"
+      ],
+      "bonneReponse": 2,
+      "explication": "Certains candidats ne se plient pas aux exigences formelles rappelées dans les notes de cadrage, par exemple la présence d'un plan apparent pour la note. Source : CDG Auvergne-Rhône-Alpes, Rapport de la présidente du jury, concours d'ingénieur territorial, session 2019, consulté le 10/09/2026, https://www.cdg-aura.fr/file/7852/download?token=Uqaa2fQ2",
+      "derniereVerification": "2026-09",
+      "aVerifier": false
+    },
+    {
+      "id": "a8-14",
+      "axe": "A8",
+      "sousTheme": "Exploitation du dossier et gestion du temps",
+      "stIdx": 2,
+      "sujet": "m-dossier",
+      "niveau": 5,
+      "famille": "S",
+      "type": "qcm",
+      "question": "Le dossier remis au candidat pour l'épreuve de note est en général :",
+      "options": [
+        "Très court, tenant sur une seule page",
+        "Volumineux, ce qui impose une lecture rapide orientée vers la recherche des informations essentielles",
+        "Inexistant, la note se rédige uniquement à partir de connaissances générales",
+        "Fourni uniquement sous forme d'un tableau de chiffres"
+      ],
+      "bonneReponse": 1,
+      "explication": "Les dossiers sont souvent volumineux et leur lecture intégrale se révèle chronophage ; les candidats doivent savoir opérer une lecture rapide, orientée vers la recherche des informations essentielles. Source : CDG Auvergne-Rhône-Alpes, Rapport de la présidente du jury, concours d'ingénieur territorial, session 2019, consulté le 10/09/2026, https://www.cdg-aura.fr/file/7852/download?token=Uqaa2fQ2",
+      "derniereVerification": "2026-09",
+      "aVerifier": false
+    },
+    {
+      "id": "a8-15",
+      "axe": "A8",
+      "sousTheme": "Exploitation du dossier et gestion du temps",
+      "stIdx": 2,
+      "sujet": "m-dossier",
+      "niveau": 6,
+      "famille": "S",
+      "type": "qcm",
+      "question": "Comment les correcteurs recommandent-ils de répartir le temps de l'épreuve de 5 heures ?",
+      "options": [
+        "En consacrant l'essentiel du temps à la lecture du dossier, sans contrainte sur la rédaction",
+        "En traitant les parties dans un ordre libre, le temps n'étant pas un critère de notation",
+        "En consacrant le temps nécessaire à la partie propositions, trop souvent négligée en fin d'épreuve",
+        "En rédigeant la conclusion avant l'introduction pour gagner du temps"
+      ],
+      "bonneReponse": 2,
+      "explication": "Les correcteurs demandent de gérer son temps afin de consacrer le temps nécessaire à la partie propositions, trop souvent négligée alors qu'elle est notée sur 12 points. Source : CDG Loire-Atlantique, Rapport du président du jury, concours d'ingénieur territorial, session 2023, consulté le 10/09/2026, https://www.cdg44.fr/sites/default/files/content/fiche_concours_examens/pdf/Rapport%20jury%20INGE%2023.pdf",
+      "derniereVerification": "2026-09",
+      "aVerifier": false
+    },
+    {
+      "id": "a8-16",
+      "axe": "A8",
+      "sousTheme": "Exploitation du dossier et gestion du temps",
+      "stIdx": 2,
+      "sujet": "m-dossier",
+      "niveau": 6,
+      "famille": "S",
+      "type": "qcm",
+      "question": "Quelle conséquence une mauvaise gestion du temps a-t-elle le plus souvent, selon les jurys ?",
+      "options": [
+        "Une absence totale de plan dans la copie",
+        "Une partie propositions bâclée ou incomplète, alors qu'elle pèse 12 points sur 20",
+        "Une orthographe dégradée en fin de copie uniquement",
+        "Un dépassement systématique de l'horaire de l'épreuve"
+      ],
+      "bonneReponse": 1,
+      "explication": "La partie propositions, trop souvent négligée faute de temps, est pourtant notée sur 12 des 20 points de l'épreuve. Source : CDG Loire-Atlantique, Rapport du président du jury, concours d'ingénieur territorial, session 2023, consulté le 10/09/2026, https://www.cdg44.fr/sites/default/files/content/fiche_concours_examens/pdf/Rapport%20jury%20INGE%2023.pdf",
+      "derniereVerification": "2026-09",
+      "aVerifier": false
+    },
+    {
+      "id": "a8-17",
+      "axe": "A8",
+      "sousTheme": "Exploitation du dossier et gestion du temps",
+      "stIdx": 2,
+      "sujet": "m-dossier",
+      "niveau": 5,
+      "famille": "S",
+      "type": "qcm",
+      "question": "Quel est le principal facteur de difficulté identifié dans l'exploitation du dossier par les candidats ?",
+      "options": [
+        "Le dossier ne contient jamais d'informations utiles",
+        "Le dossier est rédigé dans un langage juridique incompréhensible",
+        "Le dossier n'est distribué qu'en fin d'épreuve",
+        "Le volume du dossier rend sa lecture intégrale chronophage, ce qui impose de prioriser"
+      ],
+      "bonneReponse": 3,
+      "explication": "Les dossiers de la plupart des sujets sont volumineux et leur lecture intégrale chronophage ; les candidats doivent savoir prioriser leur lecture. Source : CDG Auvergne-Rhône-Alpes, Rapport de la présidente du jury, concours d'ingénieur territorial, session 2019, consulté le 10/09/2026, https://www.cdg-aura.fr/file/7852/download?token=Uqaa2fQ2",
+      "derniereVerification": "2026-09",
+      "aVerifier": false
+    },
+    {
+      "id": "a8-18",
+      "axe": "A8",
+      "sousTheme": "Exploitation du dossier et gestion du temps",
+      "stIdx": 2,
+      "sujet": "m-dossier",
+      "niveau": 8,
+      "famille": "S",
+      "type": "qcm",
+      "question": "Un candidat consacre 4h30 sur les 5h de l'épreuve à la partie synthèse et ne laisse que 30 minutes à la partie propositions. D'après les constats des jurys, quel est le principal risque ?",
+      "options": [
+        "Aucun risque, seule la synthèse compte dans la notation",
+        "La disqualification immédiate du candidat",
+        "Une pénalité automatique pour non-respect d'un minutage réglementaire",
+        "Une partie propositions incomplète ou trop scolaire, alors qu'elle est notée sur 12 des 20 points de l'épreuve"
+      ],
+      "bonneReponse": 3,
+      "explication": "La partie propositions, notée sur 12 points, est systématiquement le point faible des copies lorsqu'elle est négligée en fin d'épreuve faute de temps. Source : CDG Loire-Atlantique, Rapport du président du jury, concours d'ingénieur territorial, session 2023, consulté le 10/09/2026, https://www.cdg44.fr/sites/default/files/content/fiche_concours_examens/pdf/Rapport%20jury%20INGE%2023.pdf",
+      "derniereVerification": "2026-09",
+      "aVerifier": false
+    },
+    {
+      "id": "a8-19",
+      "axe": "A8",
+      "sousTheme": "Exploitation du dossier et gestion du temps",
+      "stIdx": 2,
+      "sujet": "m-dossier",
+      "niveau": 6,
+      "famille": "S",
+      "type": "qcm",
+      "question": "Sur le fond, que reprochent régulièrement les correcteurs aux copies concernant l'exploitation du sujet ?",
+      "options": [
+        "Les candidats ne rédigent aucune partie synthèse",
+        "Les candidats inventent des données absentes du dossier",
+        "Les copies restent trop générales et descriptives, sans analyser réellement les enjeux soulevés par le sujet pour la collectivité",
+        "Les candidats citent le dossier de façon excessive"
+      ],
+      "bonneReponse": 2,
+      "explication": "Beaucoup de copies restent générales et descriptives, sans analyser réellement les enjeux soulevés par le sujet pour une collectivité. Source : CDG Auvergne-Rhône-Alpes, Rapport de la présidente du jury, concours d'ingénieur territorial, session 2019, consulté le 10/09/2026, https://www.cdg-aura.fr/file/7852/download?token=Uqaa2fQ2",
+      "derniereVerification": "2026-09",
+      "aVerifier": false
+    },
+    {
+      "id": "a8-20",
+      "axe": "A8",
+      "sousTheme": "La partie propositions",
+      "stIdx": 3,
+      "sujet": "m-propositions",
+      "niveau": 3,
+      "famille": "M",
+      "type": "curseur",
+      "question": "Épreuve de note sur 20 points : réglez le curseur sur le nombre de points attribués à la partie propositions.",
+      "explication": "La partie propositions est notée sur 12 points, un poids souvent sous-estimé par les candidats qui la négligent faute de temps. Source : CDG Loire-Atlantique, Rapport du président du jury, concours d'ingénieur territorial, session 2023, consulté le 10/09/2026, https://www.cdg44.fr/sites/default/files/content/fiche_concours_examens/pdf/Rapport%20jury%20INGE%2023.pdf",
+      "derniereVerification": "2026-09",
+      "aVerifier": false,
+      "curseur": {
+        "min": 0,
+        "max": 20,
+        "pas": 1,
+        "cible": 12,
+        "tolerance": 0,
+        "unite": "points",
+        "titre": "Barème de l'épreuve de note",
+        "reperes": [
+          {
+            "v": 0,
+            "l": "0"
+          },
+          {
+            "v": 12,
+            "l": "Propositions"
+          },
+          {
+            "v": 20,
+            "l": "Total"
+          }
+        ],
+        "legende": "Faites glisser jusqu'au nombre de points consacrés aux propositions."
+      }
+    },
+    {
+      "id": "a8-21",
+      "axe": "A8",
+      "sousTheme": "La partie propositions",
+      "stIdx": 3,
+      "sujet": "m-propositions",
+      "niveau": 6,
+      "famille": "S",
+      "type": "qcm",
+      "question": "Quel défaut récurrent les correcteurs relèvent-ils concernant le contenu des propositions ?",
+      "options": [
+        "Elles sont rédigées dans un style trop familier",
+        "Elles manquent de consistance et gagneraient à évoquer des solutions plus concrètes",
+        "Elles sont systématiquement hors sujet",
+        "Elles sont trop nombreuses"
+      ],
+      "bonneReponse": 1,
+      "explication": "Les propositions manquent généralement de consistance et gagneraient à évoquer des solutions plus concrètes. Source : CDG Loire-Atlantique, Rapport du président du jury, concours d'ingénieur territorial, session 2023, consulté le 10/09/2026, https://www.cdg44.fr/sites/default/files/content/fiche_concours_examens/pdf/Rapport%20jury%20INGE%2023.pdf",
+      "derniereVerification": "2026-09",
+      "aVerifier": false
+    },
+    {
+      "id": "a8-22",
+      "axe": "A8",
+      "sousTheme": "La partie propositions",
+      "stIdx": 3,
+      "sujet": "m-propositions",
+      "niveau": 6,
+      "famille": "S",
+      "type": "qcm",
+      "question": "Que reprochent les jurys successifs (2019, 2021, 2023) à la partie propositions de nombreuses copies ?",
+      "options": [
+        "De ne jamais respecter le barème",
+        "D'être rédigée avant la partie synthèse",
+        "De ne jamais employer le mot « proposition »",
+        "De se limiter trop souvent à une présentation scolaire et succincte de la méthodologie de projet, sans lien suffisant avec les spécificités du sujet"
+      ],
+      "bonneReponse": 3,
+      "explication": "Comme lors des sessions précédentes, la partie propositions consiste trop souvent en une présentation scolaire et succincte de la méthodologie de projet, sans lien suffisant avec les spécificités du sujet. Source : CDG Auvergne-Rhône-Alpes, Rapport de la présidente du jury, concours d'ingénieur territorial, session 2019, consulté le 10/09/2026, https://www.cdg-aura.fr/file/7852/download?token=Uqaa2fQ2 Source : CDG Auvergne-Rhône-Alpes, Rapport de la présidente du jury, concours d'ingénieur territorial, session 2023, consulté le 10/09/2026, https://www.cdg-aura.fr/sites/default/files/Rapport%20de%20jurys/2023-cingenieur_rapportpdte_jury.pdf",
+      "derniereVerification": "2026-09",
+      "aVerifier": false
+    },
+    {
+      "id": "a8-23",
+      "axe": "A8",
+      "sousTheme": "La partie propositions",
+      "stIdx": 3,
+      "sujet": "m-propositions",
+      "niveau": 6,
+      "famille": "S",
+      "type": "qcm",
+      "question": "Quel défaut récurrent est pointé concernant les apports personnels dans les propositions ?",
+      "options": [
+        "Les candidats confondent apports personnels et opinions politiques",
+        "Les apports personnels sont interdits par le règlement du concours",
+        "Les candidats citent trop leurs expériences personnelles",
+        "Les propositions souffrent d'un défaut récurrent d'apports personnels : peu d'exemples ou de retours d'expérience qui les rendraient plus opérationnelles"
+      ],
+      "bonneReponse": 3,
+      "explication": "Pour les épreuves de note, les correcteurs regrettent le peu d'apports personnels de connaissances sous forme d'exemples ou de retours d'expérience, qui permettraient de rendre les propositions plus opérationnelles. Source : CDG Loire-Atlantique, Rapport du président du jury, concours d'ingénieur territorial, session 2023, consulté le 10/09/2026, https://www.cdg44.fr/sites/default/files/content/fiche_concours_examens/pdf/Rapport%20jury%20INGE%2023.pdf Source : CDG Auvergne-Rhône-Alpes, Rapport de la présidente du jury, concours d'ingénieur territorial, session 2019, consulté le 10/09/2026, https://www.cdg-aura.fr/file/7852/download?token=Uqaa2fQ2",
+      "derniereVerification": "2026-09",
+      "aVerifier": false
+    },
+    {
+      "id": "a8-24",
+      "axe": "A8",
+      "sousTheme": "La partie propositions",
+      "stIdx": 3,
+      "sujet": "m-propositions",
+      "niveau": 6,
+      "famille": "S",
+      "type": "qcm",
+      "question": "Que reprochent les correcteurs aux solutions proposées par de nombreux candidats ?",
+      "options": [
+        "D'être trop détaillées et chiffrées",
+        "De ne jamais tenir compte du budget",
+        "D'être systématiquement illégales",
+        "D'être souvent générales et de ne pas répondre assez précisément aux attentes du commanditaire"
+      ],
+      "bonneReponse": 3,
+      "explication": "Les solutions présentées sont souvent générales et ne répondent pas assez précisément aux attentes du commanditaire du sujet. Source : CDG Auvergne-Rhône-Alpes, Rapport de la présidente du jury, concours d'ingénieur territorial, session 2019, consulté le 10/09/2026, https://www.cdg-aura.fr/file/7852/download?token=Uqaa2fQ2 Source : CDG Auvergne-Rhône-Alpes, Rapport de la présidente du jury, concours d'ingénieur territorial, session 2023, consulté le 10/09/2026, https://www.cdg-aura.fr/sites/default/files/Rapport%20de%20jurys/2023-cingenieur_rapportpdte_jury.pdf",
+      "derniereVerification": "2026-09",
+      "aVerifier": false
+    },
+    {
+      "id": "a8-25",
+      "axe": "A8",
+      "sousTheme": "La partie propositions",
+      "stIdx": 3,
+      "sujet": "m-propositions",
+      "niveau": 7,
+      "famille": "E",
+      "type": "qcm",
+      "question": "Quelle qualité les correcteurs souhaiteraient-ils voir davantage dans la partie propositions, selon le rapport 2023 (CDG Auvergne-Rhône-Alpes) ?",
+      "options": [
+        "Une plus grande longueur, sans exigence de structuration",
+        "Un style littéraire plus soutenu",
+        "Une meilleure structuration des copies, davantage de prise de recul et un contenu à visée professionnelle",
+        "Des propositions strictement identiques au contenu du dossier fourni"
+      ],
+      "bonneReponse": 2,
+      "explication": "Pour la partie propositions, les correcteurs auraient souhaité une meilleure structuration des copies, davantage de prise de recul sur la situation et un contenu principalement à visée professionnelle. Source : CDG Auvergne-Rhône-Alpes, Rapport de la présidente du jury, concours d'ingénieur territorial, session 2023, consulté le 10/09/2026, https://www.cdg-aura.fr/sites/default/files/Rapport%20de%20jurys/2023-cingenieur_rapportpdte_jury.pdf",
+      "derniereVerification": "2026-09",
+      "aVerifier": false
+    },
+    {
+      "id": "a8-26",
+      "axe": "A8",
+      "sousTheme": "La partie propositions",
+      "stIdx": 3,
+      "sujet": "m-propositions",
+      "niveau": 5,
+      "famille": "S",
+      "type": "qcm",
+      "question": "Comment le cadrage national qualifie-t-il officiellement l'épreuve de note du concours externe ?",
+      "options": [
+        "Une note assortie de propositions opérationnelles",
+        "Une lettre de motivation argumentée",
+        "Une simple restitution du dossier sans avis personnel",
+        "Un rapport d'audit technique"
+      ],
+      "bonneReponse": 0,
+      "explication": "Le cadrage national présente l'épreuve comme une note assortie de propositions opérationnelles, ce qui en fait un exercice hybride entre synthèse et aide à la décision. Source : CDG Auvergne-Rhône-Alpes, Rapport de la présidente du jury, concours d'ingénieur territorial, session 2019, consulté le 10/09/2026, https://www.cdg-aura.fr/file/7852/download?token=Uqaa2fQ2 Source : CDG Auvergne-Rhône-Alpes, Rapport de la présidente du jury, concours d'ingénieur territorial, session 2023, consulté le 10/09/2026, https://www.cdg-aura.fr/sites/default/files/Rapport%20de%20jurys/2023-cingenieur_rapportpdte_jury.pdf",
+      "derniereVerification": "2026-09",
+      "aVerifier": false
+    },
+    {
+      "id": "a8-27",
+      "axe": "A8",
+      "sousTheme": "La partie propositions",
+      "stIdx": 3,
+      "sujet": "m-propositions",
+      "niveau": 8,
+      "famille": "E",
+      "type": "qcm",
+      "question": "Un jury note qu'une copie présente des propositions génériques, transposables à n'importe quelle collectivité. Quel est le principal reproche associé à ce type de copie ?",
+      "options": [
+        "Un oubli de la partie synthèse",
+        "Un non-respect du nombre de pages imposé",
+        "Un manque de personnalisation et de lien avec les spécificités du sujet et du contexte local",
+        "Une écriture jugée illisible par le correcteur"
+      ],
+      "bonneReponse": 2,
+      "explication": "Les propositions trop générales, qui ne répondent pas assez précisément aux attentes du commanditaire et manquent de solutions concrètes propres au contexte, sont un défaut récurrent relevé par les jurys. Source : CDG Auvergne-Rhône-Alpes, Rapport de la présidente du jury, concours d'ingénieur territorial, session 2019, consulté le 10/09/2026, https://www.cdg-aura.fr/file/7852/download?token=Uqaa2fQ2 Source : CDG Auvergne-Rhône-Alpes, Rapport de la présidente du jury, concours d'ingénieur territorial, session 2023, consulté le 10/09/2026, https://www.cdg-aura.fr/sites/default/files/Rapport%20de%20jurys/2023-cingenieur_rapportpdte_jury.pdf",
+      "derniereVerification": "2026-09",
+      "aVerifier": false
+    },
+    {
+      "id": "a8-28",
+      "axe": "A8",
+      "sousTheme": "Déroulé et posture de l'entretien",
+      "stIdx": 4,
+      "sujet": "o-entretien",
+      "niveau": 5,
+      "famille": "M",
+      "type": "qcm",
+      "question": "D'après le rapport CDG44 2023, quelle particularité de format le candidat doit-il anticiper pour l'épreuve orale ?",
+      "options": [
+        "Un exposé de 10 minutes est obligatoire en introduction",
+        "L'intitulé de l'épreuve ne prévoit pas d'exposé ; il n'y a pas de présentation réglementaire imposée",
+        "L'épreuve commence toujours par une question de culture générale",
+        "Le candidat doit présenter un dossier écrit au jury"
+      ],
+      "bonneReponse": 1,
+      "explication": "Les examinateurs recommandent de se préparer à l'absence de présentation réglementaire : l'intitulé de l'épreuve ne prévoit pas d'exposé. Source : CDG Loire-Atlantique, Rapport du président du jury, concours d'ingénieur territorial, session 2023, consulté le 10/09/2026, https://www.cdg44.fr/sites/default/files/content/fiche_concours_examens/pdf/Rapport%20jury%20INGE%2023.pdf",
+      "derniereVerification": "2026-09",
+      "aVerifier": false
+    },
+    {
+      "id": "a8-29",
+      "axe": "A8",
+      "sousTheme": "Déroulé et posture de l'entretien",
+      "stIdx": 4,
+      "sujet": "o-entretien",
+      "niveau": 5,
+      "famille": "S",
+      "type": "qcm",
+      "question": "Selon les jurys, comment le candidat doit-il se positionner tout au long de l'entretien ?",
+      "options": [
+        "En observateur extérieur à la collectivité",
+        "En qualité d'ingénieur, cadre A de la fonction publique territoriale",
+        "En tant que technicien spécialisé dans son domaine actuel",
+        "En tant que futur élu local"
+      ],
+      "bonneReponse": 1,
+      "explication": "Les examinateurs demandent au candidat de se positionner en qualité d'ingénieur, cadre A, et non de technicien. Source : CDG Loire-Atlantique, Rapport du président du jury, concours d'ingénieur territorial, session 2023, consulté le 10/09/2026, https://www.cdg44.fr/sites/default/files/content/fiche_concours_examens/pdf/Rapport%20jury%20INGE%2023.pdf Source : CDG Auvergne-Rhône-Alpes, Rapport de la présidente du jury, concours d'ingénieur territorial, session 2019, consulté le 10/09/2026, https://www.cdg-aura.fr/file/7852/download?token=Uqaa2fQ2",
+      "derniereVerification": "2026-09",
+      "aVerifier": false
+    },
+    {
+      "id": "a8-30",
+      "axe": "A8",
+      "sousTheme": "Déroulé et posture de l'entretien",
+      "stIdx": 4,
+      "sujet": "o-entretien",
+      "niveau": 4,
+      "famille": "M",
+      "type": "qcm",
+      "question": "Quelle durée totale est prévue pour l'entretien du concours externe, et comment se répartit-elle ?",
+      "options": [
+        "20 minutes, sans découpage en parties",
+        "40 minutes consacrées uniquement à la spécialité choisie",
+        "60 minutes, réparties en trois parties égales",
+        "40 minutes, réparties en 15 à 20 minutes pour chacune des deux parties de l'entretien"
+      ],
+      "bonneReponse": 3,
+      "explication": "L'entretien dure au total 40 minutes, réparties en 15 à 20 minutes pour chacune de ses deux parties (questions sur l'option, puis aptitude à s'intégrer dans l'environnement professionnel). Source : CDG Loire-Atlantique, Rapport du président du jury, concours d'ingénieur territorial, session 2023, consulté le 10/09/2026, https://www.cdg44.fr/sites/default/files/content/fiche_concours_examens/pdf/Rapport%20jury%20INGE%2023.pdf Source : CDG Auvergne-Rhône-Alpes, Rapport de la présidente du jury, concours d'ingénieur territorial, session 2023, consulté le 10/09/2026, https://www.cdg-aura.fr/sites/default/files/Rapport%20de%20jurys/2023-cingenieur_rapportpdte_jury.pdf",
+      "derniereVerification": "2026-09",
+      "aVerifier": false
+    },
+    {
+      "id": "a8-31",
+      "axe": "A8",
+      "sousTheme": "Déroulé et posture de l'entretien",
+      "stIdx": 4,
+      "sujet": "o-entretien",
+      "niveau": 6,
+      "famille": "S",
+      "type": "qcm",
+      "question": "Le jury qui conduit l'entretien du concours externe est constitué comment, d'après les rapports de jury ?",
+      "options": [
+        "Exclusivement de fonctionnaires territoriaux",
+        "De groupes de six examinateurs, soit deux représentants de chaque collège réglementaire (élus locaux, personnalités qualifiées, fonctionnaires territoriaux)",
+        "De membres tirés au sort parmi les candidats admissibles",
+        "D'un seul examinateur par candidat"
+      ],
+      "bonneReponse": 1,
+      "explication": "L'épreuve d'entretien est conduite par des membres du jury constitués en groupes de six examinateurs, soit deux représentants de chaque collège réglementaire. Source : CDG Auvergne-Rhône-Alpes, Rapport de la présidente du jury, concours d'ingénieur territorial, session 2019, consulté le 10/09/2026, https://www.cdg-aura.fr/file/7852/download?token=Uqaa2fQ2 Source : CDG Auvergne-Rhône-Alpes, Rapport du président du jury, concours d'ingénieur territorial, session 2021, consulté le 10/09/2026, https://www.cdg-aura.fr/file/10330/download?token=HGoFbCoe",
+      "derniereVerification": "2026-09",
+      "aVerifier": false
+    },
+    {
+      "id": "a8-32",
+      "axe": "A8",
+      "sousTheme": "Déroulé et posture de l'entretien",
+      "stIdx": 4,
+      "sujet": "o-entretien",
+      "niveau": 5,
+      "famille": "S",
+      "type": "qcm",
+      "question": "Quelle compétence transversale les examinateurs attendent-ils, au-delà des connaissances techniques de l'option choisie ?",
+      "options": [
+        "Une spécialisation dans plusieurs options à la fois",
+        "Une maîtrise exclusive de la langue anglaise",
+        "Une expérience de gestion d'une collectivité de plus de 100 000 habitants",
+        "Une culture technique et managériale renforcée"
+      ],
+      "bonneReponse": 3,
+      "explication": "Les examinateurs recommandent de renforcer la culture technique et managériale, au-delà de la seule maîtrise technique de l'option. Source : CDG Loire-Atlantique, Rapport du président du jury, concours d'ingénieur territorial, session 2023, consulté le 10/09/2026, https://www.cdg44.fr/sites/default/files/content/fiche_concours_examens/pdf/Rapport%20jury%20INGE%2023.pdf",
+      "derniereVerification": "2026-09",
+      "aVerifier": false
+    },
+    {
+      "id": "a8-33",
+      "axe": "A8",
+      "sousTheme": "Déroulé et posture de l'entretien",
+      "stIdx": 4,
+      "sujet": "o-entretien",
+      "niveau": 7,
+      "famille": "S",
+      "type": "qcm",
+      "question": "Que reproche le jury à de nombreux candidats du concours externe concernant leur préparation aux questions de mise en situation professionnelle ?",
+      "options": [
+        "De refuser catégoriquement d'y répondre",
+        "De répondre uniquement par des citations réglementaires",
+        "D'être trop bien préparés, ce qui nuit à la spontanéité",
+        "De paraître peu préparés à ce type de questions, faute d'une expérience de terrain comparable à celle des candidats internes"
+      ],
+      "bonneReponse": 3,
+      "explication": "Le jury constate que les candidats du concours externe paraissent moins préparés que les internes aux questions de mise en situation, faute d'une vision de terrain aussi développée. Source : CDG Auvergne-Rhône-Alpes, Rapport de la présidente du jury, concours d'ingénieur territorial, session 2023, consulté le 10/09/2026, https://www.cdg-aura.fr/sites/default/files/Rapport%20de%20jurys/2023-cingenieur_rapportpdte_jury.pdf",
+      "derniereVerification": "2026-09",
+      "aVerifier": false
+    },
+    {
+      "id": "a8-34",
+      "axe": "A8",
+      "sousTheme": "Connaissances attendues au-delà de la spécialité",
+      "stIdx": 5,
+      "sujet": "o-culture",
+      "niveau": 6,
+      "famille": "S",
+      "type": "qcm",
+      "question": "Sur quels domaines les candidats externes présentent-ils le plus souvent des lacunes, selon le rapport 2023 (CDG Auvergne-Rhône-Alpes) ?",
+      "options": [
+        "La maîtrise de l'orthographe uniquement",
+        "La connaissance de l'histoire de la collectivité employeur",
+        "Les connaissances générales techniques, réglementaires et administratives, notamment en commande publique, prévention des risques professionnels et management",
+        "Aucune lacune n'est relevée pour les candidats externes"
+      ],
+      "bonneReponse": 2,
+      "explication": "Les candidats externes ont souvent des lacunes en connaissances générales techniques, réglementaires et administratives, révélant une culture territoriale du métier insuffisante, notamment en commande publique, prévention des risques professionnels et management. Source : CDG Auvergne-Rhône-Alpes, Rapport de la présidente du jury, concours d'ingénieur territorial, session 2023, consulté le 10/09/2026, https://www.cdg-aura.fr/sites/default/files/Rapport%20de%20jurys/2023-cingenieur_rapportpdte_jury.pdf",
+      "derniereVerification": "2026-09",
+      "aVerifier": false
+    },
+    {
+      "id": "a8-35",
+      "axe": "A8",
+      "sousTheme": "Connaissances attendues au-delà de la spécialité",
+      "stIdx": 5,
+      "sujet": "o-culture",
+      "niveau": 7,
+      "famille": "E",
+      "type": "qcm",
+      "question": "Quel défaut le jury constate-t-il de façon récurrente, sur les deux voies du concours, concernant la vision des candidats ?",
+      "options": [
+        "Une vision centrée exclusivement sur le droit administratif",
+        "Un manque de vision élargie de leur spécialité : l'approche très technique ne leur permet pas de prendre de la hauteur et d'avoir une approche transversale",
+        "Une vision trop large, déconnectée de leur spécialité",
+        "Une vision uniquement financière des problématiques"
+      ],
+      "bonneReponse": 1,
+      "explication": "Le jury constate, sur les deux voies du concours, que les candidats manquent souvent d'une vision élargie de leur spécialité : l'approche très technique ne leur permet pas de prendre de la hauteur. Source : CDG Auvergne-Rhône-Alpes, Rapport de la présidente du jury, concours d'ingénieur territorial, session 2019, consulté le 10/09/2026, https://www.cdg-aura.fr/file/7852/download?token=Uqaa2fQ2 Source : CDG Auvergne-Rhône-Alpes, Rapport de la présidente du jury, concours d'ingénieur territorial, session 2023, consulté le 10/09/2026, https://www.cdg-aura.fr/sites/default/files/Rapport%20de%20jurys/2023-cingenieur_rapportpdte_jury.pdf",
+      "derniereVerification": "2026-09",
+      "aVerifier": false
+    },
+    {
+      "id": "a8-36",
+      "axe": "A8",
+      "sousTheme": "Connaissances attendues au-delà de la spécialité",
+      "stIdx": 5,
+      "sujet": "o-culture",
+      "niveau": 4,
+      "famille": "S",
+      "type": "qcm",
+      "question": "Quelle recommandation les examinateurs formulent-ils concernant les connaissances techniques dans l'option choisie ?",
+      "options": [
+        "Elles ne concernent que les candidats internes",
+        "Elles sont facultatives si le candidat a un bon relationnel",
+        "Elles ne sont pas évaluées à l'oral, seul l'écrit les vérifie",
+        "Porter une attention particulière aux connaissances techniques de base dans l'option, en se référant au programme réglementaire"
+      ],
+      "bonneReponse": 3,
+      "explication": "Les examinateurs recommandent de porter une attention particulière aux connaissances techniques de base dans l'option, en se référant au programme réglementaire. Source : CDG Loire-Atlantique, Rapport du président du jury, concours d'ingénieur territorial, session 2023, consulté le 10/09/2026, https://www.cdg44.fr/sites/default/files/content/fiche_concours_examens/pdf/Rapport%20jury%20INGE%2023.pdf",
+      "derniereVerification": "2026-09",
+      "aVerifier": false
+    },
+    {
+      "id": "a8-37",
+      "axe": "A8",
+      "sousTheme": "Connaissances attendues au-delà de la spécialité",
+      "stIdx": 5,
+      "sujet": "o-culture",
+      "niveau": 5,
+      "famille": "S",
+      "type": "qcm",
+      "question": "Quelle recommandation concerne la veille professionnelle du candidat, selon le rapport CDG44 2023 ?",
+      "options": [
+        "Effectuer une veille réglementaire et maîtriser les aspects juridiques",
+        "Aucune veille n'est nécessaire, le jury ne pose pas de questions d'actualité",
+        "Seule la veille technologique est utile",
+        "La veille réglementaire est réservée aux candidats internes"
+      ],
+      "bonneReponse": 0,
+      "explication": "Les examinateurs recommandent d'effectuer une veille réglementaire et de maîtriser les aspects juridiques liés à son option. Source : CDG Loire-Atlantique, Rapport du président du jury, concours d'ingénieur territorial, session 2023, consulté le 10/09/2026, https://www.cdg44.fr/sites/default/files/content/fiche_concours_examens/pdf/Rapport%20jury%20INGE%2023.pdf",
+      "derniereVerification": "2026-09",
+      "aVerifier": false
+    },
+    {
+      "id": "a8-38",
+      "axe": "A8",
+      "sousTheme": "Connaissances attendues au-delà de la spécialité",
+      "stIdx": 5,
+      "sujet": "o-culture",
+      "niveau": 6,
+      "famille": "S",
+      "type": "qcm",
+      "question": "Que reproche le jury à certains candidats concernant leur manière de répondre aux questions posées ?",
+      "options": [
+        "De toujours répondre par une question",
+        "De se contenter de réponses trop succinctes et trop générales, sans les développer ni les argumenter",
+        "De développer et d'argumenter excessivement leurs réponses",
+        "De ne jamais citer d'exemples concrets"
+      ],
+      "bonneReponse": 1,
+      "explication": "Les examinateurs attendent des candidats qu'ils soient capables de développer et d'argumenter leurs idées, et non de se contenter de réponses succinctes et trop générales. Source : CDG Loire-Atlantique, Rapport du président du jury, concours d'ingénieur territorial, session 2023, consulté le 10/09/2026, https://www.cdg44.fr/sites/default/files/content/fiche_concours_examens/pdf/Rapport%20jury%20INGE%2023.pdf",
+      "derniereVerification": "2026-09",
+      "aVerifier": false
+    },
+    {
+      "id": "a8-39",
+      "axe": "A8",
+      "sousTheme": "Connaissances attendues au-delà de la spécialité",
+      "stIdx": 5,
+      "sujet": "o-culture",
+      "niveau": 6,
+      "famille": "S",
+      "type": "qcm",
+      "question": "Quel volet du contexte territorial les examinateurs jugent-ils trop souvent méconnu ou négligé par les candidats ?",
+      "options": [
+        "Les statistiques démographiques nationales",
+        "Le nom des élus locaux en poste",
+        "Les finances publiques et les marchés publics",
+        "L'historique architectural de la collectivité"
+      ],
+      "bonneReponse": 2,
+      "explication": "Les examinateurs recommandent de travailler le contexte territorial, trop souvent méconnu et négligé, notamment en matière de finances publiques et de marchés publics. Source : CDG Loire-Atlantique, Rapport du président du jury, concours d'ingénieur territorial, session 2023, consulté le 10/09/2026, https://www.cdg44.fr/sites/default/files/content/fiche_concours_examens/pdf/Rapport%20jury%20INGE%2023.pdf",
+      "derniereVerification": "2026-09",
+      "aVerifier": false
+    },
+    {
+      "id": "a8-40",
+      "axe": "A8",
+      "sousTheme": "Connaissances attendues au-delà de la spécialité",
+      "stIdx": 5,
+      "sujet": "o-culture",
+      "niveau": 5,
+      "famille": "S",
+      "type": "qcm",
+      "question": "D'après le rapport 2023 (CDG44), sur quoi les candidats doivent-ils mettre à jour leurs connaissances avant l'oral ?",
+      "options": [
+        "L'actualité sportive nationale",
+        "L'actualité technique et réglementaire de l'option choisie",
+        "La composition nominative du jury",
+        "Uniquement les grands principes constitutionnels"
+      ],
+      "bonneReponse": 1,
+      "explication": "Les candidats doivent mettre à jour leurs connaissances sur l'actualité technique et réglementaire de l'option choisie, des aspects trop souvent méconnus. Source : CDG Loire-Atlantique, Rapport du président du jury, concours d'ingénieur territorial, session 2023, consulté le 10/09/2026, https://www.cdg44.fr/sites/default/files/content/fiche_concours_examens/pdf/Rapport%20jury%20INGE%2023.pdf",
+      "derniereVerification": "2026-09",
+      "aVerifier": false
+    },
+    {
+      "id": "a8-41",
+      "axe": "A8",
+      "sousTheme": "Motivation et projet professionnel",
+      "stIdx": 6,
+      "sujet": "o-projet",
+      "niveau": 5,
+      "famille": "E",
+      "type": "qcm",
+      "question": "Que recommandent les examinateurs concernant la motivation exprimée par le candidat à l'oral ?",
+      "options": [
+        "Motiver clairement son souhait de travailler dans la fonction publique territoriale, au-delà du poste et de la collectivité actuels",
+        "Motiver uniquement son choix de spécialité technique",
+        "Ne pas aborder le sujet de la motivation, hors sujet à l'oral",
+        "Justifier le niveau de rémunération souhaité"
+      ],
+      "bonneReponse": 0,
+      "explication": "Les examinateurs recommandent de motiver clairement son souhait de travailler dans la fonction publique territoriale, au-delà du seul poste occupé et de la collectivité actuelle. Source : CDG Loire-Atlantique, Rapport du président du jury, concours d'ingénieur territorial, session 2023, consulté le 10/09/2026, https://www.cdg44.fr/sites/default/files/content/fiche_concours_examens/pdf/Rapport%20jury%20INGE%2023.pdf",
+      "derniereVerification": "2026-09",
+      "aVerifier": false
+    },
+    {
+      "id": "a8-42",
+      "axe": "A8",
+      "sousTheme": "Motivation et projet professionnel",
+      "stIdx": 6,
+      "sujet": "o-projet",
+      "niveau": 7,
+      "famille": "E",
+      "type": "qcm",
+      "question": "Quelle capacité le jury attend-il des candidats concernant leur positionnement professionnel futur ?",
+      "options": [
+        "Refuser toute perspective d'évolution pour rester crédible",
+        "Se cantonner à décrire son poste actuel avec précision",
+        "Être capable de se projeter sur des fonctions d'encadrement et de se positionner en tant qu'ingénieur territorial",
+        "Ne parler que de son parcours scolaire"
+      ],
+      "bonneReponse": 2,
+      "explication": "Il est essentiel d'être capable de se projeter sur des fonctions d'encadrant et de se positionner en tant qu'ingénieur territorial ; de nombreux candidats ne prennent pas la hauteur suffisante et se cantonnent à leur positionnement actuel. Source : CDG Loire-Atlantique, Rapport du président du jury, concours d'ingénieur territorial, session 2023, consulté le 10/09/2026, https://www.cdg44.fr/sites/default/files/content/fiche_concours_examens/pdf/Rapport%20jury%20INGE%2023.pdf",
+      "derniereVerification": "2026-09",
+      "aVerifier": false
+    },
+    {
+      "id": "a8-43",
+      "axe": "A8",
+      "sousTheme": "Motivation et projet professionnel",
+      "stIdx": 6,
+      "sujet": "o-projet",
+      "niveau": 6,
+      "famille": "E",
+      "type": "qcm",
+      "question": "Quel manque le jury relève-t-il fréquemment concernant le projet professionnel des candidats ?",
+      "options": [
+        "Un projet professionnel trop ambitieux par rapport au poste visé",
+        "Un projet professionnel jugé incompatible avec le statut de fonctionnaire",
+        "Un projet professionnel identique pour tous les candidats admis",
+        "L'absence d'un projet professionnel suffisamment précis, alors qu'il est conseillé d'y réfléchir en amont de l'épreuve"
+      ],
+      "bonneReponse": 3,
+      "explication": "Le jury regrette que la plupart des candidats n'ait pas de projet professionnel suffisamment précis ; il est fortement conseillé de réfléchir à sa motivation et à son évolution en amont. Source : CDG Auvergne-Rhône-Alpes, Rapport de la présidente du jury, concours d'ingénieur territorial, session 2019, consulté le 10/09/2026, https://www.cdg-aura.fr/file/7852/download?token=Uqaa2fQ2",
+      "derniereVerification": "2026-09",
+      "aVerifier": false
+    },
+    {
+      "id": "a8-44",
+      "axe": "A8",
+      "sousTheme": "Motivation et projet professionnel",
+      "stIdx": 6,
+      "sujet": "o-projet",
+      "niveau": 5,
+      "famille": "S",
+      "type": "qcm",
+      "question": "Quelle compétence, jugée indispensable aujourd'hui dans toute organisation territoriale, un futur ingénieur territorial doit-il maîtriser selon le président du jury (CDG44, 2023) ?",
+      "options": [
+        "Le pilotage d'une campagne électorale",
+        "La conduite de projet",
+        "La négociation syndicale",
+        "La comptabilité publique approfondie"
+      ],
+      "bonneReponse": 1,
+      "explication": "Un futur ingénieur territorial se doit de maîtriser la conduite de projet, approche jugée aujourd'hui indispensable à toute organisation dans les collectivités territoriales. Source : CDG Loire-Atlantique, Rapport du président du jury, concours d'ingénieur territorial, session 2023, consulté le 10/09/2026, https://www.cdg44.fr/sites/default/files/content/fiche_concours_examens/pdf/Rapport%20jury%20INGE%2023.pdf",
+      "derniereVerification": "2026-09",
+      "aVerifier": false
+    },
+    {
+      "id": "a8-45",
+      "axe": "A8",
+      "sousTheme": "Motivation et projet professionnel",
+      "stIdx": 6,
+      "sujet": "o-projet",
+      "niveau": 6,
+      "famille": "E",
+      "type": "qcm",
+      "question": "Quel regret le jury exprime-t-il concernant l'ambition professionnelle de nombreux candidats ?",
+      "options": [
+        "Aucun regret n'est exprimé sur ce point",
+        "Peu de candidats ont l'ambition d'évoluer vers des fonctions de manager ou de directeur des services techniques",
+        "Trop de candidats visent des postes de direction générale dès leur nomination",
+        "Les candidats visent tous le même poste dans la même collectivité"
+      ],
+      "bonneReponse": 1,
+      "explication": "Le jury regrette que peu de candidats aient l'ambition d'évoluer vers des fonctions de manager ou de directeur des services techniques. Source : CDG Auvergne-Rhône-Alpes, Rapport de la présidente du jury, concours d'ingénieur territorial, session 2019, consulté le 10/09/2026, https://www.cdg-aura.fr/file/7852/download?token=Uqaa2fQ2",
+      "derniereVerification": "2026-09",
+      "aVerifier": false
+    },
+    {
+      "id": "a8-46",
+      "axe": "A8",
+      "sousTheme": "Motivation et projet professionnel",
+      "stIdx": 6,
+      "sujet": "o-projet",
+      "niveau": 7,
+      "famille": "E",
+      "type": "qcm",
+      "question": "Un candidat, interrogé sur son évolution professionnelle, répond uniquement en décrivant ses missions actuelles sans évoquer de perspective. D'après les attentes du jury, quelle est la limite de cette réponse ?",
+      "options": [
+        "Elle est parfaitement suffisante, le jury ne juge pas les perspectives d'évolution",
+        "Elle n'est recevable qu'au concours interne",
+        "Elle ne montre pas la capacité à prendre de la hauteur et à se projeter sur des fonctions d'encadrement, attendue d'un futur ingénieur territorial",
+        "Elle est éliminatoire automatiquement, quelle que soit la note globale"
+      ],
+      "bonneReponse": 2,
+      "explication": "De nombreux candidats ne prennent pas la hauteur suffisante et se cantonnent à leur positionnement actuel, alors que le jury attend une capacité à se projeter sur des fonctions d'encadrement. Source : CDG Loire-Atlantique, Rapport du président du jury, concours d'ingénieur territorial, session 2023, consulté le 10/09/2026, https://www.cdg44.fr/sites/default/files/content/fiche_concours_examens/pdf/Rapport%20jury%20INGE%2023.pdf",
+      "derniereVerification": "2026-09",
+      "aVerifier": false
     }
   ]
 }
