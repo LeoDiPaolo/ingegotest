@@ -70,9 +70,23 @@ export function BadgeMaitrise({
 }) {
   const part = total ? acquis / total : 0;
   const partVue = total ? Math.max(part, vus / total) : 0;
-  const palier = part >= 0.8 ? "Maîtrisé" : part >= 0.35 ? "En chantier" : "À explorer";
   const atteint = palierAtteint(part);
   const pct = (v: number) => (v > 0 && v < 0.01 ? 1 : Math.round(v * 100));
+  /* Prochain palier et réussites manquantes : message orienté objectif. */
+  const prochain = PALIERS_PART.find((p) => part < p) ?? null;
+  const restants = prochain != null ? Math.max(1, Math.ceil(prochain * total) - acquis) : 0;
+  const palier =
+    part >= 1
+      ? "Catégorie maîtrisée"
+      : part > 0
+        ? `${pct(part)} % maîtrisé`
+        : partVue > 0
+          ? "Premières réussites en cours"
+          : "À découvrir";
+  const sousTitre =
+    prochain != null
+      ? `Prochain badge à ${Math.round(prochain * 100)} % · encore ${restants} réussite${restants > 1 ? "s" : ""}`
+      : "Tous les badges sont débloqués";
   const Balise = onClick ? "button" : "div";
   return (
     <Balise
