@@ -1123,7 +1123,7 @@ export function Exercice({
                 className={cn(
                   "rounded-xl border p-3",
                   corrige
-                    ? choisi === i
+                    ? assocJuste(q, i, choisi)
                       ? "border-success bg-success/10"
                       : "border-destructive bg-destructive/10"
                     : "border-border bg-elevated",
@@ -1167,7 +1167,7 @@ export function Exercice({
                   className={cn(
                     "mx-0.5 rounded px-1.5 py-0.5 font-semibold",
                     corrige
-                      ? val === bon
+                      ? trouJuste(q, idx, val)
                         ? "bg-success/25"
                         : "bg-destructive/25"
                       : val
@@ -1175,7 +1175,7 @@ export function Exercice({
                         : "bg-background text-muted-foreground",
                   )}
                 >
-                  {corrige ? bon : (val ?? `…${idx + 1}`)}
+                  {corrige ? (trouJuste(q, idx, val) ? val : bon) : (val ?? `…${idx + 1}`)}
                 </span>
               );
             })}
