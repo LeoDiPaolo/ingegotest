@@ -88,6 +88,43 @@ export function trouJuste(q: Question, idx: number, valeur: string | undefined) 
   return groupe.some((j) => mots[j] === valeur);
 }
 
+/* Correction d'un texte à trous : chaque mot attendu ne peut servir qu'une fois.
+   Un trou rempli avec un mot déjà utilisé ailleurs est faux, et on lui affiche
+   le mot qui manquait réellement, même s'il n'était pas prévu à cet endroit. */
+export function resolutionTrous(q: Question, rep: unknown) {
+  const mots = q.mots ?? [];
+  const r = (rep ?? {}) as Record<string, string>;
+  const restants = [...mots];
+  const res: { ok: boolean; attendu: string }[] = mots.map(() => ({ ok: false, attendu: "" }));
+
+  const consommer = (mot: string) => {
+    const k = restants.indexOf(mot);
+    if (k === -1) return false;
+    restants.splice(k, 1);
+    return true;
+  };
+
+  // 1) trous répondus exactement comme prévu
+  mots.forEach((mot, i) => {
+    if (r[i] === mot && consommer(mot)) res[i] = { ok: true, attendu: mot };
+  });
+  // 2) trous répondus avec un mot permutable encore disponible
+  mots.forEach((_, i) => {
+    if (res[i].ok) return;
+    const v = r[i];
+    if (v && trouJuste(q, i, v) && consommer(v)) res[i] = { ok: true, attendu: v };
+  });
+  // 3) trous faux : on y place un mot encore manquant
+  mots.forEach((mot, i) => {
+    if (res[i].ok) return;
+    const prefere = restants.includes(mot) ? mot : restants[0];
+    if (prefere) consommer(prefere);
+    res[i] = { ok: false, attendu: prefere ?? mot };
+  });
+  return res;
+}
+
+
 /* Ordre d'affichage de la colonne droite d'un raccordement : déterministe,
    pour que la correction et l'affichage parlent des mêmes emplacements. */
 export function ordreCablage(q: Question): number[] {
@@ -258,16 +295,10 @@ function juste(q: Question, rep: Reponse): boolean {
       return (q.points ?? []).every((_, i) => m[i] === i);
     case "assoc":
       return (q.paires ?? []).every((_, i) => assocJuste(q, i, m[i]));
-    case "trous": {
-      const r = rep as Record<string, string>;
-      const utilises = new Set<string>();
-      return (q.mots ?? []).every((_, i) => {
-        const v = r[i];
-        if (!trouJuste(q, i, v) || utilises.has(v)) return false;
-        utilises.add(v);
-        return true;
-      });
-    }
+    case "trous":
+      return resolutionTrous(q, rep).every((t) => t.ok);
+
+
     case "tri":
       return (q.elements ?? []).every((el, i) => m[i] === el[1]);
     case "chantier":
@@ -314,10 +345,10 @@ export function partJuste(q: Question, rep: unknown): number {
         (q.paires ?? []).length,
       );
     case "trous": {
-      const r = rep as Record<string, string>;
-      const mots = q.mots ?? [];
-      return ratio(mots.filter((_, i) => trouJuste(q, i, r[i])).length, mots.length);
+      const t = resolutionTrous(q, rep);
+      return ratio(t.filter((x) => x.ok).length, t.length);
     }
+
     case "tri":
       return ratio(
         (q.elements ?? []).filter((el, i) => m[i] === el[1]).length,
@@ -1155,31 +1186,35 @@ export function Exercice({
       {q.type === "trous" && (
         <div className="space-y-3">
           <p className="rounded-xl border border-border bg-elevated p-3 text-sm leading-relaxed">
-            {(q.texte ?? "").split(/(\{\d+\})/).map((frag, k) => {
-              const m = frag.match(/^\{(\d+)\}$/);
-              if (!m) return <span key={k}>{frag}</span>;
-              const idx = Number(m[1]) - 1;
-              const val = (rep as Record<string, string>)[idx];
-              const bon = (q.mots ?? [])[idx];
-              return (
-                <span
-                  key={k}
-                  className={cn(
-                    "mx-0.5 rounded px-1.5 py-0.5 font-semibold",
-                    corrige
-                      ? trouJuste(q, idx, val)
-                        ? "bg-success/25"
-                        : "bg-destructive/25"
-                      : val
-                        ? "bg-primary/20"
-                        : "bg-background text-muted-foreground",
-                  )}
-                >
-                  {corrige ? (trouJuste(q, idx, val) ? val : bon) : (val ?? `…${idx + 1}`)}
-                </span>
-              );
-            })}
+            {(() => {
+              const res = resolutionTrous(q, rep);
+              return (q.texte ?? "").split(/(\{\d+\})/).map((frag, k) => {
+                const m = frag.match(/^\{(\d+)\}$/);
+                if (!m) return <span key={k}>{frag}</span>;
+                const idx = Number(m[1]) - 1;
+                const val = (rep as Record<string, string>)[idx];
+                const etat = res[idx];
+                return (
+                  <span
+                    key={k}
+                    className={cn(
+                      "mx-0.5 rounded px-1.5 py-0.5 font-semibold",
+                      corrige
+                        ? etat?.ok
+                          ? "bg-success/25"
+                          : "bg-destructive/25"
+                        : val
+                          ? "bg-primary/20"
+                          : "bg-background text-muted-foreground",
+                    )}
+                  >
+                    {corrige ? (etat?.ok ? val : etat?.attendu) : (val ?? `…${idx + 1}`)}
+                  </span>
+                );
+              });
+            })()}
           </p>
+
           {!corrige &&
             (q.mots ?? []).map((_, idx) => (
               <select
