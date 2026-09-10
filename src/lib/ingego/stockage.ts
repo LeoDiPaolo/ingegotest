@@ -186,7 +186,8 @@ export function useDonnees() {
     const purgeCom = true;
     void CLE_PURGE_COM;
     void VERSION_COMMENTAIRES;
-    const local = purger(lireLocal(), purgeCartes, purgeCom);
+    const purgeRev = aPurger(CLE_PURGE_REV, VERSION_REVISIONS);
+    const local = purger(lireLocal(), purgeCartes, purgeCom, purgeRev);
     setDonnees(local);
     dernier.current = local;
     setPret(true);
@@ -210,15 +211,22 @@ export function useDonnees() {
           reglages: normaliserReglages(data.reglages as unknown as Partial<Reglages>),
           commentaires: (data.commentaires as unknown as Record<string, string>) ?? {},
         };
-        const fusion = purger(fusionner(dernier.current, distant), purgeCartes, purgeCom);
+        const fusion = purger(
+          fusionner(dernier.current, distant),
+          purgeCartes,
+          purgeCom,
+          purgeRev,
+        );
         setDonnees(fusion);
         pousser(fusion);
         if (purgeCartes) marquerPurge(CLE_PURGE, VERSION_CORRECTIONS);
         if (purgeCom) marquerPurge(CLE_PURGE_COM, VERSION_COMMENTAIRES);
+        if (purgeRev) marquerPurge(CLE_PURGE_REV, VERSION_REVISIONS);
       } else {
         pousser(dernier.current);
         if (purgeCartes) marquerPurge(CLE_PURGE, VERSION_CORRECTIONS);
         if (purgeCom) marquerPurge(CLE_PURGE_COM, VERSION_COMMENTAIRES);
+        if (purgeRev) marquerPurge(CLE_PURGE_REV, VERSION_REVISIONS);
       }
 
       setSynchro("ok");
