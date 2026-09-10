@@ -297,7 +297,7 @@ function juste(q: Question, rep: Reponse): boolean {
       return (q.paires ?? []).every((_, i) => assocJuste(q, i, m[i]));
     case "trous":
       return resolutionTrous(q, rep).every((t) => t.ok);
-    }
+
 
     case "tri":
       return (q.elements ?? []).every((el, i) => m[i] === el[1]);
