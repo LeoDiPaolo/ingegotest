@@ -29,3 +29,4 @@
 - [x] Garantir sur mobile l'ordre contenu → correction → actions, sans recouvrement
 - [x] Afficher une réponse explicite et complète pour chaque format dans le Corpus
 - [x] Vérifier une mission complète et les fiches Corpus sur petit écran
+- [x] Remplacer l'auto-évaluation après correction par un bouton « Question suivante » toujours disponible
