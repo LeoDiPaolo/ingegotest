@@ -57,12 +57,7 @@ export function composerContinuation(
     .sort((a, b) => (etat[a.id]?.dernier ?? 0) - (etat[b.id]?.dernier ?? 0));
   const actifs = CORPUS.filter(ouvert);
   const graine = Math.floor(maintenant / JOUR);
-  const reprises = repartirParTheme(
-    rondeParFormat(fragiles),
-    actifs,
-    reglages.parSession,
-    graine,
-  );
+  const reprises = repartirParTheme(rondeParFormat(fragiles), actifs, reglages.parSession, graine);
   const places = Math.max(0, reglages.parSession - reprises.length);
   const complement = repartirParTheme(rondeParFormat(autres), actifs, places, graine);
   return entrelacer([...reprises, ...complement]);
