@@ -37,8 +37,6 @@ export const COMMENTAIRES_TRAITES: string[] = [
   "n1-66",
   "n1-70",
   "g-075",
-  "n1-05",
-  "n1-16",
   "o-10",
   "n1-40",
   "g-053",
