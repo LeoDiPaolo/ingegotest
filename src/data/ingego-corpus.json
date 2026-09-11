@@ -10695,6 +10695,13 @@
     "continuité",
     "mutabilité"
    ],
+    "motsPermutables": [
+     [
+      0,
+      1,
+      2
+     ]
+    ],
    "texte": "Les lois de Rolland regroupent les principes d'{1}, de {2} et de {3} du service public.",
    "leurres": [
     "neutralité",
@@ -17946,8 +17953,8 @@
    "circuit": {
     "etapes": [
      {
-    "Expiration de la garantie de parfait achèvement",
-    "un an après la réception, sauf prolongation",
+      "l": "Expiration de la garantie de parfait achèvement",
+      "sub": "un an après la réception, sauf prolongation",
       "x": 26,
       "y": 44
      },
@@ -17957,8 +17964,8 @@
       "y": 91
      },
      {
-    "Décompte général et définitif",
-    "clôture financière du marché",
+      "l": "Décompte général et définitif",
+      "sub": "clôture financière du marché",
       "x": 74,
       "y": 61
      },
