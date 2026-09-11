@@ -2,9 +2,11 @@ import { useEffect, useState } from "react";
 import { Bell, BellOff, Send } from "lucide-react";
 import {
   activerRappels,
+  definirPrenom,
   desactiverRappels,
   envoyerTest,
   etatRappels,
+  lirePrenom,
   surIosNonInstalle,
 } from "@/lib/ingego/push";
 
@@ -15,11 +17,18 @@ export function CarteRappels() {
   const [occupe, setOccupe] = useState(false);
   const [info, setInfo] = useState<string | null>(null);
   const [iosNonInstalle, setIosNonInstalle] = useState(false);
+  const [prenom, setPrenom] = useState("");
 
   useEffect(() => {
     setIosNonInstalle(surIosNonInstalle());
+    setPrenom(lirePrenom());
     void etatRappels().then(setEtat);
   }, []);
+
+  function enregistrerLePrenom(valeur: string) {
+    setPrenom(valeur);
+    void definirPrenom(valeur);
+  }
 
   async function basculer() {
     setOccupe(true);
