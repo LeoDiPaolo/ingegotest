@@ -76,16 +76,13 @@ export function assocJuste(q: Question, i: number, choix: number | undefined) {
   return memeLibelle(paires[choix]?.[1], paires[i]?.[1]);
 }
 
-/* Trous interchangeables : dans une énumération sans hiérarchie, chaque mot du
-   groupe est accepté dans n'importe quel trou du groupe, à condition qu'aucun
-   mot ne soit utilisé deux fois. */
+/* Tous les mots justes d'un texte à trous sont interchangeables : l'exercice
+   vérifie les connaissances, pas l'ordre arbitraire des cases. Chaque occurrence
+   ne peut toutefois servir qu'une fois, y compris quand un mot est répété. */
 export function trouJuste(q: Question, idx: number, valeur: string | undefined) {
   const mots = q.mots ?? [];
   if (!valeur) return false;
-  if (valeur === mots[idx]) return true;
-  const groupe = (q.motsPermutables ?? []).find((g) => g.includes(idx));
-  if (!groupe) return false;
-  return groupe.some((j) => mots[j] === valeur);
+  return mots.includes(valeur);
 }
 
 /* Correction d'un texte à trous : chaque mot attendu ne peut servir qu'une fois.
