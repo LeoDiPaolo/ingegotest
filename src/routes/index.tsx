@@ -109,8 +109,6 @@ function Reviser() {
   const [niveauxDepart, setNiveauxDepart] = useState<Record<string, number>>({});
   const [axeOuvert, setAxeOuvert] = useState<string | null>(null);
 
-  /* Titre du jour : stable pendant la journée, animé à chaque changement. */
-  const titreMission = useMemo(() => titreMissionDuJour(), []);
   const serie = useMemo(
     () => serieJours(donnees.journal.filter((e) => e.id === MARQUE_SESSION).map((e) => e.jour)),
     [donnees.journal],
@@ -119,6 +117,17 @@ function Reviser() {
     () => (pret ? resteAFaire(donnees.cartes, donnees.reglages, Date.now()) : 0),
     [donnees.cartes, donnees.reglages, pret],
   );
+  /* Révisions dues : cartes déjà vues dont l'échéance est atteinte. */
+  const revisionsDues = useMemo(
+    () =>
+      Object.values(donnees.cartes).some(
+        (carte) => carte?.vu && (carte.p ?? 0) >= 1 && (carte.du ?? 0) <= Date.now(),
+      ),
+    [donnees.cartes],
+  );
+  /* Titre du jour : cohérent avec le contenu réel de la mission. */
+  const titreMission = useMemo(() => titreMissionDuJour(revisionsDues), [revisionsDues]);
+
 
   const bilan = useMemo(() => {
     const l = jaugesParAxe(donnees.cartes);
