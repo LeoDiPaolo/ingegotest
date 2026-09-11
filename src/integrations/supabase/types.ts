@@ -19,33 +19,39 @@ export type Database = {
           auth: string
           cle: string
           created_at: string
+          dernier_creneau: string | null
           dernier_envoi: string | null
           endpoint: string
           fuseau: string
           id: string
           p256dh: string
+          prenom: string | null
           updated_at: string
         }
         Insert: {
           auth: string
           cle: string
           created_at?: string
+          dernier_creneau?: string | null
           dernier_envoi?: string | null
           endpoint: string
           fuseau?: string
           id?: string
           p256dh: string
+          prenom?: string | null
           updated_at?: string
         }
         Update: {
           auth?: string
           cle?: string
           created_at?: string
+          dernier_creneau?: string | null
           dernier_envoi?: string | null
           endpoint?: string
           fuseau?: string
           id?: string
           p256dh?: string
+          prenom?: string | null
           updated_at?: string
         }
         Relationships: []
