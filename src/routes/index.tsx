@@ -307,11 +307,16 @@ function Reviser() {
                         aria-label={`Ouvrir la catégorie ${l.axe.court}`}
                         className="tap rounded-full transition-transform active:scale-95"
                       >
-                        <IconeAxe
-                          axe={l.axe}
-                          className="h-11 w-11 sm:h-14 sm:w-14"
-                          active={l.part > 0}
-                        />
+                        <span
+                          className="anim-pop inline-block"
+                          style={{ animationDelay: `${index * 0.05}s` }}
+                        >
+                          <IconeAxe
+                            axe={l.axe}
+                            className="h-11 w-11 sm:h-14 sm:w-14"
+                            active={l.part > 0}
+                          />
+                        </span>
                       </button>
                       {index < bilan.lignes.length - 1 ? (
                         <span className="h-1 w-2 bg-border sm:w-4" />
