@@ -92,7 +92,6 @@ export function CarteRappels() {
         />
       </label>
 
-
       {iosNonInstalle ? (
         <p className="rounded-xl border border-warning/40 bg-warning/10 p-2.5 text-xs">
           Sur iPhone, ajoute d'abord IngéGo à l'écran d'accueil (Partager → Sur l'écran d'accueil),
