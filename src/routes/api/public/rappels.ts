@@ -202,17 +202,21 @@ async function traiter(request: Request) {
     return new Response("Non autorisé", { status: 401 });
   }
   const aujourdhui = jourParis();
+  const demande = new URL(request.url).searchParams.get("creneau");
+  const creneau: Creneau =
+    demande === "matin" || demande === "midi" || demande === "soir" ? demande : "soir";
 
   const { data: abonnementsBruts, error: erreurAb } = await supabaseAdmin
     .from("abonnements_push")
-    .select("id, cle, endpoint, p256dh, auth, dernier_envoi");
+    .select("id, cle, endpoint, p256dh, auth, prenom, dernier_envoi, dernier_creneau");
   if (erreurAb) {
     console.error("rappels/abonnements", erreurAb);
     return new Response("Erreur", { status: 500 });
   }
 
+  /* Un envoi par créneau et par jour : matin, midi et fin de journée. */
   const abonnements = ((abonnementsBruts ?? []) as unknown as AbonnementLigne[]).filter(
-    (a) => a.dernier_envoi !== aujourdhui,
+    (a) => !(a.dernier_envoi === aujourdhui && a.dernier_creneau === creneau),
   );
   if (abonnements.length === 0) {
     return Response.json({ jour: aujourdhui, envoyes: 0, appareils: 0 });
