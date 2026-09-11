@@ -8,7 +8,7 @@
     },
     "genere": "2026-07-30",
     "version": "2026-09",
-    "totalQuestions": 849,
+    "totalQuestions": 839,
     "schema": "Chaque question porte : id, axe (A1-A6), sousTheme, sujet (clé de progression par niveaux), niveau (1-3), famille (S stable / M mouvant / E enjeu), type, les champs propres au type, explication, et le cas échéant derniereVerification (AAAA-MM) et aVerifier."
   },
   "axes": [
@@ -9018,83 +9018,6 @@
       ]
     },
     {
-      "id": "g-040",
-      "axe": "A7",
-      "sousTheme": "Collectivités, EPCI et compétences",
-      "stIdx": 2,
-      "sujet": "g-2",
-      "niveau": 1,
-      "famille": "S",
-      "type": "assoc",
-      "question": "Associez chaque établissement scolaire à la collectivité qui en a la charge.",
-      "paires": [
-        ["École primaire", "Commune"],
-        ["Collège", "Département"],
-        ["Lycée", "Région"],
-        ["Université", "État"]
-      ],
-      "explication": "Chaque collectivité a la charge d'un type d'établissement scolaire : la commune pour les écoles, le département pour les collèges, la région pour les lycées et l'État pour les universités (article L211-1 et suivants du Code de l'éducation).",
-      "derniereVerification": "2026-08",
-      "aVerifier": null
-    },
-    {
-      "id": "g-039",
-      "axe": "A7",
-      "sousTheme": "Collectivités, EPCI et compétences",
-      "stIdx": 2,
-      "sujet": "g-2",
-      "niveau": 1,
-      "famille": "S",
-      "explication": "La Région a la charge des lycées (construction, entretien, personnels techniques - TOS) depuis les lois de décentralisation, en application de l'article L214-6 du Code de l'éducation.",
-      "type": "qcm",
-      "question": "Quelle collectivité a la charge des lycées (bâtiments, TOS) ?",
-      "options": ["L'État", "Le Département", "La Commune", "La Région"],
-      "bonneReponse": 3,
-      "derniereVerification": "2026-08",
-      "aVerifier": null
-    },
-    {
-      "id": "g-041",
-      "axe": "A7",
-      "sousTheme": "Collectivités, EPCI et compétences",
-      "stIdx": 2,
-      "sujet": "g-2",
-      "niveau": 1,
-      "famille": "S",
-      "explication": "La commune a la charge de la construction et de l'entretien des écoles maternelles et élémentaires publiques, en application de l'article L212-4 du Code de l'éducation.",
-      "type": "qcm",
-      "question": "Quelle collectivité a la charge des écoles (bâtiments) ?",
-      "options": ["Le Département", "La Région", "La Commune", "L'EPCI (intercommunalité)"],
-      "bonneReponse": 2,
-      "derniereVerification": "2026-08",
-      "aVerifier": null
-    },
-    {
-      "id": "g-042",
-      "axe": "A7",
-      "sousTheme": "Collectivités, EPCI et compétences",
-      "stIdx": 2,
-      "sujet": "g-2",
-      "niveau": 1,
-      "famille": "S",
-      "type": "tri",
-      "question": "Triez chaque compétence dans la colonne de la collectivité qui en est chargée.",
-      "colonnes": ["Commune", "Département", "Région"],
-      "elements": [
-        ["Protection maternelle et infantile (PMI)", 1],
-        ["Aide sociale à l'enfance (ASE)", 1],
-        ["Revenu de solidarité active (RSA)", 1],
-        ["Allocation personnalisée d'autonomie (APA)", 1],
-        ["École maternelle et primaire", 0],
-        ["État civil", 0],
-        ["Lycées", 2],
-        ["Développement économique régional", 2]
-      ],
-      "explication": "Le Département est chef de file de l'action sociale (PMI, ASE, RSA, APA), la commune gère les écoles et l'état civil, la région gère les lycées et le développement économique.",
-      "derniereVerification": "2026-08",
-      "aVerifier": null
-    },
-    {
       "id": "g-044",
       "axe": "A7",
       "sousTheme": "Collectivités, EPCI et compétences",
@@ -12240,54 +12163,6 @@
       "bonneReponse": 0
     },
     {
-      "id": "g-217",
-      "axe": "A7",
-      "sousTheme": "Collectivités, EPCI et compétences",
-      "stIdx": 2,
-      "sujet": "g-2",
-      "niveau": 2,
-      "famille": "M",
-      "type": "vf",
-      "question": "Le Département a la charge des bâtiments et du personnel TOS des collèges.",
-      "vrai": true,
-      "justification": "La loi de décentralisation, complétée par la loi du 13 août 2004, confie au département la construction, l'entretien et le fonctionnement des collèges, ainsi que la gestion du personnel technique, ouvrier et de service (TOS) qui y est affecté.",
-      "explication": "Le Département a la charge des bâtiments et des personnels TOS des collèges.",
-      "derniereVerification": "2026-08",
-      "aVerifier": null
-    },
-    {
-      "id": "g-218",
-      "axe": "A7",
-      "sousTheme": "Collectivités, EPCI et compétences",
-      "stIdx": 2,
-      "sujet": "g-2",
-      "niveau": 2,
-      "famille": "M",
-      "type": "vf",
-      "question": "La construction et l'entretien des écoles maternelles et primaires relèvent de la compétence de la Commune.",
-      "vrai": true,
-      "justification": "Depuis les lois de décentralisation, la commune a la charge des écoles maternelles et élémentaires, tandis que le département et la région ont respectivement la charge des collèges et des lycées.",
-      "explication": "La Commune a la charge de la construction et de l'entretien des écoles maternelles et primaires.",
-      "derniereVerification": "2026-08",
-      "aVerifier": null
-    },
-    {
-      "id": "g-216",
-      "axe": "A7",
-      "sousTheme": "Collectivités, EPCI et compétences",
-      "stIdx": 2,
-      "sujet": "g-2",
-      "niveau": 2,
-      "famille": "M",
-      "type": "vf",
-      "question": "La Région a la charge des bâtiments et du personnel technique (TOS) des lycées.",
-      "vrai": true,
-      "justification": "Depuis les lois de décentralisation (1983) et le transfert des personnels TOS opéré par la loi du 13 août 2004, la Région assure la construction, l'entretien des lycées et la gestion de leurs personnels techniques.",
-      "explication": "La Région a la charge des bâtiments et des personnels techniques (TOS) des lycées, le Département ayant la même compétence pour les collèges.",
-      "derniereVerification": "2026-08",
-      "aVerifier": null
-    },
-    {
       "id": "g-219",
       "axe": "A7",
       "sousTheme": "Collectivités, EPCI et compétences",
@@ -12389,26 +12264,6 @@
       "question": "C'est le Département qui verse le RSA, l'APA ou l'AAH.",
       "justification": "Le Département verse bien le RSA et l'APA, mais l'AAH est une prestation nationale financée par l'État et versée par les CAF/MSA, même si son attribution est décidée par la CDAPH au sein de la MDPH.",
       "vrai": false
-    },
-    {
-      "id": "g-220",
-      "axe": "A7",
-      "sousTheme": "Collectivités, EPCI et compétences",
-      "stIdx": 2,
-      "sujet": "g-2",
-      "niveau": 3,
-      "famille": "M",
-      "type": "assoc",
-      "question": "Associez chaque compétence sociale ou éducative à la collectivité compétente.",
-      "paires": [
-        ["ASE et PMI", "Département"],
-        ["Transport scolaire des lycéens", "Région"],
-        ["Contenu des enseignements et diplômes", "État"],
-        ["Construction des collèges", "Département"]
-      ],
-      "explication": "Le Département assure l'aide sociale à l'enfance (ASE), la protection maternelle et infantile (PMI) et la construction des collèges ; la Région organise les transports scolaires (loi NOTRe, depuis 2017) ; l'État définit les programmes et diplômes.",
-      "derniereVerification": "2026-08",
-      "aVerifier": null
     },
     {
       "id": "g-222",
@@ -14520,26 +14375,6 @@
       "aVerifier": null
     },
     {
-      "id": "g-341",
-      "axe": "A7",
-      "sousTheme": "Collectivités, EPCI et compétences",
-      "stIdx": 2,
-      "sujet": "g-2",
-      "niveau": 7,
-      "famille": "M",
-      "type": "assoc",
-      "question": "Associez chaque établissement scolaire à la collectivité qui en assure la construction et l'entretien.",
-      "paires": [
-        ["École maternelle et primaire", "Commune"],
-        ["Collège", "Département"],
-        ["Lycée", "Région"],
-        ["Université", "État"]
-      ],
-      "explication": "C'est la région qui est responsable de la construction, de l'hébergement et de l'entretien des lycées.",
-      "derniereVerification": "2026-08",
-      "aVerifier": null
-    },
-    {
       "id": "g-339",
       "axe": "A7",
       "sousTheme": "Collectivités, EPCI et compétences",
@@ -14552,26 +14387,6 @@
       "vrai": true,
       "justification": "C'est le conseil municipal qui fixe le ressort de chaque école primaire, c'est-à-dire la carte scolaire déterminant les écoles fréquentées par les enfants selon leur domicile.",
       "explication": "C'est le conseil municipal de chaque commune qui gère la sectorisation des écoles primaires.",
-      "derniereVerification": "2026-08",
-      "aVerifier": null
-    },
-    {
-      "id": "g-337",
-      "axe": "A7",
-      "sousTheme": "Collectivités, EPCI et compétences",
-      "stIdx": 2,
-      "sujet": "g-2",
-      "niveau": 7,
-      "famille": "M",
-      "type": "assoc",
-      "question": "Associez chaque niveau scolaire à la collectivité qui en a la charge (construction et gestion des bâtiments).",
-      "paires": [
-        ["École élémentaire", "Commune"],
-        ["Collège", "Département"],
-        ["Lycée", "Région"],
-        ["Université", "État"]
-      ],
-      "explication": "La commune a la compétence exclusive de la construction et de la gestion des écoles élémentaires.",
       "derniereVerification": "2026-08",
       "aVerifier": null
     },
