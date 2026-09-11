@@ -1,5 +1,13 @@
 import { AXES, CORPUS, type Question } from "./corpus";
-import { etatCarte, type Etat } from "./algo";
+import {
+  entrelacer,
+  etatCarte,
+  JOUR,
+  repartirParTheme,
+  rondeParFormat,
+  type Etat,
+  type Reglages,
+} from "./algo";
 
 /* File de session : une question ratée revient quelques étapes plus loin autant
    de fois que nécessaire. Sa réussite à chaud termine la mission, mais seule
@@ -26,6 +34,36 @@ export function reinjecter(ordre: Question[], position: number, q: Question) {
   const cible = Math.min(suite.length, position + 1 + RECUL);
   suite.splice(cible, 0, q);
   return suite;
+}
+
+/* Quand aucune carte n'est due, une nouvelle mission reste possible le même jour.
+   Les fragiles passent d'abord afin de pouvoir être validées du premier coup dans
+   cette nouvelle mission, puis les cartes les moins récemment travaillées. */
+export function composerContinuation(
+  etat: Etat,
+  reglages: Reglages,
+  maintenant: number,
+): Question[] {
+  const ouvert = (q: Question) =>
+    reglages.axes.includes(q.axe) &&
+    reglages.familles.includes(q.fam) &&
+    reglages.types.includes(q.type);
+  const vues = CORPUS.filter((q) => ouvert(q) && etat[q.id]?.vu);
+  const fragiles = vues
+    .filter((q) => etatCarte(etat[q.id]) === "fragile")
+    .sort((a, b) => (etat[a.id]?.dernier ?? 0) - (etat[b.id]?.dernier ?? 0));
+  const autres = vues
+    .filter((q) => etatCarte(etat[q.id]) !== "fragile")
+    .sort((a, b) => (etat[a.id]?.dernier ?? 0) - (etat[b.id]?.dernier ?? 0));
+  const priorite = rondeParFormat([...fragiles, ...autres]);
+  return entrelacer(
+    repartirParTheme(
+      priorite,
+      CORPUS.filter(ouvert),
+      reglages.parSession,
+      Math.floor(maintenant / JOUR),
+    ),
+  );
 }
 
 /* Progression par axe : part des questions acquises sur l'ensemble de l'axe. */
