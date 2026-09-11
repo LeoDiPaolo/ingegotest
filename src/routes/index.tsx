@@ -103,6 +103,8 @@ function Reviser() {
   const [niveauxDepart, setNiveauxDepart] = useState<Record<string, number>>({});
   const [axeOuvert, setAxeOuvert] = useState<string | null>(null);
 
+  /* Titre du jour : stable pendant la journée, animé à chaque changement. */
+  const titreMission = useMemo(() => titreMissionDuJour(), []);
   const serie = useMemo(
     () => serieJours(donnees.journal.filter((e) => e.id === MARQUE_SESSION).map((e) => e.jour)),
     [donnees.journal],
