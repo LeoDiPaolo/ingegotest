@@ -286,8 +286,16 @@ function Reviser() {
           <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
             <section className="blueprint anim-monte col-span-2 overflow-hidden rounded-3xl border border-primary/20 bg-card shadow-[var(--shadow-lift)] lg:row-span-2">
               <div className="bg-primary px-5 py-3 text-primary-foreground">
-                <p className="text-[0.68rem] font-bold uppercase opacity-75">Mission du jour</p>
-                <h1 className="mt-0.5 text-2xl text-primary-foreground">Consolider le terrain</h1>
+                <p className="flex items-center gap-1.5 text-[0.68rem] font-bold uppercase opacity-75">
+                  Mission du jour
+                  <Sparkles className="h-3 w-3 animate-pulse" aria-hidden />
+                </p>
+                <h1
+                  key={titreMission}
+                  className="anim-monte mt-0.5 text-2xl text-primary-foreground"
+                >
+                  {titreMission}
+                </h1>
               </div>
               <div className="relative p-5">
                 <div className="flex flex-wrap items-center justify-center gap-1 py-2">
