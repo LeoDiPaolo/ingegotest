@@ -190,7 +190,9 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
-      envoyer_rappels_ingego: { Args: never; Returns: undefined }
+      envoyer_rappels_ingego:
+        | { Args: never; Returns: undefined }
+        | { Args: { creneau?: string }; Returns: undefined }
     }
     Enums: {
       [_ in never]: never
