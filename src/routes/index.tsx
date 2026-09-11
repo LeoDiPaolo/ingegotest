@@ -69,6 +69,28 @@ export const Route = createFileRoute("/")({
 
 const MARQUE_SESSION = "__session";
 
+/* Titres de mission : un intitulé différent chaque jour, tiré de façon
+   déterministe pour rester stable pendant la journée. */
+const TITRES_MISSION = [
+  "Consolider le terrain",
+  "Lever les points durs",
+  "Mettre le chantier au carré",
+  "Poser les fondations",
+  "Contrôler la mise en œuvre",
+  "Régler les derniers détails",
+  "Monter d'un niveau",
+  "Repasser les points sensibles",
+  "Tenir le cap du concours",
+  "Ouvrir un nouveau lot",
+  "Faire le tour du propriétaire",
+  "Avancer d'un cran",
+];
+
+function titreMissionDuJour(maintenant = Date.now()): string {
+  const jour = Math.floor(maintenant / 86_400_000);
+  return TITRES_MISSION[jour % TITRES_MISSION.length];
+}
+
 function Reviser() {
   const { donnees, pret, synchro, enregistrerCarte, commenter, maj } = useDonnees();
   const [ordre, setOrdre] = useState<Question[] | null>(null);
@@ -81,6 +103,8 @@ function Reviser() {
   const [niveauxDepart, setNiveauxDepart] = useState<Record<string, number>>({});
   const [axeOuvert, setAxeOuvert] = useState<string | null>(null);
 
+  /* Titre du jour : stable pendant la journée, animé à chaque changement. */
+  const titreMission = useMemo(() => titreMissionDuJour(), []);
   const serie = useMemo(
     () => serieJours(donnees.journal.filter((e) => e.id === MARQUE_SESSION).map((e) => e.jour)),
     [donnees.journal],
@@ -262,8 +286,16 @@ function Reviser() {
           <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
             <section className="blueprint anim-monte col-span-2 overflow-hidden rounded-3xl border border-primary/20 bg-card shadow-[var(--shadow-lift)] lg:row-span-2">
               <div className="bg-primary px-5 py-3 text-primary-foreground">
-                <p className="text-[0.68rem] font-bold uppercase opacity-75">Mission du jour</p>
-                <h1 className="mt-0.5 text-2xl text-primary-foreground">Consolider le terrain</h1>
+                <p className="flex items-center gap-1.5 text-[0.68rem] font-bold uppercase opacity-75">
+                  Mission du jour
+                  <Sparkles className="h-3 w-3 animate-pulse" aria-hidden />
+                </p>
+                <h1
+                  key={titreMission}
+                  className="anim-monte mt-0.5 text-2xl text-primary-foreground"
+                >
+                  {titreMission}
+                </h1>
               </div>
               <div className="relative p-5">
                 <div className="flex flex-wrap items-center justify-center gap-1 py-2">
@@ -275,11 +307,16 @@ function Reviser() {
                         aria-label={`Ouvrir la catégorie ${l.axe.court}`}
                         className="tap rounded-full transition-transform active:scale-95"
                       >
-                        <IconeAxe
-                          axe={l.axe}
-                          className="h-11 w-11 sm:h-14 sm:w-14"
-                          active={l.part > 0}
-                        />
+                        <span
+                          className="anim-pop inline-block"
+                          style={{ animationDelay: `${index * 0.05}s` }}
+                        >
+                          <IconeAxe
+                            axe={l.axe}
+                            className="h-11 w-11 sm:h-14 sm:w-14"
+                            active={l.part > 0}
+                          />
+                        </span>
                       </button>
                       {index < bilan.lignes.length - 1 ? (
                         <span className="h-1 w-2 bg-border sm:w-4" />
@@ -300,7 +337,7 @@ function Reviser() {
                       {(objectif?.restantesNiveau ?? reste) > 1 ? "s" : ""}
                     </p>
                   </div>
-                  <Castor className="h-16 w-16 shrink-0" />
+                  <Castor className="anim-flotte h-16 w-16 shrink-0" />
                 </div>
                 <Button
                   onClick={demarrer}
