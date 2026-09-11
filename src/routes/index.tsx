@@ -70,26 +70,32 @@ export const Route = createFileRoute("/")({
 const MARQUE_SESSION = "__session";
 
 /* Titres de mission : un intitulé différent chaque jour, tiré de façon
-   déterministe pour rester stable pendant la journée. */
-const TITRES_MISSION = [
-  "Consolider le terrain",
-  "Lever les points durs",
-  "Mettre le chantier au carré",
-  "Poser les fondations",
-  "Contrôler la mise en œuvre",
-  "Régler les derniers détails",
-  "Monter d'un niveau",
-  "Repasser les points sensibles",
-  "Tenir le cap du concours",
+   déterministe pour rester stable pendant la journée. Deux familles selon
+   qu'il y a des révisions dues ou uniquement des nouvelles questions. */
+const TITRES_DECOUVERTE = [
   "Ouvrir un nouveau lot",
-  "Faire le tour du propriétaire",
+  "Poser les fondations",
+  "Monter d'un niveau",
   "Avancer d'un cran",
+  "Explorer un nouveau chantier",
+  "Prendre de l'avance",
 ];
 
-function titreMissionDuJour(maintenant = Date.now()): string {
+const TITRES_REVISION = [
+  "Consolider le terrain",
+  "Repasser les points sensibles",
+  "Lever les points durs",
+  "Mettre le chantier au carré",
+  "Contrôler la mise en œuvre",
+  "Régler les derniers détails",
+];
+
+function titreMissionDuJour(aDesRevisions: boolean, maintenant = Date.now()): string {
+  const liste = aDesRevisions ? TITRES_REVISION : TITRES_DECOUVERTE;
   const jour = Math.floor(maintenant / 86_400_000);
-  return TITRES_MISSION[jour % TITRES_MISSION.length];
+  return liste[jour % liste.length];
 }
+
 
 function Reviser() {
   const { donnees, pret, synchro, enregistrerCarte, commenter, maj } = useDonnees();
