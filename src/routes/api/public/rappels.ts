@@ -235,7 +235,6 @@ async function traiter(request: Request) {
   const parCle = new Map<string, Ligne>();
   for (const l of (etats ?? []) as unknown as Ligne[]) parCle.set(l.cle, l);
 
-  /* Un seul envoi par appareil et par jour, quelle que soit la règle. */
   const dejaEnvoye = new Set<string>();
   const { envoyerA } = await import("@/lib/ingego/push.server");
   let envoyes = 0;
