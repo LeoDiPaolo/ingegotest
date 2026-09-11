@@ -52,6 +52,23 @@ function cleAppareil() {
   return c;
 }
 
+/* Transfert de progression : la clé est visible dans les Réglages, et peut être
+   collée sur un autre appareil (ou dans la version installée sur l'écran
+   d'accueil, qui possède son propre stockage). */
+export function cleAppareilVisible(): string | null {
+  return cleAppareil();
+}
+
+export const FORMAT_CLE = /^ing-[0-9a-fA-F-]{36}$/;
+
+export function changerCleAppareil(nouvelle: string) {
+  const c = nouvelle.trim();
+  if (!FORMAT_CLE.test(c)) throw new Error("Clé invalide");
+  localStorage.setItem(CLE_APPAREIL, c);
+  localStorage.removeItem(CLE_LOCALE);
+  window.location.reload();
+}
+
 function lireLocal(): Donnees {
   if (typeof localStorage === "undefined") return VIDE;
   try {
