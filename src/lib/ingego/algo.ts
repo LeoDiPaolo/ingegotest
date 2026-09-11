@@ -269,7 +269,8 @@ export function composerSession(etat: Etat, reglages: Reglages, now: number): Qu
     if (!ouvert(q)) continue;
     const c = etat[q.id];
     if (c && c.vu) {
-      if (c.du <= now) dues.push(q);
+      if (c.p === 0 && q.niv <= nivDe(q.axe)) neuves.push(q);
+      else if (c.p >= 1 && c.du <= now) dues.push(q);
     } else if (q.niv <= nivDe(q.axe)) neuves.push(q);
   }
   dues.sort((a, b) => etat[a.id]!.du - etat[b.id]!.du);
@@ -304,7 +305,8 @@ export function resteAFaire(etat: Etat, reglages: Reglages, now: number) {
     if (!ouvert(q)) continue;
     const c = etat[q.id];
     if (c && c.vu) {
-      if (c.du <= now) n++;
+      if (c.p === 0 && q.niv <= nivDe(q.axe)) n++;
+      else if (c.p >= 1 && c.du <= now) n++;
     } else if (q.niv <= nivDe(q.axe)) n++;
   }
   return n;
