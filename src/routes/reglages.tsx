@@ -6,7 +6,6 @@ import {
   SlidersHorizontal,
   Database,
   ShieldCheck,
-  Bell,
 } from "lucide-react";
 import { CarteRappels } from "@/components/ingego/rappels";
 import { Entete } from "@/components/ingego/entete";
