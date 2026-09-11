@@ -260,7 +260,7 @@ async function traiter(request: Request) {
     }
   }
 
-  return Response.json({ jour: aujourdhui, envoyes, appareils: abonnements.length });
+  return Response.json({ jour: aujourdhui, creneau, envoyes, appareils: abonnements.length });
 }
 
 export const Route = createFileRoute("/api/public/rappels")({
