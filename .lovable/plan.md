@@ -1,17 +1,16 @@
-# Équilibrer la progression entre les chapitres
+# Généraliser les réponses interchangeables
 
-## Résultat attendu
-- Une mission de 8 questions vise une question disponible par chapitre actif, puisque l’application compte 8 chapitres.
-- Si un chapitre n’a momentanément aucune question disponible, sa place est redistribuée équitablement entre les autres chapitres.
-- À l’intérieur de chaque chapitre, les thèmes continuent d’être mélangés selon leur poids réel.
-- Les règles existantes restent inchangées : niveau actif, réussite du premier coup, cartes non validées disponibles et cartes acquises seulement à échéance.
-- L’affichage du Guide revient à 10 % comme demandé.
+## Modifications
+- Faire accepter, pour toutes les questions à trous, chaque mot attendu dans n’importe quelle case, une seule fois.
+- Lors d’une erreur, afficher dans la case un mot juste encore manquant plutôt que la réponse initialement attachée à cette case.
+- Traiter les sept observations visibles : conserver les deux chronologies déjà corrigées, enrichir les explications demandées et retirer les indices trop révélateurs.
+- Marquer uniquement ces observations comme traitées, sans retirer aucune validation ni modifier la progression.
 
-## Mise en œuvre
-- Remplacer la pondération globale par volume du corpus par une répartition d’abord égale entre chapitres, puis proportionnelle entre leurs thèmes.
-- Conserver le mélange des formats et l’alternance des questions.
-- Ajouter une vérification automatisée confirmant l’équilibre d’une mission et la redistribution lorsqu’un chapitre est indisponible.
-- Vérifier le lancement de mission et les contrôles du projet.
+## Vérifications
+- Contrôler automatiquement les 81 questions à trous, y compris les mots répétés.
+- Tester les réponses désordonnées et la correction par mot manquant.
+- Vérifier l’affichage et le passage à la question suivante sur mobile.
 
-## Détail technique
-La sélection change uniquement dans la fonction de répartition utilisée par les missions. La planification espacée et la logique de déblocage ne sont pas réécrites.
+## Détails techniques
+- Centraliser la règle dans le validateur commun des textes à trous afin qu’elle couvre le corpus actuel et les futures questions.
+- Conserver les données de permutation existantes pour compatibilité, mais ne plus en dépendre pour l’acceptation.
