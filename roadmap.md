@@ -38,3 +38,4 @@
 - [x] Traiter les sept nouvelles observations sans modifier les validations acquises
 - [x] Réduire à cinq variantes complémentaires les questions répétitives sur les compétences scolaires
 - [x] Auditer les autres questions fortement répétitives du corpus
+- [x] Supprimer 14 doublons sémantiques restants (hors chronologie de la décentralisation, conservée à 5)
