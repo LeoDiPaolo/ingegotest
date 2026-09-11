@@ -112,12 +112,7 @@ function marquerPurge(cle: string, version: string) {
   }
 }
 
-function purger(
-  d: Donnees,
-  purgeCartes: boolean,
-  purgeCom: boolean,
-  purgeRev: boolean,
-): Donnees {
+function purger(d: Donnees, purgeCartes: boolean, purgeCom: boolean, purgeRev: boolean): Donnees {
   let sortie = d;
   if (purgeCartes) {
     const cartes = { ...sortie.cartes };
@@ -136,7 +131,6 @@ function purger(
   }
   return sortie;
 }
-
 
 /* Fusion appareil ↔ serveur : pour chaque question on garde la révision la plus récente. */
 function fusionner(local: Donnees, distant: Donnees): Donnees {
@@ -198,11 +192,9 @@ export function useDonnees() {
   useEffect(() => {
     let vivant = true;
     const purgeCartes = aPurger(CLE_PURGE, VERSION_CORRECTIONS);
-    /* Les commentaires déjà traités sont retirés à chaque ouverture : la version
-       seule ne suffisait pas (une copie pouvait revenir du serveur plus tard). */
-    const purgeCom = true;
-    void CLE_PURGE_COM;
-    void VERSION_COMMENTAIRES;
+    /* Une observation traitée n'est purgée qu'une fois pour cette version. Une
+       nouvelle observation sur la même question doit pouvoir être conservée. */
+    const purgeCom = aPurger(CLE_PURGE_COM, VERSION_COMMENTAIRES);
     const purgeRev = aPurger(CLE_PURGE_REV, VERSION_REVISIONS);
     const local = purger(lireLocal(), purgeCartes, purgeCom, purgeRev);
     setDonnees(local);
@@ -228,12 +220,7 @@ export function useDonnees() {
           reglages: normaliserReglages(data.reglages as unknown as Partial<Reglages>),
           commentaires: (data.commentaires as unknown as Record<string, string>) ?? {},
         };
-        const fusion = purger(
-          fusionner(dernier.current, distant),
-          purgeCartes,
-          purgeCom,
-          purgeRev,
-        );
+        const fusion = purger(fusionner(dernier.current, distant), purgeCartes, purgeCom, purgeRev);
         setDonnees(fusion);
         pousser(fusion);
         if (purgeCartes) marquerPurge(CLE_PURGE, VERSION_CORRECTIONS);

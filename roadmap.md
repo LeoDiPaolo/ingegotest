@@ -30,3 +30,6 @@
 - [x] Afficher une réponse explicite et complète pour chaque format dans le Corpus
 - [x] Vérifier une mission complète et les fiches Corpus sur petit écran
 - [x] Remplacer l'auto-évaluation après correction par un bouton « Question suivante » toujours disponible
+- [x] Aligner l'affichage du pourcentage Guide avec les seuils réels des badges
+- [x] Traiter les cinq observations visibles et appliquer la règle aux réponses interchangeables similaires
+- [x] Permettre une nouvelle observation sur une question déjà corrigée
