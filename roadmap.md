@@ -33,3 +33,4 @@
 - [x] Aligner l'affichage du pourcentage Guide avec les seuils réels des badges
 - [x] Traiter les cinq observations visibles et appliquer la règle aux réponses interchangeables similaires
 - [x] Permettre une nouvelle observation sur une question déjà corrigée
+- [ ] Conserver la validation des questions lors des corrections de contenu et restaurer les validations retirées
