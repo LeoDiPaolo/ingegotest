@@ -23,18 +23,16 @@ export const enregistrerAbonnement = createServerFn({ method: "POST" })
   .inputValidator((data: unknown) => abonnementSchema.parse(data))
   .handler(async ({ data }) => {
     const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
-    const { error } = await supabaseAdmin
-      .from("abonnements_push")
-      .upsert(
-        {
-          cle: data.cle,
-          endpoint: data.endpoint,
-          p256dh: data.p256dh,
-          auth: data.auth,
-          fuseau: data.fuseau,
-        } as never,
-        { onConflict: "endpoint" },
-      );
+    const { error } = await supabaseAdmin.from("abonnements_push").upsert(
+      {
+        cle: data.cle,
+        endpoint: data.endpoint,
+        p256dh: data.p256dh,
+        auth: data.auth,
+        fuseau: data.fuseau,
+      } as never,
+      { onConflict: "endpoint" },
+    );
     if (error) {
       console.error("enregistrerAbonnement", error);
       throw new Error("Activation des rappels impossible");

@@ -1,12 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
-import {
-  Download,
-  RotateCcw,
-  SlidersHorizontal,
-  Database,
-  ShieldCheck,
-} from "lucide-react";
+import { Download, RotateCcw, SlidersHorizontal, Database, ShieldCheck } from "lucide-react";
 import { CarteRappels } from "@/components/ingego/rappels";
 import { Entete } from "@/components/ingego/entete";
 import { NavBas } from "@/components/ingego/nav-bas";

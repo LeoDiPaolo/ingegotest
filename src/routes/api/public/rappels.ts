@@ -117,12 +117,11 @@ async function traiter(request: Request) {
     .select("valeur")
     .eq("cle", "RAPPELS_TOKEN")
     .maybeSingle();
-  const jeton = (ligneConfig as { valeur?: string } | null)?.valeur ?? process.env["RAPPELS_TOKEN"] ?? "";
+  const jeton =
+    (ligneConfig as { valeur?: string } | null)?.valeur ?? process.env["RAPPELS_TOKEN"] ?? "";
 
   const fourni =
-    request.headers.get("x-rappels-token") ??
-    new URL(request.url).searchParams.get("token") ??
-    "";
+    request.headers.get("x-rappels-token") ?? new URL(request.url).searchParams.get("token") ?? "";
   if (!jeton || fourni !== jeton) {
     return new Response("Non autorisé", { status: 401 });
   }
