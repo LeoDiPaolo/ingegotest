@@ -337,7 +337,7 @@ function Reviser() {
                       {(objectif?.restantesNiveau ?? reste) > 1 ? "s" : ""}
                     </p>
                   </div>
-                  <Castor className="h-16 w-16 shrink-0" />
+                  <Castor className="anim-flotte h-16 w-16 shrink-0" />
                 </div>
                 <Button
                   onClick={demarrer}
