@@ -108,16 +108,23 @@ function messagePour(ligne: Ligne | undefined, aujourdhui: string) {
 }
 
 async function traiter(request: Request) {
-  const jeton = process.env["RAPPELS_TOKEN"];
+  const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
+
+  /* Le token quotidien est stocké en base pour que le job pg_cron et la route
+     partagent la même valeur, sans dépendre d'un secret d'environnement. */
+  const { data: ligneConfig } = await supabaseAdmin
+    .from("config_rappels" as never)
+    .select("valeur")
+    .eq("cle", "RAPPELS_TOKEN")
+    .maybeSingle();
+  const jeton =
+    (ligneConfig as { valeur?: string } | null)?.valeur ?? process.env["RAPPELS_TOKEN"] ?? "";
+
   const fourni =
-    request.headers.get("x-rappels-token") ??
-    new URL(request.url).searchParams.get("token") ??
-    "";
+    request.headers.get("x-rappels-token") ?? new URL(request.url).searchParams.get("token") ?? "";
   if (!jeton || fourni !== jeton) {
     return new Response("Non autorisé", { status: 401 });
   }
-
-  const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
   const aujourdhui = jourParis();
 
   const { data: abonnementsBruts, error: erreurAb } = await supabaseAdmin
