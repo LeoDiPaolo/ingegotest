@@ -36,3 +36,5 @@
 - [x] Conserver la validation des questions lors des corrections de contenu et restaurer les validations retirées
 - [x] Accepter les réponses attendues dans n'importe quel ordre pour tous les textes à trous
 - [x] Traiter les sept nouvelles observations sans modifier les validations acquises
+- [x] Réduire à cinq variantes complémentaires les questions répétitives sur les compétences scolaires
+- [ ] Auditer les autres questions fortement répétitives du corpus
