@@ -8934,7 +8934,7 @@
       ],
       "phraseFautive": 2,
       "correction": "Le préfet saisit directement le tribunal administratif par la voie du déféré préfectoral, sans accord préalable du Conseil d'État.",
-      "explication": "Depuis la loi du 2 mars 1982, le contrôle est un contrôle de légalité a posteriori : le préfet défère l'acte au tribunal administratif dans les deux mois suivant sa transmission.",
+      "explication": "La première affirmation est vraie : depuis la loi du 2 mars 1982, le préfet exerce un contrôle de légalité a posteriori et peut déférer au tribunal administratif un acte qu’il estime illégal, en principe dans les deux mois suivant sa transmission. La deuxième est vraie : le juge administratif apprécie la légalité de l’acte et peut l’annuler. La troisième est fausse : le préfet saisit directement le tribunal administratif par un déféré préfectoral, sans autorisation préalable du Conseil d’État.",
       "derniereVerification": "2026-08",
       "aVerifier": null
     },
@@ -8983,15 +8983,15 @@
       "sujet": "g-1",
       "niveau": 2,
       "famille": "M",
-      "explication": "Acte I : lois Defferre 1982-1983. Acte II : révision constitutionnelle du 28 mars 2003 et loi du 13 août 2004. Acte III : lois MAPTAM (2014) et NOTRe (2015).",
+      "explication": "L’Acte I débute avec les lois Defferre de 1982-1983 : la tutelle administrative a priori est supprimée, l’exécutif départemental passe du préfet au président du conseil général et des compétences sont transférées. L’Acte II repose sur la révision constitutionnelle du 28 mars 2003, puis sur la loi du 13 août 2004 relative aux libertés et responsabilités locales. L’Acte III comprend notamment la loi MAPTAM du 27 janvier 2014, qui affirme les métropoles, et la loi NOTRe du 7 août 2015, qui redéfinit la répartition des compétences.",
       "derniereVerification": "2026-08",
       "aVerifier": null,
       "type": "ordre",
       "question": "Remets dans l'ordre chronologique les grandes étapes de la décentralisation en France.",
       "items": [
-        "Acte I (lois Defferre, 1982-1983)",
-        "Acte II (révision constitutionnelle, 2003-2004)",
-        "Acte III (lois MAPTAM 2014 et NOTRe 2015)"
+        "Acte I — suppression de la tutelle et transferts de compétences",
+        "Acte II — organisation décentralisée de la République et nouveaux transferts",
+        "Acte III — affirmation des métropoles et nouvelle répartition des compétences"
       ]
     },
     {
@@ -9261,7 +9261,7 @@
       "texte": "La NBI, ou {1}, est liée à l'exercice d'une {2} ou d'une {3} particulière.",
       "mots": ["Nouvelle Bonification Indiciaire", "technicité", "responsabilité"],
       "leurres": ["ancienneté", "notation biennale", "mobilité géographique", "prime de rendement"],
-      "explication": "La NBI (nouvelle bonification indiciaire) est un supplément de rémunération lié à l'exercice de certaines fonctions. Elle est attribuée aux agents exerçant des fonctions comportant une technicité ou une responsabilité particulière, conformément à la loi n° 91-73 du 18 janvier 1991.",
+      "explication": "La NBI, nouvelle bonification indiciaire, ajoute des points d’indice majoré à la rémunération des fonctionnaires qui occupent certains emplois comportant une responsabilité ou une technicité particulière. Elle est attribuée en fonction des fonctions effectivement exercées, et non du seul grade ou de la manière de servir. Les emplois et le nombre de points sont fixés par les textes applicables, notamment sur le fondement de l’article 27 de la loi n° 91-73 du 18 janvier 1991. Elle cesse lorsque l’agent n’exerce plus les fonctions ouvrant ce droit.",
       "derniereVerification": "2026-08",
       "aVerifier": null
     },
