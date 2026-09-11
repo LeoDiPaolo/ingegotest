@@ -70,3 +70,22 @@ export const testerRappel = createServerFn({ method: "POST" })
       tag: "ingego-test",
     });
   });
+
+/* Mise à jour du prénom utilisé dans les notifications, pour tous les
+   appareils rattachés à cette clé. */
+export const enregistrerPrenom = createServerFn({ method: "POST" })
+  .inputValidator((data: unknown) =>
+    z.object({ cle: cleSchema, prenom: z.string().trim().max(40) }).parse(data),
+  )
+  .handler(async ({ data }) => {
+    const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
+    const { error } = await supabaseAdmin
+      .from("abonnements_push")
+      .update({ prenom: data.prenom || null } as never)
+      .eq("cle", data.cle);
+    if (error) {
+      console.error("enregistrerPrenom", error);
+      throw new Error("Enregistrement du prénom impossible");
+    }
+    return { ok: true };
+  });
