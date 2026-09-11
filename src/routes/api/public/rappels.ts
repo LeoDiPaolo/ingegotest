@@ -202,9 +202,25 @@ async function traiter(request: Request) {
     return new Response("Non autorisé", { status: 401 });
   }
   const aujourdhui = jourParis();
-  const demande = new URL(request.url).searchParams.get("creneau");
+  const params = new URL(request.url).searchParams;
+  const demande = params.get("creneau");
   const creneau: Creneau =
     demande === "matin" || demande === "midi" || demande === "soir" ? demande : "soir";
+
+  /* La planification tourne en UTC : chaque créneau est déclenché aux deux
+     heures possibles (été / hiver) et l'heure de Paris tranche. */
+  const heureParis = Number(
+    new Intl.DateTimeFormat("fr-FR", {
+      timeZone: "Europe/Paris",
+      hour: "2-digit",
+      hour12: false,
+    }).format(new Date()),
+  );
+  const heureAttendue = creneau === "matin" ? 8 : creneau === "midi" ? 12 : 18;
+  if (params.get("forcer") !== "1" && heureParis !== heureAttendue) {
+    return Response.json({ jour: aujourdhui, creneau, ignore: "hors créneau", heureParis });
+  }
+
 
   const { data: abonnementsBruts, error: erreurAb } = await supabaseAdmin
     .from("abonnements_push")
