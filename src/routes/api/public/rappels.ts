@@ -208,18 +208,20 @@ async function traiter(request: Request) {
     demande === "matin" || demande === "midi" || demande === "soir" ? demande : "soir";
 
   /* La planification tourne en UTC : chaque créneau est déclenché aux deux
-     heures possibles (été / hiver) et l'heure de Paris tranche. */
-  const heureParis = Number(
-    new Intl.DateTimeFormat("fr-FR", {
-      timeZone: "Europe/Paris",
-      hour: "2-digit",
-      hour12: false,
-    }).format(new Date()),
-  );
+     heures possibles (été / hiver) et l'heure de Paris tranche. On extrait
+     l'heure via formatToParts : le format fr-FR ajoute un suffixe (« 08 h »)
+     qui rendait la conversion numérique invalide. */
+  const parties = new Intl.DateTimeFormat("fr-FR", {
+    timeZone: "Europe/Paris",
+    hour: "2-digit",
+    hour12: false,
+  }).formatToParts(new Date());
+  const heureParis = Number(parties.find((p) => p.type === "hour")?.value ?? NaN);
   const heureAttendue = creneau === "matin" ? 8 : creneau === "midi" ? 12 : 18;
-  if (params.get("forcer") !== "1" && heureParis !== heureAttendue) {
+  if (params.get("forcer") !== "1" && Number.isFinite(heureParis) && heureParis !== heureAttendue) {
     return Response.json({ jour: aujourdhui, creneau, ignore: "hors créneau", heureParis });
   }
+
 
 
   const { data: abonnementsBruts, error: erreurAb } = await supabaseAdmin
