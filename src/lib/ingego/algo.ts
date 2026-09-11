@@ -103,7 +103,6 @@ export function niveauActifAxe(axe: string, etat: Etat) {
   return Infinity;
 }
 
-
 export function progressionSousTheme(sousTheme: string, etat: Etat) {
   const questions = NIVEAUX_SOUS_THEME[sousTheme] ?? [];
   const niveau = niveauActif(sousTheme, etat);
@@ -189,7 +188,10 @@ export function repartirParTheme(
   for (const q of corpusActif)
     if (dispo.has(q.sousTheme)) poids.set(q.sousTheme, (poids.get(q.sousTheme) ?? 0) + 1);
   for (const theme of dispo.keys()) if (!poids.has(theme)) poids.set(theme, 1);
-  const total = Math.max(1, [...poids.values()].reduce((a, b) => a + b, 0));
+  const total = Math.max(
+    1,
+    [...poids.values()].reduce((a, b) => a + b, 0),
+  );
 
   const themes = [...poids.keys()];
   const quotas = new Map<string, number>();
@@ -223,7 +225,6 @@ export function repartirParTheme(
     attribues++;
   }
 
-
   const selection: Question[] = [];
   const compte = new Map<string, number>();
   const restant: Question[] = [];
@@ -242,7 +243,6 @@ export function repartirParTheme(
   }
   return selection;
 }
-
 
 export function composerSession(etat: Etat, reglages: Reglages, now: number): Question[] {
   const ouvert = (q: Question) =>
