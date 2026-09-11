@@ -241,7 +241,7 @@ async function traiter(request: Request) {
 
   for (const ab of abonnements) {
     if (dejaEnvoye.has(ab.cle)) continue;
-    const message = messagePour(parCle.get(ab.cle), aujourdhui);
+    const message = messagePour(parCle.get(ab.cle), aujourdhui, creneau, ab.prenom, ab.cle);
     if (!message) continue;
     try {
       const vivant = await envoyerA(ab, message);
