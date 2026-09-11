@@ -112,12 +112,7 @@ function marquerPurge(cle: string, version: string) {
   }
 }
 
-function purger(
-  d: Donnees,
-  purgeCartes: boolean,
-  purgeCom: boolean,
-  purgeRev: boolean,
-): Donnees {
+function purger(d: Donnees, purgeCartes: boolean, purgeCom: boolean, purgeRev: boolean): Donnees {
   let sortie = d;
   if (purgeCartes) {
     const cartes = { ...sortie.cartes };
@@ -136,7 +131,6 @@ function purger(
   }
   return sortie;
 }
-
 
 /* Fusion appareil ↔ serveur : pour chaque question on garde la révision la plus récente. */
 function fusionner(local: Donnees, distant: Donnees): Donnees {
@@ -226,12 +220,7 @@ export function useDonnees() {
           reglages: normaliserReglages(data.reglages as unknown as Partial<Reglages>),
           commentaires: (data.commentaires as unknown as Record<string, string>) ?? {},
         };
-        const fusion = purger(
-          fusionner(dernier.current, distant),
-          purgeCartes,
-          purgeCom,
-          purgeRev,
-        );
+        const fusion = purger(fusionner(dernier.current, distant), purgeCartes, purgeCom, purgeRev);
         setDonnees(fusion);
         pousser(fusion);
         if (purgeCartes) marquerPurge(CLE_PURGE, VERSION_CORRECTIONS);
