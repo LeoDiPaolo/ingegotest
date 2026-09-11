@@ -1,4 +1,31 @@
-import { enregistrerAbonnement, supprimerAbonnement, testerRappel } from "./push.functions";
+import {
+  enregistrerAbonnement,
+  enregistrerPrenom,
+  supprimerAbonnement,
+  testerRappel,
+} from "./push.functions";
+
+const CLE_PRENOM = "ingego-prenom";
+
+export function lirePrenom(): string {
+  try {
+    return localStorage.getItem(CLE_PRENOM) ?? "";
+  } catch {
+    return "";
+  }
+}
+
+export async function definirPrenom(prenom: string): Promise<void> {
+  const p = prenom.trim().slice(0, 40);
+  try {
+    localStorage.setItem(CLE_PRENOM, p);
+  } catch {
+    /* stockage indisponible */
+  }
+  const cle = cleAppareil();
+  if (!cle) return;
+  await enregistrerPrenom({ data: { cle, prenom: p } }).catch(() => undefined);
+}
 
 /* Rappels de révision côté navigateur : enregistrement du service worker,
    demande de permission et abonnement Web Push. */
@@ -96,6 +123,7 @@ export async function activerRappels(): Promise<"actif" | "refuse" | "impossible
       p256dh: octetsVersBase64Url(abonnement.getKey("p256dh")),
       auth: octetsVersBase64Url(abonnement.getKey("auth")),
       fuseau: Intl.DateTimeFormat().resolvedOptions().timeZone || "Europe/Paris",
+      prenom: lirePrenom() || null,
     },
   });
 
