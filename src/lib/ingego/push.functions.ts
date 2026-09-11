@@ -17,6 +17,7 @@ const abonnementSchema = z.object({
   p256dh: z.string().trim().min(10).max(255),
   auth: z.string().trim().min(4).max(255),
   fuseau: z.string().trim().max(64).default("Europe/Paris"),
+  prenom: z.string().trim().max(40).nullable().optional(),
 });
 
 export const enregistrerAbonnement = createServerFn({ method: "POST" })
@@ -30,6 +31,7 @@ export const enregistrerAbonnement = createServerFn({ method: "POST" })
         p256dh: data.p256dh,
         auth: data.auth,
         fuseau: data.fuseau,
+        prenom: data.prenom?.trim() || null,
       } as never,
       { onConflict: "endpoint" },
     );
