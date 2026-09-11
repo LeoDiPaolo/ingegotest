@@ -8,7 +8,7 @@
     },
     "genere": "2026-07-30",
     "version": "2026-09",
-    "totalQuestions": 839,
+    "totalQuestions": 825,
     "schema": "Chaque question porte : id, axe (A1-A6), sousTheme, sujet (clé de progression par niveaux), niveau (1-3), famille (S stable / M mouvant / E enjeu), type, les champs propres au type, explication, et le cas échéant derniereVerification (AAAA-MM) et aVerifier."
   },
   "axes": [
@@ -1623,22 +1623,6 @@
       ],
       "bonneReponse": 1,
       "explication": "La RE2020 vise le neuf. L'existant relève de la RT dans l'existant, en version « élément par élément » ou « globale » selon l'ampleur des travaux et la surface. Beaucoup de candidats se trompent sur ce point, en supposant une continuité qui n'existe pas.",
-      "aVerifier": false,
-      "derniereVerification": "2026-09"
-    },
-    {
-      "id": "a3-12",
-      "axe": "A3",
-      "sousTheme": "Accessibilité",
-      "stIdx": 3,
-      "sujet": "acc-dim",
-      "niveau": 1,
-      "famille": "S",
-      "type": "qcm",
-      "question": "Largeur minimale d'un cheminement extérieur accessible dans un ERP neuf.",
-      "options": ["0,90 m", "1,20 m", "1,40 m", "1,60 m"],
-      "bonneReponse": 2,
-      "explication": "1,40 m de largeur, réductible ponctuellement à 1,20 m en cas de rétrécissement ponctuel. Autres repères à retenir : porte d'entrée principale de 0,90 m de largeur nominale pour un passage utile de 0,83 m, ressaut de 2 cm maximum (4 cm si chanfrein à 1/3), pente inférieure ou égale à 5 %. En savoir plus — ERP : établissement recevant du public, soumis à un règlement de sécurité incendie et à des obligations d'accessibilité selon son type d'activité et sa catégorie d'effectif.",
       "aVerifier": false,
       "derniereVerification": "2026-09"
     },
@@ -4211,27 +4195,6 @@
       "derniereVerification": "2026-07"
     },
     {
-      "id": "as-03",
-      "axe": "A3",
-      "sousTheme": "Sécurité incendie ERP",
-      "stIdx": 4,
-      "sujet": "inc-classement",
-      "niveau": 1,
-      "famille": "S",
-      "type": "assoc",
-      "derniereVerification": "2026-08",
-      "question": "Associez chaque type d'ERP à son activité.",
-      "paires": [
-        ["Type R", "Enseignement, colonies de vacances"],
-        ["Type X", "Établissement sportif couvert"],
-        ["Type L", "Salle de spectacle ou de réunion"],
-        ["Type W", "Bureaux, administrations"],
-        ["Type J", "Structure d'accueil de personnes âgées ou handicapées"],
-        ["Type S", "Bibliothèque, centre de documentation"]
-      ],
-      "explication": "Le type d'ERP (lettre) qualifie la nature de l'activité et détermine le corps de règles particulières applicable (articles spécifiques du règlement de sécurité, en plus des dispositions générales communes). La catégorie (chiffre romain de 1re à 5e), elle, dépend uniquement de l'effectif total accueilli, public et personnel compris, et calibre le niveau d'exigence : la 1re catégorie regroupe plus de 1500 personnes, la 2e de 701 à 1500, la 3e de 301 à 700, la 4e 300 et moins hors seuils propres au type, et la 5e catégorie correspond aux établissements de petite taille dont l'effectif reste sous des seuils fixés par type (par exemple 200 personnes pour un type R avec locaux au rez-de-chaussée). Un même bâtiment communal peut cumuler plusieurs types — par exemple une médiathèque (type S) avec une salle polyvalente (type L) — ce qui impose l'application cumulée des règles de chaque type, ou un classement en type dominant pour les établissements de faible effectif. Le maire, souvent président de la commission de sécurité pour les ERP de sa commune de 5e catégorie sans locaux à sommeil, doit connaître cette distinction type/catégorie pour organiser correctement les contrôles et l'autorisation de travaux. En savoir plus — ERP : établissement recevant du public, soumis à un règlement de sécurité incendie et à des obligations d'accessibilité selon son type d'activité et sa catégorie d'effectif."
-    },
-    {
       "id": "as-04",
       "axe": "A4",
       "sousTheme": "Exploitation-maintenance",
@@ -4250,27 +4213,6 @@
       "explication": "Le P3 est celui qui se négocie le plus mal en fin de contrat : périmètre exact des matériels couverts, sort des provisions non consommées, état de restitution des installations. Verrouiller ces trois points dans le CCAP évite un contentieux de sortie. En savoir plus — CCAP : cahier des clauses administratives particulières, pièce qui fixe les règles administratives propres au marché.",
       "aVerifier": false,
       "derniereVerification": "2026-09"
-    },
-    {
-      "id": "as-05",
-      "axe": "A3",
-      "sousTheme": "RE2020 et thermique",
-      "stIdx": 2,
-      "sujet": "re2020-ind",
-      "niveau": 1,
-      "famille": "S",
-      "type": "assoc",
-      "question": "Associez chaque indicateur de la RE2020 à ce qu'il mesure.",
-      "paires": [
-        ["Bbio", "Besoin bioclimatique du bâtiment, indépendamment des systèmes"],
-        ["Cep,nr", "Consommation d'énergie primaire non renouvelable"],
-        ["Ic construction", "Impact carbone des composants et du chantier"],
-        ["Ic énergie", "Impact carbone de la consommation d'exploitation"],
-        ["DH", "Inconfort d'été cumulé, en degrés-heures"]
-      ],
-      "explication": "Chaque indicateur RE2020 cible un levier différent et intervient à un moment différent du projet. Le Bbio se calcule sans hypothèse de système : il évalue la seule qualité de la conception (orientation, compacité, isolation, apports solaires), c'est le seul indicateur que l'architecte maîtrise dès l'esquisse, avant tout choix d'équipement — un mauvais Bbio ne se rattrape jamais totalement en aval. Le Cep,nr traduit ensuite les choix de systèmes énergétiques (chauffage, ECS, ventilation) en énergie primaire non renouvelable, pour favoriser les solutions décarbonées comme le bois-énergie ou les réseaux de chaleur vertueux. L'Ic construction et l'Ic énergie forment ensemble l'ACV du bâtiment sur 50 ans : le premier pèse le carbone incorporé des matériaux et du chantier (souvent la moitié de l'empreinte totale d'un bâtiment neuf performant), le second le carbone de l'exploitation énergétique. Enfin, le DH mesure en degrés-heures cumulés l'inconfort thermique estival, pour empêcher qu'un bâtiment très isolé et étanche à l'air ne devienne une passoire à chaleur l'été faute de protections solaires ou de sur-ventilation nocturne. Ignorer un seul de ces cinq indicateurs expose à un refus de permis de construire, puisque tous sont opposables cumulativement. En savoir plus — RE2020 : réglementation environnementale applicable aux bâtiments neufs depuis 2022, qui plafonne à la fois les besoins d'énergie, l'impact carbone et l'inconfort d'été ; ACV : analyse du cycle de vie, méthode d'évaluation des impacts d'un bâtiment de la production des matériaux à leur fin de vie.",
-      "derniereVerification": "2026-08",
-      "aVerifier": null
     },
     {
       "id": "as-06",
@@ -4663,22 +4605,6 @@
       "explication": "Cet arbitrage doit être écrit et assumé devant l'assemblée délibérante, car il expose personnellement l'ordonnateur en cas de sinistre lourd sur un équipement structurant.",
       "derniereVerification": "2026-08",
       "aVerifier": null
-    },
-    {
-      "id": "vf-06",
-      "axe": "A6",
-      "sousTheme": "Organisation territoriale et compétences",
-      "stIdx": 0,
-      "sujet": "org-niveaux",
-      "niveau": 7,
-      "famille": "M",
-      "type": "vf",
-      "question": "Le transfert des compétences eau et assainissement aux communautés de communes est obligatoire depuis le 1er janvier 2026.",
-      "vrai": false,
-      "justification": "La loi du 11 avril 2025 a supprimé ce transfert obligatoire, qui résultait de la loi NOTRe puis de la loi de 2018. Les transferts déjà réalisés ne sont pas remis en cause et un transfert volontaire reste possible, mais les communes conservent la compétence qu'elles exerçaient à la date de la loi.",
-      "explication": "C'est le point d'actualité territoriale le plus susceptible d'être posé, précisément parce que la plupart des manuels de préparation antérieurs à 2025 donnent la réponse inverse.",
-      "derniereVerification": "2026-09",
-      "aVerifier": false
     },
     {
       "id": "vf-07",
@@ -7103,50 +7029,6 @@
     },
     {
       "famille": "S",
-      "derniereVerification": "2026-07",
-      "id": "cm-02",
-      "axe": "A1",
-      "sousTheme": "Maîtrise d'ouvrage, maîtrise d'œuvre, responsabilités",
-      "stIdx": 4,
-      "sujet": "moe-mission",
-      "niveau": 7,
-      "type": "camembert",
-      "bonneCible": 4,
-      "camembert": {
-        "titre": "Répartition indicative du forfait de rémunération d'une mission de base",
-        "unite": "%",
-        "segments": [
-          {
-            "l": "APS + APD",
-            "v": 22
-          },
-          {
-            "l": "PRO",
-            "v": 24
-          },
-          {
-            "l": "ACT",
-            "v": 8
-          },
-          {
-            "l": "VISA",
-            "v": 10
-          },
-          {
-            "l": "DET",
-            "v": 26
-          },
-          {
-            "l": "AOR",
-            "v": 10
-          }
-        ]
-      },
-      "question": "Cliquez sur l'élément de mission correspondant à la direction de l'exécution des contrats de travaux.",
-      "explication": "DET (direction de l'exécution des contrats de travaux) couvre le suivi du chantier : ordres de service, comptes rendus, vérification des situations. À ne pas confondre avec ACT (assistance aux contrats de travaux, c'est-à-dire la passation), VISA (examen des études d'exécution de l'entreprise) et AOR (assistance aux opérations de réception, jusqu'à la levée des réserves et au DGD). La répartition affichée est indicative : elle se négocie au contrat. En savoir plus — DGD : décompte général définitif, solde financier du marché de travaux, définitif une fois accepté."
-    },
-    {
-      "famille": "S",
       "derniereVerification": "2026-08",
       "id": "pl-01",
       "axe": "A3",
@@ -9492,26 +9374,6 @@
       "aVerifier": null
     },
     {
-      "id": "g-069",
-      "axe": "A7",
-      "sousTheme": "Marchés publics et MOP",
-      "stIdx": 7,
-      "sujet": "g-7",
-      "niveau": 4,
-      "famille": "S",
-      "type": "assoc",
-      "question": "Associez chaque acteur d'une opération de travaux publics à son rôle.",
-      "paires": [
-        ["Maître d'ouvrage (MOA)", "Financer l'opération et réceptionner l'ouvrage"],
-        ["Maître d'œuvre (MOE)", "Concevoir l'ouvrage et diriger l'exécution des travaux"],
-        ["Entreprise", "Exécuter matériellement les travaux prévus au marché"],
-        ["Contrôleur technique", "Vérifier la conformité et la sécurité de l'ouvrage"]
-      ],
-      "explication": "Le maître d'œuvre conçoit l'ouvrage et dirige l'exécution des travaux pour le compte du maître d'ouvrage, conformément à la loi MOP du 12 juillet 1985, codifiée aux articles L.2410-1 et suivants du code de la commande publique. En savoir plus — loi MOP : règles historiques de la maîtrise d'ouvrage publique et de ses rapports avec la maîtrise d'œuvre privée, aujourd'hui codifiées dans le code de la commande publique.",
-      "derniereVerification": "2026-08",
-      "aVerifier": null
-    },
-    {
       "id": "g-072",
       "axe": "A7",
       "sousTheme": "ERP, IGH et urbanisme",
@@ -9804,27 +9666,6 @@
         ["Bibliothèque, centre de documentation", "Type S"]
       ],
       "explication": "Selon l'arrêté du 25 juin 1980, le type U correspond aux établissements de soins, le type R aux établissements d'enseignement, le type V aux établissements de culte et le type S aux bibliothèques et centres de documentation. En savoir plus — ERP : établissement recevant du public, soumis à un règlement de sécurité incendie et à des obligations d'accessibilité selon son type d'activité et sa catégorie d'effectif.",
-      "derniereVerification": "2026-08",
-      "aVerifier": null
-    },
-    {
-      "id": "g-084",
-      "axe": "A7",
-      "sousTheme": "ERP, IGH et urbanisme",
-      "stIdx": 8,
-      "sujet": "g-8",
-      "niveau": 5,
-      "famille": "S",
-      "type": "assoc",
-      "question": "Associez chaque type d'établissement recevant du public (ERP) à sa lettre de classification.",
-      "paires": [
-        ["Hôtel", "Type O"],
-        ["Restaurant, débit de boissons", "Type N"],
-        ["Magasin de vente", "Type M"],
-        ["Bibliothèque", "Type S"],
-        ["Établissement sportif couvert", "Type X"]
-      ],
-      "explication": "Selon l'arrêté du 25 juin 1980, l'hôtel relève du type O, le restaurant du type N, le magasin de vente du type M, la bibliothèque du type S et l'établissement sportif couvert du type X. En savoir plus — ERP : établissement recevant du public, soumis à un règlement de sécurité incendie et à des obligations d'accessibilité selon son type d'activité et sa catégorie d'effectif.",
       "derniereVerification": "2026-08",
       "aVerifier": null
     },
@@ -11488,23 +11329,6 @@
       "aVerifier": null
     },
     {
-      "id": "g-180",
-      "axe": "A7",
-      "sousTheme": "Marchés publics et MOP",
-      "stIdx": 7,
-      "sujet": "g-7",
-      "niveau": 7,
-      "famille": "M",
-      "type": "trous",
-      "question": "Complétez la définition d'un marché public.",
-      "texte": "Un marché public est un contrat conclu à titre {1} par un acheteur (pouvoir adjudicateur ou entité adjudicatrice) avec un ou plusieurs opérateurs {2} afin de répondre à un besoin.",
-      "mots": ["onéreux", "économiques"],
-      "leurres": ["gratuit", "publics", "amiable", "privés"],
-      "explication": "Un marché public est un contrat conclu à titre onéreux par un acheteur (pouvoir adjudicateur ou entité adjudicatrice) avec un ou plusieurs opérateurs économiques, pour répondre à ses besoins. Le caractère écrit n'est plus un élément de la définition légale.",
-      "derniereVerification": "2026-08",
-      "aVerifier": null
-    },
-    {
       "id": "g-181",
       "axe": "A7",
       "sousTheme": "Marchés publics et MOP",
@@ -11885,43 +11709,6 @@
       "aVerifier": null
     },
     {
-      "id": "g-199",
-      "axe": "A7",
-      "sousTheme": "Fonction publique : accès, droits, carrière",
-      "stIdx": 4,
-      "sujet": "g-4",
-      "niveau": 4,
-      "famille": "M",
-      "type": "camembert",
-      "question": "Cliquez sur la part correspondant à la filière technique dans la fonction publique territoriale.",
-      "camembert": {
-        "titre": "Répartition approximative des agents de la FPT par filière",
-        "unite": "%",
-        "segments": [
-          {
-            "l": "44,9 %",
-            "v": 44.9
-          },
-          {
-            "l": "24,1 %",
-            "v": 24.1
-          },
-          {
-            "l": "10 %",
-            "v": 10
-          },
-          {
-            "l": "4,3 %",
-            "v": 4.3
-          }
-        ]
-      },
-      "bonneCible": 0,
-      "explication": "Selon les données DGCL/INSEE, la filière technique regroupe environ 45 % des agents territoriaux, loin devant la filière administrative.",
-      "derniereVerification": "2026-09",
-      "aVerifier": false
-    },
-    {
       "id": "g-202",
       "axe": "A7",
       "sousTheme": "Fonction publique : accès, droits, carrière",
@@ -11978,26 +11765,6 @@
       "explication": "La filière Administrative représente environ 24 % des agents territoriaux d'après les données DGCL.",
       "derniereVerification": "2026-09",
       "aVerifier": false
-    },
-    {
-      "id": "g-204",
-      "axe": "A7",
-      "sousTheme": "Fonction publique : accès, droits, carrière",
-      "stIdx": 4,
-      "sujet": "g-4",
-      "niveau": 5,
-      "famille": "M",
-      "type": "assoc",
-      "question": "Associez chaque catégorie hiérarchique de la fonction publique à ses fonctions typiques.",
-      "paires": [
-        ["Catégorie A", "Fonctions de conception et de direction"],
-        ["Catégorie B", "Fonctions d'application et d'encadrement intermédiaire"],
-        ["Catégorie C", "Fonctions d'exécution"],
-        ["Recrutement", "Concours externe, interne ou 3e voie selon la catégorie"]
-      ],
-      "explication": "Les trois catégories hiérarchiques (A, B, C) correspondent respectivement à des fonctions de conception, d'application et d'exécution, et le recrutement s'organise par concours externe, interne ou de troisième voie.",
-      "derniereVerification": "2026-08",
-      "aVerifier": null
     },
     {
       "id": "g-211",
@@ -12993,39 +12760,6 @@
       },
       "bonneCible": 0,
       "explication": "La fonction publique d'État (FPE) compte environ 2,57 millions d'agents.",
-      "derniereVerification": "2026-08",
-      "aVerifier": null
-    },
-    {
-      "id": "g-261",
-      "axe": "A7",
-      "sousTheme": "Fonction publique : accès, droits, carrière",
-      "stIdx": 4,
-      "sujet": "g-4",
-      "niveau": 7,
-      "famille": "M",
-      "type": "graphe",
-      "question": "Cliquez sur la barre représentant la part des cadres de catégorie C dans la fonction publique territoriale.",
-      "graphe": {
-        "titre": "Répartition des effectifs de la FPT par catégorie",
-        "unite": "%",
-        "barres": [
-          {
-            "l": "13 %",
-            "v": 13
-          },
-          {
-            "l": "15 %",
-            "v": 15
-          },
-          {
-            "l": "72 %",
-            "v": 72
-          }
-        ]
-      },
-      "bonneBarre": 2,
-      "explication": "La FPT compte environ 13 % de cadres A, 15 % de cadres B et 72 % de cadres C en 2023, la catégorie C restant très largement majoritaire.",
       "derniereVerification": "2026-08",
       "aVerifier": null
     },
@@ -15134,62 +14868,6 @@
       "derniereVerification": "2026-09"
     },
     {
-      "id": "n1-08",
-      "axe": "A1",
-      "sousTheme": "Maîtrise d'ouvrage, maîtrise d'œuvre, responsabilités",
-      "stIdx": 4,
-      "sujet": "moe-mission",
-      "niveau": 1,
-      "famille": "S",
-      "type": "circuit",
-      "question": "Tracez l'enchaînement des éléments de mission de maîtrise d'œuvre pour une opération de bâtiment neuf.",
-      "circuit": {
-        "etapes": [
-          {
-            "l": "APS",
-            "sub": "avant-projet sommaire",
-            "x": 26,
-            "y": 44
-          },
-          {
-            "l": "PRO",
-            "sub": "projet",
-            "x": 74,
-            "y": 91
-          },
-          {
-            "l": "APD",
-            "sub": "avant-projet définitif",
-            "x": 74,
-            "y": 61
-          },
-          {
-            "l": "AOR",
-            "sub": "assistance à la réception",
-            "x": 74,
-            "y": 27
-          },
-          {
-            "l": "ESQ",
-            "sub": "esquisse",
-            "x": 26,
-            "y": 77
-          },
-          {
-            "l": "ACT",
-            "sub": "passation des marchés",
-            "x": 26,
-            "y": 12
-          }
-        ],
-        "chemin": [4, 0, 2, 1, 5, 3],
-        "titre": "Éléments de mission loi MOP"
-      },
-      "explication": "La mission de base suit l'ordre esquisse, avant-projet sommaire, avant-projet définitif, projet, assistance à la passation des contrats de travaux, puis direction de l'exécution et assistance aux opérations de réception. L'APD fixe le coût prévisionnel des travaux sur lequel le maître d'œuvre s'engage. Les études d'exécution ne figurent pas d'office dans cette chaîne : elles relèvent par défaut de l'entreprise, le maître d'œuvre se limitant au visa.",
-      "aVerifier": false,
-      "derniereVerification": "2026-09"
-    },
-    {
       "id": "n1-09",
       "axe": "A1",
       "sousTheme": "Maîtrise d'ouvrage, maîtrise d'œuvre, responsabilités",
@@ -16064,30 +15742,6 @@
       "derniereVerification": "2026-09"
     },
     {
-      "id": "n1-23",
-      "axe": "A3",
-      "sousTheme": "Accessibilité",
-      "stIdx": 3,
-      "sujet": "acc-dim",
-      "niveau": 5,
-      "famille": "S",
-      "type": "curseur",
-      "question": "Réglez le curseur sur la largeur minimale d'un cheminement extérieur accessible.",
-      "curseur": {
-        "min": 0.8,
-        "max": 2,
-        "pas": 0.05,
-        "cible": 1.4,
-        "tolerance": 0,
-        "unite": "m",
-        "titre": "Cheminement accessible",
-        "legende": "Largeur courante d'un cheminement extérieur."
-      },
-      "explication": "Un cheminement accessible doit offrir une largeur minimale de 1,40 m, réductible ponctuellement à 1,20 m en cas de rétrécissement dû à un obstacle ne pouvant être supprimé. Cette largeur est à distinguer de l'aire de rotation d'un fauteuil, d'un diamètre de 1,50 m, et du passage utile d'une porte, de 0,83 m pour une porte de 0,90 m.",
-      "aVerifier": false,
-      "derniereVerification": "2026-09"
-    },
-    {
       "id": "n1-24",
       "axe": "A3",
       "sousTheme": "Accessibilité",
@@ -16403,32 +16057,6 @@
         "titre": "Marché d'exploitation"
       },
       "explication": "La décomposition P1 à P4 structure les marchés d'exploitation : P1 la fourniture d'énergie, P2 la conduite et le petit entretien, P3 la garantie totale de renouvellement des matériels, P4 le financement d'une installation nouvelle. Confier P3 sans état des lieux précis des équipements expose à des surcoûts et à des contestations sur le périmètre du renouvellement.",
-      "aVerifier": false,
-      "derniereVerification": "2026-09"
-    },
-    {
-      "id": "n1-36",
-      "axe": "A4",
-      "sousTheme": "Contrôles réglementaires",
-      "stIdx": 5,
-      "sujet": "controles",
-      "niveau": 1,
-      "famille": "S",
-      "type": "cablage",
-      "question": "Raccordez chaque vérification réglementaire d'un ERP à sa périodicité courante.",
-      "cablage": {
-        "gauche": [
-          "Installations électriques d'un ERP",
-          "Entretien d'un ascenseur",
-          "Contrôle technique d'un ascenseur",
-          "Extincteurs et systèmes de sécurité incendie"
-        ],
-        "droite": ["Annuelle", "Toutes les six semaines", "Tous les cinq ans", "Annuelle"],
-        "gaucheTitre": "Vérification",
-        "droiteTitre": "Périodicité",
-        "titre": "Contrôles réglementaires"
-      },
-      "explication": "Les installations électriques d'un ERP et les moyens de secours (extincteurs, SSI) font l'objet d'une vérification annuelle ; l'entretien d'un ascenseur est assuré toutes les six semaines et son contrôle technique périodique tous les cinq ans. Le registre de sécurité rassemble ces contrôles et les suites données aux observations : le point sensible d'un patrimoine communal n'est pas la réalisation des vérifications mais la levée effective des réserves, une observation non traitée engageant la responsabilité de la collectivité en cas de sinistre. En savoir plus — ERP : établissement recevant du public, soumis à un règlement de sécurité incendie et à des obligations d'accessibilité selon son type d'activité et sa catégorie d'effectif. SSI : système de sécurité incendie (détection, alarme, désenfumage).",
       "aVerifier": false,
       "derniereVerification": "2026-09"
     },
