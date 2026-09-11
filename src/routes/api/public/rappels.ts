@@ -25,8 +25,12 @@ interface AbonnementLigne {
   endpoint: string;
   p256dh: string;
   auth: string;
+  prenom: string | null;
   dernier_envoi: string | null;
+  dernier_creneau: string | null;
 }
+
+type Creneau = "matin" | "midi" | "soir";
 
 function jourParis(date = new Date()): string {
   return new Intl.DateTimeFormat("fr-CA", {
@@ -59,7 +63,40 @@ function serie(jours: Set<string>, aujourdhui: string): number {
   return n;
 }
 
-function messagePour(ligne: Ligne | undefined, aujourdhui: string) {
+/* Petites variations : le message change d'un jour à l'autre pour ne pas
+   devenir un bruit de fond qu'on ignore. */
+function piocher(liste: string[], graine: number): string {
+  return liste[graine % liste.length] as string;
+}
+
+function grainePour(cle: string, jour: string, creneau: string): number {
+  let h = 7;
+  for (const c of `${cle}|${jour}|${creneau}`) h = (h * 31 + c.charCodeAt(0)) % 100000;
+  return h;
+}
+
+function accroche(prenom: string | null, creneau: Creneau, graine: number): string {
+  const p = prenom ? `${prenom}` : null;
+  const matin = p
+    ? [`Bonjour ${p} !`, `Debout ${p} !`, `Café puis QCM, ${p} ?`, `${p}, le jury n'attend pas.`]
+    : ["Bonjour !", "Debout !", "Café puis QCM ?", "Le jury n'attend pas."];
+  const midi = p
+    ? [`${p}, pause déjeuner ?`, `Entre deux plats, ${p} ?`, `${p}, 5 minutes chrono.`]
+    : ["Pause déjeuner ?", "Entre deux plats ?", "5 minutes chrono."];
+  const soir = p
+    ? [`${p}, fin de journée.`, `Dernier round, ${p}.`, `${p}, on clôture la journée ?`]
+    : ["Fin de journée.", "Dernier round.", "On clôture la journée ?"];
+  const liste = creneau === "matin" ? matin : creneau === "midi" ? midi : soir;
+  return piocher(liste, graine);
+}
+
+function messagePour(
+  ligne: Ligne | undefined,
+  aujourdhui: string,
+  creneau: Creneau,
+  prenom: string | null,
+  cle: string,
+) {
   const cartes = Object.values(ligne?.cartes ?? {});
   const maintenant = Date.now();
   const dues = cartes.filter((c) => c && c.vu && (c.du ?? 0) <= maintenant).length;
@@ -69,8 +106,7 @@ function messagePour(ligne: Ligne | undefined, aujourdhui: string) {
       .filter((e) => e && e.id === "__session" && typeof e.jour === "string")
       .map((e) => e.jour as string),
   );
-  const sessionAujourdhui = joursSession.has(aujourdhui);
-  if (sessionAujourdhui) return null;
+  if (joursSession.has(aujourdhui)) return null;
 
   const jourDernier = [...joursSession].sort().pop();
   const inactivite = jourDernier
@@ -79,28 +115,68 @@ function messagePour(ligne: Ligne | undefined, aujourdhui: string) {
       )
     : null;
 
+  const graine = grainePour(cle, aujourdhui, creneau);
+  const titre = accroche(prenom, creneau, graine);
   const n = serie(joursSession, aujourdhui);
+
   if (n >= 3) {
     return {
-      titre: "IngéGo",
-      corps: `${n} jours de suite ! Ne casse pas ta série aujourd'hui.`,
+      titre,
+      corps: piocher(
+        [
+          `${n} jours d'affilée : ce serait dommage de casser la série maintenant.`,
+          `Ta série de ${n} jours tient encore à une mission.`,
+          `${n} jours au compteur. On garde le rythme ?`,
+        ],
+        graine,
+      ),
       tag: "ingego-serie",
     };
   }
 
   if (inactivite !== null && inactivite >= 3) {
     return {
-      titre: "IngéGo",
-      corps: `Ça fait ${inactivite} jours, tes cartes s'accumulent.`,
+      titre,
+      corps: piocher(
+        [
+          `${inactivite} jours sans révision : tes cartes prennent la poussière.`,
+          `Le concours avance, toi non depuis ${inactivite} jours.`,
+          `On repart doucement ? 8 questions suffisent aujourd'hui.`,
+        ],
+        graine,
+      ),
       tag: "ingego-relance",
     };
   }
 
   if (dues > 0) {
+    const s = dues > 1 ? "s" : "";
     return {
-      titre: "IngéGo",
-      corps: `${dues} carte${dues > 1 ? "s" : ""} t'attende${dues > 1 ? "nt" : ""} aujourd'hui.`,
+      titre,
+      corps: piocher(
+        [
+          `${dues} carte${s} à revoir avant qu'elle${s} ne s'échappe${dues > 1 ? "nt" : ""}.`,
+          `${dues} question${s} t'attend${dues > 1 ? "ent" : ""} : 3 minutes suffisent.`,
+          `Révision du jour : ${dues} carte${s} en attente.`,
+        ],
+        graine,
+      ),
       tag: "ingego-rappel",
+    };
+  }
+
+  if (creneau === "matin") {
+    return {
+      titre,
+      corps: piocher(
+        [
+          "Une mission de 8 questions pour bien démarrer.",
+          "Rien d'urgent, mais une mission ne fait jamais de mal.",
+          "Objectif du jour : une mission, pas plus.",
+        ],
+        graine,
+      ),
+      tag: "ingego-matin",
     };
   }
 
@@ -126,17 +202,37 @@ async function traiter(request: Request) {
     return new Response("Non autorisé", { status: 401 });
   }
   const aujourdhui = jourParis();
+  const params = new URL(request.url).searchParams;
+  const demande = params.get("creneau");
+  const creneau: Creneau =
+    demande === "matin" || demande === "midi" || demande === "soir" ? demande : "soir";
+
+  /* La planification tourne en UTC : chaque créneau est déclenché aux deux
+     heures possibles (été / hiver) et l'heure de Paris tranche. */
+  const heureParis = Number(
+    new Intl.DateTimeFormat("fr-FR", {
+      timeZone: "Europe/Paris",
+      hour: "2-digit",
+      hour12: false,
+    }).format(new Date()),
+  );
+  const heureAttendue = creneau === "matin" ? 8 : creneau === "midi" ? 12 : 18;
+  if (params.get("forcer") !== "1" && heureParis !== heureAttendue) {
+    return Response.json({ jour: aujourdhui, creneau, ignore: "hors créneau", heureParis });
+  }
+
 
   const { data: abonnementsBruts, error: erreurAb } = await supabaseAdmin
     .from("abonnements_push")
-    .select("id, cle, endpoint, p256dh, auth, dernier_envoi");
+    .select("id, cle, endpoint, p256dh, auth, prenom, dernier_envoi, dernier_creneau");
   if (erreurAb) {
     console.error("rappels/abonnements", erreurAb);
     return new Response("Erreur", { status: 500 });
   }
 
+  /* Un envoi par créneau et par jour : matin, midi et fin de journée. */
   const abonnements = ((abonnementsBruts ?? []) as unknown as AbonnementLigne[]).filter(
-    (a) => a.dernier_envoi !== aujourdhui,
+    (a) => !(a.dernier_envoi === aujourdhui && a.dernier_creneau === creneau),
   );
   if (abonnements.length === 0) {
     return Response.json({ jour: aujourdhui, envoyes: 0, appareils: 0 });
@@ -155,14 +251,13 @@ async function traiter(request: Request) {
   const parCle = new Map<string, Ligne>();
   for (const l of (etats ?? []) as unknown as Ligne[]) parCle.set(l.cle, l);
 
-  /* Un seul envoi par appareil et par jour, quelle que soit la règle. */
   const dejaEnvoye = new Set<string>();
   const { envoyerA } = await import("@/lib/ingego/push.server");
   let envoyes = 0;
 
   for (const ab of abonnements) {
     if (dejaEnvoye.has(ab.cle)) continue;
-    const message = messagePour(parCle.get(ab.cle), aujourdhui);
+    const message = messagePour(parCle.get(ab.cle), aujourdhui, creneau, ab.prenom, ab.cle);
     if (!message) continue;
     try {
       const vivant = await envoyerA(ab, message);
@@ -172,7 +267,7 @@ async function traiter(request: Request) {
       }
       await supabaseAdmin
         .from("abonnements_push")
-        .update({ dernier_envoi: aujourdhui } as never)
+        .update({ dernier_envoi: aujourdhui, dernier_creneau: creneau } as never)
         .eq("id", ab.id);
       dejaEnvoye.add(ab.cle);
       envoyes += 1;
@@ -181,7 +276,7 @@ async function traiter(request: Request) {
     }
   }
 
-  return Response.json({ jour: aujourdhui, envoyes, appareils: abonnements.length });
+  return Response.json({ jour: aujourdhui, creneau, envoyes, appareils: abonnements.length });
 }
 
 export const Route = createFileRoute("/api/public/rappels")({

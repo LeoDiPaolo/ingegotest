@@ -1,0 +1,1 @@
+REVOKE ALL ON FUNCTION public.envoyer_rappels_ingego() FROM public, anon, authenticated;

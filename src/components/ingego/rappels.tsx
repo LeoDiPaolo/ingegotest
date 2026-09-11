@@ -2,9 +2,11 @@ import { useEffect, useState } from "react";
 import { Bell, BellOff, Send } from "lucide-react";
 import {
   activerRappels,
+  definirPrenom,
   desactiverRappels,
   envoyerTest,
   etatRappels,
+  lirePrenom,
   surIosNonInstalle,
 } from "@/lib/ingego/push";
 
@@ -15,11 +17,18 @@ export function CarteRappels() {
   const [occupe, setOccupe] = useState(false);
   const [info, setInfo] = useState<string | null>(null);
   const [iosNonInstalle, setIosNonInstalle] = useState(false);
+  const [prenom, setPrenom] = useState("");
 
   useEffect(() => {
     setIosNonInstalle(surIosNonInstalle());
+    setPrenom(lirePrenom());
     void etatRappels().then(setEtat);
   }, []);
+
+  function enregistrerLePrenom(valeur: string) {
+    setPrenom(valeur);
+    void definirPrenom(valeur);
+  }
 
   async function basculer() {
     setOccupe(true);
@@ -67,9 +76,21 @@ export function CarteRappels() {
         <Bell className="h-4 w-4 text-brand" /> Rappels de révision
       </h2>
       <p className="text-xs text-muted-foreground">
-        Un rappel par jour en fin d'après-midi, seulement si des cartes t'attendent ou si ta série
-        est en jeu.
+        Trois rappels possibles par jour : 8 h 30, midi et fin d'après-midi. Ils n'arrivent que si
+        des cartes t'attendent ou si ta série est en jeu, et s'arrêtent dès que la mission du jour
+        est faite.
       </p>
+
+      <label className="block space-y-1">
+        <span className="text-xs font-semibold">Ton prénom (pour des messages personnalisés)</span>
+        <input
+          value={prenom}
+          onChange={(e) => enregistrerLePrenom(e.target.value)}
+          placeholder="Ex. Jean-Pierre"
+          maxLength={40}
+          className="w-full rounded-xl border border-border bg-elevated px-3 py-2.5 text-sm"
+        />
+      </label>
 
       {iosNonInstalle ? (
         <p className="rounded-xl border border-warning/40 bg-warning/10 p-2.5 text-xs">
