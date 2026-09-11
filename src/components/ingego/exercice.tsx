@@ -124,7 +124,6 @@ export function resolutionTrous(q: Question, rep: unknown) {
   return res;
 }
 
-
 /* Ordre d'affichage de la colonne droite d'un raccordement : déterministe,
    pour que la correction et l'affichage parlent des mêmes emplacements. */
 export function ordreCablage(q: Question): number[] {
@@ -297,7 +296,6 @@ function juste(q: Question, rep: Reponse): boolean {
       return (q.paires ?? []).every((_, i) => assocJuste(q, i, m[i]));
     case "trous":
       return resolutionTrous(q, rep).every((t) => t.ok);
-
 
     case "tri":
       return (q.elements ?? []).every((el, i) => m[i] === el[1]);
