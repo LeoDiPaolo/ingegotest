@@ -89,6 +89,21 @@ export type Database = {
         }
         Relationships: []
       }
+      config_rappels: {
+        Row: {
+          cle: string
+          valeur: string
+        }
+        Insert: {
+          cle: string
+          valeur: string
+        }
+        Update: {
+          cle?: string
+          valeur?: string
+        }
+        Relationships: []
+      }
       etat_ingego: {
         Row: {
           cartes: Json
@@ -169,7 +184,7 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      envoyer_rappels_ingego: { Args: never; Returns: undefined }
     }
     Enums: {
       [_ in never]: never
