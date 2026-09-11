@@ -113,11 +113,11 @@ async function traiter(request: Request) {
   /* Le token quotidien est stocké en base pour que le job pg_cron et la route
      partagent la même valeur, sans dépendre d'un secret d'environnement. */
   const { data: ligneConfig } = await supabaseAdmin
-    .from("config_rappels")
+    .from("config_rappels" as never)
     .select("valeur")
     .eq("cle", "RAPPELS_TOKEN")
     .maybeSingle();
-  const jeton = ligneConfig?.valeur ?? process.env["RAPPELS_TOKEN"] ?? "";
+  const jeton = (ligneConfig as { valeur?: string } | null)?.valeur ?? process.env["RAPPELS_TOKEN"] ?? "";
 
   const fourni =
     request.headers.get("x-rappels-token") ??
