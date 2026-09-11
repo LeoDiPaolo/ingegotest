@@ -73,7 +73,9 @@ export function BadgeMaitrise({
   const part = total ? acquis / total : 0;
   const partVue = total ? Math.max(part, vus / total) : 0;
   const atteint = palierAtteint(part);
-  const pct = (v: number) => (v > 0 && v < 0.01 ? 1 : Math.round(v * 100));
+  /* On n'arrondit jamais au palier supérieur avant qu'il soit réellement atteint :
+     36 validations sur 367 valent 9,8 %, et non un badge 10 % déjà acquis. */
+  const pct = (v: number) => (v > 0 && v < 0.01 ? 1 : Math.floor(v * 100));
   /* Prochain palier et réussites manquantes : message orienté objectif. */
   const prochain = PALIERS_PART.find((p) => part < p) ?? null;
   const restants = prochain != null ? Math.max(1, Math.ceil(prochain * total) - acquis) : 0;

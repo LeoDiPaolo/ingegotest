@@ -4442,13 +4442,13 @@
    "type": "ordre",
    "question": "Remettez dans l'ordre chronologique les grandes étapes d'une opération d'investissement, du besoin identifié jusqu'à l'exploitation du bâtiment.",
    "items": [
-    "Consultation des entreprises de travaux",
     "Diagnostic du patrimoine et identification du besoin",
-    "Mise en exploitation et suivi des consommations",
+    "Étude de faisabilité et rédaction du programme",
     "Inscription au plan pluriannuel d'investissement et vote de l'autorisation de programme",
-    "Travaux et réception",
     "Recrutement de la maîtrise d'œuvre",
-    "Étude de faisabilité et rédaction du programme"
+    "Consultation des entreprises de travaux",
+    "Travaux et réception",
+    "Mise en exploitation et suivi des consommations"
    ],
    "explication": "La chronologie correcte est : diagnostic et identification du besoin, étude de faisabilité et rédaction du programme, inscription au plan pluriannuel d'investissement (PPI) et vote de l'autorisation de programme, recrutement de la maîtrise d'œuvre, consultation des entreprises de travaux, travaux et réception, puis mise en exploitation et suivi des consommations. Le programme est le document pivot : rédigé par ou pour le maître d'ouvrage, il fixe les objectifs fonctionnels, les contraintes techniques et réglementaires et l'enveloppe financière avant tout recrutement de concepteur. Lancer le recrutement du maître d'œuvre avant d'avoir stabilisé le programme et l'enveloppe budgétaire inverse la logique de commande publique : la collectivité perd sa capacité d'arbitrage et s'expose à des avenants coûteux, car le maître d'œuvre construira son projet sur des bases incertaines. De même, sauter l'inscription au PPI expose l'opération à une absence de financement voté, donc à un blocage juridique de l'engagement des dépenses.",
    "derniereVerification": "2026-08",
@@ -13269,6 +13269,13 @@
     "continuité",
     "mutabilité"
    ],
+  "motsPermutables": [
+   [
+    0,
+    1,
+    2
+   ]
+  ],
    "texte": "Le service public repose sur les principes d'{1}, de {2} et de {3}.",
    "leurres": [
     "subsidiarité",
@@ -17939,8 +17946,8 @@
    "circuit": {
     "etapes": [
      {
-      "l": "Décompte général et définitif",
-      "sub": "clôture financière du marché",
+    "Expiration de la garantie de parfait achèvement",
+    "un an après la réception, sauf prolongation",
       "x": 26,
       "y": 44
      },
@@ -17950,8 +17957,8 @@
       "y": 91
      },
      {
-      "l": "Garantie de parfait achèvement",
-      "sub": "un an à compter de la réception",
+    "Décompte général et définitif",
+    "clôture financière du marché",
       "x": 74,
       "y": 61
      },
@@ -17972,17 +17979,17 @@
       "y": 12
      }
     ],
-    "chemin": [
-     5,
-     1,
-     3,
-     4,
-     2,
-     0
-    ],
+  "chemin": [
+   5,
+   1,
+   3,
+   4,
+   2,
+   0
+  ],
     "titre": "Achèvement d'un marché de travaux"
    },
-   "explication": "Les opérations préalables à la réception sont menées par le maître d'œuvre à la demande de l'entreprise ; la décision de réception appartient au seul maître d'ouvrage, avec ou sans réserves. La réception fait courir la garantie de parfait achèvement d'un an, ainsi que les garanties biennale et décennale. Le décompte général et définitif clôt financièrement le marché et rend en principe irrecevable toute réclamation ultérieure.",
+  "explication": "La chronologie pédagogique retenue est : avis d'achèvement, OPR, décision de réception, levée des réserves, décompte général et définitif (DGD), puis expiration de la garantie de parfait achèvement (GPA). La réception fait courir la GPA pendant un an. Le DGD ne se fait donc pas à la fin de la GPA : sa procédure intervient normalement bien avant son expiration. La levée des réserves et l'établissement du DGD suivent toutefois leurs procédures propres et peuvent partiellement se chevaucher selon le marché.",
    "aVerifier": false,
    "derniereVerification": "2026-09"
   },
@@ -19167,7 +19174,7 @@
     "droiteTitre": "Usage courant",
     "titre": "Matériaux biosourcés"
    },
-   "explication": "Les matériaux biosourcés stockent du carbone pendant la vie de l'ouvrage, ce que valorise le calcul dynamique de la RE2020. Chaque filière a un usage dominant : la paille en remplissage isolant de caissons bois, le bois lamellé-collé en structure de grande portée, la ouate de cellulose en isolation soufflée de combles, le chanvre en béton de chanvre de remplissage non porteur, le liège en isolation résistante à l'humidité. En savoir plus — RE2020 : réglementation environnementale applicable aux bâtiments neufs depuis 2022, qui plafonne à la fois les besoins d'énergie, l'impact carbone et l'inconfort d'été.",
+  "explication": "Botte de paille → remplissage isolant de caissons bois préfabriqués : sa faible conductivité thermique en fait un isolant de paroi, mais elle ne constitue pas ici la structure porteuse. Bois lamellé-collé → structure porteuse de grande portée : l'assemblage de lamelles permet de fabriquer des poutres résistantes et de grandes dimensions. Ouate de cellulose → isolation soufflée en combles perdus : ses fibres remplissent facilement les volumes irréguliers. Béton de chanvre → remplissage isolant non porteur et correcteur d'humidité : il associe chènevotte et liant, régule la vapeur d'eau mais ne remplace pas l'ossature. Liège expansé → isolation en milieu humide ou sous dallage : il résiste bien à l'eau et à la compression. Ces matériaux stockent du carbone pendant la vie de l'ouvrage, ce que valorise le calcul dynamique de la RE2020.",
    "aVerifier": false,
    "derniereVerification": "2026-09"
   },
