@@ -42,8 +42,8 @@ export const COMMENTAIRES_TRAITES: string[] = [
   "g-053",
 ];
 
-/* Lot de révision du 10/09/2026 : ces questions ont été reformulées ou leur
-   réponse corrigée, elles doivent être rejouées même si elles étaient validées. */
+/* Historique des questions révisées. Cette liste sert uniquement à réparer la
+   purge du 11/09/2026 : une correction de contenu ne retire plus une validation. */
 export const VERSION_REVISIONS = "2026-09-11a";
 
 export const IDS_REVUS: string[] = [

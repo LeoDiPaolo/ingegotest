@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { ecrireEtat, lireEtat } from "./etat.functions";
-import { normaliserReglages, type Carte, type Etat, type Reglages } from "./algo";
+import { JOUR, normaliserReglages, type Carte, type Etat, type Reglages } from "./algo";
 import {
   COMMENTAIRES_TRAITES,
   IDS_CORRIGES,
@@ -34,6 +34,7 @@ const CLE_APPAREIL = "ingego-cle-appareil";
 const CLE_PURGE = "ingego-purge";
 const CLE_PURGE_COM = "ingego-purge-commentaires";
 const CLE_PURGE_REV = "ingego-purge-revisions";
+const CLE_RESTAURATION_REV = "ingego-restauration-revisions";
 
 export const VIDE: Donnees = {
   cartes: {},
@@ -94,14 +95,43 @@ function ecrireLocal(d: Donnees) {
   }
 }
 
-/* Les questions corrigées après coup repartent à zéro : la progression acquise
-   portait sur un énoncé qui n'existe plus. */
 function aPurger(cle: string, version: string): boolean {
   try {
     return (localStorage.getItem(cle) || "") !== version;
   } catch {
     return false;
   }
+}
+
+/* La version 2026-09-11a a supprimé par erreur les cartes revues. On restaure
+   celles dont le journal prouve une réussite, sans les remettre dans la mission
+   en cours. Les corrections de contenu suivantes ne toucheront plus aux cartes. */
+function restaurerValidationsRevues(d: Donnees, maintenant: number): Donnees {
+  try {
+    const purgeAppliquee = localStorage.getItem(CLE_PURGE_REV) === VERSION_REVISIONS;
+    const dejaRestauree = localStorage.getItem(CLE_RESTAURATION_REV) === VERSION_REVISIONS;
+    if (!purgeAppliquee || dejaRestauree) return d;
+  } catch {
+    return d;
+  }
+
+  const cartes = { ...d.cartes };
+  for (const id of new Set(IDS_REVUS)) {
+    if (cartes[id]?.p && cartes[id].p >= 1) continue;
+    const reussites = d.journal.filter((entree) => entree.id === id && entree.note > 0);
+    if (!reussites.length) continue;
+    const derniere = reussites.reduce((a, b) => (a.t >= b.t ? a : b));
+    cartes[id] = {
+      p: 1,
+      e: 2.3,
+      du: maintenant + JOUR,
+      reps: d.journal.filter((entree) => entree.id === id).length,
+      echecs: d.journal.filter((entree) => entree.id === id && entree.note === 0).length,
+      vu: true,
+      dernier: derniere.t,
+    };
+  }
+  return { ...d, cartes };
 }
 
 function marquerPurge(cle: string, version: string) {
@@ -112,16 +142,11 @@ function marquerPurge(cle: string, version: string) {
   }
 }
 
-function purger(d: Donnees, purgeCartes: boolean, purgeCom: boolean, purgeRev: boolean): Donnees {
+function purger(d: Donnees, purgeCartes: boolean, purgeCom: boolean): Donnees {
   let sortie = d;
   if (purgeCartes) {
     const cartes = { ...sortie.cartes };
     for (const id of IDS_CORRIGES) delete cartes[id];
-    sortie = { ...sortie, cartes };
-  }
-  if (purgeRev) {
-    const cartes = { ...sortie.cartes };
-    for (const id of IDS_REVUS) delete cartes[id];
     sortie = { ...sortie, cartes };
   }
   if (purgeCom) {
@@ -195,8 +220,10 @@ export function useDonnees() {
     /* Une observation traitée n'est purgée qu'une fois pour cette version. Une
        nouvelle observation sur la même question doit pouvoir être conservée. */
     const purgeCom = aPurger(CLE_PURGE_COM, VERSION_COMMENTAIRES);
-    const purgeRev = aPurger(CLE_PURGE_REV, VERSION_REVISIONS);
-    const local = purger(lireLocal(), purgeCartes, purgeCom, purgeRev);
+    const local = restaurerValidationsRevues(
+      purger(lireLocal(), purgeCartes, purgeCom),
+      Date.now(),
+    );
     setDonnees(local);
     dernier.current = local;
     setPret(true);
@@ -220,17 +247,20 @@ export function useDonnees() {
           reglages: normaliserReglages(data.reglages as unknown as Partial<Reglages>),
           commentaires: (data.commentaires as unknown as Record<string, string>) ?? {},
         };
-        const fusion = purger(fusionner(dernier.current, distant), purgeCartes, purgeCom, purgeRev);
+        const fusion = restaurerValidationsRevues(
+          purger(fusionner(dernier.current, distant), purgeCartes, purgeCom),
+          Date.now(),
+        );
         setDonnees(fusion);
         pousser(fusion);
         if (purgeCartes) marquerPurge(CLE_PURGE, VERSION_CORRECTIONS);
         if (purgeCom) marquerPurge(CLE_PURGE_COM, VERSION_COMMENTAIRES);
-        if (purgeRev) marquerPurge(CLE_PURGE_REV, VERSION_REVISIONS);
+        marquerPurge(CLE_RESTAURATION_REV, VERSION_REVISIONS);
       } else {
         pousser(dernier.current);
         if (purgeCartes) marquerPurge(CLE_PURGE, VERSION_CORRECTIONS);
         if (purgeCom) marquerPurge(CLE_PURGE_COM, VERSION_COMMENTAIRES);
-        if (purgeRev) marquerPurge(CLE_PURGE_REV, VERSION_REVISIONS);
+        marquerPurge(CLE_RESTAURATION_REV, VERSION_REVISIONS);
       }
 
       setSynchro("ok");
