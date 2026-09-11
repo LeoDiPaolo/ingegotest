@@ -70,26 +70,32 @@ export const Route = createFileRoute("/")({
 const MARQUE_SESSION = "__session";
 
 /* Titres de mission : un intitulé différent chaque jour, tiré de façon
-   déterministe pour rester stable pendant la journée. */
-const TITRES_MISSION = [
-  "Consolider le terrain",
-  "Lever les points durs",
-  "Mettre le chantier au carré",
-  "Poser les fondations",
-  "Contrôler la mise en œuvre",
-  "Régler les derniers détails",
-  "Monter d'un niveau",
-  "Repasser les points sensibles",
-  "Tenir le cap du concours",
+   déterministe pour rester stable pendant la journée. Deux familles selon
+   qu'il y a des révisions dues ou uniquement des nouvelles questions. */
+const TITRES_DECOUVERTE = [
   "Ouvrir un nouveau lot",
-  "Faire le tour du propriétaire",
+  "Poser les fondations",
+  "Monter d'un niveau",
   "Avancer d'un cran",
+  "Explorer un nouveau chantier",
+  "Prendre de l'avance",
 ];
 
-function titreMissionDuJour(maintenant = Date.now()): string {
+const TITRES_REVISION = [
+  "Consolider le terrain",
+  "Repasser les points sensibles",
+  "Lever les points durs",
+  "Mettre le chantier au carré",
+  "Contrôler la mise en œuvre",
+  "Régler les derniers détails",
+];
+
+function titreMissionDuJour(aDesRevisions: boolean, maintenant = Date.now()): string {
+  const liste = aDesRevisions ? TITRES_REVISION : TITRES_DECOUVERTE;
   const jour = Math.floor(maintenant / 86_400_000);
-  return TITRES_MISSION[jour % TITRES_MISSION.length];
+  return liste[jour % liste.length];
 }
+
 
 function Reviser() {
   const { donnees, pret, synchro, enregistrerCarte, commenter, maj } = useDonnees();
@@ -103,8 +109,6 @@ function Reviser() {
   const [niveauxDepart, setNiveauxDepart] = useState<Record<string, number>>({});
   const [axeOuvert, setAxeOuvert] = useState<string | null>(null);
 
-  /* Titre du jour : stable pendant la journée, animé à chaque changement. */
-  const titreMission = useMemo(() => titreMissionDuJour(), []);
   const serie = useMemo(
     () => serieJours(donnees.journal.filter((e) => e.id === MARQUE_SESSION).map((e) => e.jour)),
     [donnees.journal],
@@ -113,6 +117,17 @@ function Reviser() {
     () => (pret ? resteAFaire(donnees.cartes, donnees.reglages, Date.now()) : 0),
     [donnees.cartes, donnees.reglages, pret],
   );
+  /* Révisions dues : cartes déjà vues dont l'échéance est atteinte. */
+  const revisionsDues = useMemo(
+    () =>
+      Object.values(donnees.cartes).some(
+        (carte) => carte?.vu && (carte.p ?? 0) >= 1 && (carte.du ?? 0) <= Date.now(),
+      ),
+    [donnees.cartes],
+  );
+  /* Titre du jour : cohérent avec le contenu réel de la mission. */
+  const titreMission = useMemo(() => titreMissionDuJour(revisionsDues), [revisionsDues]);
+
 
   const bilan = useMemo(() => {
     const l = jaugesParAxe(donnees.cartes);
