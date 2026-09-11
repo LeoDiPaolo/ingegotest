@@ -44,7 +44,7 @@ import {
   progressionSousTheme,
   resteAFaire,
 } from "@/lib/ingego/algo";
-import { jaugesParAxe, reinjecter } from "@/lib/ingego/session";
+import { composerContinuation, jaugesParAxe, reinjecter } from "@/lib/ingego/session";
 import { serieJours, useDonnees } from "@/lib/ingego/stockage";
 
 const TITRE = "IngéGo — révision du concours d'ingénieur territorial";
@@ -158,7 +158,11 @@ function Reviser() {
   }, [donnees.cartes, ordre]);
 
   function demarrer() {
-    const lot = composerSession(donnees.cartes, donnees.reglages, Date.now());
+    const maintenant = Date.now();
+    const lotNormal = composerSession(donnees.cartes, donnees.reglages, maintenant);
+    const lot = lotNormal.length
+      ? lotNormal
+      : composerContinuation(donnees.cartes, donnees.reglages, maintenant);
     if (!lot.length) return;
     setOrdre(lot);
     setI(0);
