@@ -69,6 +69,28 @@ export const Route = createFileRoute("/")({
 
 const MARQUE_SESSION = "__session";
 
+/* Titres de mission : un intitulé différent chaque jour, tiré de façon
+   déterministe pour rester stable pendant la journée. */
+const TITRES_MISSION = [
+  "Consolider le terrain",
+  "Lever les points durs",
+  "Mettre le chantier au carré",
+  "Poser les fondations",
+  "Contrôler la mise en œuvre",
+  "Régler les derniers détails",
+  "Monter d'un niveau",
+  "Repasser les points sensibles",
+  "Tenir le cap du concours",
+  "Ouvrir un nouveau lot",
+  "Faire le tour du propriétaire",
+  "Avancer d'un cran",
+];
+
+function titreMissionDuJour(maintenant = Date.now()): string {
+  const jour = Math.floor(maintenant / 86_400_000);
+  return TITRES_MISSION[jour % TITRES_MISSION.length];
+}
+
 function Reviser() {
   const { donnees, pret, synchro, enregistrerCarte, commenter, maj } = useDonnees();
   const [ordre, setOrdre] = useState<Question[] | null>(null);
