@@ -25,8 +25,12 @@ interface AbonnementLigne {
   endpoint: string;
   p256dh: string;
   auth: string;
+  prenom: string | null;
   dernier_envoi: string | null;
+  dernier_creneau: string | null;
 }
+
+type Creneau = "matin" | "midi" | "soir";
 
 function jourParis(date = new Date()): string {
   return new Intl.DateTimeFormat("fr-CA", {
