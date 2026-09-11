@@ -251,7 +251,7 @@ async function traiter(request: Request) {
       }
       await supabaseAdmin
         .from("abonnements_push")
-        .update({ dernier_envoi: aujourdhui } as never)
+        .update({ dernier_envoi: aujourdhui, dernier_creneau: creneau } as never)
         .eq("id", ab.id);
       dejaEnvoye.add(ab.cle);
       envoyes += 1;
