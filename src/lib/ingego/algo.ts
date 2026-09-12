@@ -259,28 +259,23 @@ export function composerSession(etat: Etat, reglages: Reglages, now: number): Qu
   const cache: Record<string, number> = {};
   const nivDe = (a: string) =>
     cache[a] !== undefined ? cache[a] : (cache[a] = niveauActifAxe(a, etat));
-  const dues: Question[] = [],
-    neuves: Question[] = [];
+  /* Plus de révisions des cartes validées : une mission ne pioche que parmi
+     les questions jamais validées du premier coup (neuves ou déjà ratées). */
+  const neuves: Question[] = [];
   for (const q of CORPUS) {
     if (!ouvert(q)) continue;
     const c = etat[q.id];
     if (c && c.vu) {
       if (c.p === 0 && q.niv <= nivDe(q.axe)) neuves.push(q);
-      else if (c.p >= 1 && c.du <= now) dues.push(q);
     } else if (q.niv <= nivDe(q.axe)) neuves.push(q);
   }
-  dues.sort((a, b) => etat[a.id]!.du - etat[b.id]!.du);
   neuves.sort((a, b) => a.niv - b.niv || a.id.localeCompare(b.id));
 
   const n = reglages.parSession;
   const pool = rondeParFormat(neuves);
-  const partNeuves = pool.slice(0, Math.max(1, Math.round(n * 0.4)));
-  let lot = [...dues.slice(0, n - partNeuves.length), ...partNeuves];
-  if (lot.length < n)
-    lot = lot.concat(pool.slice(partNeuves.length, partNeuves.length + (n - lot.length)));
-  if (lot.length < n) lot = lot.concat(dues.slice(lot.length, n));
+  const lot = pool.slice(0, n);
   const actifs = CORPUS.filter(ouvert);
-  const candidats = [...lot, ...dues, ...pool].filter(
+  const candidats = [...lot, ...pool].filter(
     (q, index, liste) => liste.findIndex((autre) => autre.id === q.id) === index,
   );
   return entrelacer(repartirParTheme(candidats, actifs, n, Math.floor(now / JOUR)));
