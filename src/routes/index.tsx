@@ -81,19 +81,9 @@ const TITRES_DECOUVERTE = [
   "Prendre de l'avance",
 ];
 
-const TITRES_REVISION = [
-  "Consolider le terrain",
-  "Repasser les points sensibles",
-  "Lever les points durs",
-  "Mettre le chantier au carré",
-  "Contrôler la mise en œuvre",
-  "Régler les derniers détails",
-];
-
-function titreMissionDuJour(aDesRevisions: boolean, maintenant = Date.now()): string {
-  const liste = aDesRevisions ? TITRES_REVISION : TITRES_DECOUVERTE;
+function titreMissionDuJour(maintenant = Date.now()): string {
   const jour = Math.floor(maintenant / 86_400_000);
-  return liste[jour % liste.length];
+  return TITRES_DECOUVERTE[jour % TITRES_DECOUVERTE.length];
 }
 
 

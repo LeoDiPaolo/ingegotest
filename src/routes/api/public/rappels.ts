@@ -98,7 +98,6 @@ function messagePour(
   cle: string,
 ) {
   const cartes = Object.values(ligne?.cartes ?? {});
-  const maintenant = Date.now();
   /* Questions encore à valider du premier coup : vues mais ratées, elles
      restent en jeu jusqu'à leur validation définitive. */
   const dues = cartes.filter((c) => c && c.vu && (c.p ?? 0) === 0).length;
