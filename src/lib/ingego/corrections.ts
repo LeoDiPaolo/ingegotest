@@ -5,7 +5,7 @@
 
 /* Commentaires déjà traités : une fois la question corrigée, l'observation
    n'a plus lieu d'être et disparaît de l'appareil à la prochaine ouverture. */
-export const VERSION_COMMENTAIRES = "2026-09-12b";
+export const VERSION_COMMENTAIRES = "2026-09-12c";
 
 export const COMMENTAIRES_TRAITES: string[] = [
   "n1-02",
