@@ -4,7 +4,7 @@ import { createFileRoute } from "@tanstack/react-router";
    (une fois par jour, 18 h heure de Paris). Protégée par un jeton partagé. */
 
 interface Carte {
-  du?: number;
+  p?: number;
   vu?: boolean;
 }
 
@@ -98,8 +98,9 @@ function messagePour(
   cle: string,
 ) {
   const cartes = Object.values(ligne?.cartes ?? {});
-  const maintenant = Date.now();
-  const dues = cartes.filter((c) => c && c.vu && (c.du ?? 0) <= maintenant).length;
+  /* Questions encore à valider du premier coup : vues mais ratées, elles
+     restent en jeu jusqu'à leur validation définitive. */
+  const dues = cartes.filter((c) => c && c.vu && (c.p ?? 0) === 0).length;
 
   const joursSession = new Set(
     (ligne?.journal ?? [])

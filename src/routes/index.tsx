@@ -81,19 +81,9 @@ const TITRES_DECOUVERTE = [
   "Prendre de l'avance",
 ];
 
-const TITRES_REVISION = [
-  "Consolider le terrain",
-  "Repasser les points sensibles",
-  "Lever les points durs",
-  "Mettre le chantier au carré",
-  "Contrôler la mise en œuvre",
-  "Régler les derniers détails",
-];
-
-function titreMissionDuJour(aDesRevisions: boolean, maintenant = Date.now()): string {
-  const liste = aDesRevisions ? TITRES_REVISION : TITRES_DECOUVERTE;
+function titreMissionDuJour(maintenant = Date.now()): string {
   const jour = Math.floor(maintenant / 86_400_000);
-  return liste[jour % liste.length];
+  return TITRES_DECOUVERTE[jour % TITRES_DECOUVERTE.length];
 }
 
 
@@ -117,16 +107,10 @@ function Reviser() {
     () => (pret ? resteAFaire(donnees.cartes, donnees.reglages, Date.now()) : 0),
     [donnees.cartes, donnees.reglages, pret],
   );
-  /* Révisions dues : cartes déjà vues dont l'échéance est atteinte. */
-  const revisionsDues = useMemo(
-    () =>
-      Object.values(donnees.cartes).some(
-        (carte) => carte?.vu && (carte.p ?? 0) >= 1 && (carte.du ?? 0) <= Date.now(),
-      ),
-    [donnees.cartes],
-  );
-  /* Titre du jour : cohérent avec le contenu réel de la mission. */
-  const titreMission = useMemo(() => titreMissionDuJour(revisionsDues), [revisionsDues]);
+  /* Une question validée du premier coup n'est plus jamais reposée : les
+     missions ne contiennent que des découvertes et des reprises de questions
+     ratées. Le titre du jour reste stable pendant la journée. */
+  const titreMission = useMemo(() => titreMissionDuJour(), []);
 
 
   const bilan = useMemo(() => {
@@ -482,7 +466,7 @@ function Reviser() {
                   {mission?.nouvelles ?? 0} nouvelles
                 </span>
                 <span className="rounded-full bg-primary/10 px-2 py-1 text-primary">
-                  {mission?.revisions ?? 0} révisions
+                  {mission?.revisions ?? 0} reprises
                 </span>
               </div>
               <div className="mt-2 grid grid-cols-2 gap-2 text-center sm:mt-4 sm:gap-3">
