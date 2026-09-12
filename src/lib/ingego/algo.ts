@@ -287,7 +287,10 @@ export function composerSession(etat: Etat, reglages: Reglages, now: number): Qu
   const repos = now - 12 * 3600000;
   const fraiches = neuves.filter((q) => (etat[q.id]?.dernier ?? 0) > repos);
   const reposees = neuves.filter((q) => (etat[q.id]?.dernier ?? 0) <= repos);
-  const pool = [...rondeParFormat(reposees), ...rondeParFormat(fraiches)];
+  const pool =
+    reposees.length >= n
+      ? rondeParFormat(reposees)
+      : [...rondeParFormat(reposees), ...rondeParFormat(fraiches)];
   const lot = pool.slice(0, n);
   const actifs = CORPUS.filter(ouvert);
   const candidats = [...lot, ...pool].filter(
