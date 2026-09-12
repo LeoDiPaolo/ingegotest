@@ -69,19 +69,11 @@ export function planifier(
     n.du = maintenant + JOUR;
     return n;
   }
-  if (note === 1) {
-    n.p = Math.max(1, c.p);
-    n.e = Math.max(1.5, c.e - 0.12);
-  }
-  if (note === 2) {
-    n.p = Math.min(PALIERS.length - 1, c.p + 1);
-  }
-  if (note === 3) {
-    n.p = Math.min(PALIERS.length - 1, c.p + 2);
-    n.e = Math.min(3.0, c.e + 0.12);
-  }
-  const jours = Math.max(1, Math.round((PALIERS[n.p] || 1) * (n.e / 2.3)));
-  n.du = maintenant + jours * JOUR;
+  /* Réussite du premier coup : la carte est validée définitivement et n'est
+     plus jamais reposée. Seules les questions ratées (ou jamais vues) restent
+     en jeu jusqu'à leur validation du premier coup. */
+  n.p = 1;
+  n.du = JAMAIS;
   return n;
 }
 
