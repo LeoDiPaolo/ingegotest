@@ -60,6 +60,9 @@ export const COMMENTAIRES_TRAITES: string[] = [
   "g-076",
   "g-077",
   "g-078",
+  "g-015",
+  "n1-61",
+  "g-105",
 ];
 
 /* Historique des questions révisées. Cette liste sert uniquement à réparer la
