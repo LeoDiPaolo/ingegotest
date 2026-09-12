@@ -107,10 +107,10 @@ function Reviser() {
     () => (pret ? resteAFaire(donnees.cartes, donnees.reglages, Date.now()) : 0),
     [donnees.cartes, donnees.reglages, pret],
   );
-  /* Une question validée du premier coup n'est plus jamais reposée : il n'y a
-     donc jamais de « révisions dues », seulement des découvertes et des
-     reprises de questions ratées. */
-  const titreMission = useMemo(() => titreMissionDuJour(false), []);
+  /* Une question validée du premier coup n'est plus jamais reposée : les
+     missions ne contiennent que des découvertes et des reprises de questions
+     ratées. Le titre du jour reste stable pendant la journée. */
+  const titreMission = useMemo(() => titreMissionDuJour(), []);
 
 
   const bilan = useMemo(() => {
