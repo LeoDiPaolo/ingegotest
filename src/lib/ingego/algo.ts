@@ -269,7 +269,16 @@ export function composerSession(etat: Etat, reglages: Reglages, now: number): Qu
       if (c.p === 0 && q.niv <= nivDe(q.axe)) neuves.push(q);
     } else if (q.niv <= nivDe(q.axe)) neuves.push(q);
   }
-  neuves.sort((a, b) => a.niv - b.niv || a.id.localeCompare(b.id));
+  /* À niveau égal, les cartes travaillées le plus récemment passent en dernier :
+     une question ratée ne revient donc pas dès la mission suivante tant qu'il
+     reste d'autres questions non validées du même niveau. Les cartes jamais
+     vues (dernier = 0) restent servies en premier. */
+  neuves.sort(
+    (a, b) =>
+      a.niv - b.niv ||
+      (etat[a.id]?.dernier ?? 0) - (etat[b.id]?.dernier ?? 0) ||
+      a.id.localeCompare(b.id),
+  );
 
   const n = reglages.parSession;
   const pool = rondeParFormat(neuves);
