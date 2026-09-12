@@ -281,7 +281,13 @@ export function composerSession(etat: Etat, reglages: Reglages, now: number): Qu
   );
 
   const n = reglages.parSession;
-  const pool = rondeParFormat(neuves);
+  /* Délai de repos : une question travaillée il y a moins de 12 h n'est reprise
+     que s'il n'existe plus assez d'autres questions non validées du même
+     chapitre. Elle revient donc plus tard, sans jamais sortir du niveau actif. */
+  const repos = now - 12 * 3600000;
+  const fraiches = neuves.filter((q) => (etat[q.id]?.dernier ?? 0) > repos);
+  const reposees = neuves.filter((q) => (etat[q.id]?.dernier ?? 0) <= repos);
+  const pool = [...rondeParFormat(reposees), ...rondeParFormat(fraiches)];
   const lot = pool.slice(0, n);
   const actifs = CORPUS.filter(ouvert);
   const candidats = [...lot, ...pool].filter(
