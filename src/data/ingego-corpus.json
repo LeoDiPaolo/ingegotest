@@ -9328,11 +9328,11 @@
       "sujet": "g-7",
       "niveau": 3,
       "famille": "S",
-      "explication": "Le critère matériel de la maîtrise d'ouvrage publique exige que l'opération porte sur un « ouvrage » de bâtiment ou de génie civil.",
-      "derniereVerification": "2026-08",
+      "explication": "Le régime de la maîtrise d'ouvrage publique s'applique lorsque deux critères sont réunis : un critère organique (le maître d'ouvrage est une personne publique ou assimilée) et un critère matériel (l'opération porte sur un ouvrage de bâtiment ou d'infrastructure / génie civil). Le critère matériel est donc la nature de l'opération : la réalisation d'un ouvrage, et non un simple achat de fournitures ou de services.",
+      "derniereVerification": "2026-09",
       "aVerifier": null,
       "type": "qcm",
-      "question": "Qu'est-ce que le critère matériel de la maîtrise d'ouvrage publique ?",
+      "question": "Dans le cadre de la maîtrise d'ouvrage publique (loi MOP, codifiée aux articles L.2410-1 et suivants du code de la commande publique), à quoi renvoie le critère matériel qui détermine si une opération relève de ce régime ?",
       "bonneReponse": 0,
       "options": [
         "L'opération doit être un « ouvrage » de bâtiment ou de génie civil.",
@@ -9513,30 +9513,30 @@
       "type": "echelle",
       "question": "Cliquez sur la tranche d'effectif correspondant à un ERP de 2ème catégorie.",
       "echelle_g": {
-        "titre": "Catégories d'ERP selon leur capacité d'accueil",
-        "unite": "personnes",
+        "titre": "Tranches d'effectif du public",
+        "unite": "personnes accueillies",
         "tranches": [
           {
-            "borne": "1 à 300",
-            "l": "4ème catégorie"
+            "borne": "au plus 300",
+            "l": ""
           },
           {
             "borne": "301 à 700",
-            "l": "3ème catégorie"
+            "l": ""
           },
           {
             "borne": "701 à 1500",
-            "l": "2ème catégorie"
+            "l": ""
           },
           {
             "borne": "plus de 1500",
-            "l": "1ère catégorie"
+            "l": ""
           }
         ]
       },
       "bonneCible": 2,
-      "explication": "Un ERP de 2ème catégorie correspond à un établissement pouvant accueillir de 701 à 1500 personnes (article R.123-19 du CCH).",
-      "derniereVerification": "2026-08",
+      "explication": "Un ERP de 2ème catégorie accueille de 701 à 1500 personnes (article R.143-19 du CCH). Pour mémoire : 1ère catégorie au-delà de 1500, 3ème de 301 à 700, 4ème jusqu'à 300, 5ème sous les seuils d'assujettissement propres à chaque type d'activité.",
+      "derniereVerification": "2026-09",
       "aVerifier": null
     },
     {
@@ -9565,15 +9565,15 @@
       "famille": "M",
       "type": "tri",
       "question": "Triez ces effectifs de public accueilli selon la catégorie d'ERP à laquelle ils correspondent.",
-      "colonnes": ["1ère catégorie", "2ème à 3ème catégorie", "4ème à 5ème catégorie"],
+      "colonnes": ["1ère catégorie", "2ème catégorie", "3ème catégorie", "4ème ou 5ème catégorie"],
       "elements": [
         ["Plus de 1500 personnes", 0],
         ["De 701 à 1500 personnes", 1],
-        ["De 301 à 700 personnes", 1],
-        ["Effectif n'atteignant pas le seuil d'assujettissement", 2]
+        ["De 301 à 700 personnes", 2],
+        ["Au plus 300 personnes", 3]
       ],
-      "explication": "Les seuils d'effectif des catégories d'ERP sont fixés par l'article R.123-19 du CCH : plus de 1500 personnes pour la 1ère catégorie, de 701 à 1500 pour la 2ème, de 301 à 700 pour la 3ème, en dessous pour les 4ème et 5ème catégories. En savoir plus — ERP : établissement recevant du public, soumis à un règlement de sécurité incendie et à des obligations d'accessibilité selon son type d'activité et sa catégorie d'effectif.",
-      "derniereVerification": "2026-08",
+      "explication": "Les seuils d'effectif des catégories d'ERP sont fixés par l'article R.143-19 du CCH (ex-R.123-19) : plus de 1500 personnes pour la 1ère catégorie, de 701 à 1500 pour la 2ème, de 301 à 700 pour la 3ème, 300 et moins pour la 4ème ; la 5ème catégorie regroupe les petits établissements dont l'effectif du public reste sous les seuils d'assujettissement fixés par type d'activité. En savoir plus — ERP : établissement recevant du public, soumis à un règlement de sécurité incendie et à des obligations d'accessibilité selon son type d'activité et sa catégorie d'effectif.",
+      "derniereVerification": "2026-09",
       "aVerifier": null
     },
     {
@@ -9587,30 +9587,30 @@
       "type": "echelle",
       "question": "Retrouvez la catégorie d'ERP correspondant à un établissement pouvant accueillir de 301 à 700 personnes.",
       "echelle_g": {
-        "titre": "Catégories d'ERP selon l'effectif accueilli",
-        "unite": "personnes",
+        "titre": "Catégories d'ERP",
+        "unite": "catégorie de classement",
         "tranches": [
           {
-            "borne": "plus de 1500",
-            "l": "1ère catégorie"
+            "borne": "1ère",
+            "l": ""
           },
           {
-            "borne": "701 à 1500",
-            "l": "2ème catégorie"
+            "borne": "2ème",
+            "l": ""
           },
           {
-            "borne": "301 à 700",
-            "l": "3ème catégorie"
+            "borne": "3ème",
+            "l": ""
           },
           {
-            "borne": "moins du seuil d'assujettissement",
-            "l": "5ème catégorie"
+            "borne": "4ème",
+            "l": ""
           }
         ]
       },
       "bonneCible": 2,
-      "explication": "Un ERP de 3ème catégorie correspond à un établissement pouvant accueillir de 301 à 700 personnes (article R.123-19 du CCH).",
-      "derniereVerification": "2026-08",
+      "explication": "Un établissement accueillant de 301 à 700 personnes relève de la 3ème catégorie (article R.143-19 du CCH). Au-delà de 1500 : 1ère catégorie ; de 701 à 1500 : 2ème ; jusqu'à 300 : 4ème ; en dessous des seuils d'assujettissement : 5ème.",
+      "derniereVerification": "2026-09",
       "aVerifier": null
     },
     {
@@ -10906,15 +10906,15 @@
       "sujet": "g-1",
       "niveau": 4,
       "famille": "M",
-      "explication": "Ces trois actes ont transféré progressivement des compétences de l'État vers les collectivités : lois Defferre (1982-1983), Acte II (révision constitutionnelle de 2003 et loi du 13 août 2004), Acte III (MAPTAM du 27 janvier 2014 et NOTRe du 7 août 2015).",
-      "derniereVerification": "2026-08",
+      "explication": "Acte I (1982-1983) — lois Defferre : suppression de la tutelle administrative a priori du préfet (remplacée par le contrôle de légalité a posteriori), transfert de l'exécutif départemental et régional aux présidents d'assemblée, premiers blocs de compétences (action sociale aux départements, lycées aux régions, urbanisme aux communes). Acte II (2003-2004) — loi constitutionnelle du 28 mars 2003 qui inscrit à l'article 1er que l'organisation de la République est décentralisée et crée l'autonomie financière, le droit à l'expérimentation et le référendum local ; loi du 13 août 2004 relative aux libertés et responsabilités locales qui transfère notamment les routes nationales, les personnels TOS et une partie du logement social. Acte III (2014-2015) — loi MAPTAM du 27 janvier 2014 qui crée les métropoles et les chefs de filat, loi du 16 janvier 2015 sur les 13 régions, loi NOTRe du 7 août 2015 qui supprime la clause générale de compétence des départements et régions et renforce les intercommunalités.",
+      "derniereVerification": "2026-09",
       "aVerifier": null,
       "type": "ordre",
       "question": "Remettez dans l'ordre chronologique les grandes étapes de la décentralisation en France, dont procèdent les compétences déléguées par l'État.",
       "items": [
-        "Acte I (lois Defferre, 1982-1983)",
-        "Acte II (loi constitutionnelle et loi Libertés et responsabilités locales, 2003-2004)",
-        "Acte III (lois MAPTAM et NOTRe, 2014-2015)"
+        "Lois Defferre : suppression de la tutelle a priori et transfert de l'exécutif départemental au président du conseil général",
+        "Révision constitutionnelle « organisation décentralisée de la République » puis loi Libertés et responsabilités locales",
+        "Lois MAPTAM et NOTRe : affirmation des métropoles et nouvelle répartition des compétences"
       ]
     },
     {
@@ -11538,8 +11538,8 @@
         "Un extrait de casier judiciaire n°1 transmis à l'employeur"
       ],
       "bonneReponse": 0,
-      "explication": "L'article L.325-1 du CGFP exige un bulletin n°2 du casier judiciaire mentionnant l'absence de condamnations incompatibles avec l'exercice des fonctions.",
-      "derniereVerification": "2026-08",
+      "explication": "L'article L.325-1 du CGFP exige un bulletin n°2 du casier judiciaire ne comportant pas de mentions incompatibles avec l'exercice des fonctions. En savoir plus — le bulletin n°1 est le relevé intégral des condamnations, délivré uniquement aux autorités judiciaires ; le bulletin n°2 comporte la plupart des condamnations, hors condamnations de mineurs, contraventions et condamnations amnistiées ou effacées, et n'est délivré qu'à certaines administrations, dont les employeurs publics lors d'un recrutement ; le bulletin n°3 est le plus restreint (peines les plus lourdes) et n'est remis qu'à la personne elle-même, souvent demandé par un employeur privé. La condition n'est donc pas un casier vierge, mais l'absence de mentions incompatibles avec les fonctions visées, appréciée au cas par cas.",
+      "derniereVerification": "2026-09",
       "aVerifier": null
     },
     {
@@ -12060,8 +12060,8 @@
       "question": "La gestion des espaces naturels est une compétence partagée entre toutes les collectivités et l'État.",
       "vrai": true,
       "justification": "En matière d'environnement, l'article L. 1111-4 du CGCT organise un régime de compétences partagées, notamment pour la gestion des espaces naturels, entre communes, départements, régions et l'État.",
-      "explication": "L'article L. 1111-4 du CGCT range l'environnement, dont la gestion des espaces naturels, parmi les compétences partagées entre toutes les collectivités et l'État.",
-      "derniereVerification": "2026-08",
+      "explication": "L'article L. 1111-4 du CGCT range l'environnement parmi les compétences partagées entre toutes les collectivités et l'État. En savoir plus — exemples concrets : la commune ou l'EPCI gère les espaces verts, les sentiers de randonnée et peut instaurer des zones de protection ; le département met en œuvre la politique des Espaces naturels sensibles (ENS), financée par la part départementale de la taxe d'aménagement, et gère les plans départementaux des itinéraires de promenade et de randonnée ; la région pilote les parcs naturels régionaux et la stratégie biodiversité du SRADDET ; l'État classe les parcs nationaux, les réserves naturelles nationales et les sites Natura 2000. Les syndicats mixtes et le Conservatoire du littoral interviennent en complément.",
+      "derniereVerification": "2026-09",
       "aVerifier": null
     },
     {
@@ -12537,30 +12537,34 @@
       "sujet": "g-1",
       "niveau": 3,
       "famille": "M",
-      "explication": "Le mandat présidentiel a été ramené à 5 ans par la réforme du quinquennat (2000) et coïncide avec celui des députés ; sénateurs et élus locaux sont élus pour 6 ans.",
+      "explication": "Le mandat présidentiel dure 5 ans depuis la réforme du quinquennat (loi constitutionnelle du 2 octobre 2000) ; il était de 7 ans auparavant. Les députés sont également élus pour 5 ans. En savoir plus — les sénateurs sont élus pour 6 ans (renouvellement par moitié tous les 3 ans), les conseillers municipaux, départementaux et régionaux pour 6 ans, les représentants français au Parlement européen pour 5 ans.",
       "type": "echelle",
       "question": "Cliquez sur la durée correspondant au mandat présidentiel ou de député.",
-      "derniereVerification": "2026-08",
+      "derniereVerification": "2026-09",
       "aVerifier": null,
       "echelle_g": {
-        "titre": "Durée de quelques mandats nationaux",
-        "unite": "ans",
+        "titre": "Durées de mandat possibles",
+        "unite": "années de mandat",
         "tranches": [
           {
-            "borne": "Président / Député",
-            "l": "5 ans"
+            "borne": "4 ans",
+            "l": ""
           },
           {
-            "borne": "Sénateur",
-            "l": "6 ans"
+            "borne": "5 ans",
+            "l": ""
           },
           {
-            "borne": "Conseiller départemental",
-            "l": "6 ans"
+            "borne": "6 ans",
+            "l": ""
+          },
+          {
+            "borne": "7 ans",
+            "l": ""
           }
         ]
       },
-      "bonneCible": 0
+      "bonneCible": 1
     },
     {
       "id": "g-259",
