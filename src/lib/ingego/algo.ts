@@ -35,6 +35,10 @@ export interface Reglages {
 }
 
 export const PALIERS = [0, 1, 3, 7, 16, 35, 75, 160];
+
+/* Échéance placée à l'infini pour les cartes validées du premier coup :
+   elles ne doivent plus jamais être reposées. */
+export const JAMAIS = 8.64e15;
 export const JOUR = 86400000;
 
 export const carteNeuve = (): Carte => ({
