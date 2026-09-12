@@ -8437,7 +8437,7 @@
       "sujet": "g-0",
       "niveau": 4,
       "famille": "S",
-      "explication": "La rédaction d'une note assortie de propositions à partir d'un dossier, dans la spécialité choisie à l'inscription (durée 5 heures, coefficient 5).\n\nTextes de référence : décret n° 2016-201 et décret n° 2016-206 du 26 février 2016 (statut particulier et concours des ingénieurs territoriaux). Vérifié en août 2026.",
+      "explication": "La rédaction d'une note assortie de propositions à partir d'un dossier, dans la spécialité choisie à l'inscription (durée 5 heures, coefficient 5). C'est l'unique épreuve d'admissibilité de l'externe.\n\nDéroulé : un dossier de 25 à 40 pages (textes, rapports, articles techniques, schémas) et une commande précise émanant en général d'un exécutif local. Le rendu attendu est une note administrative pour un commanditaire identifié : en-tête (collectivité, émetteur, destinataire, objet, références), un chapeau introductif, puis un plan en deux parties apparentes et titrées — d'abord le constat/diagnostic tiré du seul dossier, ensuite des propositions opérationnelles, hiérarchisées, chiffrées quand c'est possible, avec conditions de mise en œuvre.\n\nRépartition du temps conseillée sur 5 heures : 15 min pour analyser la commande, 1 h 15 à 1 h 30 de lecture active du dossier avec repérage des idées par document, 30 à 40 min pour construire le plan et les propositions, 2 h à 2 h 15 de rédaction au propre, 15 à 20 min de relecture (orthographe, cohérence des chiffres, titres).\n\nConseils : n'apporter aucune connaissance extérieure contredisant le dossier, mais mobiliser sa culture professionnelle pour les propositions ; citer les documents entre parenthèses (doc. 3) ; rester neutre et impersonnel (pas de « je ») ; viser 6 à 8 pages manuscrites ; soigner les titres, qui doivent se lire seuls.\n\nExemples de sujets déjà posés en spécialité bâtiments-génie civil : « La rénovation énergétique du patrimoine bâti communal », « La prévention des risques sur les chantiers de la collectivité », « La stratégie de maintenance du parc immobilier ». L'admission comporte ensuite un entretien de 20 minutes avec le jury (coefficient 5).\n\nTextes de référence : décret n° 2016-201 et décret n° 2016-206 du 26 février 2016 (statut particulier et concours des ingénieurs territoriaux). Vérifié en septembre 2026.",
       "derniereVerification": "2026-08",
       "aVerifier": null,
       "type": "qcm",
@@ -10025,7 +10025,18 @@
       "question": "Complétez le sigle désignant un système de pilotage intelligent des bâtiments.",
       "texte": "BACS signifie Building {1} and {2} {3}, un système de pilotage {4} pour bâtiments.",
       "mots": ["Automation", "Control", "System", "intelligent"],
-      "leurres": ["Access", "Management", "Basique", "Manuel"],
+      "leurres": [
+        "Supervision",
+        "Software",
+        "Structure",
+        "Access",
+        "Management",
+        "Command",
+        "Coordination",
+        "Analytics",
+        "connecté",
+        "manuel"
+      ],
       "explication": "Le sigle BACS (Building Automation and Control System) désigne un système de gestion technique automatisée qui pilote le chauffage, la ventilation, la climatisation et l'éclairage d'un bâtiment tertiaire. Son installation est rendue obligatoire par le décret dit « BACS » codifié au code de la construction et de l'habitation, avec une échéance étendue à 2030 pour certains bâtiments selon la puissance de leurs équipements de chauffage ou de climatisation.",
       "derniereVerification": "2026-09",
       "aVerifier": false
@@ -16953,7 +16964,7 @@
         "titre": "Actes de la décentralisation",
         "legende": "Placez le curseur sur l'acte I."
       },
-      "explication": "La loi du 2 mars 1982 relative aux droits et libertés des communes, des départements et des régions supprime la tutelle a priori du préfet, transfère l'exécutif départemental au président du conseil général et fait de la région une collectivité territoriale de plein exercice, effective en 1986. Elle ouvre l'acte I de la décentralisation, complété en 2003-2004 puis par les lois MAPTAM et NOTRe.",
+      "explication": "La loi du 2 mars 1982 relative aux droits et libertés des communes, des départements et des régions supprime la tutelle a priori du préfet, transfère l'exécutif départemental au président du conseil général et fait de la région une collectivité territoriale de plein exercice, effective en 1986. Elle ouvre l'acte I, complété par les lois de transfert de compétences de 1983 puis par la révision constitutionnelle de 2003 et la loi de 2004 (acte II).\n\nLoi MAPTAM du 27 janvier 2014 (modernisation de l'action publique territoriale et affirmation des métropoles) : elle rétablit la clause de compétence générale (supprimée ensuite par NOTRe pour départements et régions), crée le statut de métropole de droit commun et les statuts particuliers de Paris, Lyon et Aix-Marseille-Provence, institue les chefs de file (région pour le développement économique, département pour la solidarité, bloc communal pour la mobilité et la qualité de l'air) et les conférences territoriales de l'action publique (CTAP).\n\nLoi NOTRe du 7 août 2015 (nouvelle organisation territoriale de la République) : elle supprime la clause de compétence générale des départements et des régions, renforce la région (développement économique avec le SRDEII prescriptif, aménagement avec le SRADDET, transports interurbains et scolaires, gestion des lycées), recentre le département sur la solidarité sociale et territoriale et les collèges, relève le seuil des intercommunalités à 15 000 habitants et transfère obligatoirement l'eau et l'assainissement aux communautés.",
       "aVerifier": false,
       "derniereVerification": "2026-09"
     },
