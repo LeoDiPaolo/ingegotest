@@ -476,7 +476,7 @@ function Reviser() {
                   {mission?.nouvelles ?? 0} nouvelles
                 </span>
                 <span className="rounded-full bg-primary/10 px-2 py-1 text-primary">
-                  {mission?.revisions ?? 0} révisions
+                  {mission?.revisions ?? 0} reprises
                 </span>
               </div>
               <div className="mt-2 grid grid-cols-2 gap-2 text-center sm:mt-4 sm:gap-3">

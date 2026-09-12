@@ -4,7 +4,7 @@ import { createFileRoute } from "@tanstack/react-router";
    (une fois par jour, 18 h heure de Paris). Protégée par un jeton partagé. */
 
 interface Carte {
-  du?: number;
+  p?: number;
   vu?: boolean;
 }
 
