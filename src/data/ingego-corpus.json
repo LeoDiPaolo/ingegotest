@@ -841,7 +841,7 @@
       "question": "Seuil de procédure formalisée pour un marché public de travaux, période 2026-2027.",
       "options": ["5 538 000 € HT", "5 404 000 € HT", "5 350 000 € HT", "5 225 000 € HT"],
       "bonneReponse": 1,
-      "explication": "Les seuils européens de procédure formalisée sont révisés tous les deux ans et ont historiquement plutôt augmenté (5 350 000 € HT en 2020-2021, 5 382 000 € en 2022-2023, 5 538 000 € en 2024-2025). Le montant retenu ici pour 2026-2027 (5 404 000 € HT) doit être confirmé au règlement délégué publié par la Commission européenne fin 2025, la trajectoire affichée en baisse n'étant pas cohérente avec les cycles précédents. En savoir plus — procédure formalisée : au-delà des seuils européens, l'acheteur doit suivre une procédure strictement encadrée (appel d'offres, procédure avec négociation, dialogue compétitif) avec publicité au BOAMP et au JOUE, délais minimaux de remise des offres et impossibilité de négocier librement.",
+      "explication": "Le seuil de procédure formalisée pour les marchés de travaux est de 5 404 000 € HT pour la période 2026-2027 : ce montant est confirmé. Source : règlements délégués (UE) 2025/2150, 2025/2151 et 2025/2152 de la Commission du 22 octobre 2025, publiés au JOUE, repris par un avis relatif aux seuils de procédure publié au Journal officiel et par la DAJ de Bercy (economie.gouv.fr, janvier 2026). Les seuils sont révisés tous les deux ans en fonction de la parité euro / droits de tirage spéciaux : après 5 350 000 € (2020-2021), 5 382 000 € (2022-2023) et 5 538 000 € (2024-2025), 2026-2027 marque une légère baisse. En savoir plus — au-delà de ce seuil, l'acheteur doit suivre une procédure strictement encadrée (appel d'offres, procédure avec négociation, dialogue compétitif), avec délais minimaux de remise des offres et publicité obligatoire. Le BOAMP (Bulletin officiel des annonces des marchés publics) est le support national de publicité édité par la DILA ; le JOUE (Journal officiel de l'Union européenne), via la plateforme TED, est le support européen. Au-dessus des seuils européens, la double publication BOAMP + JOUE est obligatoire ; en procédure adaptée, la publicité est adaptée au montant et à l'objet (profil d'acheteur, presse spécialisée, BOAMP).",
       "derniereVerification": "2026-09",
       "aVerifier": false
     },
@@ -5038,8 +5038,8 @@
       "type": "erreur",
       "question": "Note de lancement de travaux de voirie. Repérez la phrase fautive. Les phrases se lisent à la suite, comme un seul texte.",
       "phraseFautive": 1,
-      "explication": "En cas d'endommagement de réseau, l'absence de DICT est le premier élément recherché, et elle déplace la responsabilité vers l'entreprise — mais aussi vers le maître d'ouvrage qui a laissé démarrer les travaux sans la vérifier.",
-      "derniereVerification": "2026-08",
+      "explication": "En cas d'endommagement de réseau, l'absence de DICT est le premier élément recherché, et elle déplace la responsabilité vers l'entreprise — mais aussi vers le maître d'ouvrage qui a laissé démarrer les travaux sans la vérifier. En savoir plus — la procédure DT/DICT (articles R. 554-1 et suivants du code de l'environnement) s'applique à TOUS les travaux réalisés à proximité de réseaux, quel que soit le statut du terrain : domaine public routier, domaine privé de la collectivité ou parcelle privée. Exemples : réfection d'une rue communale (domaine public), création d'un parking sur une parcelle privée de la commune, terrassement d'un lotissement privé, plantation d'arbres dans un parc, pose d'une clôture par un particulier — dans chaque cas le maître d'ouvrage dépose la DT en phase études et l'exécutant sa DICT avant travaux, puis le marquage-piquetage est réalisé. Seule la nature des travaux (et non la propriété du sol) peut dispenser de déclaration : travaux très superficiels sans impact sur les réseaux, urgence justifiée pour la sécurité.",
+      "derniereVerification": "2026-09",
       "aVerifier": null,
       "segments": [
         "La déclaration de projet de travaux a été adressée aux exploitants de réseaux en phase études par nos services.",
@@ -9365,12 +9365,12 @@
       "sujet": "g-7",
       "niveau": 4,
       "famille": "S",
-      "explication": "Non, un contrat de concession n'est pas soumis aux règles de la maîtrise d'ouvrage publique : seuls les marchés publics de travaux ou globaux y sont soumis.",
+      "explication": "Non, un contrat de concession n'est pas soumis aux règles de la maîtrise d'ouvrage publique : seuls les marchés publics de travaux ou globaux y sont soumis. En savoir plus — un contrat de concession (articles L. 1121-1 et suivants du code de la commande publique) est le contrat par lequel une autorité concédante confie à un opérateur économique l'exécution de travaux ou la gestion d'un service, en transférant un risque lié à l'exploitation : la rémunération du concessionnaire provient de l'exploitation de l'ouvrage ou du service (recettes des usagers), pas d'un prix payé par l'acheteur. Exemples : délégation de service public de l'eau ou des cantines, concession d'un parking public, d'une remontée mécanique, d'un réseau de chaleur, concession de travaux pour construire et exploiter une piscine. Comme le concessionnaire exploite pour son compte et assume le risque, il est maître d'ouvrage de ses propres travaux : les règles de la loi MOP (programme, enveloppe financière, missions de maîtrise d'œuvre, concours) ne s'appliquent pas. La différence avec le marché public tient au mode de rémunération et au transfert du risque d'exploitation.",
       "type": "vf",
       "question": "Un contrat de concession est-il soumis aux règles de la maîtrise d'ouvrage publique ?",
       "vrai": false,
       "justification": "Seuls les marchés publics de travaux ou globaux relèvent du régime de la maîtrise d'ouvrage publique, à l'exclusion des contrats de concession.",
-      "derniereVerification": "2026-08",
+      "derniereVerification": "2026-09",
       "aVerifier": null
     },
     {
@@ -10778,8 +10778,8 @@
       "question": "Un contrat de Bail Emphytéotique Administratif (BEA) est-il régi par la loi MOP ?",
       "vrai": false,
       "justification": "Non, sauf en cas de requalification judiciaire s'il dissimule en réalité un marché public de travaux (détournement). La loi MOP est aujourd'hui codifiée au Code de la commande publique depuis 2019.",
-      "explication": "Non, le BEA n'est pas régi par la loi MOP, sauf requalification judiciaire s'il dissimule un marché public de travaux. La loi MOP est codifiée depuis 2019 au Code de la commande publique. En savoir plus — loi MOP : règles historiques de la maîtrise d'ouvrage publique et de ses rapports avec la maîtrise d'œuvre privée, aujourd'hui codifiées dans le code de la commande publique.",
-      "derniereVerification": "2026-08",
+      "explication": "Non, le BEA n'est pas régi par la loi MOP, sauf requalification judiciaire s'il dissimule un marché public de travaux. La loi MOP est codifiée depuis 2019 au Code de la commande publique. En savoir plus — le bail emphytéotique administratif (articles L. 1311-2 et suivants du CGCT) est un bail de longue durée, de 18 à 99 ans, par lequel une collectivité met un bien immobilier de son domaine à disposition d'un preneur, à charge pour celui-ci de construire, financer et entretenir un ouvrage, moyennant une redevance modique. Le preneur dispose d'un droit réel immobilier sur les constructions, ce qui lui permet de les hypothéquer pour se financer ; à l'échéance du bail, l'ouvrage revient gratuitement à la collectivité. Exemples classiques : BEA cultuel pour la construction d'un lieu de culte, BEA pour une maison de santé, une caserne de gendarmerie ou de pompiers, un EHPAD, une salle de sport ou un équipement associatif, un parking en ouvrage, une centrale photovoltaïque sur un terrain communal. Comme la collectivité n'est pas maître d'ouvrage des travaux, la loi MOP ne s'applique pas ; en revanche, si le BEA a en réalité pour objet de faire réaliser un ouvrage répondant aux besoins de la collectivité et qu'elle en paye le coût, le juge le requalifie en marché public de travaux, avec application des règles de publicité, de mise en concurrence et de maîtrise d'ouvrage publique.",
+      "derniereVerification": "2026-09",
       "aVerifier": null
     },
     {
@@ -10976,8 +10976,8 @@
       "sujet": "g-1",
       "niveau": 4,
       "famille": "M",
-      "explication": "En déconcentration, le pouvoir de décision reste dans l'État mais est délégué à des agents nommés (préfets, directeurs départementaux) soumis au pouvoir hiérarchique du pouvoir central : l'État demeure la seule personne morale.",
-      "derniereVerification": "2026-08",
+      "explication": "En déconcentration, le pouvoir de décision reste dans l'État mais est délégué à des agents nommés (préfets, directeurs départementaux) soumis au pouvoir hiérarchique du pouvoir central : l'État demeure la seule personne morale. En savoir plus — l'autorité hiérarchique est le pouvoir qu'un supérieur exerce de plein droit, sans texte, sur ses subordonnés. Elle comporte un pouvoir sur les personnes (nomination, notation, affectation, discipline) et un pouvoir sur les actes : instruction (ordre donné a priori), réformation (modification d'une décision du subordonné) et annulation, pour illégalité comme pour simple inopportunité. Le subordonné doit obéir, sauf ordre manifestement illégal et de nature à compromettre gravement un intérêt public (jurisprudence Langneur, CE 1944). À ne pas confondre avec la tutelle, puis le contrôle de légalité, exercé sur les collectivités décentralisées : là, l'autorité de l'État ne peut ni réformer ni annuler un acte, elle ne peut que le déférer au juge administratif, et seulement pour illégalité — c'est toute la différence entre déconcentration (une seule personne morale, l'État) et décentralisation (des personnes morales distinctes et autonomes).",
+      "derniereVerification": "2026-09",
       "aVerifier": null,
       "type": "trous",
       "question": "Complétez la phrase sur l'exercice du pouvoir en déconcentration.",
@@ -13472,8 +13472,8 @@
       "sujet": "g-3",
       "niveau": 4,
       "famille": "M",
-      "explication": "Ce sont le critère matériel, le critère organique et le critère de moyens.",
-      "derniereVerification": "2026-08",
+      "explication": "Ce sont le critère matériel, le critère organique et le critère de moyens. En savoir plus — critère matériel : l'activité doit répondre à un besoin d'intérêt général (transport scolaire, distribution d'eau, culture, secours) ; l'intérêt général est apprécié souverainement par le juge et évolue dans le temps. Critère organique : l'activité est assurée par une personne publique, ou par une personne privée sous le contrôle d'une personne publique — un délégataire, une association subventionnée et encadrée, une SPL ; le juge vérifie la création, le financement, la fixation des objectifs et le contrôle des résultats (CE 2007, APREI). Critère de moyens : la personne privée dispose de prérogatives de puissance publique (pouvoir de décision unilatérale, monopole, perception de redevances obligatoires) ; il n'est plus indispensable depuis la jurisprudence APREI, un faisceau d'indices suffit. Point clé pour le concours : c'est la combinaison intérêt général + contrôle public qui qualifie le service public, les prérogatives n'étant qu'un indice supplémentaire (CE 1963 Narcy, CE 1990 Ville de Melun, CE 2007 APREI).",
+      "derniereVerification": "2026-09",
       "aVerifier": null,
       "type": "assoc",
       "question": "Associez chaque critère jurisprudentiel du service public à sa définition.",
@@ -15353,7 +15353,7 @@
         "Oui : si le marché a directement pour objet la protection de l'environnement ou un impact social, cela est valorisable au titre des clauses"
       ],
       "bonneReponse": 3,
-      "explication": "Si le marché a directement pour objet la valorisation et la protection de l'environnement ou la création d'un impact social (dépollution des sols, construction bas carbone, marché d'insertion professionnelle), cela est valorisable au sens de l'article 35 pour les clauses. À l'inverse, une simple prestation d'étude de la biodiversité ou des travaux de promenade végétalisée ne suffisent pas.",
+      "explication": "Si le marché a directement pour objet la valorisation et la protection de l'environnement ou la création d'un impact social (dépollution des sols, construction bas carbone, marché d'insertion professionnelle), cela est valorisable au titre des clauses. À l'inverse, une simple prestation d'étude de la biodiversité ou des travaux de promenade végétalisée ne suffisent pas. En savoir plus — faut-il quand même écrire une clause ? Oui. L'obligation résulte de l'article 35 de la loi Climat et résilience du 22 août 2021, codifié à l'article L. 2112-2 du code de la commande publique : « Les conditions d'exécution prennent en compte des considérations relatives à l'environnement » — la loi vise les conditions d'exécution du marché, c'est-à-dire une clause figurant dans les pièces contractuelles (CCAP, CCTP), et non le seul objet du marché. Un objet déjà environnemental facilite et crédibilise la rédaction de cette clause (objectifs de dépollution, traçabilité des terres, valorisation des déblais), mais ne dispense pas de l'insérer explicitement, ni de prévoir des modalités de suivi et de sanction. À noter : l'obligation s'applique à tous les marchés à compter du 22 août 2026 (article 35 III de la loi et décret n° 2022-767) ; le critère environnemental d'attribution (L. 2152-7) obéit, lui, à une logique distincte.",
       "derniereVerification": "2026-09",
       "aVerifier": false
     },
