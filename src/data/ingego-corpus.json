@@ -8,7 +8,7 @@
     },
     "genere": "2026-07-30",
     "version": "2026-09",
-    "totalQuestions": 825,
+    "totalQuestions": 870,
     "schema": "Chaque question porte : id, axe (A1-A6), sousTheme, sujet (clé de progression par niveaux), niveau (1-3), famille (S stable / M mouvant / E enjeu), type, les champs propres au type, explication, et le cas échéant derniereVerification (AAAA-MM) et aVerifier."
   },
   "axes": [
@@ -50,7 +50,8 @@
         "RE2020 et thermique",
         "Accessibilité",
         "Sécurité incendie ERP",
-        "Confort, santé, pathologies"
+        "Confort, santé, pathologies",
+        "Réhabilitation énergétique du bâti patrimonial"
       ]
     },
     {
@@ -18367,6 +18368,1050 @@
       "explication": "De nombreux candidats ne prennent pas la hauteur suffisante et se cantonnent à leur positionnement actuel, alors que le jury attend une capacité à se projeter sur des fonctions d'encadrement. Source : CDG Loire-Atlantique, Rapport du président du jury, concours d'ingénieur territorial, session 2023, consulté le 10/09/2026, https://www.cdg44.fr/sites/default/files/content/fiche_concours_examens/pdf/Rapport%20jury%20INGE%2023.pdf",
       "derniereVerification": "2026-09",
       "aVerifier": false
+    },
+    {
+      "id": "pat-01",
+      "axe": "A3",
+      "sousTheme": "Réhabilitation énergétique du bâti patrimonial",
+      "stIdx": 6,
+      "sujet": "bp-protection",
+      "niveau": 1,
+      "famille": "S",
+      "question": "Quelle est la protection patrimoniale la plus forte pouvant s'appliquer à un immeuble ?",
+      "explication": "Le classement au titre des monuments historiques est la protection la plus forte ; l'inscription est un niveau de protection inférieur. Les deux nécessitent des déclarations et autorisations spécifiques auprès de la DRAC. Source : Guide de réhabilitation énergétique du bâti d'intérêt patrimonial, Cerema / ministère de la Ville et du Logement / ministère de la Culture, juillet 2026.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null,
+      "type": "qcm",
+      "options": [
+        "L'inscription au titre des monuments historiques",
+        "Le classement au titre des monuments historiques",
+        "Le site patrimonial remarquable (SPR)",
+        "Le site inscrit"
+      ],
+      "bonneReponse": 1
+    },
+    {
+      "id": "pat-02",
+      "axe": "A3",
+      "sousTheme": "Réhabilitation énergétique du bâti patrimonial",
+      "stIdx": 6,
+      "sujet": "bp-protection",
+      "niveau": 3,
+      "famille": "S",
+      "question": "Abords d'un monument historique sans périmètre délimité des abords (PDA) : réglez le curseur sur le rayon de protection par défaut.",
+      "explication": "À défaut de périmètre délimité des abords (PDA), la zone de co-visibilité par défaut est un rayon de 500 mètres autour du monument historique. Le PDA, quand il existe, peut être plus restreint ou plus large que ce rayon pour mieux s'adapter au contexte. Source : Guide de réhabilitation énergétique du bâti d'intérêt patrimonial, Cerema / ministère de la Ville et du Logement / ministère de la Culture, juillet 2026.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null,
+      "type": "curseur",
+      "curseur": {
+        "titre": "Rayon de co-visibilité par défaut",
+        "unite": "mètres",
+        "min": 0,
+        "max": 1000,
+        "pas": 100,
+        "cible": 500,
+        "tolerance": 0,
+        "legende": "Faites glisser jusqu'au rayon applicable à défaut de PDA."
+      }
+    },
+    {
+      "id": "pat-03",
+      "axe": "A3",
+      "sousTheme": "Réhabilitation énergétique du bâti patrimonial",
+      "stIdx": 6,
+      "sujet": "bp-protection",
+      "niveau": 5,
+      "famille": "S",
+      "question": "Un site patrimonial remarquable (SPR) peut être encadré par deux types de documents. Lequel de ces couples est correct ?",
+      "explication": "Un SPR est encadré soit par un plan de valorisation de l'architecture et du patrimoine (PVAP), soit par un plan de sauvegarde et de mise en valeur (PSMV) — ce dernier étant le document le plus contraignant, qui peut aussi réglementer l'intérieur des bâtiments. Source : Guide de réhabilitation énergétique du bâti d'intérêt patrimonial, Cerema / ministère de la Ville et du Logement / ministère de la Culture, juillet 2026.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null,
+      "type": "qcm",
+      "options": [
+        "Le PLU et le POS",
+        "Le plan de valorisation de l'architecture et du patrimoine (PVAP) et le plan de sauvegarde et de mise en valeur (PSMV)",
+        "Le PDA et l'OAP",
+        "La charte du PNR et le règlement du CAUE"
+      ],
+      "bonneReponse": 1
+    },
+    {
+      "id": "pat-04",
+      "axe": "A3",
+      "sousTheme": "Réhabilitation énergétique du bâti patrimonial",
+      "stIdx": 6,
+      "sujet": "bp-protection",
+      "niveau": 6,
+      "famille": "S",
+      "question": "Un site classé ou inscrit au titre du code de l'environnement protège en priorité :",
+      "explication": "Les sites classés ou inscrits relèvent du code de l'environnement et protègent des paysages remarquables et des monuments naturels dont la beauté, la singularité ou la valeur de mémoire justifient une protection nationale ; contrairement aux abords ou SPR, ils ne sont pas gérés par le code du patrimoine. Source : Guide de réhabilitation énergétique du bâti d'intérêt patrimonial, Cerema / ministère de la Ville et du Logement / ministère de la Culture, juillet 2026.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null,
+      "type": "qcm",
+      "options": [
+        "Le style architectural intérieur des logements",
+        "Des paysages remarquables et des monuments naturels",
+        "Uniquement les monuments historiques classés",
+        "Les seuls bâtiments construits avant 1948"
+      ],
+      "bonneReponse": 1
+    },
+    {
+      "id": "pat-05",
+      "axe": "A3",
+      "sousTheme": "Réhabilitation énergétique du bâti patrimonial",
+      "stIdx": 6,
+      "sujet": "bp-protection",
+      "niveau": 8,
+      "famille": "S",
+      "question": "Une mairie de 1900 n'est ni classée ni inscrite MH, n'est pas en SPR, n'est pas en site classé ou inscrit, mais se situe dans le périmètre d'un PLU qui comporte un règlement de protection patrimoniale. Ses travaux de réhabilitation énergétique modifiant l'aspect extérieur sont-ils soumis à autorisation, et si oui laquelle ?",
+      "explication": "Piège classique : l'absence de protection MH/SPR/site ne dispense jamais de l'autorisation d'urbanisme municipale dès lors que l'aspect extérieur est modifié, et un PLU « patrimonial » peut ajouter ses propres règles. Source : Guide de réhabilitation énergétique du bâti d'intérêt patrimonial, Cerema / ministère de la Ville et du Logement / ministère de la Culture, juillet 2026.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null,
+      "type": "libre",
+      "options": [
+        "Oui : dès lors que les travaux modifient l'aspect extérieur du bâtiment, une autorisation de la mairie reste obligatoire quel que soit le niveau de protection du bâtiment ; de plus, le règlement patrimonial du PLU s'impose et doit être consulté avant travaux, même en l'absence de protection au titre des monuments historiques ou d'un site protégé."
+      ],
+      "bonneReponse": 0
+    },
+    {
+      "id": "pat-06",
+      "axe": "A3",
+      "sousTheme": "Réhabilitation énergétique du bâti patrimonial",
+      "stIdx": 6,
+      "sujet": "bp-avis",
+      "niveau": 2,
+      "famille": "S",
+      "question": "En site protégé, qui sollicite l'avis de l'ABF lors d'une demande d'autorisation d'urbanisme ?",
+      "explication": "C'est la mairie (ou l'intercommunalité) où est déposée la demande d'autorisation d'urbanisme qui est tenue de consulter l'UDAP afin que l'ABF donne son expertise et émette un avis. Source : Guide de réhabilitation énergétique du bâti d'intérêt patrimonial, Cerema / ministère de la Ville et du Logement / ministère de la Culture, juillet 2026.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null,
+      "type": "qcm",
+      "options": [
+        "Le porteur de projet directement auprès de la DRAC",
+        "La mairie où est déposée la demande d'autorisation",
+        "Le préfet de région systématiquement",
+        "Le CAUE, qui transmet ensuite à l'ABF"
+      ],
+      "bonneReponse": 1
+    },
+    {
+      "id": "pat-07",
+      "axe": "A3",
+      "sousTheme": "Réhabilitation énergétique du bâti patrimonial",
+      "stIdx": 6,
+      "sujet": "bp-avis",
+      "niveau": 4,
+      "famille": "S",
+      "question": "Triez ces caractéristiques selon qu'elles relèvent de l'avis simple ou de l'avis conforme de l'architecte des Bâtiments de France.",
+      "explication": "En avis simple, l'autorité compétente pour délivrer l'autorisation n'est pas tenue de le suivre et peut accorder l'autorisation même en cas d'avis simple négatif — au risque toutefois d'un recours contentieux. En avis conforme, elle est tenue de suivre l'avis de l'ABF. Source : Guide de réhabilitation énergétique du bâti d'intérêt patrimonial, Cerema / ministère de la Ville et du Logement / ministère de la Culture, juillet 2026.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null,
+      "type": "tri",
+      "colonnes": ["Avis simple", "Avis conforme"],
+      "elements": [
+        ["L'autorité compétente n'est pas tenue de suivre l'avis de l'ABF", 0],
+        ["L'autorité compétente est liée par l'avis de l'ABF", 1],
+        [
+          "L'autorisation peut être accordée malgré un avis négatif, au risque d'un recours contentieux",
+          0
+        ],
+        ["Un avis négatif fait obstacle à la délivrance de l'autorisation", 1]
+      ]
+    },
+    {
+      "id": "pat-08",
+      "axe": "A3",
+      "sousTheme": "Réhabilitation énergétique du bâti patrimonial",
+      "stIdx": 6,
+      "sujet": "bp-avis",
+      "niveau": 6,
+      "famille": "S",
+      "question": "Pour des travaux de réhabilitation énergétique modifiant l'état des parties extérieures d'un bâtiment situé en site patrimonial remarquable (SPR), quel type d'avis de l'ABF s'applique ?",
+      "explication": "En SPR, les travaux susceptibles de modifier l'état des parties extérieures des immeubles bâtis (y compris le second œuvre) ou des éléments d'architecture et de décoration protégés par le règlement du SPR relèvent de l'avis conforme de l'ABF. Source : Guide de réhabilitation énergétique du bâti d'intérêt patrimonial, Cerema / ministère de la Ville et du Logement / ministère de la Culture, juillet 2026.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null,
+      "type": "qcm",
+      "options": [
+        "Avis simple",
+        "Avis conforme",
+        "Aucun avis n'est requis",
+        "Avis du préfet de département uniquement"
+      ],
+      "bonneReponse": 1
+    },
+    {
+      "id": "pat-09",
+      "axe": "A3",
+      "sousTheme": "Réhabilitation énergétique du bâti patrimonial",
+      "stIdx": 6,
+      "sujet": "bp-avis",
+      "niveau": 7,
+      "famille": "S",
+      "question": "Pour un bâtiment situé dans un site classé, comment s'articule l'avis de l'ABF pour un projet nécessitant une autorisation autre qu'un permis de démolir ?",
+      "explication": "En site classé, tout projet est soumis à autorisation du préfet de département (déclarations préalables) ou du ministre chargé de la transition écologique (permis). L'avis de l'ABF sert à éclairer cette décision, qui s'impose ensuite au maire — un mécanisme distinct de l'avis simple/conforme classique. Source : Guide de réhabilitation énergétique du bâti d'intérêt patrimonial, Cerema / ministère de la Ville et du Logement / ministère de la Culture, juillet 2026.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null,
+      "type": "qcm",
+      "options": [
+        "L'ABF délivre lui-même l'autorisation d'urbanisme",
+        "L'autorisation relève du préfet de département (déclaration préalable) ou du ministre chargé de la transition écologique (permis), l'avis de l'ABF éclairant leur décision qui s'impose au maire",
+        "Aucune autorisation n'est nécessaire en site classé",
+        "Seul le maire décide, sans consultation de l'ABF"
+      ],
+      "bonneReponse": 1
+    },
+    {
+      "id": "pat-10",
+      "axe": "A3",
+      "sousTheme": "Réhabilitation énergétique du bâti patrimonial",
+      "stIdx": 6,
+      "sujet": "bp-obligations",
+      "niveau": 2,
+      "famille": "S",
+      "question": "Pour les bâtiments construits avant 1948, quelle réglementation thermique des bâtiments existants s'applique, quelle que soit la surface du bâtiment ?",
+      "explication": "Pour les bâtiments construits avant 1948, c'est la déclinaison « par éléments » de la réglementation thermique des bâtiments existants qui s'applique systématiquement, peu importe la surface du bâtiment. Source : Guide de réhabilitation énergétique du bâti d'intérêt patrimonial, Cerema / ministère de la Ville et du Logement / ministère de la Culture, juillet 2026.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null,
+      "type": "qcm",
+      "options": [
+        "La RT existant globale",
+        "La RT existant « par éléments »",
+        "La RE2020",
+        "Le décret tertiaire uniquement"
+      ],
+      "bonneReponse": 1
+    },
+    {
+      "id": "pat-11",
+      "axe": "A3",
+      "sousTheme": "Réhabilitation énergétique du bâti patrimonial",
+      "stIdx": 6,
+      "sujet": "bp-obligations",
+      "niveau": 4,
+      "famille": "S",
+      "question": "La réglementation thermique des bâtiments existants (RT ex) oblige le propriétaire d'un bâtiment ancien à l'isoler.",
+      "explication": "La RT existant n'impose pas d'isoler : elle fixe des performances minimales à atteindre uniquement si des travaux de réhabilitation énergétique sont engagés sur un élément donné (murs, toiture, fenêtres...). Elle n'oblige donc pas à changer les fenêtres ou isoler les murs si le propriétaire ne le souhaite pas. Source : Guide de réhabilitation énergétique du bâti d'intérêt patrimonial, Cerema / ministère de la Ville et du Logement / ministère de la Culture, juillet 2026.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null,
+      "type": "vf",
+      "vrai": false,
+      "justification": "Elle n'impose pas d'isoler : elle fixe seulement des performances minimales à atteindre lorsque des travaux sont engagés sur un élément donné (murs, toiture, fenêtres…)."
+    },
+    {
+      "id": "pat-12",
+      "axe": "A3",
+      "sousTheme": "Réhabilitation énergétique du bâti patrimonial",
+      "stIdx": 6,
+      "sujet": "bp-obligations",
+      "niveau": 6,
+      "famille": "S",
+      "question": "Le décret dit des « travaux embarqués », qui impose l'isolation à l'occasion d'un ravalement ou d'une rénovation de toiture, s'applique aussi aux monuments historiques.",
+      "explication": "Le décret « travaux embarqués » ne concerne pas les monuments historiques et ne s'applique pas lorsqu'il entre en contradiction avec d'autres prescriptions légales, notamment celle des sites patrimoniaux remarquables. Source : Guide de réhabilitation énergétique du bâti d'intérêt patrimonial, Cerema / ministère de la Ville et du Logement / ministère de la Culture, juillet 2026.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null,
+      "type": "vf",
+      "vrai": false,
+      "justification": "Les monuments historiques ne sont pas concernés par ce décret, qui ne s'applique pas non plus lorsqu'il contredit d'autres prescriptions légales, notamment celles des sites patrimoniaux remarquables."
+    },
+    {
+      "id": "pat-13",
+      "axe": "A3",
+      "sousTheme": "Réhabilitation énergétique du bâti patrimonial",
+      "stIdx": 6,
+      "sujet": "bp-obligations",
+      "niveau": 7,
+      "famille": "M",
+      "question": "Quel est le calendrier de décence énergétique interdisant progressivement la location des logements les plus énergivores, tel qu'issu du guide (échéances par classe DPE) ?",
+      "explication": "Attention à la mémorisation exacte des trois échéances (G : 2025, F : 2028, E : 2034), qui sont un fait mouvant à revérifier avant l'écrit. Source : Guide de réhabilitation énergétique du bâti d'intérêt patrimonial, Cerema / ministère de la Ville et du Logement / ministère de la Culture, juillet 2026.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null,
+      "type": "libre",
+      "options": [
+        "Depuis le 1er janvier 2025, les logements classés G ne peuvent plus être loués faute de décence énergétique ; l'échéance est fixée à 2028 pour la classe F et à 2034 pour la classe E. Par ailleurs, les loyers des logements classés F ou G ne peuvent plus être augmentés depuis 2022."
+      ],
+      "bonneReponse": 0
+    },
+    {
+      "id": "pat-14",
+      "axe": "A3",
+      "sousTheme": "Réhabilitation énergétique du bâti patrimonial",
+      "stIdx": 6,
+      "sujet": "bp-obligations",
+      "niveau": 9,
+      "famille": "S",
+      "question": "Un bâtiment classé au titre des monuments historiques est-il soumis au dispositif Éco Énergie Tertiaire (DEET), et à quelles conditions l'objectif peut-il être modulé ?",
+      "explication": "Il n'existe pas d'exception DEET pour les monuments historiques. L'objectif en valeur absolue peut néanmoins être modulé sur présentation d'un dossier technique justifiant l'intérêt patrimonial, mais les travaux restent conditionnés à l'autorisation du préfet de région (DRAC) prévue par le code du patrimoine : les deux enjeux, énergétique et patrimonial, doivent être conciliés. Source : Guide de réhabilitation énergétique du bâti d'intérêt patrimonial, Cerema / ministère de la Ville et du Logement / ministère de la Culture, juillet 2026.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null,
+      "type": "qcm",
+      "options": [
+        "Il est exonéré du dispositif DEET",
+        "Il y est soumis sans aucune exception possible",
+        "Il y est soumis, mais l'objectif en valeur absolue peut être modulé via un dossier technique, les travaux ne pouvant être entrepris qu'après autorisation du préfet de région (DRAC) au titre du code du patrimoine",
+        "Seul le maire peut autoriser une dérogation"
+      ],
+      "bonneReponse": 2
+    },
+    {
+      "id": "pat-15",
+      "axe": "A3",
+      "sousTheme": "Réhabilitation énergétique du bâti patrimonial",
+      "stIdx": 6,
+      "sujet": "bp-methode",
+      "niveau": 3,
+      "famille": "S",
+      "question": "Quelle norme européenne propose une méthode de référence, non obligatoire, pour la réhabilitation énergétique des bâtiments d'intérêt patrimonial ?",
+      "explication": "La norme NF EN 16883 « Principes directeurs pour l'amélioration de la performance énergétique des bâtiments d'intérêt patrimonial » propose, sans être obligatoire, une méthode structurée allant du diagnostic initial à la définition de solutions adaptées, en favorisant la collaboration entre experts. Source : Guide de réhabilitation énergétique du bâti d'intérêt patrimonial, Cerema / ministère de la Ville et du Logement / ministère de la Culture, juillet 2026.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null,
+      "type": "qcm",
+      "options": ["NF EN 16883", "NF DTU 20.1", "NF EN 15251", "NF EN ISO 52000"],
+      "bonneReponse": 0
+    },
+    {
+      "id": "pat-16",
+      "axe": "A3",
+      "sousTheme": "Réhabilitation énergétique du bâti patrimonial",
+      "stIdx": 6,
+      "sujet": "bp-methode",
+      "niveau": 5,
+      "famille": "S",
+      "question": "Remettez dans l'ordre logique recommandé par le guide les étapes de la stratégie d'intervention sur un bâtiment patrimonial.",
+      "explication": "Le guide recommande de définir la stratégie d'intervention selon l'ordre logique : enveloppe (murs, planchers, fenêtres, toiture), puis ventilation, puis systèmes, puis énergies renouvelables — tout en tenant compte du confort d'été. Source : Guide de réhabilitation énergétique du bâti d'intérêt patrimonial, Cerema / ministère de la Ville et du Logement / ministère de la Culture, juillet 2026.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null,
+      "type": "ordre",
+      "items": [
+        "Enveloppe : murs, planchers, fenêtres, toiture",
+        "Ventilation",
+        "Systèmes (chauffage, eau chaude sanitaire)",
+        "Énergies renouvelables"
+      ]
+    },
+    {
+      "id": "pat-17",
+      "axe": "A3",
+      "sousTheme": "Réhabilitation énergétique du bâti patrimonial",
+      "stIdx": 6,
+      "sujet": "bp-methode",
+      "niveau": 4,
+      "famille": "S",
+      "question": "Quel niveau d'ambition le guide recommande-t-il de viser pour une première étape de travaux de réhabilitation énergétique d'un bâtiment patrimonial ?",
+      "explication": "Le guide recommande de viser le niveau BBC Rénovation ou a minima la classe C du DPE pour une première étape de travaux ; si cette performance n'est pas atteignable simplement, une simple amélioration thermique reste possible. Source : Guide de réhabilitation énergétique du bâti d'intérêt patrimonial, Cerema / ministère de la Ville et du Logement / ministère de la Culture, juillet 2026.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null,
+      "type": "qcm",
+      "options": [
+        "Le label BBC Rénovation ou a minima la classe C du DPE",
+        "Systématiquement l'étiquette A du DPE dès la première étape",
+        "Aucun objectif chiffré n'est recommandé",
+        "La classe E du DPE suffit"
+      ],
+      "bonneReponse": 0
+    },
+    {
+      "id": "pat-18",
+      "axe": "A3",
+      "sousTheme": "Réhabilitation énergétique du bâti patrimonial",
+      "stIdx": 6,
+      "sujet": "bp-methode",
+      "niveau": 8,
+      "famille": "S",
+      "question": "En rénovation par étapes visant le label BBC Rénovation, quelles sont les trois conditions posées par le guide pour que cette approche reste pertinente ?",
+      "explication": "La rénovation BBC en une seule étape reste la plus efficace techniquement et économiquement ; le phasage n'est une option que sous ces trois conditions, pour éviter les rénovations « saucissonnées » qui n'atteignent jamais l'objectif global. Source : Guide de réhabilitation énergétique du bâti d'intérêt patrimonial, Cerema / ministère de la Ville et du Logement / ministère de la Culture, juillet 2026.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null,
+      "type": "libre",
+      "options": [
+        "Disposer d'une vision globale du projet pour atteindre à terme le niveau BBC Rénovation ; engager une première étape ambitieuse centrée sur la performance de l'enveloppe et la ventilation ; limiter le nombre d'étapes (2 idéalement, 3 maximum)."
+      ],
+      "bonneReponse": 0
+    },
+    {
+      "id": "pat-19",
+      "axe": "A3",
+      "sousTheme": "Réhabilitation énergétique du bâti patrimonial",
+      "stIdx": 6,
+      "sujet": "bp-toiture",
+      "niveau": 3,
+      "famille": "S",
+      "question": "Rénovation performante : réglez le curseur sur la résistance thermique visée par le guide pour la toiture ou le plancher du grenier.",
+      "explication": "Le guide vise, en rénovation performante, une résistance thermique de l'ordre de 7 m².K/W pour la toiture ou le plancher du grenier, soit une épaisseur d'isolant supérieure à 30 cm. Source : Guide de réhabilitation énergétique du bâti d'intérêt patrimonial, Cerema / ministère de la Ville et du Logement / ministère de la Culture, juillet 2026.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null,
+      "type": "curseur",
+      "curseur": {
+        "titre": "Résistance thermique visée — toiture / plancher de grenier",
+        "unite": "m².K/W",
+        "min": 1,
+        "max": 12,
+        "pas": 0.5,
+        "cible": 7,
+        "tolerance": 0,
+        "legende": "Soit une épaisseur d'isolant supérieure à 30 cm."
+      }
+    },
+    {
+      "id": "pat-20",
+      "axe": "A3",
+      "sousTheme": "Réhabilitation énergétique du bâti patrimonial",
+      "stIdx": 6,
+      "sujet": "bp-toiture",
+      "niveau": 5,
+      "famille": "S",
+      "question": "Avant d'isoler par l'intérieur le plancher d'un grenier non occupé en bâti traditionnel, quel élément est indispensable à poser en premier ?",
+      "explication": "Les planchers de combles en bâti traditionnel étant souvent en bois avec des planches non jointives, il est indispensable, avant d'isoler par le dessus, d'y fixer une membrane gérant l'apport de vapeur qui fait office de membrane d'étanchéité à l'air, pour éviter que l'air chaud ne s'échappe vers les combles non chauffés. Source : Guide de réhabilitation énergétique du bâti d'intérêt patrimonial, Cerema / ministère de la Ville et du Logement / ministère de la Culture, juillet 2026.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null,
+      "type": "qcm",
+      "options": [
+        "Un pare-pluie HPV",
+        "Une membrane gérant l'apport de vapeur (étanchéité à l'air)",
+        "Un enduit à la chaux",
+        "Un doublage en plaques de plâtre"
+      ],
+      "bonneReponse": 1
+    },
+    {
+      "id": "pat-21",
+      "axe": "A3",
+      "sousTheme": "Réhabilitation énergétique du bâti patrimonial",
+      "stIdx": 6,
+      "sujet": "bp-toiture",
+      "niveau": 7,
+      "famille": "S",
+      "question": "Pourquoi le sarking (isolation par l'extérieur de la toiture) est-il rarement compatible avec une toiture d'intérêt patrimonial ?",
+      "explication": "Le sarking peut être mis en œuvre avec tous les matériaux isolants, mais son surépaississement de la toiture peut dissimuler les pieds de lucarnes et créer des problèmes de raccord au niveau des murs mitoyens, d'où une intégration architecturale à soigner particulièrement, à privilégier sur les toitures à acrotère ou en cœur d'îlot. Source : Guide de réhabilitation énergétique du bâti d'intérêt patrimonial, Cerema / ministère de la Ville et du Logement / ministère de la Culture, juillet 2026.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null,
+      "type": "qcm",
+      "options": [
+        "Parce qu'il est incompatible avec tous les types d'isolants",
+        "Parce qu'il épaissit le bâtiment, pouvant cacher les pieds de lucarnes et créer des problèmes de raccord aux murs mitoyens",
+        "Parce qu'il nécessite toujours une charpente neuve",
+        "Parce qu'il est interdit par la RT existant par éléments"
+      ],
+      "bonneReponse": 1
+    },
+    {
+      "id": "pat-22",
+      "axe": "A3",
+      "sousTheme": "Réhabilitation énergétique du bâti patrimonial",
+      "stIdx": 6,
+      "sujet": "bp-toiture",
+      "niveau": 6,
+      "famille": "S",
+      "question": "Isolation d'une toiture par l'intérieur, entre et sous chevrons, avec de la laine minérale : désignez la couche dont la pose est obligatoire avant d'isoler.",
+      "explication": "Avant d'isoler une toiture par l'intérieur, il est fortement recommandé, et obligatoire pour la laine minérale, la laine de verre ou la laine de roche, d'installer un pare-pluie HPV entre la couverture et les chevrons, afin d'éviter la dégradation de l'isolant — ce pare-pluie est quasiment absent du bâti traditionnel ancien et nécessite souvent une dépose de couverture. Source : Guide de réhabilitation énergétique du bâti d'intérêt patrimonial, Cerema / ministère de la Ville et du Logement / ministère de la Culture, juillet 2026.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null,
+      "type": "paroi",
+      "paroi": {
+        "titre": "Coupe de toiture — isolation entre et sous chevrons",
+        "exterieur": "Extérieur",
+        "interieur": "Intérieur",
+        "couches": [
+          {
+            "l": "Couverture en tuiles sur liteaux",
+            "d": "Protection à la pluie",
+            "e": 1,
+            "icone": "tuile",
+            "teinte": 4
+          },
+          {
+            "l": "Pare-pluie HPV",
+            "d": "Haute perméabilité à la vapeur, entre couverture et chevrons",
+            "e": 1,
+            "icone": "laine",
+            "teinte": 5
+          },
+          {
+            "l": "Isolant entre et sous chevrons",
+            "d": "Laine minérale",
+            "e": 5,
+            "icone": "laine",
+            "teinte": 2
+          },
+          {
+            "l": "Membrane gérant l'apport de vapeur",
+            "d": "Étanchéité à l'air côté intérieur",
+            "e": 1,
+            "icone": "ouate",
+            "teinte": 5
+          },
+          {
+            "l": "Parement intérieur",
+            "d": "Plaques de plâtre sur ossature",
+            "e": 1,
+            "icone": "platre",
+            "teinte": 1
+          }
+        ],
+        "legende": "Couches de l'extérieur vers l'intérieur."
+      },
+      "bonneCible": 1
+    },
+    {
+      "id": "pat-23",
+      "axe": "A3",
+      "sousTheme": "Réhabilitation énergétique du bâti patrimonial",
+      "stIdx": 6,
+      "sujet": "bp-plancher",
+      "niveau": 3,
+      "famille": "S",
+      "question": "Sur la réglette, désignez la plage de résistance thermique visée par le guide pour les planchers bas en rénovation performante.",
+      "explication": "Pour les planchers bas, le guide vise une résistance thermique comprise entre 2,5 et 5 m².K/W, soit une épaisseur d'isolant comprise entre 10 et 20 cm. Source : Guide de réhabilitation énergétique du bâti d'intérêt patrimonial, Cerema / ministère de la Ville et du Logement / ministère de la Culture, juillet 2026.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null,
+      "type": "echelle",
+      "echelle_g": {
+        "titre": "Résistance thermique des planchers bas",
+        "unite": "résistance thermique R (m².K/W)",
+        "tranches": [
+          {
+            "borne": "1 à 2",
+            "l": "1 à 2 m².K/W"
+          },
+          {
+            "borne": "2,5 à 5",
+            "l": "2,5 à 5 m².K/W"
+          },
+          {
+            "borne": "5 à 7",
+            "l": "5 à 7 m².K/W"
+          },
+          {
+            "borne": "7 à 10",
+            "l": "7 à 10 m².K/W"
+          }
+        ]
+      },
+      "bonneCible": 1
+    },
+    {
+      "id": "pat-24",
+      "axe": "A3",
+      "sousTheme": "Réhabilitation énergétique du bâti patrimonial",
+      "stIdx": 6,
+      "sujet": "bp-plancher",
+      "niveau": 6,
+      "famille": "S",
+      "question": "Pourquoi les soupiraux d'une cave ne doivent-ils jamais être scellés après isolation du plafond de la cave ?",
+      "explication": "Les soupiraux ventilent la cave : une fois le plafond de cave isolé, le séchage ne peut plus se faire par le haut, donc l'humidité doit impérativement pouvoir s'échapper par les soupiraux pour éviter moisissures et risques structurels ; ils permettent aussi, sur certains territoires, l'évacuation du radon. Source : Guide de réhabilitation énergétique du bâti d'intérêt patrimonial, Cerema / ministère de la Ville et du Logement / ministère de la Culture, juillet 2026.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null,
+      "type": "qcm",
+      "options": [
+        "Ils n'ont aucune fonction technique, seulement esthétique",
+        "Ils permettent à l'humidité de s'échapper (le séchage par le plafond n'étant plus possible) et, sur certains territoires, l'évacuation du radon",
+        "Ils sont obligatoires uniquement pour l'éclairage naturel",
+        "Leur scellement est imposé par la RT existant"
+      ],
+      "bonneReponse": 1
+    },
+    {
+      "id": "pat-25",
+      "axe": "A3",
+      "sousTheme": "Réhabilitation énergétique du bâti patrimonial",
+      "stIdx": 6,
+      "sujet": "bp-plancher",
+      "niveau": 5,
+      "famille": "S",
+      "question": "Plancher bas sur sol creusé en bâti traditionnel : désignez, dans le montage type décrit par le guide, la couche qui apporte l'isolation thermique.",
+      "explication": "Le guide décrit, pour un plancher bas sur sol creusé, un montage type : parquet sur lambourdes, enduit intérieur, bande résiliente en liège, dalle isolante en chaux-chanvre, hérisson ventilé avec drain agricole perforé — une solution cohérente avec la perméabilité à la vapeur recherchée dans le bâti ancien. Source : Guide de réhabilitation énergétique du bâti d'intérêt patrimonial, Cerema / ministère de la Ville et du Logement / ministère de la Culture, juillet 2026.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null,
+      "type": "paroi",
+      "paroi": {
+        "titre": "Coupe de plancher bas sur sol creusé",
+        "exterieur": "Sol",
+        "interieur": "Intérieur",
+        "couches": [
+          {
+            "l": "Hérisson ventilé",
+            "d": "Cailloux et drain agricole perforé",
+            "e": 4,
+            "icone": "gravats",
+            "teinte": 4
+          },
+          {
+            "l": "Dalle isolante en chaux-chanvre",
+            "d": "Isolation perméable à la vapeur",
+            "e": 3,
+            "icone": "chanvre",
+            "teinte": 2
+          },
+          {
+            "l": "Bande résiliente en liège",
+            "d": "Désolidarisation en périphérie",
+            "e": 1,
+            "icone": "ouate",
+            "teinte": 5
+          },
+          {
+            "l": "Lambourdes",
+            "d": "Support du parquet",
+            "e": 2,
+            "icone": "bois",
+            "teinte": 3
+          },
+          {
+            "l": "Parquet",
+            "d": "Finition",
+            "e": 1,
+            "icone": "bois",
+            "teinte": 1
+          }
+        ],
+        "legende": "Montage type décrit par le guide, du sol vers l'intérieur."
+      },
+      "bonneCible": 1
+    },
+    {
+      "id": "pat-26",
+      "axe": "A3",
+      "sousTheme": "Réhabilitation énergétique du bâti patrimonial",
+      "stIdx": 6,
+      "sujet": "bp-mur",
+      "niveau": 3,
+      "famille": "S",
+      "question": "Rénovation performante : réglez le curseur sur la résistance thermique visée par le guide pour l'isolation des murs.",
+      "explication": "Pour les murs, le guide vise une résistance thermique de l'ordre de 3,7 m².K/W, soit environ 15 cm d'isolant. Source : Guide de réhabilitation énergétique du bâti d'intérêt patrimonial, Cerema / ministère de la Ville et du Logement / ministère de la Culture, juillet 2026.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null,
+      "type": "curseur",
+      "curseur": {
+        "titre": "Résistance thermique visée — murs",
+        "unite": "m².K/W",
+        "min": 0.5,
+        "max": 8,
+        "pas": 0.1,
+        "cible": 3.7,
+        "tolerance": 0,
+        "legende": "Soit environ 15 cm d'isolant."
+      }
+    },
+    {
+      "id": "pat-27",
+      "axe": "A3",
+      "sousTheme": "Réhabilitation énergétique du bâti patrimonial",
+      "stIdx": 6,
+      "sujet": "bp-mur",
+      "niveau": 2,
+      "famille": "S",
+      "question": "Le guide distingue quatre grandes familles de solutions d'amélioration thermique des murs traditionnels. Triez-les selon qu'elles interviennent côté intérieur ou côté extérieur.",
+      "explication": "Le guide distingue quatre grandes solutions pour les murs traditionnels : l'isolation thermique par l'intérieur, la correction thermique intérieure, l'isolation thermique par l'extérieur et la correction thermique extérieure. Source : Guide de réhabilitation énergétique du bâti d'intérêt patrimonial, Cerema / ministère de la Ville et du Logement / ministère de la Culture, juillet 2026.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null,
+      "type": "tri",
+      "colonnes": ["Côté intérieur", "Côté extérieur"],
+      "elements": [
+        ["Isolation thermique par l'intérieur", 0],
+        ["Correction thermique intérieure (enduits, bétons végétaux)", 0],
+        ["Isolation thermique par l'extérieur", 1],
+        ["Correction thermique extérieure", 1]
+      ]
+    },
+    {
+      "id": "pat-28",
+      "axe": "A3",
+      "sousTheme": "Réhabilitation énergétique du bâti patrimonial",
+      "stIdx": 6,
+      "sujet": "bp-mur",
+      "niveau": 6,
+      "famille": "S",
+      "question": "Pourquoi les matériaux isolants imperméables à la vapeur d'eau (type polystyrène) sont-ils déconseillés sur un mur traditionnel en pierre ou en pan de bois ?",
+      "explication": "Les matériaux traditionnels se laissent en général traverser par la vapeur d'eau. Un isolant qui fait barrière à cette vapeur peut emprisonner l'humidité dans le mur, créant des pathologies : moisissures, déchaussement des pierres, voire effondrement de planchers. Source : Guide de réhabilitation énergétique du bâti d'intérêt patrimonial, Cerema / ministère de la Ville et du Logement / ministère de la Culture, juillet 2026.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null,
+      "type": "qcm",
+      "options": [
+        "Ils sont trop coûteux comparés aux isolants biosourcés",
+        "Ils font barrière et peuvent emprisonner l'humidité, provoquant moisissures et jusqu'au déchaussement des pierres",
+        "Ils sont interdits par la RE2020",
+        "Ils ne sont disponibles qu'en grandes épaisseurs"
+      ],
+      "bonneReponse": 1
+    },
+    {
+      "id": "pat-29",
+      "axe": "A3",
+      "sousTheme": "Réhabilitation énergétique du bâti patrimonial",
+      "stIdx": 6,
+      "sujet": "bp-mur",
+      "niveau": 5,
+      "famille": "S",
+      "question": "Le béton de chanvre, utilisé en correction thermique intérieure, se dispense-t-il de la pose d'une membrane gérant l'apport de vapeur ?",
+      "explication": "La correction thermique intérieure (enduits, bétons végétaux comme le béton de chanvre) s'affranchit de la membrane gérant l'apport de vapeur : mise en œuvre en phase humide, elle recouvre le mur sans défaut d'étanchéité à l'air possible — à condition que la matrice reste perméable à la vapeur. Source : Guide de réhabilitation énergétique du bâti d'intérêt patrimonial, Cerema / ministère de la Ville et du Logement / ministère de la Culture, juillet 2026.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null,
+      "type": "qcm",
+      "options": [
+        "Non, une membrane est toujours nécessaire",
+        "Oui : mis en œuvre en phase humide, il recouvre le mur sans défaut d'étanchéité à l'air possible, à condition que sa matrice reste perméable à la vapeur",
+        "Oui, mais uniquement sur les murs en terre crue",
+        "Non, sauf en façade exposée au nord"
+      ],
+      "bonneReponse": 1
+    },
+    {
+      "id": "pat-30",
+      "axe": "A3",
+      "sousTheme": "Réhabilitation énergétique du bâti patrimonial",
+      "stIdx": 6,
+      "sujet": "bp-mur",
+      "niveau": 8,
+      "famille": "S",
+      "question": "Pour quelle raison technique et patrimoniale l'isolation par l'extérieur des murs est-elle plus souvent adaptée aux pignons ou façades non visibles depuis l'espace public ?",
+      "explication": "L'isolation par l'extérieur modifie fortement l'aspect du bâtiment (proportions, décors). Elle est donc plus adaptée à l'amélioration des pignons ou façades non visibles de la rue ou d'un monument historique, où l'enjeu patrimonial et l'attention architecturale requise sont moindres. Source : Guide de réhabilitation énergétique du bâti d'intérêt patrimonial, Cerema / ministère de la Ville et du Logement / ministère de la Culture, juillet 2026.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null,
+      "type": "qcm",
+      "options": [
+        "Elle est interdite par la loi sur les façades visibles",
+        "Elle modifie fortement l'aspect extérieur (proportions, décors), un enjeu moindre sur les faces non visibles ou non en covisibilité d'un monument historique",
+        "Elle est plus chère sur les façades visibles",
+        "Elle nécessite toujours un permis de démolir"
+      ],
+      "bonneReponse": 1
+    },
+    {
+      "id": "pat-31",
+      "axe": "A3",
+      "sousTheme": "Réhabilitation énergétique du bâti patrimonial",
+      "stIdx": 6,
+      "sujet": "bp-mur",
+      "niveau": 9,
+      "famille": "S",
+      "question": "Pourquoi le guide recommande-t-il, avant tout choix d'isolation des murs traditionnels, de « rattraper les erreurs du passé » ?",
+      "explication": "Ce préalable illustre bien la logique du bâti ancien : la performance thermique ne se raisonne jamais seule, elle dépend d'abord de l'état sanitaire du mur et de sa capacité globale à rester perspirante. Source : Guide de réhabilitation énergétique du bâti d'intérêt patrimonial, Cerema / ministère de la Ville et du Logement / ministère de la Culture, juillet 2026.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null,
+      "type": "libre",
+      "options": [
+        "Parce que la réparation et l'assainissement des murs sont un préalable indispensable : curage des enduits et finitions trop étanches à la vapeur (ex. enduit ciment), suppression des isolants existants en mauvais état, réparation des fissures des façades — sans quoi toute nouvelle isolation, même adaptée, peut être compromise par un vice existant."
+      ],
+      "bonneReponse": 0
+    },
+    {
+      "id": "pat-32",
+      "axe": "A3",
+      "sousTheme": "Réhabilitation énergétique du bâti patrimonial",
+      "stIdx": 6,
+      "sujet": "bp-fenetre",
+      "niveau": 3,
+      "famille": "S",
+      "question": "Rénovation performante : réglez le curseur sur le coefficient de transmission thermique Uw visé par le guide pour les fenêtres.",
+      "explication": "Le guide vise un coefficient de transmission thermique Uw de 1,3 W/(m².K) ou inférieur pour les fenêtres, en rénovation performante. Source : Guide de réhabilitation énergétique du bâti d'intérêt patrimonial, Cerema / ministère de la Ville et du Logement / ministère de la Culture, juillet 2026.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null,
+      "type": "curseur",
+      "curseur": {
+        "titre": "Coefficient Uw visé — fenêtres",
+        "unite": "W/(m².K)",
+        "min": 0.5,
+        "max": 5.5,
+        "pas": 0.1,
+        "cible": 1.3,
+        "tolerance": 0,
+        "legende": "Valeur à ne pas dépasser ; plus le Uw est faible, plus la fenêtre est performante."
+      }
+    },
+    {
+      "id": "pat-33",
+      "axe": "A3",
+      "sousTheme": "Réhabilitation énergétique du bâti patrimonial",
+      "stIdx": 6,
+      "sujet": "bp-fenetre",
+      "niveau": 4,
+      "famille": "S",
+      "question": "Le coefficient Uw d'une fenêtre traduit quel phénomène de déperdition, par opposition au débit d'air Q ?",
+      "explication": "Le Uw caractérise la performance thermique de la fenêtre par conduction (châssis et vitrage compris) : plus il est faible, plus la fenêtre est performante. Le débit d'air Q évalue séparément les défauts d'étanchéité à l'air non contrôlés. Les deux paramètres appellent des solutions différentes. Source : Guide de réhabilitation énergétique du bâti d'intérêt patrimonial, Cerema / ministère de la Ville et du Logement / ministère de la Culture, juillet 2026.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null,
+      "type": "qcm",
+      "options": [
+        "Les déperditions par conduction à travers le châssis et le vitrage, alors que Q mesure les défauts d'étanchéité à l'air",
+        "Les défauts d'étanchéité à l'air, alors que Q mesure la conduction",
+        "La quantité de lumière transmise",
+        "Le facteur solaire de la fenêtre"
+      ],
+      "bonneReponse": 0
+    },
+    {
+      "id": "pat-34",
+      "axe": "A3",
+      "sousTheme": "Réhabilitation énergétique du bâti patrimonial",
+      "stIdx": 6,
+      "sujet": "bp-fenetre",
+      "niveau": 7,
+      "famille": "S",
+      "question": "Sur la réglette, désignez le facteur solaire gtot maximal qu'une protection solaire doit présenter pour être réellement efficace contre la surchauffe.",
+      "explication": "Le facteur solaire gtot doit être inférieur ou égal à 0,15 pour qu'une protection solaire soit réellement efficace contre la surchauffe ; ce seuil est d'ailleurs rendu obligatoire sur les façades Sud, Est et Ouest par l'article 30 de l'arrêté du 3 mai 2007 lorsqu'un système de refroidissement est installé ou remplacé. Source : Guide de réhabilitation énergétique du bâti d'intérêt patrimonial, Cerema / ministère de la Ville et du Logement / ministère de la Culture, juillet 2026.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null,
+      "type": "echelle",
+      "echelle_g": {
+        "titre": "Facteur solaire gtot d'une protection solaire",
+        "unite": "facteur solaire gtot (sans unité)",
+        "tranches": [
+          {
+            "borne": "0,50",
+            "l": "gtot ≤ 0,50"
+          },
+          {
+            "borne": "0,35",
+            "l": "gtot ≤ 0,35"
+          },
+          {
+            "borne": "0,15",
+            "l": "gtot ≤ 0,15"
+          },
+          {
+            "borne": "0,05",
+            "l": "gtot ≤ 0,05"
+          }
+        ]
+      },
+      "bonneCible": 2
+    },
+    {
+      "id": "pat-35",
+      "axe": "A3",
+      "sousTheme": "Réhabilitation énergétique du bâti patrimonial",
+      "stIdx": 6,
+      "sujet": "bp-fenetre",
+      "niveau": 6,
+      "famille": "S",
+      "question": "Quel est l'avantage thermique principal de l'ajout d'une « double fenêtre » (fenêtre neuve en plus de l'ancienne) par rapport au simple remplacement par une fenêtre neuve en double vitrage ?",
+      "explication": "La double fenêtre diminue fortement le Uw de l'ensemble, avec une performance thermique meilleure qu'une fenêtre neuve en simple remplacement double vitrage ; la présence de trois vitrages séparés par différentes lames d'air atténue en outre fortement les bruits extérieurs. Source : Guide de réhabilitation énergétique du bâti d'intérêt patrimonial, Cerema / ministère de la Ville et du Logement / ministère de la Culture, juillet 2026.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null,
+      "type": "qcm",
+      "options": [
+        "Elle est toujours moins chère",
+        "Sa performance thermique est meilleure que celle d'une fenêtre neuve en double vitrage seule, et elle atténue fortement les bruits extérieurs",
+        "Elle ne nécessite aucun entretien",
+        "Elle dispense de toute autorisation d'urbanisme"
+      ],
+      "bonneReponse": 1
+    },
+    {
+      "id": "pat-36",
+      "axe": "A3",
+      "sousTheme": "Réhabilitation énergétique du bâti patrimonial",
+      "stIdx": 6,
+      "sujet": "bp-fenetre",
+      "niveau": 5,
+      "famille": "S",
+      "question": "Sur une façade à fort enjeu patrimonial (SPR ou site protégé), quel principe de pose de la fenêtre neuve doit être privilégié ?",
+      "explication": "La fenêtre d'origine est très souvent posée en feuillure (rainure dans l'épaisseur du mur). Sur les façades à fort enjeu patrimonial, ce principe de pose doit être privilégié, car une pose en applique intérieure ou extérieure peut fortement modifier la composition de la façade. Source : Guide de réhabilitation énergétique du bâti d'intérêt patrimonial, Cerema / ministère de la Ville et du Logement / ministère de la Culture, juillet 2026.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null,
+      "type": "qcm",
+      "options": [
+        "La pose en applique extérieure systématique",
+        "La conservation de la pose en feuillure d'origine, la pose en applique pouvant fortement modifier la composition de la façade",
+        "La suppression de toute feuillure pour maximiser la surface vitrée",
+        "Le remplacement systématique par une baie coulissante"
+      ],
+      "bonneReponse": 1
+    },
+    {
+      "id": "pat-37",
+      "axe": "A3",
+      "sousTheme": "Réhabilitation énergétique du bâti patrimonial",
+      "stIdx": 6,
+      "sujet": "bp-systemes",
+      "niveau": 4,
+      "famille": "S",
+      "question": "Pour l'intégration architecturale d'une chaudière dans un bâtiment patrimonial, quelle solution le guide met-il en avant ?",
+      "explication": "Le guide recommande d'installer les générateurs sur cour plutôt que sur rue et de réutiliser les conduits de cheminée inutilisés pour l'évacuation des fumées en toiture, plutôt que de créer de nouveaux percements visibles en façade principale. Source : Guide de réhabilitation énergétique du bâti d'intérêt patrimonial, Cerema / ministère de la Ville et du Logement / ministère de la Culture, juillet 2026.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null,
+      "type": "qcm",
+      "options": [
+        "Toujours installer la prise d'air et l'évacuation en façade principale",
+        "Installer le générateur sur cour plutôt que sur rue, et réutiliser d'éventuels conduits de cheminée inutilisés pour l'évacuation des fumées en toiture",
+        "Interdire toute chaudière dans un bâtiment protégé",
+        "Installer systématiquement une chaudière à ventouse en façade principale"
+      ],
+      "bonneReponse": 1
+    },
+    {
+      "id": "pat-38",
+      "axe": "A3",
+      "sousTheme": "Réhabilitation énergétique du bâti patrimonial",
+      "stIdx": 6,
+      "sujet": "bp-systemes",
+      "niveau": 6,
+      "famille": "S",
+      "question": "Quelles sont les principales solutions d'intégration architecturale recommandées pour les unités extérieures de PAC en façade patrimoniale ?",
+      "explication": "Le guide recommande de privilégier une installation sur cour non protégée, au sol ou en toiture, ou de dissimuler les unités par des caissons, volets ajourés, garde-corps ou grilles de teinte proche du support — sans jamais obstruer la circulation d'air nécessaire au bon fonctionnement de la PAC, dont l'emplacement doit être validé par l'installateur. Source : Guide de réhabilitation énergétique du bâti d'intérêt patrimonial, Cerema / ministère de la Ville et du Logement / ministère de la Culture, juillet 2026.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null,
+      "type": "qcm",
+      "options": [
+        "Les peindre en couleur vive pour signaler leur présence",
+        "Les installer sur cour non protégée ou en toiture, ou les dissimuler par des caissons/volets ajourés de teinte proche du support, sans obstruer la circulation d'air",
+        "Les installer obligatoirement en façade principale pour l'accès à la maintenance",
+        "Aucune intégration n'est nécessaire pour les PAC"
+      ],
+      "bonneReponse": 1
+    },
+    {
+      "id": "pat-39",
+      "axe": "A3",
+      "sousTheme": "Réhabilitation énergétique du bâti patrimonial",
+      "stIdx": 6,
+      "sujet": "bp-systemes",
+      "niveau": 7,
+      "famille": "S",
+      "question": "L'installation de panneaux photovoltaïques est-elle envisageable sur un bâtiment inscrit ou classé au titre des monuments historiques ?",
+      "explication": "L'installation de panneaux photovoltaïques sur un bâtiment inscrit ou classé MH est à éviter en règle générale, mais des exceptions peuvent être permises, examinées au cas par cas en fonction de l'implantation et de l'ampleur du projet envisagé. Source : Guide de réhabilitation énergétique du bâti d'intérêt patrimonial, Cerema / ministère de la Ville et du Logement / ministère de la Culture, juillet 2026.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null,
+      "type": "qcm",
+      "options": [
+        "Jamais, sans aucune exception possible",
+        "Systématiquement autorisée sans condition",
+        "À éviter en règle générale, mais des exceptions peuvent être permises au cas par cas selon l'implantation et l'ampleur du projet",
+        "Uniquement sur les bâtiments classés, jamais sur les inscrits"
+      ],
+      "bonneReponse": 2
+    },
+    {
+      "id": "pat-40",
+      "axe": "A3",
+      "sousTheme": "Réhabilitation énergétique du bâti patrimonial",
+      "stIdx": 6,
+      "sujet": "bp-systemes",
+      "niveau": 3,
+      "famille": "S",
+      "question": "Pour l'intégration de panneaux solaires sur une toiture à pentes en secteur patrimonial, quel emplacement le guide recommande-t-il de privilégier ?",
+      "explication": "Le guide recommande de privilégier les emplacements peu visibles depuis l'espace public (appentis, pans de toiture peu visibles, toits plats) et de veiller à l'intégration à la géométrie des toitures ainsi qu'à l'ordonnancement par rapport à l'architecture de l'édifice. Source : Guide de réhabilitation énergétique du bâti d'intérêt patrimonial, Cerema / ministère de la Ville et du Logement / ministère de la Culture, juillet 2026.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null,
+      "type": "qcm",
+      "options": [
+        "Le pan de toiture le plus visible depuis la rue pour un meilleur rendement",
+        "Les emplacements peu visibles depuis l'espace public : appentis, pans de toiture peu visibles ou toits plats",
+        "Uniquement les façades exposées au sud",
+        "Le faîtage, quelle que soit la visibilité"
+      ],
+      "bonneReponse": 1
+    },
+    {
+      "id": "pat-41",
+      "axe": "A3",
+      "sousTheme": "Réhabilitation énergétique du bâti patrimonial",
+      "stIdx": 6,
+      "sujet": "bp-aides",
+      "niveau": 2,
+      "famille": "M",
+      "question": "Les aides financières à la rénovation énergétique attribuées sur critères strictement énergétiques garantissent le respect de l'intérêt patrimonial du bâtiment.",
+      "explication": "Le guide alerte : les financements de la rénovation énergétique sont souvent attribués sur des critères strictement énergétiques et ne présument pas du respect de l'intérêt patrimonial du bâtiment. Les aides à la restauration patrimoniale (DRAC, Fondation du Patrimoine) sont en général cumulables avec elles. Source : Guide de réhabilitation énergétique du bâti d'intérêt patrimonial, Cerema / ministère de la Ville et du Logement / ministère de la Culture, juillet 2026.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null,
+      "type": "vf",
+      "vrai": false,
+      "justification": "Ces financements ne présument pas du respect de l'intérêt patrimonial. Les aides à la restauration patrimoniale (DRAC, Fondation du Patrimoine) leur sont en général cumulables."
+    },
+    {
+      "id": "pat-42",
+      "axe": "A3",
+      "sousTheme": "Réhabilitation énergétique du bâti patrimonial",
+      "stIdx": 6,
+      "sujet": "bp-aides",
+      "niveau": 3,
+      "famille": "M",
+      "question": "Pour la restauration patrimoniale d'un monument historique, vers quel organisme le guide oriente-t-il en priorité pour les aides financières ?",
+      "explication": "Les aides pour l'entretien et la restauration des monuments historiques relèvent surtout de la DRAC ; les propriétaires peuvent également bénéficier de déductions fiscales. Pour les autres types de patrimoine, les aides de la Fondation du Patrimoine sont les plus connues, sous conditions de critères patrimoniaux. Source : Guide de réhabilitation énergétique du bâti d'intérêt patrimonial, Cerema / ministère de la Ville et du Logement / ministère de la Culture, juillet 2026.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null,
+      "type": "qcm",
+      "options": [
+        "La Fondation du Patrimoine exclusivement",
+        "Les aides de la DRAC, avec possibilité de déductions fiscales pour les propriétaires",
+        "Uniquement France Rénov'",
+        "Les seules collectivités locales"
+      ],
+      "bonneReponse": 1
+    },
+    {
+      "id": "pat-43",
+      "axe": "A3",
+      "sousTheme": "Réhabilitation énergétique du bâti patrimonial",
+      "stIdx": 6,
+      "sujet": "bp-acteurs",
+      "niveau": 2,
+      "famille": "S",
+      "question": "Quel organisme regroupe les architectes des Bâtiments de France (ABF) et assure conseil et contrôle sur les bâtiments en espaces protégés ?",
+      "explication": "Les ABF sont rattachés aux UDAP, elles-mêmes rattachées à la DRAC. Les UDAP assurent conseil et contrôle sur tous les bâtiments situés en espaces protégés (abords de MH, SPR, sites inscrits et classés, zones UNESCO...). Source : Guide de réhabilitation énergétique du bâti d'intérêt patrimonial, Cerema / ministère de la Ville et du Logement / ministère de la Culture, juillet 2026.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null,
+      "type": "qcm",
+      "options": [
+        "L'UDAP (unité départementale de l'architecture et du patrimoine)",
+        "Le CAUE",
+        "L'ALEC",
+        "France Rénov'"
+      ],
+      "bonneReponse": 0
+    },
+    {
+      "id": "pat-44",
+      "axe": "A3",
+      "sousTheme": "Réhabilitation énergétique du bâti patrimonial",
+      "stIdx": 6,
+      "sujet": "bp-acteurs",
+      "niveau": 3,
+      "famille": "S",
+      "question": "Pour un monument historique classé ou inscrit, quel organisme assure la mission de contrôle et de conseil, distinct de l'UDAP ?",
+      "explication": "La CRMH, également rattachée à la DRAC, assure la mission de contrôle et de conseil spécifiquement pour les monuments historiques classés ou inscrits — une mission distincte de celle des UDAP, compétentes pour les autres espaces protégés. Source : Guide de réhabilitation énergétique du bâti d'intérêt patrimonial, Cerema / ministère de la Ville et du Logement / ministère de la Culture, juillet 2026.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null,
+      "type": "qcm",
+      "options": [
+        "La CRMH (conservation régionale des monuments historiques)",
+        "Le PNR",
+        "L'ADEME",
+        "La CAUE"
+      ],
+      "bonneReponse": 0
+    },
+    {
+      "id": "pat-45",
+      "axe": "A3",
+      "sousTheme": "Réhabilitation énergétique du bâti patrimonial",
+      "stIdx": 6,
+      "sujet": "bp-acteurs",
+      "niveau": 4,
+      "famille": "M",
+      "question": "Associez chaque structure au conseil qu'elle apporte en réhabilitation énergétique d'un bâtiment d'intérêt patrimonial.",
+      "explication": "Les conseillers France Rénov' fournissent information et conseil gratuits et personnalisés sur les aides financières, les professionnels qualifiés et les travaux pour les logements. La préservation de l'intérêt patrimonial ne fait pas systématiquement partie de leurs attributions, mais ils orientent vers les structures compétentes. Source : Guide de réhabilitation énergétique du bâti d'intérêt patrimonial, Cerema / ministère de la Ville et du Logement / ministère de la Culture, juillet 2026.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null,
+      "type": "assoc",
+      "paires": [
+        [
+          "France Rénov'",
+          "Conseil gratuit et personnalisé aux particuliers sur les aides financières, les professionnels qualifiés et les travaux du logement, sans traiter systématiquement des enjeux patrimoniaux"
+        ],
+        [
+          "UDAP (architectes des Bâtiments de France)",
+          "Conseil et contrôle sur les bâtiments situés en espaces protégés : abords de monuments historiques, SPR, sites inscrits et classés"
+        ],
+        [
+          "CRMH",
+          "Contrôle et conseil spécifiques aux monuments historiques classés ou inscrits, au sein de la DRAC"
+        ],
+        [
+          "Fondation du Patrimoine",
+          "Aides à la restauration du patrimoine non protégé au titre des monuments historiques, sous conditions de critères patrimoniaux"
+        ]
+      ]
     }
   ]
 }
