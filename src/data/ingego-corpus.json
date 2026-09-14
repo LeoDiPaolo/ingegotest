@@ -22873,7 +22873,7 @@
       "niveau": 3,
       "famille": "S",
       "type": "cablage",
-      "question": "Associez chaque élément d'un système IoT de bâtiment à la couche du cadre R2S (Smart Building Alliance) à laquelle il appartient.",
+      "question": "Raccordez chaque élément d'un système IoT de bâtiment à la couche du cadre R2S (Smart Building Alliance) à laquelle il appartient.",
       "cablage": {
         "titre": "Cadre R2S — Ready to Services",
         "gaucheTitre": "Élément",
