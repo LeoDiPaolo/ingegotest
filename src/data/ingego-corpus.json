@@ -8,7 +8,7 @@
     },
     "genere": "2026-07-30",
     "version": "2026-09",
-    "totalQuestions": 870,
+    "totalQuestions": 907,
     "schema": "Chaque question porte : id, axe (A1-A6), sousTheme, sujet (clé de progression par niveaux), niveau (1-3), famille (S stable / M mouvant / E enjeu), type, les champs propres au type, explication, et le cas échéant derniereVerification (AAAA-MM) et aVerifier."
   },
   "axes": [
@@ -65,7 +65,14 @@
         "BACS, GTB, pilotage",
         "Coût global et cycle de vie",
         "Exploitation-maintenance",
-        "Contrôles réglementaires"
+        "Contrôles réglementaires",
+        "Bail vert et diagnostics contractuels (DPE)",
+        "Énergies renouvelables sur bâtiment (loi APER)",
+        "Gestion des déchets en exploitation (loi AGEC, tri des flux)",
+        "Biodiversité et séquence ERC en exploitation",
+        "Gestion de la ressource en eau",
+        "Obligations transversales (BEGES, LOM, RSE, taxonomie, PSE)",
+        "Valorisation financière et risques (valeur verte, assurance climat)"
       ]
     },
     {
@@ -19412,6 +19419,806 @@
           "Aides à la restauration du patrimoine non protégé au titre des monuments historiques, sous conditions de critères patrimoniaux"
         ]
       ]
+    },
+    {
+      "id": "m1-01",
+      "axe": "A4",
+      "sousTheme": "Bail vert et diagnostics contractuels (DPE)",
+      "stIdx": 6,
+      "sujet": "bail-vert",
+      "niveau": 2,
+      "famille": "S",
+      "type": "echelle",
+      "question": "Sur la réglette, désignez la surface à partir de laquelle l'annexe environnementale (bail vert) est obligatoire pour un bail tertiaire de bureaux ou de commerce.",
+      "explication": "Le bail vert, issu de la loi Grenelle II et inscrit au code de l'environnement, est obligatoire pour les baux tertiaires de bureaux ou de commerce de plus de 2 000 m², avec des exigences étendues à des baux conclus antérieurement à certaines dates. Source : M1-Chapitre 2, séquence 1.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null,
+      "bonneCible": 2,
+      "echelle_g": {
+        "titre": "Seuil de surface du bail vert",
+        "unite": "surface louée (m²)",
+        "tranches": [
+          {
+            "borne": "500 m²",
+            "l": "500 m² de bureaux ou de commerce"
+          },
+          {
+            "borne": "1 000 m²",
+            "l": "1 000 m² de bureaux ou de commerce"
+          },
+          {
+            "borne": "2 000 m²",
+            "l": "2 000 m² de bureaux ou de commerce"
+          },
+          {
+            "borne": "5 000 m²",
+            "l": "5 000 m² de bureaux ou de commerce"
+          }
+        ]
+      }
+    },
+    {
+      "id": "m1-02",
+      "axe": "A4",
+      "sousTheme": "Bail vert et diagnostics contractuels (DPE)",
+      "stIdx": 6,
+      "sujet": "bail-vert",
+      "niveau": 3,
+      "famille": "S",
+      "type": "qcm",
+      "question": "Quel texte a instauré le bail vert (annexe environnementale) ?",
+      "options": [
+        "La loi Grenelle I",
+        "La loi Grenelle II",
+        "La loi ELAN",
+        "La loi Climat et résilience"
+      ],
+      "bonneReponse": 1,
+      "explication": "Le bail vert a été instauré par la loi Grenelle II et est inscrit dans le code de l'environnement. Source : M1-Chapitre 2, séquence 1.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null
+    },
+    {
+      "id": "m1-03",
+      "axe": "A4",
+      "sousTheme": "Bail vert et diagnostics contractuels (DPE)",
+      "stIdx": 6,
+      "sujet": "bail-vert",
+      "niveau": 4,
+      "famille": "S",
+      "type": "qcm",
+      "question": "Laquelle de ces composantes n'est PAS exigée au minimum dans l'annexe environnementale d'un bail vert ?",
+      "options": [
+        "Le suivi des consommations d'énergie, d'eau et de déchets pour chaque partie",
+        "La liste détaillée des équipements et leurs caractéristiques énergétiques",
+        "Un programme d'actions partagé pour améliorer la performance",
+        "Un audit énergétique réglementaire quinquennal réalisé par un organisme indépendant"
+      ],
+      "bonneReponse": 3,
+      "explication": "L'annexe environnementale doit comporter au minimum : le suivi des consommations (énergie, eau, déchets), la liste des équipements et leurs caractéristiques énergétiques, un engagement conjoint à réaliser un bilan de performance, et un programme d'actions partagé. Aucun audit quinquennal indépendant n'est exigé par ce dispositif. Source : M1-Chapitre 2, séquence 1.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null
+    },
+    {
+      "id": "m1-04",
+      "axe": "A4",
+      "sousTheme": "Bail vert et diagnostics contractuels (DPE)",
+      "stIdx": 6,
+      "sujet": "bail-vert",
+      "niveau": 1,
+      "famille": "S",
+      "type": "curseur",
+      "question": "Réglez le curseur sur la durée de validité d'un diagnostic de performance énergétique (DPE).",
+      "explication": "Le DPE est valable dix ans. Source : M1-Chapitre 2, séquence 2.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null,
+      "curseur": {
+        "titre": "Durée de validité du DPE",
+        "unite": "années",
+        "min": 0,
+        "max": 20,
+        "pas": 1,
+        "cible": 10,
+        "tolerance": 0,
+        "legende": "Ajustez la durée avec le curseur ou les boutons − et +."
+      }
+    },
+    {
+      "id": "m1-05",
+      "axe": "A4",
+      "sousTheme": "Bail vert et diagnostics contractuels (DPE)",
+      "stIdx": 6,
+      "sujet": "bail-vert",
+      "niveau": 5,
+      "famille": "S",
+      "type": "qcm",
+      "question": "Depuis sa réforme, l'étiquette du DPE repose sur :",
+      "options": [
+        "Uniquement la consommation d'énergie primaire",
+        "Uniquement les émissions de gaz à effet de serre",
+        "La combinaison de la consommation d'énergie ET des émissions de GES",
+        "Uniquement le confort d'été du logement"
+      ],
+      "bonneReponse": 2,
+      "explication": "La nouvelle étiquette DPE combine directement la consommation d'énergie primaire et les émissions de gaz à effet de serre, donnant une vision globale énergétique et environnementale. Source : M1-Chapitre 2, séquence 2.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null
+    },
+    {
+      "id": "m1-06",
+      "axe": "A4",
+      "sousTheme": "Dispositif Éco Énergie Tertiaire",
+      "stIdx": 1,
+      "sujet": "deet-multi",
+      "niveau": 6,
+      "famille": "S",
+      "type": "qcm",
+      "question": "En cas de multi-occupation d'un bâtiment assujetti au Dispositif Éco Énergie Tertiaire, où doivent être précisées les responsabilités de collecte et de déclaration des consommations ?",
+      "options": [
+        "Dans le règlement de copropriété uniquement",
+        "Dans les baux ou les mandats de gestion",
+        "Elles restent portées par défaut par le seul propriétaire, quel que soit le contrat",
+        "Dans un arrêté préfectoral spécifique à chaque immeuble"
+      ],
+      "bonneReponse": 1,
+      "explication": "En cas de multi-occupation, les responsabilités de collecte et de déclaration des consommations doivent être précisées dans les baux ou les mandats de gestion. Source : M1-Chapitre 2, séquence 3.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null
+    },
+    {
+      "id": "m1-07",
+      "axe": "A4",
+      "sousTheme": "BACS, GTB, pilotage",
+      "stIdx": 2,
+      "sujet": "bacs-fonctions",
+      "niveau": 4,
+      "famille": "S",
+      "type": "qcm",
+      "question": "Le système d'automatisation et de contrôle imposé par le décret BACS doit notamment :",
+      "options": [
+        "Se limiter à mesurer la consommation d'énergie, sans capacité d'action",
+        "Suivre en continu les consommations, détecter les pertes d'efficacité, permettre la gestion autonome et l'arrêt manuel des systèmes, tout en restant interopérable",
+        "Se substituer totalement à l'intervention humaine, sans possibilité d'arrêt manuel",
+        "Centraliser les données sans aucune obligation d'interopérabilité"
+      ],
+      "bonneReponse": 1,
+      "explication": "Le système BACS doit suivre, enregistrer et analyser en continu les données, détecter les pertes d'efficacité, proposer des améliorations, être interopérable et permettre la gestion autonome et l'arrêt manuel des systèmes. Source : M1-Chapitre 2, séquence 4.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null
+    },
+    {
+      "id": "m1-08",
+      "axe": "A4",
+      "sousTheme": "BACS, GTB, pilotage",
+      "stIdx": 2,
+      "sujet": "bacs-fonctions",
+      "niveau": 5,
+      "famille": "M",
+      "type": "qcm",
+      "question": "Combien de temps les données collectées par un système BACS doivent-elles être conservées par le propriétaire du système ?",
+      "options": ["1 an", "3 ans", "5 ans", "10 ans"],
+      "bonneReponse": 2,
+      "explication": "Les données doivent être conservées cinq ans et partagées avec les exploitants concernés. Attention : les échéances d'application du décret BACS (70-290 kW) ont été reportées du 1er janvier 2027 au 1er janvier 2030 par le décret n°2025-1343 du 26 décembre 2025, et le seuil d'exemption pour retour sur investissement est de 10 ans (et non 6 ans) depuis le décret du 7 avril 2023 — deux points sur lesquels le support de formation d'origine (2025) est aujourd'hui dépassé.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null
+    },
+    {
+      "id": "m1-09",
+      "axe": "A4",
+      "sousTheme": "Énergies renouvelables sur bâtiment (loi APER)",
+      "stIdx": 7,
+      "sujet": "aper",
+      "niveau": 2,
+      "famille": "S",
+      "type": "qcm",
+      "question": "La loi APER (accélération de la production d'énergies renouvelables) a été adoptée en :",
+      "options": ["2019", "Mars 2023", "2021", "2025"],
+      "bonneReponse": 1,
+      "explication": "Adoptée en mars 2023, la loi APER accélère la production d'énergies renouvelables sur l'ensemble du territoire, notamment en imposant la production d'énergie sur les bâtiments. Source : M1-Chapitre 2, séquence 5.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null
+    },
+    {
+      "id": "m1-10",
+      "axe": "A4",
+      "sousTheme": "Énergies renouvelables sur bâtiment (loi APER)",
+      "stIdx": 7,
+      "sujet": "aper",
+      "niveau": 3,
+      "famille": "S",
+      "type": "tri",
+      "question": "Triez ces propositions selon qu'elles constituent ou non l'un des quatre axes de la loi APER.",
+      "explication": "Les quatre axes de la loi APER sont : planifier avec les élus locaux, simplifier les procédures d'autorisation, mobiliser prioritairement les espaces déjà artificialisés, et partager la valeur créée avec les territoires. Source : M1-Chapitre 2, séquence 5.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null,
+      "colonnes": ["Axe de la loi APER", "N'est pas un axe de la loi APER"],
+      "elements": [
+        ["Planifier avec les élus locaux le déploiement des renouvelables", 0],
+        ["Simplifier les procédures d'autorisation", 0],
+        ["Mobiliser prioritairement les espaces déjà artificialisés (toitures, parkings)", 0],
+        ["Partager la valeur créée avec les territoires", 0],
+        ["Instaurer un permis de construire national unique pour toute installation ENR", 1],
+        ["Confier la production d'énergie renouvelable à un opérateur national unique", 1]
+      ]
+    },
+    {
+      "id": "m1-11",
+      "axe": "A4",
+      "sousTheme": "Énergies renouvelables sur bâtiment (loi APER)",
+      "stIdx": 7,
+      "sujet": "aper",
+      "niveau": 4,
+      "famille": "S",
+      "type": "qcm",
+      "question": "Pour un bâtiment neuf de plus de 500 m², la loi APER impose que la toiture intègre :",
+      "options": [
+        "Obligatoirement des panneaux photovoltaïques, à l'exclusion de toute autre solution",
+        "Un système de production d'ENR, une végétalisation, ou un autre dispositif améliorant l'efficacité thermique ou la biodiversité",
+        "Une citerne de récupération d'eau pluviale exclusivement",
+        "Aucune obligation, la mesure ne concernant que les bâtiments existants"
+      ],
+      "bonneReponse": 1,
+      "explication": "Pour les bâtiments neufs de plus de 500 m², la toiture doit intégrer une solution telle qu'un système de production d'énergie renouvelable, une végétalisation, ou un autre dispositif améliorant l'efficacité thermique ou la biodiversité. Source : M1-Chapitre 2, séquence 5.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null
+    },
+    {
+      "id": "m1-12",
+      "axe": "A4",
+      "sousTheme": "Énergies renouvelables sur bâtiment (loi APER)",
+      "stIdx": 7,
+      "sujet": "aper",
+      "niveau": 6,
+      "famille": "M",
+      "type": "qcm",
+      "question": "Concernant les parkings extérieurs de grande taille, la loi APER prévoit des obligations de solarisation ou d'ombrage qui s'appliquent progressivement à compter de :",
+      "options": [
+        "2024 uniquement, pour tous les parkings sans exception",
+        "2026 et 2028, selon la taille du parking, en cas d'extension ou de rénovation lourde",
+        "2030 pour l'ensemble du parc, sans distinction de taille",
+        "Il n'existe aucune obligation réglementaire sur les parkings"
+      ],
+      "bonneReponse": 1,
+      "explication": "Pour les parkings existants de grande taille, des obligations de solarisation ou de végétalisation s'appliquent progressivement à compter de 2026 et 2028, en cas d'extension ou de rénovation lourde. Source : M1-Chapitre 2, séquence 5.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null
+    },
+    {
+      "id": "m1-13",
+      "axe": "A4",
+      "sousTheme": "Énergies renouvelables sur bâtiment (loi APER)",
+      "stIdx": 7,
+      "sujet": "aper",
+      "niveau": 7,
+      "famille": "S",
+      "type": "qcm",
+      "question": "Dans le cadre de la loi APER, la « décentralisation de la production et de la consommation d'énergie » appliquée à un patrimoine public vise à :",
+      "options": [
+        "Produire l'énergie sur site (toitures, parkings) pour réduire la dépendance au réseau et favoriser l'autoconsommation",
+        "Transférer la responsabilité de la production à un opérateur national unique",
+        "Interdire toute production d'énergie sur les bâtiments publics",
+        "Limiter la production d'énergie renouvelable aux seules zones rurales"
+      ],
+      "bonneReponse": 0,
+      "explication": "Parmi les leviers de la loi APER figure la décentralisation de la production et de la consommation d'énergie, qui consiste à produire l'énergie au plus près de l'usage (toitures, parkings) pour favoriser l'autoconsommation et réduire la dépendance au réseau. Source : M1-Chapitre 2, séquence 5.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null
+    },
+    {
+      "id": "m1-14",
+      "axe": "A4",
+      "sousTheme": "Gestion des déchets en exploitation (loi AGEC, tri des flux)",
+      "stIdx": 8,
+      "sujet": "agec-flux",
+      "niveau": 1,
+      "famille": "S",
+      "type": "qcm",
+      "question": "Le secteur du bâtiment représente environ quelle part des déchets produits chaque année en France ?",
+      "options": ["2 %", "8 %", "25 %", "50 %"],
+      "bonneReponse": 1,
+      "explication": "320 millions de tonnes de déchets sont produits en France chaque année, dont 40 millions proviennent du secteur du bâtiment, soit environ 8 %. Source : M1-Chapitre 2, séquence 6.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null
+    },
+    {
+      "id": "m1-15",
+      "axe": "A4",
+      "sousTheme": "Gestion des déchets en exploitation (loi AGEC, tri des flux)",
+      "stIdx": 8,
+      "sujet": "agec-flux",
+      "niveau": 2,
+      "famille": "S",
+      "type": "qcm",
+      "question": "Depuis quel texte le tri à la source de 5 flux de déchets (papiers-cartons, métal, plastique, verre, bois) est-il obligatoire pour les producteurs et détenteurs de déchets ?",
+      "options": [
+        "Le décret n°2016-288 du 10 mars 2016, dit « décret 5 flux »",
+        "La loi AGEC de 2020",
+        "La loi ELAN de 2018",
+        "L'arrêté du 21 août 2008"
+      ],
+      "bonneReponse": 0,
+      "explication": "Le décret n°2016-288, publié le 10 mars 2016, dit « décret 5 flux », impose aux producteurs et détenteurs de déchets de trier à la source les papiers-cartons, le métal, le plastique, le verre et le bois. Source : M1-Chapitre 2, séquence 6.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null
+    },
+    {
+      "id": "m1-16",
+      "axe": "A4",
+      "sousTheme": "Gestion des déchets en exploitation (loi AGEC, tri des flux)",
+      "stIdx": 8,
+      "sujet": "agec-flux",
+      "niveau": 4,
+      "famille": "M",
+      "type": "frise",
+      "question": "Placez sur la frise les étapes successives d'extension de l'obligation de tri à la source des déchets.",
+      "explication": "Le décret n°2021-950 du 16 juillet 2021 ajoute aux 5 flux les déchets de fraction minérale et les déchets de plâtre (« tri des 7 flux »). Depuis le 1er janvier 2024, les biodéchets s'y ajoutent, portant le total à 8 flux. Source : M1-Chapitre 2, séquence 6.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null,
+      "points": [
+        ["10 mars 2016", "Décret « 5 flux » : papiers-cartons, métal, plastique, verre, bois"],
+        ["16 juillet 2021", "Décret « 7 flux » : ajout de la fraction minérale et du plâtre"],
+        ["1er janvier 2024", "Ajout des biodéchets : tri à 8 flux"],
+        ["1er janvier 2025", "Ajout des textiles professionnels usagés : tri à 9 flux"]
+      ]
+    },
+    {
+      "id": "m1-17",
+      "axe": "A4",
+      "sousTheme": "Gestion des déchets en exploitation (loi AGEC, tri des flux)",
+      "stIdx": 8,
+      "sujet": "agec-flux",
+      "niveau": 6,
+      "famille": "M",
+      "type": "qcm",
+      "question": "Depuis le 1er janvier 2025, le « tri à 9 flux » ajoute quel flux supplémentaire aux obligations existantes ?",
+      "options": [
+        "Les huiles usagées",
+        "Les textiles professionnels usagés (vêtements de travail, équipements de protection individuelle)",
+        "Les déchets dangereux",
+        "Les déchets verts"
+      ],
+      "bonneReponse": 1,
+      "explication": "Depuis le 1er janvier 2025, le tri à 9 flux étend l'obligation aux textiles professionnels usagés, un gisement estimé à environ 20 000 tonnes par an en France, jusque-là en grande partie enfoui ou incinéré. Source : M1-Chapitre 2, séquence 6.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null
+    },
+    {
+      "id": "m1-18",
+      "axe": "A4",
+      "sousTheme": "Gestion des déchets en exploitation (loi AGEC, tri des flux)",
+      "stIdx": 8,
+      "sujet": "agec-flux",
+      "niveau": 5,
+      "famille": "S",
+      "type": "qcm",
+      "question": "La loi AGEC (anti-gaspillage pour une économie circulaire, 10 février 2020) met en place pour le BTP une filière REP (responsabilité élargie du producteur) reposant sur le principe :",
+      "options": [
+        "Du pollueur-payeur",
+        "De la gratuité totale pour le producteur",
+        "De la mutualisation intégrale par l'État",
+        "De la responsabilité exclusive du maître d'ouvrage, quel que soit le producteur"
+      ],
+      "bonneReponse": 0,
+      "explication": "La filière REP pour le BTP, définie par l'article L. 541-10 du code de l'environnement, repose sur le principe du pollueur-payeur : le producteur doit contribuer financièrement à la gestion des déchets de ses produits. Source : M1-Chapitre 2, séquence 6.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null
+    },
+    {
+      "id": "m1-19",
+      "axe": "A4",
+      "sousTheme": "Biodiversité et séquence ERC en exploitation",
+      "stIdx": 9,
+      "sujet": "erc-bio",
+      "niveau": 2,
+      "famille": "S",
+      "type": "ordre",
+      "question": "Remettez dans l'ordre de priorité les trois temps de la séquence appliquée aux atteintes à la biodiversité.",
+      "explication": "La séquence ERC suppose prioritairement d'éviter les atteintes prévisibles, à défaut d'en réduire la portée, et en dernier recours de compenser les atteintes qui n'ont pu être ni évitées ni réduites. Source : M1-Chapitre 2, séquence 7.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null,
+      "items": [
+        "Éviter les atteintes prévisibles dès la conception du projet",
+        "Réduire la portée des atteintes qui n'ont pu être évitées",
+        "Compenser, en dernier recours, les atteintes résiduelles"
+      ]
+    },
+    {
+      "id": "m1-20",
+      "axe": "A4",
+      "sousTheme": "Biodiversité et séquence ERC en exploitation",
+      "stIdx": 9,
+      "sujet": "erc-bio",
+      "niveau": 5,
+      "famille": "S",
+      "type": "tri",
+      "question": "Triez ces propositions selon qu'elles font ou non partie des axes de la Stratégie nationale pour la biodiversité (SNB 2030).",
+      "explication": "La SNB 2030 est articulée autour de 5 axes : écosystèmes protégés/restaurés/résilients, sobriété dans l'usage des ressources et des espaces, sensibilisation et formation, changement des modes de pilotage, évaluation des financements nécessaires. Source : M1-Chapitre 2, séquence 7.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null,
+      "colonnes": ["Axe de la SNB 2030", "N'est pas un axe de la SNB 2030"],
+      "elements": [
+        ["Protéger, restaurer et rendre résilients les écosystèmes", 0],
+        ["Être plus sobre dans l'usage des ressources et des espaces", 0],
+        ["Sensibiliser, former et mobiliser les acteurs", 0],
+        ["Faire évoluer les modes de pilotage et de gouvernance", 0],
+        ["Évaluer les financements nécessaires à la biodiversité", 0],
+        ["Fixer un quota national annuel de démolitions de bâtiments", 1],
+        ["Interdire tout aménagement de parking en zone urbaine", 1]
+      ]
+    },
+    {
+      "id": "m1-21",
+      "axe": "A4",
+      "sousTheme": "Biodiversité et séquence ERC en exploitation",
+      "stIdx": 9,
+      "sujet": "erc-bio",
+      "niveau": 7,
+      "famille": "S",
+      "type": "qcm",
+      "question": "Concrètement, en phase d'exploitation d'un patrimoine bâti, à quel type de travaux la séquence ERC s'applique-t-elle le plus souvent ?",
+      "options": [
+        "Uniquement aux constructions neuves",
+        "Aux travaux sur les parties extérieures du bâtiment (parking, espaces verts, patio, toiture...)",
+        "Uniquement aux opérations de démolition totale",
+        "Elle ne s'applique jamais en phase d'exploitation"
+      ],
+      "bonneReponse": 1,
+      "explication": "En exploitation, la séquence ERC s'applique dans le cadre de petits ou gros travaux sur les parties extérieures du bâtiment : parking, espaces verts, patio, toiture. Source : M1-Chapitre 2, séquence 7.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null
+    },
+    {
+      "id": "m1-22",
+      "axe": "A4",
+      "sousTheme": "Biodiversité et séquence ERC en exploitation",
+      "stIdx": 9,
+      "sujet": "erc-bio",
+      "niveau": 3,
+      "famille": "M",
+      "type": "qcm",
+      "question": "L'objectif de Zéro Artificialisation Nette (ZAN) à l'horizon 2050 implique que :",
+      "options": [
+        "Plus aucune construction ne sera autorisée en France après 2050",
+        "Toute artificialisation nouvelle devra être compensée par une renaturation à proportion égale d'espaces artificialisés",
+        "Seules les communes rurales sont concernées par cet objectif",
+        "L'objectif final de 2050 a été abandonné"
+      ],
+      "bonneReponse": 1,
+      "explication": "L'objectif « ZAN des sols » n'implique pas l'arrêt total de l'artificialisation de nouveaux espaces : celle-ci doit être conditionnée à une renaturation à proportion égale. L'objectif final de 2050 demeure, seul le calendrier intermédiaire a fait l'objet d'assouplissements successifs (dont la loi TRACE en 2026). Source : M1-Chapitre 2, séquence 7 ; à recouper avec les questions déjà présentes sur le ZAN (axe A5, sous-thème « Sobriété foncière »).",
+      "derniereVerification": "2026-09",
+      "aVerifier": null
+    },
+    {
+      "id": "m1-23",
+      "axe": "A4",
+      "sousTheme": "Gestion de la ressource en eau",
+      "stIdx": 10,
+      "sujet": "eau-expl",
+      "niveau": 3,
+      "famille": "M",
+      "type": "curseur",
+      "question": "Réglez le curseur sur l'objectif de réduction des prélèvements d'eau fixé pour 2030 par le plan d'actions gouvernemental de 2023.",
+      "explication": "Ce plan, qui détaille près de 53 mesures, fixe un objectif de réduction de 10 % des prélèvements d'eau d'ici 2030. Source : M1-Chapitre 2, séquence 8.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null,
+      "curseur": {
+        "titre": "Objectif de réduction des prélèvements d'eau d'ici 2030",
+        "unite": "%",
+        "min": 0,
+        "max": 50,
+        "pas": 5,
+        "cible": 10,
+        "tolerance": 0,
+        "legende": "Faites glisser le curseur, ou ajustez avec − et +."
+      }
+    },
+    {
+      "id": "m1-24",
+      "axe": "A4",
+      "sousTheme": "Gestion de la ressource en eau",
+      "stIdx": 10,
+      "sujet": "eau-expl",
+      "niveau": 2,
+      "famille": "S",
+      "type": "qcm",
+      "question": "Concernant la récupération et l'usage de l'eau de pluie dans les bâtiments, les textes réglementaires de référence sont notamment les arrêtés du :",
+      "options": [
+        "21 août 2008 et 17 décembre 2008",
+        "12 juillet 2010",
+        "1er janvier 2022",
+        "7 avril 2023"
+      ],
+      "bonneReponse": 0,
+      "explication": "L'arrêté du 21 août 2008 porte sur la récupération des eaux de pluie et leur usage intérieur/extérieur ; l'arrêté du 17 décembre 2008 porte notamment sur le contrôle des ouvrages de récupération. Source : M1-Chapitre 2, séquence 8.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null
+    },
+    {
+      "id": "m1-25",
+      "axe": "A4",
+      "sousTheme": "Gestion de la ressource en eau",
+      "stIdx": 10,
+      "sujet": "eau-expl",
+      "niveau": 5,
+      "famille": "S",
+      "type": "qcm",
+      "question": "Concernant la gestion de l'eau à l'échelle du bâtiment en exploitation, laquelle de ces affirmations est correcte ?",
+      "options": [
+        "La réglementation sur l'eau est aussi ambitieuse et chiffrée que celle sur l'énergie et le carbone",
+        "Il n'existe aucune réglementation ni recommandation sur l'eau en phase d'exploitation",
+        "La réglementation est moins ambitieuse que sur l'énergie, mais le suivi des compteurs et sous-compteurs d'eau devient une priorité opérationnelle",
+        "La récupération d'eau de pluie est interdite dans les bâtiments tertiaires"
+      ],
+      "bonneReponse": 2,
+      "explication": "Même s'il n'existe pas de réglementation aussi ambitieuse sur l'eau que sur l'énergie et le carbone, il paraît primordial de commencer à suivre et monitorer les compteurs et sous-compteurs d'eau. Source : M1-Chapitre 2, séquence 8.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null
+    },
+    {
+      "id": "m1-26",
+      "axe": "A4",
+      "sousTheme": "Obligations transversales (BEGES, LOM, RSE, taxonomie, PSE)",
+      "stIdx": 11,
+      "sujet": "oblig-transv",
+      "niveau": 4,
+      "famille": "S",
+      "type": "echelle",
+      "question": "Sur la réglette, désignez le seuil de population à partir duquel une commune ou un EPCI est soumis à l'obligation de bilan d'émissions de gaz à effet de serre (BEGES).",
+      "explication": "Le BEGES, encadré par l'article L. 229-25 du code de l'environnement, s'impose entre autres à l'État, aux régions, aux départements, aux communes et EPCI de plus de 50 000 habitants, ainsi qu'aux personnes morales de droit privé de plus de 500 salariés. Source : M1-Chapitre 2, séquence 10.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null,
+      "bonneCible": 2,
+      "echelle_g": {
+        "titre": "Seuil d'assujettissement au BEGES",
+        "unite": "population de la commune ou de l'EPCI (habitants)",
+        "tranches": [
+          {
+            "borne": "10 000 hab.",
+            "l": "10 000 habitants"
+          },
+          {
+            "borne": "20 000 hab.",
+            "l": "20 000 habitants"
+          },
+          {
+            "borne": "50 000 hab.",
+            "l": "50 000 habitants"
+          },
+          {
+            "borne": "100 000 hab.",
+            "l": "100 000 habitants"
+          }
+        ]
+      }
+    },
+    {
+      "id": "m1-27",
+      "axe": "A4",
+      "sousTheme": "Obligations transversales (BEGES, LOM, RSE, taxonomie, PSE)",
+      "stIdx": 11,
+      "sujet": "oblig-transv",
+      "niveau": 6,
+      "famille": "S",
+      "type": "qcm",
+      "question": "Depuis un décret du 1er juillet 2022, les BEGES doivent obligatoirement intégrer :",
+      "options": [
+        "Uniquement les scopes 1 et 2",
+        "L'ensemble des émissions indirectes significatives, incluant le scope 3",
+        "Uniquement les émissions liées aux déplacements domicile-travail",
+        "Aucune évolution n'a eu lieu depuis la création du dispositif"
+      ],
+      "bonneReponse": 1,
+      "explication": "Un décret du 1er juillet 2022 rend obligatoire la comptabilisation et la déclaration de l'ensemble des émissions indirectes significatives, incluant le scope 3 (produits vendus, déplacements domicile-travail, etc.), alors que seuls les scopes 1 et 2 étaient auparavant obligatoires. Source : M1-Chapitre 2, séquence 10.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null
+    },
+    {
+      "id": "m1-28",
+      "axe": "A4",
+      "sousTheme": "Obligations transversales (BEGES, LOM, RSE, taxonomie, PSE)",
+      "stIdx": 11,
+      "sujet": "oblig-transv",
+      "niveau": 3,
+      "famille": "M",
+      "type": "qcm",
+      "question": "La loi LOM (loi d'orientation des mobilités) impose, depuis 2025, l'équipement des parkings de bâtiments non résidentiels de plus de 20 places à raison d'au moins :",
+      "options": [
+        "1 point de recharge par tranche de 20 places",
+        "1 point de recharge unique, quel que soit le nombre de places",
+        "5 points de recharge par parking, sans proportionnalité",
+        "Aucune obligation chiffrée n'existe"
+      ],
+      "bonneReponse": 0,
+      "explication": "La loi LOM prévoit une obligation d'équipement des parkings de bâtiments non résidentiels de plus de 20 places : depuis 2025, ces parkings doivent être équipés d'au moins un point de recharge par tranche de 20 places. Source : M1-Chapitre 2, séquence 10.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null
+    },
+    {
+      "id": "m1-29",
+      "axe": "A4",
+      "sousTheme": "Obligations transversales (BEGES, LOM, RSE, taxonomie, PSE)",
+      "stIdx": 11,
+      "sujet": "oblig-transv",
+      "niveau": 2,
+      "famille": "M",
+      "type": "qcm",
+      "question": "La taxonomie européenne vise principalement à :",
+      "options": [
+        "Fixer un salaire minimum européen dans le secteur du BTP",
+        "Établir une classification commune des activités économiques ayant un impact favorable sur l'environnement, pour orienter les capitaux vers les activités durables",
+        "Remplacer le DPE par un dispositif unique dans toute l'Union européenne",
+        "Interdire la construction neuve en Europe"
+      ],
+      "bonneReponse": 1,
+      "explication": "La taxonomie européenne désigne la classification des activités économiques ayant un impact favorable sur l'environnement, un langage commun destiné à orienter les capitaux vers les activités « vertes ». Source : M1-Chapitre 2, séquence 10. Point de vigilance : le cadre européen de reporting (CSRD/taxonomie) est en pleine révision depuis le paquet « Omnibus » (2025-2026) — les seuils d'assujettissement évoluent rapidement, cette question se limite donc volontairement à la définition, plus stable.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null
+    },
+    {
+      "id": "m1-30",
+      "axe": "A4",
+      "sousTheme": "Obligations transversales (BEGES, LOM, RSE, taxonomie, PSE)",
+      "stIdx": 11,
+      "sujet": "oblig-transv",
+      "niveau": 5,
+      "famille": "S",
+      "type": "tri",
+      "question": "Triez ces propositions selon qu'elles constituent ou non l'un des grands chantiers du plan « Services publics écoresponsables ».",
+      "explication": "Le PSE se décline en 5 grands chantiers : mieux se déplacer, mieux produire et mieux consommer, mieux se nourrir, mieux gérer les bâtiments de l'État, mieux protéger et valoriser les écosystèmes. Source : M1-Chapitre 2, séquence 10.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null,
+      "colonnes": ["Chantier du plan SPE", "N'est pas un chantier du plan SPE"],
+      "elements": [
+        ["Mieux se déplacer", 0],
+        ["Mieux produire et mieux consommer", 0],
+        ["Mieux se nourrir", 0],
+        ["Mieux gérer les bâtiments de l'État", 0],
+        ["Mieux protéger et valoriser les écosystèmes", 0],
+        ["Mieux rémunérer les agents publics", 1],
+        ["Mieux contrôler la dette des collectivités", 1]
+      ]
+    },
+    {
+      "id": "m1-31",
+      "axe": "A4",
+      "sousTheme": "Valorisation financière et risques (valeur verte, assurance climat)",
+      "stIdx": 12,
+      "sujet": "valeur-verte",
+      "niveau": 4,
+      "famille": "M",
+      "type": "qcm",
+      "question": "La « valeur verte » en immobilier correspond aujourd'hui principalement à :",
+      "options": [
+        "Une prime systématique payée pour tout bâtiment neuf",
+        "L'écart de valeur entre un bâtiment performant sur le plan environnemental et un comparable moins performant — devenue une valeur défensive visant avant tout à éviter une perte",
+        "Un dispositif fiscal de réduction d'impôt pour les bailleurs",
+        "Une certification obligatoire depuis 2023 pour tout bien mis en location"
+      ],
+      "bonneReponse": 1,
+      "explication": "La valeur verte correspond à l'écart de valeur entre un bâtiment performant et un comparable moins performant. Le marché ne rémunère plus vraiment une « prime verte », mais sanctionne les actifs obsolètes par une « décote brune » : la valeur verte est donc devenue une valeur défensive. Source : M1-Chapitre 3, séquence 3.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null
+    },
+    {
+      "id": "m1-32",
+      "axe": "A4",
+      "sousTheme": "Valorisation financière et risques (valeur verte, assurance climat)",
+      "stIdx": 12,
+      "sujet": "valeur-verte",
+      "niveau": 6,
+      "famille": "M",
+      "type": "qcm",
+      "question": "La « décote brune » désigne :",
+      "options": [
+        "Une prime accordée aux bâtiments rénovés récemment",
+        "La sanction de marché appliquée aux actifs obsolètes ou non conformes aux exigences environnementales",
+        "Une taxe sur les logements vacants",
+        "Un abattement fiscal automatique pour travaux de rénovation énergétique"
+      ],
+      "bonneReponse": 1,
+      "explication": "Le marché sanctionne les actifs obsolètes par une « décote brune » : un actif non conforme peut devenir difficilement louable ou invendable, avec une double perte (manque de recettes et coût des travaux). Source : M1-Chapitre 3, séquence 3.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null
+    },
+    {
+      "id": "m1-33",
+      "axe": "A4",
+      "sousTheme": "Valorisation financière et risques (valeur verte, assurance climat)",
+      "stIdx": 12,
+      "sujet": "valeur-verte",
+      "niveau": 3,
+      "famille": "M",
+      "type": "qcm",
+      "question": "Entre la période 1982-1989 et la période 2020-2023, le coût annuel moyen des sinistres climatiques pour les assureurs en France a, selon France Assureurs :",
+      "options": [
+        "Été divisé par deux",
+        "Été multiplié par environ quatre",
+        "Été multiplié par cent",
+        "Été stable"
+      ],
+      "bonneReponse": 1,
+      "explication": "Le coût annuel des sinistres climatiques pour les assureurs a été multiplié par quatre depuis les années 1980, passant d'environ 1,5 milliard d'euros en moyenne (1982-1989) à plus de 6 milliards entre 2020 et 2023. Source : M1-Chapitre 3, séquence 4 (source citée : France Assureurs).",
+      "derniereVerification": "2026-09",
+      "aVerifier": null
+    },
+    {
+      "id": "m1-34",
+      "axe": "A4",
+      "sousTheme": "Valorisation financière et risques (valeur verte, assurance climat)",
+      "stIdx": 12,
+      "sujet": "valeur-verte",
+      "niveau": 5,
+      "famille": "M",
+      "type": "qcm",
+      "question": "Parmi les conséquences du changement climatique pour les gestionnaires immobiliers en matière d'assurance, on trouve notamment :",
+      "options": [
+        "La renégociation des contrats avec franchises majorées, et la désassurabilité partielle de certaines zones à risque",
+        "Une baisse généralisée des primes d'assurance",
+        "La gratuité de l'assurance pour les bâtiments non rénovés",
+        "L'interdiction pour les assureurs de réviser leurs clauses d'exclusion"
+      ],
+      "bonneReponse": 0,
+      "explication": "Les assureurs révisent les clauses d'exclusion (zones inondables) et introduisent des franchises majorées, notamment pour les biens non rénovés. Certaines régions (littoraux, vallées fluviales) subissent des exclusions de garantie ou des tarifs prohibitifs. Source : M1-Chapitre 3, séquence 4.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null
+    },
+    {
+      "id": "m1-35",
+      "axe": "A4",
+      "sousTheme": "Valorisation financière et risques (valeur verte, assurance climat)",
+      "stIdx": 12,
+      "sujet": "valeur-verte",
+      "niveau": 7,
+      "famille": "E",
+      "type": "qcm",
+      "question": "Selon le référent GID (Paul Grossein), une gestion durable et stratégique des budgets d'investissement du patrimoine immobilier public repose avant tout sur :",
+      "options": [
+        "La dépense budgétaire maximale possible chaque année, pour ne pas perdre de crédits",
+        "Une connaissance fine du parc, une priorisation des risques et un alignement avec les objectifs de transition — plutôt que des audits généralistes sans finalité claire",
+        "La concentration exclusive des investissements sur les bâtiments de prestige",
+        "Le tirage au sort des opérations à financer, pour garantir l'équité territoriale"
+      ],
+      "bonneReponse": 1,
+      "explication": "L'enjeu n'est pas uniquement de dépenser moins mais de dépenser mieux : cibler les bâtiments les plus énergivores ou à fort potentiel, en s'appuyant sur une connaissance fine du parc. À défaut, on observe des plans d'investissement déconnectés des enjeux (audits sans finalité, crédits consommés dans l'urgence). Source : M1-Chapitre 3, séquence 5.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null
+    },
+    {
+      "id": "m1-36",
+      "axe": "A4",
+      "sousTheme": "Connaissance et stratégie de parc",
+      "stIdx": 0,
+      "sujet": "pat-chiffres",
+      "niveau": 1,
+      "famille": "S",
+      "type": "qcm",
+      "question": "En France, le secteur du bâtiment représente environ quelle part de la consommation d'énergie du pays ?",
+      "options": ["20 %", "28 %", "44 %", "60 %"],
+      "bonneReponse": 2,
+      "explication": "Le secteur du bâtiment représente environ 44 % de la consommation d'énergie en France, devant le secteur des transports. Source : M1-Chapitre 1, séquence 3 (source citée : ministère de l'Écologie).",
+      "derniereVerification": "2026-09",
+      "aVerifier": null
+    },
+    {
+      "id": "m1-37",
+      "axe": "A4",
+      "sousTheme": "Connaissance et stratégie de parc",
+      "stIdx": 0,
+      "sujet": "pat-chiffres",
+      "niveau": 2,
+      "famille": "S",
+      "type": "qcm",
+      "question": "Un immeuble de bureaux consomme et génère en moyenne, par mètre carré et par an :",
+      "options": [
+        "40 litres d'eau et 0,4 kg de déchets",
+        "400 litres d'eau et 4,3 kg de déchets",
+        "4 000 litres d'eau et 43 kg de déchets",
+        "Aucune donnée n'est disponible sur ce sujet"
+      ],
+      "bonneReponse": 1,
+      "explication": "Un immeuble de bureaux consomme en moyenne 400 litres d'eau par m² et par an, et génère en moyenne 4,3 kg de déchets par m² et par an en phase d'exploitation. Source : M1-Chapitre 1, séquence 3 (source citée : OID).",
+      "derniereVerification": "2026-09",
+      "aVerifier": null
     }
   ]
 }
