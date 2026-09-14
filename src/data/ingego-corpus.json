@@ -8,7 +8,7 @@
     },
     "genere": "2026-07-30",
     "version": "2026-09",
-    "totalQuestions": 924,
+    "totalQuestions": 948,
     "schema": "Chaque question porte : id, axe (A1-A6), sousTheme, sujet (clé de progression par niveaux), niveau (1-3), famille (S stable / M mouvant / E enjeu), type, les champs propres au type, explication, et le cas échéant derniereVerification (AAAA-MM) et aVerifier."
   },
   "axes": [
@@ -959,9 +959,9 @@
         "la dérogation aux règles de publicité",
         "le paiement différé"
       ],
-      "explication": "Le MGP associe conception, réalisation puis exploitation ou maintenance, avec des objectifs chiffrés de performance (énergétique, d'usage, de niveau de service). Il déroge à l'allotissement, mais pas au financement : il n'y a pas de paiement différé, ce qui le distingue du marché de partenariat. Une mission d'identification de la maîtrise d'œuvre reste requise.",
-      "derniereVerification": "2026-08",
-      "aVerifier": null
+      "explication": "Le MGP associe conception, réalisation puis exploitation ou maintenance, avec des objectifs chiffrés de performance (énergétique, d'usage, de niveau de service). Il déroge à l'allotissement, mais pas au financement : il n'y a pas de paiement différé, ce qui le distingue du marché de partenariat. Une mission d'identification de la maîtrise d'œuvre reste requise. Nuance à connaître : la loi n°2023-222 du 30 mars 2023 a ouvert, à titre expérimental et pour 5 ans (jusqu'à fin mars 2028), la possibilité d'un paiement différé dans un contrat de performance énergétique conclu sous forme de MGP — le marché global de performance énergétique à paiement différé (MGP PD), précisé par le décret n°2023-913 du 3 octobre 2023. L'interdiction de principe du paiement différé (articles L.2191-2 à L.2191-8 du code de la commande publique) souffre donc aujourd'hui cette exception encadrée.",
+      "derniereVerification": "2026-09",
+      "aVerifier": "Expérimentation du paiement différé limitée à 2028 : vérifier si elle est prolongée, généralisée ou abandonnée."
     },
     {
       "id": "a2-07",
@@ -17186,8 +17186,8 @@
         "droiteTitre": "Définition",
         "titre": "Formes contractuelles"
       },
-      "explication": "L'allotissement est le principe : un marché global reste une dérogation à motiver. Le marché de conception-réalisation suppose des motifs techniques ou d'engagement de performance, le marché global de performance associe conception, réalisation et exploitation avec des objectifs chiffrés vérifiables, le marché de partenariat comporte un financement privé et l'accord-cadre organise des commandes successives sans engagement de volume dès la signature.",
-      "aVerifier": false,
+      "explication": "L'allotissement est le principe : un marché global reste une dérogation à motiver. Le marché de conception-réalisation suppose des motifs techniques ou d'engagement de performance, le marché global de performance associe conception, réalisation et exploitation avec des objectifs chiffrés vérifiables, le marché de partenariat comporte un financement privé et l'accord-cadre organise des commandes successives sans engagement de volume dès la signature. Nuance à connaître : la loi n°2023-222 du 30 mars 2023 a ouvert, à titre expérimental et pour 5 ans (jusqu'à fin mars 2028), la possibilité d'un paiement différé dans un contrat de performance énergétique conclu sous forme de MGP — le marché global de performance énergétique à paiement différé (MGP PD), précisé par le décret n°2023-913 du 3 octobre 2023. L'interdiction de principe du paiement différé (articles L.2191-2 à L.2191-8 du code de la commande publique) souffre donc aujourd'hui cette exception encadrée.",
+      "aVerifier": "Expérimentation du paiement différé limitée à 2028 : vérifier si elle est prolongée, généralisée ou abandonnée.",
       "derniereVerification": "2026-09"
     },
     {
@@ -23055,6 +23055,534 @@
       ],
       "bonneReponse": 0,
       "explication": "BIODI-Bat, développé par l'Observatoire de l'Immobilier Durable (OID), permet d'analyser un bâtiment existant au regard de son contexte écologique via une approche cartographique, puis d'évaluer son potentiel d'accueil de biodiversité et d'identifier les leviers d'amélioration. Source : Observatoire de l'Immobilier Durable, outil BIODI-Bat, aujourd'hui intégré à la plateforme R4RE. Le support de formation indique que de nouvelles fonctionnalités étaient prévues pour cet outil, notamment l'évaluation de l'impact des projets immobiliers sur la biodiversité et la mesure des co-bénéfices associés à la présence de biodiversité (climat, gestion des eaux pluviales, bien-être et santé) — un enrichissement à confirmer au moment de l'utilisation, l'outil évoluant dans le temps. En savoir plus — ERC : séquence Éviter-Réduire-Compenser, principe qui structure la prise en compte des impacts environnementaux d'un projet, dont la biodiversité.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null
+    },
+    {
+      "id": "m3-01",
+      "axe": "A4",
+      "sousTheme": "Connaissance et stratégie de parc",
+      "stIdx": 0,
+      "sujet": "sdi-methode",
+      "niveau": 3,
+      "famille": "S",
+      "type": "ordre",
+      "question": "Remettez dans l'ordre les étapes de construction d'un schéma directeur immobilier (SDI).",
+      "items": [
+        "Diagnostic du patrimoine existant : forces, faiblesses, potentialités d'évolution",
+        "Projection à moyen et long terme, sur un horizon de 5 à 10 ans",
+        "Feuille de route opérationnelle et plan d'investissement",
+        "Calendrier de mise en œuvre des opérations retenues"
+      ],
+      "explication": "Le SDI se déroule en deux temps : un diagnostic de l'existant (forces, faiblesses, potentialités d'évolution), puis une projection à moyen et long terme, généralement sur un horizon de 5 à 10 ans. Aucun texte n'impose cette démarche en deux étapes aux collectivités territoriales : il s'agit d'une notion méthodologique professionnelle. Pour les opérateurs de l'État en revanche, l'exercice équivalent — le schéma pluriannuel de stratégie immobilière (SPSI) — est encadré par la circulaire n°5888/SG du 19 septembre 2016, qui impose une démarche stratégique quinquennale fondée sur un diagnostic précis du parc. La phase de projection anticipe notamment l'évolution de chaque bien du parc (relocalisation, valorisation, cession ou maintien en l'état) et se traduit par une feuille de route opérationnelle, un plan d'investissement et un calendrier de mise en œuvre. En savoir plus — SDI : schéma directeur immobilier ; SPSI : schéma pluriannuel de stratégie immobilière, l'exercice équivalent obligatoire pour les opérateurs de l'État.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null
+    },
+    {
+      "id": "m3-02",
+      "axe": "A4",
+      "sousTheme": "Connaissance et stratégie de parc",
+      "stIdx": 0,
+      "sujet": "sdi-methode",
+      "niveau": 4,
+      "famille": "S",
+      "type": "qcm",
+      "question": "Quelle durée de réalisation est généralement observée pour un schéma directeur immobilier ?",
+      "options": [
+        "1 à 3 mois",
+        "6 à 18 mois selon l'ampleur et la complexité du parc",
+        "2 à 3 ans systématiquement",
+        "5 ans minimum"
+      ],
+      "bonneReponse": 1,
+      "explication": "La durée de réalisation d'un schéma directeur immobilier varie généralement entre 6 et 18 mois, selon l'ampleur et la complexité du parc immobilier concerné. Il s'agit d'une notion méthodologique professionnelle : aucun texte réglementaire ne fixe cette durée pour les collectivités territoriales, qui ne sont pas soumises à une obligation légale d'élaborer un SDI. Cette durée dépend notamment de la diversité des usages du patrimoine et du nombre de parties prenantes à consulter, en interne comme en externe : un parc multi-sites avec de nombreux services utilisateurs allonge mécaniquement les délais de concertation.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null
+    },
+    {
+      "id": "m3-03",
+      "axe": "A4",
+      "sousTheme": "Connaissance et stratégie de parc",
+      "stIdx": 0,
+      "sujet": "sdi-methode",
+      "niveau": 2,
+      "famille": "S",
+      "type": "qcm",
+      "question": "À quel niveau de gouvernance un schéma directeur immobilier doit-il être porté pour produire des effets réels ?",
+      "options": [
+        "Le seul service exploitation-maintenance",
+        "La direction générale de l'organisation",
+        "Le seul bureau d'études externe missionné",
+        "Le comité technique"
+      ],
+      "bonneReponse": 1,
+      "explication": "Le schéma directeur immobilier doit être porté au plus haut niveau de l'organisation, par la direction générale, pour produire des effets réels sur les décisions d'investissement. Il s'agit d'une notion méthodologique professionnelle, sans texte réglementaire imposant ce niveau de portage aux collectivités territoriales. Ce portage stratégique s'impose parce que les décisions issues du SDI peuvent avoir des conséquences lourdes sur le plan financier, juridique, sur l'image de l'organisation ou sur l'acceptabilité sociale — l'immobilier restant un sujet sensible pour les usagers, susceptible de provoquer des réactions fortes.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null
+    },
+    {
+      "id": "m3-04",
+      "axe": "A4",
+      "sousTheme": "Connaissance et stratégie de parc",
+      "stIdx": 0,
+      "sujet": "sdi-methode",
+      "niveau": 5,
+      "famille": "S",
+      "type": "qcm",
+      "question": "Un diagnostic de patrimoine structuré croise plusieurs angles d'analyse complémentaires. Lequel des éléments suivants n'en fait PAS partie dans une démarche multicritère classique ?",
+      "options": [
+        "Diagnostic occupationnel (sur/sous-occupation)",
+        "Diagnostic fonctionnel et réglementaire/technique",
+        "Diagnostic environnemental et diagnostic des risques",
+        "Diagnostic actuariel des engagements de retraite des agents"
+      ],
+      "bonneReponse": 3,
+      "explication": "Un diagnostic patrimonial multicritère croise notamment les angles occupationnel, fonctionnel, réglementaire et technique, environnemental, des risques (naturels, technologiques, sécurité/sûreté) et financier ; le diagnostic actuariel des retraites des agents n'en relève pas. Il s'agit d'une notion méthodologique professionnelle, sans texte réglementaire imposant une liste fermée de diagnostics à conduire. Certaines organisations ajoutent aussi un diagnostic des outils numériques de gestion du patrimoine et un diagnostic des moyens humains et compétences internes ; un écueil fréquent à éviter est de vouloir collecter trop de données non prioritaires à l'échelle stratégique. En savoir plus — diagnostic occupationnel : analyse de la manière dont les espaces sont réellement utilisés, pour détecter une sur- ou sous-occupation ; diagnostic fonctionnel : vérifie l'adéquation des bâtiments aux besoins des utilisateurs.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null
+    },
+    {
+      "id": "m3-05",
+      "axe": "A4",
+      "sousTheme": "Connaissance et stratégie de parc",
+      "stIdx": 0,
+      "sujet": "ger-perimetre",
+      "niveau": 5,
+      "famille": "S",
+      "type": "tri",
+      "question": "Triez ces opérations selon qu'elles relèvent ou non du gros entretien et renouvellement (GER).",
+      "colonnes": [
+        "Relève du GER",
+        "Hors GER"
+      ],
+      "elements": [
+        [
+          "Remplacement à l'identique d'une chaufferie défectueuse",
+          0
+        ],
+        [
+          "Travaux lourds de remise en état du clos et du couvert",
+          0
+        ],
+        [
+          "Mise aux normes liée à la vétusté ou à l'obsolescence technique (accessibilité, désamiantage, conformité électrique)",
+          0
+        ],
+        [
+          "Peinture et remplacement d'un revêtement de sol relevant de l'entretien courant",
+          1
+        ],
+        [
+          "Déplacement d'une cloison lors d'un déménagement interne",
+          1
+        ],
+        [
+          "Contrôle réglementaire périodique (DTA, diagnostic plomb…)",
+          1
+        ]
+      ],
+      "explication": "Le remplacement à l'identique d'une chaufferie défectueuse relève du gros entretien et renouvellement (GER), à la différence de l'entretien courant, des aménagements liés à un déménagement interne ou des contrôles réglementaires périodiques. Il s'agit d'une convention de gestion patrimoniale et comptable : aucun texte réglementaire unique ne définit le périmètre du GER pour le secteur public, à traiter comme une notion professionnelle et non comme une obligation légale. Le GER regroupe aussi les travaux lourds de remise en état du bâti ou de ses équipements (clos et couvert, installations techniques) ainsi que les travaux de mise aux normes liés à la vétusté ou à l'obsolescence technique (accessibilité, désamiantage, conformité électrique), et se distingue de l'entretien courant relevant de la maintenance d'exploitation. En savoir plus — GER : gros entretien et renouvellement, ensemble des travaux de remise en état ou de remplacement du bâti et de ses équipements, hors entretien courant.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null
+    },
+    {
+      "id": "m3-06",
+      "axe": "A4",
+      "sousTheme": "Connaissance et stratégie de parc",
+      "stIdx": 0,
+      "sujet": "ger-perimetre",
+      "niveau": 6,
+      "famille": "S",
+      "type": "vf",
+      "question": "Des travaux d'adaptation fonctionnelle impliquant un réaménagement conséquent des espaces peuvent relever du GER, mais un simple changement de destination ponctuel d'une salle en est exclu.",
+      "vrai": true,
+      "justification": "Les travaux d'adaptation fonctionnelle ne relèvent du GER que s'ils impliquent un réaménagement conséquent des espaces ; un changement de destination ponctuel d'une salle en est exclu.",
+      "explication": "Vrai : les travaux d'adaptation fonctionnelle ne relèvent du GER que lorsqu'ils impliquent un réaménagement conséquent des espaces, tandis qu'un simple changement de destination ponctuel d'une salle en est exclu. Il s'agit d'une convention de gestion patrimoniale, sans texte réglementaire dédié fixant ce seuil de « réaménagement conséquent ». Sont également exclus du GER l'entretien courant du second œuvre (peinture, revêtement de sol, faux plafonds), les aménagements liés aux déménagements internes (déplacement de cloisons, changement de mobilier) et les contrôles réglementaires ou vérifications périodiques réalisés dans le cadre des marchés de maintenance. En savoir plus — GER : gros entretien et renouvellement.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null
+    },
+    {
+      "id": "m3-07",
+      "axe": "A4",
+      "sousTheme": "Connaissance et stratégie de parc",
+      "stIdx": 0,
+      "sujet": "sdi-energie",
+      "niveau": 7,
+      "famille": "S",
+      "type": "qcm",
+      "question": "Lorsqu'un schéma directeur immobilier et un schéma directeur énergie sont conduits en parallèle, quelle articulation est recommandée pour éviter les incohérences ?",
+      "options": [
+        "Le schéma directeur énergie doit être finalisé en premier et s'impose au SDI",
+        "Les deux démarches doivent rester totalement indépendantes pour préserver leur objectivité",
+        "Le schéma directeur énergie attend que les grandes orientations d'investissement du SDI soient arrêtées avant de formuler ses propositions",
+        "Seul le schéma directeur énergie doit intégrer les diagnostics techniques"
+      ],
+      "bonneReponse": 2,
+      "explication": "Le schéma directeur énergie doit attendre que les grandes orientations d'investissement du schéma directeur immobilier (SDI) soient arrêtées avant de formuler ses propositions, afin d'éviter de proposer des travaux sur des bâtiments que le SDI prévoit de libérer. Il s'agit d'une notion méthodologique professionnelle, sans texte réglementaire imposant cette articulation aux collectivités territoriales. Le risque illustré est concret : certaines études énergétiques projettent des travaux de rénovation sur des bâtiments pourtant identifiés dans le SDI comme devant être libérés, ce qui nuit à la cohérence de la stratégie patrimoniale et environnementale ; le SDI a en effet un positionnement plus stratégique, car c'est lui qui décide du devenir du patrimoine (libération, densification, concentration des implantations).",
+      "derniereVerification": "2026-09",
+      "aVerifier": null
+    },
+    {
+      "id": "m3-08",
+      "axe": "A4",
+      "sousTheme": "Connaissance et stratégie de parc",
+      "stIdx": 0,
+      "sujet": "sdi-energie",
+      "niveau": 5,
+      "famille": "S",
+      "type": "vf",
+      "question": "Les pré-diagnostics énergétiques réalisés dans le cadre d'un schéma directeur énergie constituent une source d'information utile pour la phase de diagnostic d'un schéma directeur immobilier.",
+      "vrai": true,
+      "justification": "Ces pré-diagnostics renseignent sur les consommations, les usages, les équipements et les chiffrages de travaux, directement utiles au diagnostic du SDI.",
+      "explication": "Vrai : les pré-diagnostics énergétiques réalisés dans le cadre d'un schéma directeur énergie constituent une source d'information utile pour la phase de diagnostic d'un schéma directeur immobilier. Il s'agit d'une notion méthodologique professionnelle, sans texte réglementaire dédié. Réalisés par le bureau d'études en charge du schéma directeur énergie, ces pré-diagnostics apportent des informations précieuses sur les consommations, les usages, les équipements techniques en place et les marges de progression, ainsi que des éléments de chiffrage de travaux potentiels utiles à la scénarisation stratégique et à l'analyse financière du SDI.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null
+    },
+    {
+      "id": "m3-09",
+      "axe": "A2",
+      "sousTheme": "Formes et montages contractuels",
+      "stIdx": 1,
+      "sujet": "cp-allot",
+      "niveau": 4,
+      "famille": "M",
+      "type": "qcm",
+      "question": "Quel texte a ouvert, à titre expérimental, la possibilité pour l'État et les collectivités territoriales de recourir au paiement différé dans un contrat de performance énergétique conclu sous forme de marché global de performance ?",
+      "options": [
+        "La loi ELAN du 23 novembre 2018",
+        "La loi n°2023-222 du 30 mars 2023",
+        "La loi Climat et Résilience du 22 août 2021",
+        "L'ordonnance du 23 juillet 2015 relative aux marchés publics"
+      ],
+      "bonneReponse": 1,
+      "explication": "La loi n°2023-222 du 30 mars 2023 a ouvert, à titre expérimental, la possibilité pour l'État et les collectivités territoriales de recourir au paiement différé dans un contrat de performance énergétique conclu sous forme de marché global de performance. Source : loi n°2023-222 du 30 mars 2023 visant à ouvrir le tiers-financement à l'État, à ses établissements publics et aux collectivités territoriales pour favoriser les travaux de rénovation énergétique — Légifrance. Cette loi déroge, pour ces seuls contrats, aux articles L.2191-2 à L.2191-8 du code de la commande publique qui interdisent en principe tout paiement différé dans les marchés publics ; elle précise que le critère du paiement différé ne peut à lui seul constituer un avantage justifiant le recours à ce montage, une étude préalable devant démontrer son intérêt, notamment en termes de performance énergétique. En savoir plus — paiement différé : modalité par laquelle l'acheteur public rembourse le titulaire après la réalisation des prestations, dérogatoire au principe de paiement après service fait ; marché global de performance (MGP) : contrat associant conception, réalisation et exploitation/maintenance, assorti d'engagements chiffrés de performance.",
+      "derniereVerification": "2026-09",
+      "aVerifier": "Expérimentation du paiement différé limitée à 2028 : vérifier si elle est prolongée, généralisée ou abandonnée."
+    },
+    {
+      "id": "m3-10",
+      "axe": "A2",
+      "sousTheme": "Formes et montages contractuels",
+      "stIdx": 1,
+      "sujet": "cp-allot",
+      "niveau": 5,
+      "famille": "M",
+      "type": "qcm",
+      "question": "Pour quelle durée l'expérimentation du tiers-financement public par paiement différé a-t-elle été ouverte ?",
+      "options": [
+        "3 ans à compter de sa promulgation",
+        "10 ans à compter de sa promulgation",
+        "5 ans à compter de sa promulgation (30 mars 2023)",
+        "Durée illimitée"
+      ],
+      "bonneReponse": 2,
+      "explication": "Cette expérimentation du paiement différé dans les contrats de performance énergétique publics a été ouverte pour une durée de 5 ans à compter de la promulgation de la loi, le 30 mars 2023, soit jusqu'à fin mars 2028 environ. Source : loi n°2023-222 du 30 mars 2023, article 1er — Légifrance. Le décret d'application n°2023-913 du 3 octobre 2023, relatif aux marchés globaux de performance énergétique à paiement différé, précise les modalités de l'étude préalable et de l'étude de soutenabilité budgétaire que l'acheteur doit produire avant de recourir à ce montage ; à l'approche de l'échéance de 2028, il conviendra de vérifier si l'expérimentation est prolongée, pérennisée ou arrêtée.",
+      "derniereVerification": "2026-09",
+      "aVerifier": "Expérimentation du paiement différé limitée à 2028 : vérifier si elle est prolongée, généralisée ou abandonnée."
+    },
+    {
+      "id": "m3-11",
+      "axe": "A2",
+      "sousTheme": "Formes et montages contractuels",
+      "stIdx": 1,
+      "sujet": "cp-allot",
+      "niveau": 6,
+      "famille": "M",
+      "type": "qcm",
+      "question": "Comment nomme-t-on le contrat créé par ce dispositif, qui associe conception, réalisation, exploitation/maintenance ET financement différé par un tiers ?",
+      "options": [
+        "Marché de partenariat énergétique simplifié",
+        "Bail emphytéotique administratif énergétique",
+        "Contrat de concession de travaux",
+        "Marché global de performance énergétique à paiement différé (MGP PD)"
+      ],
+      "bonneReponse": 3,
+      "explication": "Ce contrat dérogatoire créé par la loi n°2023-222 du 30 mars 2023 est appelé marché global de performance énergétique à paiement différé (MGP PD). Source : loi n°2023-222 du 30 mars 2023 et décret n°2023-913 du 3 octobre 2023 relatif aux marchés globaux de performance énergétique à paiement différé — Légifrance. Ce contrat prend la forme d'un marché global de performance au sens de l'article L.2171-3 du code de la commande publique, mais y déroge spécifiquement pour permettre le paiement différé ; il ne dispense pas l'acheteur public de payer directement les sous-traitants, conformément au titre III de la loi n°75-1334 du 31 décembre 1975 relative à la sous-traitance. En savoir plus — MGP PD : marché global de performance énergétique à paiement différé.",
+      "derniereVerification": "2026-09",
+      "aVerifier": "Expérimentation du paiement différé limitée à 2028 : vérifier si elle est prolongée, généralisée ou abandonnée."
+    },
+    {
+      "id": "m3-12",
+      "axe": "A2",
+      "sousTheme": "Formes et montages contractuels",
+      "stIdx": 1,
+      "sujet": "cp-allot",
+      "niveau": 8,
+      "famille": "M",
+      "type": "vf",
+      "question": "Pour un maître d'ouvrage public aujourd'hui, l'interdiction du paiement différé dans un marché global de performance est absolue, sans aucune exception.",
+      "vrai": false,
+      "justification": "À titre expérimental et dérogatoire, pendant 5 ans à compter du 30 mars 2023, un contrat de performance énergétique conclu sous forme de MGP peut comporter un paiement différé.",
+      "explication": "Non : à titre expérimental et dérogatoire, pour une durée de 5 ans à compter du 30 mars 2023, un contrat de performance énergétique conclu sous forme de marché global de performance (MGP) peut comporter un paiement différé, alors que cela reste en principe interdit pour un MGP « classique ». Source : loi n°2023-222 du 30 mars 2023 et décret n°2023-913 du 3 octobre 2023 — Légifrance. Cette exception est strictement encadrée : elle ne concerne que les contrats de performance énergétique de rénovation de bâtiments publics, elle est ouverte à la fois à l'État et aux collectivités territoriales (ainsi qu'à leurs établissements publics et groupements), et elle nuance la règle générale présentée sans exception dans certaines questions du corpus consacrées aux montages contractuels — un piège classique à connaître pour l'écrit comme pour l'oral. En savoir plus — MGP : marché global de performance ; MGP PD : marché global de performance énergétique à paiement différé.",
+      "derniereVerification": "2026-09",
+      "aVerifier": "Expérimentation du paiement différé limitée à 2028 : vérifier si elle est prolongée, généralisée ou abandonnée."
+    },
+    {
+      "id": "m3-13",
+      "axe": "A4",
+      "sousTheme": "Financement de la transition environnementale du patrimoine",
+      "stIdx": 13,
+      "sujet": "fin-transition",
+      "niveau": 2,
+      "famille": "S",
+      "type": "qcm",
+      "question": "Les certificats d'économies d'énergie (CEE) reposent sur quel principe ?",
+      "options": [
+        "Une subvention automatique versée par l'ADEME sur simple demande",
+        "Une obligation faite aux fournisseurs d'énergie de générer des économies d'énergie, notamment en versant des primes aux maîtres d'ouvrage qui réalisent des travaux",
+        "Un crédit d'impôt réservé aux particuliers",
+        "Une taxe additionnelle sur la consommation d'énergie des bâtiments tertiaires"
+      ],
+      "bonneReponse": 1,
+      "explication": "Les certificats d'économies d'énergie (CEE) reposent sur une obligation faite aux fournisseurs d'énergie de générer un volume d'économies d'énergie, notamment en versant des primes aux maîtres d'ouvrage qui réalisent des travaux d'économies d'énergie. Source : dispositif des certificats d'économies d'énergie, articles L.221-1 et suivants du code de l'énergie — Légifrance. Ces primes des fournisseurs d'énergie (les « obligés ») peuvent se cumuler avec d'autres financements — subventions de l'État, prêts bonifiés dits « prêts verts » — pour compléter un programme de travaux, notamment lorsque le tiers-financement ne permet de couvrir qu'une partie des travaux : pour des rénovations lourdes comme l'isolation, les économies d'énergie ne financent parfois que 20 à 30 % du programme global, le reste devant être couvert par d'autres leviers. En savoir plus — CEE : certificats d'économies d'énergie ; obligés : fournisseurs d'énergie soumis à l'obligation de réaliser des économies d'énergie.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null
+    },
+    {
+      "id": "m3-14",
+      "axe": "A4",
+      "sousTheme": "Financement de la transition environnementale du patrimoine",
+      "stIdx": 13,
+      "sujet": "fin-transition",
+      "niveau": 3,
+      "famille": "S",
+      "type": "qcm",
+      "question": "Quel établissement public national propose des aides (subventions à l'investissement, financement d'études et d'ingénierie) pour les projets de rénovation énergétique ou de décarbonation du patrimoine ?",
+      "options": [
+        "Le CNFPT",
+        "L'ANCT seule",
+        "L'ADEME (Agence de la transition écologique)",
+        "La Caisse des Dépôts seule"
+      ],
+      "bonneReponse": 2,
+      "explication": "L'ADEME (Agence de la transition écologique) propose des aides pour les projets de rénovation énergétique ou de décarbonation du patrimoine, sous forme de subventions à l'investissement ou de financements d'études et d'ingénierie. Source : ADEME, établissement public à caractère industriel et commercial placé sous la tutelle des ministères chargés de la Transition écologique, de la Recherche et de l'Enseignement supérieur, et de l'Industrie — ademe.fr. Ces aides se combinent avec d'autres dispositifs mobilisables à différents niveaux (national, régional, européen) — certificats d'économies d'énergie, dotations de l'État comme la DSIL ou la DETR — sous réserve de respecter les critères d'éligibilité et les calendriers de dépôt de dossiers propres à chaque dispositif.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null
+    },
+    {
+      "id": "m3-15",
+      "axe": "A4",
+      "sousTheme": "Financement de la transition environnementale du patrimoine",
+      "stIdx": 13,
+      "sujet": "fin-transition",
+      "niveau": 5,
+      "famille": "S",
+      "type": "qcm",
+      "question": "La dotation d'équipement des territoires ruraux (DETR) a été créée par :",
+      "options": [
+        "La loi Grenelle II du 12 juillet 2010",
+        "Le décret tertiaire du 23 juillet 2019",
+        "La loi 3DS du 21 février 2022",
+        "L'article 179 de la loi de finances pour 2011, par fusion de la DGE des communes et de la dotation de développement rural"
+      ],
+      "bonneReponse": 3,
+      "explication": "La dotation d'équipement des territoires ruraux (DETR) a été créée par l'article 179 de la loi n°2010-1657 du 29 décembre 2010 de finances pour 2011, par fusion de la dotation globale d'équipement (DGE) des communes et de la dotation de développement rural (DDR). Source : loi n°2010-1657 du 29 décembre 2010, article 179 ; articles L.2334-32 à L.2334-39 et R.2334-19 à R.2334-31-1 du code général des collectivités territoriales (CGCT) — Légifrance. La DETR est attribuée par le préfet de département après avis d'une commission départementale d'élus, qui fixe chaque année les catégories d'opérations prioritaires et les taux de subvention ; elle peut notamment financer des projets de rénovation thermique et de transition énergétique, au même titre que la mise aux normes des équipements publics. En savoir plus — DETR : dotation d'équipement des territoires ruraux ; DGE : dotation globale d'équipement ; DDR : dotation de développement rural.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null
+    },
+    {
+      "id": "m3-16",
+      "axe": "A4",
+      "sousTheme": "Financement de la transition environnementale du patrimoine",
+      "stIdx": 13,
+      "sujet": "fin-transition",
+      "niveau": 6,
+      "famille": "S",
+      "type": "assoc",
+      "question": "Associez chaque dispositif de financement à son texte fondateur.",
+      "paires": [
+        [
+          "DETR — dotation d'équipement des territoires ruraux",
+          "Article 179 de la loi n°2010-1657 du 29 décembre 2010 de finances pour 2011, par fusion de la DGE et de la DDR"
+        ],
+        [
+          "DSIL — dotation de soutien à l'investissement local",
+          "Article 159 de la loi de finances pour 2016, codifié à l'article L.2334-42 du CGCT"
+        ],
+        [
+          "CEE — certificats d'économies d'énergie",
+          "Articles L.221-1 et suivants du code de l'énergie"
+        ],
+        [
+          "MGP à paiement différé",
+          "Loi n°2023-222 du 30 mars 2023 et décret n°2023-913 du 3 octobre 2023"
+        ]
+      ],
+      "explication": "La dotation de soutien à l'investissement local (DSIL) a été créée par l'article 159 de la loi de finances pour 2016 et codifiée à l'article L.2334-42 du code général des collectivités territoriales (CGCT). Source : loi de finances pour 2016, article 159 ; loi n°2018-1317 du 28 décembre 2018 (pérennisation) ; article L.2334-42 du CGCT — Légifrance. La DSIL finance notamment la rénovation thermique, la transition énergétique et le développement des énergies renouvelables des équipements publics, aux côtés d'autres priorités comme la mise aux normes et la sécurisation des équipements publics ou le développement d'infrastructures de mobilité. La DETR, elle, résulte de l'article 179 de la loi de finances pour 2011 ; les CEE reposent sur les articles L.221-1 et suivants du code de l'énergie ; le marché global de performance énergétique à paiement différé découle de la loi n°2023-222 du 30 mars 2023 et de son décret d'application n°2023-913 du 3 octobre 2023. En savoir plus — DSIL : dotation de soutien à l'investissement local ; CGCT : code général des collectivités territoriales.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null
+    },
+    {
+      "id": "m3-17",
+      "axe": "A4",
+      "sousTheme": "Financement de la transition environnementale du patrimoine",
+      "stIdx": 13,
+      "sujet": "fin-transition",
+      "niveau": 4,
+      "famille": "S",
+      "type": "qcm",
+      "question": "Parmi les financements européens mobilisables pour des opérations de transition écologique du patrimoine, le sigle FEDER désigne :",
+      "options": [
+        "Fonds d'État pour l'équipement rural",
+        "Fonds européen de développement régional",
+        "Fonds d'expérimentation pour la rénovation énergétique",
+        "Fonds européen pour la démographie et les régions"
+      ],
+      "bonneReponse": 1,
+      "explication": "Le sigle FEDER désigne le Fonds européen de développement régional, l'un des financements européens mobilisables pour des opérations de transition écologique du patrimoine. Source : règlements européens relatifs à la politique de cohésion (FEDER), programmation 2021-2027 — europe-en-france.gouv.fr / EUR-Lex. Ce fonds est cité parmi les programmes européens mobilisables aux côtés des dotations nationales (DSIL, DETR), sous réserve de respecter les critères d'éligibilité et les calendriers de dépôt des dossiers propres à chaque fonds.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null
+    },
+    {
+      "id": "m3-18",
+      "axe": "A4",
+      "sousTheme": "Financement de la transition environnementale du patrimoine",
+      "stIdx": 13,
+      "sujet": "fin-transition",
+      "niveau": 7,
+      "famille": "S",
+      "type": "qcm",
+      "question": "Quelle est la différence essentielle entre l'intracting et le tiers-financement comme leviers de financement de la performance environnementale du patrimoine ?",
+      "options": [
+        "L'intracting est réservé aux collectivités de plus de 100 000 habitants",
+        "Le tiers-financement ne peut financer que des travaux d'isolation thermique",
+        "L'intracting est un financement interne autoalimenté par les économies de fonctionnement, le tiers-financement fait intervenir un financement externe assuré par un tiers",
+        "L'intracting est un dispositif exclusivement réservé aux acteurs privés"
+      ],
+      "bonneReponse": 2,
+      "explication": "L'intracting est un mécanisme de financement interne, autoalimenté par les économies de fonctionnement générées par les travaux, tandis que le tiers-financement fait intervenir un financement externe assuré initialement par un tiers investisseur. Source : notion de marché, promue notamment par l'ADEME pour l'intracting ; pas de texte réglementaire unique définissant ces deux mécanismes, à distinguer du tiers-financement public encadré spécifiquement par la loi n°2023-222 du 30 mars 2023 pour le seul cas du paiement différé. Dans l'intracting, les économies générées par les premiers projets sont réinjectées dans le fonds pour financer de nouveaux projets, sans dépendre de financements extérieurs ; dans le tiers-financement, le maître d'ouvrage n'a pas à financer les travaux en direct, mais les temps de retour sur investissement de certains travaux (l'isolation, par exemple) dépassent souvent 30 à 40 ans, si bien que les économies d'énergie ne couvrent en général qu'une partie du programme, le reste devant être financé par des subventions ou des prêts complémentaires.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null
+    },
+    {
+      "id": "m3-19",
+      "axe": "A4",
+      "sousTheme": "Financement de la transition environnementale du patrimoine",
+      "stIdx": 13,
+      "sujet": "fin-transition",
+      "niveau": 8,
+      "famille": "S",
+      "type": "qcm",
+      "question": "Un emprunt vert (green bond) mobilisé par une collectivité se caractérise principalement par :",
+      "options": [
+        "Un taux d'intérêt légalement plafonné à 1 %",
+        "Une obligation de rétrocession de 20 % du montant emprunté à l'ADEME",
+        "Une garantie automatique de remboursement par l'État",
+        "Des fonds exclusivement fléchés vers des projets à forte valeur environnementale, avec justification de l'usage des fonds et suivi d'indicateurs de transparence"
+      ],
+      "bonneReponse": 3,
+      "explication": "Un emprunt vert (green bond) mobilisé par une collectivité se caractérise par des fonds exclusivement fléchés vers des projets à forte valeur environnementale, assortis d'une obligation de justifier l'usage des fonds et de suivre des indicateurs de transparence. Source : notion de marché (obligations vertes / green bonds), sans texte réglementaire imposant un plafond de taux ou une rétrocession à un organisme public. Ce type de financement peut offrir des conditions plus avantageuses qu'un emprunt classique, les investisseurs privilégiant de plus en plus les projets responsables et proposant des taux bonifiés, mais il impose en contrepartie une gouvernance adaptée pour assurer le suivi des indicateurs et la production de rapports de transparence.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null
+    },
+    {
+      "id": "m3-20",
+      "axe": "A4",
+      "sousTheme": "Valorisation financière et risques (valeur verte, assurance climat)",
+      "stIdx": 12,
+      "sujet": "certif-env",
+      "niveau": 3,
+      "famille": "S",
+      "type": "qcm",
+      "question": "Les certifications environnementales HQE, BREEAM ou LEED, appliquées à un immeuble tertiaire, permettent principalement de :",
+      "options": [
+        "Dispenser automatiquement le bâtiment du dispositif Éco Énergie Tertiaire",
+        "Garantir un socle minimal de performance énergétique, de confort des usagers et de gestion environnementale, reconnu par le marché immobilier",
+        "Remplacer légalement l'obligation de diagnostic de performance énergétique (DPE)",
+        "Garantir l'éligibilité automatique aux aides de l'ADEME"
+      ],
+      "bonneReponse": 1,
+      "explication": "Les certifications environnementales HQE, BREEAM ou LEED, appliquées à un immeuble tertiaire, garantissent un socle minimal de performance énergétique, de confort des usagers et de gestion environnementale, reconnu par le marché immobilier. Source : notion de marché — labels et certifications privés (HQE, BREEAM, LEED), non des textes réglementaires ; ils ne se substituent ni au dispositif Éco Énergie Tertiaire ni à l'obligation de diagnostic de performance énergétique (DPE), qui restent des obligations légales distinctes. Dans les marchés tendus, les immeubles certifiés se louent et se vendent mieux, avec un taux d'occupation plus élevé ; ces labels permettent aussi d'anticiper les obligations réglementaires futures et de sécuriser les investissements, constituant un levier de valorisation patrimoniale au-delà de la seule conformité réglementaire. En savoir plus — HQE : Haute Qualité Environnementale ; BREEAM : Building Research Establishment Environmental Assessment Method ; LEED : Leadership in Energy and Environmental Design.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null
+    },
+    {
+      "id": "m3-21",
+      "axe": "A4",
+      "sousTheme": "Connaissance et stratégie de parc",
+      "stIdx": 0,
+      "sujet": "sdi-arbitrage",
+      "niveau": 4,
+      "famille": "S",
+      "type": "assoc",
+      "question": "Associez chaque critère de la grille d'arbitrage entre scénarios d'évolution du patrimoine à la question qu'il permet de trancher.",
+      "paires": [
+        [
+          "Bilan financier",
+          "Quel est le coût global de chaque scénario à 5 et 10 ans ?"
+        ],
+        [
+          "Alignement avec la politique immobilière",
+          "Quel est le bilan avant/après sur les indicateurs de performance patrimoniale, notamment environnementaux ?"
+        ],
+        [
+          "Impact social",
+          "Le scénario limite-t-il les déménagements et les changements subis par les agents ?"
+        ],
+        [
+          "Calendrier de mise en œuvre",
+          "L'organisation cible est-elle atteignable à court terme, ou seulement à moyen terme compte tenu des travaux et délais ?"
+        ]
+      ],
+      "explication": "La grille d'analyse multicritères usuelle pour arbitrer entre scénarios d'évolution du patrimoine croise le bilan financier, l'alignement avec la politique immobilière de l'organisation, l'impact social et le calendrier de mise en œuvre. Il s'agit d'une notion méthodologique professionnelle, sans texte réglementaire imposant cette grille. Le bilan financier compare le coût global de chaque scénario à 5 et 10 ans ; l'alignement avec la politique immobilière évalue le bilan avant/après sur les indicateurs de performance patrimoniale identifiés lors du diagnostic, notamment environnementaux ; l'impact social examine si le scénario limite les déménagements et changements subis par les agents ; le calendrier vérifie si l'organisation cible est atteignable à court terme ou seulement à moyen terme compte tenu des contraintes (travaux, études préalables, délais de libération de sites).",
+      "derniereVerification": "2026-09",
+      "aVerifier": null
+    },
+    {
+      "id": "m3-22",
+      "axe": "A4",
+      "sousTheme": "Connaissance et stratégie de parc",
+      "stIdx": 0,
+      "sujet": "sdi-arbitrage",
+      "niveau": 5,
+      "famille": "S",
+      "type": "vf",
+      "question": "Le plan d'action environnemental porté par une direction immobilière doit en principe s'articuler avec le plan RSE global de l'organisation, dont il constitue un sous-ensemble contributif.",
+      "vrai": true,
+      "justification": "L'immobilier est un levier majeur de la stratégie RSE : son plan d'action environnemental contribue au plan RSE global (ou schéma directeur développement durable).",
+      "explication": "Vrai : le plan d'action environnemental porté par une direction immobilière doit en principe s'articuler avec le plan RSE global (ou schéma directeur développement durable) de l'organisation, dont il constitue un sous-ensemble contributif. Il s'agit d'une notion méthodologique professionnelle ; le cadre réglementaire des obligations RSE proprement dites (bilan GES, CSRD, etc.) relève de textes distincts, traités par ailleurs dans le sous-thème « Obligations transversales » du corpus. L'immobilier, souvent premier poste de consommation d'énergie et deuxième poste de coût et d'émissions de gaz à effet de serre d'une organisation, est de plus en plus identifié comme un levier de transformation prioritaire par les responsables RSE ; dans de nombreuses structures, cette articulation reste toutefois partielle ou absente, faute de coordination entre directions immobilière et RSE, qui évoluent parfois dans des sphères distinctes avec peu de transversalité. En savoir plus — RSE : responsabilité sociétale des entreprises (ou des organisations).",
+      "derniereVerification": "2026-09",
+      "aVerifier": null
+    },
+    {
+      "id": "m3-23",
+      "axe": "A4",
+      "sousTheme": "Connaissance et stratégie de parc",
+      "stIdx": 0,
+      "sujet": "sdi-arbitrage",
+      "niveau": 6,
+      "famille": "S",
+      "type": "qcm",
+      "question": "Lors de la cession d'un site immobilier public assorti d'objectifs environnementaux forts (performance énergétique minimale, biodiversité, gestion de l'eau…), il est recommandé de transmettre le cahier des charges en amont :",
+      "options": [
+        "À la Cour des comptes, pour homologation obligatoire préalable",
+        "Au préfet de région uniquement, pour validation systématique",
+        "À la commune concernée, afin de vérifier sa compatibilité avec le plan local d'urbanisme (PLU) et de recueillir ses attentes",
+        "À aucun tiers, afin de préserver la confidentialité de la procédure de cession"
+      ],
+      "bonneReponse": 2,
+      "explication": "Il est recommandé de transmettre le cahier des charges de cession à la commune concernée, afin de vérifier sa compatibilité avec les orientations du plan local d'urbanisme (PLU) et de recueillir d'éventuelles attentes complémentaires. Source : le respect du document d'urbanisme applicable conditionne la délivrance du permis de construire (article L.152-1 du code de l'urbanisme) — Légifrance ; la recommandation de concertation amont avec la commune relève elle-même d'une bonne pratique professionnelle, sans texte l'imposant formellement. Le cahier des charges de cession peut intégrer des objectifs environnementaux forts — niveau de performance énergétique minimal, intégration d'énergies renouvelables, préservation de la biodiversité, maîtrise de l'artificialisation des sols, gestion de l'eau et des rejets — et plus la concertation avec la commune est engagée en amont, plus il est facile de faire accepter le projet et de sécuriser le dépôt ultérieur du permis de construire nécessaire à la rénovation du site. En savoir plus — PLU : plan local d'urbanisme, document qui fixe les règles d'utilisation des sols à l'échelle communale ou intercommunale.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null
+    },
+    {
+      "id": "m3-24",
+      "axe": "A4",
+      "sousTheme": "Connaissance et stratégie de parc",
+      "stIdx": 0,
+      "sujet": "sdi-arbitrage",
+      "niveau": 7,
+      "famille": "S",
+      "type": "qcm",
+      "question": "Dans la construction de scénarios d'évolution d'un parc de bureaux d'une collectivité, quel élément oriente généralement en premier le choix des scénarios, avant l'état des bâtiments, leur potentiel de valorisation ou leurs performances environnementales ?",
+      "options": [
+        "Le classement énergétique (étiquette DPE) de chaque bâtiment",
+        "La valeur vénale estimée des biens",
+        "L'ancienneté administrative de chaque bâtiment",
+        "Les besoins exprimés par les utilisateurs (effectifs projetés, principes d'aménagement retenus)"
+      ],
+      "bonneReponse": 3,
+      "explication": "Dans le retour d'expérience présenté, ce sont les besoins exprimés par les utilisateurs (projection des effectifs, principes d'aménagement retenus) qui ont orienté la construction des scénarios, et non l'état des bâtiments, leur potentiel de valorisation ou leurs performances environnementales. Source : retour d'expérience professionnel présenté dans le document support ; pas de texte réglementaire dédié à la méthode de priorisation des scénarios d'évolution du patrimoine. Dans cet exemple, la collectivité a d'abord projeté ses effectifs à 5 ans et appliqué ses principes d'aménagement (regroupement des directions sur un nombre limité de sites, suppression des postes attitrés pour les agents peu présents) pour en déduire le volume de mètres carrés nécessaire, avant de comparer ce volume projeté à la situation existante et d'en déduire un potentiel de libération de surfaces ; ce n'est qu'ensuite que plusieurs scénarios ont été comparés sur les plans fonctionnel, économique, environnemental et technique.",
       "derniereVerification": "2026-09",
       "aVerifier": null
     }
