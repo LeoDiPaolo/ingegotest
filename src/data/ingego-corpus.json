@@ -8,7 +8,7 @@
     },
     "genere": "2026-07-30",
     "version": "2026-09",
-    "totalQuestions": 907,
+    "totalQuestions": 924,
     "schema": "Chaque question porte : id, axe (A1-A6), sousTheme, sujet (clé de progression par niveaux), niveau (1-3), famille (S stable / M mouvant / E enjeu), type, les champs propres au type, explication, et le cas échéant derniereVerification (AAAA-MM) et aVerifier."
   },
   "axes": [
@@ -22677,6 +22677,384 @@
       ],
       "bonneReponse": 1,
       "explication": "Un immeuble de bureaux consomme en moyenne 400 litres d'eau par m² et par an, et génère en moyenne 4,3 kg de déchets par m² et par an en phase d'exploitation. Ces données sont publiées par l'Observatoire de l'Immobilier Durable (OID), organisme professionnel de référence sur la performance environnementale du parc tertiaire. Ces deux sujets — eau et déchets — restent encore peu traités par les acteurs de l'immobilier, en comparaison de l'énergie et du carbone. En savoir plus — OID : Observatoire de l'Immobilier Durable, organisme professionnel qui produit des données de référence sur la performance environnementale du parc immobilier tertiaire français.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null
+    },
+    {
+      "id": "g2-01",
+      "axe": "A4",
+      "sousTheme": "Connaissance et stratégie de parc",
+      "stIdx": 0,
+      "sujet": "diag-360",
+      "niveau": 3,
+      "famille": "S",
+      "type": "qcm",
+      "question": "Dans la méthodologie de diagnostic patrimonial, quelle norme comptable définit la distinction entre « immeuble de placement » (détenu pour en tirer des loyers ou une plus-value) et bien immobilier occupé par son propriétaire ?",
+      "options": [
+        "La norme comptable internationale IAS 40",
+        "Le Code général de la propriété des personnes publiques (CG3P)",
+        "L'instruction budgétaire et comptable M57",
+        "La norme NF EN 15978"
+      ],
+      "bonneReponse": 0,
+      "explication": "La norme comptable internationale IAS 40 distingue l'« immeuble de placement », détenu pour en retirer des loyers ou une plus-value, du bien occupé par son propriétaire, qui relève lui d'IAS 16. Source : IASB / Fondation IFRS, norme IAS 40 « Immeubles de placement ». Cette distinction, reprise dans les méthodologies de diagnostic patrimonial pour classer les actifs, est particulièrement structurante dans les grands groupes du secteur banque-assurance, qui gèrent à la fois un patrimoine de placement mis en location pour générer des revenus et un patrimoine d'usage propre pour leurs besoins internes ; les collectivités territoriales, elles, appliquent l'instruction budgétaire et comptable M57, qui ne reprend pas formellement cette terminologie mais conserve la même logique de distinction entre bien de rapport et bien d'usage propre. En savoir plus — IAS : International Accounting Standard, norme comptable internationale élaborée par l'IASB ; IFRS : International Financial Reporting Standards, référentiel comptable international dont les normes IAS font partie.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null
+    },
+    {
+      "id": "g2-02",
+      "axe": "A4",
+      "sousTheme": "Connaissance et stratégie de parc",
+      "stIdx": 0,
+      "sujet": "diag-360",
+      "niveau": 4,
+      "famille": "E",
+      "type": "vf",
+      "question": "Un diagnostic de patrimoine centré uniquement sur la performance environnementale (énergie, carbone, eau, biodiversité) suffit à bâtir une stratégie d'investissement défendable devant les élus.",
+      "vrai": false,
+      "justification": "Un diagnostic seulement environnemental ignore l'occupation réelle des locaux, leur fonctionnalité, leur vétusté technique et les coûts d'exploitation : il expose à financer la rénovation énergétique d'un bâtiment sous-occupé ou voué à la cession.",
+      "explication": "Faux : un diagnostic limité au volet environnemental expose à des décisions d'investissement mal calibrées, car il ignore l'occupation réelle des locaux, leur fonctionnalité, leur état technique et leurs coûts d'exploitation. Pas de texte réglementaire dédié imposant cette méthode aux collectivités : il s'agit d'une bonne pratique de gestion patrimoniale reprise par les référentiels professionnels du secteur, non d'une obligation légale. Le risque concret est documenté : un bâtiment sous-occupé peut apparaître peu énergivore en valeur absolue alors qu'il est vétuste et mal isolé, ce qui conduit un audit énergétique à recommander une rénovation complète là où la vraie question porte sur l'opportunité même de conserver ce bien dans le patrimoine — une étude aurait alors pu être économisée.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null
+    },
+    {
+      "id": "g2-03",
+      "axe": "A4",
+      "sousTheme": "Connaissance et stratégie de parc",
+      "stIdx": 0,
+      "sujet": "diag-360",
+      "niveau": 3,
+      "famille": "E",
+      "type": "tri",
+      "question": "Triez ces questions d'analyse patrimoniale selon qu'elles relèvent du diagnostic occupationnel ou du diagnostic fonctionnel.",
+      "colonnes": [
+        "Diagnostic occupationnel",
+        "Diagnostic fonctionnel"
+      ],
+      "elements": [
+        [
+          "Les espaces sont-ils surdimensionnés ou sous-dimensionnés par rapport aux effectifs ?",
+          0
+        ],
+        [
+          "Quel est le taux de présence réel des agents (télétravail, déplacements) ?",
+          0
+        ],
+        [
+          "Combien de personnes occupent réellement chaque implantation ?",
+          0
+        ],
+        [
+          "Les aménagements sont-ils adaptés aux modes de travail des occupants ?",
+          1
+        ],
+        [
+          "Les utilisateurs jugent-ils leur lieu de travail éco-responsable ?",
+          1
+        ],
+        [
+          "Les espaces collaboratifs répondent-ils aux besoins exprimés par les agents ?",
+          1
+        ]
+      ],
+      "explication": "Le diagnostic occupationnel mesure l'usage réel des surfaces — qui occupe quoi, combien de personnes, quel taux de présence — tandis que le diagnostic fonctionnel recueille l'avis des utilisateurs eux-mêmes sur l'adéquation des locaux à leurs besoins. Pas de texte réglementaire dédié : cette distinction est une convention méthodologique de la pratique professionnelle de diagnostic de patrimoine, non une catégorie juridique. Lorsque les plans d'occupation ne sont pas tenus à jour ou sont absents, l'analyse occupationnelle nécessite une enquête terrain — visites sur site ou échanges avec les occupants, qui ont parfois une connaissance plus fine des espaces que la direction immobilière elle-même ; côté fonctionnel, de plus en plus de directions immobilières recourent à des sondages en ligne auprès de l'ensemble des collaborateurs plutôt qu'à la seule direction, pour obtenir une évaluation plus objective.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null
+    },
+    {
+      "id": "g2-04",
+      "axe": "A4",
+      "sousTheme": "Connaissance et stratégie de parc",
+      "stIdx": 0,
+      "sujet": "diag-360",
+      "niveau": 6,
+      "famille": "E",
+      "type": "vf",
+      "question": "Pour une collectivité territoriale, segmenter son patrimoine uniquement par nature d'usage (bureaux, scolaire, sportif, culturel…) est le mode de classification le plus pertinent pour préparer les décisions d'investissement.",
+      "vrai": false,
+      "justification": "Pour une collectivité, les décisions d'investissement sont d'abord des décisions de politique publique : la fermeture ou le maintien d'un collège, par exemple, entraîne mécaniquement celle des bâtiments qui lui sont fonctionnellement rattachés (réfectoire, logement de fonction, gymnase), quel que soit leur usage propre.",
+      "explication": "Faux : pour une collectivité, une segmentation fondée sur le seul usage (bureaux, scolaire, sportif…) masque les interdépendances entre bâtiments qui répondent à une même politique publique. Pas de texte réglementaire dédié : il s'agit d'une pratique de structuration du diagnostic patrimonial observée chez certains grands gestionnaires publics, non d'une obligation légale de méthode. L'exemple caractéristique est celui d'un collège : sa suppression n'affecte pas seulement le bâtiment d'enseignement lui-même mais aussi, par ricochet, le réfectoire, le logement de fonction du proviseur ou du gardien, et le gymnase attenant — des biens à l'usage différent mais dont l'avenir patrimonial est lié à la même décision de politique publique, ce qu'une classification par simple usage ne fait pas apparaître.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null
+    },
+    {
+      "id": "g2-05",
+      "axe": "A4",
+      "sousTheme": "Connaissance et stratégie de parc",
+      "stIdx": 0,
+      "sujet": "diag-360",
+      "niveau": 7,
+      "famille": "M",
+      "type": "curseur",
+      "question": "Dans le cadre du plan de relance consécutif à la crise économique de 2008, quelle enveloppe l'État a-t-il consacrée aux audits techniques (gros entretien, énergie, accessibilité) de son propre parc immobilier, en 2009-2010 ?",
+      "curseur": {
+        "titre": "Enveloppe consacrée aux audits techniques",
+        "unite": "millions d'euros",
+        "min": 0,
+        "max": 200,
+        "pas": 10,
+        "cible": 50,
+        "tolerance": 0,
+        "legende": "Réglez le curseur sur le montant consacré aux audits techniques du parc de l'État en 2009-2010."
+      },
+      "explication": "50 millions d'euros : sur les 200 M€ que le plan de relance a consacrés début 2009 à la rénovation des bâtiments de l'État, 150 M€ ont financé les travaux de rénovation thermique et d'accessibilité et 50 M€ les audits techniques (gros entretien, énergie, accessibilité) du parc. Source : réponse ministérielle à la question écrite n°65109, Assemblée nationale, 13ᵉ législature, réponse publiée le 2 mars 2010. Fin 2009, plus de 22 millions de m² étaient déjà couverts par cette première vague d'audits, sur environ 50 millions de m² de patrimoine total de l'État ; le support de formation observe, sans le chiffrer précisément, qu'une bonne part des audits menés en masse sans stratégie claire à cette époque seraient restés inexploités par la suite — un constat qualitatif à retenir comme un rappel méthodologique plutôt que comme une donnée officielle chiffrée.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null
+    },
+    {
+      "id": "g2-06",
+      "axe": "A4",
+      "sousTheme": "Connaissance et stratégie de parc",
+      "stIdx": 0,
+      "sujet": "benchmarks-immo",
+      "niveau": 3,
+      "famille": "S",
+      "type": "qcm",
+      "question": "Quelle association française, créée en 2012, publie chaque année un baromètre de la performance énergétique et environnementale des bâtiments tertiaires en France ?",
+      "options": [
+        "L'Observatoire de l'Immobilier Durable (OID)",
+        "L'ADEME",
+        "France Assureurs",
+        "La Caisse des Dépôts et Consignations (CDC)"
+      ],
+      "bonneReponse": 0,
+      "explication": "L'Observatoire de l'Immobilier Durable (OID), association loi de 1901 fondée le 11 septembre 2012, publie chaque année depuis cette date son Baromètre de la Performance Énergétique et environnementale des bâtiments tertiaires. Source : OID (o-immobilierdurable.fr), fiche d'identité de l'association. L'OID a été fondée par sept acteurs de l'immobilier tertiaire — Altarea Cogedim, Amundi Immobilier, l'Arseg, La Française REM, Nexity, Sinteo et Société de la Tour Eiffel — réunis pour mettre en commun, de façon anonymisée, des données techniques de bâtiments et en tirer des indicateurs statistiques représentatifs du parc tertiaire français. En savoir plus — OID : Observatoire de l'Immobilier Durable, association indépendante du secteur immobilier tertiaire.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null
+    },
+    {
+      "id": "g2-07",
+      "axe": "A4",
+      "sousTheme": "Connaissance et stratégie de parc",
+      "stIdx": 0,
+      "sujet": "benchmarks-immo",
+      "niveau": 4,
+      "famille": "S",
+      "type": "qcm",
+      "question": "Quel est le nom exact du benchmark international de référence évaluant la performance environnementale, sociale et de gouvernance (ESG) des portefeuilles immobiliers ?",
+      "options": [
+        "GRESB — Global Real Estate Sustainability Benchmark",
+        "GREB — Global Real Estate Environmental Benchmark",
+        "WGBC — World Green Building Certification",
+        "SRI — Sustainable Real Investment"
+      ],
+      "bonneReponse": 0,
+      "explication": "GRESB — Global Real Estate Sustainability Benchmark — est le benchmark international de référence pour évaluer la performance environnementale, sociale et de gouvernance (ESG) des portefeuilles immobiliers et d'infrastructures. Source : GRESB (gresb.com). Lancé en 2009, GRESB a évalué en 2024 plus de 2 200 sociétés foncières, fonds et promoteurs, couvrant plus de 200 000 actifs dans 80 marchés pour environ 7 000 milliards de dollars d'actifs, avec un système de notation en quintiles sur cinq niveaux. En savoir plus — ESG : critères Environnementaux, Sociaux et de Gouvernance utilisés pour évaluer la performance extra-financière d'un investissement.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null
+    },
+    {
+      "id": "g2-08",
+      "axe": "A4",
+      "sousTheme": "BACS, GTB, pilotage",
+      "stIdx": 2,
+      "sujet": "iot-architecture",
+      "niveau": 4,
+      "famille": "S",
+      "type": "qcm",
+      "question": "Selon le cadre de référence « Ready to Services » (R2S) de la Smart Building Alliance, un système IoT de bâtiment s'organise en combien de couches indépendantes ?",
+      "options": [
+        "Deux couches : matériel et logiciel",
+        "Trois couches : équipements connectés, infrastructure de communication, couche applicative/services",
+        "Quatre couches : capteurs, réseau, stockage, sécurité",
+        "Une seule couche intégrée, propre à chaque éditeur"
+      ],
+      "bonneReponse": 1,
+      "explication": "Trois couches indépendantes : les équipements connectés (capteurs qui produisent de la donnée, actionneurs qui en consomment), l'infrastructure de communication (le réseau) et la couche applicative ou de service, où les données sont stockées et exploitées pour rendre des services aux usagers. Source : Smart Building Alliance (SBA, association fondée en 2012), cadre de référence R2S — Ready to Services. Un témoignage professionnel rapporté dans le support de formation illustre la difficulté à calibrer le bon niveau de donnée à collecter : les spécialistes techniques d'un parc immobilier peuvent réclamer des données très fines (vitesse de montée et de descente d'un ascenseur, temps d'attente à l'étage), quand les utilisateurs de terrain n'attendent qu'une information binaire — l'équipement fonctionne ou non — ce qui illustre que la donnée utile n'est pas la donnée maximale. En savoir plus — R2S : Ready to Services, cadre de référence de la SBA pour les bâtiments tertiaires connectés ; SBA : Smart Building Alliance, association professionnelle du bâtiment intelligent.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null
+    },
+    {
+      "id": "g2-09",
+      "axe": "A4",
+      "sousTheme": "BACS, GTB, pilotage",
+      "stIdx": 2,
+      "sujet": "iot-architecture",
+      "niveau": 3,
+      "famille": "S",
+      "type": "cablage",
+      "question": "Associez chaque élément d'un système IoT de bâtiment à la couche du cadre R2S (Smart Building Alliance) à laquelle il appartient.",
+      "cablage": {
+        "titre": "Cadre R2S — Ready to Services",
+        "gaucheTitre": "Élément",
+        "droiteTitre": "Couche",
+        "gauche": [
+          "Capteur de température ou de présence",
+          "Vanne motorisée ou thermostat intelligent",
+          "Réseau sur lequel circulent les données des capteurs",
+          "Application smartphone de pilotage du chauffage à distance"
+        ],
+        "droite": [
+          "Couche équipements connectés (capteurs/actionneurs)",
+          "Couche équipements connectés (capteurs/actionneurs)",
+          "Couche infrastructure de communication",
+          "Couche applicative / services"
+        ]
+      },
+      "explication": "Les capteurs et actionneurs forment la couche des équipements connectés, le réseau qui achemine leurs données forme la couche infrastructure de communication, et l'application qui stocke et exploite ces données pour l'usager forme la couche applicative ou de service. Source : Smart Building Alliance, cadre de référence R2S — Ready to Services. Un bailleur social gérant environ 300 000 logements à l'échelle nationale illustre, dans le support de formation, comment définir le périmètre utile de ces couches : des enquêtes menées en 2020 auprès des locataires et des collaborateurs ont permis d'identifier un « pack de services bâtiment » prioritaire (suivi des consommations d'énergie collective, détection de panne sur les caissons de VMC) et un « pack logement » distinct (détection de fuites d'eau, alerte incendie, détection d'intrusion sur une porte palière). En savoir plus — VMC : ventilation mécanique contrôlée.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null
+    },
+    {
+      "id": "g2-10",
+      "axe": "A4",
+      "sousTheme": "Coût global et cycle de vie",
+      "stIdx": 3,
+      "sujet": "diag-financier",
+      "niveau": 2,
+      "famille": "S",
+      "type": "vf",
+      "question": "Dans un budget local, les charges de fonctionnement (récurrentes chaque année) et les dépenses d'investissement (ponctuelles et pluriannuelles) relèvent de deux sections comptables distinctes.",
+      "vrai": true,
+      "justification": "Le budget d'une collectivité territoriale est obligatoirement voté en deux sections distinctes et équilibrées : la section de fonctionnement et la section d'investissement.",
+      "explication": "Vrai : le budget d'une collectivité territoriale est obligatoirement voté en deux sections distinctes et équilibrées, la section de fonctionnement et la section d'investissement. Source : Code général des collectivités territoriales, art. L. 2311-1. Cette séparation structure aussi le diagnostic financier du patrimoine : dans un exemple donné par le support de formation, un établissement de 150 000 m² répartis sur une trentaine de bâtiments affichait des dépenses immobilières totales de 30 millions d'euros, réparties en 13 M€ de dépenses d'investissement et 17 M€ de charges de fonctionnement — deux masses distinctes qui ne s'additionnent pas dans la même logique budgétaire.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null
+    },
+    {
+      "id": "g2-11",
+      "axe": "A4",
+      "sousTheme": "Coût global et cycle de vie",
+      "stIdx": 3,
+      "sujet": "diag-financier",
+      "niveau": 3,
+      "famille": "E",
+      "type": "qcm",
+      "question": "Dans une analyse des dépenses immobilières d'un patrimoine, quel poste de charge est classiquement exclu du périmètre étudié, alors qu'il pèse souvent bien plus lourd dans le budget global de la collectivité ?",
+      "options": [
+        "La masse salariale des agents affectés à l'entretien et à l'exploitation",
+        "Les fluides et l'énergie",
+        "La sûreté, la sécurité et le gardiennage",
+        "L'entretien et la maintenance courante"
+      ],
+      "bonneReponse": 0,
+      "explication": "La masse salariale des agents affectés à l'entretien et à l'exploitation, suivie séparément dans le budget de personnel de la collectivité, alors que les fluides, l'entretien-maintenance et la sûreté-sécurité-gardiennage restent, eux, dans le périmètre analysé. Pas de texte réglementaire imposant ce périmètre : il s'agit d'une convention usuelle d'analyse patrimoniale, destinée à isoler le coût du bâti proprement dit de celui des ressources humaines qui l'exploitent. Dans l'exemple donné par le support de formation, sur 17 M€ de charges de fonctionnement annuelles, le premier poste de dépense était les fluides et l'énergie (en hausse sur cinq ans), suivi de l'entretien-maintenance puis de la sûreté-sécurité-gardiennage — les loyers, eux, ne représentaient qu'une part infime, l'organisation étant propriétaire de 100 % de ses bâtiments.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null
+    },
+    {
+      "id": "g2-12",
+      "axe": "A4",
+      "sousTheme": "Valorisation financière et risques (valeur verte, assurance climat)",
+      "stIdx": 12,
+      "sujet": "valo-methode",
+      "niveau": 3,
+      "famille": "E",
+      "type": "vf",
+      "question": "Pour obtenir une simple estimation indicative de la valeur d'un patrimoine (hors projet de cession), il est recommandé de commencer par une expertise immobilière complète réalisée par un expert certifié.",
+      "vrai": false,
+      "justification": "Une expertise immobilière complète par un expert certifié représente un coût important, réservé aux cas où une valorisation précise et opposable est nécessaire, notamment en vue d'une cession.",
+      "explication": "Faux : une expertise immobilière complète par un expert certifié est un exercice coûteux, réservé aux cas où une valorisation précise et opposable est nécessaire, notamment en vue d'une cession — pas à une simple estimation indicative du patrimoine. Pas de texte réglementaire dédié : démarche méthodologique de gestion patrimoniale, non une obligation légale d'ordre des priorités. Pour une première estimation interne, le support de formation propose de pondérer la valeur moyenne du m² par zone géographique à l'aide de critères indicatifs — par exemple une surcote de 10 % pour un bien en excellent état contre une décote de 10 % pour un bien vétuste, et une surcote de 5 % pour une étiquette énergétique A ou B contre une décote équivalente pour une étiquette F ou G — des ordres de grandeur pédagogiques et non des barèmes officiels, à ajuster au contexte local du marché.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null
+    },
+    {
+      "id": "g2-13",
+      "axe": "A5",
+      "sousTheme": "Adaptation au changement climatique",
+      "stIdx": 4,
+      "sujet": "risques-outils",
+      "niveau": 2,
+      "famille": "S",
+      "type": "qcm",
+      "question": "Quelle plateforme officielle du gouvernement fournit, à l'échelle locale et à un instant donné, une information sur l'exposition d'un bâtiment aux risques naturels et technologiques ?",
+      "options": [
+        "Géorisques",
+        "OPERAT",
+        "DRIAS",
+        "Taloen"
+      ],
+      "bonneReponse": 0,
+      "explication": "Géorisques est la plateforme officielle du gouvernement qui fournit, pour une adresse ou une parcelle donnée, une information sur les risques naturels et technologiques auxquels un bien est exposé, à un instant donné. Source : Géorisques.gouv.fr, plateforme officielle pilotée notamment par le BRGM et le ministère chargé de la transition écologique. Géorisques donne une photographie figée du risque à la date de consultation ; pour anticiper son évolution dans le temps, il faut la compléter par un outil prospectif comme DRIAS. En savoir plus — BRGM : Bureau de Recherches Géologiques et Minières, établissement public de référence en sciences de la Terre.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null
+    },
+    {
+      "id": "g2-14",
+      "axe": "A5",
+      "sousTheme": "Adaptation au changement climatique",
+      "stIdx": 4,
+      "sujet": "risques-outils",
+      "niveau": 3,
+      "famille": "S",
+      "type": "qcm",
+      "question": "Quel organisme développe l'outil DRIAS, qui projette l'évolution du climat sur les prochaines décennies selon les scénarios du GIEC ?",
+      "options": [
+        "Météo-France, avec des équipes de recherche associées",
+        "Le BRGM",
+        "L'ADEME",
+        "La Caisse des Dépôts et Consignations"
+      ],
+      "bonneReponse": 0,
+      "explication": "DRIAS « Les futurs du climat » est développé par Météo-France, avec des équipes de recherche associées, et projette l'évolution du climat sur les prochaines décennies selon différents scénarios du GIEC. Source : DRIAS-climat.fr, plateforme portée par Météo-France. À la différence de Géorisques, qui photographie le risque à un instant donné, DRIAS permet d'anticiper les impacts futurs sur un territoire selon plusieurs trajectoires climatiques, ce qui en fait l'outil de référence pour dimensionner des projets de construction ou de rénovation à long terme plutôt que pour évaluer l'exposition actuelle d'un bâtiment existant. En savoir plus — GIEC : Groupe d'experts intergouvernemental sur l'évolution du climat, organisme scientifique des Nations unies qui évalue les connaissances sur le changement climatique.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null
+    },
+    {
+      "id": "g2-15",
+      "axe": "A5",
+      "sousTheme": "Adaptation au changement climatique",
+      "stIdx": 4,
+      "sujet": "risques-outils",
+      "niveau": 4,
+      "famille": "S",
+      "type": "trous",
+      "question": "Complétez la phrase sur les deux critères qui déterminent le niveau de risque climatique d'un bâtiment.",
+      "texte": "Le niveau de risque climatique d'un bâtiment résulte du croisement entre son niveau d'{1}, qui dépend de sa localisation, et son niveau de {2}, qui dépend de ses caractéristiques propres, de son environnement direct et des mesures de {3} déjà mises en place.",
+      "mots": [
+        "exposition",
+        "vulnérabilité",
+        "résilience"
+      ],
+      "leurres": [
+        "ancienneté",
+        "conformité",
+        "consommation",
+        "certification"
+      ],
+      "explication": "Le niveau de risque climatique d'un bâtiment résulte du croisement entre son niveau d'exposition, qui dépend de sa localisation, et son niveau de vulnérabilité, qui dépend de ses caractéristiques propres, de son environnement direct et des mesures de résilience déjà mises en place. Ce cadre de lecture (risque = aléa × exposition × vulnérabilité) reprend la grille d'analyse du risque utilisée dans les travaux du GIEC, également retenue par les outils sectoriels de diagnostic climatique du bâtiment. Le support de formation illustre cette méthode sur un parc de 500 bâtiments d'une collectivité du sud de la France : la cartographie croisant localisation des implantations et niveau d'exposition (du vert au rouge) y montrait que plus de 60 % des bâtiments présentaient une exposition significative à au moins un aléa climatique. En savoir plus — aléa : événement climatique potentiellement dommageable (inondation, canicule, retrait-gonflement des argiles…) ; vulnérabilité : degré de sensibilité d'un bâtiment à cet aléa, indépendant de sa seule localisation.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null
+    },
+    {
+      "id": "g2-16",
+      "axe": "A5",
+      "sousTheme": "Adaptation au changement climatique",
+      "stIdx": 4,
+      "sujet": "risques-outils",
+      "niveau": 5,
+      "famille": "S",
+      "type": "qcm",
+      "question": "Quelle plateforme numérique, pilotée par l'Observatoire de l'Immobilier Durable (OID), permet d'analyser à la fois les risques climatiques (via son volet Bat-ADAPT) et les enjeux de biodiversité (via son volet BIODI-Bat) d'un patrimoine bâti à l'échelle européenne ?",
+      "options": [
+        "R4RE — Resilience for Real Estate",
+        "OPERAT",
+        "DRIAS",
+        "Géorisques"
+      ],
+      "bonneReponse": 0,
+      "explication": "R4RE (Resilience for Real Estate) est une plateforme cartographique développée par l'Observatoire de l'Immobilier Durable, disponible depuis 2022, qui combine un volet d'analyse des risques climatiques (Bat-ADAPT) et un volet biodiversité (BIODI-Bat), à l'échelle d'un bâtiment ou d'un patrimoine, en France et en Europe. Source : Observatoire de l'Immobilier Durable, plateforme R4RE (resilience-for-real-estate.com). Le volet Bat-ADAPT couvre huit aléas climatiques (fortes chaleurs, sécheresses, précipitations et inondations, dynamiques littorales, tempêtes et vents violents, feux de forêt, grands froids, mouvements de terrain) sur des horizons allant jusqu'à 2090, en s'appuyant notamment sur les données de DRIAS et les scénarios du GIEC ; le volet biodiversité BIODI-Bat, initialement hébergé séparément sur le site Taloen de l'OID, y a été intégré en 2022.",
+      "derniereVerification": "2026-09",
+      "aVerifier": null
+    },
+    {
+      "id": "g2-17",
+      "axe": "A4",
+      "sousTheme": "Biodiversité et séquence ERC en exploitation",
+      "stIdx": 9,
+      "sujet": "biodi-outils",
+      "niveau": 3,
+      "famille": "S",
+      "type": "qcm",
+      "question": "Quel outil, développé par l'Observatoire de l'Immobilier Durable (OID), permet d'évaluer le potentiel d'accueil de la biodiversité d'un bâtiment existant à partir d'une approche cartographique de son contexte écologique ?",
+      "options": [
+        "BIODI-Bat",
+        "R2S — Ready to Services",
+        "OPERAT",
+        "Bat-ADAPT"
+      ],
+      "bonneReponse": 0,
+      "explication": "BIODI-Bat, développé par l'Observatoire de l'Immobilier Durable (OID), permet d'analyser un bâtiment existant au regard de son contexte écologique via une approche cartographique, puis d'évaluer son potentiel d'accueil de biodiversité et d'identifier les leviers d'amélioration. Source : Observatoire de l'Immobilier Durable, outil BIODI-Bat, aujourd'hui intégré à la plateforme R4RE. Le support de formation indique que de nouvelles fonctionnalités étaient prévues pour cet outil, notamment l'évaluation de l'impact des projets immobiliers sur la biodiversité et la mesure des co-bénéfices associés à la présence de biodiversité (climat, gestion des eaux pluviales, bien-être et santé) — un enrichissement à confirmer au moment de l'utilisation, l'outil évoluant dans le temps. En savoir plus — ERC : séquence Éviter-Réduire-Compenser, principe qui structure la prise en compte des impacts environnementaux d'un projet, dont la biodiversité.",
       "derniereVerification": "2026-09",
       "aVerifier": null
     }
