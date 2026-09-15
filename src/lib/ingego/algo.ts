@@ -240,6 +240,64 @@ export function repartirParTheme(
   return selection;
 }
 
+/* Équilibrage des chapitres en pourcentage : chaque place de la mission est
+   attribuée au chapitre dont le taux de maîtrise projeté est le plus bas.
+   Un gros chapitre déjà bien avancé (Guide) laisse donc la main à un chapitre
+   en retard (Patrimoine) jusqu'à ce que les pourcentages se rejoignent.
+   À l'intérieur d'un chapitre, la répartition reste proportionnelle aux thèmes. */
+export function repartirParRetard(
+  priorite: Question[],
+  corpusActif: Question[],
+  etat: Etat,
+  nombre: number,
+  graine = 0,
+): Question[] {
+  if (priorite.length <= nombre) return priorite;
+
+  const total = new Map<string, number>();
+  const acquises = new Map<string, number>();
+  for (const q of corpusActif) {
+    total.set(q.axe, (total.get(q.axe) ?? 0) + 1);
+    if (validee(etat[q.id])) acquises.set(q.axe, (acquises.get(q.axe) ?? 0) + 1);
+  }
+  const dispo = new Map<string, Question[]>();
+  for (const q of priorite) {
+    const l = dispo.get(q.axe) ?? [];
+    l.push(q);
+    dispo.set(q.axe, l);
+  }
+
+  const quotas = new Map<string, number>();
+  for (let i = 0; i < nombre; i++) {
+    let meilleur: string | null = null;
+    let score = Infinity;
+    for (const [axe, liste] of dispo) {
+      const pris = quotas.get(axe) ?? 0;
+      if (pris >= liste.length) continue;
+      const t = total.get(axe) ?? liste.length;
+      /* Bruit minuscule dépendant de la graine : départage les égalités
+         sans jamais inverser un vrai écart de pourcentage. */
+      const bruit = ((graineDe(axe) ^ (graine * 2654435761)) >>> 0) % 1000;
+      const taux = ((acquises.get(axe) ?? 0) + pris) / Math.max(1, t) + bruit * 1e-9;
+      if (taux < score) {
+        score = taux;
+        meilleur = axe;
+      }
+    }
+    if (!meilleur) break;
+    quotas.set(meilleur, (quotas.get(meilleur) ?? 0) + 1);
+  }
+
+  const retenus = new Set<string>();
+  for (const [axe, liste] of dispo) {
+    const quota = quotas.get(axe) ?? 0;
+    if (!quota) continue;
+    const actifsAxe = corpusActif.filter((q) => q.axe === axe);
+    for (const q of repartirParTheme(liste, actifsAxe, quota, graine)) retenus.add(q.id);
+  }
+  return priorite.filter((q) => retenus.has(q.id)).slice(0, nombre);
+}
+
 export function composerSession(etat: Etat, reglages: Reglages, now: number): Question[] {
   const ouvert = (q: Question) =>
     reglages.axes.includes(q.axe) &&
@@ -296,7 +354,7 @@ export function composerSession(etat: Etat, reglages: Reglages, now: number): Qu
   const candidats = [...lot, ...pool].filter(
     (q, index, liste) => liste.findIndex((autre) => autre.id === q.id) === index,
   );
-  return entrelacer(repartirParTheme(candidats, actifs, n, Math.floor(now / JOUR)));
+  return entrelacer(repartirParRetard(candidats, actifs, etat, n, Math.floor(now / JOUR)));
 }
 
 export function resteAFaire(etat: Etat, reglages: Reglages, now: number) {
