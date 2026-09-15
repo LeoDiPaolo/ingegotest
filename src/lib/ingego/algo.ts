@@ -241,10 +241,12 @@ export function repartirParTheme(
 }
 
 /* Équilibrage des chapitres en pourcentage : chaque place de la mission est
-   attribuée au chapitre dont le taux de maîtrise projeté est le plus bas.
-   Un gros chapitre déjà bien avancé (Guide) laisse donc la main à un chapitre
-   en retard (Patrimoine) jusqu'à ce que les pourcentages se rejoignent.
-   À l'intérieur d'un chapitre, la répartition reste proportionnelle aux thèmes. */
+   attribuée parmi les chapitres dont le taux de maîtrise réellement acquis est
+   le plus bas. Les questions de la mission en préparation ne sont pas comptées
+   comme déjà validées : un chapitre plus avancé (Guide notamment) ne remonte
+   donc pas avant que les chapitres en retard l'aient effectivement rejoint.
+   En cas d'égalité, les places tournent entre les chapitres concernés. À
+   l'intérieur d'un chapitre, la répartition reste proportionnelle aux thèmes. */
 export function repartirParRetard(
   priorite: Question[],
   corpusActif: Question[],
@@ -269,21 +271,31 @@ export function repartirParRetard(
 
   const quotas = new Map<string, number>();
   for (let i = 0; i < nombre; i++) {
-    let meilleur: string | null = null;
-    let score = Infinity;
+    let tauxMinimum = Infinity;
+    const axesAuMinimum: string[] = [];
     for (const [axe, liste] of dispo) {
       const pris = quotas.get(axe) ?? 0;
       if (pris >= liste.length) continue;
       const t = total.get(axe) ?? liste.length;
-      /* Bruit minuscule dépendant de la graine : départage les égalités
-         sans jamais inverser un vrai écart de pourcentage. */
-      const bruit = ((graineDe(axe) ^ (graine * 2654435761)) >>> 0) % 1000;
-      const taux = ((acquises.get(axe) ?? 0) + pris) / Math.max(1, t) + bruit * 1e-9;
-      if (taux < score) {
-        score = taux;
-        meilleur = axe;
+      const taux = (acquises.get(axe) ?? 0) / Math.max(1, t);
+      if (taux < tauxMinimum) {
+        tauxMinimum = taux;
+        axesAuMinimum.length = 0;
+        axesAuMinimum.push(axe);
+      } else if (taux === tauxMinimum) {
+        axesAuMinimum.push(axe);
       }
     }
+    /* Parmi les chapitres exactement au même taux, servir d'abord celui qui a
+       reçu le moins de places dans cette mission. La graine ne départage que
+       l'égalité restante et fait tourner le premier chapitre d'un jour à l'autre. */
+    const meilleur = axesAuMinimum.sort((a, b) => {
+      const ecartQuota = (quotas.get(a) ?? 0) - (quotas.get(b) ?? 0);
+      if (ecartQuota) return ecartQuota;
+      const rangA = (graineDe(a) ^ (graine * 2654435761)) >>> 0;
+      const rangB = (graineDe(b) ^ (graine * 2654435761)) >>> 0;
+      return rangA - rangB || a.localeCompare(b);
+    })[0];
     if (!meilleur) break;
     quotas.set(meilleur, (quotas.get(meilleur) ?? 0) + 1);
   }
