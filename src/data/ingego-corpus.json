@@ -23086,18 +23086,34 @@
       "sujet": "sdi-methode",
       "niveau": 4,
       "famille": "S",
-      "type": "qcm",
-      "question": "Quelle durée de réalisation est généralement observée pour un schéma directeur immobilier ?",
-      "options": [
-        "1 à 3 mois",
-        "6 à 18 mois selon l'ampleur et la complexité du parc",
-        "2 à 3 ans systématiquement",
-        "5 ans minimum"
-      ],
-      "bonneReponse": 1,
+      "type": "graphe",
+      "question": "Cliquez sur la durée de réalisation généralement observée pour un schéma directeur immobilier.",
       "explication": "La durée de réalisation d'un schéma directeur immobilier varie généralement entre 6 et 18 mois, selon l'ampleur et la complexité du parc immobilier concerné. Il s'agit d'une notion méthodologique professionnelle : aucun texte réglementaire ne fixe cette durée pour les collectivités territoriales, qui ne sont pas soumises à une obligation légale d'élaborer un SDI. Cette durée dépend notamment de la diversité des usages du patrimoine et du nombre de parties prenantes à consulter, en interne comme en externe : un parc multi-sites avec de nombreux services utilisateurs allonge mécaniquement les délais de concertation.",
       "derniereVerification": "2026-09",
-      "aVerifier": null
+      "aVerifier": null,
+      "graphe": {
+        "titre": "Durée de réalisation d'un schéma directeur immobilier",
+        "unite": "mois",
+        "barres": [
+          {
+            "l": "1 à 3 mois",
+            "v": 3
+          },
+          {
+            "l": "6 à 18 mois",
+            "v": 18
+          },
+          {
+            "l": "2 à 3 ans",
+            "v": 36
+          },
+          {
+            "l": "5 ans et plus",
+            "v": 60
+          }
+        ]
+      },
+      "bonneBarre": 1
     },
     {
       "id": "m3-03",
@@ -23107,18 +23123,13 @@
       "sujet": "sdi-methode",
       "niveau": 2,
       "famille": "S",
-      "type": "qcm",
-      "question": "À quel niveau de gouvernance un schéma directeur immobilier doit-il être porté pour produire des effets réels ?",
-      "options": [
-        "Le seul service exploitation-maintenance",
-        "La direction générale de l'organisation",
-        "Le seul bureau d'études externe missionné",
-        "Le comité technique"
-      ],
-      "bonneReponse": 1,
+      "type": "vf",
+      "question": "Pour produire des effets réels, un schéma directeur immobilier doit être porté par la direction générale de l'organisation, et non par le seul service exploitation-maintenance.",
       "explication": "Le schéma directeur immobilier doit être porté au plus haut niveau de l'organisation, par la direction générale, pour produire des effets réels sur les décisions d'investissement. Il s'agit d'une notion méthodologique professionnelle, sans texte réglementaire imposant ce niveau de portage aux collectivités territoriales. Ce portage stratégique s'impose parce que les décisions issues du SDI peuvent avoir des conséquences lourdes sur le plan financier, juridique, sur l'image de l'organisation ou sur l'acceptabilité sociale — l'immobilier restant un sujet sensible pour les usagers, susceptible de provoquer des réactions fortes.",
       "derniereVerification": "2026-09",
-      "aVerifier": null
+      "aVerifier": null,
+      "vrai": true,
+      "justification": "Le SDI engage des arbitrages d'investissement et d'organisation : il ne produit d'effets que porté au niveau de la direction générale."
     },
     {
       "id": "m3-04",
@@ -23128,18 +23139,33 @@
       "sujet": "sdi-methode",
       "niveau": 5,
       "famille": "S",
-      "type": "qcm",
-      "question": "Un diagnostic de patrimoine structuré croise plusieurs angles d'analyse complémentaires. Lequel des éléments suivants n'en fait PAS partie dans une démarche multicritère classique ?",
-      "options": [
-        "Diagnostic occupationnel (sur/sous-occupation)",
-        "Diagnostic fonctionnel et réglementaire/technique",
-        "Diagnostic environnemental et diagnostic des risques",
-        "Diagnostic actuariel des engagements de retraite des agents"
-      ],
-      "bonneReponse": 3,
+      "type": "tri",
+      "question": "Triez ces analyses selon qu'elles font partie ou non d'un diagnostic de patrimoine multicritère.",
       "explication": "Un diagnostic patrimonial multicritère croise notamment les angles occupationnel, fonctionnel, réglementaire et technique, environnemental, des risques (naturels, technologiques, sécurité/sûreté) et financier ; le diagnostic actuariel des retraites des agents n'en relève pas. Il s'agit d'une notion méthodologique professionnelle, sans texte réglementaire imposant une liste fermée de diagnostics à conduire. Certaines organisations ajoutent aussi un diagnostic des outils numériques de gestion du patrimoine et un diagnostic des moyens humains et compétences internes ; un écueil fréquent à éviter est de vouloir collecter trop de données non prioritaires à l'échelle stratégique. En savoir plus — diagnostic occupationnel : analyse de la manière dont les espaces sont réellement utilisés, pour détecter une sur- ou sous-occupation ; diagnostic fonctionnel : vérifie l'adéquation des bâtiments aux besoins des utilisateurs.",
       "derniereVerification": "2026-09",
-      "aVerifier": null
+      "aVerifier": null,
+      "colonnes": [
+        "Fait partie du diagnostic de patrimoine",
+        "N'en fait pas partie"
+      ],
+      "elements": [
+        [
+          "Diagnostic occupationnel (sur/sous-occupation)",
+          0
+        ],
+        [
+          "Diagnostic fonctionnel et réglementaire/technique",
+          0
+        ],
+        [
+          "Diagnostic environnemental et diagnostic des risques",
+          0
+        ],
+        [
+          "Diagnostic actuariel des engagements de retraite des agents",
+          1
+        ]
+      ]
     },
     {
       "id": "m3-05",
@@ -23267,18 +23293,34 @@
       "sujet": "cp-allot",
       "niveau": 5,
       "famille": "M",
-      "type": "qcm",
-      "question": "Pour quelle durée l'expérimentation du tiers-financement public par paiement différé a-t-elle été ouverte ?",
-      "options": [
-        "3 ans à compter de sa promulgation",
-        "10 ans à compter de sa promulgation",
-        "5 ans à compter de sa promulgation (30 mars 2023)",
-        "Durée illimitée"
-      ],
-      "bonneReponse": 2,
+      "type": "graphe",
+      "question": "Cliquez sur la durée pour laquelle l'expérimentation du tiers-financement public par paiement différé a été ouverte.",
       "explication": "Cette expérimentation du paiement différé dans les contrats de performance énergétique publics a été ouverte pour une durée de 5 ans à compter de la promulgation de la loi, le 30 mars 2023, soit jusqu'à fin mars 2028 environ. Source : loi n°2023-222 du 30 mars 2023, article 1er — Légifrance. Le décret d'application n°2023-913 du 3 octobre 2023, relatif aux marchés globaux de performance énergétique à paiement différé, précise les modalités de l'étude préalable et de l'étude de soutenabilité budgétaire que l'acheteur doit produire avant de recourir à ce montage ; à l'approche de l'échéance de 2028, il conviendra de vérifier si l'expérimentation est prolongée, pérennisée ou arrêtée.",
       "derniereVerification": "2026-09",
-      "aVerifier": "Expérimentation du paiement différé limitée à 2028 : vérifier si elle est prolongée, généralisée ou abandonnée."
+      "aVerifier": "Expérimentation du paiement différé limitée à 2028 : vérifier si elle est prolongée, généralisée ou abandonnée.",
+      "graphe": {
+        "titre": "Durée de l'expérimentation ouverte le 30 mars 2023",
+        "unite": "ans",
+        "barres": [
+          {
+            "l": "3 ans",
+            "v": 3
+          },
+          {
+            "l": "5 ans",
+            "v": 5
+          },
+          {
+            "l": "10 ans",
+            "v": 10
+          },
+          {
+            "l": "15 ans",
+            "v": 15
+          }
+        ]
+      },
+      "bonneBarre": 1
     },
     {
       "id": "m3-11",
@@ -23441,18 +23483,33 @@
       "sujet": "fin-transition",
       "niveau": 7,
       "famille": "S",
-      "type": "qcm",
-      "question": "Quelle est la différence essentielle entre l'intracting et le tiers-financement comme leviers de financement de la performance environnementale du patrimoine ?",
-      "options": [
-        "L'intracting est réservé aux collectivités de plus de 100 000 habitants",
-        "Le tiers-financement ne peut financer que des travaux d'isolation thermique",
-        "L'intracting est un financement interne autoalimenté par les économies de fonctionnement, le tiers-financement fait intervenir un financement externe assuré par un tiers",
-        "L'intracting est un dispositif exclusivement réservé aux acteurs privés"
-      ],
-      "bonneReponse": 2,
+      "type": "tri",
+      "question": "Triez ces caractéristiques selon qu'elles décrivent l'intracting ou le tiers-financement.",
       "explication": "L'intracting est un mécanisme de financement interne, autoalimenté par les économies de fonctionnement générées par les travaux, tandis que le tiers-financement fait intervenir un financement externe assuré initialement par un tiers investisseur. Source : notion de marché, promue notamment par l'ADEME pour l'intracting ; pas de texte réglementaire unique définissant ces deux mécanismes, à distinguer du tiers-financement public encadré spécifiquement par la loi n°2023-222 du 30 mars 2023 pour le seul cas du paiement différé. Dans l'intracting, les économies générées par les premiers projets sont réinjectées dans le fonds pour financer de nouveaux projets, sans dépendre de financements extérieurs ; dans le tiers-financement, le maître d'ouvrage n'a pas à financer les travaux en direct, mais les temps de retour sur investissement de certains travaux (l'isolation, par exemple) dépassent souvent 30 à 40 ans, si bien que les économies d'énergie ne couvrent en général qu'une partie du programme, le reste devant être financé par des subventions ou des prêts complémentaires.",
       "derniereVerification": "2026-09",
-      "aVerifier": null
+      "aVerifier": null,
+      "colonnes": [
+        "Intracting",
+        "Tiers-financement"
+      ],
+      "elements": [
+        [
+          "Financement interne, autoalimenté par les économies de fonctionnement générées",
+          0
+        ],
+        [
+          "Avance budgétaire interne remboursée par les économies constatées",
+          0
+        ],
+        [
+          "Financement externe apporté et porté par un tiers",
+          1
+        ],
+        [
+          "Le tiers se rémunère sur la durée du contrat, sur les économies ou une redevance",
+          1
+        ]
+      ]
     },
     {
       "id": "m3-19",
@@ -23659,18 +23716,13 @@
       "sujet": "gd-priorite",
       "niveau": 5,
       "famille": "S",
-      "type": "qcm",
-      "question": "Avant d'engager des actions de gestion durable sur un actif, quelle est la priorité opérationnelle à traiter en premier ?",
-      "options": [
-        "La certification environnementale du bâtiment",
-        "Le traitement des pathologies et irritants qui affectent son bon fonctionnement",
-        "L'installation de panneaux photovoltaïques",
-        "La labellisation biodiversité du site"
-      ],
-      "bonneReponse": 1,
+      "type": "vf",
+      "question": "Avant d'engager des actions de gestion durable sur un actif, la priorité opérationnelle est d'obtenir sa certification environnementale.",
       "explication": "Avant d'engager toute action de gestion durable, la priorité consiste à traiter les pathologies et irritants qui affectent le bon fonctionnement du bâtiment, comme une fuite persistante, une isolation défaillante ou un organe technique mal réglé. Ce principe de gestion « en bon père de famille » relève d'une pratique professionnelle communément admise, et non d'un texte réglementaire dédié — sauf lorsque les travaux concernent la sécurité des biens et des personnes, où d'autres obligations réglementaires (sécurité incendie, accessibilité...) s'imposent alors indépendamment de toute logique économique. Le document source nuance néanmoins ce principe : les travaux correctifs doivent rester en cohérence avec une certaine logique économique, et si leur coût dépasse largement la valeur de l'actif, il peut être nécessaire de repenser la stratégie plutôt que de s'obstiner à réparer.",
       "derniereVerification": "2026-09",
-      "aVerifier": null
+      "aVerifier": null,
+      "vrai": false,
+      "justification": "La priorité est le traitement des pathologies et des irritants qui affectent le bon fonctionnement du bâtiment ; la certification vient ensuite."
     },
     {
       "id": "m2-04",
@@ -23886,18 +23938,13 @@
       "sujet": "gd-tiers",
       "niveau": 5,
       "famille": "S",
-      "type": "qcm",
-      "question": "Depuis quel texte le tiers-financement en contrat de performance énergétique (paiement différé des travaux) est-il ouvert, à titre expérimental, aux collectivités territoriales et à leurs groupements ?",
-      "options": [
-        "La loi Climat et Résilience du 22 août 2021",
-        "La loi n° 2023-222 du 30 mars 2023",
-        "La loi APER du 10 mars 2023",
-        "La loi ÉLAN du 23 novembre 2018"
-      ],
-      "bonneReponse": 1,
+      "type": "vf",
+      "question": "Le tiers-financement en contrat de performance énergétique (paiement différé des travaux) a été ouvert aux collectivités territoriales, à titre expérimental, par la loi n° 2023-222 du 30 mars 2023.",
       "explication": "La loi n° 2023-222 du 30 mars 2023 visant à ouvrir le tiers-financement à l'État, à ses établissements publics et aux collectivités territoriales pour favoriser les travaux de rénovation énergétique permet à ces personnes publiques de conclure un contrat de performance énergétique sous la forme d'un marché global de performance, en dérogeant à l'interdiction de paiement différé posée par le code de la commande publique. Source : Loi n° 2023-222 du 30 mars 2023 — Légifrance. Ses modalités d'application (étude préalable, étude de soutenabilité budgétaire) ont ensuite été précisées par le décret n° 2023-913 du 3 octobre 2023 ; concrètement, l'opérateur chargé du chantier avance les fonds à la collectivité, qui rembourse ensuite, intérêts compris, une fois les économies d'énergie effectivement réalisées. En savoir plus — CPE : Contrat de Performance Énergétique ; MGP : Marché Global de Performance.",
       "derniereVerification": "2026-09",
-      "aVerifier": null
+      "aVerifier": null,
+      "vrai": true,
+      "justification": "C'est bien la loi n° 2023-222 du 30 mars 2023 qui ouvre cette expérimentation, par dérogation à l'interdiction de principe du paiement différé dans la commande publique."
     },
     {
       "id": "m2-11",
@@ -23943,18 +23990,13 @@
       "sujet": "gd-ppt",
       "niveau": 7,
       "famille": "S",
-      "type": "qcm",
-      "question": "Le plan pluriannuel de travaux (PPT), rendu obligatoire par la loi Climat et Résilience pour les copropriétés de plus de 15 ans, s'applique :",
-      "options": [
-        "À toutes les copropriétés, y compris les immeubles à usage exclusivement tertiaire",
-        "Aux copropriétés à usage total ou partiel d'habitation uniquement",
-        "Uniquement aux copropriétés de moins de 50 lots",
-        "Uniquement aux copropriétés situées en Île-de-France"
-      ],
-      "bonneReponse": 1,
+      "type": "vf",
+      "question": "Le plan pluriannuel de travaux rendu obligatoire par la loi Climat et Résilience s'applique à toutes les copropriétés de plus de 15 ans, y compris celles à usage exclusivement tertiaire.",
       "explication": "L'obligation d'élaborer un projet de plan pluriannuel de travaux, créée par l'article 171 de la loi n° 2021-1104 du 22 août 2021 (Climat et Résilience) qui modifie l'article 14-2 de la loi du 10 juillet 1965, concerne les immeubles à destination totale ou partielle d'habitation de plus de 15 ans. Source : Loi n° 2021-1104 du 22 août 2021, art. 171 — Légifrance. Une copropriété purement tertiaire, sans aucune partie d'habitation, n'entre donc pas dans le champ de cette obligation précise — un point que certains supports de formation généralisent à tort à « logement ou tertiaire » ; par ailleurs, son entrée en vigueur a été progressive selon la taille de la copropriété (dès le 1er janvier 2023 pour les plus de 200 lots, 2024 pour 50 à 200 lots, 2025 pour les moins de 50 lots). En savoir plus — PPT : Plan Pluriannuel de Travaux ; PPPT : projet de plan pluriannuel de travaux, document préalable soumis au vote des copropriétaires.",
       "derniereVerification": "2026-09",
-      "aVerifier": null
+      "aVerifier": null,
+      "vrai": false,
+      "justification": "Le PPT ne concerne que les copropriétés à usage total ou partiel d'habitation."
     },
     {
       "id": "m2-14",
@@ -24001,18 +24043,13 @@
       "sujet": "gd-606",
       "niveau": 5,
       "famille": "S",
-      "type": "qcm",
-      "question": "Dans un bail commercial, les travaux relevant des « grosses réparations » de l'article 606 du code civil (structure, murs porteurs, toiture) sont, sauf clause contraire valable, à la charge :",
-      "options": [
-        "Du locataire",
-        "Du propriétaire",
-        "Partagée à parts égales entre les deux parties",
-        "De la collectivité, même si elle n'est pas propriétaire"
-      ],
-      "bonneReponse": 1,
+      "type": "vf",
+      "question": "Dans un bail commercial, les grosses réparations de l'article 606 du code civil (structure, murs porteurs, toiture) restent à la charge du propriétaire, sauf clause contraire valable.",
       "explication": "Le décret n° 2014-1317 du 3 novembre 2014, pris en application de la loi Pinel du 18 juin 2014, exclut notamment les dépenses relatives aux grosses réparations mentionnées à l'article 606 du code civil des charges pouvant être imputées au locataire dans un bail commercial : ces travaux structurels restent à la charge du bailleur. Source : Art. R. 145-35 du code de commerce, issu du décret n° 2014-1317 du 3 novembre 2014 — Légifrance. Le document source illustre cette répartition par deux exemples concrets : un relamping en LED, considéré comme un entretien courant, reste à la charge du locataire, tandis qu'une isolation par l'extérieur ou l'installation d'une chaudière collective haute performance, relevant de l'amélioration lourde, restent à la charge du propriétaire ; il distingue aussi la mono-occupation, où le locataire assure directement le petit entretien et doit le justifier au propriétaire, de la multi-occupation, où c'est le gestionnaire de l'immeuble qui s'en charge pour le compte des locataires sur les parties communes. En savoir plus — Article 606 du code civil : liste les grosses réparations (structure, gros murs, voûtes, poutres, toitures, digues, murs de soutènement ou de clôture) restant à la charge du propriétaire.",
       "derniereVerification": "2026-09",
-      "aVerifier": null
+      "aVerifier": null,
+      "vrai": true,
+      "justification": "L'article 606 du code civil met les grosses réparations à la charge du propriétaire ; seule une clause expresse et valable peut en transférer tout ou partie au locataire."
     },
     {
       "id": "m2-16",
@@ -24296,18 +24333,34 @@
       "sujet": "gd-plan-eau",
       "niveau": 4,
       "famille": "S",
-      "type": "qcm",
-      "question": "Le Plan d'action national pour une gestion résiliente et concertée de l'eau, présenté en mars 2023, fixe notamment pour objectif de réduire les prélèvements d'eau, d'ici 2030, de :",
-      "options": [
-        "5 %",
-        "10 %",
-        "25 %",
-        "50 %"
-      ],
-      "bonneReponse": 1,
+      "type": "graphe",
+      "question": "Le Plan d'action national pour une gestion résiliente et concertée de l'eau (mars 2023) fixe un objectif de réduction des prélèvements d'eau d'ici 2030. Cliquez sur la bonne valeur.",
       "explication": "Le « Plan Eau », présenté le 30 mars 2023, fixe un objectif global de réduction des prélèvements d'eau d'au moins 10 % d'ici 2030, décliné par filière économique et par territoire. Source : Plan d'action pour une gestion résiliente et concertée de l'eau, mars 2023 — gouvernement.fr / info.gouv.fr. Ce plan comporte 53 mesures réparties en plusieurs axes (sobriété des usages, lutte contre les pollutions, amélioration de la gestion de la ressource) et vise notamment à recycler et réutiliser 10 % des eaux usées traitées d'ici 2030, contre moins de 1 % aujourd'hui.",
       "derniereVerification": "2026-09",
-      "aVerifier": null
+      "aVerifier": null,
+      "graphe": {
+        "titre": "Objectif de réduction des prélèvements d'eau d'ici 2030",
+        "unite": "%",
+        "barres": [
+          {
+            "l": "5 %",
+            "v": 5
+          },
+          {
+            "l": "10 %",
+            "v": 10
+          },
+          {
+            "l": "25 %",
+            "v": 25
+          },
+          {
+            "l": "50 %",
+            "v": 50
+          }
+        ]
+      },
+      "bonneBarre": 1
     },
     {
       "id": "m2-28",
@@ -24380,18 +24433,25 @@
       "sujet": "gd-nudge",
       "niveau": 2,
       "famille": "S",
-      "type": "qcm",
-      "question": "Le « Nudge », appliqué à la gestion durable de l'immobilier, désigne :",
-      "options": [
-        "Une norme technique de construction",
-        "Une approche d'incitation douce visant à faire adopter progressivement un comportement plus vertueux aux occupants",
-        "Un label de certification environnementale des bâtiments",
-        "Un dispositif fiscal de soutien à la rénovation énergétique"
-      ],
-      "bonneReponse": 1,
+      "type": "assoc",
+      "question": "Associez chaque outil de sensibilisation des usagers à sa définition exacte.",
       "explication": "Le Nudge est une approche issue des sciences comportementales, visant à aider l'individu à adopter de meilleures pratiques en privilégiant l'incitation douce plutôt que la contrainte. Notion issue des sciences comportementales, sans texte réglementaire dédié. Appliqué à l'immobilier, le document source cite plusieurs usages concrets : promouvoir les éco-gestes, améliorer le savoir-vivre dans les espaces partagés, réduire la fréquence des ménages, ou encore encourager la pratique de l'escalier plutôt que de l'ascenseur.",
       "derniereVerification": "2026-09",
-      "aVerifier": null
+      "aVerifier": null,
+      "paires": [
+        [
+          "Nudge",
+          "Approche d'incitation douce visant à faire adopter progressivement un comportement plus vertueux aux occupants"
+        ],
+        [
+          "Concours CUBE",
+          "Compétition d'un an entre bâtiments tertiaires pour réduire les consommations d'énergie par les usages, sans gros travaux"
+        ],
+        [
+          "Fresque de l'immobilier durable",
+          "Atelier collaboratif par jeu de cartes explorant les grands défis de l'immobilier durable"
+        ]
+      ]
     },
     {
       "id": "m2-32",
@@ -24401,18 +24461,13 @@
       "sujet": "gd-fresque",
       "niveau": 2,
       "famille": "S",
-      "type": "qcm",
-      "question": "La Fresque de l'immobilier durable est :",
-      "options": [
-        "Une œuvre d'art murale imposée dans les halls d'immeubles tertiaires",
-        "Un atelier de sensibilisation par jeu de cartes et temps de discussion, explorant les grands défis de l'immobilier durable",
-        "Un audit énergétique réglementaire obligatoire",
-        "Un indicateur financier de valorisation verte"
-      ],
-      "bonneReponse": 1,
+      "type": "vf",
+      "question": "La Fresque de l'immobilier durable est un atelier de sensibilisation par jeu de cartes et temps de discussion, explorant les grands défis de l'immobilier durable.",
       "explication": "La Fresque de l'immobilier durable est un atelier de sensibilisation par jeu de cartes et temps de discussion, qui explore les grands défis, la responsabilité et la vulnérabilité de l'immobilier face à l'urgence écologique. Outil de sensibilisation d'origine associative, sans texte réglementaire dédié. Le document source précise qu'elle s'adresse à l'ensemble des métiers et acteurs de la chaîne immobilière, en particulier aux gestionnaires de parc et aux occupants des bâtiments, et qu'elle vise à faire émerger collectivement des solutions pour un immobilier plus durable.",
       "derniereVerification": "2026-09",
-      "aVerifier": null
+      "aVerifier": null,
+      "vrai": true,
+      "justification": "Il s'agit d'un atelier collaboratif de sensibilisation, sur le modèle des fresques thématiques, et non d'un audit réglementaire."
     },
     {
       "id": "a4-83",
@@ -24442,17 +24497,12 @@
       "sujet": "gouv-fin",
       "niveau": 3,
       "famille": "S",
-      "type": "qcm",
+      "type": "vf",
       "explication": "Selon la taille de l'organisation, le réseau se structure utilement à plusieurs niveaux : un référent national, des référents régionaux, et des référents par fonction métier, avec des points de contact par direction, service ou site. Notion de bonne pratique organisationnelle, sans texte réglementaire dédié. La difficulté ne tient pas au manque de solutions mais à la diversité des métiers à mobiliser : stratégie immobilière, exploitation-maintenance, services généraux, conduite d'opération, management de l'énergie, développement durable, finances, achats, communication, sans oublier les prestataires comme les facility managers, les AMO ou les fournisseurs d'énergie ; l'animation centrale du réseau revient le plus souvent au responsable patrimoine ou développement durable, avec un rythme d'échange régulier, par exemple mensuel. En savoir plus — AMO : assistance à maîtrise d'ouvrage, prestataire qui accompagne le maître d'ouvrage dans la conduite d'un projet.",
       "derniereVerification": "2026-09",
-      "question": "Dans une organisation de grande taille, un réseau interne dédié à la transition écologique du patrimoine est utilement structuré :",
-      "options": [
-        "Autour d'un seul référent national qui centralise toutes les décisions",
-        "Par un prestataire externe unique qui anime seul l'ensemble du réseau",
-        "À plusieurs niveaux : un référent national, des référents régionaux, et des référents par fonction métier",
-        "Uniquement au niveau de chaque site, sans coordination centrale"
-      ],
-      "bonneReponse": 2
+      "question": "Dans une organisation de grande taille, un réseau interne dédié à la transition écologique du patrimoine gagne à être structuré à plusieurs niveaux : référent national, référents régionaux et référents par fonction métier.",
+      "vrai": true,
+      "justification": "Le maillage à plusieurs niveaux permet de relayer la stratégie nationale et de l'adapter aux réalités des sites et des métiers."
     },
     {
       "id": "a4-85",
@@ -24530,17 +24580,12 @@
       "sujet": "gouv-fin",
       "niveau": 4,
       "famille": "S",
-      "type": "qcm",
+      "type": "vf",
       "explication": "Le dispositif des certificats d'économies d'énergie (CEE) oblige les fournisseurs d'énergie à financer des actions de rénovation énergétique réalisées par des particuliers ou des entreprises, en contrepartie de certificats. Dispositif créé par la loi n° 2005-781 du 13 juillet 2005, dite loi POPE, codifié aux articles L. 221-1 et suivants du code de l'énergie. Concrètement, des fournisseurs comme EDF, TotalEnergies ou Engie, dits « obligés », doivent réaliser ou financer des économies d'énergie sous peine de pénalité ; pour un propriétaire, cela se traduit par une aide financière pour des travaux comme l'isolation ou le changement de chauffage, sans en supporter seul le coût. En savoir plus — « obligés » : fournisseurs d'énergie soumis à l'obligation de financer des économies d'énergie sous peine de pénalité.",
       "derniereVerification": "2026-09",
-      "question": "Le dispositif des certificats d'économies d'énergie (CEE) oblige principalement :",
-      "options": [
-        "Les collectivités territoriales à instaurer une taxe additionnelle sur l'énergie",
-        "Les fournisseurs d'énergie à financer des actions de rénovation énergétique réalisées par des particuliers ou des entreprises, en contrepartie de certificats",
-        "L'État à subventionner directement l'ensemble des travaux de rénovation",
-        "Les propriétaires de bâtiments tertiaires à réduire leur consommation de 60 % d'ici 2050"
-      ],
-      "bonneReponse": 1
+      "question": "Le dispositif des certificats d'économies d'énergie oblige les fournisseurs d'énergie à financer des actions de rénovation énergétique, en contrepartie de certificats.",
+      "vrai": true,
+      "justification": "Les CEE reposent sur une obligation faite aux vendeurs d'énergie (les « obligés »), qui financent des travaux, notamment par des primes, pour obtenir des certificats."
     },
     {
       "id": "a4-89",
@@ -24621,17 +24666,12 @@
       "sujet": "gouv-fin",
       "niveau": 5,
       "famille": "S",
-      "type": "qcm",
+      "type": "vf",
       "explication": "Le rôle d'un energy manager, aussi appelé économe de flux, comprend la gestion des contrats de fourniture d'énergie et de maintenance ainsi que le suivi des consommations énergétiques de chaque bâtiment. Notion de bonne pratique professionnelle, sans texte réglementaire dédié à ce poste. Ce profil, de plus en plus recruté tant dans le public que dans le privé, vise aussi à améliorer la compréhension des postes énergivores et à mettre en œuvre des actions concrètes de réduction des consommations et de réalisation d'économies.",
       "derniereVerification": "2026-09",
-      "question": "Le rôle d'un « energy manager » (ou économe de flux) recruté par une organisation gestionnaire de patrimoine comprend notamment :",
-      "options": [
-        "Délivrer les permis de construire du parc immobilier",
-        "Assurer seul la maîtrise d'œuvre de l'ensemble des opérations de travaux",
-        "Gérer les contrats de fourniture d'énergie et de maintenance, et suivre les consommations énergétiques de chaque bâtiment",
-        "Représenter l'organisation devant les juridictions administratives"
-      ],
-      "bonneReponse": 2
+      "question": "Le rôle d'un « energy manager » (économe de flux) consiste à assurer seul la maîtrise d'œuvre de l'ensemble des opérations de travaux du parc.",
+      "vrai": false,
+      "justification": "L'energy manager gère les contrats de fourniture d'énergie et de maintenance et suit les consommations de chaque bâtiment ; il n'assure pas la maîtrise d'œuvre des travaux."
     },
     {
       "id": "a4-93",
