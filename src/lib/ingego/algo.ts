@@ -278,6 +278,7 @@ export function repartirParRetard(
     for (const [axe, liste] of dispo) {
       const pris = quotas.get(axe) ?? 0;
       if (pris >= liste.length) continue;
+      const t = total.get(axe) ?? liste.length;
       const taux = ((acquises.get(axe) ?? 0) + pris) / Math.max(1, t);
       if (taux < tauxMinimum) {
         tauxMinimum = taux;
