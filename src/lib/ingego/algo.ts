@@ -351,22 +351,16 @@ export function composerSession(etat: Etat, reglages: Reglages, now: number): Qu
   );
 
   const n = reglages.parSession;
-  /* Délai de repos : une question travaillée il y a moins de 12 h n'est reprise
-     que s'il n'existe plus assez d'autres questions non validées du même
-     chapitre. Elle revient donc plus tard, sans jamais sortir du niveau actif. */
+  /* Délai de repos : les questions travaillées il y a moins de 12 h passent
+     après les autres, mais restent candidates. Les exclure globalement dès que
+     huit autres cartes existaient pouvait supprimer entièrement un chapitre en
+     retard avant même l'équilibrage des pourcentages. */
   const repos = now - 12 * 3600000;
   const fraiches = neuves.filter((q) => (etat[q.id]?.dernier ?? 0) > repos);
   const reposees = neuves.filter((q) => (etat[q.id]?.dernier ?? 0) <= repos);
-  const pool =
-    reposees.length >= n
-      ? rondeParFormat(reposees)
-      : [...rondeParFormat(reposees), ...rondeParFormat(fraiches)];
-  const lot = pool.slice(0, n);
+  const pool = [...rondeParFormat(reposees), ...rondeParFormat(fraiches)];
   const actifs = CORPUS.filter(ouvert);
-  const candidats = [...lot, ...pool].filter(
-    (q, index, liste) => liste.findIndex((autre) => autre.id === q.id) === index,
-  );
-  return entrelacer(repartirParRetard(candidats, actifs, etat, n, Math.floor(now / JOUR)));
+  return entrelacer(repartirParRetard(pool, actifs, etat, n, Math.floor(now / JOUR)));
 }
 
 export function resteAFaire(etat: Etat, reglages: Reglages, now: number) {
