@@ -4,7 +4,20 @@ import { PALIERS_PART } from "@/components/ingego/univers";
 
 /* Paliers de questions validées, dernier palier = corpus complet. */
 export const PALIERS_REPONSES = [
-  10, 25, 50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, CORPUS.length,
+  10,
+  25,
+  50,
+  100,
+  200,
+  300,
+  400,
+  500,
+  600,
+  700,
+  800,
+  900,
+  1000,
+  CORPUS.length,
 ];
 
 export type Badge = {

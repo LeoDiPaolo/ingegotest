@@ -86,7 +86,6 @@ function titreMissionDuJour(maintenant = Date.now()): string {
   return TITRES_DECOUVERTE[jour % TITRES_DECOUVERTE.length];
 }
 
-
 function Reviser() {
   const { donnees, pret, synchro, enregistrerCarte, commenter, maj } = useDonnees();
   const [ordre, setOrdre] = useState<Question[] | null>(null);
@@ -111,7 +110,6 @@ function Reviser() {
      missions ne contiennent que des découvertes et des reprises de questions
      ratées. Le titre du jour reste stable pendant la journée. */
   const titreMission = useMemo(() => titreMissionDuJour(), []);
-
 
   const bilan = useMemo(() => {
     const l = jaugesParAxe(donnees.cartes);

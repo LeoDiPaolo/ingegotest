@@ -41,4 +41,4 @@
 - [x] Supprimer 14 doublons sémantiques restants (hors chronologie de la décentralisation, conservée à 5)
 - [x] Ajouter les paliers cumulés 800, 900 et 1000
 - [x] Réserver une célébration renforcée à tous les paliers cumulés et conserver les confettis des badges de chapitre
-- [ ] Enrichir les six questions annotées et retirer leurs commentaires traités
+- [x] Enrichir les six questions annotées et retirer leurs commentaires traités
