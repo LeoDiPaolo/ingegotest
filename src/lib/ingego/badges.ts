@@ -4,7 +4,7 @@ import { PALIERS_PART } from "@/components/ingego/univers";
 
 /* Paliers de questions validées, dernier palier = corpus complet. */
 export const PALIERS_REPONSES = [
-  10, 25, 50, 100, 200, 300, 400, 500, 600, 700, CORPUS.length,
+  10, 25, 50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, CORPUS.length,
 ];
 
 export type Badge = {
@@ -81,10 +81,12 @@ export function useRecompenses(badges: Badge[], actif = true) {
         return;
       }
     }
-    const nouveaux = badges.filter((b) => !vus.current!.has(b.cle));
+    const badgesVus = vus.current;
+    if (!badgesVus) return;
+    const nouveaux = badges.filter((b) => !badgesVus.has(b.cle));
     if (!nouveaux.length) return;
-    for (const b of nouveaux) vus.current.add(b.cle);
-    localStorage.setItem(CLE_VUS, JSON.stringify([...vus.current]));
+    for (const b of nouveaux) badgesVus.add(b.cle);
+    localStorage.setItem(CLE_VUS, JSON.stringify([...badgesVus]));
     setFile((f) => [...f, ...nouveaux]);
   }, [badges, actif]);
 

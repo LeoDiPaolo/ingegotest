@@ -405,7 +405,7 @@ function Reviser() {
                       key={p}
                       libelle={b.libelle}
                       acquis={bonnesReponses >= p}
-                      icone={p === 783 ? Trophy : Medal}
+                      icone={p === PALIERS_REPONSES.at(-1) ? Trophy : Medal}
                     />
                   );
                 })}
