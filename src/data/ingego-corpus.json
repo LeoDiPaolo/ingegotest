@@ -8,7 +8,7 @@
   },
   "genere": "2026-07-30",
   "version": "2026-09",
-  "totalQuestions": 1030,
+  "totalQuestions": 1069,
   "schema": "Chaque question porte : id, axe (A1-A6), sousTheme, sujet (clé de progression par niveaux), niveau (1-3), famille (S stable / M mouvant / E enjeu), type, les champs propres au type, explication, et le cas échéant derniereVerification (AAAA-MM) et aVerifier."
  },
  "axes": [
@@ -142,6 +142,18 @@
     "Déroulé et posture de l'entretien",
     "Connaissances attendues au-delà de la spécialité",
     "Motivation et projet professionnel"
+   ]
+  },
+  {
+   "id": "A9",
+   "nom": "Intelligence artificielle et collectivités territoriales",
+   "court": "IA",
+   "couleur": "#4C5BD4",
+   "sousThemes": [
+    "Cadre juridique : AI Act et RGPD",
+    "Gouvernance et stratégie de déploiement",
+    "Cas d'usage et expérimentation",
+    "Éthique et impact environnemental"
    ]
   }
  ],
@@ -25667,6 +25679,864 @@
    "question": "L'éclairage public est une dépense obligatoire pour toute commune ; le maire ne peut donc pas légalement l'éteindre la nuit.",
    "vrai": false,
    "justification": "L'éclairage public n'est pas une dépense obligatoire : le maire peut l'éteindre la nuit par arrêté de police générale."
+  },
+  {
+   "id": "a9-01",
+   "axe": "A9",
+   "sousTheme": "Cadre juridique : AI Act et RGPD",
+   "stIdx": 0,
+   "sujet": "ai-act-def",
+   "niveau": 2,
+   "famille": "S",
+   "type": "qcm",
+   "question": "Qu'est-ce qui distingue, au sens du règlement européen sur l'IA (AI Act), un « fournisseur » d'un « déployeur » d'un système d'IA ?",
+   "explication": "Le règlement (UE) 2024/1689 distingue le fournisseur, qui développe ou fait développer un système d'IA, du déployeur, qui l'intègre et l'utilise sans le développer. Source : règlement (UE) 2024/1689. Une collectivité qui s'abonne à un outil d'IA générative pour trier des candidatures ou générer des documents est un déployeur, pas un fournisseur, ce qui détermine l'essentiel de ses obligations.",
+   "derniereVerification": "2026-09",
+   "aVerifier": null,
+   "options": [
+    "Le fournisseur est toujours une entreprise privée, le déployeur toujours une administration",
+    "Cette distinction ne concerne que les systèmes à haut risque",
+    "Le fournisseur vend le système, le déployeur le reçoit gratuitement",
+    "Le fournisseur développe ou fait développer le système, le déployeur l'intègre et l'utilise dans son organisation"
+   ],
+   "bonneReponse": 3
+  },
+  {
+   "id": "a9-02",
+   "axe": "A9",
+   "sousTheme": "Cadre juridique : AI Act et RGPD",
+   "stIdx": 0,
+   "sujet": "ai-act-risques",
+   "niveau": 3,
+   "famille": "S",
+   "type": "graphe",
+   "question": "Cliquez sur la barre correspondant au nombre de niveaux de risque distingués par le règlement européen sur l'IA (AI Act).",
+   "explication": "Le règlement (UE) 2024/1689 distingue quatre niveaux : risque inacceptable (pratiques interdites, article 5), haut risque, risque spécifique soumis à des obligations de transparence, et risque minimal ou nul. Source : règlement (UE) 2024/1689. Une collectivité qui déploie un chatbot usager doit par exemple informer l'usager qu'il interagit avec une IA, au titre des obligations de transparence du risque spécifique.",
+   "derniereVerification": "2026-09",
+   "aVerifier": null,
+   "graphe": {
+    "titre": "Nombre de niveaux de risque envisagés",
+    "unite": "niveaux",
+    "barres": [
+     {
+      "l": "2",
+      "v": 2
+     },
+     {
+      "l": "3",
+      "v": 3
+     },
+     {
+      "l": "4",
+      "v": 4
+     },
+     {
+      "l": "5",
+      "v": 5
+     }
+    ]
+   },
+   "bonneBarre": 2
+  },
+  {
+   "id": "a9-03",
+   "axe": "A9",
+   "sousTheme": "Cadre juridique : AI Act et RGPD",
+   "stIdx": 0,
+   "sujet": "ai-act-sanctions",
+   "niveau": 4,
+   "famille": "M",
+   "type": "graphe",
+   "question": "Cliquez sur le palier d'amende maximale prévu par l'AI Act pour le non-respect des pratiques interdites de l'article 5 (notation sociale, manipulation subliminale, etc.).",
+   "explication": "L'article 99 du règlement (UE) 2024/1689 prévoit une amende maximale de 35 millions d'euros ou 7 % du chiffre d'affaires mondial pour le non-respect des pratiques interdites — le palier le plus sévère, applicable depuis le 2 février 2025. Les autres manquements sont sanctionnés à hauteur de 15 M€/3 % (systèmes à haut risque et modèles à usage général) ou 7,5 M€/1 % (informations inexactes fournies aux autorités). En savoir plus — GPAI : modèle d'intelligence artificielle à usage général (General Purpose AI).",
+   "derniereVerification": "2026-09",
+   "aVerifier": null,
+   "graphe": {
+    "titre": "Paliers d'amende maximale de l'AI Act",
+    "unite": "M€",
+    "barres": [
+     {
+      "l": "7,5 M€ (1 %)",
+      "v": 7.5
+     },
+     {
+      "l": "15 M€ (3 %)",
+      "v": 15
+     },
+     {
+      "l": "20 M€ (4 %)",
+      "v": 20
+     },
+     {
+      "l": "35 M€ (7 %)",
+      "v": 35
+     }
+    ]
+   },
+   "bonneBarre": 3
+  },
+  {
+   "id": "a9-04",
+   "axe": "A9",
+   "sousTheme": "Cadre juridique : AI Act et RGPD",
+   "stIdx": 0,
+   "sujet": "ai-act-sanctions",
+   "niveau": 6,
+   "famille": "S",
+   "type": "vf",
+   "question": "La CNIL peut infliger une amende à l'État français en cas de manquement à l'AI Act.",
+   "explication": "Faux. Le règlement (UE) 2024/1689 laisse chaque État membre fixer les règles d'application des amendes administratives aux autorités et organismes publics de son territoire (article 99 §8). En France, la CNIL ne peut pas prononcer d'amende contre l'État, mais les collectivités territoriales, en tant que personnes morales distinctes, restent exposées à ce risque.",
+   "derniereVerification": "2026-09",
+   "aVerifier": null,
+   "vrai": false,
+   "justification": "Faux. Le règlement (UE) 2024/1689 laisse chaque État membre fixer les règles d'application des amendes administratives aux autorités et organismes publics de son territoire (article 99 §8). En France, la CNIL ne peut pas prononcer d'amende contre l'État, mais les collectivités territoriales, en tant que personnes morales distinctes, restent exposées à ce risque."
+  },
+  {
+   "id": "a9-05",
+   "axe": "A9",
+   "sousTheme": "Cadre juridique : AI Act et RGPD",
+   "stIdx": 0,
+   "sujet": "ai-act-calendrier",
+   "niveau": 5,
+   "famille": "M",
+   "type": "qcm",
+   "question": "À quelle échéance les obligations applicables aux systèmes d'IA à haut risque de l'annexe III de l'AI Act doivent-elles s'appliquer, après le report décidé mi-2026 ?",
+   "explication": "Le règlement « Digital Omnibus » (UE) 2026/1744, validé par le Conseil de l'Union européenne le 29 juin 2026, a reporté l'application des obligations sur les systèmes à haut risque de l'annexe III au 2 décembre 2027 (et celles de l'annexe I au 2 août 2028), sans modifier le niveau des sanctions. Cette échéance tombe après l'écrit du concours (juin 2027) : à la date de l'épreuve, seules les interdictions (depuis le 2 février 2025) et les obligations de transparence de l'article 50 (depuis le 2 août 2026) sont pleinement applicables.",
+   "derniereVerification": "2026-09",
+   "aVerifier": "À revérifier avant l'écrit",
+   "options": [
+    "Elles s'appliquent déjà depuis le 2 février 2025",
+    "2 août 2028",
+    "2 août 2026",
+    "2 décembre 2027"
+   ],
+   "bonneReponse": 3
+  },
+  {
+   "id": "a9-06",
+   "axe": "A9",
+   "sousTheme": "Cadre juridique : AI Act et RGPD",
+   "stIdx": 0,
+   "sujet": "senat-rapport-ia",
+   "niveau": 2,
+   "famille": "M",
+   "type": "qcm",
+   "question": "Quel rapport parlementaire français, adopté le 13 mars 2025, dresse un premier état des lieux de l'usage de l'IA dans les collectivités territoriales ?",
+   "explication": "Le rapport d'information n°447 (2024-2025), adopté à l'unanimité le 13 mars 2025 par la délégation aux collectivités territoriales et à la décentralisation du Sénat, dresse un état des lieux des premiers usages de l'IA par les collectivités et formule des recommandations, notamment sur la sensibilisation des agents et l'implication des citoyens. Source : Sénat, rapport d'information n°447 (2024-2025).",
+   "derniereVerification": "2026-09",
+   "aVerifier": null,
+   "options": [
+    "Un avis du Conseil d'État",
+    "Un rapport de la Cour des comptes",
+    "Le rapport d'information de la délégation aux collectivités territoriales du Sénat",
+    "Une délibération de la CNIL"
+   ],
+   "bonneReponse": 2
+  },
+  {
+   "id": "a9-07",
+   "axe": "A9",
+   "sousTheme": "Cadre juridique : AI Act et RGPD",
+   "stIdx": 0,
+   "sujet": "clausier-ia",
+   "niveau": 7,
+   "famille": "S",
+   "type": "qcm",
+   "question": "Dans un marché public d'acquisition d'un modèle d'IA à usage général, quelle information l'article 52 de l'AI Act impose-t-il au fournisseur de mettre à disposition ?",
+   "explication": "L'article 52 de l'AI Act impose au fournisseur d'un modèle d'IA à usage général de mettre à disposition un résumé suffisamment détaillé des données d'entraînement utilisées. Cette exigence peut être intégrée comme clause contractuelle dans un marché d'acquisition d'IA, aux côtés des règles classiques de la commande publique (publicité, mise en concurrence, seuils) qui continuent de s'appliquer intégralement.",
+   "derniereVerification": "2026-09",
+   "aVerifier": null,
+   "options": [
+    "La liste nominative des développeurs du modèle",
+    "Un résumé suffisamment détaillé des données utilisées pour l'entraînement du modèle",
+    "Le code source complet du modèle",
+    "Aucune, l'AI Act ne modifie pas la commande publique"
+   ],
+   "bonneReponse": 1
+  },
+  {
+   "id": "a9-08",
+   "axe": "A9",
+   "sousTheme": "Cadre juridique : AI Act et RGPD",
+   "stIdx": 0,
+   "sujet": "videoprotection-algo",
+   "niveau": 8,
+   "famille": "M",
+   "type": "qcm",
+   "question": "Sur quel fondement légal la vidéoprotection algorithmique a-t-elle pu être expérimentée en France à l'occasion de grands événements ?",
+   "explication": "L'article 10 de la loi n°2023-380 du 19 mai 2023 relative aux Jeux Olympiques et Paralympiques de 2024 autorise, à titre expérimental, le traitement algorithmique d'images issues de systèmes de vidéoprotection, dans des conditions strictement encadrées. Cette expérimentation, initialement bornée dans le temps, a fait l'objet de débats sur sa prolongation au Sénat — un point à revérifier avant l'écrit.",
+   "derniereVerification": "2026-09",
+   "aVerifier": "À revérifier avant l'écrit",
+   "options": [
+    "Le RGPD, directement",
+    "Un simple arrêté municipal",
+    "L'AI Act, dès son entrée en vigueur",
+    "L'article 10 de la loi n°2023-380 du 19 mai 2023 relative aux Jeux Olympiques et Paralympiques"
+   ],
+   "bonneReponse": 3
+  },
+  {
+   "id": "a9-09",
+   "axe": "A9",
+   "sousTheme": "Gouvernance et stratégie de déploiement",
+   "stIdx": 1,
+   "sujet": "strategie-ia-methode",
+   "niveau": 3,
+   "famille": "E",
+   "type": "qcm",
+   "question": "Selon la méthodologie couramment recommandée pour construire une stratégie IA en collectivité, quelle est la première étape ?",
+   "explication": "La méthodologie recommandée pour construire une stratégie IA en collectivité commence par clarifier ses intentions et fonder sa stratégie sur des valeurs assumées, avant le diagnostic puis l'expérimentation ciblée. Une collectivité qui se précipite sur l'achat d'outils sans cadrage préalable prend le risque d'une dispersion difficile à corriger ensuite.",
+   "derniereVerification": "2026-09",
+   "aVerifier": null,
+   "options": [
+    "Acheter les outils les plus performants du marché",
+    "Former immédiatement tous les agents",
+    "Déployer l'IA dans toutes les directions dès que possible",
+    "Clarifier ses intentions et fixer le cap avant tout déploiement"
+   ],
+   "bonneReponse": 3
+  },
+  {
+   "id": "a9-10",
+   "axe": "A9",
+   "sousTheme": "Gouvernance et stratégie de déploiement",
+   "stIdx": 1,
+   "sujet": "strategie-ia-methode",
+   "niveau": 4,
+   "famille": "E",
+   "type": "vf",
+   "question": "Une expérimentation d'IA réussie dans une collectivité doit tester le plus grand nombre possible de cas d'usage simultanément.",
+   "explication": "Faux. Les retours d'expérience convergent sur l'inverse : une collectivité qui a recensé plusieurs centaines de besoins n'en retient en général qu'une poignée de cas prioritaires pour l'expérimentation, sur arbitrage politique, avant d'envisager une généralisation progressive. Disperser l'expérimentation sur trop de cas à la fois dilue les moyens et complique le suivi.",
+   "derniereVerification": "2026-09",
+   "aVerifier": null,
+   "vrai": false,
+   "justification": "Faux. Les retours d'expérience convergent sur l'inverse : une collectivité qui a recensé plusieurs centaines de besoins n'en retient en général qu'une poignée de cas prioritaires pour l'expérimentation, sur arbitrage politique, avant d'envisager une généralisation progressive. Disperser l'expérimentation sur trop de cas à la fois dilue les moyens et complique le suivi."
+  },
+  {
+   "id": "a9-11",
+   "axe": "A9",
+   "sousTheme": "Gouvernance et stratégie de déploiement",
+   "stIdx": 1,
+   "sujet": "charte-usage-ia",
+   "niveau": 5,
+   "famille": "S",
+   "type": "qcm",
+   "question": "Une collectivité qui déploie l'IA générative auprès de ses agents formalise, en parallèle, un document interne définissant les usages autorisés et les limites à respecter. Comment appelle-t-on généralement ce document ?",
+   "explication": "Ce document, généralement appelé charte d'usage ou charte éthique, présente les usages praticables, les limites d'exploitation des données et les responsabilités des agents utilisateurs. C'est l'un des leviers de gouvernance systématiquement recommandés dans les retours d'expérience de collectivités ayant engagé un déploiement de l'IA générative.",
+   "derniereVerification": "2026-09",
+   "aVerifier": null,
+   "options": [
+    "Un cahier des clauses techniques particulières",
+    "Un règlement intérieur au sens du droit du travail",
+    "Une charte d'usage",
+    "Un plan de continuité d'activité"
+   ],
+   "bonneReponse": 2
+  },
+  {
+   "id": "a9-12",
+   "axe": "A9",
+   "sousTheme": "Cas d'usage et expérimentation",
+   "stIdx": 2,
+   "sujet": "controle-humain",
+   "niveau": 3,
+   "famille": "E",
+   "type": "qcm",
+   "question": "Dans les retours d'expérience de collectivités ayant expérimenté l'IA générative sur des tâches de rédaction (comptes rendus, rapports), quelle règle de bonne pratique revient systématiquement ?",
+   "explication": "Que ce soit pour la génération de comptes rendus ou de rapports, les retours d'expérience insistent sur un principe constant : l'IA propose, l'agent valide. Ce contrôle humain systématique est la condition la plus citée pour limiter les erreurs, biais ou approximations que peut produire un modèle de langage.",
+   "derniereVerification": "2026-09",
+   "aVerifier": null,
+   "options": [
+    "Les productions de l'IA n'ont pas besoin d'être signalées comme telles",
+    "L'IA remplace la relecture humaine pour gagner du temps",
+    "Seuls les cadres sont autorisés à utiliser l'IA",
+    "Un contrôle humain systématique : l'IA propose, l'agent valide"
+   ],
+   "bonneReponse": 3
+  },
+  {
+   "id": "a9-13",
+   "axe": "A9",
+   "sousTheme": "Éthique et impact environnemental",
+   "stIdx": 3,
+   "sujet": "ethique-defis",
+   "niveau": 4,
+   "famille": "E",
+   "type": "qcm",
+   "question": "Quelles sont, selon les analyses courantes sur l'IA responsable, les trois grandes familles de défis éthiques à traiter ?",
+   "explication": "Les biais discriminatoires (reflet et amplification des inégalités présentes dans les données d'entraînement), les divergences d'approche éthique selon les régions du monde, et l'impact environnemental (consommation énergétique, empreinte carbone, usage de l'eau) constituent les trois défis les plus régulièrement identifiés dans les analyses sur l'IA responsable. Une charte locale d'usage a notamment vocation à poser un cadre face au premier de ces défis.",
+   "derniereVerification": "2026-09",
+   "aVerifier": null,
+   "options": [
+    "Cybersécurité, RGPD, propriété intellectuelle",
+    "Coût, rapidité, fiabilité technique",
+    "Biais discriminatoires, universalité de l'éthique, impact environnemental",
+    "Formation, recrutement, évaluation des agents"
+   ],
+   "bonneReponse": 2
+  },
+  {
+   "id": "a9-14",
+   "axe": "A9",
+   "sousTheme": "Éthique et impact environnemental",
+   "stIdx": 3,
+   "sujet": "biais-algo",
+   "niveau": 2,
+   "famille": "S",
+   "type": "qcm",
+   "question": "D'où proviennent principalement les biais algorithmiques identifiés dans les systèmes d'IA ?",
+   "explication": "Les biais algorithmiques proviennent principalement de données d'entraînement non représentatives et de préjugés humains intégrés, consciemment ou non, dans la conception des algorithmes — ce qui peut amplifier des inégalités existantes (biais de genre dans le recrutement, moindre performance de la reconnaissance faciale sur certaines minorités, etc.). Un audit régulier et la diversité des équipes de conception figurent parmi les solutions les plus citées.",
+   "derniereVerification": "2026-09",
+   "aVerifier": null,
+   "options": [
+    "D'un manque de puissance de calcul",
+    "Des données d'entraînement non représentatives et de préjugés humains intégrés dans la conception",
+    "Uniquement d'erreurs de programmation",
+    "D'une consommation énergétique excessive"
+   ],
+   "bonneReponse": 1
+  },
+  {
+   "id": "a9-15",
+   "axe": "A9",
+   "sousTheme": "Éthique et impact environnemental",
+   "stIdx": 3,
+   "sujet": "empreinte-numerique",
+   "niveau": 3,
+   "famille": "M",
+   "type": "graphe",
+   "question": "Cliquez sur la barre correspondant à la part de l'empreinte carbone de la France représentée par le numérique en 2022 (étude ADEME-Arcep, mise à jour de janvier 2025).",
+   "explication": "Selon la mise à jour de janvier 2025 de l'étude ADEME-Arcep, le numérique représentait 4,4 % de l'empreinte carbone de la France en 2022 (29,5 Mt CO2 eq), contre 2,5 % dans la précédente version. Cette hausse méthodologique s'explique principalement par la prise en compte, pour la première fois, des centres de données situés à l'étranger mais utilisés pour des usages numériques français. Source : étude ADEME-Arcep actualisée, janvier 2025.",
+   "derniereVerification": "2026-09",
+   "aVerifier": null,
+   "graphe": {
+    "titre": "Part du numérique dans l'empreinte carbone de la France",
+    "unite": "%",
+    "barres": [
+     {
+      "l": "2,5 %",
+      "v": 2.5
+     },
+     {
+      "l": "4,4 %",
+      "v": 4.4
+     },
+     {
+      "l": "8 %",
+      "v": 8
+     },
+     {
+      "l": "11 %",
+      "v": 11
+     }
+    ]
+   },
+   "bonneBarre": 1
+  },
+  {
+   "id": "a9-16",
+   "axe": "A9",
+   "sousTheme": "Éthique et impact environnemental",
+   "stIdx": 3,
+   "sujet": "ia-frugale-def",
+   "niveau": 4,
+   "famille": "S",
+   "type": "qcm",
+   "question": "Qu'est-ce qui distingue la démarche « IA frugale » d'une simple recherche d'efficacité énergétique d'un système d'IA ?",
+   "explication": "L'IA frugale va au-delà des questions d'efficacité technique : elle place la contrainte sur les ressources comme prioritaire par rapport à l'objectif de performance, et interroge d'abord la pertinence même du recours à un système d'IA avant d'en optimiser l'usage. Une collectivité qui applique cette logique peut choisir de ne pas déployer d'IA pour une tâche donnée, ou de préférer un modèle spécialisé à un système à usage général surdimensionné.",
+   "derniereVerification": "2026-09",
+   "aVerifier": null,
+   "options": [
+    "C'est un label commercial sans définition officielle",
+    "Elle questionne d'abord le besoin même de recourir à l'IA, avant de chercher à optimiser sa performance",
+    "Rien, ce sont deux termes équivalents",
+    "Elle concerne uniquement le choix du fournisseur cloud"
+   ],
+   "bonneReponse": 1
+  },
+  {
+   "id": "a9-17",
+   "axe": "A9",
+   "sousTheme": "Cadre juridique : AI Act et RGPD",
+   "stIdx": 0,
+   "sujet": "open-data-loi-lemaire",
+   "niveau": 3,
+   "famille": "S",
+   "type": "qcm",
+   "question": "Depuis quand les collectivités de plus de 3 500 habitants sont-elles tenues de publier leurs données au titre de l'open data par défaut ?",
+   "explication": "La loi n°2016-1321 du 7 octobre 2016 pour une République numérique (dite « loi Lemaire ») a instauré l'obligation d'open data par défaut, mais son entrée en application effective pour les collectivités de plus de 3 500 habitants date d'octobre 2018. Des exemptions existent notamment pour les données couvertes par le secret des affaires ou les données personnelles non anonymisables à effort raisonnable.",
+   "derniereVerification": "2026-09",
+   "aVerifier": null,
+   "options": [
+    "Depuis l'adoption de l'AI Act en 2024",
+    "Depuis l'entrée en vigueur du RGPD en 2018",
+    "Depuis octobre 2018, entrée en application de la loi pour une République numérique",
+    "Depuis 2016, date de la loi"
+   ],
+   "bonneReponse": 2
+  },
+  {
+   "id": "a9-18",
+   "axe": "A9",
+   "sousTheme": "Cadre juridique : AI Act et RGPD",
+   "stIdx": 0,
+   "sujet": "data-governance-act",
+   "niveau": 6,
+   "famille": "S",
+   "type": "qcm",
+   "question": "Le règlement européen sur la gouvernance des données (Data Governance Act) encourage notamment les acteurs privés à faire preuve de quoi, pour permettre aux acteurs publics de disposer de données utiles à leurs missions d'intérêt général ?",
+   "explication": "Entré en vigueur en septembre 2023, le règlement (UE) 2022/868 (Data Governance Act) prévoit un traitement particulier pour les données d'intérêt général et incite les acteurs privés à l'« altruisme en matière de données » pour permettre aux acteurs publics d'accomplir leurs missions. Il définit aussi la notion d'espaces de données européens (dataspaces), qui réunissent acteurs publics et privés autour du partage de données.",
+   "derniereVerification": "2026-09",
+   "aVerifier": null,
+   "options": [
+    "De cession de leur propriété intellectuelle",
+    "D'« altruisme en matière de données »",
+    "De suppression de leurs bases de données",
+    "De gratuité totale de tous leurs services"
+   ],
+   "bonneReponse": 1
+  },
+  {
+   "id": "a9-19",
+   "axe": "A9",
+   "sousTheme": "Cadre juridique : AI Act et RGPD",
+   "stIdx": 0,
+   "sujet": "data-act",
+   "niveau": 7,
+   "famille": "M",
+   "type": "qcm",
+   "question": "Dans quelle situation le règlement européen sur les données (Data Act) permet-il aux pouvoirs publics d'obtenir, y compris de façon contrainte, des données détenues par des entreprises ?",
+   "explication": "Le règlement (UE) 2023/2854 (Data Act) prévoit la possibilité pour les pouvoirs publics d'obtenir des données détenues par des entreprises lorsque cela apparaît indispensable à la gestion d'une urgence publique, notamment climatique ou de sécurité publique. Ce mécanisme reste dérogatoire et strictement encadré. À vérifier : date précise d'entrée en application de ce mécanisme spécifique.",
+   "derniereVerification": "2026-09",
+   "aVerifier": "À revérifier avant l'écrit",
+   "options": [
+    "Uniquement avec l'accord préalable de la CNIL",
+    "Jamais, le Data Act ne prévoit aucun mécanisme de ce type",
+    "Chaque fois qu'une collectivité en fait la demande motivée",
+    "En cas d'urgence publique, notamment climatique ou de sécurité publique"
+   ],
+   "bonneReponse": 3
+  },
+  {
+   "id": "a9-20",
+   "axe": "A9",
+   "sousTheme": "Cadre juridique : AI Act et RGPD",
+   "stIdx": 0,
+   "sujet": "clausier-ia",
+   "niveau": 5,
+   "famille": "S",
+   "type": "qcm",
+   "question": "Dans un marché public où un prestataire propose des décisions assistées par IA susceptibles d'affecter des usagers du service public, quelle garantie procédurale les acheteurs publics sont-ils encouragés à exiger contractuellement ?",
+   "explication": "Cette exigence contractuelle vise à garantir qu'un usager insatisfait d'une décision assistée par IA puisse demander le réexamen de sa situation par une personne physique, sans qu'un système d'IA soit à nouveau mobilisé — une erreur pouvant provenir d'un mauvais entraînement du système ou d'une utilisation imparfaite (prompt imprécis, éléments manquants). Cette logique fait écho au droit au recours effectif identifié par le Conseil d'État comme condition d'une IA publique de confiance.",
+   "derniereVerification": "2026-09",
+   "aVerifier": null,
+   "options": [
+    "La suppression de toute possibilité de recours",
+    "Un droit de veto de l'éditeur du logiciel sur les décisions de la collectivité",
+    "Un délai de recours réduit à 48 heures",
+    "Une voie de recours permettant le réexamen de la décision par une personne physique, sans recours à l'IA"
+   ],
+   "bonneReponse": 3
+  },
+  {
+   "id": "a9-21",
+   "axe": "A9",
+   "sousTheme": "Cadre juridique : AI Act et RGPD",
+   "stIdx": 0,
+   "sujet": "clausier-ia",
+   "niveau": 4,
+   "famille": "S",
+   "type": "qcm",
+   "question": "Une clause de non-discrimination dans un marché public d'IA vise notamment à prévenir les biais liés à quels critères ?",
+   "explication": "Une clause de non-discrimination type engage le contractant à fournir un système d'IA conçu pour ne pas discriminer l'utilisateur selon son profil socio-économique réel ou présumé, en particulier le genre, l'origine ethnique, les opinions politiques, l'appartenance syndicale, l'état de santé, l'orientation sexuelle ou la religion — une liste qui recoupe largement les catégories protégées par le droit de la non-discrimination.",
+   "derniereVerification": "2026-09",
+   "aVerifier": null,
+   "options": [
+    "Aucun critère spécifique n'est prévu, la clause reste générale",
+    "Le genre, l'origine ethnique, les opinions politiques, l'état de santé, l'orientation sexuelle ou la religion",
+    "Le seul critère de l'âge",
+    "Uniquement le lieu de résidence de l'usager"
+   ],
+   "bonneReponse": 1
+  },
+  {
+   "id": "a9-22",
+   "axe": "A9",
+   "sousTheme": "Gouvernance et stratégie de déploiement",
+   "stIdx": 1,
+   "sujet": "ia-frugale-gouvernance",
+   "niveau": 2,
+   "famille": "S",
+   "type": "qcm",
+   "question": "Dans les bonnes pratiques de gouvernance de l'IA frugale, qui est généralement désigné pour coordonner les engagements pris par une organisation (matériel, logiciel, données, évaluation) ?",
+   "explication": "La désignation d'un référent IA frugale, chargé de coordonner les engagements pris sur les volets matériel, logiciel, données et évaluation, est une pratique de gouvernance couramment recommandée. Ce rôle peut être confié à un chargé du numérique responsable ou à un chef de projet IA déjà en poste, sans nécessiter la création d'un poste dédié.",
+   "derniereVerification": "2026-09",
+   "aVerifier": null,
+   "options": [
+    "Aucun rôle n'est nécessaire, chaque service applique les règles seul",
+    "Un prestataire externe",
+    "Un référent IA frugale",
+    "Le maire ou le président de l'exécutif local uniquement"
+   ],
+   "bonneReponse": 2
+  },
+  {
+   "id": "a9-23",
+   "axe": "A9",
+   "sousTheme": "Cadre juridique : AI Act et RGPD",
+   "stIdx": 0,
+   "sujet": "loi-reen",
+   "niveau": 5,
+   "famille": "S",
+   "type": "qcm",
+   "question": "Depuis quand, et pour quelles communes, la loi REEN impose-t-elle l'élaboration d'une stratégie numérique responsable incluant des objectifs de réduction de l'empreinte environnementale du numérique ?",
+   "explication": "L'article 35 de la loi n°2021-1485 du 15 novembre 2021 (dite loi REEN) impose aux communes de plus de 50 000 habitants, ainsi qu'aux EPCI à fiscalité propre de même seuil, de définir au plus tard le 1er janvier 2025 une stratégie numérique responsable. Un programme de travail préalable devait déjà être élaboré au 1er janvier 2023. Cette stratégie fait l'objet d'un bilan annuel intégré au rapport développement durable de la collectivité.",
+   "derniereVerification": "2026-09",
+   "aVerifier": null,
+   "options": [
+    "Depuis 2021, pour toutes les communes sans exception",
+    "Depuis 2026, pour les communes de plus de 3 500 habitants",
+    "Cette obligation ne concerne que l'État, pas les collectivités",
+    "Depuis le 1er janvier 2025, pour les communes de plus de 50 000 habitants"
+   ],
+   "bonneReponse": 3
+  },
+  {
+   "id": "a9-24",
+   "axe": "A9",
+   "sousTheme": "Cas d'usage et expérimentation",
+   "stIdx": 2,
+   "sujet": "grh-cas-usage",
+   "niveau": 3,
+   "famille": "S",
+   "type": "qcm",
+   "question": "Sur 26 cas d'usage potentiels de l'IA en gestion des ressources humaines soumis à une enquête interministérielle (2023-2024), combien ont été jugés « à proscrire » ?",
+   "explication": "Sur les 26 cas d'usage soumis à cette enquête menée auprès du réseau interministériel de prospective RH, 4 ont été jugés à proscrire (détection précoce des problèmes de santé mentale, analyse des relations entre collègues, entretiens vidéo automatisés avec les candidats, systèmes de reconnaissance et de récompense), 5 jugés particulièrement souhaitables (dont la rédaction de fiches de poste), et 17 estimés envisageables sous réserves. Ce classement illustre une approche différenciée plutôt qu'une adhésion ou un refus global de l'IA en GRH.",
+   "derniereVerification": "2026-09",
+   "aVerifier": null,
+   "options": [
+    "0",
+    "4",
+    "26",
+    "12"
+   ],
+   "bonneReponse": 1
+  },
+  {
+   "id": "a9-25",
+   "axe": "A9",
+   "sousTheme": "Cas d'usage et expérimentation",
+   "stIdx": 2,
+   "sujet": "grh-cas-usage",
+   "niveau": 4,
+   "famille": "E",
+   "type": "vf",
+   "question": "L'utilisation de l'IA en gestion des ressources humaines dans la fonction publique est aujourd'hui envisagée pour remplacer entièrement certaines démarches RH, comme la gestion prévisionnelle des emplois, des effectifs et des compétences (GPEEC).",
+   "explication": "Faux. L'IA en GRH est aujourd'hui envisagée en soutien plutôt qu'en remplacement du travail humain, sur des tâches spécifiques et non exhaustives d'un métier. Il est jugé prématuré de confier à des outils d'IA la réalisation entière d'une démarche de GPEEC.",
+   "derniereVerification": "2026-09",
+   "aVerifier": null,
+   "vrai": false,
+   "justification": "Faux. L'IA en GRH est aujourd'hui envisagée en soutien plutôt qu'en remplacement du travail humain, sur des tâches spécifiques et non exhaustives d'un métier. Il est jugé prématuré de confier à des outils d'IA la réalisation entière d'une démarche de GPEEC."
+  },
+  {
+   "id": "a9-26",
+   "axe": "A9",
+   "sousTheme": "Éthique et impact environnemental",
+   "stIdx": 3,
+   "sujet": "grh-risques",
+   "niveau": 5,
+   "famille": "E",
+   "type": "qcm",
+   "question": "Parmi les principaux risques identifiés dans l'usage de l'IA en GRH publique, lequel désigne le risque qu'un manager s'appuie sur les recommandations de l'IA sans exercer son propre jugement ?",
+   "explication": "La déresponsabilisation managériale — le risque qu'un manager s'en remette aux recommandations d'un outil d'IA sans exercer son discernement propre — figure parmi les principaux risques identifiés, aux côtés de la sensibilité des données au sens du RGPD, des tensions sociales, de la persistance de biais algorithmiques et de la perte d'attractivité des postes liée à une déshumanisation des services. Le principe directeur retenu reste la responsabilité humaine de l'utilisation de l'IA.",
+   "derniereVerification": "2026-09",
+   "aVerifier": null,
+   "options": [
+    "L'absence de formation initiale des agents",
+    "La sobriété énergétique insuffisante",
+    "La déresponsabilisation managériale",
+    "Le manque de crédits informatiques"
+   ],
+   "bonneReponse": 2
+  },
+  {
+   "id": "a9-27",
+   "axe": "A9",
+   "sousTheme": "Cadre juridique : AI Act et RGPD",
+   "stIdx": 0,
+   "sujet": "ocde-definition",
+   "niveau": 4,
+   "famille": "S",
+   "type": "qcm",
+   "question": "Quelle organisation internationale a proposé, dès 2019, l'une des premières définitions normatives d'un « système d'intelligence artificielle », définition depuis reprise et affinée par le règlement européen sur l'IA ?",
+   "explication": "L'OCDE a proposé en 2019, dans sa Recommandation sur l'intelligence artificielle, l'une des premières définitions normatives d'un système d'IA : un système automatisé qui, pour des objectifs explicites ou implicites, déduit à partir de données d'entrée la manière de générer des résultats (prédictions, contenus, recommandations, décisions) pouvant influencer des environnements physiques ou virtuels. Cette définition, mise à jour et adoptée par le Conseil de l'OCDE les 8 et 9 novembre 2023, a directement inspiré la définition retenue par le règlement européen sur l'IA.",
+   "derniereVerification": "2026-09",
+   "aVerifier": null,
+   "options": [
+    "L'ONU",
+    "L'OCDE",
+    "Le FMI",
+    "L'OMC"
+   ],
+   "bonneReponse": 1
+  },
+  {
+   "id": "a9-28",
+   "axe": "A9",
+   "sousTheme": "Cas d'usage et expérimentation",
+   "stIdx": 2,
+   "sujet": "grh-cas-usage",
+   "niveau": 5,
+   "famille": "S",
+   "type": "qcm",
+   "question": "Une stratégie d'usage de l'IA en gestion des ressources humaines propose de regrouper les cas d'usage jugés pertinents en trois outils potentiels, selon le type d'utilisateur ciblé. Lequel de ces regroupements est correct ?",
+   "explication": "Cette classification distingue trois outils selon l'utilisateur ciblé : le « coach virtuel » pour les agents (recommandations de formation, apprentissage personnalisé), l'« assistant managérial numérique » pour les managers (rédaction de fiches de poste, évaluation des compétences), et l'« outil numérique d'appui à la GRH » pour les gestionnaires RH (analyse des enquêtes internes, identification des compétences émergentes). Cette approche différenciée par utilisateur, plutôt qu'un outil unique, structure la proposition de stratégie d'usage de l'IA en GRH dans la fonction publique.",
+   "derniereVerification": "2026-09",
+   "aVerifier": null,
+   "options": [
+    "IA de recrutement, IA de paie, IA de formation, sans distinction d'utilisateur",
+    "Chatbot citoyen, chatbot agent, chatbot élu",
+    "Un outil unique pour l'ensemble des agents, managers et gestionnaires RH",
+    "Coach virtuel (agents), assistant managérial numérique (managers), outil numérique d'appui à la GRH (gestionnaires RH)"
+   ],
+   "bonneReponse": 3
+  },
+  {
+   "id": "a9-29",
+   "axe": "A9",
+   "sousTheme": "Gouvernance et stratégie de déploiement",
+   "stIdx": 1,
+   "sujet": "grh-gouvernance",
+   "niveau": 4,
+   "famille": "S",
+   "type": "qcm",
+   "question": "Une stratégie d'usage de l'IA en gestion des ressources humaines dans la fonction publique regroupe ses principes directeurs en trois thématiques. Laquelle de ces listes correspond à ce regroupement ?",
+   "explication": "Les trois thématiques retenues sont : la protection de l'agent et de l'administration (utilisation légale et transparente des données, sécurité des systèmes) ; le contrôle par l'humain (concertation avec les représentants du personnel, déclaration d'utilisation de l'IA par les agents, liberté d'usage) ; et la déontologie (transparence, justice, équité, diversité, inclusion, non-discrimination). Ces principes servent un principe directeur unique : un usage de l'IA en GRH centré sur l'humain.",
+   "derniereVerification": "2026-09",
+   "aVerifier": null,
+   "options": [
+    "Conformité RGPD uniquement, sans autre principe",
+    "Recrutement ; formation ; évaluation",
+    "Protection de l'agent et de l'administration ; contrôle par l'humain ; déontologie",
+    "Rentabilité ; rapidité ; simplicité d'usage"
+   ],
+   "bonneReponse": 2
+  },
+  {
+   "id": "a9-30",
+   "axe": "A9",
+   "sousTheme": "Gouvernance et stratégie de déploiement",
+   "stIdx": 1,
+   "sujet": "france-2030",
+   "niveau": 3,
+   "famille": "M",
+   "type": "graphe",
+   "question": "Cliquez sur la barre correspondant à l'ordre de grandeur des financements de France 2030 dédiés à la stratégie nationale pour l'intelligence artificielle.",
+   "explication": "Le plan France 2030, doté au total de 54 milliards d'euros, consacre environ 2,5 milliards d'euros à la stratégie nationale pour l'intelligence artificielle, contre 1,5 milliard d'euros lors de la première phase de cette stratégie lancée en 2018. Ce chiffre est amené à évoluer : des enveloppes complémentaires ont depuis été annoncées, ce qui en fait une donnée à revérifier avant l'écrit plutôt qu'un montant figé.",
+   "derniereVerification": "2026-09",
+   "aVerifier": "À revérifier avant l'écrit",
+   "graphe": {
+    "titre": "Financements France 2030 fléchés vers la stratégie nationale IA",
+    "unite": "Md€",
+    "barres": [
+     {
+      "l": "0,25 Md€",
+      "v": 0.25
+     },
+     {
+      "l": "2,5 Md€",
+      "v": 2.5
+     },
+     {
+      "l": "25 Md€",
+      "v": 25
+     },
+     {
+      "l": "54 Md€",
+      "v": 54
+     }
+    ]
+   },
+   "bonneBarre": 1
+  },
+  {
+   "id": "a9-31",
+   "axe": "A9",
+   "sousTheme": "Éthique et impact environnemental",
+   "stIdx": 3,
+   "sujet": "vigilance-ia",
+   "niveau": 5,
+   "famille": "S",
+   "type": "qcm",
+   "question": "Une étude conduite en 2023 auprès de professionnels (Dell'Acqua et al., Harvard Business School) sur l'usage de l'IA générative au travail observe un gain de performance mais aussi un effet de vigilance. Lequel ?",
+   "explication": "Cette étude (Dell'Acqua, F. et al., 2023, Harvard Business School Working Paper n°24-013) observe que si l'usage de l'IA générative accélère le travail et améliore sa qualité perçue, la vigilance et l'esprit critique des utilisateurs tendent à diminuer à mesure que leur confiance dans l'outil augmente — un phénomène comparable à la baisse d'attention d'un conducteur utilisant un régulateur de vitesse adaptatif. Ce constat nourrit la nécessité d'un contrôle humain maintenu même sur des tâches où l'IA performe bien.",
+   "derniereVerification": "2026-09",
+   "aVerifier": null,
+   "options": [
+    "La vigilance augmente proportionnellement à la performance",
+    "La vigilance ne dépend que du niveau de diplôme de l'utilisateur",
+    "La vigilance et l'esprit critique tendent à diminuer quand la confiance dans l'outil augmente",
+    "Aucun effet sur la vigilance n'a été mesuré"
+   ],
+   "bonneReponse": 2
+  },
+  {
+   "id": "a9-32",
+   "axe": "A9",
+   "sousTheme": "Éthique et impact environnemental",
+   "stIdx": 3,
+   "sujet": "empreinte-numerique",
+   "niveau": 4,
+   "famille": "S",
+   "type": "vf",
+   "question": "Une requête à un système d'IA générative consomme, en moyenne, environ un demi-litre d'eau.",
+   "explication": "Faux, c'est une confusion courante. Les estimations généralement citées (EpochAI notamment) situent la consommation autour de 0,5 litre d'eau pour environ 50 requêtes, soit l'équivalent d'une cuillère à soupe par requête — pas un demi-litre par requête. L'enjeu environnemental réel se situe moins dans l'usage individuel d'un chatbot que dans la demande énergétique globale des centres de données, que l'Agence internationale de l'énergie (AIE) projette en hausse de 1,5 à 3 % d'ici 2030.",
+   "derniereVerification": "2026-09",
+   "aVerifier": null,
+   "vrai": false,
+   "justification": "Faux, c'est une confusion courante. Les estimations généralement citées (EpochAI notamment) situent la consommation autour de 0,5 litre d'eau pour environ 50 requêtes, soit l'équivalent d'une cuillère à soupe par requête — pas un demi-litre par requête. L'enjeu environnemental réel se situe moins dans l'usage individuel d'un chatbot que dans la demande énergétique globale des centres de données, que l'Agence internationale de l'énergie (AIE) projette en hausse de 1,5 à 3 % d'ici 2030."
+  },
+  {
+   "id": "a9-33",
+   "axe": "A9",
+   "sousTheme": "Gouvernance et stratégie de déploiement",
+   "stIdx": 1,
+   "sujet": "charte-usage-ia",
+   "niveau": 4,
+   "famille": "E",
+   "type": "qcm",
+   "question": "Dans les bonnes pratiques de charte d'usage de l'IA générative pour la production de contenus (textes, images), quelle mention est généralement recommandée sur un contenu significativement produit par IA ?",
+   "explication": "Une pratique de charte courante recommande qu'un contenu dont la production a été significativement assistée par l'IA porte une mention explicite (« généré avec l'aide d'une intelligence artificielle »), et qu'aucun contenu ne soit publié sans supervision humaine préalable ni auteur clairement identifié. Ce principe de traçabilité complète les exigences de contrôle humain déjà présentes dans d'autres chartes d'usage : il porte spécifiquement sur l'information du public destinataire du contenu, pas seulement sur la validation interne.",
+   "derniereVerification": "2026-09",
+   "aVerifier": null,
+   "options": [
+    "Aucune mention n'est nécessaire si le contenu est de bonne qualité",
+    "Une mention explicite du type « généré avec l'aide d'une intelligence artificielle »",
+    "La mention n'est requise que pour les contenus vidéo",
+    "La mention est laissée à la discrétion de chaque agent, sans recommandation générale"
+   ],
+   "bonneReponse": 1
+  },
+  {
+   "id": "a9-34",
+   "axe": "A9",
+   "sousTheme": "Cadre juridique : AI Act et RGPD",
+   "stIdx": 0,
+   "sujet": "rgpd-ia-clauses",
+   "niveau": 6,
+   "famille": "S",
+   "type": "qcm",
+   "question": "Lorsqu'une collectivité utilise un système d'IA fourni ou opéré par un prestataire, qui est en principe considéré comme responsable de traitement au sens du RGPD ?",
+   "explication": "Lorsqu'un système d'IA est fourni à la collectivité ou utilisé par un prestataire pour son compte, la collectivité constitue le responsable de traitement au sens du RGPD et reste donc responsable de la mise en conformité du système. Le prestataire peut, en parallèle, recevoir la qualification de sous-traitant s'il traite des données personnelles, ce qui lui impose au titre de l'article 28 du RGPD des obligations de transparence et d'alerte envers la collectivité.",
+   "derniereVerification": "2026-09",
+   "aVerifier": null,
+   "options": [
+    "La CNIL, en tant qu'autorité de contrôle",
+    "Le prestataire fournisseur du système, systématiquement",
+    "Aucune entité n'est responsable tant que le système est en phase d'expérimentation",
+    "La collectivité elle-même"
+   ],
+   "bonneReponse": 3
+  },
+  {
+   "id": "a9-35",
+   "axe": "A9",
+   "sousTheme": "Cadre juridique : AI Act et RGPD",
+   "stIdx": 0,
+   "sujet": "rgpd-ia-clauses",
+   "niveau": 5,
+   "famille": "S",
+   "type": "qcm",
+   "question": "Quel principe du RGPD encadre spécifiquement la constitution de bases de données destinées à l'entraînement d'un système d'IA, en limitant les données collectées à ce qui est nécessaire au fonctionnement du système ?",
+   "explication": "Le principe de minimisation des données, prévu à l'article 5 du RGPD, impose que les données personnelles collectées pour l'entraînement d'un système d'IA se cantonnent à celles nécessaires au bon fonctionnement du système. Ce principe entre en tension avec la logique de certains fabricants qui cherchent à réutiliser massivement des données collectées à d'autres fins pour enrichir l'entraînement de leurs modèles.",
+   "derniereVerification": "2026-09",
+   "aVerifier": null,
+   "options": [
+    "Le principe de transparence algorithmique",
+    "Le principe de minimisation (article 5 du RGPD)",
+    "Le droit à la portabilité",
+    "Le droit à l'oubli"
+   ],
+   "bonneReponse": 1
+  },
+  {
+   "id": "a9-36",
+   "axe": "A9",
+   "sousTheme": "Cadre juridique : AI Act et RGPD",
+   "stIdx": 0,
+   "sujet": "rgpd-ia-clauses",
+   "niveau": 6,
+   "famille": "S",
+   "type": "vf",
+   "question": "Selon la doctrine de la CNIL, des données personnelles collectées à une fin déterminée ne peuvent en aucun cas être réutilisées pour entraîner un système d'IA, même si ce système est ensuite déployé pour un usage compatible avec la finalité initiale.",
+   "explication": "Faux. La CNIL considère, dans ses fiches pratiques sur l'IA, que l'entraînement d'un système peut être justifié par la finalité prévue pour le déploiement de ce système — ce qui autorise une certaine réutilisation, à condition que l'entraînement reste compatible avec cette finalité et respecte par ailleurs le principe de minimisation des données. Source : CNIL, fiches pratiques IA, fiche n°2 « définir une finalité ».",
+   "derniereVerification": "2026-09",
+   "aVerifier": null,
+   "vrai": false,
+   "justification": "Faux. La CNIL considère, dans ses fiches pratiques sur l'IA, que l'entraînement d'un système peut être justifié par la finalité prévue pour le déploiement de ce système — ce qui autorise une certaine réutilisation, à condition que l'entraînement reste compatible avec cette finalité et respecte par ailleurs le principe de minimisation des données. Source : CNIL, fiches pratiques IA, fiche n°2 « définir une finalité »."
+  },
+  {
+   "id": "a9-37",
+   "axe": "A9",
+   "sousTheme": "Cadre juridique : AI Act et RGPD",
+   "stIdx": 0,
+   "sujet": "rgpd-ia-clauses",
+   "niveau": 5,
+   "famille": "S",
+   "type": "qcm",
+   "question": "Quand une collectivité entraîne ou teste un système d'IA sur des données personnelles d'usagers, et que l'information individuelle de chaque personne concernée exigerait des efforts disproportionnés, que permet la CNIL ?",
+   "explication": "Les collectivités doivent en principe informer individuellement chaque personne concernée de l'utilisation de ses données, conformément aux articles 13 et 14 du RGPD. Par exception, si cette information individuelle requiert des efforts disproportionnés, la CNIL admet que la collectivité se contente de rendre publique l'information exigée (durée de conservation, finalité, destinataires, droits des personnes, etc.), par exemple sur son site internet. Source : CNIL, fiches pratiques IA, fiche n°9 « informer les personnes concernées ».",
+   "derniereVerification": "2026-09",
+   "aVerifier": null,
+   "options": [
+    "De transférer cette obligation au prestataire sans contrôle de la collectivité",
+    "De se dispenser totalement d'informer les personnes",
+    "De reporter l'information de cinq ans",
+    "De rendre publique l'information exigée, par exemple sur le site internet de la collectivité"
+   ],
+   "bonneReponse": 3
+  },
+  {
+   "id": "a9-38",
+   "axe": "A9",
+   "sousTheme": "Cadre juridique : AI Act et RGPD",
+   "stIdx": 0,
+   "sujet": "propriete-intellectuelle-ia",
+   "niveau": 7,
+   "famille": "S",
+   "type": "qcm",
+   "question": "L'article 53 de l'AI Act impose aux fabricants de systèmes d'IA générative de mettre en place une politique relative à un enjeu précis. Lequel ?",
+   "explication": "L'article 53 de l'AI Act exige des fabricants de systèmes d'IA générative qu'ils mettent en place une politique de respect des droits d'auteur, sans toutefois en préciser la méthode ni les contours précis. En France, le Conseil supérieur de la propriété littéraire et artistique (instance rattachée au ministère de la Culture) a souligné dans un rapport que les conditions de collecte des données ne garantissent pas toujours le respect du droit de l'Union ; une concertation entre fournisseurs d'IA et représentants d'ayants droit a été organisée par la ministre de la Culture en juin 2025 pour explorer des pistes d'évolution.",
+   "derniereVerification": "2026-09",
+   "aVerifier": null,
+   "options": [
+    "La fixation d'un prix plafond pour leurs services",
+    "La certification ISO 30134 de leurs centres de données",
+    "Le respect des droits d'auteur sur les données utilisées pour l'entraînement",
+    "Le recrutement d'un quota de développeurs européens"
+   ],
+   "bonneReponse": 2
+  },
+  {
+   "id": "a9-39",
+   "axe": "A9",
+   "sousTheme": "Gouvernance et stratégie de déploiement",
+   "stIdx": 1,
+   "sujet": "cellule-ia-organisation",
+   "niveau": 4,
+   "famille": "E",
+   "type": "qcm",
+   "question": "Parmi les modèles d'organisation observés pour structurer une démarche IA en collectivité, lequel associe une équipe transversale pluridisciplinaire (technique, communication, juridique, innovation) et un fonctionnement en méthode agile ?",
+   "explication": "Un modèle d'organisation consiste à créer une cellule IA transversale, structurée comme une véritable équipe projet et pilotée en méthode agile (sprints Scrum), réunissant des profils techniques, communication, juridiques et innovation. Ce modèle vise à diffuser une culture de l'IA par la pratique (« quick wins ») plutôt que par une stratégie uniquement descendante, et à traiter des projets concrets tout en posant un cadre éthique et souverain sur les usages.",
+   "derniereVerification": "2026-09",
+   "aVerifier": null,
+   "options": [
+    "Un comité qui se réunit une fois par an pour valider un plan pluriannuel",
+    "Une « cellule IA » dédiée, pilotée en sprints selon la méthode Scrum",
+    "L'absence de toute structure dédiée, chaque direction gérant l'IA de façon autonome",
+    "Une délégation exclusive au service informatique, sans autre direction associée"
+   ],
+   "bonneReponse": 1
   }
  ]
 }

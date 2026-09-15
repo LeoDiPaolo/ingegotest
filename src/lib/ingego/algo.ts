@@ -396,7 +396,7 @@ export function melange<T>(arr: T[], graine: number): T[] {
 export const jourDe = (t: number) => new Date(t).toISOString().slice(0, 10);
 
 export const REGLAGES_DEFAUT: Reglages = {
-  axes: ["A1", "A2", "A3", "A4", "A5", "A6", "A7", "A8"],
+  axes: ["A1", "A2", "A3", "A4", "A5", "A6", "A7", "A8", "A9"],
   familles: ["S", "M", "E"],
   types: [
     "qcm",
@@ -447,6 +447,8 @@ export function normaliserReglages(r: Partial<Reglages> | null | undefined): Reg
   if (!n.axes?.length) n.axes = [...REGLAGES_DEFAUT.axes];
   /* Nouvel axe A8 : on l'active aussi pour les réglages enregistrés avant son ajout. */
   if (!n.axes.includes("A8")) n.axes = [...n.axes, "A8"];
+  /* Nouvel axe A9 (IA et collectivités) : activé aussi pour les réglages antérieurs. */
+  if (!n.axes.includes("A9")) n.axes = [...n.axes, "A9"];
   if (!n.familles?.length) n.familles = [...REGLAGES_DEFAUT.familles];
   return n;
 }
