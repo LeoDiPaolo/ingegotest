@@ -353,6 +353,124 @@
   animation: ing-flotte 2.6s ease-in-out infinite;
 }
 
+@keyframes ing-palier-arrive {
+  0% {
+    transform: scale(0.55) rotate(-7deg);
+    opacity: 0;
+  }
+  55% {
+    transform: scale(1.08) rotate(2deg);
+    opacity: 1;
+  }
+  75% {
+    transform: scale(0.97) rotate(-1deg);
+  }
+  100% {
+    transform: scale(1) rotate(0);
+  }
+}
+
+@keyframes ing-palier-halo {
+  0% {
+    transform: scale(0.25);
+    opacity: 0.75;
+  }
+  100% {
+    transform: scale(2.4);
+    opacity: 0;
+  }
+}
+
+@keyframes ing-palier-tourne {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes ing-palier-etincelle {
+  0%,
+  100% {
+    transform: scale(0.6) rotate(-12deg);
+    opacity: 0.35;
+  }
+  50% {
+    transform: scale(1.35) rotate(12deg);
+    opacity: 1;
+  }
+}
+
+@utility anim-palier {
+  animation: ing-palier-arrive 0.8s cubic-bezier(0.2, 1.4, 0.3, 1) both;
+}
+
+.palier-celebration {
+  background-image: radial-gradient(circle at center, var(--color-brand), var(--color-primary) 62%);
+}
+
+.palier-halo {
+  position: absolute;
+  width: min(72vw, 28rem);
+  aspect-ratio: 1;
+  border: 3px solid color-mix(in oklab, var(--color-brand) 75%, transparent);
+  border-radius: 9999px;
+  animation: ing-palier-halo 1.8s ease-out infinite;
+}
+
+.palier-halo-deux {
+  animation-delay: 0.9s;
+}
+
+.palier-rayons {
+  position: absolute;
+  width: min(115vw, 46rem);
+  aspect-ratio: 1;
+  opacity: 0.24;
+  background: repeating-conic-gradient(
+    from 0deg,
+    var(--color-brand) 0deg 7deg,
+    transparent 7deg 18deg
+  );
+  animation: ing-palier-tourne 18s linear infinite;
+  mask-image: radial-gradient(circle, transparent 0 22%, black 48% 100%);
+}
+
+.palier-etincelle {
+  position: absolute;
+  color: var(--color-brand-foreground);
+  animation: ing-palier-etincelle 1.35s ease-in-out infinite;
+}
+
+.palier-etincelle-une {
+  top: 16%;
+  left: 13%;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.palier-etincelle-deux {
+  top: 21%;
+  right: 14%;
+  width: 2rem;
+  height: 2rem;
+  animation-delay: 0.3s;
+}
+
+.palier-etincelle-trois {
+  right: 9%;
+  bottom: 17%;
+  width: 3rem;
+  height: 3rem;
+  animation-delay: 0.65s;
+}
+
+.palier-etincelle-quatre {
+  bottom: 20%;
+  left: 10%;
+  width: 1.75rem;
+  height: 1.75rem;
+  animation-delay: 0.9s;
+}
+
 @utility confetti {
   position: fixed;
   top: -5vh;
@@ -370,6 +488,10 @@
   .anim-tampon,
   .anim-unlock,
   .anim-flotte,
+  .anim-palier,
+  .palier-halo,
+  .palier-rayons,
+  .palier-etincelle,
   .confetti {
     animation: none;
   }
