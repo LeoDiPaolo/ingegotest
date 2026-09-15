@@ -1,0 +1,10 @@
+REVOKE ALL ON public.abonnements_push FROM anon, authenticated;
+REVOKE ALL ON public.config_rappels FROM anon, authenticated;
+GRANT ALL ON public.abonnements_push TO service_role;
+GRANT ALL ON public.config_rappels TO service_role;
+ALTER TABLE public.abonnements_push ENABLE ROW LEVEL SECURITY;
+ALTER TABLE public.abonnements_push FORCE ROW LEVEL SECURITY;
+ALTER TABLE public.config_rappels ENABLE ROW LEVEL SECURITY;
+ALTER TABLE public.config_rappels FORCE ROW LEVEL SECURITY;
+COMMENT ON TABLE public.abonnements_push IS 'Server-only: push subscriptions (endpoint/keys). No client policies by design; access via server code with the service role only.';
+COMMENT ON TABLE public.config_rappels IS 'Server-only: reminder configuration/token. No client policies by design; access via server code with the service role only.';
