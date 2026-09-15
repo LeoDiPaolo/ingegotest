@@ -5,7 +5,7 @@
 
 /* Commentaires déjà traités : une fois la question corrigée, l'observation
    n'a plus lieu d'être et disparaît de l'appareil à la prochaine ouverture. */
-export const VERSION_COMMENTAIRES = "2026-09-13a";
+export const VERSION_COMMENTAIRES = "2026-09-15a";
 
 export const COMMENTAIRES_TRAITES: string[] = [
   "e-07",
@@ -70,6 +70,12 @@ export const COMMENTAIRES_TRAITES: string[] = [
   "g-015",
   "n1-61",
   "g-105",
+  "a2-100",
+  "a6-44",
+  "g-161",
+  "g-163",
+  "g-325",
+  "g-288",
 ];
 
 /* Historique des questions révisées. Cette liste sert uniquement à réparer la
