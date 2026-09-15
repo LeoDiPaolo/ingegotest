@@ -114,6 +114,12 @@ const TABLE: Record<string, Ill[]> = {
     I(concours, "Culture territoriale attendue à l'oral"),
     I(concours, "Motivation et projet professionnel"),
   ],
+  A9: [
+    I(numerique, "Cadre juridique européen de l'intelligence artificielle"),
+    I(numerique, "Gouvernance et stratégie de déploiement de l'IA"),
+    I(numerique, "Cas d'usage et expérimentations d'IA"),
+    I(climat, "Éthique et impact environnemental de l'IA"),
+  ],
 };
 
 export function illustrationDe(axe: string, stIdx: number): Ill | null {
