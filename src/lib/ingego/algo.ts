@@ -241,12 +241,14 @@ export function repartirParTheme(
 }
 
 /* Équilibrage des chapitres en pourcentage : chaque place de la mission est
-   attribuée parmi les chapitres dont le taux de maîtrise réellement acquis est
-   le plus bas. Les questions de la mission en préparation ne sont pas comptées
-   comme déjà validées : un chapitre plus avancé (Guide notamment) ne remonte
-   donc pas avant que les chapitres en retard l'aient effectivement rejoint.
-   En cas d'égalité, les places tournent entre les chapitres concernés. À
-   l'intérieur d'un chapitre, la répartition reste proportionnelle aux thèmes. */
+   attribuée au chapitre dont le taux de maîtrise projeté (déjà acquis + places
+   déjà réservées dans cette mission) est le plus bas. Le remplissage se fait
+   donc par nivellement : un chapitre en retard reçoit les places jusqu'à
+   rejoindre les autres, puis les places repassent au suivant. Aucun chapitre
+   n'est traité à part : un gros chapitre déjà avancé (Guide) ne revient que
+   lorsque son pourcentage redevient le plus bas. En cas d'égalité, les places
+   tournent entre les chapitres concernés. À l'intérieur d'un chapitre, la
+   répartition reste proportionnelle aux thèmes. */
 export function repartirParRetard(
   priorite: Question[],
   corpusActif: Question[],
