@@ -132,7 +132,10 @@ function accroche(prenom: string | null, creneau: Creneau, graine: number): stri
   return piocher(liste, graine);
 }
 
-function objectifProgression(cartes: Record<string, Carte>, graine: number): ObjectifProgression | null {
+function objectifProgression(
+  cartes: Record<string, Carte>,
+  graine: number,
+): ObjectifProgression | null {
   const validees = CORPUS.filter((q) => (cartes[q.id]?.p ?? 0) >= 1).length;
   const objectifs = AXES.flatMap((axe) => {
     const questions = CORPUS.filter((q) => q.axe === axe.id);
@@ -329,8 +332,6 @@ async function traiter(request: Request) {
   if (params.get("forcer") !== "1" && Number.isFinite(heureParis) && heureParis !== heureAttendue) {
     return Response.json({ jour: aujourdhui, creneau, ignore: "hors créneau", heureParis });
   }
-
-
 
   const { data: abonnementsBruts, error: erreurAb } = await supabaseAdmin
     .from("abonnements_push")
