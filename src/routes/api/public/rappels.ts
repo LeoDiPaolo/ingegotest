@@ -1,7 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { AXES, CORPUS } from "@/lib/ingego/corpus";
 
-/* Envoi quotidien des rappels. Appelée par la planification de la base
-   (une fois par jour, 18 h heure de Paris). Protégée par un jeton partagé. */
+/* Envoi des rappels du matin, du midi et du soir. Appelée par la planification
+   de la base et protégée par un jeton partagé. */
 
 interface Carte {
   p?: number;
@@ -31,6 +32,14 @@ interface AbonnementLigne {
 }
 
 type Creneau = "matin" | "midi" | "soir";
+
+interface ObjectifProgression {
+  axe: string;
+  niveau: number;
+  restantes: number;
+  validees: number;
+  total: number;
+}
 
 function jourParis(date = new Date()): string {
   return new Intl.DateTimeFormat("fr-CA", {
@@ -63,8 +72,8 @@ function serie(jours: Set<string>, aujourdhui: string): number {
   return n;
 }
 
-/* Petites variations : le message change d'un jour à l'autre pour ne pas
-   devenir un bruit de fond qu'on ignore. */
+/* Une graine différente est utilisée pour chaque partie du message afin que
+   titre et corps ne reviennent pas toujours dans la même combinaison. */
 function piocher(liste: string[], graine: number): string {
   return liste[graine % liste.length] as string;
 }
@@ -76,18 +85,98 @@ function grainePour(cle: string, jour: string, creneau: string): number {
 }
 
 function accroche(prenom: string | null, creneau: Creneau, graine: number): string {
-  const p = prenom ? `${prenom}` : null;
-  const matin = p
-    ? [`Bonjour ${p} !`, `Debout ${p} !`, `Café puis QCM, ${p} ?`, `${p}, le jury n'attend pas.`]
-    : ["Bonjour !", "Debout !", "Café puis QCM ?", "Le jury n'attend pas."];
-  const midi = p
-    ? [`${p}, pause déjeuner ?`, `Entre deux plats, ${p} ?`, `${p}, 5 minutes chrono.`]
-    : ["Pause déjeuner ?", "Entre deux plats ?", "5 minutes chrono."];
-  const soir = p
-    ? [`${p}, fin de journée.`, `Dernier round, ${p}.`, `${p}, on clôture la journée ?`]
-    : ["Fin de journée.", "Dernier round.", "On clôture la journée ?"];
+  const p = prenom?.trim() || "chef";
+  const matin = [
+    `Debout ${p}, le béton n'attend pas.`,
+    `Café, casque, IngéGo, ${p}.`,
+    `${p}, réveil du cerveau dans 3… 2…`,
+    `Bonjour ${p}. Le jury fait déjà semblant d'être prêt.`,
+    `${p}, petite mission avant le grand monde.`,
+    `Le jour se lève. Le niveau aussi, ${p}.`,
+    `Matin calme, neurones affûtés, ${p}.`,
+    `${p}, même le castor a ouvert un œil.`,
+    `Réveil technique, ${p}. Sans réunion préalable.`,
+    `Éric, Ramzy et ${p} entrent dans une mission…`,
+    `${p}, Alain Chabat ne fera pas la voix off tout seul.`,
+    `Bonjour ${p}. Autorisation de réviser accordée.`,
+  ];
+  const midi = [
+    `${p}, le dessert peut attendre 5 minutes.`,
+    `Pause déjeuner, cerveau toujours ouvert.`,
+    `${p}, menu du jour : 8 questions, sauce concours.`,
+    `Un QCM entre la poire et le Code civil ?`,
+    `${p}, le café réclame une mission en accompagnement.`,
+    `Midi. Le moment exact où le jury baisse sa garde.`,
+    `${p}, pas de sieste avant validation du chantier.`,
+    `Éric et Ramzy hésitent. À toi de trancher, ${p}.`,
+    `${p}, ceci n'est pas une réunion : ça sera bref.`,
+    `Pause réglementaire. Révision facultativement obligatoire.`,
+    `${p}, Alain Chabat valide ce créneau. Probablement.`,
+    `Le niveau mijote, ${p}. On soulève le couvercle ?`,
+  ];
+  const soir = [
+    `${p}, dernier tour de chantier.`,
+    `Le bureau ferme, pas la mémoire.`,
+    `${p}, une mission et générique de fin.`,
+    `Fin de journée. Début des réponses brillantes.`,
+    `${p}, le jury croit que tu as terminé.`,
+    `On clôture proprement, sans réserve ?`,
+    `${p}, huit questions avant extinction des feux.`,
+    `Même Alain Chabat n'a pas trouvé meilleure conclusion.`,
+    `${p}, contrôle technique des neurones.`,
+    `Dernier round. Éric et Ramzy gardent le chrono.`,
+    `${p}, petite mission, grande dignité.`,
+    `Le castor range ses plans après cette mission.`,
+  ];
   const liste = creneau === "matin" ? matin : creneau === "midi" ? midi : soir;
   return piocher(liste, graine);
+}
+
+function objectifProgression(cartes: Record<string, Carte>, graine: number): ObjectifProgression | null {
+  const validees = CORPUS.filter((q) => (cartes[q.id]?.p ?? 0) >= 1).length;
+  const objectifs = AXES.flatMap((axe) => {
+    const questions = CORPUS.filter((q) => q.axe === axe.id);
+    const nonValidees = questions.filter((q) => (cartes[q.id]?.p ?? 0) < 1);
+    if (!nonValidees.length) return [];
+    const niveau = Math.min(...nonValidees.map((q) => q.niv));
+    const restantes = questions.filter(
+      (q) => q.niv === niveau && (cartes[q.id]?.p ?? 0) < 1,
+    ).length;
+    return [{ axe: axe.court, niveau, restantes, validees, total: CORPUS.length }];
+  }).sort((a, b) => a.restantes - b.restantes || a.axe.localeCompare(b.axe, "fr"));
+
+  if (!objectifs.length) return null;
+  const minimum = objectifs[0]?.restantes ?? 0;
+  const plusProches = objectifs.filter((o) => o.restantes === minimum);
+  return plusProches[graine % plusProches.length] ?? null;
+}
+
+function texteObjectif(objectif: ObjectifProgression | null, graine: number): string {
+  if (!objectif) {
+    return piocher(
+      [
+        "Tout est validé. Le jury peut commencer à s'inquiéter.",
+        "Corpus terminé : le castor demande officiellement une médaille.",
+        "100 % validé. Même Alain Chabat n'avait pas prévu ce scénario.",
+      ],
+      graine,
+    );
+  }
+  const s = objectif.restantes > 1 ? "s" : "";
+  const verbe = objectif.restantes > 1 ? "restent" : "reste";
+  return piocher(
+    [
+      `Plus que ${objectif.restantes} question${s} pour valider le niveau ${objectif.niveau} de ${objectif.axe}.`,
+      `${objectif.validees} questions validées. Prochaine cible : niveau ${objectif.niveau} de ${objectif.axe}.`,
+      `Le niveau ${objectif.niveau} de ${objectif.axe} est à ${objectif.restantes} question${s} du dénouement.`,
+      `${objectif.restantes} question${s} ${verbe} avant de boucler ${objectif.axe}, niveau ${objectif.niveau}.`,
+      `Objectif rapproché : ${objectif.axe}, niveau ${objectif.niveau}. Encore ${objectif.restantes}.`,
+      `${objectif.validees}/${objectif.total} validées. ${objectif.axe} est le prochain niveau à faire tomber.`,
+      `Plot twist : il ne reste que ${objectif.restantes} question${s} au niveau ${objectif.niveau} de ${objectif.axe}.`,
+      `Éric et Ramzy en enlèvent deux… non. Il en reste exactement ${objectif.restantes} pour ${objectif.axe}.`,
+    ],
+    graine,
+  );
 }
 
 function messagePour(
@@ -119,6 +208,8 @@ function messagePour(
   const graine = grainePour(cle, aujourdhui, creneau);
   const titre = accroche(prenom, creneau, graine);
   const n = serie(joursSession, aujourdhui);
+  const objectif = objectifProgression(ligne?.cartes ?? {}, graine + 17);
+  const progression = texteObjectif(objectif, graine + 31);
 
   if (n >= 3) {
     return {
@@ -128,8 +219,12 @@ function messagePour(
           `${n} jours d'affilée : ce serait dommage de casser la série maintenant.`,
           `Ta série de ${n} jours tient encore à une mission.`,
           `${n} jours au compteur. On garde le rythme ?`,
+          `${n} jours de suite. À ce stade, c'est une jurisprudence.`,
+          `Série de ${n} jours : le castor refuse de redescendre du podium.`,
+          `${n} jours sans lâcher. Éric et Ramzy préparent déjà le biopic.`,
+          progression,
         ],
-        graine,
+        graine + 7,
       ),
       tag: "ingego-serie",
     };
@@ -143,24 +238,31 @@ function messagePour(
           `${inactivite} jours sans révision : tes cartes prennent la poussière.`,
           `Le concours avance, toi non depuis ${inactivite} jours.`,
           `On repart doucement ? 8 questions suffisent aujourd'hui.`,
+          `${inactivite} jours de pause. Le cerveau a fini sa maintenance.`,
+          `Après ${inactivite} jours, même le Code de la commande publique demande des nouvelles.`,
+          `Retour de mission après ${inactivite} jours. Aucun justificatif demandé.`,
+          progression,
         ],
-        graine,
+        graine + 11,
       ),
       tag: "ingego-relance",
     };
   }
 
   if (dues > 0) {
-    const s = dues > 1 ? "s" : "";
     return {
       titre,
       corps: piocher(
         [
-          `${dues} carte${s} à revoir avant qu'elle${s} ne s'échappe${dues > 1 ? "nt" : ""}.`,
-          `${dues} question${s} t'attend${dues > 1 ? "ent" : ""} : 3 minutes suffisent.`,
-          `Révision du jour : ${dues} carte${s} en attente.`,
+          progression,
+          `${dues} question${dues > 1 ? "s non validées attendent" : " non validée attend"}. Pas de panique, juste du panache.`,
+          `${dues} point${dues > 1 ? "s" : ""} à reprendre. Le béton sèche, la mémoire aussi.`,
+          `Il reste du travail, mais aucun PowerPoint de 86 diapositives n'est prévu.`,
+          `Mission courte, effet durable. Comme une bonne clause, mais plus drôle.`,
+          `Le niveau ne va pas se valider par télépathie. Alain Chabat a essayé.`,
+          `${dues} question${dues > 1 ? "s" : ""} encore en jeu. À toi de faire le tri, littéralement parfois.`,
         ],
-        graine,
+        graine + 19,
       ),
       tag: "ingego-rappel",
     };
@@ -174,8 +276,13 @@ function messagePour(
           "Une mission de 8 questions pour bien démarrer.",
           "Rien d'urgent, mais une mission ne fait jamais de mal.",
           "Objectif du jour : une mission, pas plus.",
+          progression,
+          "Huit questions. Moins long qu'un ordre du jour, plus utile qu'un tour de table.",
+          "Une petite mission avant que les acronymes ne se reproduisent.",
+          "Le concours ne se révise pas tout seul. On a vérifié deux fois.",
+          "Quelques questions, zéro réunion, résultat immédiat.",
         ],
-        graine,
+        graine + 23,
       ),
       tag: "ingego-matin",
     };
