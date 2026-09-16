@@ -76,9 +76,8 @@ export function CarteRappels() {
         <Bell className="h-4 w-4 text-brand" /> Rappels de révision
       </h2>
       <p className="text-xs text-muted-foreground">
-        Trois rappels possibles par jour : 8 h 30, midi et fin d'après-midi. Ils n'arrivent que si
-        des cartes t'attendent ou si ta série est en jeu, et s'arrêtent dès que la mission du jour
-        est faite.
+        Trois rappels possibles par jour : 8 h 30, midi et fin d'après-midi. Même après une mission,
+        Éric, Ramzy et le castor peuvent revenir réclamer une revanche.
       </p>
 
       <label className="block space-y-1">
