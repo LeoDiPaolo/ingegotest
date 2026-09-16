@@ -208,12 +208,12 @@ function texteObjectif(objectif: ObjectifProgression | null, graine: number): st
   const verbe = objectif.restantes > 1 ? "restent" : "reste";
   return piocher(
     [
-      `Plus que ${objectif.restantes} question${s} pour valider le niveau ${objectif.niveau} de ${objectif.axe}.`,
-      `${objectif.validees} questions validées. Prochaine cible : niveau ${objectif.niveau} de ${objectif.axe}.`,
-      `Le niveau ${objectif.niveau} de ${objectif.axe} est à ${objectif.restantes} question${s} du dénouement.`,
-      `${objectif.restantes} question${s} ${verbe} avant de boucler ${objectif.axe}, niveau ${objectif.niveau}.`,
-      `Objectif rapproché : ${objectif.axe}, niveau ${objectif.niveau}. Encore ${objectif.restantes}.`,
-      `${objectif.validees}/${objectif.total} validées. ${objectif.axe} est le prochain niveau à faire tomber.`,
+      `Plus que ${objectif.restantes} question${s} pour valider le niveau ${objectif.niveau} de ${objectif.axe}. Le jury cache déjà les clés.`,
+      `${objectif.validees} questions validées. Prochaine cible : ${objectif.axe}, niveau ${objectif.niveau}. Éric a dessiné le plan au dos d'un ticket.`,
+      `Le niveau ${objectif.niveau} de ${objectif.axe} est à ${objectif.restantes} question${s} du dénouement. Alain Chabat réclame un ralenti.`,
+      `${objectif.restantes} question${s} ${verbe} avant de boucler ${objectif.axe}, niveau ${objectif.niveau}. Le castor a déjà sorti la clé de 12.`,
+      `Objectif rapproché : ${objectif.axe}, niveau ${objectif.niveau}. Encore ${objectif.restantes}, sauf si Ramzy recompte.`,
+      `${objectif.validees}/${objectif.total} validées. ${objectif.axe} est le prochain niveau à faire tomber, sans permis de démolir.`,
       `Plot twist : il ne reste que ${objectif.restantes} question${s} au niveau ${objectif.niveau} de ${objectif.axe}.`,
       `Éric et Ramzy en enlèvent deux… non. Il en reste exactement ${objectif.restantes} pour ${objectif.axe}.`,
       `${objectif.restantes} question${s} avant le niveau ${objectif.niveau} de ${objectif.axe}. Le castor a déjà commandé les petits fours.`,
@@ -297,10 +297,10 @@ function messagePour(
       titre,
       corps: piocher(
         [
-          `${n} jours d'affilée : ce serait dommage de casser la série maintenant.`,
-          `Ta série de ${n} jours tient encore à une mission.`,
-          `${n} jours au compteur. On garde le rythme ?`,
-          `${n} jours de suite. À ce stade, c'est une jurisprudence.`,
+          `${n} jours d'affilée : ce serait dommage de casser la série maintenant. Le castor a déjà imprimé les tee-shirts.`,
+          `Ta série de ${n} jours tient encore à une mission. Alain Chabat tient la caméra.`,
+          `${n} jours au compteur. Éric garde le rythme, Ramzy cherche le compteur.`,
+          `${n} jours de suite. À ce stade, c'est une jurisprudence et le greffe est perplexe.`,
           `Série de ${n} jours : le castor refuse de redescendre du podium.`,
           `${n} jours sans lâcher. Éric et Ramzy préparent déjà le biopic.`,
           progression,
@@ -323,10 +323,10 @@ function messagePour(
       titre,
       corps: piocher(
         [
-          `${inactivite} jours sans révision : tes cartes prennent la poussière.`,
-          `Le concours avance, toi non depuis ${inactivite} jours.`,
-          `On repart doucement ? 8 questions suffisent aujourd'hui.`,
-          `${inactivite} jours de pause. Le cerveau a fini sa maintenance.`,
+          `${inactivite} jours sans révision : tes cartes prennent la poussière et facturent le ménage.`,
+          `Le concours avance, toi non depuis ${inactivite} jours. Éric propose de mettre les warnings.`,
+          `On repart doucement ? Huit questions, zéro kiné, un castor en soutien psychologique.`,
+          `${inactivite} jours de pause. Le cerveau a fini sa maintenance, mais la pièce restante inquiète Ramzy.`,
           `Après ${inactivite} jours, même le Code de la commande publique demande des nouvelles.`,
           `Retour de mission après ${inactivite} jours. Aucun justificatif demandé.`,
           progression,
@@ -350,10 +350,10 @@ function messagePour(
       corps: piocher(
         [
           progression,
-          `${dues} question${dues > 1 ? "s non validées attendent" : " non validée attend"}. Pas de panique, juste du panache.`,
-          `${dues} point${dues > 1 ? "s" : ""} à reprendre. Le béton sèche, la mémoire aussi.`,
+          `${dues} question${dues > 1 ? "s non validées attendent" : " non validée attend"}. Pas de panique : Éric a un plan, donc aucune garantie.`,
+          `${dues} point${dues > 1 ? "s" : ""} à reprendre. Le béton sèche, la mémoire aussi, Ramzy tient le sèche-cheveux.`,
           `Il reste du travail, mais aucun PowerPoint de 86 diapositives n'est prévu.`,
-          `Mission courte, effet durable. Comme une bonne clause, mais plus drôle.`,
+          `Mission courte, effet durable. Comme une bonne clause, mais sans juriste caché dans le placard.`,
           `Le niveau ne va pas se valider par télépathie. Alain Chabat a essayé.`,
           `${dues} question${dues > 1 ? "s" : ""} encore en jeu. À toi de faire le tri, littéralement parfois.`,
           `${dues} question${dues > 1 ? "s" : ""} à reprendre. Éric a les fiches, Ramzy a fait un avion avec.`,
@@ -375,14 +375,14 @@ function messagePour(
       titre,
       corps: piocher(
         [
-          "Une mission de 8 questions pour bien démarrer.",
-          "Rien d'urgent, mais une mission ne fait jamais de mal.",
-          "Objectif du jour : une mission, pas plus.",
+          "Une mission de huit questions pour bien démarrer. Alain Chabat fournit le faux départ.",
+          "Rien d'urgent, mais une mission ne fait jamais de mal. Sauf au jury, émotionnellement.",
+          "Objectif du jour : une mission, pas plus. Éric a déjà déposé un amendement.",
           progression,
           "Huit questions. Moins long qu'un ordre du jour, plus utile qu'un tour de table.",
           "Une petite mission avant que les acronymes ne se reproduisent.",
           "Le concours ne se révise pas tout seul. On a vérifié deux fois.",
-          "Quelques questions, zéro réunion, résultat immédiat.",
+          "Quelques questions, zéro réunion, résultat immédiat. Concept refusé par trois directions pilotes.",
           "Huit questions avant le premier mail « pour information ». Profite.",
           "Une mission matinale : Alain Chabat garantit zéro poursuite de chars.",
           "Le castor a sorti le casque. Éric et Ramzy cherchent encore le chantier.",
