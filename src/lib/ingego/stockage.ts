@@ -3,10 +3,8 @@ import { ecrireEtat, lireEtat } from "./etat.functions";
 import { JAMAIS, JOUR, normaliserReglages, type Carte, type Etat, type Reglages } from "./algo";
 import {
   COMMENTAIRES_TRAITES,
-  IDS_CORRIGES,
   IDS_REVUS,
   VERSION_COMMENTAIRES,
-  VERSION_CORRECTIONS,
   VERSION_REVISIONS,
 } from "./corrections";
 
@@ -31,12 +29,9 @@ export interface Donnees {
 
 const CLE_LOCALE = "ingego-donnees";
 const CLE_APPAREIL = "ingego-cle-appareil";
-const CLE_PURGE = "ingego-purge";
 const CLE_PURGE_COM = "ingego-purge-commentaires";
 const CLE_PURGE_REV = "ingego-purge-revisions";
 const CLE_RESTAURATION_REV = "ingego-restauration-revisions";
-const CLE_RESTAURATION_TOUT = "ingego-restauration-journal";
-const VERSION_RESTAURATION = "2026-09-16b";
 
 export const VIDE: Donnees = {
   cartes: {},
@@ -141,14 +136,9 @@ function restaurerValidationsRevues(d: Donnees, maintenant: number): Donnees {
    validée du premier coup dès qu'une journée commence par une réussite sur
    cette question (les reprises du même jour suivent l'échec, jamais l'inverse).
    On la rétablit définitivement (échéance JAMAIS) sans la remettre en jeu.
-   Ne s'exécute qu'une fois par version. */
+   Ce filet tourne à chaque chargement : une validation prouvée par le journal
+   ne peut donc plus disparaître, quelle que soit la mise à jour. */
 function restaurerToutesValidations(d: Donnees): Donnees {
-  try {
-    if (localStorage.getItem(CLE_RESTAURATION_TOUT) === VERSION_RESTAURATION) return d;
-  } catch {
-    return d;
-  }
-
   /* Première réponse de chaque question pour chaque jour. */
   const premieres = new Map<string, Entree>();
   for (const e of d.journal) {
@@ -188,13 +178,10 @@ function marquerPurge(cle: string, version: string) {
   }
 }
 
-function purger(d: Donnees, purgeCartes: boolean, purgeCom: boolean): Donnees {
+/* Une correction de contenu ne retire plus jamais une carte : seules les
+   observations déjà traitées sont nettoyées. */
+function purger(d: Donnees, purgeCom: boolean): Donnees {
   let sortie = d;
-  if (purgeCartes) {
-    const cartes = { ...sortie.cartes };
-    for (const id of IDS_CORRIGES) delete cartes[id];
-    sortie = { ...sortie, cartes };
-  }
   if (purgeCom) {
     const commentaires = { ...sortie.commentaires };
     for (const id of COMMENTAIRES_TRAITES) delete commentaires[id];
@@ -219,7 +206,7 @@ function fusionner(local: Donnees, distant: Donnees): Donnees {
       return true;
     })
     .sort((a, b) => a.t - b.t)
-    .slice(-3000);
+    .slice(-20000);
   return {
     cartes,
     journal,
@@ -262,12 +249,11 @@ export function useDonnees() {
 
   useEffect(() => {
     let vivant = true;
-    const purgeCartes = aPurger(CLE_PURGE, VERSION_CORRECTIONS);
     /* Une observation traitée n'est purgée qu'une fois pour cette version. Une
        nouvelle observation sur la même question doit pouvoir être conservée. */
     const purgeCom = aPurger(CLE_PURGE_COM, VERSION_COMMENTAIRES);
     const local = restaurerToutesValidations(
-      restaurerValidationsRevues(purger(lireLocal(), purgeCartes, purgeCom), Date.now()),
+      restaurerValidationsRevues(purger(lireLocal(), purgeCom), Date.now()),
     );
     setDonnees(local);
     dernier.current = local;
@@ -294,22 +280,18 @@ export function useDonnees() {
         };
         const fusion = restaurerToutesValidations(
           restaurerValidationsRevues(
-            purger(fusionner(dernier.current, distant), purgeCartes, purgeCom),
+            purger(fusionner(dernier.current, distant), purgeCom),
             Date.now(),
           ),
         );
         setDonnees(fusion);
         pousser(fusion);
-        if (purgeCartes) marquerPurge(CLE_PURGE, VERSION_CORRECTIONS);
         if (purgeCom) marquerPurge(CLE_PURGE_COM, VERSION_COMMENTAIRES);
         marquerPurge(CLE_RESTAURATION_REV, VERSION_REVISIONS);
-        marquerPurge(CLE_RESTAURATION_TOUT, VERSION_RESTAURATION);
       } else {
         pousser(dernier.current);
-        if (purgeCartes) marquerPurge(CLE_PURGE, VERSION_CORRECTIONS);
         if (purgeCom) marquerPurge(CLE_PURGE_COM, VERSION_COMMENTAIRES);
         marquerPurge(CLE_RESTAURATION_REV, VERSION_REVISIONS);
-        marquerPurge(CLE_RESTAURATION_TOUT, VERSION_RESTAURATION);
       }
 
       setSynchro("ok");
@@ -338,7 +320,7 @@ export function useDonnees() {
         journal: [
           ...d.journal,
           { id, note, jour: new Date(t).toISOString().slice(0, 10), t },
-        ].slice(-3000),
+        ].slice(-20000),
       })),
     [maj],
   );
