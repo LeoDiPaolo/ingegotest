@@ -3,10 +3,8 @@ import { ecrireEtat, lireEtat } from "./etat.functions";
 import { JAMAIS, JOUR, normaliserReglages, type Carte, type Etat, type Reglages } from "./algo";
 import {
   COMMENTAIRES_TRAITES,
-  IDS_CORRIGES,
   IDS_REVUS,
   VERSION_COMMENTAIRES,
-  VERSION_CORRECTIONS,
   VERSION_REVISIONS,
 } from "./corrections";
 
@@ -31,12 +29,9 @@ export interface Donnees {
 
 const CLE_LOCALE = "ingego-donnees";
 const CLE_APPAREIL = "ingego-cle-appareil";
-const CLE_PURGE = "ingego-purge";
 const CLE_PURGE_COM = "ingego-purge-commentaires";
 const CLE_PURGE_REV = "ingego-purge-revisions";
 const CLE_RESTAURATION_REV = "ingego-restauration-revisions";
-const CLE_RESTAURATION_TOUT = "ingego-restauration-journal";
-const VERSION_RESTAURATION = "2026-09-16b";
 
 export const VIDE: Donnees = {
   cartes: {},
