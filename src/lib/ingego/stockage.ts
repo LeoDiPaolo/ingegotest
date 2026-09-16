@@ -134,6 +134,42 @@ function restaurerValidationsRevues(d: Donnees, maintenant: number): Donnees {
   return { ...d, cartes };
 }
 
+/* Rattrapage général : certaines cartes ont disparu lors d'anciennes purges
+   alors que le journal prouve une réussite sans aucun échec, c'est-à-dire une
+   validation du premier coup. On les rétablit définitivement (échéance JAMAIS)
+   sans les remettre en jeu. Ne s'exécute qu'une fois par version. */
+function restaurerToutesValidations(d: Donnees): Donnees {
+  try {
+    if (localStorage.getItem(CLE_RESTAURATION_TOUT) === VERSION_RESTAURATION) return d;
+  } catch {
+    return d;
+  }
+
+  const reussites = new Map<string, number>();
+  const echecs = new Set<string>();
+  for (const e of d.journal) {
+    if (!e || e.id === "__session") continue;
+    if (e.note > 0) reussites.set(e.id, Math.max(reussites.get(e.id) ?? 0, e.t));
+    else echecs.add(e.id);
+  }
+
+  const cartes = { ...d.cartes };
+  for (const [id, t] of reussites) {
+    if (echecs.has(id)) continue;
+    if (cartes[id]) continue;
+    cartes[id] = {
+      p: 1,
+      e: 2.3,
+      du: JAMAIS,
+      reps: 1,
+      echecs: 0,
+      vu: true,
+      dernier: t,
+    };
+  }
+  return { ...d, cartes };
+}
+
 function marquerPurge(cle: string, version: string) {
   try {
     localStorage.setItem(cle, version);
