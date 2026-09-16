@@ -77,7 +77,7 @@ export function CarteRappels() {
       </h2>
       <p className="text-xs text-muted-foreground">
         Trois rappels possibles par jour : 8 h 30, midi et fin d'après-midi. Même après une mission,
-        Éric, Ramzy et le castor peuvent revenir réclamer une revanche.
+        un rappel peut revenir proposer une revanche.
       </p>
 
       <label className="block space-y-1">
