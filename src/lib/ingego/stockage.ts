@@ -137,9 +137,11 @@ function restaurerValidationsRevues(d: Donnees, maintenant: number): Donnees {
 }
 
 /* Rattrapage général : certaines cartes ont disparu lors d'anciennes purges
-   alors que le journal prouve une réussite sans aucun échec, c'est-à-dire une
-   validation du premier coup. On les rétablit définitivement (échéance JAMAIS)
-   sans les remettre en jeu. Ne s'exécute qu'une fois par version. */
+   alors que le journal prouve une validation. Une question est considérée
+   validée du premier coup dès qu'une journée commence par une réussite sur
+   cette question (les reprises du même jour suivent l'échec, jamais l'inverse).
+   On la rétablit définitivement (échéance JAMAIS) sans la remettre en jeu.
+   Ne s'exécute qu'une fois par version. */
 function restaurerToutesValidations(d: Donnees): Donnees {
   try {
     if (localStorage.getItem(CLE_RESTAURATION_TOUT) === VERSION_RESTAURATION) return d;
@@ -147,17 +149,23 @@ function restaurerToutesValidations(d: Donnees): Donnees {
     return d;
   }
 
-  const reussites = new Map<string, number>();
-  const echecs = new Set<string>();
+  /* Première réponse de chaque question pour chaque jour. */
+  const premieres = new Map<string, Entree>();
   for (const e of d.journal) {
-    if (!e || e.id === "__session") continue;
-    if (e.note > 0) reussites.set(e.id, Math.max(reussites.get(e.id) ?? 0, e.t));
-    else echecs.add(e.id);
+    if (!e || e.id === "__session" || !e.jour) continue;
+    const k = `${e.id}|${e.jour}`;
+    const actuelle = premieres.get(k);
+    if (!actuelle || e.t < actuelle.t) premieres.set(k, e);
+  }
+
+  const validees = new Map<string, number>();
+  for (const e of premieres.values()) {
+    if (e.note <= 0) continue;
+    validees.set(e.id, Math.max(validees.get(e.id) ?? 0, e.t));
   }
 
   const cartes = { ...d.cartes };
-  for (const [id, t] of reussites) {
-    if (echecs.has(id)) continue;
+  for (const [id, t] of validees) {
     if (cartes[id]) continue;
     cartes[id] = {
       p: 1,
