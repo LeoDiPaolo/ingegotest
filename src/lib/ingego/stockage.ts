@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { ecrireEtat, lireEtat } from "./etat.functions";
-import { JOUR, normaliserReglages, type Carte, type Etat, type Reglages } from "./algo";
+import { JAMAIS, JOUR, normaliserReglages, type Carte, type Etat, type Reglages } from "./algo";
 import {
   COMMENTAIRES_TRAITES,
   IDS_CORRIGES,
@@ -35,6 +35,8 @@ const CLE_PURGE = "ingego-purge";
 const CLE_PURGE_COM = "ingego-purge-commentaires";
 const CLE_PURGE_REV = "ingego-purge-revisions";
 const CLE_RESTAURATION_REV = "ingego-restauration-revisions";
+const CLE_RESTAURATION_TOUT = "ingego-restauration-journal";
+const VERSION_RESTAURATION = "2026-09-16a";
 
 export const VIDE: Donnees = {
   cartes: {},
@@ -134,6 +136,42 @@ function restaurerValidationsRevues(d: Donnees, maintenant: number): Donnees {
   return { ...d, cartes };
 }
 
+/* Rattrapage général : certaines cartes ont disparu lors d'anciennes purges
+   alors que le journal prouve une réussite sans aucun échec, c'est-à-dire une
+   validation du premier coup. On les rétablit définitivement (échéance JAMAIS)
+   sans les remettre en jeu. Ne s'exécute qu'une fois par version. */
+function restaurerToutesValidations(d: Donnees): Donnees {
+  try {
+    if (localStorage.getItem(CLE_RESTAURATION_TOUT) === VERSION_RESTAURATION) return d;
+  } catch {
+    return d;
+  }
+
+  const reussites = new Map<string, number>();
+  const echecs = new Set<string>();
+  for (const e of d.journal) {
+    if (!e || e.id === "__session") continue;
+    if (e.note > 0) reussites.set(e.id, Math.max(reussites.get(e.id) ?? 0, e.t));
+    else echecs.add(e.id);
+  }
+
+  const cartes = { ...d.cartes };
+  for (const [id, t] of reussites) {
+    if (echecs.has(id)) continue;
+    if (cartes[id]) continue;
+    cartes[id] = {
+      p: 1,
+      e: 2.3,
+      du: JAMAIS,
+      reps: 1,
+      echecs: 0,
+      vu: true,
+      dernier: t,
+    };
+  }
+  return { ...d, cartes };
+}
+
 function marquerPurge(cle: string, version: string) {
   try {
     localStorage.setItem(cle, version);
@@ -220,9 +258,8 @@ export function useDonnees() {
     /* Une observation traitée n'est purgée qu'une fois pour cette version. Une
        nouvelle observation sur la même question doit pouvoir être conservée. */
     const purgeCom = aPurger(CLE_PURGE_COM, VERSION_COMMENTAIRES);
-    const local = restaurerValidationsRevues(
-      purger(lireLocal(), purgeCartes, purgeCom),
-      Date.now(),
+    const local = restaurerToutesValidations(
+      restaurerValidationsRevues(purger(lireLocal(), purgeCartes, purgeCom), Date.now()),
     );
     setDonnees(local);
     dernier.current = local;
@@ -247,20 +284,24 @@ export function useDonnees() {
           reglages: normaliserReglages(data.reglages as unknown as Partial<Reglages>),
           commentaires: (data.commentaires as unknown as Record<string, string>) ?? {},
         };
-        const fusion = restaurerValidationsRevues(
-          purger(fusionner(dernier.current, distant), purgeCartes, purgeCom),
-          Date.now(),
+        const fusion = restaurerToutesValidations(
+          restaurerValidationsRevues(
+            purger(fusionner(dernier.current, distant), purgeCartes, purgeCom),
+            Date.now(),
+          ),
         );
         setDonnees(fusion);
         pousser(fusion);
         if (purgeCartes) marquerPurge(CLE_PURGE, VERSION_CORRECTIONS);
         if (purgeCom) marquerPurge(CLE_PURGE_COM, VERSION_COMMENTAIRES);
         marquerPurge(CLE_RESTAURATION_REV, VERSION_REVISIONS);
+        marquerPurge(CLE_RESTAURATION_TOUT, VERSION_RESTAURATION);
       } else {
         pousser(dernier.current);
         if (purgeCartes) marquerPurge(CLE_PURGE, VERSION_CORRECTIONS);
         if (purgeCom) marquerPurge(CLE_PURGE_COM, VERSION_COMMENTAIRES);
         marquerPurge(CLE_RESTAURATION_REV, VERSION_REVISIONS);
+        marquerPurge(CLE_RESTAURATION_TOUT, VERSION_RESTAURATION);
       }
 
       setSynchro("ok");
