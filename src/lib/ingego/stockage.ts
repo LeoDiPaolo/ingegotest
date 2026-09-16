@@ -36,7 +36,7 @@ const CLE_PURGE_COM = "ingego-purge-commentaires";
 const CLE_PURGE_REV = "ingego-purge-revisions";
 const CLE_RESTAURATION_REV = "ingego-restauration-revisions";
 const CLE_RESTAURATION_TOUT = "ingego-restauration-journal";
-const VERSION_RESTAURATION = "2026-09-16a";
+const VERSION_RESTAURATION = "2026-09-16b";
 
 export const VIDE: Donnees = {
   cartes: {},
