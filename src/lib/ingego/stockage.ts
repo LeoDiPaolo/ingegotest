@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { ecrireEtat, lireEtat } from "./etat.functions";
-import { JOUR, normaliserReglages, type Carte, type Etat, type Reglages } from "./algo";
+import { JAMAIS, JOUR, normaliserReglages, type Carte, type Etat, type Reglages } from "./algo";
 import {
   COMMENTAIRES_TRAITES,
   IDS_CORRIGES,
@@ -35,6 +35,8 @@ const CLE_PURGE = "ingego-purge";
 const CLE_PURGE_COM = "ingego-purge-commentaires";
 const CLE_PURGE_REV = "ingego-purge-revisions";
 const CLE_RESTAURATION_REV = "ingego-restauration-revisions";
+const CLE_RESTAURATION_TOUT = "ingego-restauration-journal";
+const VERSION_RESTAURATION = "2026-09-16a";
 
 export const VIDE: Donnees = {
   cartes: {},
@@ -256,9 +258,8 @@ export function useDonnees() {
     /* Une observation traitée n'est purgée qu'une fois pour cette version. Une
        nouvelle observation sur la même question doit pouvoir être conservée. */
     const purgeCom = aPurger(CLE_PURGE_COM, VERSION_COMMENTAIRES);
-    const local = restaurerValidationsRevues(
-      purger(lireLocal(), purgeCartes, purgeCom),
-      Date.now(),
+    const local = restaurerToutesValidations(
+      restaurerValidationsRevues(purger(lireLocal(), purgeCartes, purgeCom), Date.now()),
     );
     setDonnees(local);
     dernier.current = local;
@@ -283,20 +284,24 @@ export function useDonnees() {
           reglages: normaliserReglages(data.reglages as unknown as Partial<Reglages>),
           commentaires: (data.commentaires as unknown as Record<string, string>) ?? {},
         };
-        const fusion = restaurerValidationsRevues(
-          purger(fusionner(dernier.current, distant), purgeCartes, purgeCom),
-          Date.now(),
+        const fusion = restaurerToutesValidations(
+          restaurerValidationsRevues(
+            purger(fusionner(dernier.current, distant), purgeCartes, purgeCom),
+            Date.now(),
+          ),
         );
         setDonnees(fusion);
         pousser(fusion);
         if (purgeCartes) marquerPurge(CLE_PURGE, VERSION_CORRECTIONS);
         if (purgeCom) marquerPurge(CLE_PURGE_COM, VERSION_COMMENTAIRES);
         marquerPurge(CLE_RESTAURATION_REV, VERSION_REVISIONS);
+        marquerPurge(CLE_RESTAURATION_TOUT, VERSION_RESTAURATION);
       } else {
         pousser(dernier.current);
         if (purgeCartes) marquerPurge(CLE_PURGE, VERSION_CORRECTIONS);
         if (purgeCom) marquerPurge(CLE_PURGE_COM, VERSION_COMMENTAIRES);
         marquerPurge(CLE_RESTAURATION_REV, VERSION_REVISIONS);
+        marquerPurge(CLE_RESTAURATION_TOUT, VERSION_RESTAURATION);
       }
 
       setSynchro("ok");
