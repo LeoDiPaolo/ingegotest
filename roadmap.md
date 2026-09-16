@@ -43,3 +43,4 @@
 - [x] Réserver une célébration renforcée à tous les paliers cumulés et conserver les confettis des badges de chapitre
 - [x] Enrichir les six questions annotées et retirer leurs commentaires traités
 - [x] Corriger le tirage pour servir réellement les chapitres actuellement les moins avancés
+- [x] Doubler les rappels, les rendre tous humoristiques et continuer après une mission

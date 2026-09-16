@@ -65,8 +65,8 @@ export const testerRappel = createServerFn({ method: "POST" })
   .handler(async ({ data }) => {
     const { envoyerAuxAbonnements } = await import("./push.server");
     return envoyerAuxAbonnements(data.cle, {
-      titre: "IngéGo",
-      corps: "Notification de test : tout fonctionne.",
+      titre: "IngéGo a retrouvé le bouton rouge",
+      corps: "Test réussi : Éric appuie, Ramzy reçoit, Alain Chabat demande les droits.",
       tag: "ingego-test",
     });
   });
