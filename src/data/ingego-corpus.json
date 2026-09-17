@@ -3514,7 +3514,7 @@
         "Le plan pluriannuel d'investissement établi par la collectivité"
       ],
       "bonneReponse": 1,
-      "explication": "Les autorisations de programme et crédits de paiement (AP/CP) permettent de voter le coût total d'une opération d'investissement pluriannuelle et de n'inscrire chaque année que les crédits de paiement correspondants.\n- Ce dispositif évite le report de crédits inutilisés d'un exercice à l'autre.\n- Le plan pluriannuel d'investissement (PPI) reste un document de programmation politique sans portée budgétaire propre : il ne faut pas le confondre avec l'outil juridique que sont les AP/CP.",
+      "explication": "Les autorisations de programme et crédits de paiement (AP/CP) permettent de voter le coût total d'une opération d'investissement pluriannuelle et de n'inscrire chaque année que les crédits de paiement correspondant aux décaissements prévus.\n- Ce que cela change pour un service technique : en budget annuel classique, la totalité du marché doit être inscrite sur l'exercice, les crédits non consommés tombent en fin d'année et doivent être reportés ou revotés ; un retard de chantier oblige à repasser en décision modificative. En AP/CP, l'autorisation de programme reste ouverte sur toute la durée de l'opération : le service peut engager juridiquement le marché sur plusieurs années et n'ajuste que l'échéancier des crédits de paiement quand le chantier glisse.\n- L'AP/CP sécurise donc la signature de marchés pluriannuels et évite l'artifice des reports de crédits, au prix d'un suivi rigoureux de l'échéancier par opération.\n- Le plan pluriannuel d'investissement (PPI) reste un document de programmation politique sans portée budgétaire propre : il ne faut pas le confondre avec l'outil juridique que sont les AP/CP.",
       "aVerifier": false,
       "derniereVerification": "2026-09"
     },
@@ -18430,8 +18430,8 @@
       "curseur": {
         "titre": "Rayon de co-visibilité par défaut",
         "unite": "mètres",
-        "min": 0,
-        "max": 1000,
+        "min": 100,
+        "max": 1500,
         "pas": 100,
         "cible": 500,
         "tolerance": 0,
@@ -19491,7 +19491,7 @@
         "La loi Climat et résilience"
       ],
       "bonneReponse": 1,
-      "explication": "Le bail vert a été instauré par la loi n°2010-788 du 12 juillet 2010, dite loi Grenelle II. Ce texte, qui a inscrit le dispositif dans le code de l'environnement, décline en mesures concrètes les objectifs fixés un an plus tôt par la loi Grenelle I — Légifrance. Les deux lois se distinguent ainsi : Grenelle I (2009) fixe les objectifs, Grenelle II (2010) en organise l'application, dont le bail vert. En savoir plus — loi Grenelle II : loi de programmation du 12 juillet 2010 portant engagement national pour l'environnement, qui décline en mesures concrètes les objectifs fixés par la loi Grenelle I de 2009.",
+      "explication": "Le bail vert a été instauré par la loi n°2010-788 du 12 juillet 2010, dite loi Grenelle II, qui l'a inscrit dans le code de l'environnement (article L125-9) — Légifrance.\n- Grenelle I (loi du 3 août 2009) fixe les objectifs : elle engage l'État et les collectivités à réduire d'au moins 38 % les consommations d'énergie du parc bâti existant d'ici 2020 et impose la rénovation de tous les bâtiments de l'État et de ses établissements publics. Elle n'a pas de portée opérationnelle directe pour un service technique : c'est une loi de programmation.\n- Grenelle II (loi du 12 juillet 2010) décline ces objectifs en obligations applicables. Pour une collectivité, elle se traduit concrètement par : l'annexe environnementale obligatoire (bail vert) pour toute location de plus de 2 000 m² de bureaux ou de commerces, y compris quand la collectivité est bailleur ou preneur ; l'obligation d'un plan climat-air-énergie territorial pour les collectivités de plus de 50 000 habitants ; le schéma régional du climat, de l'air et de l'énergie ; l'affichage du DPE et l'encadrement de la publicité extérieure.\n- L'annexe environnementale organise l'échange de données de consommation entre bailleur et preneur et permet de convenir d'un programme d'actions d'amélioration ; elle est le support contractuel du dialogue énergétique sur un bâtiment loué.",
       "derniereVerification": "2026-09",
       "aVerifier": null
     },
@@ -22521,7 +22521,7 @@
       "sujet": "form-dispositifs",
       "niveau": 3,
       "famille": "S",
-      "explication": "La formation d'intégration dure 5 jours pour les agents de catégorie C, quel que soit leur grade, et 10 jours pour les catégories A et B depuis le 1er janvier 2016. Elle intervient la première année suivant la nomination dans le cadre d'emplois (ou le recrutement pour les contractuels concernés) et conditionne la titularisation.",
+      "explication": "La formation d'intégration dure 5 jours pour les agents de catégorie C, quel que soit leur grade, et 10 jours pour les catégories A et B depuis le 1er janvier 2016. Elle intervient la première année suivant la nomination dans le cadre d'emplois (ou le recrutement pour les contractuels concernés) et conditionne la titularisation.\n- Qui l'organise : c'est une formation statutaire obligatoire assurée par le CNFPT, organisme extérieur à la collectivité employeuse, et financée par la cotisation obligatoire versée par l'employeur. L'agent y est inscrit par sa collectivité mais la suit hors de son service.\n- À distinguer de l'accueil interne organisé par la collectivité (présentation des services, du règlement intérieur, du poste), qui n'a aucune valeur statutaire et ne remplace pas la formation d'intégration.\n- À distinguer aussi de la formation de professionnalisation, également assurée par le CNFPT mais tout au long de la carrière, et des formations de perfectionnement demandées par l'agent ou l'employeur, qui peuvent être confiées à des organismes privés.",
       "derniereVerification": "2026-09",
       "aVerifier": null,
       "type": "graphe",
