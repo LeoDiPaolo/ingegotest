@@ -325,7 +325,7 @@ export function useDonnees() {
         };
         const fusion = restaurerToutesValidations(
           restaurerValidationsRevues(
-            purger(fusionner(dernier.current, distant), purgeCom),
+            elaguer(purger(fusionner(dernier.current, distant), purgeCom)),
             Date.now(),
           ),
         );
