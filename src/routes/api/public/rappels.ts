@@ -194,12 +194,12 @@ function texteObjectif(objectif: ObjectifProgression | null, graine: number): st
   if (!objectif) {
     return piocher(
       [
-        "— C'est terminé. — Quoi ? — Tout. — Le corpus ? — Oui. — Ah. Là c'est embêtant.",
-        "— Il reste des questions ? — Non. — T'es sûr ? — Absolument pas. — Alors ? — Si, je suis sûr.",
-        "— Vous avez tout validé ? — Oui. — Vraiment tout ? — Oui. — Alors on fait quoi ? — On recommence à s'inquiéter.",
-        "— Le jury a une question. — Laquelle ? — Il cherche encore.",
-        "— Tu veux une médaille ? — Non. — Pourquoi ? — Elle serait redondante avec 100 %.",
-        "— Objectif atteint. — Et maintenant ? — Maintenant, c'est le concours qui a peur.",
+        "Tout est validé. Le jury va devoir inventer de nouvelles questions.",
+        "100 % du corpus. À ce stade, ce serait à toi de corriger les copies.",
+        "Plus une seule question en jeu. Silence radio du côté du concours.",
+        "Corpus terminé. Tu peux désormais ennuyer tes collègues avec de vraies certitudes.",
+        "Tout validé, aucune réserve. Réception prononcée sans procès-verbal.",
+        "Fin du corpus. La suite s'appelle le concours, et il n'a rien vu venir.",
       ],
       graine,
     );
