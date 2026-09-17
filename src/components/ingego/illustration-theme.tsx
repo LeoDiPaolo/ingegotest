@@ -93,18 +93,6 @@ const TABLE: Record<string, Ill[]> = {
     I(finances, "Budget et finances d'une collectivité"),
     I(territoires, "Débats sur l'organisation territoriale"),
   ],
-  A7: [
-    I(concours, "Préparation du concours : écrit et oral devant jury"),
-    I(territoires, "Institutions et décentralisation"),
-    I(territoires, "Collectivités, EPCI et répartition des compétences"),
-    I(servicePublic, "Accueil des usagers d'un service public"),
-    I(statut, "Accès, droits et carrière dans la fonction publique"),
-    I(actes, "Pouvoirs du maire et actes locaux"),
-    I(finances, "Budget et finances locales"),
-    I(marches, "Marchés publics et loi MOP"),
-    I(urbanisme, "Urbanisme, ERP et IGH"),
-    I(patrimoine, "Patrimoine bâti, transition et métiers du BTP"),
-  ],
   A8: [
     I(concours, "Lecture et cadrage du sujet de la note"),
     I(concours, "Plan, titres et forme de la copie"),

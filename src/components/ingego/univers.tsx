@@ -23,7 +23,6 @@ const ICONES: Record<string, LucideIcon> = {
   A4: Building2,
   A5: Leaf,
   A6: Landmark,
-  A7: BookOpenCheck,
   A8: GraduationCap,
   A9: Cpu,
 };

@@ -172,7 +172,7 @@ export function entrelacer(liste: Question[]): Question[] {
 /* Répartit une mission au prorata du poids réel de chaque sous-thème disponible.
    Chaque thème reçoit un quota = part du corpus actif × taille de la mission,
    réparti à la plus forte moyenne (partie entière puis restes décroissants).
-   Un gros thème (ex. le Guide, ~43 % du corpus) obtient ainsi plusieurs
+   Un gros thème obtient ainsi plusieurs
    questions par mission, alors qu'un petit thème n'en donne qu'une de temps
    en temps : la graine fait tourner les restes d'une mission à l'autre. */
 export function repartirParTheme(
@@ -251,7 +251,7 @@ export function repartirParTheme(
    déjà réservées dans cette mission) est le plus bas. Le remplissage se fait
    donc par nivellement : un chapitre en retard reçoit les places jusqu'à
    rejoindre les autres, puis les places repassent au suivant. Aucun chapitre
-   n'est traité à part : un gros chapitre déjà avancé (Guide) ne revient que
+   n'est traité à part : un gros chapitre déjà avancé ne revient que
    lorsque son pourcentage redevient le plus bas. En cas d'égalité, les places
    tournent entre les chapitres concernés. À l'intérieur d'un chapitre, la
    répartition reste proportionnelle aux thèmes. */
@@ -410,7 +410,7 @@ export function melange<T>(arr: T[], graine: number): T[] {
 export const jourDe = (t: number) => new Date(t).toISOString().slice(0, 10);
 
 export const REGLAGES_DEFAUT: Reglages = {
-  axes: ["A1", "A2", "A3", "A4", "A5", "A6", "A7", "A8", "A9"],
+  axes: ["A1", "A2", "A3", "A4", "A5", "A6", "A8", "A9"],
   familles: ["S", "M", "E"],
   types: [
     "qcm",
