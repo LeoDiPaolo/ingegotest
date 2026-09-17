@@ -298,7 +298,7 @@ export function useDonnees() {
        nouvelle observation sur la même question doit pouvoir être conservée. */
     const purgeCom = aPurger(CLE_PURGE_COM, VERSION_COMMENTAIRES);
     const local = restaurerToutesValidations(
-      restaurerValidationsRevues(purger(lireLocal(), purgeCom), Date.now()),
+      restaurerValidationsRevues(elaguer(purger(lireLocal(), purgeCom)), Date.now()),
     );
     setDonnees(local);
     dernier.current = local;
