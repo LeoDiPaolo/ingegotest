@@ -137,21 +137,43 @@ function restaurerValidationsRevues(d: Donnees, maintenant: number): Donnees {
    délimitent les missions. La carte est alors rétablie définitivement
    (échéance JAMAIS) sans revenir en jeu. Ce filet tourne à chaque chargement :
    une validation prouvée par le journal ne peut plus disparaître. */
-function restaurerToutesValidations(d: Donnees): Donnees {
+export function restaurerToutesValidations(d: Donnees): Donnees {
   const journal = [...d.journal]
     .filter((e) => e && typeof e.t === "number")
     .sort((a, b) => a.t - b.t);
 
-  /* Première réponse de chaque question dans chaque mission. */
+  /* Les anciennes versions n'enregistraient qu'une fin de mission par jour.
+     On reconstitue donc aussi les missions historiques : 8 questions uniques,
+     puis toutes les reprises résolues. Une longue interruption sépare deux
+     missions anciennes même si leur marqueur manque. */
   const premieres = new Map<string, Entree>();
   let mission = 0;
+  let precedente = 0;
+  let vues = new Set<string>();
+  let erreurs = new Set<string>();
+  const tailleMission = Math.max(1, d.reglages.parSession || 8);
+  const nouvelleMission = () => {
+    mission += 1;
+    vues = new Set<string>();
+    erreurs = new Set<string>();
+  };
+
   for (const e of journal) {
-    if (e.id === "__session") {
-      mission += 1;
+    if (e.id === "__mission_start" || e.id === "__session") {
+      nouvelleMission();
+      precedente = e.t;
       continue;
+    }
+    if (precedente && e.t - precedente > 2 * 60 * 60 * 1000 && vues.size) {
+      nouvelleMission();
     }
     const k = `${e.id}|${mission}`;
     if (!premieres.has(k)) premieres.set(k, e);
+    vues.add(e.id);
+    if (e.note <= 0) erreurs.add(e.id);
+    else erreurs.delete(e.id);
+    precedente = e.t;
+    if (vues.size >= tailleMission && erreurs.size === 0) nouvelleMission();
   }
 
   const validees = new Map<string, number>();
@@ -196,7 +218,12 @@ function fusionner(local: Donnees, distant: Donnees): Donnees {
   const cartes: Etat = { ...distant.cartes };
   for (const [id, c] of Object.entries(local.cartes)) {
     const d = cartes[id];
-    if (!d || (c as Carte).dernier >= d.dernier) cartes[id] = c;
+    const locale = c as Carte;
+    /* Une copie plus récente ne peut jamais écraser une validation définitive
+       provenant de l'autre copie. */
+    if (!d || locale.du >= JAMAIS || (d.du < JAMAIS && locale.dernier >= d.dernier)) {
+      cartes[id] = locale;
+    }
   }
   const vus = new Set<string>();
   const journal = [...distant.journal, ...local.journal]

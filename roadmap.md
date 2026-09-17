@@ -44,3 +44,4 @@
 - [x] Enrichir les six questions annotées et retirer leurs commentaires traités
 - [x] Corriger le tirage pour servir réellement les chapitres actuellement les moins avancés
 - [x] Doubler les rappels, les rendre tous humoristiques et continuer après une mission
+- [x] Verrouiller définitivement les validations et séparer chaque mission dans l'historique
