@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { ecrireEtat, lireEtat } from "./etat.functions";
 import { JAMAIS, JOUR, normaliserReglages, type Carte, type Etat, type Reglages } from "./algo";
+import { CORPUS } from "./corpus";
 import {
   COMMENTAIRES_TRAITES,
   IDS_REVUS,
