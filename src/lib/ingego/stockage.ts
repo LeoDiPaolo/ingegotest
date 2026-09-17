@@ -131,21 +131,25 @@ function restaurerValidationsRevues(d: Donnees, maintenant: number): Donnees {
   return { ...d, cartes };
 }
 
-/* Rattrapage général : certaines cartes ont disparu lors d'anciennes purges
-   alors que le journal prouve une validation. Une question est considérée
-   validée du premier coup dès qu'une journée commence par une réussite sur
-   cette question (les reprises du même jour suivent l'échec, jamais l'inverse).
-   On la rétablit définitivement (échéance JAMAIS) sans la remettre en jeu.
-   Ce filet tourne à chaque chargement : une validation prouvée par le journal
-   ne peut donc plus disparaître, quelle que soit la mise à jour. */
+/* Rattrapage général : une question est validée dès qu'elle a été réussie au
+   premier passage d'une mission (et non d'une journée : plusieurs missions
+   peuvent avoir lieu le même jour). Les repères "__session" du journal
+   délimitent les missions. La carte est alors rétablie définitivement
+   (échéance JAMAIS) sans revenir en jeu. Ce filet tourne à chaque chargement :
+   une validation prouvée par le journal ne peut plus disparaître. */
 function restaurerToutesValidations(d: Donnees): Donnees {
-  /* Première réponse de chaque question pour chaque jour. */
+  const journal = [...d.journal].filter((e) => e && typeof e.t === "number").sort((a, b) => a.t - b.t);
+
+  /* Première réponse de chaque question dans chaque mission. */
   const premieres = new Map<string, Entree>();
-  for (const e of d.journal) {
-    if (!e || e.id === "__session" || !e.jour) continue;
-    const k = `${e.id}|${e.jour}`;
-    const actuelle = premieres.get(k);
-    if (!actuelle || e.t < actuelle.t) premieres.set(k, e);
+  let mission = 0;
+  for (const e of journal) {
+    if (e.id === "__session") {
+      mission += 1;
+      continue;
+    }
+    const k = `${e.id}|${mission}`;
+    if (!premieres.has(k)) premieres.set(k, e);
   }
 
   const validees = new Map<string, number>();
@@ -156,19 +160,15 @@ function restaurerToutesValidations(d: Donnees): Donnees {
 
   const cartes = { ...d.cartes };
   for (const [id, t] of validees) {
-    if (cartes[id]) continue;
-    cartes[id] = {
-      p: 1,
-      e: 2.3,
-      du: JAMAIS,
-      reps: 1,
-      echecs: 0,
-      vu: true,
-      dernier: t,
-    };
+    const existante = cartes[id];
+    if (existante && existante.du >= JAMAIS) continue;
+    cartes[id] = existante
+      ? { ...existante, p: Math.max(existante.p, 1), du: JAMAIS, vu: true }
+      : { p: 1, e: 2.3, du: JAMAIS, reps: 1, echecs: 0, vu: true, dernier: t };
   }
   return { ...d, cartes };
 }
+
 
 function marquerPurge(cle: string, version: string) {
   try {
