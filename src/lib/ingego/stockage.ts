@@ -138,7 +138,9 @@ function restaurerValidationsRevues(d: Donnees, maintenant: number): Donnees {
    (échéance JAMAIS) sans revenir en jeu. Ce filet tourne à chaque chargement :
    une validation prouvée par le journal ne peut plus disparaître. */
 function restaurerToutesValidations(d: Donnees): Donnees {
-  const journal = [...d.journal].filter((e) => e && typeof e.t === "number").sort((a, b) => a.t - b.t);
+  const journal = [...d.journal]
+    .filter((e) => e && typeof e.t === "number")
+    .sort((a, b) => a.t - b.t);
 
   /* Première réponse de chaque question dans chaque mission. */
   const premieres = new Map<string, Entree>();
@@ -168,7 +170,6 @@ function restaurerToutesValidations(d: Donnees): Donnees {
   }
   return { ...d, cartes };
 }
-
 
 function marquerPurge(cle: string, version: string) {
   try {
