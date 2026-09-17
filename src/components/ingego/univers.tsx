@@ -1,6 +1,5 @@
 import {
   Award,
-  BookOpenCheck,
   Building2,
   FileCheck2,
   Gavel,
