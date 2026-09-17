@@ -68,6 +68,7 @@ export const Route = createFileRoute("/")({
 });
 
 const MARQUE_SESSION = "__session";
+const MARQUE_DEBUT_MISSION = "__mission_start";
 
 /* Titres de mission : un intitulé différent chaque jour, tiré de façon
    déterministe pour rester stable pendant la journée. Deux familles selon
@@ -181,6 +182,15 @@ function Reviser() {
   function demarrer() {
     const lot = composerSession(donnees.cartes, donnees.reglages, Date.now());
     if (!lot.length) return;
+    const maintenant = Date.now();
+    const jour = new Date(maintenant).toISOString().slice(0, 10);
+    maj((d) => ({
+      ...d,
+      journal: [
+        ...d.journal,
+        { id: MARQUE_DEBUT_MISSION, note: 1, jour, t: maintenant },
+      ].slice(-20000),
+    }));
     setOrdre(lot);
     setI(0);
     setFaits([]);
@@ -238,14 +248,13 @@ function Reviser() {
 
     if (i + 1 >= suite.length) {
       const jour = new Date(maintenant).toISOString().slice(0, 10);
-      maj((d) =>
-        d.journal.some((e) => e.id === MARQUE_SESSION && e.jour === jour)
-          ? d
-          : {
-              ...d,
-              journal: [...d.journal, { id: MARQUE_SESSION, note: 1, jour, t: maintenant }],
-            },
-      );
+      maj((d) => ({
+        ...d,
+        journal: [
+          ...d.journal,
+          { id: MARQUE_SESSION, note: 1, jour, t: maintenant },
+        ].slice(-20000),
+      }));
       setFini(true);
     } else {
       setI(i + 1);

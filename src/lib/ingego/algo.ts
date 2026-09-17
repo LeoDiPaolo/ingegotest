@@ -57,6 +57,12 @@ export function planifier(
   maintenant: number,
   validationPremierCoup = true,
 ): Carte {
+  /* Une validation définitive est monotone. Une mission déjà ouverte dans un
+     ancien onglet peut encore contenir la question : sa réponse ne doit jamais
+     pouvoir remettre la carte en jeu. */
+  if (c.du >= JAMAIS) {
+    return { ...c, p: Math.max(c.p, 1), du: JAMAIS, vu: true };
+  }
   const n = { ...c, vu: true, reps: c.reps + 1, dernier: maintenant };
   if (note === 0) {
     n.p = 0;
