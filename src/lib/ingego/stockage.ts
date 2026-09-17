@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { ecrireEtat, lireEtat } from "./etat.functions";
 import { JAMAIS, JOUR, normaliserReglages, type Carte, type Etat, type Reglages } from "./algo";
+import { CORPUS } from "./corpus";
 import {
   COMMENTAIRES_TRAITES,
   IDS_REVUS,
@@ -201,6 +202,22 @@ function marquerPurge(cle: string, version: string) {
   }
 }
 
+/* Alignement des compteurs : les questions retirées du corpus (doublons
+   supprimés) laissaient des cartes et des entrées de journal orphelines. Elles
+   n'apparaissent nulle part dans l'application mais gonflaient les totaux
+   enregistrés. On les élague à chaque chargement pour que le compte affiché,
+   le compte local et le compte serveur soient toujours identiques. */
+const MARQUEURS = new Set(["__session", "__mission_start"]);
+function elaguer(d: Donnees): Donnees {
+  const connus = new Set(CORPUS.map((q) => q.id));
+  const cartes: Etat = {};
+  for (const [id, c] of Object.entries(d.cartes)) if (connus.has(id)) cartes[id] = c as Carte;
+  const journal = d.journal.filter((e) => connus.has(e.id) || MARQUEURS.has(e.id));
+  const commentaires: Record<string, string> = {};
+  for (const [id, v] of Object.entries(d.commentaires)) if (connus.has(id)) commentaires[id] = v;
+  return { ...d, cartes, journal, commentaires };
+}
+
 /* Une correction de contenu ne retire plus jamais une carte : seules les
    observations déjà traitées sont nettoyées. */
 function purger(d: Donnees, purgeCom: boolean): Donnees {
@@ -281,7 +298,7 @@ export function useDonnees() {
        nouvelle observation sur la même question doit pouvoir être conservée. */
     const purgeCom = aPurger(CLE_PURGE_COM, VERSION_COMMENTAIRES);
     const local = restaurerToutesValidations(
-      restaurerValidationsRevues(purger(lireLocal(), purgeCom), Date.now()),
+      restaurerValidationsRevues(elaguer(purger(lireLocal(), purgeCom)), Date.now()),
     );
     setDonnees(local);
     dernier.current = local;
@@ -308,7 +325,7 @@ export function useDonnees() {
         };
         const fusion = restaurerToutesValidations(
           restaurerValidationsRevues(
-            purger(fusionner(dernier.current, distant), purgeCom),
+            elaguer(purger(fusionner(dernier.current, distant), purgeCom)),
             Date.now(),
           ),
         );
