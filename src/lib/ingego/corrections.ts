@@ -5,9 +5,17 @@
 
 /* Commentaires déjà traités : une fois la question corrigée, l'observation
    n'a plus lieu d'être et disparaît de l'appareil à la prochaine ouverture. */
-export const VERSION_COMMENTAIRES = "2026-09-17a";
+export const VERSION_COMMENTAIRES = "2026-09-17b";
 
 export const COMMENTAIRES_TRAITES: string[] = [
+  "pat-44",
+  "pat-40",
+  "m3-20",
+  "a4-99",
+  "fr-01",
+  "a6-27",
+  "a6-prev-01",
+
   "e-07",
   "a2-02",
   "a2-96",
