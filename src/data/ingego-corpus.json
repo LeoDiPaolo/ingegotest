@@ -3161,10 +3161,10 @@
       "type": "qcm",
       "question": "Une exclusion temporaire de fonctions de trois jours relève :",
       "options": [
-        "du premier groupe de sanctions, sans consultation du conseil de discipline",
-        "du deuxième groupe de sanctions, avec conseil de discipline",
-        "du troisième groupe de sanctions",
-        "du quatrième groupe de sanctions"
+        "du premier groupe, prononcé sans consultation préalable du conseil de discipline",
+        "du deuxième groupe, prononcé après avis obligatoire du conseil de discipline",
+        "du troisième groupe, réservé aux exclusions de seize jours à deux ans",
+        "du quatrième groupe, qui comprend la mise à la retraite d'office et la révocation"
       ],
       "bonneReponse": 0,
       "explication": "Le premier groupe comprend l'avertissement, le blâme et l'exclusion temporaire de fonctions de trois jours maximum ; il ne nécessite pas de conseil de discipline. Les groupes 2 à 4, jusqu'à la révocation, l'exigent. Dans tous les cas, la communication du dossier et l'assistance d'un défenseur sont de droit.",
@@ -3248,7 +3248,7 @@
         "Elles s'imposent directement aux délibérations prises par le conseil municipal"
       ],
       "bonneReponse": 1,
-      "explication": "Les LDG sont arrêtées par l'autorité territoriale après avis du CST. Les CAP subsistent mais leur champ est recentré sur les situations individuelles défavorables : discipline, refus de titularisation, licenciement pour insuffisance professionnelle. C'est un déplacement du contrôle collectif a priori vers un recours individuel a posteriori — l'un des points les plus débattus de la réforme de 2019.",
+      "explication": "Les LDG (lignes directrices de gestion) sont le document par lequel l'autorité territoriale fixe, après avis du CST, sa stratégie pluriannuelle de ressources humaines et ses critères de promotion et d'avancement. Les CAP (commissions administratives paritaires) sont les instances où siègent à parité représentants de la collectivité et des agents ; elles existent toujours mais leur champ est recentré sur les décisions individuelles défavorables : discipline, refus de titularisation, licenciement pour insuffisance professionnelle, refus de temps partiel ou de télétravail. Le débat porte sur ce transfert. Côté employeurs : les CAP allongeaient les délais, traitaient des milliers de dossiers de façon formelle et empêchaient une gestion RH lisible ; les LDG rendent les critères publics et opposables, et le juge peut les contrôler. Côté organisations syndicales : supprimer l'examen des mutations et des promotions en CAP fait disparaître le seul contrôle collectif a priori, laisse l'agent découvrir la décision une fois prise et déplace le débat vers un recours individuel a posteriori, plus coûteux et plus rare. C'est l'un des points les plus discutés de la loi de transformation de la fonction publique de 2019.",
       "aVerifier": false,
       "derniereVerification": "2026-09"
     },
@@ -5118,7 +5118,7 @@
         ],
         ["2022", "Loi 3DS : différenciation, décentralisation, déconcentration"]
       ],
-      "explication": "Le récit attendu à l'oral tient en trois temps : 1982 libère, 2003 constitutionnalise, 2015 referme en clarifiant les compétences. La loi 3DS de 2022 ouvre un quatrième temps, celui de la différenciation, dont le bilan reste à faire.",
+      "explication": "Chaque étape a un contenu précis. 1982, loi Defferre : suppression de la tutelle a priori du préfet (remplacée par le contrôle de légalité a posteriori), la région devient collectivité territoriale et l'exécutif départemental passe du préfet au président du conseil général. 1983, lois Defferre II : premiers blocs de compétences — urbanisme et action sociale aux communes et départements, formation professionnelle aux régions, écoles/collèges/lycées répartis entre les trois niveaux. 2003, révision constitutionnelle : l'article 1er inscrit l'organisation décentralisée de la République, avec l'autonomie financière, le droit à l'expérimentation et le référendum local. 2004, acte II : transfert des routes nationales, des TOS de l'éducation nationale et du RMI aux départements. 2014, loi MAPTAM : création du statut de métropole, rétablissement de la clause générale de compétence et désignation de chefs de file par politique publique. 2015, loi NOTRe : 13 régions au lieu de 22, suppression de la clause générale de compétence pour les départements et les régions, transfert de l'économie et des transports interurbains aux régions. 2022, loi 3DS : différenciation des compétences selon les territoires, transferts ciblés (routes nationales, logement social, santé) et déconcentration renforcée. Les trois lois à connaître par cœur restent 1982, 2015 et 2022.",
       "aVerifier": false,
       "derniereVerification": "2026-09"
     },
@@ -15309,10 +15309,10 @@
       "type": "qcm",
       "question": "Un acheteur passe un achat « clé en main » directement via une centrale d'achat. Doit-il lui-même rédiger une clause et un critère environnementaux au titre de l'article 35 ?",
       "options": [
-        "Oui, systématiquement, quelle que soit la centrale utilisée",
-        "Non, les achats via centrale sont hors champ de l'article 35",
-        "Oui, mais uniquement pour le critère, la clause restant à la charge de la centrale",
-        "Non : ce sont les clauses et critères prévus par la centrale qui s'appliquent automatiquement, dès lors qu'elle respecte l'article 35"
+        "Oui, systématiquement, quelle que soit la centrale d'achat utilisée par l'acheteur",
+        "Non : les achats passés par une centrale d'achat sont hors du champ de l'article 35",
+        "Oui pour le critère seulement, la clause restant à la charge de la centrale d'achat",
+        "Non : les clauses et critères de la centrale s'appliquent si elle respecte l'article 35"
       ],
       "bonneReponse": 3,
       "explication": "Pour les achats « clé en main » passés directement via une centrale d'achat, ce sont les clauses et les critères prévus par la centrale qui s'appliquent automatiquement. En recourant à une centrale qui respecte les obligations de l'article 35, l'acheteur est en conformité avec ses propres obligations.",
@@ -15351,10 +15351,10 @@
       "type": "qcm",
       "question": "Un acheteur exige un label environnemental spécifique pour répondre à l'article 35. Que doit-il vérifier ?",
       "options": [
-        "Rien : toute référence à un label suffit automatiquement à répondre à l'obligation",
-        "Uniquement l'authenticité du label auprès de l'organisme certificateur",
-        "Si ce n'est pas un label recommandé par l'ADEME (comme l'écolabel européen), il doit vérifier lui-même le label, le label équivalent ou les moyens de preuve produits",
-        "Rien, la vérification incombe exclusivement au candidat sous sa responsabilité"
+        "Rien : une simple référence à un label suffit à satisfaire l'obligation de l'article 35",
+        "Uniquement l'authenticité du label auprès de l'organisme certificateur qui le délivre",
+        "Hors labels recommandés par l'ADEME, il vérifie le label, un équivalent ou les preuves",
+        "Rien : la vérification incombe au seul candidat, sous sa propre responsabilité"
       ],
       "bonneReponse": 2,
       "explication": "Les labels recommandés par l'ADEME (écolabel européen notamment) et leurs moyens de preuve associés suffisent à répondre à l'article 35. Dans les autres cas, l'acheteur doit vérifier lui-même le label exigé, tout label équivalent proposé, ou les moyens de preuve attestant des caractéristiques attendues : une simple référence à un label ne suffit pas nécessairement.",
@@ -15372,10 +15372,10 @@
       "type": "qcm",
       "question": "Un marché dont l'objet est directement la dépollution des sols permet-il de valoriser plus facilement la clause environnementale de l'article 35 ?",
       "options": [
-        "Non, l'objet du marché n'a aucune incidence sur la clause environnementale",
-        "Oui, mais uniquement si le montant dépasse le seuil européen",
-        "Non, seule une prestation d'étude de la biodiversité est valorisable à ce titre",
-        "Oui : si le marché a directement pour objet la protection de l'environnement ou un impact social, cela est valorisable au titre des clauses"
+        "Non : l'objet du marché n'a aucune incidence sur la clause environnementale exigée",
+        "Oui, mais uniquement si le montant dépasse le seuil de procédure formalisée",
+        "Non : seule une prestation d'étude de la biodiversité est valorisable à ce titre",
+        "Oui : un marché ayant pour objet la protection de l'environnement est valorisable"
       ],
       "bonneReponse": 3,
       "explication": "Si le marché a directement pour objet la valorisation et la protection de l'environnement ou la création d'un impact social (dépollution des sols, construction bas carbone, marché d'insertion professionnelle), cela est valorisable au titre des clauses. À l'inverse, une simple prestation d'étude de la biodiversité ou des travaux de promenade végétalisée ne suffisent pas. En savoir plus — faut-il quand même écrire une clause ? Oui. L'obligation résulte de l'article 35 de la loi Climat et résilience du 22 août 2021, codifié à l'article L. 2112-2 du code de la commande publique : « Les conditions d'exécution prennent en compte des considérations relatives à l'environnement » — la loi vise les conditions d'exécution du marché, c'est-à-dire une clause figurant dans les pièces contractuelles (CCAP, CCTP), et non le seul objet du marché. Un objet déjà environnemental facilite et crédibilise la rédaction de cette clause, mais ne dispense pas de l'insérer explicitement, ni de prévoir des modalités de suivi et de sanction. Exemples concrets de clauses : sur un marché de dépollution des sols, on peut exiger un diagnostic des terres excavées (analyse des pollutions avant travaux), un plan de gestion des terres avec traçabilité des déblais (sortie, transport, traitement ou mise en décharge), une filière de valorisation privilégiée lorsque la qualité des sols le permet, ou encore une clause de récolement final avec rapport de réhabilitation. Sur un marché de construction bas carbone, on peut imposer un seuil maximal d'émissions de GES (par exemple un BEPOS ou un niveau de performance carbone chiffré), un taux minimal de matériaux biosourcés ou recyclés, ou une clause de traçabilité des matériaux via les FDES/PEP. Sur un marché de rénovation énergétique, on peut prévoir des objectifs de consommation énergétique après travaux, une clause de garantie des résultats énergétiques, ou un plan de gestion des déchets du BTP avec taux de valorisation. À noter : l'obligation s'applique à tous les marchés à compter du 22 août 2026 (article 35 III de la loi et décret n° 2022-767) ; le critère environnemental d'attribution (L. 2152-7) obéit, lui, à une logique distincte.",
@@ -15569,10 +15569,10 @@
       "type": "qcm",
       "question": "Une clause imposant le respect de la réglementation applicable au tri des déchets peut-elle être valorisée comme condition d'exécution environnementale au titre de l'article 35 ?",
       "options": [
-        "Non, sauf si l'acheteur va au-delà de cette réglementation, qui s'impose déjà aux opérateurs indépendamment de l'achat",
-        "Oui, mais uniquement pour les marchés de travaux",
-        "Non, jamais, quelle que soit la formulation retenue",
-        "Oui, toute référence à une réglementation environnementale est valorisable"
+        "Non, sauf si l'acheteur va au-delà d'une réglementation qui s'impose déjà aux opérateurs",
+        "Oui, mais uniquement dans les marchés de travaux soumis au code de l'environnement",
+        "Non, en aucun cas, quelle que soit la formulation retenue au cahier des charges",
+        "Oui : toute référence à une réglementation environnementale est valorisable"
       ],
       "bonneReponse": 0,
       "explication": "Une réglementation s'imposant à certaines catégories de produits ou d'opérateurs, indépendamment de la démarche d'achat, ne peut définir à elle seule une condition d'exécution valorisable (ex : tri des déchets, usage des produits phytosanitaires). En revanche, si l'acheteur va au-delà de cette réglementation, la clause redevient valorisable. À l'inverse, une obligation propre à l'acheteur et à sa démarche d'achat (EGAlim, article 58 de la loi AGEC, verdissement de flotte) est valorisable en tant que telle.",
@@ -15590,10 +15590,10 @@
       "type": "qcm",
       "question": "Dans un accord-cadre à marchés subséquents, chaque marché subséquent doit-il redéfinir sa propre clause et son propre critère environnementaux ?",
       "options": [
-        "Non pour la clause si celle de l'accord-cadre est suffisamment précise ; le critère, lui, doit être défini au sein de l'accord-cadre et peut y être repris ou précisé pour chaque marché subséquent",
-        "Oui, systématiquement, la clause et le critère devant être propres à chaque marché subséquent",
-        "Non, ni la clause ni le critère n'ont besoin d'être redéfinis, l'accord-cadre suffit intégralement",
-        "Non, ces obligations ne s'appliquent pas aux accords-cadres à marchés subséquents"
+        "Non pour la clause si l'accord-cadre est précis ; le critère y est défini puis repris",
+        "Oui : la clause et le critère doivent être propres à chaque marché subséquent passé",
+        "Non : l'accord-cadre suffit intégralement, ni clause ni critère ne sont à reprendre",
+        "Non : ces obligations ne s'appliquent pas aux accords-cadres à marchés subséquents"
       ],
       "bonneReponse": 0,
       "explication": "Si la clause environnementale de l'accord-cadre est suffisamment précise, elle suffit pour les marchés subséquents. Pour le critère, en revanche, celui-ci doit être défini au sein de l'accord-cadre ; l'acheteur peut le reprendre tel quel ou indiquer qu'un critère spécifique, déjà précisé dans l'accord-cadre, sera utilisé pour la notation des marchés subséquents.",
@@ -17446,10 +17446,10 @@
       "type": "qcm",
       "question": "D'après les rapports de jury, pourquoi le candidat doit-il éviter de traiter le sujet uniquement sous l'angle technique ?",
       "options": [
-        "Parce que le barème ne note pas les aspects techniques",
-        "Parce que le jury est composé uniquement de non-techniciens",
-        "Parce que l'épreuve technique est déjà couverte par une autre épreuve du concours",
-        "Parce que la note doit être appréhendée de manière transversale, du point de vue du commanditaire et de tous les acteurs, y compris élus et citoyens"
+        "Parce que le barème de l'épreuve ne prend pas en compte les aspects techniques",
+        "Parce que le jury est exclusivement composé de membres non techniciens",
+        "Parce que la dimension technique est déjà évaluée par une autre épreuve du concours",
+        "Parce que la note s'apprécie de façon transversale : commanditaire, élus et citoyens"
       ],
       "bonneReponse": 3,
       "explication": "Les correcteurs demandent d'appréhender le sujet de manière transversale, en se plaçant du point de vue du commanditaire et en tenant compte de tous les acteurs, élus et citoyens compris, qui sont généralement les utilisateurs finaux des services. Source : CDG Loire-Atlantique, Rapport du président du jury, concours d'ingénieur territorial, session 2023, consulté le 10/09/2026, https://www.cdg44.fr/sites/default/files/content/fiche_concours_examens/pdf/Rapport%20jury%20INGE%2023.pdf",
@@ -17467,10 +17467,10 @@
       "type": "qcm",
       "question": "Qui est le destinataire principal que le candidat doit garder à l'esprit en rédigeant sa note ?",
       "options": [
-        "Le jury du concours en tant que tel",
+        "Le jury du concours, qui lit la copie en tant qu'instance d'évaluation",
         "Le commanditaire de la note, dans le contexte professionnel simulé par le sujet",
-        "Les autres candidats de la même spécialité",
-        "Le correcteur uniquement"
+        "Les autres candidats de la même spécialité, à qui la copie est comparée",
+        "Le seul correcteur, qui attend une démonstration de connaissances académiques"
       ],
       "bonneReponse": 1,
       "explication": "Les correcteurs insistent sur la nécessité de se placer du point de vue du commanditaire de la note, c'est-à-dire du destinataire professionnel fictif du document, et non du seul jury qui la corrige. Source : CDG Loire-Atlantique, Rapport du président du jury, concours d'ingénieur territorial, session 2023, consulté le 10/09/2026, https://www.cdg44.fr/sites/default/files/content/fiche_concours_examens/pdf/Rapport%20jury%20INGE%2023.pdf",
@@ -17509,10 +17509,10 @@
       "type": "qcm",
       "question": "Quelle erreur récurrente les correcteurs identifient-ils concernant le développement des idées dans la note ?",
       "options": [
-        "Les candidats ne citent jamais le dossier",
-        "Les candidats développent trop longuement chaque idée",
-        "Les candidats citent trop longuement le dossier",
-        "Les idées sont trop souvent survolées ou présentées sous forme d'énumérations plutôt que développées"
+        "Les candidats ne citent jamais les documents du dossier qui leur est remis",
+        "Les candidats développent trop longuement chacune des idées qu'ils avancent",
+        "Les candidats citent trop longuement le dossier au détriment de leur analyse",
+        "Les idées sont survolées ou énumérées en liste plutôt que réellement développées"
       ],
       "bonneReponse": 3,
       "explication": "Les rapports de jury relèvent, de session en session, que les copies ne sont pas suffisamment riches en informations, les idées étant survolées ou listées plutôt que réellement développées. Source : CDG Loire-Atlantique, Rapport du président du jury, concours d'ingénieur territorial, session 2023, consulté le 10/09/2026, https://www.cdg44.fr/sites/default/files/content/fiche_concours_examens/pdf/Rapport%20jury%20INGE%2023.pdf Source : CDG Auvergne-Rhône-Alpes, Rapport de la présidente du jury, concours d'ingénieur territorial, session 2019, consulté le 10/09/2026, https://www.cdg-aura.fr/file/7852/download?token=Uqaa2fQ2",
@@ -17530,10 +17530,10 @@
       "type": "qcm",
       "question": "Comment le jury 2023 (CDG Auvergne-Rhône-Alpes) qualifie-t-il l'évolution de la préparation des candidats sur la forme de leur copie (plan, titres, structuration) ?",
       "options": [
-        "En net recul par rapport aux sessions précédentes",
-        "Globalement bien maîtrisée et visible, mais une analyse plus fine du fond du sujet reste attendue",
-        "Absente dans la quasi-totalité des copies",
-        "Sans lien avec le niveau final obtenu à l'épreuve"
+        "En net recul par rapport aux sessions précédentes du même concours",
+        "Bien maîtrisée et visible, mais une analyse plus fine du fond reste attendue",
+        "Absente de la quasi-totalité des copies corrigées lors de cette session",
+        "Sans lien constaté avec la note finale obtenue par les candidats à l'épreuve"
       ],
       "bonneReponse": 1,
       "explication": "Le jury 2023 constate que la préparation est visible sur la forme (annonce du plan, titres, structuration en parties et sous-parties), mais qu'une analyse plus fine du sujet était attendue sur la partie informative. Source : CDG Auvergne-Rhône-Alpes, Rapport de la présidente du jury, concours d'ingénieur territorial, session 2023, consulté le 10/09/2026, https://www.cdg-aura.fr/sites/default/files/Rapport%20de%20jurys/2023-cingenieur_rapportpdte_jury.pdf",
@@ -17572,10 +17572,10 @@
       "type": "qcm",
       "question": "D'après le rapport de jury 2019, quel défaut fréquent affecte l'introduction des notes ?",
       "options": [
-        "Un manque de contextualisation du sujet, une problématique peu claire et une annonce du plan maladroite",
-        "Elle est trop longue par rapport au reste de la copie",
-        "Elle recopie l'énoncé du sujet mot pour mot",
-        "Elle est absente dans la totalité des copies"
+        "Un sujet peu contextualisé, une problématique floue et une annonce de plan maladroite",
+        "Une introduction trop longue au regard de l'équilibre général de la copie",
+        "Une introduction qui recopie mot pour mot l'énoncé du sujet sans reformulation",
+        "Une introduction absente de la totalité des copies rendues par les candidats"
       ],
       "bonneReponse": 0,
       "explication": "Beaucoup de candidats ne travaillent pas suffisamment l'introduction : manque de contextualisation du sujet, absence de problématique claire et affirmée, maladresse dans l'annonce du plan. Source : CDG Auvergne-Rhône-Alpes, Rapport de la présidente du jury, concours d'ingénieur territorial, session 2019, consulté le 10/09/2026, https://www.cdg-aura.fr/file/7852/download?token=Uqaa2fQ2",
@@ -17614,10 +17614,10 @@
       "type": "qcm",
       "question": "Selon les correcteurs, quel critère de forme, indépendant du contenu technique, pèse sur la notation de la note ?",
       "options": [
-        "La taille de l'écriture",
-        "La couleur du stylo utilisé",
-        "L'orthographe et la qualité de l'expression écrite",
-        "Le nombre de pages rendues"
+        "La taille de l'écriture manuscrite, appréciée par le correcteur de la copie",
+        "La couleur du stylo utilisé pour la rédaction de l'ensemble de la copie",
+        "L'orthographe et la qualité générale de l'expression écrite du candidat",
+        "Le nombre de pages rendues, comparé à la moyenne constatée des candidats"
       ],
       "bonneReponse": 2,
       "explication": "Les copies montrent parfois des lacunes en orthographe et une qualité d'expression médiocre ; de nombreuses copies sont pénalisées pour ce motif. Les futurs candidats sont invités à porter une attention particulière à l'orthographe. Source : CDG Auvergne-Rhône-Alpes, Rapport de la présidente du jury, concours d'ingénieur territorial, session 2019, consulté le 10/09/2026, https://www.cdg-aura.fr/file/7852/download?token=Uqaa2fQ2 Source : CDG Loire-Atlantique, Rapport du président du jury, concours d'ingénieur territorial, session 2023, consulté le 10/09/2026, https://www.cdg44.fr/sites/default/files/content/fiche_concours_examens/pdf/Rapport%20jury%20INGE%2023.pdf",
@@ -17635,10 +17635,10 @@
       "type": "qcm",
       "question": "Comment le dossier remis au candidat doit-il être exploité, d'après les rapports de jury successifs ?",
       "options": [
-        "Il doit être recopié intégralement dans la copie",
-        "Ses éléments essentiels doivent être utilisés et valorisés, notamment par des exemples ; trop de copies les occultent alors qu'ils sont présents",
-        "Il ne sert que de prétexte et son contenu n'est pas noté",
-        "Seule sa première page doit être analysée"
+        "Il doit être recopié intégralement, document par document, dans la copie",
+        "Ses éléments essentiels doivent être exploités et illustrés ; trop de copies les occultent",
+        "Il sert de prétexte et son contenu n'entre pas dans la notation de la copie",
+        "Seule sa première page doit être analysée, le reste servant de documentation"
       ],
       "bonneReponse": 1,
       "explication": "La partie note occulte souvent certaines informations pourtant présentes dans le dossier ; les correcteurs regrettent la faible valorisation des exemples qu'il contient. Source : CDG Loire-Atlantique, Rapport du président du jury, concours d'ingénieur territorial, session 2023, consulté le 10/09/2026, https://www.cdg44.fr/sites/default/files/content/fiche_concours_examens/pdf/Rapport%20jury%20INGE%2023.pdf Source : CDG Auvergne-Rhône-Alpes, Rapport de la présidente du jury, concours d'ingénieur territorial, session 2019, consulté le 10/09/2026, https://www.cdg-aura.fr/file/7852/download?token=Uqaa2fQ2",
@@ -17656,10 +17656,10 @@
       "type": "qcm",
       "question": "Un candidat rend une copie avec un plan apparent et des titres de parties clairs, mais une analyse superficielle du sujet. D'après le jury 2023, cette copie illustre :",
       "options": [
-        "Un profil de moins en moins fréquent chez les candidats",
-        "Une copie qui obtient systématiquement une note éliminatoire",
-        "Un cas hors barème, non noté par le jury",
-        "Un profil identifié par le jury : la forme est de mieux en mieux maîtrisée, mais le fond de l'analyse reste le point faible"
+        "Un profil devenu de moins en moins fréquent chez les candidats récents",
+        "Une copie qui obtient systématiquement une note éliminatoire à l'épreuve",
+        "Un cas hors barème, que le jury n'est pas en mesure de noter",
+        "Un profil courant : la forme est mieux maîtrisée, le fond reste le point faible"
       ],
       "bonneReponse": 3,
       "explication": "Le jury 2023 observe précisément ce profil : préparation visible sur la forme, mais analyse encore insuffisante sur le fond du sujet. Source : CDG Auvergne-Rhône-Alpes, Rapport de la présidente du jury, concours d'ingénieur territorial, session 2023, consulté le 10/09/2026, https://www.cdg-aura.fr/sites/default/files/Rapport%20de%20jurys/2023-cingenieur_rapportpdte_jury.pdf",
@@ -17677,10 +17677,10 @@
       "type": "qcm",
       "question": "Au-delà du fond, quelle exigence de présentation liée à la structuration de la copie les rapports de jury rappellent-ils explicitement ?",
       "options": [
-        "L'utilisation obligatoire d'une couleur différente par partie",
-        "Un nombre de pages imposé par le barème",
-        "La présence d'un plan apparent, structurant visiblement la copie en parties et sous-parties",
-        "La rédaction manuscrite en lettres capitales"
+        "L'utilisation obligatoire d'une couleur d'encre différente par partie",
+        "Le respect d'un nombre de pages imposé par le barème de l'épreuve",
+        "Un plan apparent, structurant visiblement la copie en parties et sous-parties",
+        "Une rédaction manuscrite intégralement en lettres capitales lisibles"
       ],
       "bonneReponse": 2,
       "explication": "Certains candidats ne se plient pas aux exigences formelles rappelées dans les notes de cadrage, par exemple la présence d'un plan apparent pour la note. Source : CDG Auvergne-Rhône-Alpes, Rapport de la présidente du jury, concours d'ingénieur territorial, session 2019, consulté le 10/09/2026, https://www.cdg-aura.fr/file/7852/download?token=Uqaa2fQ2",
@@ -17698,10 +17698,10 @@
       "type": "qcm",
       "question": "Le dossier remis au candidat pour l'épreuve de note est en général :",
       "options": [
-        "Très court, tenant sur une seule page",
-        "Volumineux, ce qui impose une lecture rapide orientée vers la recherche des informations essentielles",
-        "Inexistant, la note se rédige uniquement à partir de connaissances générales",
-        "Fourni uniquement sous forme d'un tableau de chiffres"
+        "Très court, tenant sur une page, ce qui impose de mobiliser ses connaissances",
+        "Volumineux, ce qui impose une lecture rapide ciblée sur les informations utiles",
+        "Inexistant : la note se rédige uniquement à partir de connaissances générales",
+        "Réduit à un tableau de données chiffrées à commenter dans la copie"
       ],
       "bonneReponse": 1,
       "explication": "Les dossiers sont souvent volumineux et leur lecture intégrale se révèle chronophage ; les candidats doivent savoir opérer une lecture rapide, orientée vers la recherche des informations essentielles. Source : CDG Auvergne-Rhône-Alpes, Rapport de la présidente du jury, concours d'ingénieur territorial, session 2019, consulté le 10/09/2026, https://www.cdg-aura.fr/file/7852/download?token=Uqaa2fQ2",
@@ -17782,10 +17782,10 @@
       "type": "qcm",
       "question": "Un candidat consacre 4h30 sur les 5h de l'épreuve à la partie synthèse et ne laisse que 30 minutes à la partie propositions. D'après les constats des jurys, quel est le principal risque ?",
       "options": [
-        "Aucun risque, seule la synthèse compte dans la notation",
-        "La disqualification immédiate du candidat",
-        "Une pénalité automatique pour non-respect d'un minutage réglementaire",
-        "Une partie propositions incomplète ou trop scolaire, alors qu'elle est notée sur 12 des 20 points de l'épreuve"
+        "Aucun risque : seule la partie synthèse entre réellement dans la notation",
+        "La disqualification immédiate du candidat pour non-respect de la consigne",
+        "Une pénalité automatique pour non-respect d'un minutage prévu au règlement",
+        "Des propositions incomplètes ou scolaires, alors qu'elles valent 12 des 20 points"
       ],
       "bonneReponse": 3,
       "explication": "La partie propositions, notée sur 12 points, est systématiquement le point faible des copies lorsqu'elle est négligée en fin d'épreuve faute de temps. Source : CDG Loire-Atlantique, Rapport du président du jury, concours d'ingénieur territorial, session 2023, consulté le 10/09/2026, https://www.cdg44.fr/sites/default/files/content/fiche_concours_examens/pdf/Rapport%20jury%20INGE%2023.pdf",
@@ -17803,10 +17803,10 @@
       "type": "qcm",
       "question": "Sur le fond, que reprochent régulièrement les correcteurs aux copies concernant l'exploitation du sujet ?",
       "options": [
-        "Les candidats ne rédigent aucune partie synthèse",
-        "Les candidats inventent des données absentes du dossier",
-        "Les copies restent trop générales et descriptives, sans analyser réellement les enjeux soulevés par le sujet pour la collectivité",
-        "Les candidats citent le dossier de façon excessive"
+        "Les candidats omettent purement et simplement de rédiger la partie synthèse",
+        "Les candidats inventent des données chiffrées absentes du dossier fourni",
+        "Les copies restent générales et descriptives, sans analyser les enjeux pour la collectivité",
+        "Les candidats citent le dossier de façon excessive au lieu de le reformuler"
       ],
       "bonneReponse": 2,
       "explication": "Beaucoup de copies restent générales et descriptives, sans analyser réellement les enjeux soulevés par le sujet pour une collectivité. Source : CDG Auvergne-Rhône-Alpes, Rapport de la présidente du jury, concours d'ingénieur territorial, session 2019, consulté le 10/09/2026, https://www.cdg-aura.fr/file/7852/download?token=Uqaa2fQ2",
@@ -17858,10 +17858,10 @@
       "type": "qcm",
       "question": "Quel défaut récurrent les correcteurs relèvent-ils concernant le contenu des propositions ?",
       "options": [
-        "Elles sont rédigées dans un style trop familier",
+        "Elles sont rédigées dans un style trop familier pour un écrit professionnel",
         "Elles manquent de consistance et gagneraient à évoquer des solutions plus concrètes",
-        "Elles sont systématiquement hors sujet",
-        "Elles sont trop nombreuses"
+        "Elles sont systématiquement hors sujet au regard de la commande initiale",
+        "Elles sont trop nombreuses pour être toutes traitées dans le temps imparti"
       ],
       "bonneReponse": 1,
       "explication": "Les propositions manquent généralement de consistance et gagneraient à évoquer des solutions plus concrètes. Source : CDG Loire-Atlantique, Rapport du président du jury, concours d'ingénieur territorial, session 2023, consulté le 10/09/2026, https://www.cdg44.fr/sites/default/files/content/fiche_concours_examens/pdf/Rapport%20jury%20INGE%2023.pdf",
@@ -17879,10 +17879,10 @@
       "type": "qcm",
       "question": "Que reprochent les jurys successifs (2019, 2021, 2023) à la partie propositions de nombreuses copies ?",
       "options": [
-        "De ne jamais respecter le barème",
-        "D'être rédigée avant la partie synthèse",
-        "De ne jamais employer le mot « proposition »",
-        "De se limiter trop souvent à une présentation scolaire et succincte de la méthodologie de projet, sans lien suffisant avec les spécificités du sujet"
+        "De ne jamais respecter la pondération prévue par le barème de l'épreuve",
+        "D'être rédigée avant la partie synthèse, ce qui nuit à la cohérence d'ensemble",
+        "De n'employer à aucun moment le terme « proposition » dans la copie rendue",
+        "De se limiter à une méthodologie de projet scolaire, sans lien avec le sujet"
       ],
       "bonneReponse": 3,
       "explication": "Comme lors des sessions précédentes, la partie propositions consiste trop souvent en une présentation scolaire et succincte de la méthodologie de projet, sans lien suffisant avec les spécificités du sujet. Source : CDG Auvergne-Rhône-Alpes, Rapport de la présidente du jury, concours d'ingénieur territorial, session 2019, consulté le 10/09/2026, https://www.cdg-aura.fr/file/7852/download?token=Uqaa2fQ2 Source : CDG Auvergne-Rhône-Alpes, Rapport de la présidente du jury, concours d'ingénieur territorial, session 2023, consulté le 10/09/2026, https://www.cdg-aura.fr/sites/default/files/Rapport%20de%20jurys/2023-cingenieur_rapportpdte_jury.pdf",
@@ -17900,10 +17900,10 @@
       "type": "qcm",
       "question": "Quel défaut récurrent est pointé concernant les apports personnels dans les propositions ?",
       "options": [
-        "Les candidats confondent apports personnels et opinions politiques",
-        "Les apports personnels sont interdits par le règlement du concours",
-        "Les candidats citent trop leurs expériences personnelles",
-        "Les propositions souffrent d'un défaut récurrent d'apports personnels : peu d'exemples ou de retours d'expérience qui les rendraient plus opérationnelles"
+        "Les candidats confondent apports personnels et prises de position politiques",
+        "Les apports personnels sont proscrits par le règlement du concours",
+        "Les candidats citent trop longuement leurs expériences professionnelles",
+        "Les propositions manquent d'exemples et de retours d'expérience opérationnels"
       ],
       "bonneReponse": 3,
       "explication": "Pour les épreuves de note, les correcteurs regrettent le peu d'apports personnels de connaissances sous forme d'exemples ou de retours d'expérience, qui permettraient de rendre les propositions plus opérationnelles. Source : CDG Loire-Atlantique, Rapport du président du jury, concours d'ingénieur territorial, session 2023, consulté le 10/09/2026, https://www.cdg44.fr/sites/default/files/content/fiche_concours_examens/pdf/Rapport%20jury%20INGE%2023.pdf Source : CDG Auvergne-Rhône-Alpes, Rapport de la présidente du jury, concours d'ingénieur territorial, session 2019, consulté le 10/09/2026, https://www.cdg-aura.fr/file/7852/download?token=Uqaa2fQ2",
@@ -17921,10 +17921,10 @@
       "type": "qcm",
       "question": "Que reprochent les correcteurs aux solutions proposées par de nombreux candidats ?",
       "options": [
-        "D'être trop détaillées et chiffrées",
-        "De ne jamais tenir compte du budget",
-        "D'être systématiquement illégales",
-        "D'être souvent générales et de ne pas répondre assez précisément aux attentes du commanditaire"
+        "D'être trop détaillées et trop précisément chiffrées pour rester crédibles",
+        "De ne jamais tenir compte des contraintes budgétaires de la collectivité",
+        "D'être systématiquement illégales au regard du droit applicable",
+        "D'être générales et de ne pas répondre précisément aux attentes du commanditaire"
       ],
       "bonneReponse": 3,
       "explication": "Les solutions présentées sont souvent générales et ne répondent pas assez précisément aux attentes du commanditaire du sujet. Source : CDG Auvergne-Rhône-Alpes, Rapport de la présidente du jury, concours d'ingénieur territorial, session 2019, consulté le 10/09/2026, https://www.cdg-aura.fr/file/7852/download?token=Uqaa2fQ2 Source : CDG Auvergne-Rhône-Alpes, Rapport de la présidente du jury, concours d'ingénieur territorial, session 2023, consulté le 10/09/2026, https://www.cdg-aura.fr/sites/default/files/Rapport%20de%20jurys/2023-cingenieur_rapportpdte_jury.pdf",
@@ -17942,10 +17942,10 @@
       "type": "qcm",
       "question": "Quelle qualité les correcteurs souhaiteraient-ils voir davantage dans la partie propositions, selon le rapport 2023 (CDG Auvergne-Rhône-Alpes) ?",
       "options": [
-        "Une plus grande longueur, sans exigence de structuration",
-        "Un style littéraire plus soutenu",
-        "Une meilleure structuration des copies, davantage de prise de recul et un contenu à visée professionnelle",
-        "Des propositions strictement identiques au contenu du dossier fourni"
+        "Des développements plus longs, sans exigence particulière de structuration",
+        "Un style littéraire plus soutenu, proche de la dissertation académique",
+        "Une meilleure structuration, davantage de recul et un contenu à visée professionnelle",
+        "Des propositions strictement reprises du contenu du dossier fourni"
       ],
       "bonneReponse": 2,
       "explication": "Pour la partie propositions, les correcteurs auraient souhaité une meilleure structuration des copies, davantage de prise de recul sur la situation et un contenu principalement à visée professionnelle. Source : CDG Auvergne-Rhône-Alpes, Rapport de la présidente du jury, concours d'ingénieur territorial, session 2023, consulté le 10/09/2026, https://www.cdg-aura.fr/sites/default/files/Rapport%20de%20jurys/2023-cingenieur_rapportpdte_jury.pdf",
@@ -17984,10 +17984,10 @@
       "type": "qcm",
       "question": "Un jury note qu'une copie présente des propositions génériques, transposables à n'importe quelle collectivité. Quel est le principal reproche associé à ce type de copie ?",
       "options": [
-        "Un oubli de la partie synthèse",
-        "Un non-respect du nombre de pages imposé",
-        "Un manque de personnalisation et de lien avec les spécificités du sujet et du contexte local",
-        "Une écriture jugée illisible par le correcteur"
+        "L'oubli de la partie synthèse, pourtant attendue avant les propositions",
+        "Le non-respect du nombre de pages imposé par le règlement de l'épreuve",
+        "Un manque de personnalisation et de lien avec le sujet et le contexte local",
+        "Une écriture manuscrite jugée difficilement lisible par le correcteur"
       ],
       "bonneReponse": 2,
       "explication": "Les propositions trop générales, qui ne répondent pas assez précisément aux attentes du commanditaire et manquent de solutions concrètes propres au contexte, sont un défaut récurrent relevé par les jurys. Source : CDG Auvergne-Rhône-Alpes, Rapport de la présidente du jury, concours d'ingénieur territorial, session 2019, consulté le 10/09/2026, https://www.cdg-aura.fr/file/7852/download?token=Uqaa2fQ2 Source : CDG Auvergne-Rhône-Alpes, Rapport de la présidente du jury, concours d'ingénieur territorial, session 2023, consulté le 10/09/2026, https://www.cdg-aura.fr/sites/default/files/Rapport%20de%20jurys/2023-cingenieur_rapportpdte_jury.pdf",
@@ -18047,10 +18047,10 @@
       "type": "qcm",
       "question": "Quelle durée totale est prévue pour l'entretien du concours externe, et comment se répartit-elle ?",
       "options": [
-        "20 minutes, sans découpage en parties",
-        "40 minutes consacrées uniquement à la spécialité choisie",
-        "60 minutes, réparties en trois parties égales",
-        "40 minutes, réparties en 15 à 20 minutes pour chacune des deux parties de l'entretien"
+        "20 minutes au total, sans découpage particulier en plusieurs parties",
+        "40 minutes consacrées uniquement à la spécialité choisie par le candidat",
+        "60 minutes réparties en trois parties d'égale durée devant le jury",
+        "40 minutes, réparties en 15 à 20 minutes pour chacune des deux parties"
       ],
       "bonneReponse": 3,
       "explication": "L'entretien dure au total 40 minutes, réparties en 15 à 20 minutes pour chacune de ses deux parties (questions sur l'option, puis aptitude à s'intégrer dans l'environnement professionnel). Source : CDG Loire-Atlantique, Rapport du président du jury, concours d'ingénieur territorial, session 2023, consulté le 10/09/2026, https://www.cdg44.fr/sites/default/files/content/fiche_concours_examens/pdf/Rapport%20jury%20INGE%2023.pdf Source : CDG Auvergne-Rhône-Alpes, Rapport de la présidente du jury, concours d'ingénieur territorial, session 2023, consulté le 10/09/2026, https://www.cdg-aura.fr/sites/default/files/Rapport%20de%20jurys/2023-cingenieur_rapportpdte_jury.pdf",
@@ -18068,10 +18068,10 @@
       "type": "qcm",
       "question": "Le jury qui conduit l'entretien du concours externe est constitué comment, d'après les rapports de jury ?",
       "options": [
-        "Exclusivement de fonctionnaires territoriaux",
-        "De groupes de six examinateurs, soit deux représentants de chaque collège réglementaire (élus locaux, personnalités qualifiées, fonctionnaires territoriaux)",
-        "De membres tirés au sort parmi les candidats admissibles",
-        "D'un seul examinateur par candidat"
+        "Exclusivement de fonctionnaires territoriaux de la spécialité concernée",
+        "De six examinateurs, deux par collège : élus, personnalités qualifiées, fonctionnaires",
+        "De membres tirés au sort parmi les candidats déclarés admissibles",
+        "D'un examinateur unique par candidat, désigné par le centre de gestion"
       ],
       "bonneReponse": 1,
       "explication": "L'épreuve d'entretien est conduite par des membres du jury constitués en groupes de six examinateurs, soit deux représentants de chaque collège réglementaire. Source : CDG Auvergne-Rhône-Alpes, Rapport de la présidente du jury, concours d'ingénieur territorial, session 2019, consulté le 10/09/2026, https://www.cdg-aura.fr/file/7852/download?token=Uqaa2fQ2 Source : CDG Auvergne-Rhône-Alpes, Rapport du président du jury, concours d'ingénieur territorial, session 2021, consulté le 10/09/2026, https://www.cdg-aura.fr/file/10330/download?token=HGoFbCoe",
@@ -18110,10 +18110,10 @@
       "type": "qcm",
       "question": "Que reproche le jury à de nombreux candidats du concours externe concernant leur préparation aux questions de mise en situation professionnelle ?",
       "options": [
-        "De refuser catégoriquement d'y répondre",
-        "De répondre uniquement par des citations réglementaires",
-        "D'être trop bien préparés, ce qui nuit à la spontanéité",
-        "De paraître peu préparés à ce type de questions, faute d'une expérience de terrain comparable à celle des candidats internes"
+        "De refuser catégoriquement de répondre aux questions de mise en situation",
+        "De ne répondre que par des citations de textes réglementaires apprises",
+        "D'être trop préparés à cet exercice, ce qui nuit à leur spontanéité",
+        "De paraître peu préparés, faute d'expérience de terrain comparable aux internes"
       ],
       "bonneReponse": 3,
       "explication": "Le jury constate que les candidats du concours externe paraissent moins préparés que les internes aux questions de mise en situation, faute d'une vision de terrain aussi développée. Source : CDG Auvergne-Rhône-Alpes, Rapport de la présidente du jury, concours d'ingénieur territorial, session 2023, consulté le 10/09/2026, https://www.cdg-aura.fr/sites/default/files/Rapport%20de%20jurys/2023-cingenieur_rapportpdte_jury.pdf",
@@ -18131,10 +18131,10 @@
       "type": "qcm",
       "question": "Sur quels domaines les candidats externes présentent-ils le plus souvent des lacunes, selon le rapport 2023 (CDG Auvergne-Rhône-Alpes) ?",
       "options": [
-        "La maîtrise de l'orthographe uniquement",
-        "La connaissance de l'histoire de la collectivité employeur",
-        "Les connaissances générales techniques, réglementaires et administratives, notamment en commande publique, prévention des risques professionnels et management",
-        "Aucune lacune n'est relevée pour les candidats externes"
+        "La seule maîtrise de l'orthographe et de l'expression orale courante",
+        "La connaissance de l'histoire administrative de la collectivité employeur",
+        "Les connaissances techniques et administratives : commande publique, prévention, management",
+        "Aucune lacune particulière n'est relevée chez les candidats de la voie externe"
       ],
       "bonneReponse": 2,
       "explication": "Les candidats externes ont souvent des lacunes en connaissances générales techniques, réglementaires et administratives, révélant une culture territoriale du métier insuffisante, notamment en commande publique, prévention des risques professionnels et management. Source : CDG Auvergne-Rhône-Alpes, Rapport de la présidente du jury, concours d'ingénieur territorial, session 2023, consulté le 10/09/2026, https://www.cdg-aura.fr/sites/default/files/Rapport%20de%20jurys/2023-cingenieur_rapportpdte_jury.pdf",
@@ -18152,10 +18152,10 @@
       "type": "qcm",
       "question": "Quel défaut le jury constate-t-il de façon récurrente, sur les deux voies du concours, concernant la vision des candidats ?",
       "options": [
-        "Une vision centrée exclusivement sur le droit administratif",
-        "Un manque de vision élargie de leur spécialité : l'approche très technique ne leur permet pas de prendre de la hauteur et d'avoir une approche transversale",
-        "Une vision trop large, déconnectée de leur spécialité",
-        "Une vision uniquement financière des problématiques"
+        "Une vision centrée exclusivement sur le droit administratif général",
+        "Un manque de hauteur : l'approche très technique empêche l'approche transversale",
+        "Une vision trop large, déconnectée de la spécialité choisie au concours",
+        "Une vision purement financière des problématiques techniques abordées"
       ],
       "bonneReponse": 1,
       "explication": "Le jury constate, sur les deux voies du concours, que les candidats manquent souvent d'une vision élargie de leur spécialité : l'approche très technique ne leur permet pas de prendre de la hauteur. Source : CDG Auvergne-Rhône-Alpes, Rapport de la présidente du jury, concours d'ingénieur territorial, session 2019, consulté le 10/09/2026, https://www.cdg-aura.fr/file/7852/download?token=Uqaa2fQ2 Source : CDG Auvergne-Rhône-Alpes, Rapport de la présidente du jury, concours d'ingénieur territorial, session 2023, consulté le 10/09/2026, https://www.cdg-aura.fr/sites/default/files/Rapport%20de%20jurys/2023-cingenieur_rapportpdte_jury.pdf",
@@ -18173,10 +18173,10 @@
       "type": "qcm",
       "question": "Quelle recommandation les examinateurs formulent-ils concernant les connaissances techniques dans l'option choisie ?",
       "options": [
-        "Elles ne concernent que les candidats internes",
-        "Elles sont facultatives si le candidat a un bon relationnel",
-        "Elles ne sont pas évaluées à l'oral, seul l'écrit les vérifie",
-        "Porter une attention particulière aux connaissances techniques de base dans l'option, en se référant au programme réglementaire"
+        "Ces connaissances ne concernent que les candidats de la voie interne",
+        "Elles sont facultatives dès lors que le candidat a un bon relationnel",
+        "Elles ne sont pas évaluées à l'oral, l'écrit suffisant à les vérifier",
+        "Soigner les connaissances techniques de base de l'option, en suivant le programme"
       ],
       "bonneReponse": 3,
       "explication": "Les examinateurs recommandent de porter une attention particulière aux connaissances techniques de base dans l'option, en se référant au programme réglementaire. Source : CDG Loire-Atlantique, Rapport du président du jury, concours d'ingénieur territorial, session 2023, consulté le 10/09/2026, https://www.cdg44.fr/sites/default/files/content/fiche_concours_examens/pdf/Rapport%20jury%20INGE%2023.pdf",
@@ -18215,10 +18215,10 @@
       "type": "qcm",
       "question": "Que reproche le jury à certains candidats concernant leur manière de répondre aux questions posées ?",
       "options": [
-        "De toujours répondre par une question",
-        "De se contenter de réponses trop succinctes et trop générales, sans les développer ni les argumenter",
-        "De développer et d'argumenter excessivement leurs réponses",
-        "De ne jamais citer d'exemples concrets"
+        "De répondre systématiquement par une question posée au jury en retour",
+        "De donner des réponses trop succinctes et générales, sans les argumenter",
+        "De développer et d'argumenter excessivement chacune de leurs réponses",
+        "De ne jamais illustrer leurs réponses par des exemples professionnels"
       ],
       "bonneReponse": 1,
       "explication": "Les examinateurs attendent des candidats qu'ils soient capables de développer et d'argumenter leurs idées, et non de se contenter de réponses succinctes et trop générales. Source : CDG Loire-Atlantique, Rapport du président du jury, concours d'ingénieur territorial, session 2023, consulté le 10/09/2026, https://www.cdg44.fr/sites/default/files/content/fiche_concours_examens/pdf/Rapport%20jury%20INGE%2023.pdf",
@@ -18278,10 +18278,10 @@
       "type": "qcm",
       "question": "Que recommandent les examinateurs concernant la motivation exprimée par le candidat à l'oral ?",
       "options": [
-        "Motiver clairement son souhait de travailler dans la fonction publique territoriale, au-delà du poste et de la collectivité actuels",
-        "Motiver uniquement son choix de spécialité technique",
-        "Ne pas aborder le sujet de la motivation, hors sujet à l'oral",
-        "Justifier le niveau de rémunération souhaité"
+        "Motiver son souhait de servir la fonction publique territoriale, au-delà du poste actuel",
+        "Motiver uniquement le choix de la spécialité technique présentée au concours",
+        "Ne pas aborder la motivation, considérée hors sujet lors de cet entretien",
+        "Justifier le niveau de rémunération souhaité en cas de réussite au concours"
       ],
       "bonneReponse": 0,
       "explication": "Les examinateurs recommandent de motiver clairement son souhait de travailler dans la fonction publique territoriale, au-delà du seul poste occupé et de la collectivité actuelle. Source : CDG Loire-Atlantique, Rapport du président du jury, concours d'ingénieur territorial, session 2023, consulté le 10/09/2026, https://www.cdg44.fr/sites/default/files/content/fiche_concours_examens/pdf/Rapport%20jury%20INGE%2023.pdf",
@@ -18299,10 +18299,10 @@
       "type": "qcm",
       "question": "Quelle capacité le jury attend-il des candidats concernant leur positionnement professionnel futur ?",
       "options": [
-        "Refuser toute perspective d'évolution pour rester crédible",
-        "Se cantonner à décrire son poste actuel avec précision",
-        "Être capable de se projeter sur des fonctions d'encadrement et de se positionner en tant qu'ingénieur territorial",
-        "Ne parler que de son parcours scolaire"
+        "Refuser toute perspective d'évolution pour rester crédible devant le jury",
+        "Se cantonner à la description précise des missions du poste actuel",
+        "Se projeter sur des fonctions d'encadrement et se positionner en ingénieur territorial",
+        "Centrer son propos sur son parcours scolaire et les diplômes obtenus"
       ],
       "bonneReponse": 2,
       "explication": "Il est essentiel d'être capable de se projeter sur des fonctions d'encadrant et de se positionner en tant qu'ingénieur territorial ; de nombreux candidats ne prennent pas la hauteur suffisante et se cantonnent à leur positionnement actuel. Source : CDG Loire-Atlantique, Rapport du président du jury, concours d'ingénieur territorial, session 2023, consulté le 10/09/2026, https://www.cdg44.fr/sites/default/files/content/fiche_concours_examens/pdf/Rapport%20jury%20INGE%2023.pdf",
@@ -18362,10 +18362,10 @@
       "type": "qcm",
       "question": "Quel regret le jury exprime-t-il concernant l'ambition professionnelle de nombreux candidats ?",
       "options": [
-        "Aucun regret n'est exprimé sur ce point",
-        "Peu de candidats ont l'ambition d'évoluer vers des fonctions de manager ou de directeur des services techniques",
-        "Trop de candidats visent des postes de direction générale dès leur nomination",
-        "Les candidats visent tous le même poste dans la même collectivité"
+        "Aucun regret particulier n'est exprimé par le jury sur ce point",
+        "Peu de candidats ambitionnent des fonctions de manager ou de directeur technique",
+        "Trop de candidats visent la direction générale dès leur première nomination",
+        "Les candidats visent tous le même poste dans la même collectivité d'origine"
       ],
       "bonneReponse": 1,
       "explication": "Le jury regrette que peu de candidats aient l'ambition d'évoluer vers des fonctions de manager ou de directeur des services techniques. Source : CDG Auvergne-Rhône-Alpes, Rapport de la présidente du jury, concours d'ingénieur territorial, session 2019, consulté le 10/09/2026, https://www.cdg-aura.fr/file/7852/download?token=Uqaa2fQ2",
@@ -18383,10 +18383,10 @@
       "type": "qcm",
       "question": "Un candidat, interrogé sur son évolution professionnelle, répond uniquement en décrivant ses missions actuelles sans évoquer de perspective. D'après les attentes du jury, quelle est la limite de cette réponse ?",
       "options": [
-        "Elle est parfaitement suffisante, le jury ne juge pas les perspectives d'évolution",
-        "Elle n'est recevable qu'au concours interne",
-        "Elle ne montre pas la capacité à prendre de la hauteur et à se projeter sur des fonctions d'encadrement, attendue d'un futur ingénieur territorial",
-        "Elle est éliminatoire automatiquement, quelle que soit la note globale"
+        "Elle est suffisante : le jury n'évalue pas les perspectives d'évolution",
+        "Elle n'est recevable que dans le cadre du concours interne, pas de l'externe",
+        "Elle ne montre pas la capacité à se projeter sur des fonctions d'encadrement",
+        "Elle entraîne une élimination automatique, quelle que soit la note globale"
       ],
       "bonneReponse": 2,
       "explication": "De nombreux candidats ne prennent pas la hauteur suffisante et se cantonnent à leur positionnement actuel, alors que le jury attend une capacité à se projeter sur des fonctions d'encadrement. Source : CDG Loire-Atlantique, Rapport du président du jury, concours d'ingénieur territorial, session 2023, consulté le 10/09/2026, https://www.cdg44.fr/sites/default/files/content/fiche_concours_examens/pdf/Rapport%20jury%20INGE%2023.pdf",
@@ -18452,10 +18452,10 @@
       "aVerifier": null,
       "type": "qcm",
       "options": [
-        "Le PLU et le POS",
-        "Le plan de valorisation de l'architecture et du patrimoine (PVAP) et le plan de sauvegarde et de mise en valeur (PSMV)",
-        "Le PDA et l'OAP",
-        "La charte du PNR et le règlement du CAUE"
+        "Le plan local d'urbanisme (PLU) et l'ancien plan d'occupation des sols (POS)",
+        "Le plan de valorisation de l'architecture et du patrimoine et le plan de sauvegarde",
+        "Le périmètre délimité des abords (PDA) et l'orientation d'aménagement (OAP)",
+        "La charte du parc naturel régional et le règlement de conseil du CAUE"
       ],
       "bonneReponse": 1
     },
@@ -18578,10 +18578,10 @@
       "aVerifier": null,
       "type": "qcm",
       "options": [
-        "L'ABF délivre lui-même l'autorisation d'urbanisme",
-        "L'autorisation relève du préfet de département (déclaration préalable) ou du ministre chargé de la transition écologique (permis), l'avis de l'ABF éclairant leur décision qui s'impose au maire",
-        "Aucune autorisation n'est nécessaire en site classé",
-        "Seul le maire décide, sans consultation de l'ABF"
+        "L'ABF délivre lui-même l'autorisation d'urbanisme à la place du maire",
+        "Le préfet décide (déclaration préalable) ou le ministre (permis), l'ABF donnant son avis",
+        "Aucune autorisation n'est nécessaire dès lors que le site est déjà classé",
+        "Le maire décide seul, sans consultation de l'architecte des Bâtiments de France"
       ],
       "bonneReponse": 1
     },
@@ -18670,10 +18670,10 @@
       "aVerifier": null,
       "type": "qcm",
       "options": [
-        "Il est exonéré du dispositif DEET",
-        "Il y est soumis sans aucune exception possible",
-        "Il y est soumis, mais l'objectif en valeur absolue peut être modulé via un dossier technique, les travaux ne pouvant être entrepris qu'après autorisation du préfet de région (DRAC) au titre du code du patrimoine",
-        "Seul le maire peut autoriser une dérogation"
+        "Il est exonéré du dispositif en raison de sa protection au titre du patrimoine",
+        "Il y est soumis strictement, sans possibilité de modulation de l'objectif",
+        "Il y est soumis, l'objectif pouvant être modulé, travaux soumis à autorisation DRAC",
+        "Seul le maire de la commune propriétaire peut accorder une dérogation"
       ],
       "bonneReponse": 2
     },
@@ -18790,10 +18790,10 @@
       "aVerifier": null,
       "type": "qcm",
       "options": [
-        "Un pare-pluie HPV",
-        "Une membrane gérant l'apport de vapeur (étanchéité à l'air)",
-        "Un enduit à la chaux",
-        "Un doublage en plaques de plâtre"
+        "Un écran pare-pluie HPV posé côté extérieur avant tout autre élément",
+        "Une membrane gérant l'apport de vapeur, assurant l'étanchéité à l'air",
+        "Un enduit à la chaux appliqué sur le plancher avant la pose de l'isolant",
+        "Un doublage en plaques de plâtre posé sous le plancher du grenier"
       ],
       "bonneReponse": 1
     },
@@ -18811,10 +18811,10 @@
       "aVerifier": null,
       "type": "qcm",
       "options": [
-        "Parce qu'il est incompatible avec tous les types d'isolants",
-        "Parce qu'il épaissit le bâtiment, pouvant cacher les pieds de lucarnes et créer des problèmes de raccord aux murs mitoyens",
-        "Parce qu'il nécessite toujours une charpente neuve",
-        "Parce qu'il est interdit par la RT existant par éléments"
+        "Parce qu'il est techniquement incompatible avec tous les types d'isolants",
+        "Parce qu'il épaissit la toiture, masque les pieds de lucarnes et complique les raccords",
+        "Parce qu'il impose systématiquement le remplacement complet de la charpente",
+        "Parce qu'il est interdit par la réglementation thermique de l'existant"
       ],
       "bonneReponse": 1
     },
@@ -18927,10 +18927,10 @@
       "aVerifier": null,
       "type": "qcm",
       "options": [
-        "Ils n'ont aucune fonction technique, seulement esthétique",
-        "Ils permettent à l'humidité de s'échapper (le séchage par le plafond n'étant plus possible) et, sur certains territoires, l'évacuation du radon",
-        "Ils sont obligatoires uniquement pour l'éclairage naturel",
-        "Leur scellement est imposé par la RT existant"
+        "Ils n'ont aucune fonction technique et relèvent du seul aspect esthétique",
+        "Ils évacuent l'humidité, le séchage par le plafond n'étant plus possible, et le radon",
+        "Ils sont obligatoires au seul titre de l'éclairage naturel de la cave",
+        "Leur scellement est imposé par la réglementation thermique de l'existant"
       ],
       "bonneReponse": 1
     },
@@ -19051,10 +19051,10 @@
       "aVerifier": null,
       "type": "qcm",
       "options": [
-        "Ils sont trop coûteux comparés aux isolants biosourcés",
-        "Ils font barrière et peuvent emprisonner l'humidité, provoquant moisissures et jusqu'au déchaussement des pierres",
-        "Ils sont interdits par la RE2020",
-        "Ils ne sont disponibles qu'en grandes épaisseurs"
+        "Ils sont nettement plus coûteux que les isolants biosourcés équivalents",
+        "Ils font barrière et emprisonnent l'humidité : moisissures, déchaussement des pierres",
+        "Ils sont interdits en rénovation par la réglementation environnementale RE2020",
+        "Ils ne sont disponibles qu'en fortes épaisseurs, inadaptées au bâti ancien"
       ],
       "bonneReponse": 1
     },
@@ -19072,10 +19072,10 @@
       "aVerifier": null,
       "type": "qcm",
       "options": [
-        "Non, une membrane est toujours nécessaire",
-        "Oui : mis en œuvre en phase humide, il recouvre le mur sans défaut d'étanchéité à l'air possible, à condition que sa matrice reste perméable à la vapeur",
-        "Oui, mais uniquement sur les murs en terre crue",
-        "Non, sauf en façade exposée au nord"
+        "Non : une membrane d'étanchéité à l'air reste nécessaire dans tous les cas",
+        "Oui : posé en phase humide, il recouvre le mur sans défaut, s'il reste perméable",
+        "Oui, mais uniquement lorsqu'il est appliqué sur des murs en terre crue",
+        "Non, sauf sur les façades exposées au nord et faiblement ensoleillées"
       ],
       "bonneReponse": 1
     },
@@ -19093,10 +19093,10 @@
       "aVerifier": null,
       "type": "qcm",
       "options": [
-        "Elle est interdite par la loi sur les façades visibles",
-        "Elle modifie fortement l'aspect extérieur (proportions, décors), un enjeu moindre sur les faces non visibles ou non en covisibilité d'un monument historique",
-        "Elle est plus chère sur les façades visibles",
-        "Elle nécessite toujours un permis de démolir"
+        "Parce que la loi interdit l'isolation extérieure de toute façade visible",
+        "Parce qu'elle modifie l'aspect extérieur, enjeu moindre hors vues et covisibilités",
+        "Parce que son coût est nettement plus élevé sur les façades donnant sur rue",
+        "Parce qu'elle nécessite dans tous les cas l'obtention d'un permis de démolir"
       ],
       "bonneReponse": 1
     },
@@ -19156,10 +19156,10 @@
       "aVerifier": null,
       "type": "qcm",
       "options": [
-        "Les déperditions par conduction à travers le châssis et le vitrage, alors que Q mesure les défauts d'étanchéité à l'air",
-        "Les défauts d'étanchéité à l'air, alors que Q mesure la conduction",
-        "La quantité de lumière transmise",
-        "Le facteur solaire de la fenêtre"
+        "Les déperditions par conduction du châssis et du vitrage, Q visant l'étanchéité à l'air",
+        "Les défauts d'étanchéité à l'air, Q mesurant la conduction du châssis et du vitrage",
+        "La quantité de lumière naturelle transmise par la fenêtre vers l'intérieur",
+        "Le facteur solaire de la fenêtre, c'est-à-dire les apports de chaleur du soleil"
       ],
       "bonneReponse": 0
     },
@@ -19214,10 +19214,10 @@
       "aVerifier": null,
       "type": "qcm",
       "options": [
-        "Elle est toujours moins chère",
-        "Sa performance thermique est meilleure que celle d'une fenêtre neuve en double vitrage seule, et elle atténue fortement les bruits extérieurs",
-        "Elle ne nécessite aucun entretien",
-        "Elle dispense de toute autorisation d'urbanisme"
+        "Elle revient toujours moins cher qu'un remplacement complet de la menuiserie",
+        "Sa performance dépasse celle d'un double vitrage neuf et elle atténue fortement le bruit",
+        "Elle ne demande aucun entretien, contrairement à une menuiserie neuve posée seule",
+        "Elle dispense de toute autorisation d'urbanisme, même en secteur protégé"
       ],
       "bonneReponse": 1
     },
@@ -19235,10 +19235,10 @@
       "aVerifier": null,
       "type": "qcm",
       "options": [
-        "La pose en applique extérieure systématique",
-        "La conservation de la pose en feuillure d'origine, la pose en applique pouvant fortement modifier la composition de la façade",
-        "La suppression de toute feuillure pour maximiser la surface vitrée",
-        "Le remplacement systématique par une baie coulissante"
+        "La pose en applique extérieure, systématique pour améliorer l'étanchéité",
+        "La conservation de la pose en feuillure : l'applique modifie la composition de façade",
+        "La suppression de la feuillure d'origine pour maximiser la surface vitrée",
+        "Le remplacement systématique de la fenêtre par une baie coulissante vitrée"
       ],
       "bonneReponse": 1
     },
@@ -19256,10 +19256,10 @@
       "aVerifier": null,
       "type": "qcm",
       "options": [
-        "Toujours installer la prise d'air et l'évacuation en façade principale",
-        "Installer le générateur sur cour plutôt que sur rue, et réutiliser d'éventuels conduits de cheminée inutilisés pour l'évacuation des fumées en toiture",
-        "Interdire toute chaudière dans un bâtiment protégé",
-        "Installer systématiquement une chaudière à ventouse en façade principale"
+        "Installer la prise d'air et l'évacuation des fumées en façade principale",
+        "Placer le générateur sur cour et réutiliser un conduit de cheminée inutilisé",
+        "Interdire toute chaudière dans un bâtiment protégé au titre du patrimoine",
+        "Installer systématiquement une chaudière à ventouse donnant sur la rue"
       ],
       "bonneReponse": 1
     },
@@ -19277,10 +19277,10 @@
       "aVerifier": null,
       "type": "qcm",
       "options": [
-        "Les peindre en couleur vive pour signaler leur présence",
-        "Les installer sur cour non protégée ou en toiture, ou les dissimuler par des caissons/volets ajourés de teinte proche du support, sans obstruer la circulation d'air",
-        "Les installer obligatoirement en façade principale pour l'accès à la maintenance",
-        "Aucune intégration n'est nécessaire pour les PAC"
+        "Les peindre dans une couleur vive afin de signaler clairement leur présence",
+        "Les poser sur cour ou en toiture, ou les masquer par des caissons ajourés ventilés",
+        "Les installer en façade principale pour faciliter l'accès de la maintenance",
+        "Ne prévoir aucune intégration : les PAC sont dispensées de ces précautions"
       ],
       "bonneReponse": 1
     },
@@ -19298,10 +19298,10 @@
       "aVerifier": null,
       "type": "qcm",
       "options": [
-        "Jamais, sans aucune exception possible",
-        "Systématiquement autorisée sans condition",
-        "À éviter en règle générale, mais des exceptions peuvent être permises au cas par cas selon l'implantation et l'ampleur du projet",
-        "Uniquement sur les bâtiments classés, jamais sur les inscrits"
+        "Jamais, sans aucune exception possible sur un immeuble protégé",
+        "Systématiquement autorisée, sans condition d'implantation ni de visibilité",
+        "À éviter en règle générale, des exceptions restant possibles au cas par cas",
+        "Uniquement sur les immeubles classés, et jamais sur les immeubles inscrits"
       ],
       "bonneReponse": 2
     },
@@ -19319,10 +19319,10 @@
       "aVerifier": null,
       "type": "qcm",
       "options": [
-        "Le pan de toiture le plus visible depuis la rue pour un meilleur rendement",
-        "Les emplacements peu visibles depuis l'espace public : appentis, pans de toiture peu visibles ou toits plats",
-        "Uniquement les façades exposées au sud",
-        "Le faîtage, quelle que soit la visibilité"
+        "Le pan de toiture le plus exposé à la rue, pour maximiser le rendement",
+        "Les pans peu visibles depuis l'espace public, les appentis ou les toits plats",
+        "Les seules façades orientées plein sud, quel que soit le contexte bâti",
+        "Le faîtage et les lignes de crête, même en covisibilité avec un monument"
       ],
       "bonneReponse": 1
     },
@@ -19356,10 +19356,10 @@
       "aVerifier": null,
       "type": "qcm",
       "options": [
-        "La Fondation du Patrimoine exclusivement",
-        "Les aides de la DRAC, avec possibilité de déductions fiscales pour les propriétaires",
-        "Uniquement France Rénov'",
-        "Les seules collectivités locales"
+        "La Fondation du Patrimoine, seul organisme compétent pour ces travaux",
+        "Les aides de la DRAC, complétées de déductions fiscales pour les propriétaires",
+        "France Rénov', guichet unique de toutes les aides à la rénovation du bâti",
+        "Les seules collectivités locales, l'État n'intervenant plus sur ces chantiers"
       ],
       "bonneReponse": 1
     },
@@ -19399,9 +19399,9 @@
       "type": "qcm",
       "options": [
         "La CRMH (conservation régionale des monuments historiques)",
-        "Le PNR",
-        "L'ADEME",
-        "La CAUE"
+        "Le PNR (parc naturel régional)",
+        "L'ADEME (Agence de la transition écologique)",
+        "Le CAUE (conseil d'architecture, d'urbanisme et de l'environnement)"
       ],
       "bonneReponse": 0
     },
@@ -19593,10 +19593,10 @@
       "type": "qcm",
       "question": "Le système d'automatisation et de contrôle imposé par le décret BACS doit notamment :",
       "options": [
-        "Se limiter à mesurer la consommation d'énergie, sans capacité d'action",
-        "Suivre en continu les consommations, détecter les pertes d'efficacité, permettre la gestion autonome et l'arrêt manuel des systèmes, tout en restant interopérable",
-        "Se substituer totalement à l'intervention humaine, sans possibilité d'arrêt manuel",
-        "Centraliser les données sans aucune obligation d'interopérabilité"
+        "Se limiter à mesurer les consommations d'énergie, sans capacité d'action",
+        "Suivre les consommations, détecter les dérives, permettre l'arrêt manuel, rester interopérable",
+        "Remplacer toute intervention humaine, sans possibilité d'arrêt manuel des systèmes",
+        "Centraliser les données du site sans aucune obligation d'interopérabilité"
       ],
       "bonneReponse": 1,
       "explication": "Le système d'automatisation et de contrôle imposé par le décret BACS doit suivre, enregistrer et analyser en continu les données de consommation, détecter les pertes d'efficacité, proposer des améliorations, rester interopérable, et permettre à la fois la gestion autonome et l'arrêt manuel des systèmes. Ces exigences fonctionnelles sont fixées par le décret n°2023-259 du 7 avril 2023 (décret BACS), codifié aux articles R.111-22-3 et R.111-22-4 du code de la construction et de l'habitation — Légifrance. Une GTB installée mais non pilotée activement (alarmes non traitées, consignes non ajustées) ne produit aucun des bénéfices attendus par le texte. En savoir plus — BACS : Building Automation and Control Systems, systèmes d'automatisation et de contrôle des bâtiments, couramment appelés GTB (gestion technique du bâtiment) en France ; CVC : chauffage, ventilation, climatisation.",
@@ -19670,9 +19670,9 @@
       "question": "Pour un bâtiment neuf de plus de 500 m², la loi APER impose que la toiture intègre :",
       "options": [
         "Obligatoirement des panneaux photovoltaïques, à l'exclusion de toute autre solution",
-        "Un système de production d'ENR, une végétalisation, ou un autre dispositif améliorant l'efficacité thermique ou la biodiversité",
-        "Une citerne de récupération d'eau pluviale exclusivement",
-        "Aucune obligation, la mesure ne concernant que les bâtiments existants"
+        "Une production d'énergie renouvelable, une végétalisation ou un dispositif équivalent",
+        "Une citerne de récupération des eaux pluviales, à l'exclusion d'autres dispositifs",
+        "Aucune obligation : la mesure ne vise que les bâtiments existants rénovés"
       ],
       "bonneReponse": 1,
       "explication": "Pour un bâtiment neuf de plus de 500 m², la loi APER impose que la toiture intègre soit un système de production d'énergie renouvelable, soit une végétalisation, soit un autre dispositif améliorant l'efficacité thermique ou la biodiversité — le choix n'est pas limité au seul photovoltaïque. Cette obligation figure aux articles 40 et suivants de la loi n°2023-175 du 10 mars 2023 (loi APER) — Légifrance. Cette flexibilité permet d'adapter la solution retenue aux contraintes techniques du site (orientation, ombrage, portance de la toiture) plutôt que d'imposer un équipement uniforme.",
@@ -19749,9 +19749,9 @@
       "question": "Depuis quel texte le tri à la source de 5 flux de déchets (papiers-cartons, métal, plastique, verre, bois) est-il obligatoire pour les producteurs et détenteurs de déchets ?",
       "options": [
         "Le décret n°2016-288 du 10 mars 2016, dit « décret 5 flux »",
-        "La loi AGEC de 2020",
-        "La loi ELAN de 2018",
-        "L'arrêté du 21 août 2008"
+        "La loi AGEC du 10 février 2020 relative à l'économie circulaire",
+        "La loi ELAN du 23 novembre 2018 sur le logement et l'aménagement",
+        "L'arrêté du 21 août 2008, complété par la loi de transition énergétique"
       ],
       "bonneReponse": 0,
       "explication": "Le tri à la source de 5 flux de déchets — papiers-cartons, métal, plastique, verre, bois — est obligatoire pour les producteurs et détenteurs de déchets depuis le décret n°2016-288 du 10 mars 2016, dit « décret 5 flux », entré en vigueur le 1er juillet 2016. C'est bien ce décret, et lui seul, qui crée l'obligation de tri des 5 flux. En savoir plus — le décret n°2016-288 a été pris en application de la loi n°2015-992 du 17 août 2015 relative à la transition énergétique pour la croissance verte, qui en constitue le fondement législatif sans fixer elle-même l'obligation. Deux textes sont ensuite venus l'élargir : le décret n°2021-950 du 16 juillet 2021 ajoute les fractions minérales et le plâtre (tri « 7 flux ») à compter du 1er janvier 2025 pour les déchets du bâtiment, et la loi AGEC du 10 février 2020 étend le tri des biodéchets. Concrètement, depuis le 1er janvier 2018, tous les bureaux de plus de 20 employés doivent trier et valoriser leurs papiers.",
@@ -19789,10 +19789,10 @@
       "type": "qcm",
       "question": "Depuis le 1er janvier 2025, le « tri à 9 flux » ajoute quel flux supplémentaire aux obligations existantes ?",
       "options": [
-        "Les huiles usagées",
-        "Les textiles professionnels usagés (vêtements de travail, équipements de protection individuelle)",
-        "Les déchets dangereux",
-        "Les déchets verts"
+        "Les huiles usagées produites par les ateliers et garages professionnels",
+        "Les textiles professionnels usagés : vêtements de travail et équipements de protection",
+        "Les déchets dangereux issus de l'entretien courant des bâtiments tertiaires",
+        "Les déchets verts issus de l'entretien des espaces extérieurs du site"
       ],
       "bonneReponse": 1,
       "explication": "Depuis le 1er janvier 2025, le tri à 9 flux étend l'obligation existante aux textiles professionnels usagés (vêtements de travail, équipements de protection individuelle). Cette échéance a été fixée par le décret n°2021-950 du 16 juillet 2021, qui a différé au 1er janvier 2025 l'application de ce dernier flux — Légifrance. Ce flux vise à mieux valoriser un gisement estimé à environ 20 000 tonnes par an en France, jusque-là en grande partie enfoui ou incinéré.",
@@ -19874,10 +19874,10 @@
       "type": "qcm",
       "question": "Concrètement, en phase d'exploitation d'un patrimoine bâti, à quel type de travaux la séquence ERC s'applique-t-elle le plus souvent ?",
       "options": [
-        "Uniquement aux constructions neuves",
-        "Aux travaux sur les parties extérieures du bâtiment (parking, espaces verts, patio, toiture...)",
-        "Uniquement aux opérations de démolition totale",
-        "Elle ne s'applique jamais en phase d'exploitation"
+        "Aux seules constructions neuves réalisées sur un terrain non bâti",
+        "Aux travaux sur les abords : parking, espaces verts, patio, toiture végétalisée",
+        "Aux seules opérations de démolition totale d'un bâtiment existant",
+        "À aucun travaux : la séquence ERC ne s'applique pas en exploitation"
       ],
       "bonneReponse": 1,
       "explication": "En phase d'exploitation d'un patrimoine bâti, la séquence ERC s'applique le plus souvent aux travaux réalisés sur les parties extérieures du bâtiment : parking, espaces verts, patio, toiture. Cette application découle de la doctrine ministérielle ERC, fondée sur l'article L.110-1 du code de l'environnement. Elle concerne aussi bien de petits aménagements que de grosses opérations, dès lors qu'ils sont susceptibles d'affecter des espaces naturels ou semi-naturels du site.",
@@ -19895,10 +19895,10 @@
       "type": "qcm",
       "question": "L'objectif de Zéro Artificialisation Nette (ZAN) à l'horizon 2050 implique que :",
       "options": [
-        "Plus aucune construction ne sera autorisée en France après 2050",
-        "Toute artificialisation nouvelle devra être compensée par une renaturation à proportion égale d'espaces artificialisés",
-        "Seules les communes rurales sont concernées par cet objectif",
-        "L'objectif final de 2050 a été abandonné"
+        "Plus aucune construction nouvelle ne sera autorisée en France après 2050",
+        "Toute artificialisation nouvelle devra être compensée par une renaturation équivalente",
+        "Seules les communes rurales sont concernées par cet objectif de sobriété foncière",
+        "L'objectif fixé pour 2050 a été abandonné au profit d'un suivi statistique"
       ],
       "bonneReponse": 1,
       "explication": "L'objectif de Zéro Artificialisation Nette (ZAN) à l'horizon 2050 implique que toute artificialisation nouvelle devra être compensée par une renaturation à proportion égale d'espaces artificialisés — il n'interdit donc pas toute construction future. Cet objectif est posé par la loi n°2021-1104 du 22 août 2021 (loi Climat et résilience) — Légifrance. Seul le calendrier intermédiaire de réduction du rythme d'artificialisation a fait l'objet d'assouplissements successifs (loi du 20 juillet 2023, puis loi TRACE en 2026) ; l'objectif final de 2050 demeure inchangé. En savoir plus — ZAN : Zéro Artificialisation Nette, objectif consistant à ne plus artificialiser de sols naturels, agricoles ou forestiers sans compensation équivalente par renaturation.",
@@ -20061,10 +20061,10 @@
       "type": "qcm",
       "question": "La taxonomie européenne vise principalement à :",
       "options": [
-        "Fixer un salaire minimum européen dans le secteur du BTP",
-        "Établir une classification commune des activités économiques ayant un impact favorable sur l'environnement, pour orienter les capitaux vers les activités durables",
-        "Remplacer le DPE par un dispositif unique dans toute l'Union européenne",
-        "Interdire la construction neuve en Europe"
+        "Fixer un salaire minimum européen applicable au secteur du bâtiment",
+        "Classer les activités favorables à l'environnement pour orienter les capitaux",
+        "Remplacer le diagnostic de performance énergétique par un dispositif européen",
+        "Interdire progressivement la construction neuve sur le territoire de l'Union"
       ],
       "bonneReponse": 1,
       "explication": "La taxonomie européenne vise à établir une classification commune des activités économiques ayant un impact favorable sur l'environnement, afin d'orienter les capitaux vers les activités durables. Ce cadre est fixé par le règlement (UE) 2020/852 du 18 juin 2020, dit règlement Taxonomie, consultable sur EUR-Lex. Point de vigilance : ce cadre est en pleine révision depuis le paquet « Omnibus I » — une directive de simplification a été publiée au Journal officiel de l'Union européenne le 26 février 2026 et est entrée en vigueur le 18 mars 2026, réduisant le nombre d'entreprises soumises au reporting ; les seuils d'assujettissement sont donc à revérifier avant toute utilisation en épreuve. En savoir plus — taxonomie européenne : système de classification des activités économiques durables sur le plan environnemental, utilisé notamment dans le reporting de durabilité des entreprises (CSRD). Exemples concrets d'application côté collectivité et bâtiment : une rénovation lourde n'est alignée sur la taxonomie que si elle réduit la consommation d'énergie primaire d'au moins 30 % ; une construction neuve doit présenter une consommation inférieure d'au moins 10 % au seuil NZEB national ; l'acquisition d'un bâtiment construit après 2020 exige une performance au moins équivalente à ce même seuil, et avant 2021 un DPE de classe A ou le meilleur décile du parc. En pratique, cela conditionne l'accès aux financements verts : émissions obligataires vertes d'une collectivité, prêts « verts » de la Banque des Territoires, reporting extra-financier des bailleurs sociaux et des sociétés d'économie mixte, ou exigences d'un investisseur institutionnel dans un montage de partenariat.",
@@ -20106,9 +20106,9 @@
       "type": "qcm",
       "question": "La « valeur verte » en immobilier correspond aujourd'hui principalement à :",
       "options": [
-        "Une prime systématique payée pour tout bâtiment neuf",
-        "L'écart de valeur entre un bâtiment performant sur le plan environnemental et un comparable moins performant — devenue une valeur défensive visant avant tout à éviter une perte",
-        "Un dispositif fiscal de réduction d'impôt pour les bailleurs",
+        "Une prime de prix systématiquement versée pour tout bâtiment livré neuf",
+        "L'écart de valeur avec un bien moins performant, devenu surtout défensif",
+        "Un dispositif fiscal de réduction d'impôt réservé aux bailleurs privés",
         "Une certification obligatoire depuis 2023 pour tout bien mis en location"
       ],
       "bonneReponse": 1,
@@ -20127,10 +20127,10 @@
       "type": "qcm",
       "question": "La « décote brune » désigne :",
       "options": [
-        "Une prime accordée aux bâtiments rénovés récemment",
-        "La sanction de marché appliquée aux actifs obsolètes ou non conformes aux exigences environnementales",
-        "Une taxe sur les logements vacants",
-        "Un abattement fiscal automatique pour travaux de rénovation énergétique"
+        "Une prime de valeur accordée aux bâtiments récemment rénovés et performants",
+        "La sanction de marché frappant les actifs obsolètes ou non conformes aux exigences",
+        "Une taxe locale appliquée aux logements vacants depuis plus de deux ans",
+        "Un abattement fiscal automatique accordé pour travaux de rénovation énergétique"
       ],
       "bonneReponse": 1,
       "explication": "La « décote brune » désigne la sanction de marché appliquée aux actifs obsolètes ou non conformes aux exigences environnementales, qui peuvent devenir difficilement louables ou invendables. Comme la valeur verte, cette notion de marché ne s'appuie sur aucun texte réglementaire dédié ; elle est documentée par des acteurs professionnels comme l'Observatoire de l'Immobilier Durable. Un actif frappé de décote brune subit une double perte : un manque de recettes locatives et un coût de travaux à engager pour retrouver sa conformité.",
@@ -20148,10 +20148,10 @@
       "type": "qcm",
       "question": "Entre la période 1982-1989 et la période 2020-2023, le coût annuel moyen des sinistres climatiques pour les assureurs en France a, selon France Assureurs :",
       "options": [
-        "Été divisé par deux",
-        "Été multiplié par environ quatre",
-        "Été multiplié par cent",
-        "Été stable"
+        "Été divisé par deux grâce à la prévention et aux normes de construction",
+        "Été multiplié par environ quatre sur la période observée",
+        "Été multiplié par cent, sous l'effet des seules tempêtes littorales",
+        "Été globalement stable, les sinistres restant d'un niveau comparable"
       ],
       "bonneReponse": 1,
       "explication": "Le coût annuel des sinistres climatiques pour les assureurs en France a été multiplié par environ quatre depuis les années 1980, passant d'environ 1,5 milliard d'euros en moyenne (1982-1989) à plus de 6 milliards entre 2020 et 2023. Ces données sectorielles proviennent de France Assureurs, la fédération professionnelle de l'assurance (franceassureurs.fr). Selon les projections de la fédération, les dégâts cumulés par les événements naturels pourraient encore doubler d'ici 2050 par rapport à la période 1989-2019.",
@@ -20169,10 +20169,10 @@
       "type": "qcm",
       "question": "Parmi les conséquences du changement climatique pour les gestionnaires immobiliers en matière d'assurance, on trouve notamment :",
       "options": [
-        "La renégociation des contrats avec franchises majorées, et la désassurabilité partielle de certaines zones à risque",
-        "Une baisse généralisée des primes d'assurance",
-        "La gratuité de l'assurance pour les bâtiments non rénovés",
-        "L'interdiction pour les assureurs de réviser leurs clauses d'exclusion"
+        "Des contrats renégociés avec franchises majorées et une désassurabilité de certaines zones",
+        "Une baisse généralisée des primes, liée à la meilleure connaissance des risques",
+        "La gratuité de la couverture d'assurance pour les bâtiments non rénovés",
+        "L'interdiction faite aux assureurs de réviser leurs clauses d'exclusion"
       ],
       "bonneReponse": 0,
       "explication": "Face à l'aggravation des risques climatiques, les gestionnaires immobiliers font face à une renégociation des contrats avec franchises majorées, ainsi qu'à une désassurabilité partielle de certaines zones à risque (littoraux, vallées fluviales). Ce constat est documenté par France Assureurs, la fédération professionnelle de l'assurance (franceassureurs.fr). Ces difficultés d'assurance amplifient en retour la décote de valeur des biens situés en zone à risque, dans une logique de double peine pour le propriétaire.",
@@ -20190,10 +20190,10 @@
       "type": "qcm",
       "question": "Selon le référent GID (Paul Grossein), une gestion durable et stratégique des budgets d'investissement du patrimoine immobilier public repose avant tout sur :",
       "options": [
-        "La dépense budgétaire maximale possible chaque année, pour ne pas perdre de crédits",
-        "Une connaissance fine du parc, une priorisation des risques et un alignement avec les objectifs de transition — plutôt que des audits généralistes sans finalité claire",
-        "La concentration exclusive des investissements sur les bâtiments de prestige",
-        "Le tirage au sort des opérations à financer, pour garantir l'équité territoriale"
+        "La consommation maximale des crédits chaque année, pour ne pas les perdre",
+        "Une connaissance fine du parc, une priorisation des risques et un cap de transition",
+        "La concentration des investissements sur les seuls bâtiments de prestige",
+        "Le tirage au sort des opérations financées, pour garantir l'équité territoriale"
       ],
       "bonneReponse": 1,
       "explication": "Une gestion durable et stratégique des budgets d'investissement du patrimoine immobilier public repose avant tout sur une connaissance fine du parc, une priorisation des risques et un alignement avec les objectifs de transition — plutôt que sur des audits généralistes sans finalité claire. Il s'agit d'un retour d'expérience professionnel, sans texte réglementaire qui prescrive une méthode d'allocation budgétaire : c'est une bonne pratique de gestion, non une obligation légale. À défaut de cette connaissance fine, on observe des travers récurrents : des travaux menés sur des bâtiments à faible occupation ou à l'avenir incertain, ou des crédits consommés dans l'urgence en fin d'exercice pour ne pas être perdus.",
@@ -20351,10 +20351,10 @@
       "type": "qcm",
       "question": "Quelle association française, créée en 2012, publie chaque année un baromètre de la performance énergétique et environnementale des bâtiments tertiaires en France ?",
       "options": [
-        "L'Observatoire de l'Immobilier Durable (OID)",
-        "L'ADEME",
-        "France Assureurs",
-        "La Caisse des Dépôts et Consignations (CDC)"
+        "L'Observatoire de l'Immobilier Durable (OID), association créée en 2012",
+        "L'ADEME, agence publique de la transition écologique et de l'énergie",
+        "France Assureurs, fédération professionnelle des sociétés d'assurance",
+        "La Caisse des Dépôts et Consignations, investisseur public de long terme"
       ],
       "bonneReponse": 0,
       "explication": "L'Observatoire de l'Immobilier Durable (OID), association loi de 1901 fondée le 11 septembre 2012, publie chaque année depuis cette date son Baromètre de la Performance Énergétique et environnementale des bâtiments tertiaires. Source : OID (o-immobilierdurable.fr), fiche d'identité de l'association. L'OID a été fondée par sept acteurs de l'immobilier tertiaire — Altarea Cogedim, Amundi Immobilier, l'Arseg, La Française REM, Nexity, Sinteo et Société de la Tour Eiffel — réunis pour mettre en commun, de façon anonymisée, des données techniques de bâtiments et en tirer des indicateurs statistiques représentatifs du parc tertiaire français. En savoir plus — OID : Observatoire de l'Immobilier Durable, association indépendante du secteur immobilier tertiaire.",
@@ -20393,10 +20393,10 @@
       "type": "qcm",
       "question": "Selon le cadre de référence « Ready to Services » (R2S) de la Smart Building Alliance, un système IoT de bâtiment s'organise en combien de couches indépendantes ?",
       "options": [
-        "Deux couches : matériel et logiciel",
-        "Trois couches : équipements connectés, infrastructure de communication, couche applicative/services",
-        "Quatre couches : capteurs, réseau, stockage, sécurité",
-        "Une seule couche intégrée, propre à chaque éditeur"
+        "Deux couches distinctes : les équipements matériels et la partie logicielle",
+        "Trois couches : équipements connectés, infrastructure de communication, applications",
+        "Quatre couches : capteurs, réseau, stockage des données et cybersécurité",
+        "Une seule couche intégrée, propre à chaque éditeur de solution technique"
       ],
       "bonneReponse": 1,
       "explication": "Trois couches indépendantes : les équipements connectés (capteurs qui produisent de la donnée, actionneurs qui en consomment), l'infrastructure de communication (le réseau) et la couche applicative ou de service, où les données sont stockées et exploitées pour rendre des services aux usagers. Source : Smart Building Alliance (SBA, association fondée en 2012), cadre de référence R2S — Ready to Services. Un témoignage professionnel illustre la difficulté à calibrer le bon niveau de donnée à collecter : les spécialistes techniques d'un parc immobilier peuvent réclamer des données très fines (vitesse de montée et de descente d'un ascenseur, temps d'attente à l'étage), quand les utilisateurs de terrain n'attendent qu'une information binaire — l'équipement fonctionne ou non — ce qui illustre que la donnée utile n'est pas la donnée maximale. En savoir plus — R2S : Ready to Services, cadre de référence de la SBA pour les bâtiments tertiaires connectés ; SBA : Smart Building Alliance, association professionnelle du bâtiment intelligent.",
@@ -20462,9 +20462,9 @@
       "question": "Dans une analyse des dépenses immobilières d'un patrimoine, quel poste de charge est classiquement exclu du périmètre étudié, alors qu'il pèse souvent bien plus lourd dans le budget global de la collectivité ?",
       "options": [
         "La masse salariale des agents affectés à l'entretien et à l'exploitation",
-        "Les fluides et l'énergie",
-        "La sûreté, la sécurité et le gardiennage",
-        "L'entretien et la maintenance courante"
+        "Les fluides et l'énergie consommés par les bâtiments du patrimoine",
+        "La sûreté, la sécurité des personnes et le gardiennage des sites",
+        "L'entretien courant et la maintenance préventive des équipements"
       ],
       "bonneReponse": 0,
       "explication": "La masse salariale des agents affectés à l'entretien et à l'exploitation, suivie séparément dans le budget de personnel de la collectivité, alors que les fluides, l'entretien-maintenance et la sûreté-sécurité-gardiennage restent, eux, dans le périmètre analysé. Pas de texte réglementaire imposant ce périmètre : il s'agit d'une convention usuelle d'analyse patrimoniale, destinée à isoler le coût du bâti proprement dit de celui des ressources humaines qui l'exploitent. À titre d'exemple, sur 17 M€ de charges de fonctionnement annuelles, le premier poste de dépense était les fluides et l'énergie (en hausse sur cinq ans), suivi de l'entretien-maintenance puis de la sûreté-sécurité-gardiennage — les loyers, eux, ne représentaient qu'une part infime, l'organisation étant propriétaire de 100 % de ses bâtiments.",
@@ -20514,10 +20514,10 @@
       "type": "qcm",
       "question": "Quel organisme développe l'outil DRIAS, qui projette l'évolution du climat sur les prochaines décennies selon les scénarios du GIEC ?",
       "options": [
-        "Météo-France, avec des équipes de recherche associées",
-        "Le BRGM",
-        "L'ADEME",
-        "La Caisse des Dépôts et Consignations"
+        "Météo-France, avec l'appui d'équipes de recherche associées",
+        "Le BRGM, service géologique national chargé de l'étude du sous-sol",
+        "L'ADEME, agence de la transition écologique et de l'énergie",
+        "La Caisse des Dépôts, via sa direction des investissements"
       ],
       "bonneReponse": 0,
       "explication": "DRIAS « Les futurs du climat » est développé par Météo-France, avec des équipes de recherche associées, et projette l'évolution du climat sur les prochaines décennies selon différents scénarios du GIEC. Source : DRIAS-climat.fr, plateforme portée par Météo-France. À la différence de Géorisques, qui photographie le risque à un instant donné, DRIAS permet d'anticiper les impacts futurs sur un territoire selon plusieurs trajectoires climatiques, ce qui en fait l'outil de référence pour dimensionner des projets de construction ou de rénovation à long terme plutôt que pour évaluer l'exposition actuelle d'un bâtiment existant. En savoir plus — GIEC : Groupe d'experts intergouvernemental sur l'évolution du climat, organisme scientifique des Nations unies qui évalue les connaissances sur le changement climatique.",
@@ -20551,7 +20551,12 @@
       "famille": "S",
       "type": "qcm",
       "question": "Quelle plateforme numérique, pilotée par l'Observatoire de l'Immobilier Durable (OID), permet d'analyser à la fois les risques climatiques (via son volet Bat-ADAPT) et les enjeux de biodiversité (via son volet BIODI-Bat) d'un patrimoine bâti à l'échelle européenne ?",
-      "options": ["R4RE — Resilience for Real Estate", "OPERAT", "DRIAS", "Géorisques"],
+      "options": [
+        "R4RE — Resilience for Real Estate, plateforme portée par l'OID",
+        "OPERAT, plateforme de l'ADEME pour Éco Énergie Tertiaire",
+        "DRIAS, portail des projections climatiques de Météo-France",
+        "Géorisques, portail d'information sur les risques naturels"
+      ],
       "bonneReponse": 0,
       "explication": "R4RE (Resilience for Real Estate) est une plateforme cartographique développée par l'Observatoire de l'Immobilier Durable, disponible depuis 2022, qui combine un volet d'analyse des risques climatiques (Bat-ADAPT) et un volet biodiversité (BIODI-Bat), à l'échelle d'un bâtiment ou d'un patrimoine, en France et en Europe. Source : Observatoire de l'Immobilier Durable, plateforme R4RE (resilience-for-real-estate.com). Le volet Bat-ADAPT couvre huit aléas climatiques (fortes chaleurs, sécheresses, précipitations et inondations, dynamiques littorales, tempêtes et vents violents, feux de forêt, grands froids, mouvements de terrain) sur des horizons allant jusqu'à 2090, en s'appuyant notamment sur les données de DRIAS et les scénarios du GIEC ; le volet biodiversité BIODI-Bat, initialement hébergé séparément sur le site Taloen de l'OID, y a été intégré en 2022.",
       "derniereVerification": "2026-09",
@@ -20873,10 +20878,10 @@
       "type": "qcm",
       "question": "Quel établissement public national propose des aides (subventions à l'investissement, financement d'études et d'ingénierie) pour les projets de rénovation énergétique ou de décarbonation du patrimoine ?",
       "options": [
-        "Le CNFPT",
-        "L'ANCT seule",
-        "L'ADEME (Agence de la transition écologique)",
-        "La Caisse des Dépôts seule"
+        "Le CNFPT, établissement public national de formation des agents",
+        "L'ANCT seule, agence nationale de la cohésion des territoires",
+        "L'ADEME, agence de la transition écologique et de l'énergie",
+        "La Caisse des Dépôts seule, via sa Banque des territoires"
       ],
       "bonneReponse": 2,
       "explication": "L'ADEME (Agence de la transition écologique) propose des aides pour les projets de rénovation énergétique ou de décarbonation du patrimoine, sous forme de subventions à l'investissement ou de financements d'études et d'ingénierie. Source : ADEME, établissement public à caractère industriel et commercial placé sous la tutelle des ministères chargés de la Transition écologique, de la Recherche et de l'Enseignement supérieur, et de l'Industrie — ademe.fr. Ces aides se combinent avec d'autres dispositifs mobilisables à différents niveaux (national, régional, européen) — certificats d'économies d'énergie, dotations de l'État comme la DSIL ou la DETR — sous réserve de respecter les critères d'éligibilité et les calendriers de dépôt de dossiers propres à chaque dispositif.",
@@ -20894,10 +20899,10 @@
       "type": "qcm",
       "question": "La dotation d'équipement des territoires ruraux (DETR) a été créée par :",
       "options": [
-        "La loi Grenelle II du 12 juillet 2010",
-        "Le décret tertiaire du 23 juillet 2019",
-        "La loi 3DS du 21 février 2022",
-        "L'article 179 de la loi de finances pour 2011, par fusion de la DGE des communes et de la dotation de développement rural"
+        "La loi Grenelle II du 12 juillet 2010 portant engagement pour l'environnement",
+        "Le décret tertiaire du 23 juillet 2019 relatif aux consommations d'énergie",
+        "La loi 3DS du 21 février 2022 sur la différenciation et la décentralisation",
+        "L'article 179 de la loi de finances pour 2011, fusionnant DGE et dotation rurale"
       ],
       "bonneReponse": 3,
       "explication": "La dotation d'équipement des territoires ruraux (DETR) a été créée par l'article 179 de la loi n°2010-1657 du 29 décembre 2010 de finances pour 2011, par fusion de la dotation globale d'équipement (DGE) des communes et de la dotation de développement rural (DDR). Source : loi n°2010-1657 du 29 décembre 2010, article 179 ; articles L.2334-32 à L.2334-39 et R.2334-19 à R.2334-31-1 du code général des collectivités territoriales (CGCT) — Légifrance. La DETR est attribuée par le préfet de département après avis d'une commission départementale d'élus, qui fixe chaque année les catégories d'opérations prioritaires et les taux de subvention ; elle peut notamment financer des projets de rénovation thermique et de transition énergétique, au même titre que la mise aux normes des équipements publics. En savoir plus — DETR : dotation d'équipement des territoires ruraux ; DGE : dotation globale d'équipement ; DDR : dotation de développement rural.",
@@ -20989,10 +20994,10 @@
       "type": "qcm",
       "question": "Un emprunt vert (green bond) mobilisé par une collectivité se caractérise principalement par :",
       "options": [
-        "Un taux d'intérêt légalement plafonné à 1 %",
-        "Une obligation de rétrocession de 20 % du montant emprunté à l'ADEME",
-        "Une garantie automatique de remboursement par l'État",
-        "Des fonds exclusivement fléchés vers des projets à forte valeur environnementale, avec justification de l'usage des fonds et suivi d'indicateurs de transparence"
+        "Un taux d'intérêt plafonné à 1 % par la réglementation financière",
+        "Une rétrocession obligatoire de 20 % du montant emprunté à l'ADEME",
+        "Une garantie de remboursement accordée automatiquement par l'État",
+        "Des fonds fléchés vers des projets environnementaux, avec suivi d'indicateurs"
       ],
       "bonneReponse": 3,
       "explication": "Un emprunt vert (green bond) mobilisé par une collectivité se caractérise par des fonds exclusivement fléchés vers des projets à forte valeur environnementale, assortis d'une obligation de justifier l'usage des fonds et de suivre des indicateurs de transparence. Source : notion de marché (obligations vertes / green bonds), sans texte réglementaire imposant un plafond de taux ou une rétrocession à un organisme public. Ce type de financement peut offrir des conditions plus avantageuses qu'un emprunt classique, les investisseurs privilégiant de plus en plus les projets responsables et proposant des taux bonifiés, mais il impose en contrepartie une gouvernance adaptée pour assurer le suivi des indicateurs et la production de rapports de transparence.",
@@ -21010,10 +21015,10 @@
       "type": "qcm",
       "question": "Les certifications environnementales HQE, BREEAM ou LEED, appliquées à un immeuble tertiaire, permettent principalement de :",
       "options": [
-        "Dispenser automatiquement le bâtiment du dispositif Éco Énergie Tertiaire",
-        "Garantir un socle minimal de performance énergétique, de confort des usagers et de gestion environnementale, reconnu par le marché immobilier",
-        "Remplacer légalement l'obligation de diagnostic de performance énergétique (DPE)",
-        "Garantir l'éligibilité automatique aux aides de l'ADEME"
+        "Dispenser automatiquement l'immeuble des obligations d'Éco Énergie Tertiaire",
+        "Attester un socle de performance et de confort reconnu par le marché immobilier",
+        "Remplacer légalement le diagnostic de performance énergétique lors des mutations",
+        "Ouvrir de plein droit l'accès aux aides de l'ADEME et aux certificats d'économies"
       ],
       "bonneReponse": 1,
       "explication": "Les certifications environnementales HQE, BREEAM ou LEED, appliquées à un immeuble tertiaire, garantissent un socle minimal de performance énergétique, de confort des usagers et de gestion environnementale, reconnu par le marché immobilier. Source : notion de marché — labels et certifications privés (HQE, BREEAM, LEED), non des textes réglementaires ; ils ne se substituent ni au dispositif Éco Énergie Tertiaire ni à l'obligation de diagnostic de performance énergétique (DPE), qui restent des obligations légales distinctes. Dans les marchés tendus, les immeubles certifiés se louent et se vendent mieux, avec un taux d'occupation plus élevé ; ces labels permettent aussi d'anticiper les obligations réglementaires futures et de sécuriser les investissements, constituant un levier de valorisation patrimoniale au-delà de la seule conformité réglementaire. En savoir plus — HQE : Haute Qualité Environnementale ; BREEAM : Building Research Establishment Environmental Assessment Method ; LEED : Leadership in Energy and Environmental Design.",
@@ -21076,9 +21081,9 @@
       "type": "qcm",
       "question": "Lors de la cession d'un site immobilier public assorti d'objectifs environnementaux forts (performance énergétique minimale, biodiversité, gestion de l'eau…), il est recommandé de transmettre le cahier des charges en amont :",
       "options": [
-        "À la Cour des comptes, pour homologation obligatoire préalable",
-        "Au préfet de région uniquement, pour validation systématique",
-        "À la commune concernée, afin de vérifier sa compatibilité avec le plan local d'urbanisme (PLU) et de recueillir ses attentes",
+        "À la Cour des comptes, pour homologation préalable obligatoire de la cession",
+        "Au préfet de région seul, pour validation systématique du cahier des charges",
+        "À la commune, pour vérifier la compatibilité avec le PLU et recueillir ses attentes",
         "À aucun tiers, afin de préserver la confidentialité de la procédure de cession"
       ],
       "bonneReponse": 2,
@@ -21097,10 +21102,10 @@
       "type": "qcm",
       "question": "Dans la construction de scénarios d'évolution d'un parc de bureaux d'une collectivité, quel élément oriente généralement en premier le choix des scénarios, avant l'état des bâtiments, leur potentiel de valorisation ou leurs performances environnementales ?",
       "options": [
-        "Le classement énergétique (étiquette DPE) de chaque bâtiment",
-        "La valeur vénale estimée des biens",
-        "L'ancienneté administrative de chaque bâtiment",
-        "Les besoins exprimés par les utilisateurs (effectifs projetés, principes d'aménagement retenus)"
+        "L'étiquette énergétique issue du diagnostic de performance de chaque bâtiment",
+        "La valeur vénale estimée des biens par le service des domaines",
+        "L'ancienneté administrative de chaque bâtiment dans l'inventaire du parc",
+        "Les besoins des utilisateurs : effectifs projetés et principes d'aménagement"
       ],
       "bonneReponse": 3,
       "explication": "Dans le retour d'expérience présenté, ce sont les besoins exprimés par les utilisateurs (projection des effectifs, principes d'aménagement retenus) qui ont orienté la construction des scénarios, et non l'état des bâtiments, leur potentiel de valorisation ou leurs performances environnementales. Source : retour d'expérience professionnel présenté dans le document support ; pas de texte réglementaire dédié à la méthode de priorisation des scénarios d'évolution du patrimoine. Dans cet exemple, la collectivité a d'abord projeté ses effectifs à 5 ans et appliqué ses principes d'aménagement (regroupement des directions sur un nombre limité de sites, suppression des postes attitrés pour les agents peu présents) pour en déduire le volume de mètres carrés nécessaire, avant de comparer ce volume projeté à la situation existante et d'en déduire un potentiel de libération de surfaces ; ce n'est qu'ensuite que plusieurs scénarios ont été comparés sur les plans fonctionnel, économique, environnemental et technique.",
@@ -21141,10 +21146,10 @@
       "type": "qcm",
       "question": "Pour constituer une base patrimoniale exploitable, quel ensemble minimal d'informations doit, a minima, être rassemblé pour chaque immeuble ?",
       "options": [
-        "Uniquement la valeur vénale de l'actif",
-        "Le nom, l'adresse, la date de construction, l'identité des locataires, les baux associés et les équipements présents",
-        "Le seul historique des sinistres assurantiels",
-        "La seule surface de plancher déclarée en mairie"
+        "La seule valeur vénale de l'actif, estimée à la date de l'inventaire",
+        "Nom, adresse, date de construction, locataires, baux associés et équipements",
+        "Le seul historique des sinistres déclarés à l'assureur du patrimoine",
+        "La seule surface de plancher déclarée au dépôt du permis de construire"
       ],
       "bonneReponse": 1,
       "explication": "Une base patrimoniale exploitable doit a minima regrouper, pour chaque immeuble, le nom, l'adresse, la date de construction, l'identité des locataires, les baux associés et les équipements présents sur site. Il s'agit d'une bonne pratique professionnelle de gestion de patrimoine immobilier, non d'une obligation fixée par un texte réglementaire dédié. À noter que cette base n'est jamais homogène d'un actif à l'autre, car chaque immeuble a sa propre histoire d'acquisition ou de cession, et qu'il faut y ajouter les documents spécifiques collectés lors d'une vente ou d'une construction (plans, schémas électriques, loyers, charges, valeur nette comptable).",
@@ -21178,10 +21183,10 @@
       "type": "qcm",
       "question": "Lors de la prise en charge d'un contrat de maintenance multitechnique, qui réalise généralement l'inventaire technique initial des équipements ?",
       "options": [
-        "Le locataire",
-        "L'entreprise multitechnique elle-même",
-        "Le bureau de contrôle",
-        "Le syndic de copropriété"
+        "Le locataire occupant, à partir de ses propres relevés d'exploitation",
+        "L'entreprise multitechnique titulaire du contrat de maintenance",
+        "Le bureau de contrôle, lors de sa visite réglementaire annuelle",
+        "Le syndic de copropriété, pour le compte du propriétaire bailleur"
       ],
       "bonneReponse": 1,
       "explication": "L'inventaire technique initial des équipements est en principe réalisé par l'entreprise multitechnique elle-même, lors de sa prise en charge du contrat de maintenance. Il s'agit d'une pratique professionnelle de la maintenance immobilière, sans texte réglementaire dédié qui l'impose. En pratique, le donneur d'ordre demande souvent, en complément, un double contrôle de cet inventaire au Property Manager, pour trois raisons : la conformité réglementaire (programmer les bonnes gammes de maintenance), l'aspect économique (ajuster les DPGF des propriétaires) et la responsabilité assurantielle (éviter d'engager sa responsabilité sur une mauvaise couverture des équipements). En savoir plus — GED : Gestion Électronique des Documents, qui centralise cet inventaire technique ; DPGF : Décomposition du Prix Global et Forfaitaire.",
@@ -21457,10 +21462,10 @@
       "type": "qcm",
       "question": "La loi Pinel du 18 juin 2014, en matière de baux commerciaux, a notamment eu pour effet :",
       "options": [
-        "D'imposer le bail vert à tous les baux commerciaux sans condition de surface",
-        "D'exclure certaines charges (grosses réparations de l'article 606 du code civil, honoraires de syndic...) de celles pouvant être mises à la charge du locataire",
-        "De supprimer toute possibilité de refacturation de charges au locataire",
-        "De créer le dispositif Éco Énergie Tertiaire"
+        "D'imposer le bail vert à tous les baux commerciaux, sans condition de surface",
+        "D'exclure certaines charges (article 606, honoraires de syndic) de la refacturation",
+        "De supprimer toute possibilité de refacturer des charges au locataire",
+        "De créer le dispositif Éco Énergie Tertiaire applicable aux commerces"
       ],
       "bonneReponse": 1,
       "explication": "La loi n° 2014-626 du 18 juin 2014 (loi Pinel) et son décret d'application n° 2014-1317 du 3 novembre 2014 ont notamment exclu certaines charges — grosses réparations de l'article 606 du code civil, honoraires de syndic, impôts fonciers pour partie — de celles pouvant être refacturées au locataire dans les baux commerciaux. Source : Loi n° 2014-626 du 18 juin 2014 et décret n° 2014-1317 du 3 novembre 2014 — Légifrance. Cette même réforme impose également au bailleur un inventaire précis des catégories de charges annexé au contrat de bail, ainsi qu'un état prévisionnel des travaux envisagés sur les trois années suivantes et un état récapitulatif des travaux réalisés sur les trois années écoulées.",
@@ -21478,10 +21483,10 @@
       "type": "qcm",
       "question": "Une GTB (Gestion Technique du Bâtiment) se distingue d'une GTC (Gestion Technique Centralisée) principalement en ce qu'elle :",
       "options": [
-        "Ne supervise qu'un seul lot technique isolé",
-        "Inclut la GTC mais avec un périmètre étendu, supervisant l'ensemble des équipements d'un site",
-        "Ne concerne que les bâtiments industriels",
-        "Remplace entièrement les contrats de maintenance humaine"
+        "Elle ne supervise qu'un seul lot technique isolé du bâtiment",
+        "Elle inclut la GTC mais supervise l'ensemble des équipements du site",
+        "Elle ne concerne que les bâtiments industriels et les plateformes logistiques",
+        "Elle remplace entièrement les contrats de maintenance assurés par des humains"
       ],
       "bonneReponse": 1,
       "explication": "Une GTB inclut la GTC mais avec un périmètre étendu : elle supervise et optimise l'activité globale d'un site, quand la GTC pilote généralement un seul lot technique isolé. Distinction technique communément admise dans la pratique professionnelle, sans texte réglementaire qui en donnerait une définition juridique unique — le décret BACS impose en revanche l'obligation d'installer ce type de système selon des seuils de puissance. Les systèmes usuellement supervisés par une GTB sont le CVC, l'éclairage, l'eau chaude sanitaire, l'eau, le photovoltaïque, le gaz, l'alarme et la sécurité ; ses missions associées incluent la collecte des données du site (analyse fonctionnelle), la mise à disposition d'un boîtier de communication 4G ou LoRa, et le contrôle à distance des équipements. En savoir plus — GTB : Gestion Technique du Bâtiment ; GTC : Gestion Technique Centralisée ; BACS : Building Automation and Control Systems, système dont l'installation est rendue obligatoire par décret selon la puissance des équipements CVC.",
@@ -21541,10 +21546,10 @@
       "type": "qcm",
       "question": "Un des intérêts de poursuivre la démarche BIM (Building Information Modeling) en phase d'exploitation (« BIM Exploitation ») est notamment de :",
       "options": [
-        "Remplacer entièrement la GTB du bâtiment",
-        "Capitaliser sur les données recueillies lors des phases de conception et de construction, et éviter leur perte lors des transitions entre phases",
-        "Supprimer l'obligation de respecter les DTU applicables",
-        "Dispenser le propriétaire des contrôles réglementaires périodiques"
+        "De remplacer entièrement la gestion technique du bâtiment installée",
+        "De capitaliser les données de conception et de construction, sans les perdre",
+        "De dispenser le maître d'ouvrage du respect des DTU applicables",
+        "De supprimer les contrôles réglementaires périodiques obligatoires"
       ],
       "bonneReponse": 1,
       "explication": "Poursuivre le BIM en phase d'exploitation permet de capitaliser sur les données récoltées lors des phases de conception et de construction, et d'éviter leur perte lors des transitions entre les grandes phases de vie de l'actif. Pratique émergente de la filière numérique du bâtiment, sans texte réglementaire l'imposant spécifiquement en phase d'exploitation. Cette démarche nécessite de travailler sur un « jumeau numérique » simplifié, allant à l'essentiel, avec une ergonomie adaptée aux besoins de l'exploitation, et doit être anticipée dès le montage du projet pour assurer une bascule opérationnelle efficiente entre construction et exploitation. En savoir plus — BIM : Building Information Modeling, maquette numérique du bâtiment.",
@@ -21738,10 +21743,10 @@
       "type": "qcm",
       "question": "Quel texte encadre aujourd'hui, en 2026, la réutilisation des eaux de pluie collectées en aval de surfaces inaccessibles au public pour des usages domestiques (arrosage, chasses d'eau, lavage des sols) ?",
       "options": [
-        "L'arrêté du 21 août 2008, toujours en vigueur",
-        "Le décret n° 2024-796 du 12 juillet 2024 et son arrêté d'application, entrés en vigueur le 1er septembre 2024",
-        "La loi APER du 10 mars 2023",
-        "Il n'existe aucun texte encadrant cet usage"
+        "L'arrêté du 21 août 2008, resté seul applicable à ces usages domestiques",
+        "Le décret n°2024-796 du 12 juillet 2024 et son arrêté, appliqués depuis septembre 2024",
+        "La loi APER du 10 mars 2023 relative aux énergies renouvelables",
+        "Aucun texte n'encadre à ce jour la réutilisation des eaux de pluie"
       ],
       "bonneReponse": 1,
       "aVerifier": "Texte récent (1er septembre 2024) : vérifier l'absence de texte modificatif sur la réutilisation des eaux de pluie.",
@@ -21780,10 +21785,10 @@
       "type": "qcm",
       "question": "Le concours CUBE, dédié à l'amélioration ludique des performances énergétiques des bâtiments en exploitation, a été créé en 2013-2014 par :",
       "options": [
-        "L'ADEME seule",
-        "L'IFPEB (Institut français pour la performance des bâtiments), avec le soutien de l'ADEME",
-        "Le ministère du Logement seul",
-        "CERTIVEA"
+        "L'ADEME seule, dans le cadre de ses programmes de sobriété énergétique",
+        "L'IFPEB, institut français pour la performance du bâtiment, appuyé par l'ADEME",
+        "Le ministère du Logement seul, via un programme national d'économies",
+        "CERTIVEA, organisme de certification des bâtiments tertiaires durables"
       ],
       "bonneReponse": 1,
       "explication": "Le concours CUBE (CUBE 2020 à l'origine) a été créé en 2013-2014 par l'Institut français pour la performance des bâtiments (IFPEB), avec le soutien de l'ADEME et du ministère de l'Environnement. Source : IFPEB / Cerema — cerema.fr. Il repose sur deux notions clés, la communauté et la compétition, et a depuis été décliné en plusieurs variantes : CUBE.S pour les établissements scolaires, CUBE État pour les administrations, et plus récemment CUBE FLEX, centré sur la flexibilité énergétique lors des pics de demande ; il est aujourd'hui opéré par la société A4MT, en partenariat avec le Cerema, la Direction de l'Immobilier de l'État et le Commissariat général au développement durable pour ses déclinaisons publiques. En savoir plus — IFPEB : Institut Français pour la Performance du Bâtiment ; A4MT : opérateur actuel du concours CUBE.",
@@ -21848,9 +21853,9 @@
       "question": "Selon la démarche recommandée pour engager un top management pas encore convaincu, la première étape d'un atelier CODIR dédié à la transition écologique du patrimoine consiste à :",
       "options": [
         "Missionner un bureau d'études pour un audit technique exhaustif du parc",
-        "Faire voter immédiatement un budget dédié à la transition écologique",
-        "Partager une vue d'ensemble du sujet (chiffres clés, projets en cours) pour poser un diagnostic partagé, avant de définir des orientations",
-        "Rédiger une feuille de route détaillée à valider séance tenante"
+        "Faire voter dès la séance un budget dédié à la transition écologique",
+        "Partager une vue d'ensemble chiffrée pour poser un diagnostic commun",
+        "Rédiger une feuille de route détaillée et la faire valider séance tenante"
       ],
       "bonneReponse": 2
     },
@@ -21956,10 +21961,10 @@
       "derniereVerification": "2026-09",
       "question": "Le statut de société de tiers-financement de la rénovation énergétique est défini par :",
       "options": [
-        "Le code général de la propriété des personnes publiques",
-        "Le code de la commande publique",
-        "Le code de l'énergie",
-        "Les articles L. 381-1 et suivants du code de la construction et de l'habitation, créés par la loi ALUR du 24 mars 2014"
+        "Le code général de la propriété des personnes publiques (CG3P)",
+        "Le code de la commande publique, au titre des marchés globaux de performance",
+        "Le code de l'énergie, dans sa partie relative aux économies d'énergie",
+        "Les articles L. 381-1 et suivants du CCH, créés par la loi ALUR de 2014"
       ],
       "bonneReponse": 3
     },
@@ -22141,9 +22146,9 @@
       "question": "Le concours CUBE (Concours Usages Bâtiment Efficace), qui vise à réduire les consommations d'énergie d'un bâtiment tertiaire en un an, sans gros travaux, est organisé par :",
       "options": [
         "L'Institut français pour la performance du bâtiment (IFPEB)",
-        "Le Cerema seul",
-        "Le ministère de la Transition écologique",
-        "L'ADEME seule"
+        "Le Cerema seul, établissement public d'expertise territoriale",
+        "Le ministère de la Transition écologique, via ses services déconcentrés",
+        "L'ADEME seule, dans le cadre de ses programmes de sobriété énergétique"
       ],
       "bonneReponse": 0
     },
@@ -22160,10 +22165,10 @@
       "derniereVerification": "2026-09",
       "question": "Les plans climat portés par de nombreuses collectivités, avec lesquels une organisation gestionnaire de patrimoine a intérêt à s'aligner dans une approche territoriale, correspondent le plus souvent à :",
       "options": [
-        "Le schéma de cohérence territoriale (SCoT)",
-        "Le contrat de ville",
-        "Le plan climat-air-énergie territorial (PCAET), prévu par le code de l'environnement et obligatoire pour les EPCI de plus de 20 000 habitants",
-        "Le plan local d'urbanisme (PLU)"
+        "Le schéma de cohérence territoriale (SCoT), document d'urbanisme intercommunal",
+        "Le contrat de ville, cadre d'action partenarial de la politique de la ville",
+        "Le plan climat-air-énergie territorial (PCAET), obligatoire au-delà de 20 000 habitants",
+        "Le plan local d'urbanisme (PLU), document réglementaire d'occupation des sols"
       ],
       "bonneReponse": 2
     },
@@ -22200,10 +22205,10 @@
       "derniereVerification": "2026-09",
       "question": "Le Green Building Council France (GBC France) est :",
       "options": [
-        "Un organisme d'État chargé de délivrer les permis de construire",
-        "Le syndicat professionnel des majors du BTP",
-        "Une association de consommateurs de l'énergie",
-        "La branche française du World Green Building Council, qui promeut la construction durable et des labels comme HQE, BREEAM ou LEED"
+        "Un organisme d'État chargé d'instruire les permis de construire du tertiaire",
+        "Le syndicat professionnel des majors du BTP et de la promotion immobilière",
+        "Une association de consommateurs spécialisée dans les litiges liés à l'énergie",
+        "La branche française du World Green Building Council, réseau du bâtiment durable"
       ],
       "bonneReponse": 3
     },
@@ -22352,10 +22357,10 @@
       "aVerifier": "CSRD : directive Omnibus du 16 décembre 2025 en cours de transposition (attendue d'ici le 19 mars 2027) : vérifier les seuils et le calendrier applicables avant l'écrit.",
       "question": "L'obligation de reporting extra-financier qui renforce la pression sur la formation des acteurs métiers de l'immobilier durable, souvent évoquée via la notion de « double matérialité », correspond à :",
       "options": [
-        "La directive CSRD (Corporate Sustainability Reporting Directive), transposée en droit français par l'ordonnance n°2023-1142 du 6 décembre 2023",
-        "Le décret tertiaire",
-        "La seule taxonomie verte européenne",
-        "Le règlement SFDR"
+        "La directive CSRD, transposée par l'ordonnance du 6 décembre 2023",
+        "Le décret tertiaire, relatif aux consommations d'énergie des bâtiments",
+        "La seule taxonomie verte européenne des activités économiques durables",
+        "Le règlement SFDR sur la publication d'informations de durabilité"
       ],
       "bonneReponse": 0
     },
@@ -22373,10 +22378,10 @@
       "type": "qcm",
       "question": "Quel texte impose à l'autorité territoriale d'établir et de mettre à jour le document unique d'évaluation des risques professionnels (DUERP) ?",
       "options": [
-        "Le décret n°85-603 du 10 juin 1985 relatif à l'hygiène et la sécurité du travail dans la FPT",
-        "La loi du 26 janvier 1984",
-        "Le CGFP seul, sans texte d'application",
-        "Une simple recommandation du CNFPT, sans texte contraignant"
+        "Le décret n°85-603 du 10 juin 1985 relatif à l'hygiène et la sécurité dans la FPT",
+        "La loi du 26 janvier 1984 portant statut de la FPT, sans texte d'application",
+        "Le seul code général de la fonction publique, sans aucun décret d'application",
+        "Une recommandation du CNFPT, dépourvue de portée contraignante pour l'employeur"
       ],
       "bonneReponse": 0
     },
@@ -22799,10 +22804,10 @@
       "type": "qcm",
       "question": "Le congé de transition professionnelle, créé par le décret n°2022-1043, s'adresse en priorité à quels agents ?",
       "options": [
-        "Aux seuls agents de catégorie A en cours de titularisation",
-        "Aux agents de catégorie C sans diplôme, en situation de handicap, ou exposés à un risque d'usure professionnelle",
-        "Aux seuls agents à moins de 2 ans de la retraite",
-        "À tous les agents sans condition, sur simple demande"
+        "Aux seuls agents de catégorie A en cours de période de stage",
+        "Aux agents de catégorie C sans diplôme, handicapés ou exposés à l'usure professionnelle",
+        "Aux seuls agents situés à moins de deux ans du départ en retraite",
+        "À tous les agents, sans condition particulière, sur simple demande écrite"
       ],
       "bonneReponse": 1
     },
@@ -22893,10 +22898,10 @@
       "type": "qcm",
       "question": "Pour des travaux de restauration sur un immeuble classé au titre des monuments historiques, qui le code du patrimoine impose-t-il comme maître d'œuvre ?",
       "options": [
-        "N'importe quel architecte inscrit à l'ordre",
-        "L'architecte en chef des monuments historiques territorialement compétent (ou un architecte européen aux qualifications équivalentes)",
-        "Le maire de la commune propriétaire",
-        "L'architecte des Bâtiments de France (ABF) de l'UDAP"
+        "Tout architecte régulièrement inscrit au tableau de l'ordre des architectes",
+        "L'architecte en chef des monuments historiques territorialement compétent",
+        "Le maire de la commune propriétaire de l'immeuble classé concerné",
+        "L'architecte des Bâtiments de France affecté à l'UDAP du département"
       ],
       "bonneReponse": 1
     },
@@ -23099,10 +23104,10 @@
       "derniereVerification": "2026-09",
       "aVerifier": null,
       "options": [
-        "Un avis du Conseil d'État",
-        "Un rapport de la Cour des comptes",
-        "Le rapport d'information de la délégation aux collectivités territoriales du Sénat",
-        "Une délibération de la CNIL"
+        "Un avis rendu par le Conseil d'État sur saisine du Gouvernement",
+        "Un rapport public thématique publié par la Cour des comptes",
+        "Un rapport de la délégation aux collectivités territoriales du Sénat",
+        "Une délibération adoptée par la CNIL en formation plénière"
       ],
       "bonneReponse": 2
     },
@@ -23120,10 +23125,10 @@
       "derniereVerification": "2026-09",
       "aVerifier": null,
       "options": [
-        "La liste nominative des développeurs du modèle",
-        "Un résumé suffisamment détaillé des données utilisées pour l'entraînement du modèle",
-        "Le code source complet du modèle",
-        "Aucune, l'AI Act ne modifie pas la commande publique"
+        "La liste nominative des développeurs ayant participé à la conception",
+        "Un résumé suffisamment détaillé des données d'entraînement du modèle",
+        "Le code source complet du modèle et de ses bibliothèques logicielles",
+        "Aucune : l'AI Act ne modifie pas les règles de la commande publique"
       ],
       "bonneReponse": 1
     },
@@ -23141,10 +23146,10 @@
       "derniereVerification": "2026-09",
       "aVerifier": "À revérifier avant l'écrit",
       "options": [
-        "Le RGPD, directement",
-        "Un simple arrêté municipal",
-        "L'AI Act, dès son entrée en vigueur",
-        "L'article 10 de la loi n°2023-380 du 19 mai 2023 relative aux Jeux Olympiques et Paralympiques"
+        "Le RGPD, qui autoriserait directement ce type de traitement d'images",
+        "Un simple arrêté municipal pris au titre des pouvoirs de police du maire",
+        "L'AI Act européen, applicable dès son entrée en vigueur en 2024",
+        "L'article 10 de la loi du 19 mai 2023 relative aux Jeux Olympiques"
       ],
       "bonneReponse": 3
     },
@@ -23262,10 +23267,10 @@
       "derniereVerification": "2026-09",
       "aVerifier": null,
       "options": [
-        "D'un manque de puissance de calcul",
-        "Des données d'entraînement non représentatives et de préjugés humains intégrés dans la conception",
-        "Uniquement d'erreurs de programmation",
-        "D'une consommation énergétique excessive"
+        "D'un manque de puissance de calcul lors de l'entraînement du modèle",
+        "De données d'entraînement non représentatives et de préjugés humains intégrés",
+        "Uniquement d'erreurs de programmation commises par les développeurs",
+        "D'une consommation énergétique excessive dégradant la qualité des résultats"
       ],
       "bonneReponse": 1
     },
@@ -23320,10 +23325,10 @@
       "derniereVerification": "2026-09",
       "aVerifier": null,
       "options": [
-        "C'est un label commercial sans définition officielle",
-        "Elle questionne d'abord le besoin même de recourir à l'IA, avant de chercher à optimiser sa performance",
-        "Rien, ce sont deux termes équivalents",
-        "Elle concerne uniquement le choix du fournisseur cloud"
+        "C'est un label commercial dépourvu de définition officielle reconnue",
+        "Elle interroge d'abord le besoin même de recourir à l'IA, avant d'optimiser",
+        "Rien : les deux notions recouvrent exactement la même démarche",
+        "Elle porte uniquement sur le choix d'un fournisseur d'hébergement cloud"
       ],
       "bonneReponse": 1
     },
@@ -23341,10 +23346,10 @@
       "derniereVerification": "2026-09",
       "aVerifier": null,
       "options": [
-        "Depuis l'adoption de l'AI Act en 2024",
-        "Depuis l'entrée en vigueur du RGPD en 2018",
-        "Depuis octobre 2018, entrée en application de la loi pour une République numérique",
-        "Depuis 2016, date de la loi"
+        "Depuis l'adoption du règlement européen sur l'intelligence artificielle en 2024",
+        "Depuis l'entrée en application du règlement général sur les données en 2018",
+        "Depuis octobre 2018, application de la loi pour une République numérique",
+        "Depuis 2016, année de promulgation de cette même loi sur le numérique"
       ],
       "bonneReponse": 2
     },
@@ -23404,10 +23409,10 @@
       "derniereVerification": "2026-09",
       "aVerifier": null,
       "options": [
-        "La suppression de toute possibilité de recours",
-        "Un droit de veto de l'éditeur du logiciel sur les décisions de la collectivité",
-        "Un délai de recours réduit à 48 heures",
-        "Une voie de recours permettant le réexamen de la décision par une personne physique, sans recours à l'IA"
+        "La suppression de toute possibilité de recours contre la décision rendue",
+        "Un droit de veto de l'éditeur sur les décisions prises par la collectivité",
+        "Un délai de recours contre la décision réduit à quarante-huit heures",
+        "Un recours permettant le réexamen de la décision par une personne physique"
       ],
       "bonneReponse": 3
     },
@@ -23425,10 +23430,10 @@
       "derniereVerification": "2026-09",
       "aVerifier": null,
       "options": [
-        "Aucun critère spécifique n'est prévu, la clause reste générale",
-        "Le genre, l'origine ethnique, les opinions politiques, l'état de santé, l'orientation sexuelle ou la religion",
-        "Le seul critère de l'âge",
-        "Uniquement le lieu de résidence de l'usager"
+        "Aucun critère précis : la clause reste rédigée en termes très généraux",
+        "Le genre, l'origine, les opinions, la santé, l'orientation sexuelle ou la religion",
+        "Le seul critère de l'âge de l'usager concerné par la décision",
+        "Uniquement le lieu de résidence de l'usager sur le territoire"
       ],
       "bonneReponse": 1
     },
@@ -23557,10 +23562,10 @@
       "derniereVerification": "2026-09",
       "aVerifier": null,
       "options": [
-        "IA de recrutement, IA de paie, IA de formation, sans distinction d'utilisateur",
-        "Chatbot citoyen, chatbot agent, chatbot élu",
-        "Un outil unique pour l'ensemble des agents, managers et gestionnaires RH",
-        "Coach virtuel (agents), assistant managérial numérique (managers), outil numérique d'appui à la GRH (gestionnaires RH)"
+        "IA de recrutement, IA de paie et IA de formation, sans cible d'utilisateur",
+        "Chatbot destiné aux citoyens, chatbot pour les agents, chatbot pour les élus",
+        "Un outil unique commun aux agents, aux managers et aux gestionnaires RH",
+        "Coach virtuel (agents), assistant managérial (managers), appui à la GRH (gestionnaires)"
       ],
       "bonneReponse": 3
     },
@@ -23578,10 +23583,10 @@
       "derniereVerification": "2026-09",
       "aVerifier": null,
       "options": [
-        "Conformité RGPD uniquement, sans autre principe",
-        "Recrutement ; formation ; évaluation",
-        "Protection de l'agent et de l'administration ; contrôle par l'humain ; déontologie",
-        "Rentabilité ; rapidité ; simplicité d'usage"
+        "Conformité au RGPD uniquement, sans autre principe directeur retenu",
+        "Recrutement des agents ; formation continue ; évaluation professionnelle",
+        "Protection de l'agent et de l'administration ; contrôle humain ; déontologie",
+        "Rentabilité des outils ; rapidité de traitement ; simplicité d'usage"
       ],
       "bonneReponse": 2
     },
