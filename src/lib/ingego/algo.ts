@@ -32,6 +32,17 @@ export interface Reglages {
   parSession: number;
   chrono: number;
   cible: "normal" | "fragiles";
+  /* Date de l'épreuve écrite (AAAA-MM-JJ) : sert au compte à rebours et au
+     rythme quotidien requis. */
+  dateEcrit: string;
+}
+
+export const FORMAT_DATE = /^\d{4}-\d{2}-\d{2}$/;
+
+export function dateEcritValide(v: unknown): v is string {
+  if (typeof v !== "string" || !FORMAT_DATE.test(v)) return false;
+  const t = Date.parse(`${v}T00:00:00`);
+  return Number.isFinite(t);
 }
 
 export const PALIERS = [0, 1, 3, 7, 16, 35, 75, 160];
@@ -447,6 +458,7 @@ export const REGLAGES_DEFAUT: Reglages = {
   parSession: 8,
   chrono: 0,
   cible: "normal",
+  dateEcrit: "2027-06-15",
 };
 
 const TYPES_OK = REGLAGES_DEFAUT.types;
@@ -464,5 +476,6 @@ export function normaliserReglages(r: Partial<Reglages> | null | undefined): Reg
   /* Nouvel axe A9 (IA et collectivités) : activé aussi pour les réglages antérieurs. */
   if (!n.axes.includes("A9")) n.axes = [...n.axes, "A9"];
   if (!n.familles?.length) n.familles = [...REGLAGES_DEFAUT.familles];
+  if (!dateEcritValide(n.dateEcrit)) n.dateEcrit = REGLAGES_DEFAUT.dateEcrit;
   return n;
 }

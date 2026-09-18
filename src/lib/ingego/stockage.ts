@@ -1,6 +1,14 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { ecrireEtat, lireEtat } from "./etat.functions";
-import { JAMAIS, JOUR, normaliserReglages, type Carte, type Etat, type Reglages } from "./algo";
+import {
+  JAMAIS,
+  JOUR,
+  normaliserReglages,
+  resteAFaire,
+  type Carte,
+  type Etat,
+  type Reglages,
+} from "./algo";
 import { CORPUS } from "./corpus";
 import {
   COMMENTAIRES_TRAITES,
@@ -26,6 +34,9 @@ export interface Donnees {
   journal: Entree[];
   reglages: Reglages;
   commentaires: Record<string, string>;
+  /* Jours (AAAA-MM-JJ) où un gel de série a été consommé : ils comblent un
+     trou sans casser la continuité de la série. */
+  gels: string[];
 }
 
 const CLE_LOCALE = "ingego-donnees";
@@ -33,12 +44,14 @@ const CLE_APPAREIL = "ingego-cle-appareil";
 const CLE_PURGE_COM = "ingego-purge-commentaires";
 const CLE_PURGE_REV = "ingego-purge-revisions";
 const CLE_RESTAURATION_REV = "ingego-restauration-revisions";
+const CLE_CHECK_GEL = "ingego-dernier-check-gel";
 
 export const VIDE: Donnees = {
   cartes: {},
   journal: [],
   reglages: normaliserReglages(null),
   commentaires: {},
+  gels: [],
 };
 
 function cleAppareil() {
@@ -79,6 +92,7 @@ function lireLocal(): Donnees {
       journal: d.journal ?? [],
       reglages: normaliserReglages(d.reglages),
       commentaires: d.commentaires ?? {},
+      gels: d.gels ?? [],
     };
   } catch {
     return VIDE;
@@ -257,6 +271,7 @@ function fusionner(local: Donnees, distant: Donnees): Donnees {
     journal,
     reglages: local.reglages,
     commentaires: { ...distant.commentaires, ...local.commentaires },
+    gels: [...new Set([...(distant.gels ?? []), ...(local.gels ?? [])])].sort(),
   };
 }
 
@@ -264,6 +279,8 @@ export function useDonnees() {
   const [donnees, setDonnees] = useState<Donnees>(VIDE);
   const [pret, setPret] = useState(false);
   const [synchro, setSynchro] = useState<"local" | "en-cours" | "ok" | "erreur">("local");
+  /* Gel consommé la veille : signalé une seule fois, de façon discrète. */
+  const [gel, setGel] = useState<{ jour: string; restants: number } | null>(null);
   const cle = useRef<string | null>(null);
   const attente = useRef<ReturnType<typeof setTimeout> | null>(null);
   const dernier = useRef<Donnees>(VIDE);
@@ -283,6 +300,7 @@ export function useDonnees() {
             journal: dernier.current.journal as never,
             reglages: dernier.current.reglages as never,
             commentaires: dernier.current.commentaires,
+            gels: dernier.current.gels,
           },
         });
         setSynchro("ok");
@@ -297,9 +315,30 @@ export function useDonnees() {
     /* Une observation traitée n'est purgée qu'une fois pour cette version. Une
        nouvelle observation sur la même question doit pouvoir être conservée. */
     const purgeCom = aPurger(CLE_PURGE_COM, VERSION_COMMENTAIRES);
-    const local = restaurerToutesValidations(
+    let local = restaurerToutesValidations(
       restaurerValidationsRevues(elaguer(purger(lireLocal(), purgeCom)), Date.now()),
     );
+
+    /* Contrôle du gel : une seule fois par jour calendaire. */
+    const maintenant = new Date();
+    const aujourdhui = maintenant.toISOString().slice(0, 10);
+    let dejaVerifie = true;
+    try {
+      dejaVerifie = localStorage.getItem(CLE_CHECK_GEL) === aujourdhui;
+    } catch {
+      /* stockage indisponible */
+    }
+    if (!dejaVerifie) {
+      const joursTermines = local.journal.filter((e) => e.id === "__session").map((e) => e.jour);
+      const r = verifierEtAppliquerGel(joursTermines, local.gels, maintenant);
+      marquerPurge(CLE_CHECK_GEL, aujourdhui);
+      if (r.applique && r.jour) {
+        local = { ...local, gels: r.gels };
+        const utilises = r.gels.filter((g) => g.slice(0, 7) === aujourdhui.slice(0, 7)).length;
+        setGel({ jour: r.jour, restants: Math.max(0, GELS_PAR_MOIS - utilises) });
+      }
+    }
+
     setDonnees(local);
     dernier.current = local;
     setPret(true);
@@ -322,6 +361,7 @@ export function useDonnees() {
           journal: (data.journal as unknown as Entree[]) ?? [],
           reglages: normaliserReglages(data.reglages as unknown as Partial<Reglages>),
           commentaires: (data.commentaires as unknown as Record<string, string>) ?? {},
+          gels: (data.gels as unknown as string[]) ?? [],
         };
         const fusion = restaurerToutesValidations(
           restaurerValidationsRevues(
@@ -393,6 +433,8 @@ export function useDonnees() {
     donnees,
     pret,
     synchro,
+    gel,
+    masquerGel: () => setGel(null),
     enregistrerCarte,
     majReglages,
     commenter,
@@ -401,15 +443,96 @@ export function useDonnees() {
   };
 }
 
-/* Série de jours consécutifs avec au moins une session terminée. */
-export function serieJours(joursTermines: string[]) {
-  const set = new Set(joursTermines);
+const cleJour = (d: Date) => d.toISOString().slice(0, 10);
+
+/* Série de jours consécutifs avec au moins une session terminée. Un jour gelé
+   compte comme couvert : il comble le trou sans casser la continuité. */
+export function serieJours(joursTermines: string[], gels: string[] = []) {
+  const set = new Set([...joursTermines, ...gels]);
   let n = 0;
   const d = new Date();
-  if (!set.has(d.toISOString().slice(0, 10))) d.setDate(d.getDate() - 1);
-  while (set.has(d.toISOString().slice(0, 10))) {
+  if (!set.has(cleJour(d))) d.setDate(d.getDate() - 1);
+  while (set.has(cleJour(d))) {
     n++;
     d.setDate(d.getDate() - 1);
   }
   return n;
+}
+
+/* Plus longue suite de jours consécutifs sur tout l'historique, gels inclus. */
+export function recordSerieJours(joursTermines: string[], gels: string[] = []): number {
+  const jours = [...new Set([...joursTermines, ...gels])].sort();
+  let record = 0;
+  let courante = 0;
+  let precedent: number | null = null;
+  for (const j of jours) {
+    const t = Date.parse(`${j}T00:00:00Z`);
+    if (!Number.isFinite(t)) continue;
+    courante = precedent !== null && t - precedent === JOUR ? courante + 1 : 1;
+    precedent = t;
+    if (courante > record) record = courante;
+  }
+  return record;
+}
+
+export const GELS_PAR_MOIS = 2;
+
+/* Gel de série : un seul jour manqué peut être couvert, dans la limite de deux
+   par mois calendaire, et uniquement si la série était réellement active. */
+export function verifierEtAppliquerGel(
+  joursTermines: string[],
+  gels: string[],
+  maintenant: Date,
+): { gels: string[]; applique: boolean; jour: string | null } {
+  const hierD = new Date(maintenant);
+  hierD.setDate(hierD.getDate() - 1);
+  const hier = cleJour(hierD);
+  const avantHierD = new Date(maintenant);
+  avantHierD.setDate(avantHierD.getDate() - 2);
+  const avantHier = cleJour(avantHierD);
+
+  const faits = new Set(joursTermines);
+  const gelSet = new Set(gels);
+  if (faits.has(hier) || gelSet.has(hier)) return { gels, applique: false, jour: null };
+
+  /* Série active avant hier : sinon il n'y a rien à protéger. */
+  const serieActive = faits.has(avantHier) || gelSet.has(avantHier);
+  if (!serieActive) return { gels, applique: false, jour: null };
+
+  const mois = cleJour(maintenant).slice(0, 7);
+  const utilises = gels.filter((g) => g.slice(0, 7) === mois).length;
+  if (utilises >= GELS_PAR_MOIS) return { gels, applique: false, jour: null };
+
+  return { gels: [...gels, hier].sort(), applique: true, jour: hier };
+}
+
+/* Compte à rebours vers l'écrit et rythme quotidien nécessaire. */
+export function rythmeRequis(
+  cartesRestantes: number,
+  dateEcrit: string,
+  maintenant: number,
+): { joursRestants: number; parJourRequis: number | null } {
+  const cible = Date.parse(`${dateEcrit}T00:00:00Z`);
+  const aujourdhui = Date.parse(`${new Date(maintenant).toISOString().slice(0, 10)}T00:00:00Z`);
+  const joursRestants = Number.isFinite(cible)
+    ? Math.max(0, Math.round((cible - aujourdhui) / JOUR))
+    : 0;
+  return {
+    joursRestants,
+    parJourRequis: joursRestants === 0 ? null : Math.ceil(cartesRestantes / joursRestants),
+  };
+}
+
+/* Nombre moyen de questions réellement traitées par jour sur la fenêtre. */
+export function rythmeReel(journal: Entree[], joursFenetre = 14): number {
+  const depuis = Date.now() - joursFenetre * JOUR;
+  const reponses = journal.filter(
+    (e) => e && !MARQUEURS.has(e.id) && typeof e.t === "number" && e.t >= depuis,
+  );
+  return reponses.length / Math.max(1, joursFenetre);
+}
+
+/* Cartes encore à travailler avant l'écrit (jamais vues ou non validées). */
+export function cartesRestantes(d: Donnees, maintenant = Date.now()): number {
+  return resteAFaire(d.cartes, d.reglages, maintenant);
 }

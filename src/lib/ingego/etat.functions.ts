@@ -29,6 +29,7 @@ const etatSchema = z.object({
   journal: z.array(jsonSchema).max(5000),
   reglages: z.record(z.string(), jsonSchema),
   commentaires: z.record(z.string(), z.string().max(4000)),
+  gels: z.array(z.string().max(10)).max(500),
 });
 
 export const lireEtat = createServerFn({ method: "POST" })
@@ -37,7 +38,7 @@ export const lireEtat = createServerFn({ method: "POST" })
     const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
     const { data: ligne, error } = await supabaseAdmin
       .from("etat_ingego")
-      .select("cartes, journal, reglages, commentaires")
+      .select("cartes, journal, reglages, commentaires, gels")
       .eq("cle", data.cle)
       .maybeSingle();
     if (error) {

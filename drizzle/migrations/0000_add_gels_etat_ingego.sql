@@ -1,0 +1,1 @@
+ALTER TABLE public.etat_ingego ADD COLUMN IF NOT EXISTS gels jsonb NOT NULL DEFAULT '[]'::jsonb;

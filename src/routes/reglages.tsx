@@ -1,6 +1,13 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
-import { Download, RotateCcw, SlidersHorizontal, Database, ShieldCheck } from "lucide-react";
+import {
+  CalendarDays,
+  Download,
+  RotateCcw,
+  SlidersHorizontal,
+  Database,
+  ShieldCheck,
+} from "lucide-react";
 import { CarteRappels } from "@/components/ingego/rappels";
 import { CarteTransfert } from "@/components/ingego/transfert";
 import { Entete } from "@/components/ingego/entete";
@@ -33,8 +40,12 @@ function Page() {
   const r = donnees.reglages;
 
   const serie = useMemo(
-    () => serieJours(donnees.journal.filter((e) => e.id === "__session").map((e) => e.jour)),
-    [donnees.journal],
+    () =>
+      serieJours(
+        donnees.journal.filter((e) => e.id === "__session").map((e) => e.jour),
+        donnees.gels,
+      ),
+    [donnees.journal, donnees.gels],
   );
 
   const aVerifier = useMemo(
@@ -153,6 +164,21 @@ function Page() {
               Reprendre les fragiles
             </button>
           </div>
+        </section>
+
+        <section className="surface space-y-3 p-4">
+          <h2 className="flex items-center gap-2 text-sm font-bold">
+            <CalendarDays className="h-4 w-4 text-brand" /> Date de l'écrit
+          </h2>
+          <input
+            type="date"
+            value={r.dateEcrit}
+            onChange={(e) => majReglages({ dateEcrit: e.target.value })}
+            className="w-full rounded-xl border border-border bg-elevated px-3 py-2.5 text-sm font-semibold"
+          />
+          <p className="text-xs text-muted-foreground">
+            Sert au compte à rebours et au rythme quotidien affichés sur l'accueil.
+          </p>
         </section>
 
         <section className="surface space-y-2 p-4">
