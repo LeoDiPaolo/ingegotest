@@ -64,6 +64,7 @@ export function badgePalierReponses(p: number): Badge {
     libelle: String(p),
     titre: complet ? "Corpus complet" : `${p} questions validées`,
     legende: complet ? "Toutes les questions validées" : "Palier cumulé",
+    palier: palierDe(p),
   };
 }
 
@@ -74,6 +75,7 @@ export function badgePalierAxe(axe: Axe, part: number): Badge {
     titre: `${axe.court} · ${Math.round(part * 100)} %`,
     legende: part >= 1 ? "Catégorie maîtrisée" : "Palier de catégorie",
     couleur: axe.couleur,
+    palier: palierDeAxe(part),
   };
 }
 
