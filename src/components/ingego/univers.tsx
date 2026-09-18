@@ -206,10 +206,17 @@ export function Medaille({
           <span
             className={cn(
               "absolute inset-0 grid place-items-center font-black tabular-nums",
-              "[text-shadow:0_1px_0_rgba(255,255,255,0.45),0_2px_3px_rgba(0,0,0,0.45)]",
               taille === "xl" ? "text-3xl" : grand ? "text-2xl" : "text-sm",
             )}
-            style={{ color: TEINTES[palier] }}
+            style={{
+              color: TEINTES[palier],
+              WebkitTextStroke: `${taille === "sm" ? 1.4 : 2.4}px ${CONTOURS[palier]}`,
+              paintOrder: "stroke fill",
+              textShadow:
+                CONTOURS[palier] === "#fff"
+                  ? "0 1px 2px rgba(0,0,0,0.3)"
+                  : "0 1px 2px rgba(255,255,255,0.35)",
+            }}
           >
             {libelle}
           </span>
