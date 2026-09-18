@@ -178,6 +178,23 @@ function Reviser() {
   const bonnesReponses = bilan.acquises;
   const prochainPalier = PALIERS_REPONSES.find((p) => p > bonnesReponses) ?? null;
   const dernierPalier = [...PALIERS_REPONSES].reverse().find((p) => bonnesReponses >= p) ?? null;
+  /* Série de réponses du premier coup (série de jours + série de réponses). */
+  const seriePremier = useMemo(() => seriePremierCoup(donnees.journal), [donnees.journal]);
+  /* Prochain palier de médaille (Bronze → Argent → Or → Spécial) et son seuil. */
+  const NOMS_PALIERS: Record<Palier, string> = {
+    bronze: "Bronze",
+    argent: "Argent",
+    or: "Or",
+    special: "Spécial",
+  };
+  const ORDRE_PALIERS: Palier[] = ["bronze", "argent", "or", "special"];
+  const tierActuel = dernierPalier != null ? palierDe(dernierPalier) : null;
+  const prochainTier = tierActuel
+    ? (ORDRE_PALIERS[ORDRE_PALIERS.indexOf(tierActuel) + 1] ?? null)
+    : null;
+  const seuilProchainTier = prochainTier
+    ? (PALIERS_REPONSES.find((p) => palierDe(p) === prochainTier) ?? null)
+    : null;
 
   /* Récompenses : file des badges nouvellement débloqués. */
   const badges = useMemo(
