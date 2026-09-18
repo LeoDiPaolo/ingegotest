@@ -12,6 +12,7 @@ import {
   Wrench,
   type LucideIcon,
 } from "lucide-react";
+import { useId } from "react";
 import { AXE_BY_ID, type Axe } from "@/lib/ingego/corpus";
 import type { Palier } from "@/lib/ingego/badges";
 import { cn } from "@/lib/utils";
