@@ -219,7 +219,7 @@ export function Medaille({
     bronze: "#B87333",
     argent: "#9CA3AF",
     or: "#D4AF37",
-    special: couleur ?? "var(--color-brand)",
+    special: couleur ?? "#2F8F6B",
   };
   const c = palier ? teintes[palier] : (couleur ?? "var(--color-brand)");
   const grand = taille === "lg";
