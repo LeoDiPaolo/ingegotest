@@ -148,183 +148,48 @@ export function BadgeMaitrise({
   );
 }
 
-/* Contour d'engrenage : alternance dent/creux sur un cercle. */
-function pointsEngrenage(
-  cx: number,
-  cy: number,
-  rCreux: number,
-  rDent: number,
-  dents: number,
-): string {
-  const pts: string[] = [];
-  const pas = (Math.PI * 2) / dents;
-  const largeurDent = pas * 0.32;
-  for (let i = 0; i < dents; i++) {
-    const centre = i * pas - Math.PI / 2;
-    const angles = [
-      centre - largeurDent * 1.5,
-      centre - largeurDent,
-      centre + largeurDent,
-      centre + largeurDent * 1.5,
-    ];
-    const rayons = [rCreux, rDent, rDent, rCreux];
-    angles.forEach((angle, idx) => {
-      pts.push(
-        `${(cx + rayons[idx] * Math.cos(angle)).toFixed(1)},${(cy + rayons[idx] * Math.sin(angle)).toFixed(1)}`,
-      );
-    });
-  }
-  return pts.join(" ");
-}
-
-const ENGRENAGE_LG = pointsEngrenage(50, 50, 34, 48, 12);
-const ENGRENAGE_SM = pointsEngrenage(50, 50, 34, 48, 8);
-
-/* Couronne de laurier réservée au palier spécial. */
-const LAURIERS = Array.from({ length: 7 }, (_, i) => i).flatMap((i) =>
-  [-1, 1].map((sens) => {
-    const t = 0.12 + i * 0.12;
-    const angle = Math.PI / 2 + sens * (Math.PI * 0.85 * t);
-    const r = 37;
-    return {
-      cle: `${sens}-${i}`,
-      x: 50 + r * Math.cos(angle),
-      y: 50 + r * Math.sin(angle),
-      rotation: (angle * 180) / Math.PI + (sens > 0 ? 100 : 80),
-    };
-  }),
-);
-
-/* Médaille : vrai badge visuel, verrouillé ou débloqué. */
+/* Médaille : image de badge gravée par palier, numéro en surimpression. */
 export function Medaille({
   libelle,
   legende,
-  couleur,
   acquis,
   taille = "sm",
-  icone: Icone = Award,
-  palier,
-  emblematique = false,
+  palier = "bronze",
 }: {
   libelle: string;
   legende?: string;
   couleur?: string;
   acquis: boolean;
   taille?: "sm" | "lg";
-  icone?: LucideIcon;
   palier?: Palier;
-  emblematique?: boolean;
 }) {
-  const teintes: Record<Palier, string> = {
-    bronze: "#B87333",
-    argent: "#9CA3AF",
-    or: "#D4AF37",
-    special: couleur ?? "#2F8F6B",
-  };
-  const c = palier ? teintes[palier] : (couleur ?? "var(--color-brand)");
   const grand = taille === "lg";
-  const special = palier === "special";
-  const nomPalier = palier ? palier.toUpperCase() : "";
-  const id = useId().replace(/:/g, "");
-  const remplissage = acquis ? `url(#grad-${id})` : "var(--color-elevated)";
-  const trait = acquis ? c : "var(--color-border)";
-
   return (
     <div className="flex flex-col items-center gap-1">
       <div
         className={cn(
-          "relative grid aspect-square place-items-center transition-transform",
+          "relative aspect-square transition-transform",
           grand ? "w-28 drop-shadow-[var(--shadow-lift)]" : "w-full max-w-16",
           !acquis && "opacity-45 grayscale",
         )}
-        style={{ color: acquis ? c : "var(--color-muted-foreground)" }}
       >
-        <svg viewBox="0 0 100 100" className="absolute inset-0 h-full w-full" aria-hidden>
-          <defs>
-            <radialGradient id={`grad-${id}`} cx="35%" cy="30%" r="75%">
-              <stop offset="0%" stopColor={`color-mix(in oklab, ${c} 35%, white)`} />
-              <stop offset="100%" stopColor={c} />
-            </radialGradient>
-            {grand ? <path id={`arc-${id}`} d="M 16,56 A 34,34 0 1 1 84,56" fill="none" /> : null}
-          </defs>
-          <polygon
-            points={grand ? ENGRENAGE_LG : ENGRENAGE_SM}
-            fill={remplissage}
-            stroke={trait}
-            strokeWidth={grand ? 2 : 1.3}
-          />
-          {special ? (
-            <>
-              {LAURIERS.map((f) => (
-                <ellipse
-                  key={f.cle}
-                  cx={f.x}
-                  cy={f.y}
-                  rx={4.5}
-                  ry={2}
-                  fill={trait}
-                  opacity={0.55}
-                  transform={`rotate(${f.rotation} ${f.x} ${f.y})`}
-                />
-              ))}
-            </>
-          ) : null}
-          <circle
-            cx="50"
-            cy="50"
-            r={special ? 31 : 30}
-            fill="var(--color-card)"
-            opacity={0.88}
-            stroke={trait}
-            strokeWidth={1}
-          />
-          <circle
-            cx="50"
-            cy="50"
-            r={special ? 27 : 26}
-            fill="none"
-            stroke={trait}
-            strokeDasharray="2 3"
-            strokeWidth={0.8}
-            opacity={0.5}
-          />
-          {grand ? (
-            <line x1="40" y1="50" x2="60" y2="50" stroke={trait} strokeWidth={0.8} opacity={0.4} />
-          ) : null}
-          {grand ? (
-            <text
-              className="text-[5.5px] font-bold tracking-[0.15em] uppercase"
-              fill={trait}
-              opacity={0.8}
-            >
-              <textPath href={`#arc-${id}`} startOffset="50%" textAnchor="middle">
-                Service public · Construction
-              </textPath>
-            </text>
-          ) : null}
-          {emblematique && palier ? (
-            <text
-              x="50"
-              y="82"
-              textAnchor="middle"
-              className="text-[7px] font-black"
-              fill={trait}
-            >
-              {nomPalier}
-            </text>
-          ) : null}
-        </svg>
-        <div className="relative flex flex-col items-center leading-none">
-          <Icone className={grand ? "h-5 w-5" : "h-3 w-3"} strokeWidth={2.4} />
-          <span
-            className={cn(
-              "mt-0.5 font-extrabold tabular-nums",
-              grand ? "text-xl" : "text-[0.65rem]",
-            )}
-          >
-            {libelle}
-          </span>
-        </div>
+        <img
+          src={COQUILLES[palier]}
+          alt=""
+          aria-hidden
+          className="absolute inset-0 h-full w-full select-none object-contain"
+          draggable={false}
+        />
+        <span
+          className={cn(
+            "absolute left-1/2 -translate-x-1/2 rounded-full bg-black/55 font-extrabold tabular-nums text-white",
+            grand
+              ? "bottom-[9%] px-2.5 py-0.5 text-lg"
+              : "bottom-[7%] px-1.5 py-px text-[0.6rem]",
+          )}
+        >
+          {libelle}
+        </span>
         {acquis ? (
           <span className="absolute -right-1 -bottom-1 grid h-6 w-6 place-items-center rounded-full bg-success text-success-foreground ring-2 ring-card">
             <ShieldCheck className="h-3.5 w-3.5" />
