@@ -30,7 +30,6 @@ export const PALIERS_REPONSES = [
   CORPUS.length,
 ];
 
-
 export type Palier = "bronze" | "argent" | "or" | "special";
 
 export function palierDe(p: number): Palier {

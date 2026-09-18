@@ -193,9 +193,7 @@ export function Medaille({
         <span
           className={cn(
             "absolute left-1/2 -translate-x-1/2 rounded-full bg-black/55 font-extrabold tabular-nums text-white",
-            grand
-              ? "bottom-[9%] px-2.5 py-0.5 text-lg"
-              : "bottom-[7%] px-1.5 py-px text-[0.6rem]",
+            grand ? "bottom-[9%] px-2.5 py-0.5 text-lg" : "bottom-[7%] px-1.5 py-px text-[0.6rem]",
           )}
         >
           {libelle}
