@@ -166,20 +166,24 @@ export function Medaille({
   taille = "sm",
   palier = "bronze",
 }: {
-  libelle: string;
+  libelle?: string;
   legende?: string;
   couleur?: string;
   acquis: boolean;
-  taille?: "sm" | "lg";
+  taille?: "sm" | "lg" | "xl";
   palier?: Palier;
 }) {
-  const grand = taille === "lg";
+  const grand = taille !== "sm";
   return (
     <div className="flex flex-col items-center gap-1">
       <div
         className={cn(
           "relative aspect-square transition-transform",
-          grand ? "w-28 drop-shadow-[var(--shadow-lift)]" : "w-full max-w-16",
+          taille === "xl"
+            ? "w-44 drop-shadow-[var(--shadow-lift)]"
+            : grand
+              ? "w-28 drop-shadow-[var(--shadow-lift)]"
+              : "w-full max-w-16",
           !acquis && "opacity-45 grayscale",
         )}
       >
@@ -190,14 +194,16 @@ export function Medaille({
           className="absolute inset-0 h-full w-full select-none object-contain"
           draggable={false}
         />
-        <span
-          className={cn(
-            "absolute left-1/2 -translate-x-1/2 rounded-full bg-black/55 font-extrabold tabular-nums text-white",
-            grand ? "bottom-[9%] px-2.5 py-0.5 text-lg" : "bottom-[7%] px-1.5 py-px text-[0.6rem]",
-          )}
-        >
-          {libelle}
-        </span>
+        {libelle ? (
+          <span
+            className={cn(
+              "absolute left-1/2 -translate-x-1/2 rounded-full bg-black/55 font-extrabold tabular-nums text-white",
+              grand ? "bottom-[9%] px-2.5 py-0.5 text-lg" : "bottom-[7%] px-1.5 py-px text-[0.6rem]",
+            )}
+          >
+            {libelle}
+          </span>
+        ) : null}
         {acquis ? (
           <span className="absolute -right-1 -bottom-1 grid h-6 w-6 place-items-center rounded-full bg-success text-success-foreground ring-2 ring-card">
             <ShieldCheck className="h-3.5 w-3.5" />
