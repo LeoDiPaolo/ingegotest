@@ -15,16 +15,16 @@ import {
 import { AXE_BY_ID, type Axe } from "@/lib/ingego/corpus";
 import type { Palier } from "@/lib/ingego/badges";
 import { cn } from "@/lib/utils";
-import badgeBronzeAsset from "@/assets/badge-bronze.png.asset.json";
-import badgeArgentAsset from "@/assets/badge-argent.png.asset.json";
-import badgeOrAsset from "@/assets/badge-or.png.asset.json";
-import badgeSpecialAsset from "@/assets/badge-special.png.asset.json";
+import badgeBronzeAsset from "@/assets/badge-bronze.png";
+import badgeArgentAsset from "@/assets/badge-argent.png";
+import badgeOrAsset from "@/assets/badge-or.png";
+import badgeSpecialAsset from "@/assets/badge-special.png";
 
 const COQUILLES: Record<Palier, string> = {
-  bronze: badgeBronzeAsset.url,
-  argent: badgeArgentAsset.url,
-  or: badgeOrAsset.url,
-  special: badgeSpecialAsset.url,
+  bronze: badgeBronzeAsset,
+  argent: badgeArgentAsset,
+  or: badgeOrAsset,
+  special: badgeSpecialAsset,
 };
 
 export const ICONES: Record<string, LucideIcon> = {
@@ -180,7 +180,7 @@ export function Medaille({
         className={cn(
           "relative aspect-square transition-transform",
           taille === "xl"
-            ? "w-44 drop-shadow-[var(--shadow-lift)]"
+            ? "w-28 drop-shadow-[var(--shadow-lift)]"
             : grand
               ? "w-28 drop-shadow-[var(--shadow-lift)]"
               : "w-full max-w-16",
