@@ -115,3 +115,95 @@ export function useRecompenses(badges: Badge[], actif = true) {
   const suivant = useCallback(() => setFile((f) => f.slice(1)), []);
   return { badge: file[0] ?? null, suivant };
 }
+
+/* ---- Badges de régularité (séries et constance hebdomadaire) ---- */
+
+export type BadgeRegularite = {
+  cle: string;
+  seuil: number;
+  titre: string;
+  legende: string;
+};
+
+export const PALIERS_SERIE = [7, 14, 21, 30, 60, 90];
+export const PALIERS_HEBDO = [2, 4, 8, 12];
+const JOURS_MIN_SEMAINE = 5;
+
+function jourPrecedent(jour: string): string {
+  const d = new Date(`${jour}T00:00:00Z`);
+  d.setUTCDate(d.getUTCDate() - 1);
+  return d.toISOString().slice(0, 10);
+}
+
+/* Série actuelle : jours consécutifs jusqu'à aujourd'hui (ou hier si la
+   séance du jour n'est pas encore faite). */
+export function serieActuelle(joursTermines: string[], aujourdhui = new Date()): number {
+  const set = new Set(joursTermines);
+  let curseur = aujourdhui.toISOString().slice(0, 10);
+  if (!set.has(curseur)) curseur = jourPrecedent(curseur);
+  let n = 0;
+  while (set.has(curseur)) {
+    n += 1;
+    curseur = jourPrecedent(curseur);
+  }
+  return n;
+}
+
+/* Clé de semaine ISO (lundi-dimanche) sous forme d'index entier continu,
+   ce qui rend la détection de semaines consécutives triviale. */
+function indexSemaine(jour: string): number {
+  const d = new Date(`${jour}T00:00:00Z`);
+  const decalage = (d.getUTCDay() + 6) % 7; // lundi = 0
+  const lundi = Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate() - decalage);
+  return Math.round(lundi / 604_800_000);
+}
+
+/* Plus longue suite de semaines calendaires consécutives comptant au moins
+   JOURS_MIN_SEMAINE jours de séance chacune. */
+export function semainesConstantes(joursTermines: string[]): number {
+  const parSemaine = new Map<number, Set<string>>();
+  for (const jour of new Set(joursTermines)) {
+    const s = indexSemaine(jour);
+    const set = parSemaine.get(s) ?? new Set<string>();
+    set.add(jour);
+    parSemaine.set(s, set);
+  }
+  const valides = [...parSemaine.entries()]
+    .filter(([, jours]) => jours.size >= JOURS_MIN_SEMAINE)
+    .map(([s]) => s)
+    .sort((a, b) => a - b);
+  let meilleure = 0;
+  let courante = 0;
+  let precedente: number | null = null;
+  for (const s of valides) {
+    courante = precedente !== null && s === precedente + 1 ? courante + 1 : 1;
+    precedente = s;
+    if (courante > meilleure) meilleure = courante;
+  }
+  return meilleure;
+}
+
+export function badgesRegulariteDebloques(joursTermines: string[]): BadgeRegularite[] {
+  const out: BadgeRegularite[] = [];
+  const serie = serieActuelle(joursTermines);
+  for (const n of PALIERS_SERIE) {
+    if (serie >= n)
+      out.push({
+        cle: `reg-serie-${n}`,
+        seuil: n,
+        titre: `${n} jours d'affilée`,
+        legende: "Série de révision maintenue",
+      });
+  }
+  const semaines = semainesConstantes(joursTermines);
+  for (const n of PALIERS_HEBDO) {
+    if (semaines >= n)
+      out.push({
+        cle: `reg-hebdo-${n}`,
+        seuil: n,
+        titre: `${n} semaines à 5 jours ou plus`,
+        legende: "Constance hebdomadaire",
+      });
+  }
+  return out;
+}
