@@ -35,6 +35,7 @@ import {
   badgePalierReponses,
   badgesDebloques,
   badgesRegulariteDebloques,
+  iconePalierReponses,
   useRecompenses,
 } from "@/lib/ingego/badges";
 import { Button } from "@/components/ui/button";
@@ -539,7 +540,7 @@ function Reviser() {
                       libelle={b.libelle}
                       palier={b.palier}
                       acquis={bonnesReponses >= p}
-                      icone={p === PALIERS_REPONSES.at(-1) ? Trophy : Medal}
+                      icone={iconePalierReponses(p)}
                     />
                   );
                 })}

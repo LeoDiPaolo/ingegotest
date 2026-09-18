@@ -17,7 +17,7 @@ import { AXE_BY_ID, type Axe } from "@/lib/ingego/corpus";
 import type { Palier } from "@/lib/ingego/badges";
 import { cn } from "@/lib/utils";
 
-const ICONES: Record<string, LucideIcon> = {
+export const ICONES: Record<string, LucideIcon> = {
   A1: HardHat,
   A2: Gavel,
   A3: Wrench,
