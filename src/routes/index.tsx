@@ -176,8 +176,16 @@ function Reviser() {
 
   /* Récompenses : file des badges nouvellement débloqués. */
   const badges = useMemo(
-    () => badgesDebloques(bilan.lignes, bonnesReponses),
-    [bilan.lignes, bonnesReponses],
+    () => [
+      ...badgesDebloques(bilan.lignes, bonnesReponses),
+      ...badgesRegulariteDebloques(joursTermines).map((b) => ({
+        cle: b.cle,
+        libelle: String(b.seuil),
+        titre: b.titre,
+        legende: b.legende,
+      })),
+    ],
+    [bilan.lignes, bonnesReponses, joursTermines],
   );
   const { badge: recompense, suivant: recompenseSuivante } = useRecompenses(badges, pret);
 
