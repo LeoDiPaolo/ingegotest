@@ -418,15 +418,96 @@ export function useDonnees() {
   };
 }
 
-/* Série de jours consécutifs avec au moins une session terminée. */
-export function serieJours(joursTermines: string[]) {
-  const set = new Set(joursTermines);
+const cleJour = (d: Date) => d.toISOString().slice(0, 10);
+
+/* Série de jours consécutifs avec au moins une session terminée. Un jour gelé
+   compte comme couvert : il comble le trou sans casser la continuité. */
+export function serieJours(joursTermines: string[], gels: string[] = []) {
+  const set = new Set([...joursTermines, ...gels]);
   let n = 0;
   const d = new Date();
-  if (!set.has(d.toISOString().slice(0, 10))) d.setDate(d.getDate() - 1);
-  while (set.has(d.toISOString().slice(0, 10))) {
+  if (!set.has(cleJour(d))) d.setDate(d.getDate() - 1);
+  while (set.has(cleJour(d))) {
     n++;
     d.setDate(d.getDate() - 1);
   }
   return n;
+}
+
+/* Plus longue suite de jours consécutifs sur tout l'historique, gels inclus. */
+export function recordSerieJours(joursTermines: string[], gels: string[] = []): number {
+  const jours = [...new Set([...joursTermines, ...gels])].sort();
+  let record = 0;
+  let courante = 0;
+  let precedent: number | null = null;
+  for (const j of jours) {
+    const t = Date.parse(`${j}T00:00:00Z`);
+    if (!Number.isFinite(t)) continue;
+    courante = precedent !== null && t - precedent === JOUR ? courante + 1 : 1;
+    precedent = t;
+    if (courante > record) record = courante;
+  }
+  return record;
+}
+
+export const GELS_PAR_MOIS = 2;
+
+/* Gel de série : un seul jour manqué peut être couvert, dans la limite de deux
+   par mois calendaire, et uniquement si la série était réellement active. */
+export function verifierEtAppliquerGel(
+  joursTermines: string[],
+  gels: string[],
+  maintenant: Date,
+): { gels: string[]; applique: boolean; jour: string | null } {
+  const hierD = new Date(maintenant);
+  hierD.setDate(hierD.getDate() - 1);
+  const hier = cleJour(hierD);
+  const avantHierD = new Date(maintenant);
+  avantHierD.setDate(avantHierD.getDate() - 2);
+  const avantHier = cleJour(avantHierD);
+
+  const faits = new Set(joursTermines);
+  const gelSet = new Set(gels);
+  if (faits.has(hier) || gelSet.has(hier)) return { gels, applique: false, jour: null };
+
+  /* Série active avant hier : sinon il n'y a rien à protéger. */
+  const serieActive = faits.has(avantHier) || gelSet.has(avantHier);
+  if (!serieActive) return { gels, applique: false, jour: null };
+
+  const mois = cleJour(maintenant).slice(0, 7);
+  const utilises = gels.filter((g) => g.slice(0, 7) === mois).length;
+  if (utilises >= GELS_PAR_MOIS) return { gels, applique: false, jour: null };
+
+  return { gels: [...gels, hier].sort(), applique: true, jour: hier };
+}
+
+/* Compte à rebours vers l'écrit et rythme quotidien nécessaire. */
+export function rythmeRequis(
+  cartesRestantes: number,
+  dateEcrit: string,
+  maintenant: number,
+): { joursRestants: number; parJourRequis: number | null } {
+  const cible = Date.parse(`${dateEcrit}T00:00:00Z`);
+  const aujourdhui = Date.parse(`${new Date(maintenant).toISOString().slice(0, 10)}T00:00:00Z`);
+  const joursRestants = Number.isFinite(cible)
+    ? Math.max(0, Math.round((cible - aujourdhui) / JOUR))
+    : 0;
+  return {
+    joursRestants,
+    parJourRequis: joursRestants === 0 ? null : Math.ceil(cartesRestantes / joursRestants),
+  };
+}
+
+/* Nombre moyen de questions réellement traitées par jour sur la fenêtre. */
+export function rythmeReel(journal: Entree[], joursFenetre = 14): number {
+  const depuis = Date.now() - joursFenetre * JOUR;
+  const reponses = journal.filter(
+    (e) => e && !MARQUEURS.has(e.id) && typeof e.t === "number" && e.t >= depuis,
+  );
+  return reponses.length / Math.max(1, joursFenetre);
+}
+
+/* Cartes encore à travailler avant l'écrit (jamais vues ou non validées). */
+export function cartesRestantes(d: Donnees, maintenant = Date.now()): number {
+  return resteAFaire(d.cartes, d.reglages, maintenant);
 }
