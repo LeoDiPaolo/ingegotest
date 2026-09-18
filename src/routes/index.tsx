@@ -189,7 +189,7 @@ function Reviser() {
         palier: "bronze" as const,
       })),
     ],
-    [bilan.lignes, bonnesReponses, joursTermines],
+    [bilan.lignes, bonnesReponses, joursTermines, donnees.gels],
   );
   const { badge: recompense, suivant: recompenseSuivante } = useRecompenses(badges, pret);
 

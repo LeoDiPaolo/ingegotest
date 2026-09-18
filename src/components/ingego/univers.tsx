@@ -247,9 +247,14 @@ export function Medaille({
             </radialGradient>
             {grand ? <path id={`arc-${id}`} d="M 16,56 A 34,34 0 1 1 84,56" fill="none" /> : null}
           </defs>
+          <polygon
+            points={grand ? ENGRENAGE_LG : ENGRENAGE_SM}
+            fill={remplissage}
+            stroke={trait}
+            strokeWidth={grand ? 2 : 1.3}
+          />
           {special ? (
             <>
-              <circle cx="50" cy="50" r="40" fill={remplissage} stroke={trait} strokeWidth={3} />
               {LAURIERS.map((f) => (
                 <ellipse
                   key={f.cle}
@@ -263,14 +268,7 @@ export function Medaille({
                 />
               ))}
             </>
-          ) : (
-            <polygon
-              points={grand ? ENGRENAGE_LG : ENGRENAGE_SM}
-              fill={remplissage}
-              stroke={trait}
-              strokeWidth={grand ? 2 : 1.3}
-            />
-          )}
+          ) : null}
           <circle
             cx="50"
             cy="50"
