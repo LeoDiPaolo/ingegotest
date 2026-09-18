@@ -379,20 +379,20 @@ function Reviser() {
         {!ordre ? (
           <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
             <section className="blueprint anim-monte col-span-2 overflow-hidden rounded-3xl border border-primary/20 bg-card shadow-[var(--shadow-lift)] lg:row-span-2">
-              <div className="bg-primary px-5 py-3 text-primary-foreground">
+              <div className="bg-primary px-4 py-2 text-primary-foreground">
                 <p className="flex items-center gap-1.5 text-[0.68rem] font-bold uppercase opacity-75">
                   Mission du jour
                   <Sparkles className="h-3 w-3 animate-pulse" aria-hidden />
                 </p>
                 <h1
                   key={titreMission}
-                  className="anim-monte mt-0.5 text-2xl text-primary-foreground"
+                  className="anim-monte mt-0.5 text-xl text-primary-foreground"
                 >
                   {titreMission}
                 </h1>
               </div>
-              <div className="relative p-5">
-                <div className="flex flex-wrap items-center justify-center gap-1 py-2">
+              <div className="relative p-4">
+                <div className="flex flex-wrap items-center justify-center gap-1 py-1">
                   {bilan.lignes.map((l, index) => (
                     <div key={l.axe.id} className="flex items-center">
                       <button
@@ -418,7 +418,7 @@ function Reviser() {
                     </div>
                   ))}
                 </div>
-                <div className="mt-3 flex items-center justify-between gap-3">
+                <div className="mt-2 flex items-center justify-between gap-3">
                   <div>
                     <p className="text-[0.65rem] font-extrabold tracking-[0.13em] text-brand uppercase">
                       Prochain objectif
@@ -431,12 +431,12 @@ function Reviser() {
                       {(objectif?.restantesNiveau ?? reste) > 1 ? "s" : ""}
                     </p>
                   </div>
-                  <Castor className="anim-flotte h-16 w-16 shrink-0" />
+                  <Castor className="anim-flotte h-14 w-14 shrink-0" />
                 </div>
                 <Button
                   onClick={demarrer}
                   disabled={!pret}
-                  className="touche touche-brand mt-4 h-14 w-full rounded-xl bg-brand text-base font-extrabold text-brand-foreground hover:bg-brand/90"
+                  className="touche touche-brand mt-3 h-12 w-full rounded-xl bg-brand text-base font-extrabold text-brand-foreground hover:bg-brand/90"
                 >
                   <Play className="h-5 w-5" /> Lancer la mission
                 </Button>
@@ -447,15 +447,26 @@ function Reviser() {
               <p className="flex items-center gap-1.5 text-[0.68rem] font-bold tracking-[0.14em] text-muted-foreground uppercase">
                 <Flame className={`h-3.5 w-3.5 ${teinteFlamme}`} /> Série
               </p>
-              <p className="text-2xl font-extrabold leading-tight text-brand tabular-nums">
-                {serie}
-                <span className="ml-2 text-xs font-bold text-muted-foreground">
-                  jour{serie > 1 ? "s" : ""}
-                </span>
-              </p>
-              <p className="text-xs font-bold text-foreground">
-                record : {record} jour{record > 1 ? "s" : ""}
-              </p>
+              <div className="grid grid-cols-2 gap-2">
+                <div>
+                  <p className="text-2xl font-extrabold leading-tight text-brand tabular-nums">
+                    {serie}
+                    <span className="ml-1 text-xs font-bold text-muted-foreground">
+                      jour{serie > 1 ? "s" : ""}
+                    </span>
+                  </p>
+                  <p className="text-xs font-bold text-foreground">record : {record} j</p>
+                </div>
+                <div className="border-l border-border pl-2">
+                  <p className="text-2xl font-extrabold leading-tight text-success tabular-nums">
+                    {seriePremier.enCours}
+                    <span className="ml-1 text-xs font-bold text-muted-foreground">1er coup</span>
+                  </p>
+                  <p className="text-xs font-bold text-foreground">
+                    record : {seriePremier.record}
+                  </p>
+                </div>
+              </div>
             </section>
 
             <section className="anim-monte surface flex flex-col gap-0.5 p-3">
