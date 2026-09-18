@@ -116,6 +116,7 @@ export type Database = {
           cle: string
           commentaires: Json
           created_at: string
+          gels: Json
           journal: Json
           reglages: Json
           updated_at: string
@@ -125,6 +126,7 @@ export type Database = {
           cle: string
           commentaires?: Json
           created_at?: string
+          gels?: Json
           journal?: Json
           reglages?: Json
           updated_at?: string
@@ -134,6 +136,7 @@ export type Database = {
           cle?: string
           commentaires?: Json
           created_at?: string
+          gels?: Json
           journal?: Json
           reglages?: Json
           updated_at?: string
