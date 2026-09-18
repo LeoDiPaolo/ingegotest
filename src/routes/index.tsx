@@ -458,9 +458,11 @@ function Reviser() {
                   <p className="text-xs font-bold text-foreground">record : {record} j</p>
                 </div>
                 <div className="border-l border-border pl-2">
-                  <p className="text-2xl font-extrabold leading-tight text-success tabular-nums">
+                  <p className="text-2xl font-extrabold leading-tight whitespace-nowrap text-success tabular-nums">
                     {seriePremier.enCours}
-                    <span className="ml-1 text-xs font-bold text-muted-foreground">1er coup</span>
+                    <span className="ml-1 text-[0.6rem] font-bold text-muted-foreground">
+                      1er coup
+                    </span>
                   </p>
                   <p className="text-xs font-bold text-foreground">
                     record : {seriePremier.record}
