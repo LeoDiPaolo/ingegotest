@@ -13,6 +13,8 @@ import {
   X,
   ChevronRight,
   ArrowRight,
+  CalendarDays,
+  Snowflake,
 } from "lucide-react";
 import {
   Dialog,
@@ -45,7 +47,13 @@ import {
   resteAFaire,
 } from "@/lib/ingego/algo";
 import { jaugesParAxe, reinjecter } from "@/lib/ingego/session";
-import { serieJours, useDonnees } from "@/lib/ingego/stockage";
+import {
+  recordSerieJours,
+  rythmeReel,
+  rythmeRequis,
+  serieJours,
+  useDonnees,
+} from "@/lib/ingego/stockage";
 
 const TITRE = "IngéGo — révision du concours d'ingénieur territorial";
 const DESC =
@@ -88,7 +96,8 @@ function titreMissionDuJour(maintenant = Date.now()): string {
 }
 
 function Reviser() {
-  const { donnees, pret, synchro, enregistrerCarte, commenter, maj } = useDonnees();
+  const { donnees, pret, synchro, enregistrerCarte, commenter, maj, gel, masquerGel } =
+    useDonnees();
   const [ordre, setOrdre] = useState<Question[] | null>(null);
   const [i, setI] = useState(0);
   const [faits, setFaits] = useState<string[]>([]);
@@ -99,14 +108,54 @@ function Reviser() {
   const [niveauxDepart, setNiveauxDepart] = useState<Record<string, number>>({});
   const [axeOuvert, setAxeOuvert] = useState<string | null>(null);
 
-  const serie = useMemo(
-    () => serieJours(donnees.journal.filter((e) => e.id === MARQUE_SESSION).map((e) => e.jour)),
+  const joursTermines = useMemo(
+    () => donnees.journal.filter((e) => e.id === MARQUE_SESSION).map((e) => e.jour),
     [donnees.journal],
   );
+  const serie = useMemo(
+    () => serieJours(joursTermines, donnees.gels),
+    [joursTermines, donnees.gels],
+  );
+  const record = useMemo(
+    () => Math.max(serie, recordSerieJours(joursTermines, donnees.gels)),
+    [joursTermines, donnees.gels, serie],
+  );
+  const seanceAujourdhui = useMemo(
+    () => joursTermines.includes(new Date().toISOString().slice(0, 10)),
+    [joursTermines],
+  );
+  /* Teinte de la flamme : rappel passif que la journée avance sans séance. */
+  const heure = new Date().getHours();
+  const teinteFlamme = seanceAujourdhui
+    ? "text-brand"
+    : heure >= 20
+      ? "text-destructive"
+      : heure >= 12
+        ? "text-warning"
+        : "text-muted-foreground";
   const reste = useMemo(
     () => (pret ? resteAFaire(donnees.cartes, donnees.reglages, Date.now()) : 0),
     [donnees.cartes, donnees.reglages, pret],
   );
+  /* Compte à rebours vers l'écrit : rythme nécessaire contre rythme constaté. */
+  const echeance = useMemo(() => {
+    const { joursRestants, parJourRequis } = rythmeRequis(
+      reste,
+      donnees.reglages.dateEcrit,
+      Date.now(),
+    );
+    const reel = rythmeReel(donnees.journal);
+    const etat =
+      parJourRequis === null
+        ? ("neutre" as const)
+        : reel >= parJourRequis * 1.1
+          ? ("avance" as const)
+          : reel >= parJourRequis * 0.9
+            ? ("ajour" as const)
+            : ("retard" as const);
+    return { joursRestants, parJourRequis, reel, etat };
+  }, [reste, donnees.reglages.dateEcrit, donnees.journal]);
+
   /* Une question validée du premier coup n'est plus jamais reposée : les
      missions ne contiennent que des découvertes et des reprises de questions
      ratées. Le titre du jour reste stable pendant la journée. */
@@ -357,12 +406,56 @@ function Reviser() {
 
             <section className="anim-monte surface flex flex-col justify-between gap-1 p-4">
               <p className="flex items-center gap-1.5 text-[0.68rem] font-bold tracking-[0.14em] text-muted-foreground uppercase">
-                <Flame className="h-3.5 w-3.5 text-brand" /> Série
+                <Flame className={`h-3.5 w-3.5 ${teinteFlamme}`} /> Série
               </p>
-              <p className="text-3xl font-extrabold text-brand tabular-nums">{serie}</p>
+              <p className="text-3xl font-extrabold text-brand tabular-nums">
+                {serie}
+                <span className="ml-2 text-xs font-bold text-muted-foreground">
+                  jour{serie > 1 ? "s" : ""} — record : {record}
+                </span>
+              </p>
               <p className="text-xs text-muted-foreground">
-                jour{serie > 1 ? "s" : ""} d'affilée — une séance non terminée ne compte pas.
+                d'affilée — une séance non terminée ne compte pas.
               </p>
+            </section>
+
+            <section className="anim-monte surface flex flex-col justify-between gap-1 p-4">
+              <p className="flex items-center gap-1.5 text-[0.68rem] font-bold tracking-[0.14em] text-muted-foreground uppercase">
+                <CalendarDays className="h-3.5 w-3.5 text-primary" /> Avant l'écrit
+              </p>
+              {echeance.parJourRequis === null ? (
+                <>
+                  <p className="text-3xl font-extrabold text-muted-foreground tabular-nums">J-0</p>
+                  <p className="text-xs text-muted-foreground">
+                    date de l'écrit à mettre à jour dans les réglages
+                  </p>
+                </>
+              ) : (
+                <>
+                  <p className="text-3xl font-extrabold text-primary tabular-nums">
+                    J-{echeance.joursRestants}
+                  </p>
+                  <p
+                    className={`text-xs font-bold ${
+                      echeance.etat === "avance"
+                        ? "text-success"
+                        : echeance.etat === "ajour"
+                          ? "text-warning"
+                          : "text-destructive"
+                    }`}
+                  >
+                    {echeance.etat === "avance"
+                      ? "en avance"
+                      : echeance.etat === "ajour"
+                        ? "à jour"
+                        : "en retard"}
+                  </p>
+                  <p className="text-xs text-muted-foreground">
+                    {echeance.reel.toFixed(1)} question{echeance.reel >= 2 ? "s" : ""} par jour sur
+                    14 jours · {echeance.parJourRequis} nécessaires
+                  </p>
+                </>
+              )}
             </section>
 
             <section className="anim-monte surface flex flex-col justify-between gap-1 p-4">
@@ -553,6 +646,9 @@ function Reviser() {
                 {justes === faits.length
                   ? "Parcours net : tous les points validés dès le premier passage."
                   : `${mission?.themes.length ?? 0} thèmes parcourus · les points repris reviendront demain pour une validation du premier coup.`}
+              </p>
+              <p className="text-xs font-semibold text-brand">
+                {serie <= 1 ? "série lancée : 1 jour" : `série maintenue : ${serie} jours`}
               </p>
               {niveauxDebloques.length ? (
                 <div className="anim-unlock rounded-xl border-2 border-success/50 bg-success/10 p-2 text-left">
