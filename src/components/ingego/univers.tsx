@@ -12,6 +12,7 @@ import {
   Wrench,
   type LucideIcon,
 } from "lucide-react";
+import { useId } from "react";
 import { AXE_BY_ID, type Axe } from "@/lib/ingego/corpus";
 import type { Palier } from "@/lib/ingego/badges";
 import { cn } from "@/lib/utils";
@@ -147,6 +148,42 @@ export function BadgeMaitrise({
   );
 }
 
+/* Contour d'engrenage : alternance dent/creux sur un cercle. */
+function pointsEngrenage(
+  cx: number,
+  cy: number,
+  rCreux: number,
+  rDent: number,
+  dents: number,
+): string {
+  const n = dents * 2;
+  const pts: string[] = [];
+  for (let i = 0; i < n; i++) {
+    const angle = (i / n) * Math.PI * 2 - Math.PI / 2;
+    const r = i % 2 === 0 ? rDent : rCreux;
+    pts.push(`${(cx + r * Math.cos(angle)).toFixed(1)},${(cy + r * Math.sin(angle)).toFixed(1)}`);
+  }
+  return pts.join(" ");
+}
+
+const ENGRENAGE_LG = pointsEngrenage(50, 50, 38, 46, 12);
+const ENGRENAGE_SM = pointsEngrenage(50, 50, 38, 46, 8);
+
+/* Couronne de laurier réservée au palier spécial. */
+const LAURIERS = Array.from({ length: 7 }, (_, i) => i).flatMap((i) =>
+  [-1, 1].map((sens) => {
+    const t = 0.12 + i * 0.12;
+    const angle = Math.PI / 2 + sens * (Math.PI * 0.85 * t);
+    const r = 37;
+    return {
+      cle: `${sens}-${i}`,
+      x: 50 + r * Math.cos(angle),
+      y: 50 + r * Math.sin(angle),
+      rotation: (angle * 180) / Math.PI + (sens > 0 ? 100 : 80),
+    };
+  }),
+);
+
 /* Médaille : vrai badge visuel, verrouillé ou débloqué. */
 export function Medaille({
   libelle,
@@ -173,29 +210,91 @@ export function Medaille({
   };
   const c = palier ? teintes[palier] : (couleur ?? "var(--color-brand)");
   const grand = taille === "lg";
+  const special = palier === "special";
+  const id = useId().replace(/:/g, "");
+  const remplissage = acquis ? `url(#grad-${id})` : "var(--color-elevated)";
+  const trait = acquis ? c : "var(--color-border)";
+
   return (
     <div className="flex flex-col items-center gap-1">
       <div
         className={cn(
-          "relative grid aspect-square place-items-center rounded-full border-[3px] transition-transform",
-          grand ? "w-28 shadow-[var(--shadow-lift)]" : "w-full max-w-16",
+          "relative grid aspect-square place-items-center transition-transform",
+          grand ? "w-28 drop-shadow-[var(--shadow-lift)]" : "w-full max-w-16",
           !acquis && "opacity-45 grayscale",
         )}
-        style={{
-          borderColor: acquis ? c : "var(--color-border)",
-          background: acquis
-            ? `radial-gradient(circle at 30% 25%, color-mix(in oklab, ${c} 28%, var(--color-card)), var(--color-card))`
-            : "var(--color-elevated)",
-          color: acquis ? c : "var(--color-muted-foreground)",
-        }}
+        style={{ color: acquis ? c : "var(--color-muted-foreground)" }}
       >
-        <span className="absolute inset-1.5 rounded-full border border-dashed border-current opacity-35" />
-        <div className="flex flex-col items-center leading-none">
-          <Icone className={grand ? "h-7 w-7" : "h-4 w-4"} strokeWidth={2.4} />
+        <svg viewBox="0 0 100 100" className="absolute inset-0 h-full w-full" aria-hidden>
+          <defs>
+            <radialGradient id={`grad-${id}`} cx="35%" cy="30%" r="75%">
+              <stop offset="0%" stopColor={`color-mix(in oklab, ${c} 35%, white)`} />
+              <stop offset="100%" stopColor={c} />
+            </radialGradient>
+            {grand ? <path id={`arc-${id}`} d="M 16,56 A 34,34 0 1 1 84,56" fill="none" /> : null}
+          </defs>
+          {special ? (
+            <>
+              <circle cx="50" cy="50" r="40" fill={remplissage} stroke={trait} strokeWidth={3} />
+              {LAURIERS.map((f) => (
+                <ellipse
+                  key={f.cle}
+                  cx={f.x}
+                  cy={f.y}
+                  rx={4.5}
+                  ry={2}
+                  fill={trait}
+                  opacity={0.55}
+                  transform={`rotate(${f.rotation} ${f.x} ${f.y})`}
+                />
+              ))}
+            </>
+          ) : (
+            <polygon
+              points={grand ? ENGRENAGE_LG : ENGRENAGE_SM}
+              fill={remplissage}
+              stroke={trait}
+              strokeWidth={2}
+              strokeLinejoin="round"
+            />
+          )}
+          <circle
+            cx="50"
+            cy="50"
+            r={special ? 31 : 30}
+            fill="var(--color-card)"
+            opacity={0.88}
+            stroke={trait}
+            strokeWidth={1}
+          />
+          <circle
+            cx="50"
+            cy="50"
+            r={special ? 27 : 26}
+            fill="none"
+            stroke={trait}
+            strokeDasharray="2 3"
+            strokeWidth={0.8}
+            opacity={0.5}
+          />
+          {grand ? (
+            <text
+              className="text-[5.5px] font-bold tracking-[0.15em] uppercase"
+              fill={trait}
+              opacity={0.8}
+            >
+              <textPath href={`#arc-${id}`} startOffset="50%" textAnchor="middle">
+                Service public · Construction
+              </textPath>
+            </text>
+          ) : null}
+        </svg>
+        <div className="relative flex flex-col items-center leading-none">
+          <Icone className={grand ? "h-5 w-5" : "h-3 w-3"} strokeWidth={2.4} />
           <span
             className={cn(
               "mt-0.5 font-extrabold tabular-nums",
-              grand ? "text-lg" : "text-[0.7rem]",
+              grand ? "text-xl" : "text-[0.65rem]",
             )}
           >
             {libelle}
