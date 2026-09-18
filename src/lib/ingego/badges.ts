@@ -140,10 +140,12 @@ function indexSemaine(jour: string): number {
 }
 
 /* Plus longue suite de semaines calendaires consécutives comptant au moins
-   JOURS_MIN_SEMAINE jours de séance chacune. */
-export function semainesConstantes(joursTermines: string[]): number {
+   JOURS_MIN_SEMAINE jours de séance chacune (un jour gelé compte comme un
+   jour de séance). */
+export function semainesConstantes(joursTermines: string[], gels: string[] = []): number {
+  const tousLesJours = [...new Set([...joursTermines, ...gels])];
   const parSemaine = new Map<number, Set<string>>();
-  for (const jour of new Set(joursTermines)) {
+  for (const jour of tousLesJours) {
     const s = indexSemaine(jour);
     const set = parSemaine.get(s) ?? new Set<string>();
     set.add(jour);
