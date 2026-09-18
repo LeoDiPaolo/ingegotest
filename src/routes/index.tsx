@@ -29,6 +29,7 @@ import { Confettis } from "@/components/ingego/confettis";
 import { Castor, LogoIngego } from "@/components/ingego/marque";
 import { BadgeMaitrise, IconeAxe, Medaille } from "@/components/ingego/univers";
 import { Recompense } from "@/components/ingego/recompense";
+import { FeuArtifice } from "@/components/ingego/feu-artifice";
 import {
   PALIERS_REPONSES,
   badgePalierReponses,
