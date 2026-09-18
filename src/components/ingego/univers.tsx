@@ -12,10 +12,20 @@ import {
   Wrench,
   type LucideIcon,
 } from "lucide-react";
-import { useId } from "react";
 import { AXE_BY_ID, type Axe } from "@/lib/ingego/corpus";
 import type { Palier } from "@/lib/ingego/badges";
 import { cn } from "@/lib/utils";
+import badgeBronzeAsset from "@/assets/badge-bronze.png.asset.json";
+import badgeArgentAsset from "@/assets/badge-argent.png.asset.json";
+import badgeOrAsset from "@/assets/badge-or.png.asset.json";
+import badgeSpecialAsset from "@/assets/badge-special.png.asset.json";
+
+const COQUILLES: Record<Palier, string> = {
+  bronze: badgeBronzeAsset.url,
+  argent: badgeArgentAsset.url,
+  or: badgeOrAsset.url,
+  special: badgeSpecialAsset.url,
+};
 
 export const ICONES: Record<string, LucideIcon> = {
   A1: HardHat,

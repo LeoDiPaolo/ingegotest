@@ -1,18 +1,10 @@
 import { useEffect } from "react";
-import { FileCheck2, Trophy } from "lucide-react";
 import { Confettis } from "@/components/ingego/confettis";
 import { FeuArtifice } from "@/components/ingego/feu-artifice";
 import { Castor } from "@/components/ingego/marque";
-import { ICONES, Medaille } from "@/components/ingego/univers";
+import { Medaille } from "@/components/ingego/univers";
 import { Button } from "@/components/ui/button";
-import { iconePalierReponses, type Badge } from "@/lib/ingego/badges";
-
-/* Icône du badge : palier de réponses, catégorie, ou trophée du palier spécial. */
-function iconeBadge(badge: Badge) {
-  if (badge.cle.startsWith("rep-")) return iconePalierReponses(Number(badge.libelle));
-  if (badge.cle.startsWith("axe-")) return ICONES[badge.cle.split("-")[1] ?? ""] ?? FileCheck2;
-  return Trophy;
-}
+import { type Badge } from "@/lib/ingego/badges";
 
 /* Écran plein cadre de récompense : l'animation dépend du palier du badge. */
 export function Recompense({ badge, onFermer }: { badge: Badge; onFermer: () => void }) {
