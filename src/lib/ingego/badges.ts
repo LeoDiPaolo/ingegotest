@@ -57,6 +57,38 @@ export const PALIERS_REPONSES = [
   CORPUS.length,
 ];
 
+/* Une icône par palier de réponses, alignée sur PALIERS_REPONSES. */
+export const ICONES_PALIER: LucideIcon[] = [
+  Ruler,
+  PenTool,
+  Compass,
+  Triangle,
+  Hammer,
+  Wrench,
+  HardHat,
+  ClipboardCheck,
+  FileCheck2,
+  Layers,
+  Blocks,
+  Building,
+  Building2,
+  Landmark,
+  Cog,
+  Settings2,
+  Gauge,
+  ShieldCheck,
+  Target,
+  Flag,
+  MapPin,
+  Route,
+  Trophy,
+];
+
+export function iconePalierReponses(p: number): LucideIcon {
+  const i = PALIERS_REPONSES.indexOf(p);
+  return ICONES_PALIER[i] ?? Award;
+}
+
 export type Palier = "bronze" | "argent" | "or" | "special";
 
 export function palierDe(p: number): Palier {
