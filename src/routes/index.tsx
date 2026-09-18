@@ -430,15 +430,30 @@ function Reviser() {
               </p>
             </section>
 
+            <section className="anim-monte surface flex flex-col justify-between gap-1 p-4">
+              <p className="flex items-center gap-1.5 text-[0.68rem] font-bold tracking-[0.14em] text-muted-foreground uppercase">
+                <Target className="h-3.5 w-3.5 text-success" /> Acquises
+              </p>
+              <p className="text-3xl font-extrabold text-success tabular-nums">{bilan.acquises}</p>
+              <div className="h-2.5 overflow-hidden rounded-full bg-elevated">
+                <div
+                  className="h-full rounded-full bg-success transition-[width] duration-700"
+                  style={{ width: `${bilan.part * 100}%` }}
+                />
+              </div>
+              <p className="text-xs text-muted-foreground">sur {bilan.total} questions</p>
+            </section>
+
+
             <section
               className={
                 echeance.etat === "retard"
                   ? "anim-monte col-span-2 rounded-3xl border-2 border-destructive/50 bg-destructive/10 p-4"
                   : echeance.etat === "ajour"
-                    ? "anim-monte rounded-3xl border-2 border-warning/50 bg-warning/10 p-4"
+                    ? "anim-monte col-span-2 rounded-3xl border-2 border-warning/50 bg-warning/10 p-4"
                     : echeance.etat === "avance"
-                      ? "anim-monte rounded-3xl border-2 border-success/50 bg-success/10 p-4"
-                      : "anim-monte surface flex flex-col justify-between gap-1 p-4"
+                      ? "anim-monte col-span-2 rounded-3xl border-2 border-success/50 bg-success/10 p-4"
+                      : "anim-monte surface col-span-2 flex flex-col justify-between gap-1 p-4"
               }
             >
               <p className="flex items-center gap-1.5 text-[0.68rem] font-bold tracking-[0.14em] text-muted-foreground uppercase">
@@ -480,19 +495,6 @@ function Reviser() {
               )}
             </section>
 
-            <section className="anim-monte surface flex flex-col justify-between gap-1 p-4">
-              <p className="flex items-center gap-1.5 text-[0.68rem] font-bold tracking-[0.14em] text-muted-foreground uppercase">
-                <Target className="h-3.5 w-3.5 text-success" /> Acquises
-              </p>
-              <p className="text-3xl font-extrabold text-success tabular-nums">{bilan.acquises}</p>
-              <div className="h-2.5 overflow-hidden rounded-full bg-elevated">
-                <div
-                  className="h-full rounded-full bg-success transition-[width] duration-700"
-                  style={{ width: `${bilan.part * 100}%` }}
-                />
-              </div>
-              <p className="text-xs text-muted-foreground">sur {bilan.total} questions</p>
-            </section>
 
             <section className="anim-monte col-span-2 space-y-3 lg:col-start-3 lg:row-span-3">
               <div className="flex items-center justify-between">
