@@ -145,6 +145,8 @@ function Reviser() {
       Date.now(),
     );
     const reel = rythmeReel(donnees.journal);
+    const jourLimite = new Date(Date.now() - 14 * 86_400_000).toISOString().slice(0, 10);
+    const donneesRecentes = donnees.journal.some((e) => e.jour >= jourLimite);
     const etat =
       parJourRequis === null
         ? ("neutre" as const)
@@ -153,7 +155,7 @@ function Reviser() {
           : reel >= parJourRequis * 0.9
             ? ("ajour" as const)
             : ("retard" as const);
-    return { joursRestants, parJourRequis, reel, etat };
+    return { joursRestants, parJourRequis, reel, etat, donneesRecentes };
   }, [reste, donnees.reglages.dateEcrit, donnees.journal]);
 
   /* Une question validée du premier coup n'est plus jamais reposée : les
@@ -336,7 +338,7 @@ function Reviser() {
         {gel && !ordre ? (
           <button
             onClick={masquerGel}
-            className="anim-monte mb-3 flex w-full items-center gap-2 rounded-xl border border-primary/30 bg-primary/10 px-3 py-2 text-left text-xs font-semibold text-primary"
+            className="anim-monte mb-3 flex w-full items-center gap-2 rounded-3xl border-2 border-primary/50 bg-primary/10 p-3 text-left text-xs font-semibold text-primary"
           >
             <Snowflake className="h-4 w-4 shrink-0" />
             jour du {gel.jour} manqué — gel utilisé, série intacte ({gel.restants} gel
@@ -417,15 +419,28 @@ function Reviser() {
               <p className="text-3xl font-extrabold text-brand tabular-nums">
                 {serie}
                 <span className="ml-2 text-xs font-bold text-muted-foreground">
-                  jour{serie > 1 ? "s" : ""} — record : {record}
+                  jour{serie > 1 ? "s" : ""}
                 </span>
               </p>
               <p className="text-xs text-muted-foreground">
                 d'affilée — une séance non terminée ne compte pas.
               </p>
+              <p className="text-xs font-bold text-foreground">
+                record personnel : {record} jour{record > 1 ? "s" : ""}
+              </p>
             </section>
 
-            <section className="anim-monte surface flex flex-col justify-between gap-1 p-4">
+            <section
+              className={
+                echeance.etat === "retard"
+                  ? "anim-monte col-span-2 rounded-3xl border-2 border-destructive/50 bg-destructive/10 p-4"
+                  : echeance.etat === "ajour"
+                    ? "anim-monte rounded-3xl border-2 border-warning/50 bg-warning/10 p-4"
+                    : echeance.etat === "avance"
+                      ? "anim-monte rounded-3xl border-2 border-success/50 bg-success/10 p-4"
+                      : "anim-monte surface flex flex-col justify-between gap-1 p-4"
+              }
+            >
               <p className="flex items-center gap-1.5 text-[0.68rem] font-bold tracking-[0.14em] text-muted-foreground uppercase">
                 <CalendarDays className="h-3.5 w-3.5 text-primary" /> Avant l'écrit
               </p>
@@ -457,8 +472,9 @@ function Reviser() {
                         : "en retard"}
                   </p>
                   <p className="text-xs text-muted-foreground">
-                    {echeance.reel.toFixed(1)} question{echeance.reel >= 2 ? "s" : ""} par jour sur
-                    14 jours · {echeance.parJourRequis} nécessaires
+                    {echeance.donneesRecentes
+                      ? `${echeance.reel.toFixed(1)} question${echeance.reel >= 2 ? "s" : ""} par jour sur 14 jours · ${echeance.parJourRequis} question${echeance.parJourRequis > 1 ? "s" : ""} par jour nécessaire${echeance.parJourRequis > 1 ? "s" : ""}`
+                      : "pas encore de données sur 14 jours"}
                   </p>
                 </>
               )}
