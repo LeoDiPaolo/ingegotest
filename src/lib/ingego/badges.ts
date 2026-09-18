@@ -30,12 +30,29 @@ export const PALIERS_REPONSES = [
   CORPUS.length,
 ];
 
+export type Palier = "bronze" | "argent" | "or" | "special";
+
+export function palierDe(p: number): Palier {
+  if (p >= CORPUS.length) return "special";
+  if (p >= 550) return "or";
+  if (p >= 150) return "argent";
+  return "bronze";
+}
+
+export function palierDeAxe(part: number): Palier {
+  if (part >= 1) return "special";
+  if (part >= 0.75) return "or";
+  if (part >= 0.5) return "argent";
+  return "bronze";
+}
+
 export type Badge = {
   cle: string;
   libelle: string;
   titre: string;
   legende: string;
   couleur?: string;
+  palier: Palier;
 };
 
 export type LigneAxe = { axe: Axe; acquises: number; total: number };
@@ -47,6 +64,7 @@ export function badgePalierReponses(p: number): Badge {
     libelle: String(p),
     titre: complet ? "Corpus complet" : `${p} questions validées`,
     legende: complet ? "Toutes les questions validées" : "Palier cumulé",
+    palier: palierDe(p),
   };
 }
 
@@ -57,6 +75,7 @@ export function badgePalierAxe(axe: Axe, part: number): Badge {
     titre: `${axe.court} · ${Math.round(part * 100)} %`,
     legende: part >= 1 ? "Catégorie maîtrisée" : "Palier de catégorie",
     couleur: axe.couleur,
+    palier: palierDeAxe(part),
   };
 }
 

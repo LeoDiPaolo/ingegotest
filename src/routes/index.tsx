@@ -29,6 +29,7 @@ import { Confettis } from "@/components/ingego/confettis";
 import { Castor, LogoIngego } from "@/components/ingego/marque";
 import { BadgeMaitrise, IconeAxe, Medaille } from "@/components/ingego/univers";
 import { Recompense } from "@/components/ingego/recompense";
+import { FeuArtifice } from "@/components/ingego/feu-artifice";
 import {
   PALIERS_REPONSES,
   badgePalierReponses,
@@ -184,6 +185,7 @@ function Reviser() {
         libelle: String(b.seuil),
         titre: b.titre,
         legende: b.legende,
+        palier: "bronze" as const,
       })),
     ],
     [bilan.lignes, bonnesReponses, joursTermines],
@@ -453,7 +455,6 @@ function Reviser() {
               <p className="text-xs text-muted-foreground">sur {bilan.total} questions</p>
             </section>
 
-
             <section
               className={
                 echeance.etat === "retard"
@@ -504,7 +505,6 @@ function Reviser() {
               )}
             </section>
 
-
             <section className="anim-monte col-span-2 space-y-3 lg:col-start-3 lg:row-span-3">
               <div className="flex items-center justify-between">
                 <p className="flex items-center gap-1.5 text-sm font-bold">
@@ -537,6 +537,7 @@ function Reviser() {
                     <Medaille
                       key={p}
                       libelle={b.libelle}
+                      palier={b.palier}
                       acquis={bonnesReponses >= p}
                       icone={p === PALIERS_REPONSES.at(-1) ? Trophy : Medal}
                     />
@@ -640,8 +641,19 @@ function Reviser() {
             <div className="blueprint bg-primary px-4 pt-3 pb-8 text-primary-foreground">
               <div className="relative mx-auto h-16 w-20">
                 <Castor
-                  className={`mx-auto h-16 w-16 ${justes / Math.max(1, faits.length) >= 0.75 ? "anim-pop rotate-2" : ""}`}
+                  className={`mx-auto h-16 w-16 ${
+                    justes === faits.length && faits.length > 0
+                      ? "anim-unlock"
+                      : justes / Math.max(1, faits.length) >= 0.75
+                        ? "anim-pop rotate-2"
+                        : ""
+                  }`}
                 />
+                {justes === faits.length && faits.length > 0 ? (
+                  <span className="pointer-events-none absolute inset-0">
+                    <FeuArtifice salves={1} />
+                  </span>
+                ) : null}
                 <CheckCircle2 className="absolute right-0 bottom-0 h-7 w-7 rounded-full bg-card p-0.5 text-success" />
               </div>
               <h1 className="mt-1 text-xl text-primary-foreground">Mission accomplie</h1>

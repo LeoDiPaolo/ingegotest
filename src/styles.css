@@ -492,9 +492,106 @@
   .palier-halo,
   .palier-rayons,
   .palier-etincelle,
+  .anim-tampon-grand,
+  .anim-flash-impact,
+  .eclat-feu,
+  .anim-monte-castor,
+  .anim-shine-sweep,
   .confetti {
     animation: none;
   }
+}
+
+/* --- Animations dédiées aux paliers de badges --- */
+
+@keyframes ing-tampon-grand {
+  0% {
+    transform: translateY(-120px) scale(1.4) rotate(-18deg);
+    opacity: 0;
+  }
+  60% {
+    transform: translateY(4px) scale(0.94) rotate(-6deg);
+    opacity: 1;
+  }
+  80% {
+    transform: translateY(-2px) scale(1.02) rotate(-9deg);
+  }
+  100% {
+    transform: translateY(0) scale(1) rotate(-8deg);
+    opacity: 1;
+  }
+}
+
+@utility anim-tampon-grand {
+  animation: ing-tampon-grand 0.5s cubic-bezier(0.2, 0.9, 0.3, 1.1) both;
+}
+
+@keyframes ing-flash-impact {
+  0% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.55;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@utility anim-flash-impact {
+  animation: ing-flash-impact 0.4s ease-out both;
+}
+
+@keyframes ing-eclat-feu {
+  0% {
+    transform: rotate(var(--angle)) translateX(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(var(--angle)) translateX(var(--distance)) scale(0.3);
+    opacity: 0;
+  }
+}
+
+.eclat-feu {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 9999px;
+  animation: ing-eclat-feu 0.9s cubic-bezier(0.15, 0.6, 0.3, 1) both;
+}
+
+@keyframes ing-monte-castor {
+  0% {
+    transform: translateY(60px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@utility anim-monte-castor {
+  animation: ing-monte-castor 0.6s cubic-bezier(0.2, 0.8, 0.3, 1) both;
+}
+
+@keyframes ing-shine-sweep {
+  0% {
+    transform: translateX(-140%) rotate(20deg);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateX(140%) rotate(20deg);
+    opacity: 0;
+  }
+}
+
+@utility anim-shine-sweep {
+  animation: ing-shine-sweep 0.7s ease-in-out 1s both;
 }
 
 @media (max-width: 639px) and (max-height: 760px) {

@@ -13,6 +13,7 @@ import {
   type LucideIcon,
 } from "lucide-react";
 import { AXE_BY_ID, type Axe } from "@/lib/ingego/corpus";
+import type { Palier } from "@/lib/ingego/badges";
 import { cn } from "@/lib/utils";
 
 const ICONES: Record<string, LucideIcon> = {
@@ -154,6 +155,7 @@ export function Medaille({
   acquis,
   taille = "sm",
   icone: Icone = Award,
+  palier,
 }: {
   libelle: string;
   legende?: string;
@@ -161,8 +163,15 @@ export function Medaille({
   acquis: boolean;
   taille?: "sm" | "lg";
   icone?: LucideIcon;
+  palier?: Palier;
 }) {
-  const c = couleur ?? "var(--color-brand)";
+  const teintes: Record<Palier, string> = {
+    bronze: "#B87333",
+    argent: "#9CA3AF",
+    or: "#D4AF37",
+    special: couleur ?? "var(--color-brand)",
+  };
+  const c = palier ? teintes[palier] : (couleur ?? "var(--color-brand)");
   const grand = taille === "lg";
   return (
     <div className="flex flex-col items-center gap-1">
