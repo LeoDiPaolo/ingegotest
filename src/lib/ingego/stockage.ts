@@ -475,6 +475,31 @@ export function recordSerieJours(joursTermines: string[], gels: string[] = []): 
   return record;
 }
 
+/* Série de réponses du premier coup : une réussite à la première tentative
+   d'une question prolonge la série, un échec la remet à zéro ; les réussites
+   sur une question déjà tentée ne changent rien. */
+export function seriePremierCoup(journal: Entree[]): { enCours: number; record: number } {
+  const entrees = journal
+    .filter((e) => e && !MARQUEURS.has(e.id))
+    .sort((a, b) => (a.t ?? 0) - (b.t ?? 0));
+  const dejaVus = new Set<string>();
+  let courante = 0;
+  let record = 0;
+  for (const e of entrees) {
+    if (e.note <= 0) {
+      courante = 0;
+      dejaVus.add(e.id);
+      continue;
+    }
+    if (!dejaVus.has(e.id)) {
+      dejaVus.add(e.id);
+      courante++;
+      if (courante > record) record = courante;
+    }
+  }
+  return { enCours: courante, record };
+}
+
 export const GELS_PAR_MOIS = 2;
 
 /* Gel de série : un seul jour manqué peut être couvert, dans la limite de deux

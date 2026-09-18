@@ -34,7 +34,9 @@ import {
   badgePalierReponses,
   badgesDebloques,
   badgesRegulariteDebloques,
+  palierDe,
   useRecompenses,
+  type Palier,
 } from "@/lib/ingego/badges";
 import { Button } from "@/components/ui/button";
 import { Exercice } from "@/components/ingego/exercice";
@@ -53,6 +55,7 @@ import {
   rythmeReel,
   rythmeRequis,
   serieJours,
+  seriePremierCoup,
   useDonnees,
 } from "@/lib/ingego/stockage";
 
@@ -175,6 +178,23 @@ function Reviser() {
   const bonnesReponses = bilan.acquises;
   const prochainPalier = PALIERS_REPONSES.find((p) => p > bonnesReponses) ?? null;
   const dernierPalier = [...PALIERS_REPONSES].reverse().find((p) => bonnesReponses >= p) ?? null;
+  /* Série de réponses du premier coup (série de jours + série de réponses). */
+  const seriePremier = useMemo(() => seriePremierCoup(donnees.journal), [donnees.journal]);
+  /* Prochain palier de médaille (Bronze → Argent → Or → Spécial) et son seuil. */
+  const NOMS_PALIERS: Record<Palier, string> = {
+    bronze: "Bronze",
+    argent: "Argent",
+    or: "Or",
+    special: "Spécial",
+  };
+  const ORDRE_PALIERS: Palier[] = ["bronze", "argent", "or", "special"];
+  const tierActuel = dernierPalier != null ? palierDe(dernierPalier) : null;
+  const prochainTier = tierActuel
+    ? (ORDRE_PALIERS[ORDRE_PALIERS.indexOf(tierActuel) + 1] ?? null)
+    : null;
+  const seuilProchainTier = prochainTier
+    ? (PALIERS_REPONSES.find((p) => palierDe(p) === prochainTier) ?? null)
+    : null;
 
   /* Récompenses : file des badges nouvellement débloqués. */
   const badges = useMemo(
@@ -359,20 +379,20 @@ function Reviser() {
         {!ordre ? (
           <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
             <section className="blueprint anim-monte col-span-2 overflow-hidden rounded-3xl border border-primary/20 bg-card shadow-[var(--shadow-lift)] lg:row-span-2">
-              <div className="bg-primary px-5 py-3 text-primary-foreground">
+              <div className="bg-primary px-4 py-2 text-primary-foreground">
                 <p className="flex items-center gap-1.5 text-[0.68rem] font-bold uppercase opacity-75">
                   Mission du jour
                   <Sparkles className="h-3 w-3 animate-pulse" aria-hidden />
                 </p>
                 <h1
                   key={titreMission}
-                  className="anim-monte mt-0.5 text-2xl text-primary-foreground"
+                  className="anim-monte mt-0.5 text-xl text-primary-foreground"
                 >
                   {titreMission}
                 </h1>
               </div>
-              <div className="relative p-5">
-                <div className="flex flex-wrap items-center justify-center gap-1 py-2">
+              <div className="relative p-4">
+                <div className="flex flex-wrap items-center justify-center gap-1 py-1">
                   {bilan.lignes.map((l, index) => (
                     <div key={l.axe.id} className="flex items-center">
                       <button
@@ -398,7 +418,7 @@ function Reviser() {
                     </div>
                   ))}
                 </div>
-                <div className="mt-3 flex items-center justify-between gap-3">
+                <div className="mt-2 flex items-center justify-between gap-3">
                   <div>
                     <p className="text-[0.65rem] font-extrabold tracking-[0.13em] text-brand uppercase">
                       Prochain objectif
@@ -411,12 +431,12 @@ function Reviser() {
                       {(objectif?.restantesNiveau ?? reste) > 1 ? "s" : ""}
                     </p>
                   </div>
-                  <Castor className="anim-flotte h-16 w-16 shrink-0" />
+                  <Castor className="anim-flotte h-14 w-14 shrink-0" />
                 </div>
                 <Button
                   onClick={demarrer}
                   disabled={!pret}
-                  className="touche touche-brand mt-4 h-14 w-full rounded-xl bg-brand text-base font-extrabold text-brand-foreground hover:bg-brand/90"
+                  className="touche touche-brand mt-3 h-12 w-full rounded-xl bg-brand text-base font-extrabold text-brand-foreground hover:bg-brand/90"
                 >
                   <Play className="h-5 w-5" /> Lancer la mission
                 </Button>
@@ -427,15 +447,28 @@ function Reviser() {
               <p className="flex items-center gap-1.5 text-[0.68rem] font-bold tracking-[0.14em] text-muted-foreground uppercase">
                 <Flame className={`h-3.5 w-3.5 ${teinteFlamme}`} /> Série
               </p>
-              <p className="text-2xl font-extrabold leading-tight text-brand tabular-nums">
-                {serie}
-                <span className="ml-2 text-xs font-bold text-muted-foreground">
-                  jour{serie > 1 ? "s" : ""}
-                </span>
-              </p>
-              <p className="text-xs font-bold text-foreground">
-                record : {record} jour{record > 1 ? "s" : ""}
-              </p>
+              <div className="grid grid-cols-2 gap-2">
+                <div>
+                  <p className="text-2xl font-extrabold leading-tight text-brand tabular-nums">
+                    {serie}
+                    <span className="ml-1 text-xs font-bold text-muted-foreground">
+                      jour{serie > 1 ? "s" : ""}
+                    </span>
+                  </p>
+                  <p className="text-xs font-bold text-foreground">record : {record} j</p>
+                </div>
+                <div className="border-l border-border pl-2">
+                  <p className="text-2xl font-extrabold leading-tight whitespace-nowrap text-success tabular-nums">
+                    {seriePremier.enCours}
+                    <span className="ml-1 text-[0.6rem] font-bold text-muted-foreground">
+                      1er coup
+                    </span>
+                  </p>
+                  <p className="text-[0.65rem] font-bold whitespace-nowrap text-foreground">
+                    record : {seriePremier.record}
+                  </p>
+                </div>
+              </div>
             </section>
 
             <section className="anim-monte surface flex flex-col gap-0.5 p-3">
@@ -473,10 +506,15 @@ function Reviser() {
                   <p className="text-base font-extrabold tabular-nums text-foreground">
                     {dernierPalier} questions
                   </p>
-                  <p className="text-xs text-muted-foreground">
+                  <p className="text-xs leading-snug text-muted-foreground">
                     {prochainPalier
                       ? `Prochain palier à ${prochainPalier}`
                       : "Tous les paliers atteints"}
+                    {seuilProchainTier != null && prochainTier ? (
+                      <span className="block font-semibold text-foreground">
+                        Palier {NOMS_PALIERS[prochainTier]} à {seuilProchainTier}
+                      </span>
+                    ) : null}
                   </p>
                 </div>
               </section>
