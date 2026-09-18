@@ -17,7 +17,7 @@ import { AXE_BY_ID, type Axe } from "@/lib/ingego/corpus";
 import type { Palier } from "@/lib/ingego/badges";
 import { cn } from "@/lib/utils";
 
-const ICONES: Record<string, LucideIcon> = {
+export const ICONES: Record<string, LucideIcon> = {
   A1: HardHat,
   A2: Gavel,
   A3: Wrench,
@@ -287,6 +287,9 @@ export function Medaille({
             strokeWidth={0.8}
             opacity={0.5}
           />
+          {grand ? (
+            <line x1="40" y1="50" x2="60" y2="50" stroke={trait} strokeWidth={0.8} opacity={0.4} />
+          ) : null}
           {grand ? (
             <text
               className="text-[5.5px] font-bold tracking-[0.15em] uppercase"

@@ -1,4 +1,31 @@
 import { useCallback, useEffect, useRef, useState } from "react";
+import {
+  Award,
+  Blocks,
+  Building,
+  Building2,
+  ClipboardCheck,
+  Cog,
+  Compass,
+  FileCheck2,
+  Flag,
+  Gauge,
+  Hammer,
+  HardHat,
+  Landmark,
+  Layers,
+  MapPin,
+  PenTool,
+  Route,
+  Ruler,
+  Settings2,
+  ShieldCheck,
+  Target,
+  Triangle,
+  Trophy,
+  Wrench,
+  type LucideIcon,
+} from "lucide-react";
 import { CORPUS, type Axe } from "@/lib/ingego/corpus";
 import { serieJours } from "@/lib/ingego/stockage";
 import { PALIERS_PART } from "@/components/ingego/univers";
@@ -29,6 +56,38 @@ export const PALIERS_REPONSES = [
   1000,
   CORPUS.length,
 ];
+
+/* Une icône par palier de réponses, alignée sur PALIERS_REPONSES. */
+export const ICONES_PALIER: LucideIcon[] = [
+  Ruler,
+  PenTool,
+  Compass,
+  Triangle,
+  Hammer,
+  Wrench,
+  HardHat,
+  ClipboardCheck,
+  FileCheck2,
+  Layers,
+  Blocks,
+  Building,
+  Building2,
+  Landmark,
+  Cog,
+  Settings2,
+  Gauge,
+  ShieldCheck,
+  Target,
+  Flag,
+  MapPin,
+  Route,
+  Trophy,
+];
+
+export function iconePalierReponses(p: number): LucideIcon {
+  const i = PALIERS_REPONSES.indexOf(p);
+  return ICONES_PALIER[i] ?? Award;
+}
 
 export type Palier = "bronze" | "argent" | "or" | "special";
 
