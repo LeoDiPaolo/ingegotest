@@ -504,10 +504,15 @@ function Reviser() {
                   <p className="text-base font-extrabold tabular-nums text-foreground">
                     {dernierPalier} questions
                   </p>
-                  <p className="text-xs text-muted-foreground">
+                  <p className="text-xs leading-snug text-muted-foreground">
                     {prochainPalier
                       ? `Prochain palier à ${prochainPalier}`
                       : "Tous les paliers atteints"}
+                    {seuilProchainTier != null && prochainTier ? (
+                      <span className="block font-semibold text-foreground">
+                        Palier {NOMS_PALIERS[prochainTier]} à {seuilProchainTier}
+                      </span>
+                    ) : null}
                   </p>
                 </div>
               </section>
