@@ -30,40 +30,6 @@ export const PALIERS_REPONSES = [
   CORPUS.length,
 ];
 
-/* Une icône par palier de réponses, alignée sur PALIERS_REPONSES. */
-export const ICONES_PALIER: LucideIcon[] = [
-  Ruler,
-  PenTool,
-  Compass,
-  Triangle,
-  Hammer,
-  Wrench,
-  HardHat,
-  ClipboardCheck,
-  FileCheck2,
-  Layers,
-  Blocks,
-  Building,
-  Building2,
-  Landmark,
-  Cog,
-  Settings2,
-  Gauge,
-  ShieldCheck,
-  Target,
-  Flag,
-  MapPin,
-  Route,
-  Trophy,
-];
-
-export function iconePalierReponses(p: number): LucideIcon {
-  const palier = palierDe(p);
-  if (palier === "special") return Trophy;
-  if (palier === "or") return Building2;
-  if (palier === "argent") return Compass;
-  return HardHat;
-}
 
 export type Palier = "bronze" | "argent" | "or" | "special";
 
