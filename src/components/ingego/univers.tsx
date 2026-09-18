@@ -205,7 +205,12 @@ export function Medaille({
           </span>
         ) : null}
         {acquis ? (
-          <span className="absolute -right-1 -bottom-1 grid h-6 w-6 place-items-center rounded-full bg-success text-success-foreground ring-2 ring-card">
+          <span
+            className={cn(
+              "absolute grid h-6 w-6 place-items-center rounded-full bg-success text-success-foreground ring-2 ring-card",
+              taille === "xl" ? "right-[10%] bottom-[6%]" : "-right-1 -bottom-1",
+            )}
+          >
             <ShieldCheck className="h-3.5 w-3.5" />
           </span>
         ) : null}
