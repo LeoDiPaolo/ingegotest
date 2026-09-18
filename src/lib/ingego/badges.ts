@@ -92,9 +92,9 @@ export function iconePalierReponses(p: number): LucideIcon {
 export type Palier = "bronze" | "argent" | "or" | "special";
 
 export function palierDe(p: number): Palier {
-  if (p >= CORPUS.length) return "special";
-  if (p >= 550) return "or";
-  if (p >= 150) return "argent";
+  if (p > 900 || p >= CORPUS.length) return "special";
+  if (p >= 700) return "or";
+  if (p >= 300) return "argent";
   return "bronze";
 }
 

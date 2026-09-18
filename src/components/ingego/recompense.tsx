@@ -18,6 +18,7 @@ function iconeBadge(badge: Badge) {
 export function Recompense({ badge, onFermer }: { badge: Badge; onFermer: () => void }) {
   const palier = badge.palier;
   const special = palier === "special";
+  const palierReponses = badge.cle.startsWith("rep-");
 
   useEffect(() => {
     if (typeof navigator !== "undefined" && "vibrate" in navigator) {
@@ -58,6 +59,7 @@ export function Recompense({ badge, onFermer }: { badge: Badge; onFermer: () => 
             taille="lg"
             legende={badge.legende}
             icone={special ? Trophy : iconeBadge(badge)}
+            emblematique={palierReponses}
           />
           {special ? (
             <span
@@ -70,6 +72,11 @@ export function Recompense({ badge, onFermer }: { badge: Badge; onFermer: () => 
             />
           ) : null}
         </div>
+        {palierReponses ? (
+          <div className="anim-tampon-palier mx-auto mt-3 w-fit border-4 border-brand px-4 py-1.5 text-sm font-black text-brand uppercase">
+            Palier {badge.libelle}
+          </div>
+        ) : null}
         <h2 className="mt-3 text-lg font-bold">{badge.titre}</h2>
         {special ? (
           <p className="mt-1 text-sm font-semibold text-muted-foreground">

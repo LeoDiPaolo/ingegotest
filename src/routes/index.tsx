@@ -4,7 +4,6 @@ import {
   CheckCircle2,
   Flame,
   LockKeyhole,
-  Medal,
   Play,
   RotateCcw,
   Sparkles,
@@ -176,6 +175,7 @@ function Reviser() {
   /* Paliers cumulés : uniquement les questions validées (réussies du premier coup). */
   const bonnesReponses = bilan.acquises;
   const prochainPalier = PALIERS_REPONSES.find((p) => p > bonnesReponses) ?? null;
+  const dernierPalier = [...PALIERS_REPONSES].reverse().find((p) => bonnesReponses >= p) ?? null;
 
   /* Récompenses : file des badges nouvellement débloqués. */
   const badges = useMemo(
@@ -528,30 +528,31 @@ function Reviser() {
                 ))}
               </div>
 
-              <div className="flex items-center gap-1.5 pt-1 text-sm font-bold">
-                <Medal className="h-4 w-4 text-brand" /> Paliers de bonnes réponses
-              </div>
-              <div className="surface grid grid-cols-4 gap-3 p-3 sm:grid-cols-6">
-                {PALIERS_REPONSES.map((p) => {
-                  const b = badgePalierReponses(p);
-                  return (
+              {dernierPalier != null ? (
+                <div className="pt-1">
+                  <div className="flex items-center gap-1.5 text-sm font-bold">
+                    <Sparkles className="h-4 w-4 text-brand" /> Dernier palier atteint
+                  </div>
+                  <div className="surface mt-2 flex flex-col items-center p-4">
                     <Medaille
-                      key={p}
-                      libelle={b.libelle}
-                      palier={b.palier}
-                      acquis={bonnesReponses >= p}
-                      icone={iconePalierReponses(p)}
+                      libelle={String(dernierPalier)}
+                      palier={badgePalierReponses(dernierPalier).palier}
+                      acquis
+                      taille="lg"
+                      icone={iconePalierReponses(dernierPalier)}
+                      emblematique
                     />
-                  );
-                })}
-              </div>
-              <p className="text-xs text-muted-foreground">
-                {bonnesReponses} bonne{bonnesReponses > 1 ? "s" : ""} réponse
-                {bonnesReponses > 1 ? "s" : ""} cumulée{bonnesReponses > 1 ? "s" : ""}
-                {prochainPalier
-                  ? ` · prochain palier à ${prochainPalier}`
-                  : " · tous les paliers atteints"}
-              </p>
+                    <p className="mt-2 text-sm font-extrabold tabular-nums text-foreground">
+                      {dernierPalier} questions
+                    </p>
+                    <p className="mt-1 text-xs text-muted-foreground">
+                      {prochainPalier
+                        ? `Prochain palier à ${prochainPalier}`
+                        : "Tous les paliers atteints"}
+                    </p>
+                  </div>
+                </div>
+              ) : null}
             </section>
           </div>
         ) : !missionCommencee ? (

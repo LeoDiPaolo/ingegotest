@@ -204,6 +204,7 @@ export function Medaille({
   taille = "sm",
   icone: Icone = Award,
   palier,
+  emblematique = false,
 }: {
   libelle: string;
   legende?: string;
@@ -212,6 +213,7 @@ export function Medaille({
   taille?: "sm" | "lg";
   icone?: LucideIcon;
   palier?: Palier;
+  emblematique?: boolean;
 }) {
   const teintes: Record<Palier, string> = {
     bronze: "#B87333",
@@ -222,6 +224,7 @@ export function Medaille({
   const c = palier ? teintes[palier] : (couleur ?? "var(--color-brand)");
   const grand = taille === "lg";
   const special = palier === "special";
+  const nomPalier = palier ? palier.toUpperCase() : "";
   const id = useId().replace(/:/g, "");
   const remplissage = acquis ? `url(#grad-${id})` : "var(--color-elevated)";
   const trait = acquis ? c : "var(--color-border)";
@@ -299,6 +302,17 @@ export function Medaille({
               <textPath href={`#arc-${id}`} startOffset="50%" textAnchor="middle">
                 Service public · Construction
               </textPath>
+            </text>
+          ) : null}
+          {emblematique && palier ? (
+            <text
+              x="50"
+              y="82"
+              textAnchor="middle"
+              className="text-[7px] font-black"
+              fill={trait}
+            >
+              {nomPalier}
             </text>
           ) : null}
         </svg>
