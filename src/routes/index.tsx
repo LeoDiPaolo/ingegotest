@@ -455,55 +455,32 @@ function Reviser() {
               <p className="text-xs text-muted-foreground">sur {bilan.total} questions</p>
             </section>
 
-            <section
-              className={
-                echeance.etat === "retard"
-                  ? "anim-monte col-span-2 rounded-3xl border-2 border-destructive/50 bg-destructive/10 p-4"
-                  : echeance.etat === "ajour"
-                    ? "anim-monte col-span-2 rounded-3xl border-2 border-warning/50 bg-warning/10 p-4"
-                    : echeance.etat === "avance"
-                      ? "anim-monte col-span-2 rounded-3xl border-2 border-success/50 bg-success/10 p-4"
-                      : "anim-monte surface col-span-2 flex flex-col justify-between gap-1 p-4"
-              }
-            >
-              <p className="flex items-center gap-1.5 text-[0.68rem] font-bold tracking-[0.14em] text-muted-foreground uppercase">
-                <CalendarDays className="h-3.5 w-3.5 text-primary" /> Avant l'écrit
-              </p>
-              {echeance.parJourRequis === null ? (
-                <>
-                  <p className="text-3xl font-extrabold text-muted-foreground tabular-nums">J-0</p>
-                  <p className="text-xs text-muted-foreground">
-                    date de l'écrit à mettre à jour dans les réglages
-                  </p>
-                </>
-              ) : (
-                <>
-                  <p className="text-3xl font-extrabold text-primary tabular-nums">
-                    J-{echeance.joursRestants}
-                  </p>
-                  <p
-                    className={`text-xs font-bold ${
-                      echeance.etat === "avance"
-                        ? "text-success"
-                        : echeance.etat === "ajour"
-                          ? "text-warning"
-                          : "text-destructive"
-                    }`}
-                  >
-                    {echeance.etat === "avance"
-                      ? "en avance"
-                      : echeance.etat === "ajour"
-                        ? "à jour"
-                        : "en retard"}
-                  </p>
-                  <p className="text-xs text-muted-foreground">
-                    {echeance.donneesRecentes
-                      ? `${echeance.reel.toFixed(1)} question${echeance.reel >= 2 ? "s" : ""} par jour sur 14 jours · ${echeance.parJourRequis} question${echeance.parJourRequis > 1 ? "s" : ""} par jour nécessaire${echeance.parJourRequis > 1 ? "s" : ""}`
-                      : "pas encore de données sur 14 jours"}
-                  </p>
-                </>
-              )}
-            </section>
+            {dernierPalier != null ? (
+              <section className="anim-monte surface col-span-2 flex flex-col gap-3 p-4">
+                <p className="flex items-center gap-1.5 text-[0.68rem] font-bold tracking-[0.14em] text-muted-foreground uppercase">
+                  <Sparkles className="h-3.5 w-3.5 text-brand" /> Dernier palier atteint
+                </p>
+                <div className="flex items-center gap-4">
+                  <div className="shrink-0">
+                    <Medaille
+                      palier={badgePalierReponses(dernierPalier).palier}
+                      acquis
+                      taille="xl"
+                    />
+                  </div>
+                  <div className="min-w-0">
+                    <p className="text-lg font-extrabold tabular-nums text-foreground">
+                      {dernierPalier} questions
+                    </p>
+                    <p className="mt-1 text-xs text-muted-foreground">
+                      {prochainPalier
+                        ? `Prochain palier à ${prochainPalier}`
+                        : "Tous les paliers atteints"}
+                    </p>
+                  </div>
+                </div>
+              </section>
+            ) : null}
 
             <section className="anim-monte col-span-2 space-y-3 lg:col-start-3 lg:row-span-3">
               <div className="flex items-center justify-between">
@@ -527,29 +504,55 @@ function Reviser() {
                 ))}
               </div>
 
-              {dernierPalier != null ? (
-                <div className="pt-1">
-                  <div className="flex items-center gap-1.5 text-sm font-bold">
-                    <Sparkles className="h-4 w-4 text-brand" /> Dernier palier atteint
-                  </div>
-                  <div className="surface mt-2 flex flex-col items-center p-4">
-                    <Medaille
-                      libelle={String(dernierPalier)}
-                      palier={badgePalierReponses(dernierPalier).palier}
-                      acquis
-                      taille="lg"
-                    />
-                    <p className="mt-2 text-sm font-extrabold tabular-nums text-foreground">
-                      {dernierPalier} questions
+              <section
+                className={
+                  echeance.etat === "retard"
+                    ? "anim-monte rounded-3xl border-2 border-destructive/50 bg-destructive/10 p-4"
+                    : echeance.etat === "ajour"
+                      ? "anim-monte rounded-3xl border-2 border-warning/50 bg-warning/10 p-4"
+                      : echeance.etat === "avance"
+                        ? "anim-monte rounded-3xl border-2 border-success/50 bg-success/10 p-4"
+                        : "anim-monte surface flex flex-col justify-between gap-1 p-4"
+                }
+              >
+                <p className="flex items-center gap-1.5 text-[0.68rem] font-bold tracking-[0.14em] text-muted-foreground uppercase">
+                  <CalendarDays className="h-3.5 w-3.5 text-primary" /> Avant l'écrit
+                </p>
+                {echeance.parJourRequis === null ? (
+                  <>
+                    <p className="text-3xl font-extrabold text-muted-foreground tabular-nums">J-0</p>
+                    <p className="text-xs text-muted-foreground">
+                      date de l'écrit à mettre à jour dans les réglages
                     </p>
-                    <p className="mt-1 text-xs text-muted-foreground">
-                      {prochainPalier
-                        ? `Prochain palier à ${prochainPalier}`
-                        : "Tous les paliers atteints"}
+                  </>
+                ) : (
+                  <>
+                    <p className="text-3xl font-extrabold text-primary tabular-nums">
+                      J-{echeance.joursRestants}
                     </p>
-                  </div>
-                </div>
-              ) : null}
+                    <p
+                      className={`text-xs font-bold ${
+                        echeance.etat === "avance"
+                          ? "text-success"
+                          : echeance.etat === "ajour"
+                            ? "text-warning"
+                            : "text-destructive"
+                      }`}
+                    >
+                      {echeance.etat === "avance"
+                        ? "en avance"
+                        : echeance.etat === "ajour"
+                          ? "à jour"
+                          : "en retard"}
+                    </p>
+                    <p className="text-xs text-muted-foreground">
+                      {echeance.donneesRecentes
+                        ? `${echeance.reel.toFixed(1)} question${echeance.reel >= 2 ? "s" : ""} par jour sur 14 jours · ${echeance.parJourRequis} question${echeance.parJourRequis > 1 ? "s" : ""} par jour nécessaire${echeance.parJourRequis > 1 ? "s" : ""}`
+                        : "pas encore de données sur 14 jours"}
+                    </p>
+                  </>
+                )}
+              </section>
             </section>
           </div>
         ) : !missionCommencee ? (
