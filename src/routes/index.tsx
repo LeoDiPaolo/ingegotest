@@ -423,36 +423,37 @@ function Reviser() {
               </div>
             </section>
 
-            <section className="anim-monte surface flex flex-col justify-between gap-1 p-4">
+            <section className="anim-monte surface flex flex-col gap-0.5 p-3">
               <p className="flex items-center gap-1.5 text-[0.68rem] font-bold tracking-[0.14em] text-muted-foreground uppercase">
                 <Flame className={`h-3.5 w-3.5 ${teinteFlamme}`} /> Série
               </p>
-              <p className="text-3xl font-extrabold text-brand tabular-nums">
+              <p className="text-2xl font-extrabold leading-tight text-brand tabular-nums">
                 {serie}
                 <span className="ml-2 text-xs font-bold text-muted-foreground">
                   jour{serie > 1 ? "s" : ""}
                 </span>
               </p>
-              <p className="text-xs text-muted-foreground">
-                d'affilée — une séance non terminée ne compte pas.
-              </p>
               <p className="text-xs font-bold text-foreground">
-                record personnel : {record} jour{record > 1 ? "s" : ""}
+                record : {record} jour{record > 1 ? "s" : ""}
               </p>
             </section>
 
-            <section className="anim-monte surface flex flex-col justify-between gap-1 p-4">
+            <section className="anim-monte surface flex flex-col gap-0.5 p-3">
               <p className="flex items-center gap-1.5 text-[0.68rem] font-bold tracking-[0.14em] text-muted-foreground uppercase">
                 <Target className="h-3.5 w-3.5 text-success" /> Acquises
               </p>
-              <p className="text-3xl font-extrabold text-success tabular-nums">{bilan.acquises}</p>
-              <div className="h-2.5 overflow-hidden rounded-full bg-elevated">
+              <p className="text-2xl font-extrabold leading-tight text-success tabular-nums">
+                {bilan.acquises}
+                <span className="ml-2 text-xs font-bold text-muted-foreground">
+                  sur {bilan.total}
+                </span>
+              </p>
+              <div className="h-2 overflow-hidden rounded-full bg-elevated">
                 <div
                   className="h-full rounded-full bg-success transition-[width] duration-700"
                   style={{ width: `${bilan.part * 100}%` }}
                 />
               </div>
-              <p className="text-xs text-muted-foreground">sur {bilan.total} questions</p>
             </section>
 
             {dernierPalier != null ? (
