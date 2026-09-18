@@ -1,6 +1,14 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { ecrireEtat, lireEtat } from "./etat.functions";
-import { JAMAIS, JOUR, normaliserReglages, type Carte, type Etat, type Reglages } from "./algo";
+import {
+  JAMAIS,
+  JOUR,
+  normaliserReglages,
+  resteAFaire,
+  type Carte,
+  type Etat,
+  type Reglages,
+} from "./algo";
 import { CORPUS } from "./corpus";
 import {
   COMMENTAIRES_TRAITES,
@@ -26,6 +34,9 @@ export interface Donnees {
   journal: Entree[];
   reglages: Reglages;
   commentaires: Record<string, string>;
+  /* Jours (AAAA-MM-JJ) où un gel de série a été consommé : ils comblent un
+     trou sans casser la continuité de la série. */
+  gels: string[];
 }
 
 const CLE_LOCALE = "ingego-donnees";
@@ -33,12 +44,14 @@ const CLE_APPAREIL = "ingego-cle-appareil";
 const CLE_PURGE_COM = "ingego-purge-commentaires";
 const CLE_PURGE_REV = "ingego-purge-revisions";
 const CLE_RESTAURATION_REV = "ingego-restauration-revisions";
+const CLE_CHECK_GEL = "ingego-dernier-check-gel";
 
 export const VIDE: Donnees = {
   cartes: {},
   journal: [],
   reglages: normaliserReglages(null),
   commentaires: {},
+  gels: [],
 };
 
 function cleAppareil() {
@@ -79,6 +92,7 @@ function lireLocal(): Donnees {
       journal: d.journal ?? [],
       reglages: normaliserReglages(d.reglages),
       commentaires: d.commentaires ?? {},
+      gels: d.gels ?? [],
     };
   } catch {
     return VIDE;
@@ -257,6 +271,7 @@ function fusionner(local: Donnees, distant: Donnees): Donnees {
     journal,
     reglages: local.reglages,
     commentaires: { ...distant.commentaires, ...local.commentaires },
+    gels: [...new Set([...(distant.gels ?? []), ...(local.gels ?? [])])].sort(),
   };
 }
 
@@ -283,6 +298,7 @@ export function useDonnees() {
             journal: dernier.current.journal as never,
             reglages: dernier.current.reglages as never,
             commentaires: dernier.current.commentaires,
+            gels: dernier.current.gels,
           },
         });
         setSynchro("ok");
@@ -322,6 +338,7 @@ export function useDonnees() {
           journal: (data.journal as unknown as Entree[]) ?? [],
           reglages: normaliserReglages(data.reglages as unknown as Partial<Reglages>),
           commentaires: (data.commentaires as unknown as Record<string, string>) ?? {},
+          gels: (data.gels as unknown as string[]) ?? [],
         };
         const fusion = restaurerToutesValidations(
           restaurerValidationsRevues(
