@@ -20837,30 +20837,30 @@
       "sujet": "bp-avis",
       "niveau": 4,
       "famille": "S",
-      "question": "Triez ces caractéristiques selon qu'elles relèvent de l'avis simple ou de l'avis conforme de l'architecte des Bâtiments de France.",
-      "explication": "En avis conforme, l'autorité compétente pour délivrer l'autorisation d'urbanisme est tenue de suivre l'avis de l'ABF ; en avis simple, elle peut passer outre, y compris en cas d'avis négatif. Cette distinction résulte du code du patrimoine, notamment de l'article L632-2 pour l'avis conforme en SPR, et de l'article L621-32 pour les abords selon covisibilité ou PDA. Passer outre un avis simple négatif reste risqué en pratique : en cas de recours contentieux contre l'autorisation, par exemple d'une association de défense du patrimoine, la responsabilité de la commune peut être engagée si elle n'a pas suivi l'avis de l'ABF. En savoir plus — ABF : architecte des Bâtiments de France.",
+      "question": "Un projet de travaux est situé dans le périmètre d'un monument historique. Classez ces situations selon que l'avis de l'architecte des Bâtiments de France y est un avis simple (la commune peut ne pas le suivre) ou un avis conforme (la commune doit le suivre).",
+      "explication": "Avis conforme : l'autorité qui délivre l'autorisation d'urbanisme est liée par l'avis de l'ABF, un avis défavorable fait donc obstacle au permis (site patrimonial remarquable, article L632-2 du code du patrimoine ; abords avec covisibilité ou périmètre délimité des abords, article L621-32). Avis simple : la commune peut délivrer l'autorisation même si l'ABF est défavorable, mais elle s'expose à un recours contentieux, par exemple d'une association de défense du patrimoine, et sa responsabilité peut être engagée. En savoir plus — ABF : architecte des Bâtiments de France ; PDA : périmètre délimité des abords ; SPR : site patrimonial remarquable.",
       "derniereVerification": "2026-09",
       "aVerifier": null,
       "type": "tri",
       "colonnes": [
-        "Avis simple",
-        "Avis conforme"
+        "Avis simple : la commune peut passer outre",
+        "Avis conforme : la commune doit suivre"
       ],
       "elements": [
         [
-          "L'autorité compétente n'est pas tenue de suivre l'avis de l'ABF",
+          "Travaux aux abords d'un monument historique, hors covisibilité et hors périmètre délimité",
           0
         ],
         [
-          "L'autorité compétente est liée par l'avis de l'ABF",
+          "Ravalement d'une maison dans une rue voisine, sans covisibilité avec le monument",
+          0
+        ],
+        [
+          "Travaux dans un site patrimonial remarquable couvert par un plan de valorisation (PVAP)",
           1
         ],
         [
-          "L'autorisation peut être accordée malgré un avis négatif, au risque d'un recours contentieux",
-          0
-        ],
-        [
-          "Un avis négatif fait obstacle à la délivrance de l'autorisation",
+          "Travaux sur un immeuble en covisibilité directe avec un monument historique classé",
           1
         ]
       ]
@@ -24110,7 +24110,7 @@
         "Elle remplace entièrement les contrats de maintenance assurés par des humains"
       ],
       "bonneReponse": 1,
-      "explication": "Une GTB inclut la GTC mais avec un périmètre étendu : elle supervise et optimise l'activité globale d'un site, quand la GTC pilote généralement un seul lot technique isolé. Distinction technique communément admise dans la pratique professionnelle, sans texte réglementaire qui en donnerait une définition juridique unique — le décret BACS impose en revanche l'obligation d'installer ce type de système selon des seuils de puissance. Les systèmes usuellement supervisés par une GTB sont le CVC, l'éclairage, l'eau chaude sanitaire, l'eau, le photovoltaïque, le gaz, l'alarme et la sécurité ; ses missions associées incluent la collecte des données du site (analyse fonctionnelle), la mise à disposition d'un boîtier de communication 4G ou LoRa, et le contrôle à distance des équipements. En savoir plus — GTB : Gestion Technique du Bâtiment ; GTC : Gestion Technique Centralisée ; BACS : Building Automation and Control Systems, système dont l'installation est rendue obligatoire par décret selon la puissance des équipements CVC.",
+      "explication": "Une GTB inclut la GTC mais avec un périmètre étendu : la GTC pilote un lot technique isolé, la GTB supervise et optimise l'ensemble du site. Exemples concrets de GTC : l'automate qui régule seul la chaufferie et les circuits de chauffage d'un gymnase ; le système qui gère uniquement l'éclairage d'un parking ; la centrale qui pilote seulement la ventilation d'une cuisine centrale. Exemples concrets de GTB : la supervision d'un groupe scolaire qui rassemble chauffage, ventilation, éclairage, eau chaude sanitaire, photovoltaïque et alarmes sur une même interface, avec relevés de consommation et alertes ; le pilotage à distance des programmations horaires de plusieurs bâtiments communaux depuis un poste unique en mairie. Repère simple : un seul lot technique, dans un seul local technique, c'est une GTC ; plusieurs lots croisés à l'échelle du bâtiment ou du patrimoine, avec suivi énergétique, c'est une GTB. Cette distinction est une pratique professionnelle, sans définition juridique unique ; le décret BACS impose en revanche l'installation de ce type de système au-delà de seuils de puissance des équipements CVC. En savoir plus — GTB : Gestion Technique du Bâtiment ; GTC : Gestion Technique Centralisée ; CVC : chauffage, ventilation, climatisation ; BACS : Building Automation and Control Systems.",
       "derniereVerification": "2026-09",
       "aVerifier": null
     },
