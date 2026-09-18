@@ -539,8 +539,6 @@ function Reviser() {
                       palier={badgePalierReponses(dernierPalier).palier}
                       acquis
                       taille="lg"
-                      icone={iconePalierReponses(dernierPalier)}
-                      emblematique
                     />
                     <p className="mt-2 text-sm font-extrabold tabular-nums text-foreground">
                       {dernierPalier} questions

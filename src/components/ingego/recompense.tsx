@@ -50,8 +50,6 @@ export function Recompense({ badge, onFermer }: { badge: Badge; onFermer: () => 
             acquis
             taille="lg"
             legende={badge.legende}
-            icone={special ? Trophy : iconeBadge(badge)}
-            emblematique={palierReponses}
           />
           {special ? (
             <span
