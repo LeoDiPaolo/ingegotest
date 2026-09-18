@@ -27,6 +27,14 @@ const COQUILLES: Record<Palier, string> = {
   special: badgeSpecialAsset,
 };
 
+/* Couleur du numéro gravé : celle du badge, légèrement foncée pour rester lisible sur le métal. */
+const TEINTES: Record<Palier, string> = {
+  bronze: "#8C5A2B",
+  argent: "#7B8494",
+  or: "#A8842A",
+  special: "#2F8F6B",
+};
+
 export const ICONES: Record<string, LucideIcon> = {
   A1: HardHat,
   A2: Gavel,
