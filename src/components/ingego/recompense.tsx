@@ -36,9 +36,7 @@ export function Recompense({ badge, onFermer }: { badge: Badge; onFermer: () => 
         <p className="text-[0.65rem] font-extrabold tracking-[0.2em] text-brand uppercase">
           {special ? "Palier historique" : "Badge débloqué"}
         </p>
-        {special ? (
-          <Castor className="anim-monte-castor mx-auto mt-3 h-14 w-14" />
-        ) : null}
+        {special ? <Castor className="anim-monte-castor mx-auto mt-3 h-14 w-14" /> : null}
         <div
           className={`relative mt-3 flex justify-center ${
             palier === "argent" ? "anim-tampon-grand" : "anim-unlock"
