@@ -35,6 +35,14 @@ const TEINTES: Record<Palier, string> = {
   special: "#2F8F6B",
 };
 
+/* Contour du numéro gravé : blanc sur métal sombre, sombre sur l'argent clair. */
+const CONTOURS: Record<Palier, string> = {
+  bronze: "#fff",
+  argent: "#0f172a",
+  or: "#fff",
+  special: "#fff",
+};
+
 export const ICONES: Record<string, LucideIcon> = {
   A1: HardHat,
   A2: Gavel,
