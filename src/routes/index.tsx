@@ -184,6 +184,7 @@ function Reviser() {
         libelle: String(b.seuil),
         titre: b.titre,
         legende: b.legende,
+        palier: "bronze" as const,
       })),
     ],
     [bilan.lignes, bonnesReponses, joursTermines],
