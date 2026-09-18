@@ -156,12 +156,23 @@ function pointsEngrenage(
   rDent: number,
   dents: number,
 ): string {
-  const n = dents * 2;
   const pts: string[] = [];
-  for (let i = 0; i < n; i++) {
-    const angle = (i / n) * Math.PI * 2 - Math.PI / 2;
-    const r = i % 2 === 0 ? rDent : rCreux;
-    pts.push(`${(cx + r * Math.cos(angle)).toFixed(1)},${(cy + r * Math.sin(angle)).toFixed(1)}`);
+  const pas = (Math.PI * 2) / dents;
+  const largeurDent = pas * 0.32;
+  for (let i = 0; i < dents; i++) {
+    const centre = i * pas - Math.PI / 2;
+    const angles = [
+      centre - largeurDent * 1.5,
+      centre - largeurDent,
+      centre + largeurDent,
+      centre + largeurDent * 1.5,
+    ];
+    const rayons = [rCreux, rDent, rDent, rCreux];
+    angles.forEach((angle, idx) => {
+      pts.push(
+        `${(cx + rayons[idx] * Math.cos(angle)).toFixed(1)},${(cy + rayons[idx] * Math.sin(angle)).toFixed(1)}`,
+      );
+    });
   }
   return pts.join(" ");
 }
