@@ -461,6 +461,7 @@ function Reviser() {
                 <div className="shrink-0">
                   <Medaille
                     palier={badgePalierReponses(dernierPalier).palier}
+                    libelle={String(dernierPalier)}
                     acquis
                     taille="xl"
                   />
