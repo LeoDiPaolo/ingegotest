@@ -337,6 +337,16 @@ function Reviser() {
               : "mx-auto max-w-5xl px-5 py-5"
         }
       >
+        {gel && !ordre ? (
+          <button
+            onClick={masquerGel}
+            className="anim-monte mb-3 flex w-full items-center gap-2 rounded-xl border border-primary/30 bg-primary/10 px-3 py-2 text-left text-xs font-semibold text-primary"
+          >
+            <Snowflake className="h-4 w-4 shrink-0" />
+            jour du {gel.jour} manqué — gel utilisé, série intacte ({gel.restants} gel
+            {gel.restants > 1 ? "s" : ""} restant{gel.restants > 1 ? "s" : ""} ce mois-ci)
+          </button>
+        ) : null}
         {!ordre ? (
           <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
             <section className="blueprint anim-monte col-span-2 overflow-hidden rounded-3xl border border-primary/20 bg-card shadow-[var(--shadow-lift)] lg:row-span-2">
