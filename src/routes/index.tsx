@@ -34,7 +34,9 @@ import {
   badgePalierReponses,
   badgesDebloques,
   badgesRegulariteDebloques,
+  palierDe,
   useRecompenses,
+  type Palier,
 } from "@/lib/ingego/badges";
 import { Button } from "@/components/ui/button";
 import { Exercice } from "@/components/ingego/exercice";
@@ -53,6 +55,7 @@ import {
   rythmeReel,
   rythmeRequis,
   serieJours,
+  seriePremierCoup,
   useDonnees,
 } from "@/lib/ingego/stockage";
 
