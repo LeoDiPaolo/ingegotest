@@ -288,6 +288,9 @@ export function Medaille({
             opacity={0.5}
           />
           {grand ? (
+            <line x1="40" y1="50" x2="60" y2="50" stroke={trait} strokeWidth={0.8} opacity={0.4} />
+          ) : null}
+          {grand ? (
             <text
               className="text-[5.5px] font-bold tracking-[0.15em] uppercase"
               fill={trait}
