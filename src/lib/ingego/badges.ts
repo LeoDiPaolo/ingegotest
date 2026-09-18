@@ -30,12 +30,29 @@ export const PALIERS_REPONSES = [
   CORPUS.length,
 ];
 
+export type Palier = "bronze" | "argent" | "or" | "special";
+
+export function palierDe(p: number): Palier {
+  if (p >= CORPUS.length) return "special";
+  if (p >= 550) return "or";
+  if (p >= 150) return "argent";
+  return "bronze";
+}
+
+export function palierDeAxe(part: number): Palier {
+  if (part >= 1) return "special";
+  if (part >= 0.75) return "or";
+  if (part >= 0.5) return "argent";
+  return "bronze";
+}
+
 export type Badge = {
   cle: string;
   libelle: string;
   titre: string;
   legende: string;
   couleur?: string;
+  palier: Palier;
 };
 
 export type LigneAxe = { axe: Axe; acquises: number; total: number };
