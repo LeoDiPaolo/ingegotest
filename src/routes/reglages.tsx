@@ -155,6 +155,21 @@ function Page() {
           </div>
         </section>
 
+        <section className="surface space-y-3 p-4">
+          <h2 className="flex items-center gap-2 text-sm font-bold">
+            <CalendarDays className="h-4 w-4 text-brand" /> Date de l'écrit
+          </h2>
+          <input
+            type="date"
+            value={r.dateEcrit}
+            onChange={(e) => majReglages({ dateEcrit: e.target.value })}
+            className="w-full rounded-xl border border-border bg-elevated px-3 py-2.5 text-sm font-semibold"
+          />
+          <p className="text-xs text-muted-foreground">
+            Sert au compte à rebours et au rythme quotidien affichés sur l'accueil.
+          </p>
+        </section>
+
         <section className="surface space-y-2 p-4">
           <h2 className="text-sm font-bold">À revérifier avant l'écrit ({aVerifier.length})</h2>
           <ul className="space-y-2">
