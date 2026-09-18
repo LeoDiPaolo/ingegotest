@@ -85,16 +85,19 @@ export const ICONES_PALIER: LucideIcon[] = [
 ];
 
 export function iconePalierReponses(p: number): LucideIcon {
-  const i = PALIERS_REPONSES.indexOf(p);
-  return ICONES_PALIER[i] ?? Award;
+  const palier = palierDe(p);
+  if (palier === "special") return Trophy;
+  if (palier === "or") return Building2;
+  if (palier === "argent") return Compass;
+  return HardHat;
 }
 
 export type Palier = "bronze" | "argent" | "or" | "special";
 
 export function palierDe(p: number): Palier {
-  if (p >= CORPUS.length) return "special";
-  if (p >= 550) return "or";
-  if (p >= 150) return "argent";
+  if (p > 900 || p >= CORPUS.length) return "special";
+  if (p >= 700) return "or";
+  if (p >= 300) return "argent";
   return "bronze";
 }
 

@@ -204,6 +204,7 @@ export function Medaille({
   taille = "sm",
   icone: Icone = Award,
   palier,
+  emblematique = false,
 }: {
   libelle: string;
   legende?: string;
@@ -212,16 +213,18 @@ export function Medaille({
   taille?: "sm" | "lg";
   icone?: LucideIcon;
   palier?: Palier;
+  emblematique?: boolean;
 }) {
   const teintes: Record<Palier, string> = {
     bronze: "#B87333",
     argent: "#9CA3AF",
     or: "#D4AF37",
-    special: couleur ?? "var(--color-brand)",
+    special: couleur ?? "#2F8F6B",
   };
   const c = palier ? teintes[palier] : (couleur ?? "var(--color-brand)");
   const grand = taille === "lg";
   const special = palier === "special";
+  const nomPalier = palier ? palier.toUpperCase() : "";
   const id = useId().replace(/:/g, "");
   const remplissage = acquis ? `url(#grad-${id})` : "var(--color-elevated)";
   const trait = acquis ? c : "var(--color-border)";
@@ -244,9 +247,14 @@ export function Medaille({
             </radialGradient>
             {grand ? <path id={`arc-${id}`} d="M 16,56 A 34,34 0 1 1 84,56" fill="none" /> : null}
           </defs>
+          <polygon
+            points={grand ? ENGRENAGE_LG : ENGRENAGE_SM}
+            fill={remplissage}
+            stroke={trait}
+            strokeWidth={grand ? 2 : 1.3}
+          />
           {special ? (
             <>
-              <circle cx="50" cy="50" r="40" fill={remplissage} stroke={trait} strokeWidth={3} />
               {LAURIERS.map((f) => (
                 <ellipse
                   key={f.cle}
@@ -260,14 +268,7 @@ export function Medaille({
                 />
               ))}
             </>
-          ) : (
-            <polygon
-              points={grand ? ENGRENAGE_LG : ENGRENAGE_SM}
-              fill={remplissage}
-              stroke={trait}
-              strokeWidth={grand ? 2 : 1.3}
-            />
-          )}
+          ) : null}
           <circle
             cx="50"
             cy="50"
@@ -299,6 +300,17 @@ export function Medaille({
               <textPath href={`#arc-${id}`} startOffset="50%" textAnchor="middle">
                 Service public · Construction
               </textPath>
+            </text>
+          ) : null}
+          {emblematique && palier ? (
+            <text
+              x="50"
+              y="82"
+              textAnchor="middle"
+              className="text-[7px] font-black"
+              fill={trait}
+            >
+              {nomPalier}
             </text>
           ) : null}
         </svg>
