@@ -33,6 +33,7 @@ import {
   PALIERS_REPONSES,
   badgePalierReponses,
   badgesDebloques,
+  badgesRegulariteDebloques,
   useRecompenses,
 } from "@/lib/ingego/badges";
 import { Button } from "@/components/ui/button";
