@@ -279,6 +279,8 @@ export function useDonnees() {
   const [donnees, setDonnees] = useState<Donnees>(VIDE);
   const [pret, setPret] = useState(false);
   const [synchro, setSynchro] = useState<"local" | "en-cours" | "ok" | "erreur">("local");
+  /* Gel consommé la veille : signalé une seule fois, de façon discrète. */
+  const [gel, setGel] = useState<{ jour: string; restants: number } | null>(null);
   const cle = useRef<string | null>(null);
   const attente = useRef<ReturnType<typeof setTimeout> | null>(null);
   const dernier = useRef<Donnees>(VIDE);
@@ -313,9 +315,32 @@ export function useDonnees() {
     /* Une observation traitée n'est purgée qu'une fois pour cette version. Une
        nouvelle observation sur la même question doit pouvoir être conservée. */
     const purgeCom = aPurger(CLE_PURGE_COM, VERSION_COMMENTAIRES);
-    const local = restaurerToutesValidations(
+    let local = restaurerToutesValidations(
       restaurerValidationsRevues(elaguer(purger(lireLocal(), purgeCom)), Date.now()),
     );
+
+    /* Contrôle du gel : une seule fois par jour calendaire. */
+    const maintenant = new Date();
+    const aujourdhui = maintenant.toISOString().slice(0, 10);
+    let dejaVerifie = true;
+    try {
+      dejaVerifie = localStorage.getItem(CLE_CHECK_GEL) === aujourdhui;
+    } catch {
+      /* stockage indisponible */
+    }
+    if (!dejaVerifie) {
+      const joursTermines = local.journal
+        .filter((e) => e.id === "__session")
+        .map((e) => e.jour);
+      const r = verifierEtAppliquerGel(joursTermines, local.gels, maintenant);
+      marquerPurge(CLE_CHECK_GEL, aujourdhui);
+      if (r.applique && r.jour) {
+        local = { ...local, gels: r.gels };
+        const utilises = r.gels.filter((g) => g.slice(0, 7) === aujourdhui.slice(0, 7)).length;
+        setGel({ jour: r.jour, restants: Math.max(0, GELS_PAR_MOIS - utilises) });
+      }
+    }
+
     setDonnees(local);
     dernier.current = local;
     setPret(true);
@@ -410,6 +435,8 @@ export function useDonnees() {
     donnees,
     pret,
     synchro,
+    gel,
+    masquerGel: () => setGel(null),
     enregistrerCarte,
     majReglages,
     commenter,
