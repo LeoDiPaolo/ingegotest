@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { CORPUS, type Axe } from "@/lib/ingego/corpus";
+import { serieJours } from "@/lib/ingego/stockage";
 import { PALIERS_PART } from "@/components/ingego/univers";
 
 /* Paliers de questions validées, dernier palier = corpus complet. */
@@ -129,26 +130,6 @@ export const PALIERS_SERIE = [7, 14, 21, 30, 60, 90];
 export const PALIERS_HEBDO = [2, 4, 8, 12];
 const JOURS_MIN_SEMAINE = 5;
 
-function jourPrecedent(jour: string): string {
-  const d = new Date(`${jour}T00:00:00Z`);
-  d.setUTCDate(d.getUTCDate() - 1);
-  return d.toISOString().slice(0, 10);
-}
-
-/* Série actuelle : jours consécutifs jusqu'à aujourd'hui (ou hier si la
-   séance du jour n'est pas encore faite). */
-export function serieActuelle(joursTermines: string[], aujourdhui = new Date()): number {
-  const set = new Set(joursTermines);
-  let curseur = aujourdhui.toISOString().slice(0, 10);
-  if (!set.has(curseur)) curseur = jourPrecedent(curseur);
-  let n = 0;
-  while (set.has(curseur)) {
-    n += 1;
-    curseur = jourPrecedent(curseur);
-  }
-  return n;
-}
-
 /* Clé de semaine ISO (lundi-dimanche) sous forme d'index entier continu,
    ce qui rend la détection de semaines consécutives triviale. */
 function indexSemaine(jour: string): number {
@@ -159,10 +140,12 @@ function indexSemaine(jour: string): number {
 }
 
 /* Plus longue suite de semaines calendaires consécutives comptant au moins
-   JOURS_MIN_SEMAINE jours de séance chacune. */
-export function semainesConstantes(joursTermines: string[]): number {
+   JOURS_MIN_SEMAINE jours de séance chacune (un jour gelé compte comme un
+   jour de séance). */
+export function semainesConstantes(joursTermines: string[], gels: string[] = []): number {
+  const tousLesJours = [...new Set([...joursTermines, ...gels])];
   const parSemaine = new Map<number, Set<string>>();
-  for (const jour of new Set(joursTermines)) {
+  for (const jour of tousLesJours) {
     const s = indexSemaine(jour);
     const set = parSemaine.get(s) ?? new Set<string>();
     set.add(jour);
@@ -183,9 +166,12 @@ export function semainesConstantes(joursTermines: string[]): number {
   return meilleure;
 }
 
-export function badgesRegulariteDebloques(joursTermines: string[]): BadgeRegularite[] {
+export function badgesRegulariteDebloques(
+  joursTermines: string[],
+  gels: string[] = [],
+): BadgeRegularite[] {
   const out: BadgeRegularite[] = [];
-  const serie = serieActuelle(joursTermines);
+  const serie = serieJours(joursTermines, gels);
   for (const n of PALIERS_SERIE) {
     if (serie >= n)
       out.push({

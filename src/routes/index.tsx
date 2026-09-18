@@ -179,7 +179,7 @@ function Reviser() {
   const badges = useMemo(
     () => [
       ...badgesDebloques(bilan.lignes, bonnesReponses),
-      ...badgesRegulariteDebloques(joursTermines).map((b) => ({
+      ...badgesRegulariteDebloques(joursTermines, donnees.gels).map((b) => ({
         cle: b.cle,
         libelle: String(b.seuil),
         titre: b.titre,
