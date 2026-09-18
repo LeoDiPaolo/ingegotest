@@ -166,9 +166,12 @@ export function semainesConstantes(joursTermines: string[], gels: string[] = [])
   return meilleure;
 }
 
-export function badgesRegulariteDebloques(joursTermines: string[]): BadgeRegularite[] {
+export function badgesRegulariteDebloques(
+  joursTermines: string[],
+  gels: string[] = [],
+): BadgeRegularite[] {
   const out: BadgeRegularite[] = [];
-  const serie = serieActuelle(joursTermines);
+  const serie = serieJours(joursTermines, gels);
   for (const n of PALIERS_SERIE) {
     if (serie >= n)
       out.push({
