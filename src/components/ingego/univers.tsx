@@ -166,8 +166,8 @@ function pointsEngrenage(
   return pts.join(" ");
 }
 
-const ENGRENAGE_LG = pointsEngrenage(50, 50, 38, 46, 12);
-const ENGRENAGE_SM = pointsEngrenage(50, 50, 38, 46, 8);
+const ENGRENAGE_LG = pointsEngrenage(50, 50, 34, 48, 12);
+const ENGRENAGE_SM = pointsEngrenage(50, 50, 34, 48, 8);
 
 /* Couronne de laurier réservée au palier spécial. */
 const LAURIERS = Array.from({ length: 7 }, (_, i) => i).flatMap((i) =>
@@ -254,8 +254,7 @@ export function Medaille({
               points={grand ? ENGRENAGE_LG : ENGRENAGE_SM}
               fill={remplissage}
               stroke={trait}
-              strokeWidth={2}
-              strokeLinejoin="round"
+              strokeWidth={grand ? 2 : 1.3}
             />
           )}
           <circle
