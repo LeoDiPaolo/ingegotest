@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { CORPUS, type Axe } from "@/lib/ingego/corpus";
+import { serieJours } from "@/lib/ingego/stockage";
 import { PALIERS_PART } from "@/components/ingego/univers";
 
 /* Paliers de questions validées, dernier palier = corpus complet. */
