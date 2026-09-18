@@ -458,6 +458,7 @@ export const REGLAGES_DEFAUT: Reglages = {
   parSession: 8,
   chrono: 0,
   cible: "normal",
+  dateEcrit: "2027-06-15",
 };
 
 const TYPES_OK = REGLAGES_DEFAUT.types;
@@ -475,5 +476,6 @@ export function normaliserReglages(r: Partial<Reglages> | null | undefined): Reg
   /* Nouvel axe A9 (IA et collectivités) : activé aussi pour les réglages antérieurs. */
   if (!n.axes.includes("A9")) n.axes = [...n.axes, "A9"];
   if (!n.familles?.length) n.familles = [...REGLAGES_DEFAUT.familles];
+  if (!dateEcritValide(n.dateEcrit)) n.dateEcrit = REGLAGES_DEFAUT.dateEcrit;
   return n;
 }
