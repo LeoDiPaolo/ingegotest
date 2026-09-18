@@ -464,7 +464,7 @@ function Reviser() {
                       1er coup
                     </span>
                   </p>
-                  <p className="text-xs font-bold text-foreground">
+                  <p className="text-[0.65rem] font-bold whitespace-nowrap text-foreground">
                     record : {seriePremier.record}
                   </p>
                 </div>
