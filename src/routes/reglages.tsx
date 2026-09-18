@@ -40,7 +40,11 @@ function Page() {
   const r = donnees.reglages;
 
   const serie = useMemo(
-    () => serieJours(donnees.journal.filter((e) => e.id === "__session").map((e) => e.jour)),
+    () =>
+      serieJours(
+        donnees.journal.filter((e) => e.id === "__session").map((e) => e.jour),
+        donnees.gels,
+      ),
     [donnees.journal],
   );
 

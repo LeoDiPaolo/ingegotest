@@ -329,9 +329,7 @@ export function useDonnees() {
       /* stockage indisponible */
     }
     if (!dejaVerifie) {
-      const joursTermines = local.journal
-        .filter((e) => e.id === "__session")
-        .map((e) => e.jour);
+      const joursTermines = local.journal.filter((e) => e.id === "__session").map((e) => e.jour);
       const r = verifierEtAppliquerGel(joursTermines, local.gels, maintenant);
       marquerPurge(CLE_CHECK_GEL, aujourdhui);
       if (r.applique && r.jour) {

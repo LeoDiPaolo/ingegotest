@@ -235,10 +235,9 @@ function Reviser() {
     const jour = new Date(maintenant).toISOString().slice(0, 10);
     maj((d) => ({
       ...d,
-      journal: [
-        ...d.journal,
-        { id: MARQUE_DEBUT_MISSION, note: 1, jour, t: maintenant },
-      ].slice(-20000),
+      journal: [...d.journal, { id: MARQUE_DEBUT_MISSION, note: 1, jour, t: maintenant }].slice(
+        -20000,
+      ),
     }));
     setOrdre(lot);
     setI(0);
@@ -299,10 +298,7 @@ function Reviser() {
       const jour = new Date(maintenant).toISOString().slice(0, 10);
       maj((d) => ({
         ...d,
-        journal: [
-          ...d.journal,
-          { id: MARQUE_SESSION, note: 1, jour, t: maintenant },
-        ].slice(-20000),
+        journal: [...d.journal, { id: MARQUE_SESSION, note: 1, jour, t: maintenant }].slice(-20000),
       }));
       setFini(true);
     } else {
