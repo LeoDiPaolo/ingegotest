@@ -430,6 +430,21 @@ function Reviser() {
               </p>
             </section>
 
+            <section className="anim-monte surface flex flex-col justify-between gap-1 p-4">
+              <p className="flex items-center gap-1.5 text-[0.68rem] font-bold tracking-[0.14em] text-muted-foreground uppercase">
+                <Target className="h-3.5 w-3.5 text-success" /> Acquises
+              </p>
+              <p className="text-3xl font-extrabold text-success tabular-nums">{bilan.acquises}</p>
+              <div className="h-2.5 overflow-hidden rounded-full bg-elevated">
+                <div
+                  className="h-full rounded-full bg-success transition-[width] duration-700"
+                  style={{ width: `${bilan.part * 100}%` }}
+                />
+              </div>
+              <p className="text-xs text-muted-foreground">sur {bilan.total} questions</p>
+            </section>
+
+
             <section
               className={
                 echeance.etat === "retard"
