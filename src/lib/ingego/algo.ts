@@ -32,6 +32,17 @@ export interface Reglages {
   parSession: number;
   chrono: number;
   cible: "normal" | "fragiles";
+  /* Date de l'épreuve écrite (AAAA-MM-JJ) : sert au compte à rebours et au
+     rythme quotidien requis. */
+  dateEcrit: string;
+}
+
+export const FORMAT_DATE = /^\d{4}-\d{2}-\d{2}$/;
+
+export function dateEcritValide(v: unknown): v is string {
+  if (typeof v !== "string" || !FORMAT_DATE.test(v)) return false;
+  const t = Date.parse(`${v}T00:00:00`);
+  return Number.isFinite(t);
 }
 
 export const PALIERS = [0, 1, 3, 7, 16, 35, 75, 160];
