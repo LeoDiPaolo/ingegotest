@@ -106,11 +106,11 @@ export function BadgeMaitrise({
   const pct = (v: number) => (v > 0 && v < 0.01 ? 1 : Math.floor(v * 100));
   const palier =
     part >= 1
-      ? "Catégorie maîtrisée"
+      ? "100% maîtrisé"
       : part > 0
         ? `${pct(part)}% maîtrisé`
         : partVue > 0
-          ? "Premières réussites en cours"
+          ? "En cours"
           : "À découvrir";
   const Balise = onClick ? "button" : "div";
   return (
