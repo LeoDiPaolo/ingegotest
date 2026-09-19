@@ -62,7 +62,7 @@ function Page() {
     <div className="min-h-screen bg-background pb-24">
       <Entete serie={serie} etat={donnees.cartes} synchro={synchro} />
 
-      <main className="blueprint mx-auto min-h-[calc(100vh-8rem)] max-w-5xl space-y-7 px-5 py-5">
+      <main className="blueprint mx-auto min-h-[calc(100vh-8rem)] max-w-5xl space-y-5 px-5 py-4">
         <div>
           <p className="text-xs font-bold text-brand uppercase">Plan de progression</p>
           <h1 className="text-2xl text-primary">Arbre de compétences</h1>
