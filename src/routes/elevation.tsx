@@ -183,7 +183,8 @@ function Page() {
                               </span>
                             ) : null}
                           </div>
-                          <div className="mt-1.5 h-2 overflow-hidden rounded-full bg-elevated">
+                          <div className="mt-1 h-2 overflow-hidden rounded-full bg-elevated">
+
                             <div
                               className="h-full rounded-full transition-[width] duration-700"
                               style={{
@@ -193,7 +194,8 @@ function Page() {
                             />
                           </div>
                           {!progression.termine ? (
-                            <p className="mt-1 text-[0.6rem] text-muted-foreground">
+                            <p className="mt-0.5 text-[0.58rem] text-muted-foreground">
+
                               {progression.restantesNiveau} validation
                               {progression.restantesNiveau > 1 ? "s" : ""} avant le niveau{" "}
                               {progression.niveau + 1}
