@@ -124,52 +124,58 @@ export function BadgeMaitrise({
     <Balise
       onClick={onClick}
       className={cn(
-        "flex w-full items-center gap-3 rounded-2xl border border-border bg-card p-3 text-left shadow-[var(--shadow-card)]",
+        "flex w-full flex-col items-stretch gap-1.5 rounded-2xl border border-border bg-card p-2.5 text-left shadow-[var(--shadow-card)]",
         onClick && "tap transition-transform active:scale-[0.98]",
       )}
     >
-      <div className="relative">
-        <IconeAxe axe={axe} className="h-14 w-14" active={part >= 0.8} />
-        {part >= 0.8 ? (
-          <span className="absolute -right-1 -bottom-1 grid h-6 w-6 place-items-center rounded-full bg-success text-success-foreground ring-2 ring-card">
-            <ShieldCheck className="h-3.5 w-3.5" />
-          </span>
-        ) : null}
+      <div className="flex items-start justify-between gap-1">
+        <div className="relative shrink-0">
+          <IconeAxe axe={axe} className="h-11 w-11" active={part >= 0.8} />
+          {part >= 0.8 ? (
+            <span className="absolute -right-1 -bottom-1 grid h-4.5 w-4.5 place-items-center rounded-full bg-success text-success-foreground ring-2 ring-card">
+              <ShieldCheck className="h-2.5 w-2.5" />
+            </span>
+          ) : null}
+        </div>
+        {part >= 0.8 ? <Award className="h-4 w-4 shrink-0 text-brand" /> : null}
       </div>
-      <div className="min-w-0 flex-1">
-        <div className="flex items-center justify-between gap-2">
-          <p className="truncate text-sm font-bold">{axe.court}</p>
+      <div className="min-w-0">
+        <div className="flex items-center justify-between gap-1">
+          <p className="truncate text-xs font-extrabold">{axe.court}</p>
           <span
-            className="shrink-0 rounded-full px-2 py-0.5 text-[0.6rem] font-extrabold"
+            className="shrink-0 rounded-full px-1.5 py-0.5 text-[0.55rem] font-extrabold"
             style={{ backgroundColor: `${axe.couleur}22`, color: axe.couleur }}
           >
             {atteint ? `Badge ${Math.round(atteint * 100)} %` : `${pct(part)} %`}
           </span>
         </div>
-        <p className="text-xs text-muted-foreground">
+        <p className="text-[0.58rem] leading-snug text-muted-foreground">
           <span className="font-semibold text-foreground/80">{palier}</span>
-          {" · "}
-          {sousTitre}
+          {sousTitre ? (
+            <>
+              {" · "}
+              {sousTitre}
+            </>
+          ) : null}
         </p>
-        <div className="relative mt-2 h-2.5 overflow-hidden rounded-full bg-elevated">
-          <div
-            className="absolute inset-y-0 left-0 rounded-full transition-[width] duration-700"
-            style={{ width: `${partVue * 100}%`, backgroundColor: `${axe.couleur}55` }}
-          />
-          <div
-            className="absolute inset-y-0 left-0 rounded-full transition-[width] duration-700"
-            style={{ width: `${part * 100}%`, backgroundColor: axe.couleur }}
-          />
-          {PALIERS_PART.slice(0, 4).map((p) => (
-            <span
-              key={p}
-              className="absolute top-0 h-full w-px bg-card/80"
-              style={{ left: `${p * 100}%` }}
-            />
-          ))}
-        </div>
       </div>
-      {part >= 0.8 ? <Award className="h-5 w-5 shrink-0 text-brand" /> : null}
+      <div className="relative h-2 overflow-hidden rounded-full bg-elevated">
+        <div
+          className="absolute inset-y-0 left-0 rounded-full transition-[width] duration-700"
+          style={{ width: `${partVue * 100}%`, backgroundColor: `${axe.couleur}55` }}
+        />
+        <div
+          className="absolute inset-y-0 left-0 rounded-full transition-[width] duration-700"
+          style={{ width: `${part * 100}%`, backgroundColor: axe.couleur }}
+        />
+        {PALIERS_PART.slice(0, 4).map((p) => (
+          <span
+            key={p}
+            className="absolute top-0 h-full w-px bg-card/80"
+            style={{ left: `${p * 100}%` }}
+          />
+        ))}
+      </div>
     </Balise>
   );
 }
