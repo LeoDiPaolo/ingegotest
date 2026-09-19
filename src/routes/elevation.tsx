@@ -96,7 +96,7 @@ function Page() {
           <Sparkles className="h-5 w-5 text-brand" />
         </section>
 
-        <div className="grid min-w-0 gap-7 lg:grid-cols-2">
+        <div className="grid min-w-0 gap-4 lg:grid-cols-2">
           {AXES.map((axe, axeIndex) => {
             const qs = CORPUS.filter((q) => q.axe === axe.id);
             if (!qs.length) return null;
@@ -106,34 +106,35 @@ function Page() {
             return (
               <section
                 key={axe.id}
-                className="relative min-w-0 space-y-3 overflow-hidden rounded-3xl border border-border bg-card/95 p-4 shadow-[var(--shadow-card)]"
+                className="relative min-w-0 space-y-2 overflow-hidden rounded-3xl border border-border bg-card/95 px-3 py-3 shadow-[var(--shadow-card)]"
               >
                 {axeIndex < AXES.length - 1 ? (
-                  <span className="absolute -bottom-8 left-1/2 h-8 border-l-2 border-dashed border-primary/30" />
+                  <span className="absolute -bottom-4 left-1/2 h-4 border-l-2 border-dashed border-primary/30" />
                 ) : null}
-                <div className="flex items-center gap-3">
-                  <IconeAxe axe={axe} className="h-14 w-14" />
+                <div className="flex items-center gap-2.5">
+                  <IconeAxe axe={axe} className="h-10 w-10" />
                   <div className="min-w-0">
-                    <p className="text-[0.65rem] font-bold text-muted-foreground uppercase">
+                    <p className="text-[0.6rem] font-bold text-muted-foreground uppercase">
                       Étape {axeIndex + 1}
                     </p>
-                    <h2 className="text-sm font-bold" style={{ color: axe.couleur }}>
+                    <h2 className="text-[0.82rem] font-bold" style={{ color: axe.couleur }}>
                       {axe.nom}
                     </h2>
                   </div>
                   <span
-                    className="ml-auto flex shrink-0 flex-col items-center rounded-full px-2.5 py-1.5 text-center"
+                    className="ml-auto flex shrink-0 flex-col items-center rounded-full px-2 py-1 text-center"
                     style={{ backgroundColor: `${axe.couleur}22`, color: axe.couleur }}
                   >
-                    <span className="text-sm leading-none font-extrabold tabular-nums">
+                    <span className="text-xs leading-none font-extrabold tabular-nums">
                       {pctAxe}%
                     </span>
-                    <span className="mt-0.5 text-[0.55rem] leading-none font-bold whitespace-nowrap">
+                    <span className="mt-0.5 text-[0.5rem] leading-none font-bold whitespace-nowrap">
                       maîtrisé
                     </span>
                   </span>
                 </div>
-                <div className="space-y-3">
+                <div className="space-y-1.5">
+
                   {themes.map((theme, themeIndex) => {
                     const questions = qs.filter((q) => q.sousTheme === theme);
                     const progression = progressionSousTheme(theme, donnees.cartes);
