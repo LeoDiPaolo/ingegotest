@@ -121,29 +121,27 @@ export function BadgeMaitrise({
         onClick && "tap transition-transform active:scale-[0.98]",
       )}
     >
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-1.5">
         <div className="relative shrink-0">
-          <IconeAxe axe={axe} className="h-9 w-9" active={part >= 0.8} />
+          <IconeAxe axe={axe} className="h-8 w-8" active={part >= 0.8} />
           {part >= 0.8 ? (
             <span className="absolute -right-1 -bottom-1 grid h-4 w-4 place-items-center rounded-full bg-success text-success-foreground ring-2 ring-card">
               <ShieldCheck className="h-2.5 w-2.5" />
             </span>
           ) : null}
         </div>
-        <div className="flex min-w-0 flex-1 items-start justify-between gap-1.5">
+        <div className="flex min-w-0 flex-1 items-start justify-between gap-1">
           <div className="min-w-0">
             <p className="truncate text-[0.68rem] leading-tight font-extrabold">{axe.court}</p>
-            <p className="mt-0.5 text-[0.58rem] leading-tight text-muted-foreground">
-              <span className="block truncate font-semibold whitespace-nowrap text-foreground/80">
-                {palier}
-              </span>
+            <p className="mt-0.5 text-[0.5rem] leading-tight font-semibold whitespace-nowrap text-foreground/80">
+              {palier}
             </p>
           </div>
-          <div className="flex shrink-0 flex-col items-center justify-center rounded-full bg-warning/15 px-2 py-1 text-center text-warning">
-            <p className="whitespace-nowrap text-[0.5rem] leading-none font-bold tracking-wide uppercase">
+          <div className="flex shrink-0 flex-col items-center justify-center rounded-full bg-warning/15 px-1 py-1 text-center text-warning">
+            <p className="text-[0.45rem] leading-none font-bold tracking-wide whitespace-nowrap uppercase">
               Badge
             </p>
-            <p className="mt-0.5 whitespace-nowrap text-[0.58rem] leading-none font-extrabold tabular-nums">
+            <p className="mt-0.5 text-[0.55rem] leading-none font-extrabold whitespace-nowrap tabular-nums">
               {atteint ? `${Math.round(atteint * 100)}%` : `${pct(part)}%`}
             </p>
           </div>
