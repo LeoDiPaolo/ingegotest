@@ -496,7 +496,7 @@ function Reviser() {
                     palier={badgePalierReponses(dernierPalier).palier}
                     libelle={String(dernierPalier)}
                     acquis
-                    taille="xl"
+                    taille="md"
                   />
                 </div>
                 <div className="min-w-0">
