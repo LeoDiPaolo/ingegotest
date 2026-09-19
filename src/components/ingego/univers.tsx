@@ -138,7 +138,7 @@ export function BadgeMaitrise({
               className="rounded-full px-1.5 py-px text-[0.55rem] font-extrabold"
               style={{ backgroundColor: `${axe.couleur}22`, color: axe.couleur }}
             >
-              {atteint ? `Badge ${Math.round(atteint * 100)} %` : `${pct(part)} %`}
+              {atteint ? `Badge ${Math.round(atteint * 100)}%` : `${pct(part)}%`}
             </span>
           </p>
         </div>
@@ -157,7 +157,7 @@ export function BadgeMaitrise({
           <span
             key={p}
             className="absolute top-0 h-full w-px bg-card/80"
-            style={{ left: `${p * 100}%` }}
+            style={{ left: `calc(${p * 100}% - 0.5px)` }}
           />
         ))}
       </div>
@@ -168,11 +168,11 @@ export function BadgeMaitrise({
             key={p}
             className="absolute top-0 text-[0.5rem] leading-none font-semibold text-muted-foreground tabular-nums"
             style={{
-              left: `${p * 100}%`,
+              left: `calc(${p * 100}% - 0.5px)`,
               transform: "translateX(-50%)",
             }}
           >
-            {Math.round(p * 100)} %
+            {Math.round(p * 100)}%
           </span>
         ))}
       </div>
