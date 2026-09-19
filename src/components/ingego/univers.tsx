@@ -199,7 +199,9 @@ export function Medaille({
             ? "w-28 drop-shadow-[var(--shadow-lift)]"
             : grand
               ? "w-28 drop-shadow-[var(--shadow-lift)]"
-              : "w-full max-w-16",
+              : taille === "md"
+                ? "w-16"
+                : "w-full max-w-16",
           !acquis && "opacity-45 grayscale",
         )}
       >
