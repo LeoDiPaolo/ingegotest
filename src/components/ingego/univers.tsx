@@ -220,7 +220,7 @@ export function Medaille({
             )}
             style={{
               color: TEINTES[palier],
-              WebkitTextStroke: `${taille === "sm" ? 1.4 : 2.4}px ${CONTOURS[palier]}`,
+              WebkitTextStroke: `${grand ? 2.4 : 1.4}px ${CONTOURS[palier]}`,
               paintOrder: "stroke fill",
               textShadow:
                 CONTOURS[palier] === "#fff"
