@@ -132,9 +132,11 @@ export function BadgeMaitrise({
         </div>
         <div className="flex min-w-0 flex-1 items-start justify-between gap-1.5">
           <div className="min-w-0">
-            <p className="text-[0.68rem] leading-tight font-extrabold">{axe.court}</p>
+            <p className="truncate text-[0.68rem] leading-tight font-extrabold">{axe.court}</p>
             <p className="mt-0.5 text-[0.58rem] leading-tight text-muted-foreground">
-              <span className="font-semibold text-foreground/80">{palier}</span>
+              <span className="block truncate font-semibold whitespace-nowrap text-foreground/80">
+                {palier}
+              </span>
             </p>
           </div>
           <div className="flex shrink-0 flex-col items-center justify-center rounded-full bg-warning/15 px-2 py-1 text-center text-warning">
