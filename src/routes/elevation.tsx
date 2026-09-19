@@ -148,14 +148,15 @@ function Page() {
                     const actif = vus > 0 && !complet;
                     const estProchain = prochain?.sousTheme === theme;
                     return (
-                      <div key={theme} className="relative flex items-center gap-3 py-1">
+                      <div key={theme} className="relative flex items-center gap-2.5">
                         {themeIndex < themes.length - 1 ? (
-                          <span className="absolute top-11 bottom-[-0.8rem] left-[1.3rem] border-l-2 border-dashed border-primary/25" />
+                          <span className="absolute top-9 bottom-[-0.3rem] left-[1.06rem] border-l-2 border-dashed border-primary/25" />
                         ) : null}
                         <button
                           onClick={() => setChoisie(questions[0] ?? null)}
                           className={cn(
-                            "tap relative z-10 grid h-11 w-11 shrink-0 place-items-center rounded-full border-2 text-xs font-extrabold shadow-[0_3px_0_var(--color-border)] transition-transform active:translate-y-0.5",
+                            "tap relative z-10 grid h-9 w-9 shrink-0 place-items-center rounded-full border-2 text-[0.7rem] font-extrabold shadow-[0_2px_0_var(--color-border)] transition-transform active:translate-y-0.5",
+
                             complet
                               ? "bg-success text-success-foreground ring-4 ring-success/15"
                               : actif || estProchain
@@ -165,11 +166,12 @@ function Page() {
                           style={{ borderColor: `${axe.couleur}77`, color: axe.couleur }}
                         >
                           {complet ? (
-                            <Check className="h-5 w-5" />
+                            <Check className="h-4 w-4" />
                           ) : actif || estProchain ? (
                             themeIndex + 1
                           ) : (
-                            <LockKeyhole className="h-4 w-4 opacity-55" />
+                            <LockKeyhole className="h-3.5 w-3.5 opacity-55" />
+
                           )}
                         </button>
                         <div className="min-w-0 flex-1">
