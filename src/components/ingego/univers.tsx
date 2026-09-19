@@ -186,10 +186,10 @@ export function Medaille({
   legende?: string;
   couleur?: string;
   acquis: boolean;
-  taille?: "sm" | "lg" | "xl";
+  taille?: "sm" | "md" | "lg" | "xl";
   palier?: Palier;
 }) {
-  const grand = taille !== "sm";
+  const grand = taille === "lg" || taille === "xl";
   return (
     <div className="flex flex-col items-center gap-1">
       <div
@@ -199,7 +199,9 @@ export function Medaille({
             ? "w-28 drop-shadow-[var(--shadow-lift)]"
             : grand
               ? "w-28 drop-shadow-[var(--shadow-lift)]"
-              : "w-full max-w-16",
+              : taille === "md"
+                ? "w-16"
+                : "w-full max-w-16",
           !acquis && "opacity-45 grayscale",
         )}
       >
@@ -218,7 +220,7 @@ export function Medaille({
             )}
             style={{
               color: TEINTES[palier],
-              WebkitTextStroke: `${taille === "sm" ? 1.4 : 2.4}px ${CONTOURS[palier]}`,
+              WebkitTextStroke: `${grand ? 2.4 : 1.4}px ${CONTOURS[palier]}`,
               paintOrder: "stroke fill",
               textShadow:
                 CONTOURS[palier] === "#fff"
