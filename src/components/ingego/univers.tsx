@@ -104,9 +104,6 @@ export function BadgeMaitrise({
   /* On n'arrondit jamais au palier supérieur avant qu'il soit réellement atteint :
      36 validations sur 367 valent 9,8 %, et non un badge 10 % déjà acquis. */
   const pct = (v: number) => (v > 0 && v < 0.01 ? 1 : Math.floor(v * 100));
-  /* Prochain palier et réussites manquantes : message orienté objectif. */
-  const prochain = PALIERS_PART.find((p) => part < p) ?? null;
-  const restants = prochain != null ? Math.max(1, Math.ceil(prochain * total) - acquis) : 0;
   const palier =
     part >= 1
       ? "Catégorie maîtrisée"
@@ -115,10 +112,6 @@ export function BadgeMaitrise({
         : partVue > 0
           ? "Premières réussites en cours"
           : "À découvrir";
-  const sousTitre =
-    prochain != null
-      ? `Prochain badge à ${Math.round(prochain * 100)} % · encore ${restants} réussite${restants > 1 ? "s" : ""}`
-      : "Tous les badges sont débloqués";
   const Balise = onClick ? "button" : "div";
   return (
     <Balise
@@ -138,23 +131,15 @@ export function BadgeMaitrise({
           ) : null}
         </div>
         <div className="min-w-0 flex-1">
-          <div className="flex items-center justify-between gap-1">
-            <p className="truncate text-xs font-extrabold">{axe.court}</p>
+          <p className="text-[0.68rem] leading-tight font-extrabold">{axe.court}</p>
+          <p className="mt-0.5 flex flex-wrap items-center gap-x-1.5 gap-y-0.5 text-[0.58rem] leading-tight text-muted-foreground">
+            <span className="font-semibold text-foreground/80">{palier}</span>
             <span
-              className="shrink-0 rounded-full px-1.5 py-0.5 text-[0.55rem] font-extrabold"
+              className="rounded-full px-1.5 py-px text-[0.55rem] font-extrabold"
               style={{ backgroundColor: `${axe.couleur}22`, color: axe.couleur }}
             >
               {atteint ? `Badge ${Math.round(atteint * 100)} %` : `${pct(part)} %`}
             </span>
-          </div>
-          <p className="truncate text-[0.58rem] leading-snug text-muted-foreground">
-            <span className="font-semibold text-foreground/80">{palier}</span>
-            {sousTitre ? (
-              <>
-                {" · "}
-                {sousTitre}
-              </>
-            ) : null}
           </p>
         </div>
         {part >= 0.8 ? <Award className="h-4 w-4 shrink-0 text-brand" /> : null}
@@ -174,6 +159,27 @@ export function BadgeMaitrise({
             className="absolute top-0 h-full w-px bg-card/80"
             style={{ left: `${p * 100}%` }}
           />
+        ))}
+      </div>
+      {/* Paliers de badges en tout petit sous la barre. */}
+      <div className="relative h-2.5">
+        {PALIERS_PART.map((p) => (
+          <span
+            key={p}
+            className={cn(
+              "absolute top-0 text-[0.5rem] leading-none font-semibold text-muted-foreground tabular-nums",
+              p === 0 ? "left-0" : p === 1 ? "right-0" : "-translate-x-1/2",
+            )}
+            style={
+              p === 0
+                ? { left: 0 }
+                : p === 1
+                  ? { right: 0 }
+                  : { left: `${p * 100}%` }
+            }
+          >
+            {Math.round(p * 100)} %
+          </span>
         ))}
       </div>
     </Balise>
