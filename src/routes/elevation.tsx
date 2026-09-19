@@ -96,14 +96,6 @@ function Page() {
           <Sparkles className="h-5 w-5 text-brand" />
         </section>
 
-        <div className="grid gap-2 sm:grid-cols-2">
-          {AXES.map((axe) => {
-            const qs = CORPUS.filter((q) => q.axe === axe.id);
-            const acquis = qs.filter((q) => etatCarte(donnees.cartes[q.id]) === "acquis").length;
-            return <BadgeMaitrise key={axe.id} axe={axe} acquis={acquis} total={qs.length} />;
-          })}
-        </div>
-
         <div className="grid min-w-0 gap-7 lg:grid-cols-2">
           {AXES.map((axe, axeIndex) => {
             const qs = CORPUS.filter((q) => q.axe === axe.id);
