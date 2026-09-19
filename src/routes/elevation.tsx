@@ -62,7 +62,7 @@ function Page() {
     <div className="min-h-screen bg-background pb-24">
       <Entete serie={serie} etat={donnees.cartes} synchro={synchro} />
 
-      <main className="blueprint mx-auto min-h-[calc(100vh-8rem)] max-w-5xl space-y-7 px-5 py-5">
+      <main className="blueprint mx-auto min-h-[calc(100vh-8rem)] max-w-5xl space-y-5 px-5 py-4">
         <div>
           <p className="text-xs font-bold text-brand uppercase">Plan de progression</p>
           <h1 className="text-2xl text-primary">Arbre de compétences</h1>
@@ -96,7 +96,7 @@ function Page() {
           <Sparkles className="h-5 w-5 text-brand" />
         </section>
 
-        <div className="grid min-w-0 gap-7 lg:grid-cols-2">
+        <div className="grid min-w-0 gap-4 lg:grid-cols-2">
           {AXES.map((axe, axeIndex) => {
             const qs = CORPUS.filter((q) => q.axe === axe.id);
             if (!qs.length) return null;
@@ -106,34 +106,35 @@ function Page() {
             return (
               <section
                 key={axe.id}
-                className="relative min-w-0 space-y-3 overflow-hidden rounded-3xl border border-border bg-card/95 p-4 shadow-[var(--shadow-card)]"
+                className="relative min-w-0 space-y-2 overflow-hidden rounded-3xl border border-border bg-card/95 px-3 py-3 shadow-[var(--shadow-card)]"
               >
                 {axeIndex < AXES.length - 1 ? (
-                  <span className="absolute -bottom-8 left-1/2 h-8 border-l-2 border-dashed border-primary/30" />
+                  <span className="absolute -bottom-4 left-1/2 h-4 border-l-2 border-dashed border-primary/30" />
                 ) : null}
-                <div className="flex items-center gap-3">
-                  <IconeAxe axe={axe} className="h-14 w-14" />
+                <div className="flex items-center gap-2.5">
+                  <IconeAxe axe={axe} className="h-10 w-10" />
                   <div className="min-w-0">
-                    <p className="text-[0.65rem] font-bold text-muted-foreground uppercase">
+                    <p className="text-[0.6rem] font-bold text-muted-foreground uppercase">
                       Étape {axeIndex + 1}
                     </p>
-                    <h2 className="text-sm font-bold" style={{ color: axe.couleur }}>
+                    <h2 className="text-[0.82rem] font-bold" style={{ color: axe.couleur }}>
                       {axe.nom}
                     </h2>
                   </div>
                   <span
-                    className="ml-auto flex shrink-0 flex-col items-center rounded-full px-2.5 py-1.5 text-center"
+                    className="ml-auto flex shrink-0 flex-col items-center rounded-full px-2 py-1 text-center"
                     style={{ backgroundColor: `${axe.couleur}22`, color: axe.couleur }}
                   >
-                    <span className="text-sm leading-none font-extrabold tabular-nums">
+                    <span className="text-xs leading-none font-extrabold tabular-nums">
                       {pctAxe}%
                     </span>
-                    <span className="mt-0.5 text-[0.55rem] leading-none font-bold whitespace-nowrap">
+                    <span className="mt-0.5 text-[0.5rem] leading-none font-bold whitespace-nowrap">
                       maîtrisé
                     </span>
                   </span>
                 </div>
-                <div className="space-y-3">
+                <div className="space-y-1.5">
+
                   {themes.map((theme, themeIndex) => {
                     const questions = qs.filter((q) => q.sousTheme === theme);
                     const progression = progressionSousTheme(theme, donnees.cartes);
@@ -147,14 +148,15 @@ function Page() {
                     const actif = vus > 0 && !complet;
                     const estProchain = prochain?.sousTheme === theme;
                     return (
-                      <div key={theme} className="relative flex items-center gap-3 py-1">
+                      <div key={theme} className="relative flex items-center gap-2.5">
                         {themeIndex < themes.length - 1 ? (
-                          <span className="absolute top-11 bottom-[-0.8rem] left-[1.3rem] border-l-2 border-dashed border-primary/25" />
+                          <span className="absolute top-9 bottom-[-0.3rem] left-[1.06rem] border-l-2 border-dashed border-primary/25" />
                         ) : null}
                         <button
                           onClick={() => setChoisie(questions[0] ?? null)}
                           className={cn(
-                            "tap relative z-10 grid h-11 w-11 shrink-0 place-items-center rounded-full border-2 text-xs font-extrabold shadow-[0_3px_0_var(--color-border)] transition-transform active:translate-y-0.5",
+                            "tap relative z-10 grid h-9 w-9 shrink-0 place-items-center rounded-full border-2 text-[0.7rem] font-extrabold shadow-[0_2px_0_var(--color-border)] transition-transform active:translate-y-0.5",
+
                             complet
                               ? "bg-success text-success-foreground ring-4 ring-success/15"
                               : actif || estProchain
@@ -164,11 +166,12 @@ function Page() {
                           style={{ borderColor: `${axe.couleur}77`, color: axe.couleur }}
                         >
                           {complet ? (
-                            <Check className="h-5 w-5" />
+                            <Check className="h-4 w-4" />
                           ) : actif || estProchain ? (
                             themeIndex + 1
                           ) : (
-                            <LockKeyhole className="h-4 w-4 opacity-55" />
+                            <LockKeyhole className="h-3.5 w-3.5 opacity-55" />
+
                           )}
                         </button>
                         <div className="min-w-0 flex-1">
@@ -180,7 +183,8 @@ function Page() {
                               </span>
                             ) : null}
                           </div>
-                          <div className="mt-1.5 h-2 overflow-hidden rounded-full bg-elevated">
+                          <div className="mt-1 h-2 overflow-hidden rounded-full bg-elevated">
+
                             <div
                               className="h-full rounded-full transition-[width] duration-700"
                               style={{
@@ -190,7 +194,8 @@ function Page() {
                             />
                           </div>
                           {!progression.termine ? (
-                            <p className="mt-1 text-[0.6rem] text-muted-foreground">
+                            <p className="mt-0.5 text-[0.58rem] text-muted-foreground">
+
                               {progression.restantesNiveau} validation
                               {progression.restantesNiveau > 1 ? "s" : ""} avant le niveau{" "}
                               {progression.niveau + 1}
