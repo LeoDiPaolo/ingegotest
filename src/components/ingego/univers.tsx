@@ -130,17 +130,24 @@ export function BadgeMaitrise({
             </span>
           ) : null}
         </div>
-        <div className="min-w-0 flex-1">
-          <p className="text-[0.68rem] leading-tight font-extrabold">{axe.court}</p>
-          <p className="mt-0.5 flex flex-wrap items-center gap-x-1.5 gap-y-0.5 text-[0.58rem] leading-tight text-muted-foreground">
-            <span className="font-semibold text-foreground/80">{palier}</span>
-            <span
-              className="rounded-full px-1.5 py-px text-[0.55rem] font-extrabold"
-              style={{ backgroundColor: `${axe.couleur}22`, color: axe.couleur }}
+        <div className="flex min-w-0 flex-1 items-start justify-between gap-1.5">
+          <div className="min-w-0">
+            <p className="text-[0.68rem] leading-tight font-extrabold">{axe.court}</p>
+            <p className="mt-0.5 text-[0.58rem] leading-tight text-muted-foreground">
+              <span className="font-semibold text-foreground/80">{palier}</span>
+            </p>
+          </div>
+          <div className="shrink-0 text-right">
+            <p className="text-[0.5rem] leading-none font-bold tracking-wide text-muted-foreground uppercase">
+              Badge
+            </p>
+            <p
+              className="mt-0.5 text-[0.58rem] leading-tight font-extrabold tabular-nums"
+              style={{ color: axe.couleur }}
             >
-              {atteint ? `Badge ${Math.round(atteint * 100)}%` : `${pct(part)}%`}
-            </span>
-          </p>
+              {atteint ? `${Math.round(atteint * 100)}%` : `${pct(part)}%`}
+            </p>
+          </div>
         </div>
         {part >= 0.8 ? <Award className="h-4 w-4 shrink-0 text-brand" /> : null}
       </div>
