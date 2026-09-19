@@ -108,7 +108,7 @@ export function BadgeMaitrise({
     part >= 1
       ? "Catégorie maîtrisée"
       : part > 0
-        ? `${pct(part)} % maîtrisé`
+        ? `${pct(part)}% maîtrisé`
         : partVue > 0
           ? "Premières réussites en cours"
           : "À découvrir";
