@@ -7,7 +7,7 @@ import { AXES, CORPUS, FAMILLES, TYPES, type Question } from "@/lib/ingego/corpu
 import { etatCarte, progressionSousTheme, type EtatCarte } from "@/lib/ingego/algo";
 import { serieJours, useDonnees } from "@/lib/ingego/stockage";
 import { cn } from "@/lib/utils";
-import { BadgeMaitrise, IconeAxe } from "@/components/ingego/univers";
+import { IconeAxe } from "@/components/ingego/univers";
 
 const TITRE = "Élévation — vue d'ensemble du corpus IngéGo";
 const DESC =
