@@ -100,6 +100,8 @@ function Page() {
           {AXES.map((axe, axeIndex) => {
             const qs = CORPUS.filter((q) => q.axe === axe.id);
             if (!qs.length) return null;
+            const acquisAxe = qs.filter((q) => etatCarte(donnees.cartes[q.id]) === "acquis").length;
+            const pctAxe = Math.floor((acquisAxe / qs.length) * 100);
             const themes = [...new Set(qs.map((q) => q.sousTheme))];
             return (
               <section
