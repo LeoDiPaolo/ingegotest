@@ -46,3 +46,4 @@
 - [x] Doubler les rappels, les rendre tous humoristiques et continuer après une mission
 - [x] Verrouiller définitivement les validations et séparer chaque mission dans l'historique
 - [x] Remplacer la grille des paliers cumulés par le dernier badge atteint et son tampon animé
+- [x] Transformer chaque palier cumulé en spectacle total avec confettis assortis, feux de transition et tampon projeté

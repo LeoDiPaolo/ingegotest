@@ -11,6 +11,8 @@ export function Recompense({ badge, onFermer }: { badge: Badge; onFermer: () => 
   const palier = badge.palier;
   const special = palier === "special";
   const palierReponses = badge.cle.startsWith("rep-");
+  const seuil = palierReponses ? Number.parseInt(badge.libelle, 10) : 0;
+  const changementCouleur = palierReponses && [300, 700, 950].includes(seuil);
 
   useEffect(() => {
     if (typeof navigator !== "undefined" && "vibrate" in navigator) {
@@ -24,7 +26,16 @@ export function Recompense({ badge, onFermer }: { badge: Badge; onFermer: () => 
       aria-label={`Badge débloqué : ${badge.titre}`}
       className="fixed inset-0 z-50 grid place-items-center overflow-hidden bg-primary/92 px-6 backdrop-blur-sm"
     >
-      {palier === "or" ? <FeuArtifice /> : <Confettis nombre={special ? 56 : 40} />}
+      {palierReponses ? (
+        <>
+          <Confettis nombre={220} palier={palier} spectaculaire />
+          {changementCouleur ? <FeuArtifice salves={7} palier={palier} /> : null}
+        </>
+      ) : palier === "or" ? (
+        <FeuArtifice />
+      ) : (
+        <Confettis nombre={special ? 56 : 40} />
+      )}
       {palier === "argent" ? (
         <span
           aria-hidden
@@ -32,7 +43,9 @@ export function Recompense({ badge, onFermer }: { badge: Badge; onFermer: () => 
           style={{ background: "var(--color-card)" }}
         />
       ) : null}
-      <div className="anim-pop relative w-full max-w-xs rounded-3xl bg-card p-6 text-center shadow-[var(--shadow-lift)]">
+      <div
+        className={`${palierReponses ? "anim-impact-carte" : "anim-pop"} relative w-full max-w-xs rounded-3xl bg-card p-6 text-center shadow-[var(--shadow-lift)]`}
+      >
         <p className="text-[0.65rem] font-extrabold tracking-[0.2em] text-brand uppercase">
           {special ? "Palier historique" : "Badge débloqué"}
         </p>
@@ -63,7 +76,7 @@ export function Recompense({ badge, onFermer }: { badge: Badge; onFermer: () => 
           ) : null}
         </div>
         {palierReponses ? (
-          <div className="anim-tampon-palier mx-auto mt-3 w-fit border-4 border-brand px-4 py-1.5 text-sm font-black text-brand uppercase">
+          <div className="anim-tampon-palier mx-auto mt-3 w-fit border-4 border-brand px-4 py-1.5 text-sm font-black text-brand uppercase shadow-[0_0_0_2px_color-mix(in_oklab,var(--color-brand)_18%,transparent)]">
             Palier {badge.libelle}
           </div>
         ) : null}
