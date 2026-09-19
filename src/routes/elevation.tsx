@@ -113,7 +113,7 @@ function Page() {
                 ) : null}
                 <div className="flex items-center gap-3">
                   <IconeAxe axe={axe} className="h-14 w-14" />
-                  <div>
+                  <div className="min-w-0">
                     <p className="text-[0.65rem] font-bold text-muted-foreground uppercase">
                       Étape {axeIndex + 1}
                     </p>
@@ -121,6 +121,17 @@ function Page() {
                       {axe.nom}
                     </h2>
                   </div>
+                  <span
+                    className="ml-auto flex shrink-0 flex-col items-center rounded-full px-2.5 py-1.5 text-center"
+                    style={{ backgroundColor: `${axe.couleur}22`, color: axe.couleur }}
+                  >
+                    <span className="text-sm leading-none font-extrabold tabular-nums">
+                      {pctAxe}%
+                    </span>
+                    <span className="mt-0.5 text-[0.55rem] leading-none font-bold whitespace-nowrap">
+                      maîtrisé
+                    </span>
+                  </span>
                 </div>
                 <div className="space-y-3">
                   {themes.map((theme, themeIndex) => {
