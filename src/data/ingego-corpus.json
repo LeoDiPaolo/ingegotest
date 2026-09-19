@@ -18510,26 +18510,32 @@
       "sujet": "bp-avis",
       "niveau": 4,
       "famille": "S",
-      "question": "Un projet de travaux est situé dans le périmètre d'un monument historique. Classez ces situations selon que l'avis de l'architecte des Bâtiments de France y est un avis simple (la commune peut ne pas le suivre) ou un avis conforme (la commune doit le suivre).",
+      "question": "Une commune veut délivrer une autorisation d'urbanisme pour des travaux situés près d'un monument historique. Pour chacune de ces situations, l'avis de l'architecte des Bâtiments de France (ABF) s'impose-t-il à la commune ?",
       "explication": "Avis conforme : l'autorité qui délivre l'autorisation d'urbanisme est liée par l'avis de l'ABF, un avis défavorable fait donc obstacle au permis (site patrimonial remarquable, article L632-2 du code du patrimoine ; abords avec covisibilité ou périmètre délimité des abords, article L621-32). Avis simple : la commune peut délivrer l'autorisation même si l'ABF est défavorable, mais elle s'expose à un recours contentieux, par exemple d'une association de défense du patrimoine, et sa responsabilité peut être engagée. En savoir plus — ABF : architecte des Bâtiments de France ; PDA : périmètre délimité des abords ; SPR : site patrimonial remarquable.",
       "derniereVerification": "2026-09",
       "aVerifier": null,
       "type": "tri",
       "colonnes": [
-        "Avis simple : la commune peut passer outre",
-        "Avis conforme : la commune doit suivre"
+        "Avis simple : la commune peut délivrer l'autorisation malgré un avis défavorable",
+        "Avis conforme : un avis défavorable bloque l'autorisation"
       ],
       "elements": [
         [
-          "Travaux aux abords d'un monument historique, hors covisibilité et hors périmètre délimité",
+          "Ravalement d'une maison située à 300 m du monument, hors covisibilité et hors périmètre délimité des abords",
           0
         ],
-        ["Ravalement d'une maison dans une rue voisine, sans covisibilité avec le monument", 0],
         [
-          "Travaux dans un site patrimonial remarquable couvert par un plan de valorisation (PVAP)",
+          "Réfection de toiture d'un pavillon dans une rue voisine, sans covisibilité avec le monument",
+          0
+        ],
+        [
+          "Isolation de façade d'un immeuble en covisibilité directe avec un monument historique classé",
           1
         ],
-        ["Travaux sur un immeuble en covisibilité directe avec un monument historique classé", 1]
+        [
+          "Remplacement des menuiseries d'un bâtiment situé dans un site patrimonial remarquable couvert par un PVAP",
+          1
+        ]
       ]
     },
     {
@@ -19403,7 +19409,7 @@
       "niveau": 4,
       "famille": "M",
       "question": "Associez chaque structure au conseil qu'elle apporte en réhabilitation énergétique d'un bâtiment d'intérêt patrimonial.",
-      "explication": "France Rénov' fournit information et conseil gratuits et personnalisés sur les aides financières, les professionnels qualifiés et les travaux pour les logements, sans que la préservation de l'intérêt patrimonial fasse systématiquement partie de ses attributions. Ce réseau de conseil est un service public créé par l'article 164 de la loi n° 2021-1104 du 22 août 2021 (loi Climat et Résilience), en remplacement et extension des anciens réseaux « Espace Info Énergie ». Les conseillers France Rénov' connaissent néanmoins bien les autres structures de conseil d'un territoire donné (UDAP, CAUE, PNR, associations locales) et pourront orienter vers elles pour les questions patrimoniales — un rôle d'aiguillage complémentaire à leur mission énergétique principale. En savoir plus — France Rénov' : service public d'accompagnement gratuit à la rénovation énergétique des logements.",
+      "explication": "France Rénov' fournit information et conseil gratuits et personnalisés sur les aides financières, les professionnels qualifiés et les travaux pour les logements, sans que la préservation de l'intérêt patrimonial fasse systématiquement partie de ses attributions. Ce réseau de conseil est un service public créé par l'article 164 de la loi n° 2021-1104 du 22 août 2021 (loi Climat et Résilience), en remplacement et extension des anciens réseaux « Espace Info Énergie ». Les conseillers France Rénov' connaissent néanmoins bien les autres structures de conseil d'un territoire donné (UDAP, CAUE, PNR, associations locales) et pourront orienter vers elles pour les questions patrimoniales — un rôle d'aiguillage complémentaire à leur mission énergétique principale. En savoir plus — France Rénov' : service public d'accompagnement gratuit à la rénovation énergétique des logements. La CRMH (conservation régionale des monuments historiques) est le service de la DRAC chargé des immeubles classés ou inscrits : elle instruit les autorisations de travaux sur monuments historiques, assure le contrôle scientifique et technique de l'État, instruit les demandes de subventions et suit les chantiers de restauration, en lien avec l'UDAP qui intervient, elle, sur les abords et les espaces protégés. En savoir plus — CRMH : conservation régionale des monuments historiques ; DRAC : direction régionale des affaires culturelles ; UDAP : unité départementale de l'architecture et du patrimoine.",
       "derniereVerification": "2026-09",
       "aVerifier": null,
       "type": "assoc",
@@ -19417,8 +19423,8 @@
           "Conseil et contrôle sur les bâtiments situés en espaces protégés : abords de monuments historiques, SPR, sites inscrits et classés"
         ],
         [
-          "CRMH",
-          "Contrôle et conseil spécifiques aux monuments historiques classés ou inscrits, au sein de la DRAC"
+          "CRMH (conservation régionale des monuments historiques, service de la DRAC)",
+          "Instruction, contrôle scientifique et technique et conseil sur les immeubles classés ou inscrits au titre des monuments historiques : autorisations de travaux, subventions de l'État, suivi des chantiers de restauration"
         ],
         [
           "Fondation du Patrimoine",
