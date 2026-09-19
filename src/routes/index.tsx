@@ -503,10 +503,10 @@ function Reviser() {
                   <p className="flex items-center gap-1 text-[0.6rem] font-bold tracking-[0.14em] text-muted-foreground uppercase">
                     <Sparkles className="h-3 w-3 text-brand" /> Dernier palier atteint
                   </p>
-                  <p className="text-base font-extrabold tabular-nums text-foreground">
+                  <p className="text-sm leading-tight font-extrabold tabular-nums text-foreground">
                     {dernierPalier} questions
                   </p>
-                  <p className="text-xs leading-snug text-muted-foreground">
+                  <p className="text-[0.68rem] leading-tight text-muted-foreground">
                     {prochainPalier
                       ? `Prochain palier à ${prochainPalier}`
                       : "Tous les paliers atteints"}
