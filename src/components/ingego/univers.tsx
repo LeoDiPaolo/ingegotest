@@ -161,7 +161,7 @@ export function BadgeMaitrise({
           />
         ))}
       </div>
-      {/* Paliers de badges (10, 25, 50, 75) centrés exactement sous leurs repères. */}
+      {/* Paliers de badges : le numéro seul est centré sous son repère, le % est posé à droite. */}
       <div className="relative h-2.5">
         {PALIERS_PART.slice(0, 4).map((p) => (
           <span
@@ -172,7 +172,12 @@ export function BadgeMaitrise({
               transform: "translateX(-50%)",
             }}
           >
-            {Math.round(p * 100)}%
+            <span className="relative inline-block">
+              {Math.round(p * 100)}
+              <span className="absolute top-0" style={{ left: "100%" }}>
+                %
+              </span>
+            </span>
           </span>
         ))}
       </div>
