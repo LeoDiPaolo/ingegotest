@@ -7,7 +7,7 @@ import { AXES, CORPUS, FAMILLES, TYPES, type Question } from "@/lib/ingego/corpu
 import { etatCarte, progressionSousTheme, type EtatCarte } from "@/lib/ingego/algo";
 import { serieJours, useDonnees } from "@/lib/ingego/stockage";
 import { cn } from "@/lib/utils";
-import { BadgeMaitrise, IconeAxe } from "@/components/ingego/univers";
+import { IconeAxe } from "@/components/ingego/univers";
 
 const TITRE = "Élévation — vue d'ensemble du corpus IngéGo";
 const DESC =
@@ -96,18 +96,12 @@ function Page() {
           <Sparkles className="h-5 w-5 text-brand" />
         </section>
 
-        <div className="grid gap-2 sm:grid-cols-2">
-          {AXES.map((axe) => {
-            const qs = CORPUS.filter((q) => q.axe === axe.id);
-            const acquis = qs.filter((q) => etatCarte(donnees.cartes[q.id]) === "acquis").length;
-            return <BadgeMaitrise key={axe.id} axe={axe} acquis={acquis} total={qs.length} />;
-          })}
-        </div>
-
         <div className="grid min-w-0 gap-7 lg:grid-cols-2">
           {AXES.map((axe, axeIndex) => {
             const qs = CORPUS.filter((q) => q.axe === axe.id);
             if (!qs.length) return null;
+            const acquisAxe = qs.filter((q) => etatCarte(donnees.cartes[q.id]) === "acquis").length;
+            const pctAxe = Math.floor((acquisAxe / qs.length) * 100);
             const themes = [...new Set(qs.map((q) => q.sousTheme))];
             return (
               <section
@@ -119,7 +113,7 @@ function Page() {
                 ) : null}
                 <div className="flex items-center gap-3">
                   <IconeAxe axe={axe} className="h-14 w-14" />
-                  <div>
+                  <div className="min-w-0">
                     <p className="text-[0.65rem] font-bold text-muted-foreground uppercase">
                       Étape {axeIndex + 1}
                     </p>
@@ -127,6 +121,17 @@ function Page() {
                       {axe.nom}
                     </h2>
                   </div>
+                  <span
+                    className="ml-auto flex shrink-0 flex-col items-center rounded-full px-2.5 py-1.5 text-center"
+                    style={{ backgroundColor: `${axe.couleur}22`, color: axe.couleur }}
+                  >
+                    <span className="text-sm leading-none font-extrabold tabular-nums">
+                      {pctAxe}%
+                    </span>
+                    <span className="mt-0.5 text-[0.55rem] leading-none font-bold whitespace-nowrap">
+                      maîtrisé
+                    </span>
+                  </span>
                 </div>
                 <div className="space-y-3">
                   {themes.map((theme, themeIndex) => {
