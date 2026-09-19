@@ -124,40 +124,40 @@ export function BadgeMaitrise({
     <Balise
       onClick={onClick}
       className={cn(
-        "flex w-full flex-col items-stretch gap-1.5 rounded-2xl border border-border bg-card p-2.5 text-left shadow-[var(--shadow-card)]",
+        "flex w-full flex-col gap-1 rounded-2xl border border-border bg-card p-2 text-left shadow-[var(--shadow-card)]",
         onClick && "tap transition-transform active:scale-[0.98]",
       )}
     >
-      <div className="flex items-start justify-between gap-1">
+      <div className="flex items-center gap-2">
         <div className="relative shrink-0">
-          <IconeAxe axe={axe} className="h-11 w-11" active={part >= 0.8} />
+          <IconeAxe axe={axe} className="h-9 w-9" active={part >= 0.8} />
           {part >= 0.8 ? (
-            <span className="absolute -right-1 -bottom-1 grid h-4.5 w-4.5 place-items-center rounded-full bg-success text-success-foreground ring-2 ring-card">
+            <span className="absolute -right-1 -bottom-1 grid h-4 w-4 place-items-center rounded-full bg-success text-success-foreground ring-2 ring-card">
               <ShieldCheck className="h-2.5 w-2.5" />
             </span>
           ) : null}
         </div>
-        {part >= 0.8 ? <Award className="h-4 w-4 shrink-0 text-brand" /> : null}
-      </div>
-      <div className="min-w-0">
-        <div className="flex items-center justify-between gap-1">
-          <p className="truncate text-xs font-extrabold">{axe.court}</p>
-          <span
-            className="shrink-0 rounded-full px-1.5 py-0.5 text-[0.55rem] font-extrabold"
-            style={{ backgroundColor: `${axe.couleur}22`, color: axe.couleur }}
-          >
-            {atteint ? `Badge ${Math.round(atteint * 100)} %` : `${pct(part)} %`}
-          </span>
+        <div className="min-w-0 flex-1">
+          <div className="flex items-center justify-between gap-1">
+            <p className="truncate text-xs font-extrabold">{axe.court}</p>
+            <span
+              className="shrink-0 rounded-full px-1.5 py-0.5 text-[0.55rem] font-extrabold"
+              style={{ backgroundColor: `${axe.couleur}22`, color: axe.couleur }}
+            >
+              {atteint ? `Badge ${Math.round(atteint * 100)} %` : `${pct(part)} %`}
+            </span>
+          </div>
+          <p className="truncate text-[0.58rem] leading-snug text-muted-foreground">
+            <span className="font-semibold text-foreground/80">{palier}</span>
+            {sousTitre ? (
+              <>
+                {" · "}
+                {sousTitre}
+              </>
+            ) : null}
+          </p>
         </div>
-        <p className="text-[0.58rem] leading-snug text-muted-foreground">
-          <span className="font-semibold text-foreground/80">{palier}</span>
-          {sousTitre ? (
-            <>
-              {" · "}
-              {sousTitre}
-            </>
-          ) : null}
-        </p>
+        {part >= 0.8 ? <Award className="h-4 w-4 shrink-0 text-brand" /> : null}
       </div>
       <div className="relative h-2 overflow-hidden rounded-full bg-elevated">
         <div
