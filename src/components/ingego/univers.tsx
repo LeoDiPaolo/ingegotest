@@ -186,10 +186,10 @@ export function Medaille({
   legende?: string;
   couleur?: string;
   acquis: boolean;
-  taille?: "sm" | "lg" | "xl";
+  taille?: "sm" | "md" | "lg" | "xl";
   palier?: Palier;
 }) {
-  const grand = taille !== "sm";
+  const grand = taille === "lg" || taille === "xl";
   return (
     <div className="flex flex-col items-center gap-1">
       <div
