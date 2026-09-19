@@ -137,11 +137,11 @@ export function BadgeMaitrise({
               <span className="font-semibold text-foreground/80">{palier}</span>
             </p>
           </div>
-          <div className="flex shrink-0 flex-col items-center justify-center rounded-full bg-warning/15 px-2 py-1 text-warning">
-            <p className="text-[0.5rem] leading-none font-bold tracking-wide uppercase">
+          <div className="flex shrink-0 flex-col items-center justify-center rounded-full bg-warning/15 px-2 py-1 text-center text-warning">
+            <p className="whitespace-nowrap text-[0.5rem] leading-none font-bold tracking-wide uppercase">
               Badge
             </p>
-            <p className="mt-0.5 text-[0.58rem] leading-none font-extrabold tabular-nums">
+            <p className="mt-0.5 whitespace-nowrap text-[0.58rem] leading-none font-extrabold tabular-nums">
               {atteint ? `${Math.round(atteint * 100)}%` : `${pct(part)}%`}
             </p>
           </div>
