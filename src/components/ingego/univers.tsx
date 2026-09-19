@@ -161,22 +161,16 @@ export function BadgeMaitrise({
           />
         ))}
       </div>
-      {/* Paliers de badges en tout petit sous la barre. */}
+      {/* Paliers de badges (10, 25, 50, 75) centrés exactement sous leurs repères. */}
       <div className="relative h-2.5">
-        {PALIERS_PART.map((p) => (
+        {PALIERS_PART.slice(0, 4).map((p) => (
           <span
             key={p}
-            className={cn(
-              "absolute top-0 text-[0.5rem] leading-none font-semibold text-muted-foreground tabular-nums",
-              p === 0 ? "left-0" : p === 1 ? "right-0" : "-translate-x-1/2",
-            )}
-            style={
-              p === 0
-                ? { left: 0 }
-                : p === 1
-                  ? { right: 0 }
-                  : { left: `${p * 100}%` }
-            }
+            className="absolute top-0 text-[0.5rem] leading-none font-semibold text-muted-foreground tabular-nums"
+            style={{
+              left: `${p * 100}%`,
+              transform: "translateX(-50%)",
+            }}
           >
             {Math.round(p * 100)} %
           </span>
